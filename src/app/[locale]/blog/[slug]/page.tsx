@@ -1,20 +1,22 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { client } from "@/sanity/client";
 import { urlFor } from "@/sanity/image";
 import { postBySlugQuery, postSlugsQuery } from "@/sanity/queries";
 import { PortableTextBody } from "@/components/PortableTextBody";
+import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
 
 export const revalidate = 60;
 
 type Post = {
   title: string;
-  excerpt?: string;
+  excerpt?: LocalizedValue<string>;
   mainImage?: any;
   publishedAt: string;
-  body?: any;
+  body?: LocalizedValue<any>;
   author?: { name: string; image?: any; bio?: string };
   categories?: string[];
 };
@@ -31,21 +33,21 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: { locale: string; slug: string };
 }): Promise<Metadata> {
   const post = await client.fetch<Post>(postBySlugQuery, { slug: params.slug });
   if (!post) return {};
   return {
     title: post.title,
-    description: post.excerpt,
+    description: getLocalizedField(post.excerpt, params.locale as Locale),
     openGraph: post.mainImage
       ? { images: [urlFor(post.mainImage).width(1200).height(630).url()] }
       : undefined,
   };
 }
 
-function formatDate(d: string) {
-  return new Date(d).toLocaleDateString("en-IN", {
+function formatDate(d: string, locale: string) {
+  return new Date(d).toLocaleDateString(locale === "en" ? "en-IN" : locale, {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -55,16 +57,20 @@ function formatDate(d: string) {
 export default async function PostPage({
   params,
 }: {
-  params: { slug: string };
+  params: { locale: string; slug: string };
 }) {
-  const post = await client.fetch<Post>(postBySlugQuery, { slug: params.slug });
+  const locale = params.locale as Locale;
+  const [post, t] = await Promise.all([
+    client.fetch<Post>(postBySlugQuery, { slug: params.slug }),
+    getTranslations({ locale, namespace: "blogPost" }),
+  ]);
   if (!post) notFound();
 
   return (
     <article className="py-16">
       <div className="mx-auto max-w-3xl px-6">
         <Link href="/blog" className="text-sm text-brand-blue hover:underline">
-          ← Back to blog
+          {t("backLink")}
         </Link>
 
         {post.categories && post.categories.length > 0 && (
@@ -72,12 +78,10 @@ export default async function PostPage({
             {post.categories.join(" · ")}
           </div>
         )}
-        <h1 className="mt-3 text-4xl text-brand-indigo md:text-5xl">
-          {post.title}
-        </h1>
+        <h1 className="mt-3 text-4xl text-brand-indigo md:text-5xl">{post.title}</h1>
         <div className="mt-4 text-sm text-muted">
           {post.author?.name ? `${post.author.name} · ` : ""}
-          {formatDate(post.publishedAt)}
+          {formatDate(post.publishedAt, locale)}
         </div>
 
         {post.mainImage && (
@@ -92,7 +96,7 @@ export default async function PostPage({
         )}
 
         <div className="mt-8">
-          <PortableTextBody value={post.body} />
+          <PortableTextBody value={getLocalizedField(post.body, locale)} />
         </div>
       </div>
     </article>

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { client } from "@/sanity/client";
 import { urlFor } from "@/sanity/image";
 import { postsQuery } from "@/sanity/queries";
+import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
 
 export const revalidate = 60;
 
@@ -17,36 +19,39 @@ type Post = {
   _id: string;
   title: string;
   slug: { current: string };
-  excerpt?: string;
+  excerpt?: LocalizedValue<string>;
   mainImage?: any;
   publishedAt: string;
   author?: string;
   categories?: string[];
 };
 
-function formatDate(d: string) {
-  return new Date(d).toLocaleDateString("en-IN", {
+function formatDate(d: string, locale: string) {
+  return new Date(d).toLocaleDateString(locale === "en" ? "en-IN" : locale, {
     day: "numeric",
     month: "short",
     year: "numeric",
   });
 }
 
-export default async function BlogPage() {
-  const posts = await client.fetch<Post[]>(postsQuery);
+export default async function BlogPage({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const locale = params.locale as Locale;
+  const [posts, t] = await Promise.all([
+    client.fetch<Post[]>(postsQuery),
+    getTranslations({ locale, namespace: "blogPage" }),
+  ]);
 
   return (
     <>
       <section className="bg-brand-indigo-deep py-20 text-paper">
         <div className="wrap">
-          <div className="eyebrow text-brass-bright">Blog</div>
-          <h1 className="mt-3.5 text-4xl md:text-5xl">
-            Property insights for the western suburbs
-          </h1>
-          <p className="mt-4 max-w-[40em] text-paper/75">
-            Practical guides on buying, selling and renting in Borivali,
-            Kandivali and Malad — plus notes on the local market.
-          </p>
+          <div className="eyebrow text-brass-bright">{t("eyebrow")}</div>
+          <h1 className="mt-3.5 text-4xl md:text-5xl">{t("heading")}</h1>
+          <p className="mt-4 max-w-[40em] text-paper/75">{t("body")}</p>
         </div>
       </section>
 
@@ -54,9 +59,9 @@ export default async function BlogPage() {
         <div className="wrap">
           {(!posts || posts.length === 0) && (
             <p className="text-muted">
-              No posts published yet. Add your first article in the{" "}
+              {t("emptyState")}
               <Link href="/studio" className="text-brand-blue underline">
-                Studio
+                {t("studioLink")}
               </Link>
               .
             </p>
@@ -88,11 +93,13 @@ export default async function BlogPage() {
                   )}
                   <h2 className="text-xl text-brand-indigo">{post.title}</h2>
                   {post.excerpt && (
-                    <p className="mt-2 flex-1 text-sm text-muted">{post.excerpt}</p>
+                    <p className="mt-2 flex-1 text-sm text-muted">
+                      {getLocalizedField(post.excerpt, locale)}
+                    </p>
                   )}
                   <div className="mt-4 text-xs text-muted">
                     {post.author ? `${post.author} · ` : ""}
-                    {formatDate(post.publishedAt)}
+                    {formatDate(post.publishedAt, locale)}
                   </div>
                 </div>
               </Link>
