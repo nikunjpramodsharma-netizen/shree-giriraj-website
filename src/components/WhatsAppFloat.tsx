@@ -1,12 +1,17 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { waLink } from "@/lib/config";
 
 export function WhatsAppFloat() {
+  const t = useTranslations("whatsappFloat");
+
   return (
     <a
-      href={waLink("Hi Shree Giriraj, I'd like to enquire about a property.")}
+      href={waLink(t("message"))}
       target="_blank"
       rel="noopener"
-      aria-label="Chat on WhatsApp"
+      aria-label={t("ariaLabel")}
       className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp shadow-lg transition hover:scale-105"
     >
       <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff">
