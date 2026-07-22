@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { site, waLink } from "@/lib/config";
@@ -21,6 +22,7 @@ export function Nav() {
     <header className="sticky top-0 z-50 border-b border-brand-indigo/10 bg-paper/85 backdrop-blur">
       <div className="wrap flex h-[72px] items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
+          <Image src="/logo.png" alt="Shree Giriraj Real Estate" width={40} height={40} className="h-10 w-10" />
           <span className="flex flex-col leading-none">
             <span className="font-display text-lg font-semibold text-brand-indigo">
               Shree Giriraj
