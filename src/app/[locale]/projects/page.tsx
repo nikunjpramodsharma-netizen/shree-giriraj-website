@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { client } from "@/sanity/client";
 import { urlFor } from "@/sanity/image";
 import { projectsQuery } from "@/sanity/queries";
+import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
 
 export const revalidate = 60;
 
@@ -23,30 +25,33 @@ type Project = {
   area?: string;
   featured?: boolean;
   coverImage?: any;
-  summary?: string;
+  summary?: LocalizedValue<string>;
 };
 
-const statusLabel: Record<string, string> = {
-  booking: "Now Booking",
-  upcoming: "Upcoming",
-  sold: "Sold Out",
-};
+export default async function ProjectsPage({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const locale = params.locale as Locale;
+  const [projects, t] = await Promise.all([
+    client.fetch<Project[]>(projectsQuery),
+    getTranslations({ locale, namespace: "projectsPage" }),
+  ]);
 
-export default async function ProjectsPage() {
-  const projects = await client.fetch<Project[]>(projectsQuery);
+  const statusLabel: Record<string, string> = {
+    booking: t("statusBooking"),
+    upcoming: t("statusUpcoming"),
+    sold: t("statusSold"),
+  };
 
   return (
     <>
       <section className="bg-brand-indigo-deep py-20 text-paper">
         <div className="wrap">
-          <div className="eyebrow text-brass-bright">Projects</div>
-          <h1 className="mt-3.5 text-4xl md:text-5xl">
-            New launches &amp; bookings
-          </h1>
-          <p className="mt-4 max-w-[40em] text-paper/75">
-            Handpicked residential projects across the western suburbs — many
-            available for booking through our direct builder relationships.
-          </p>
+          <div className="eyebrow text-brass-bright">{t("eyebrow")}</div>
+          <h1 className="mt-3.5 text-4xl md:text-5xl">{t("heading")}</h1>
+          <p className="mt-4 max-w-[40em] text-paper/75">{t("body")}</p>
         </div>
       </section>
 
@@ -54,9 +59,9 @@ export default async function ProjectsPage() {
         <div className="wrap">
           {(!projects || projects.length === 0) && (
             <p className="text-muted">
-              No projects added yet. Add your first one in the{" "}
+              {t("emptyState")}
               <Link href="/studio" className="text-brand-blue underline">
-                Studio
+                {t("studioLink")}
               </Link>
               .
             </p>
@@ -92,11 +97,11 @@ export default async function ProjectsPage() {
                   )}
                   {project.summary && (
                     <p className="mt-3 flex-1 text-sm text-muted line-clamp-3">
-                      {project.summary}
+                      {getLocalizedField(project.summary, locale)}
                     </p>
                   )}
                   <span className="mt-4 text-sm font-semibold text-brand-blue">
-                    View details →
+                    {t("viewDetails")}
                   </span>
                 </div>
               </Link>
