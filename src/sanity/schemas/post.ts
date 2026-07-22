@@ -1,4 +1,5 @@
 import { defineType, defineField } from "sanity";
+import { localizedTextField, localizedBlockContentField } from "./lib/localizedFields";
 
 export default defineType({
   name: "post",
@@ -19,14 +20,7 @@ export default defineType({
       options: { source: "title", maxLength: 96 },
       validation: (rule) => rule.required(),
     }),
-    defineField({
-      name: "excerpt",
-      title: "Excerpt",
-      type: "text",
-      rows: 3,
-      description: "Short summary shown on the blog listing and in search results.",
-      validation: (rule) => rule.max(200),
-    }),
+    localizedTextField("excerpt", "Excerpt", 3),
     defineField({
       name: "mainImage",
       title: "Cover image",
@@ -55,11 +49,7 @@ export default defineType({
       initialValue: () => new Date().toISOString(),
       validation: (rule) => rule.required(),
     }),
-    defineField({
-      name: "body",
-      title: "Body",
-      type: "blockContent",
-    }),
+    localizedBlockContentField("body", "Body"),
   ],
   orderings: [
     {
