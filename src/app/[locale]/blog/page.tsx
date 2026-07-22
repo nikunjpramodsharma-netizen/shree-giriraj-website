@@ -9,11 +9,17 @@ import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-
 
 export const revalidate = 60;
 
-export const metadata: Metadata = {
-  title: "Blog — Property insights for the western suburbs",
-  description:
-    "Guides, market notes and buying tips for Borivali, Kandivali and Malad from Shree Giriraj Real Estate.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: "blogPage" });
+  return {
+    title: t("heading"),
+    description: t("body"),
+  };
+}
 
 type Post = {
   _id: string;
