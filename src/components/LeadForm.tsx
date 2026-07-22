@@ -1,11 +1,19 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { waLink } from "@/lib/config";
 
-const intents = ["Buy", "Sell", "Rent", "New project", "Redevelopment"];
-
 export function LeadForm() {
+  const t = useTranslations("leadForm");
+  const intents = [
+    t("intentBuy"),
+    t("intentSell"),
+    t("intentRent"),
+    t("intentNewProject"),
+    t("intentRedevelopment"),
+  ];
+
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [intent, setIntent] = useState(intents[0]);
@@ -13,11 +21,11 @@ export function LeadForm() {
 
   function handleSubmit() {
     const message =
-      `Hi Shree Giriraj, I'd like to enquire.\n` +
-      `Name: ${name || "-"}\n` +
-      `Looking to: ${intent}\n` +
-      `Area: ${area || "-"}\n` +
-      `Phone: ${phone || "-"}`;
+      `${t("whatsappGreeting")}\n` +
+      `${t("whatsappNameLabel")}: ${name || "-"}\n` +
+      `${t("whatsappIntentLabel")}: ${intent}\n` +
+      `${t("whatsappAreaLabel")}: ${area || "-"}\n` +
+      `${t("whatsappPhoneLabel")}: ${phone || "-"}`;
     window.open(waLink(message), "_blank", "noopener");
   }
 
@@ -29,13 +37,13 @@ export function LeadForm() {
       <div className="space-y-3.5">
         <input
           className={field}
-          placeholder="Your name"
+          placeholder={t("namePlaceholder")}
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <input
           className={field}
-          placeholder="Phone number"
+          placeholder={t("phonePlaceholder")}
           inputMode="tel"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
@@ -53,16 +61,14 @@ export function LeadForm() {
         </select>
         <input
           className={field}
-          placeholder="Preferred area (e.g. Borivali West)"
+          placeholder={t("areaPlaceholder")}
           value={area}
           onChange={(e) => setArea(e.target.value)}
         />
         <button onClick={handleSubmit} className="btn btn-brass w-full justify-center">
-          Send enquiry on WhatsApp
+          {t("submit")}
         </button>
-        <p className="text-center text-xs text-paper/50">
-          Opens WhatsApp with your details filled in. No spam, ever.
-        </p>
+        <p className="text-center text-xs text-paper/50">{t("disclaimer")}</p>
       </div>
     </div>
   );

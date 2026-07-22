@@ -1,5 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { client } from "@/sanity/client";
 import { urlFor } from "@/sanity/image";
 import {
@@ -8,11 +9,12 @@ import {
 } from "@/sanity/queries";
 import { site, waLink } from "@/lib/config";
 import { LeadForm } from "@/components/LeadForm";
+import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
 
 // Re-fetch content periodically so CMS edits show up without a redeploy.
 export const revalidate = 60;
 
-type Config = { type?: string; displayPrice?: string; note?: string };
+type Config = { type?: string; displayPrice?: string; note?: LocalizedValue<string> };
 type FeaturedProject = {
   name: string;
   slug: { current: string };
@@ -20,33 +22,52 @@ type FeaturedProject = {
   location?: string;
   rera?: string;
   coverImage?: any;
-  summary?: string;
+  summary?: LocalizedValue<string>;
   configurations?: Config[];
   amenities?: string[];
 } | null;
 
 type Testimonial = {
   _id: string;
-  quote: string;
+  quote: LocalizedValue<string>;
   author: string;
-  role?: string;
+  role?: LocalizedValue<string>;
   rating?: number;
 };
 
-const services = [
-  { title: "Resale flats", body: "Buy or sell ready-to-move homes across Borivali, Kandivali and Malad, with fair pricing and clear title checks." },
-  { title: "Rentals", body: "Tenants and owners matched quickly — from starter homes to premium family residences, with agreements sorted." },
-  { title: "New project bookings", body: "Early access to upcoming launches through our direct builder network — often before they hit the open market." },
-  { title: "Redevelopment", body: "Guidance for societies and owners through redevelopment — from developer selection to occupancy." },
-  { title: "Shops & plots", body: "Commercial shops, offices and plots for investors and business owners looking to expand in the suburbs." },
-  { title: "Interiors & civil work", body: "Once you have the keys, our team helps with fit-outs and civil work to get your home move-in ready." },
-];
+export default async function HomePage({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const locale = params.locale as Locale;
 
-export default async function HomePage() {
-  const [project, testimonials] = await Promise.all([
-    client.fetch<FeaturedProject>(featuredProjectQuery),
-    client.fetch<Testimonial[]>(featuredTestimonialsQuery),
-  ]);
+  const [project, testimonials, tHero, tServices, tFeatured, tTestimonials, tAreas, tLeadForm] =
+    await Promise.all([
+      client.fetch<FeaturedProject>(featuredProjectQuery),
+      client.fetch<Testimonial[]>(featuredTestimonialsQuery),
+      getTranslations({ locale, namespace: "hero" }),
+      getTranslations({ locale, namespace: "services" }),
+      getTranslations({ locale, namespace: "featuredProject" }),
+      getTranslations({ locale, namespace: "testimonials" }),
+      getTranslations({ locale, namespace: "areas" }),
+      getTranslations({ locale, namespace: "leadForm" }),
+    ]);
+
+  const services = [
+    { title: tServices("resaleTitle"), body: tServices("resaleBody") },
+    { title: tServices("rentalsTitle"), body: tServices("rentalsBody") },
+    { title: tServices("newProjectTitle"), body: tServices("newProjectBody") },
+    { title: tServices("redevelopmentTitle"), body: tServices("redevelopmentBody") },
+    { title: tServices("shopsTitle"), body: tServices("shopsBody") },
+    { title: tServices("interiorsTitle"), body: tServices("interiorsBody") },
+  ];
+
+  const areas = [
+    { name: "Borivali", body: tAreas("borivaliBody") },
+    { name: "Kandivali", body: tAreas("kandivaliBody") },
+    { name: "Malad", body: tAreas("maladBody") },
+  ];
 
   return (
     <>
@@ -58,30 +79,26 @@ export default async function HomePage() {
               {site.areas.join(" · ")}
             </div>
             <h1 className="mt-6 text-4xl font-semibold sm:text-5xl md:text-6xl">
-              Your address in the western suburbs,{" "}
-              <em className="italic text-brass-bright">found the right way.</em>
+              {tHero("headingPart1")}
+              <em className="italic text-brass-bright">{tHero("headingEm")}</em>
             </h1>
-            <p className="mt-6 max-w-[30em] text-lg text-paper/80">
-              For over 25 years, families across Borivali have trusted us to buy,
-              sell and rent homes — and to get first access to the suburb&apos;s
-              most sought-after new launches.
-            </p>
+            <p className="mt-6 max-w-[30em] text-lg text-paper/80">{tHero("body")}</p>
             <div className="mt-8 flex flex-wrap gap-3.5">
-              <a href="#enquire" className="btn btn-brass">Book a consultation</a>
+              <a href="#enquire" className="btn btn-brass">{tHero("ctaBook")}</a>
               <a
-                href={waLink("Hi Shree Giriraj, I'd like to enquire.")}
+                href={waLink(tHero("whatsappMessage"))}
                 target="_blank"
                 rel="noopener"
                 className="btn btn-outline border-paper/40 text-paper"
               >
-                Chat on WhatsApp
+                {tHero("ctaWhatsapp")}
               </a>
             </div>
             <div className="mt-12 flex flex-wrap gap-8">
               {[
-                { n: "25+", l: "Years in Borivali West" },
-                { n: "3", l: "Suburbs covered" },
-                { n: "4.8★", l: "Client rating" },
+                { n: "25+", l: tHero("statYears") },
+                { n: "3", l: tHero("statSuburbs") },
+                { n: "4.8★", l: tHero("statRating") },
               ].map((s) => (
                 <div key={s.l}>
                   <div className="font-display text-3xl font-semibold text-white">{s.n}</div>
@@ -102,7 +119,7 @@ export default async function HomePage() {
               />
               <div className="absolute inset-x-4 bottom-4 rounded-xl border border-brass/40 bg-brand-indigo-deep/75 p-4 backdrop-blur">
                 <div className="text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-brass-bright">
-                  Now Booking · Featured
+                  {tHero("featuredBadge")}
                 </div>
                 <div className="mt-0.5 font-display text-xl text-white">{project.name}</div>
                 <div className="text-sm text-paper/70">{project.location}</div>
@@ -116,9 +133,9 @@ export default async function HomePage() {
       <section id="services" className="py-24">
         <div className="wrap">
           <div className="mb-13 max-w-2xl">
-            <div className="eyebrow">What we do</div>
+            <div className="eyebrow">{tServices("eyebrow")}</div>
             <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
-              One team for every kind of move
+              {tServices("heading")}
             </h2>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
@@ -149,16 +166,18 @@ export default async function HomePage() {
                   className="aspect-[3/4] w-full object-cover"
                 />
                 <span className="absolute left-4 top-4 rounded-full bg-brass px-3 py-1.5 text-[0.68rem] font-bold uppercase tracking-wider text-brand-indigo-deep">
-                  Now Booking
+                  {tFeatured("nowBooking")}
                 </span>
               </div>
             )}
             <div>
-              <div className="eyebrow">Featured Launch · Now Booking Through Us</div>
+              <div className="eyebrow">{tFeatured("eyebrow")}</div>
               <h2 className="mb-1.5 mt-4 text-4xl md:text-5xl">{project.name}</h2>
               <p className="mb-4 text-paper/70">{project.location}</p>
               {project.summary && (
-                <p className="mb-6 max-w-[38em] text-paper/80">{project.summary}</p>
+                <p className="mb-6 max-w-[38em] text-paper/80">
+                  {getLocalizedField(project.summary, locale)}
+                </p>
               )}
 
               {project.configurations && project.configurations.length > 0 && (
@@ -174,7 +193,9 @@ export default async function HomePage() {
                       <div className="my-1.5 font-display text-lg text-white">
                         {c.displayPrice}
                       </div>
-                      <div className="text-sm text-paper/80">{c.note}</div>
+                      <div className="text-sm text-paper/80">
+                        {getLocalizedField(c.note, locale)}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -196,19 +217,19 @@ export default async function HomePage() {
               <div className="flex flex-wrap gap-3.5">
                 <a
                   href={waLink(
-                    `Hi Shree Giriraj, I'm interested in ${project.name}. Please share the current price sheet, floor availability and a site visit slot.`
+                    `${tFeatured("whatsappPrefix")} ${project.name}. ${tFeatured("whatsappSuffix")}`
                   )}
                   target="_blank"
                   rel="noopener"
                   className="btn btn-brass"
                 >
-                  Get price &amp; site visit
+                  {tFeatured("ctaPrice")}
                 </a>
                 <Link
                   href={`/projects/${project.slug.current}`}
                   className="btn btn-outline border-paper/40 text-paper"
                 >
-                  View project
+                  {tFeatured("ctaView")}
                 </Link>
               </div>
             </div>
@@ -220,25 +241,20 @@ export default async function HomePage() {
       {testimonials && testimonials.length > 0 && (
         <section className="bg-paper-alt py-24">
           <div className="wrap">
-            <div className="eyebrow">What clients say</div>
+            <div className="eyebrow">{tTestimonials("eyebrow")}</div>
             <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
-              Trusted by families across the suburbs
+              {tTestimonials("heading")}
             </h2>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
-              {testimonials.map((t) => (
-                <figure
-                  key={t._id}
-                  className="rounded-2xl bg-white p-8 shadow-sm"
-                >
-                  <div className="mb-3 text-brass">
-                    {"★".repeat(t.rating || 5)}
-                  </div>
+              {testimonials.map((testimonial) => (
+                <figure key={testimonial._id} className="rounded-2xl bg-white p-8 shadow-sm">
+                  <div className="mb-3 text-brass">{"★".repeat(testimonial.rating || 5)}</div>
                   <blockquote className="font-display text-lg text-brand-indigo">
-                    “{t.quote}”
+                    “{getLocalizedField(testimonial.quote, locale)}”
                   </blockquote>
                   <figcaption className="mt-4 text-sm text-muted">
-                    <span className="block font-semibold text-ink">{t.author}</span>
-                    {t.role}
+                    <span className="block font-semibold text-ink">{testimonial.author}</span>
+                    {getLocalizedField(testimonial.role, locale)}
                   </figcaption>
                 </figure>
               ))}
@@ -250,16 +266,12 @@ export default async function HomePage() {
       {/* AREAS */}
       <section className="py-24">
         <div className="wrap">
-          <div className="eyebrow">Where we work</div>
+          <div className="eyebrow">{tAreas("eyebrow")}</div>
           <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
-            Across the western suburbs
+            {tAreas("heading")}
           </h2>
           <div className="mt-8 grid gap-5 md:grid-cols-3">
-            {[
-              { name: "Borivali", body: "Our home turf. Resale, rentals and redevelopment across Borivali West and East." },
-              { name: "Kandivali", body: "Premium new launches and family homes off M.G. Road and Link Road." },
-              { name: "Malad", body: "Growing residential and commercial options near Mindspace and the Link Road corridor." },
-            ].map((a) => (
+            {areas.map((a) => (
               <div key={a.name} className="rounded-2xl border border-brand-indigo/10 bg-white p-8">
                 <h3 className="text-xl text-brand-indigo">{a.name}</h3>
                 <p className="mt-2 text-sm text-muted">{a.body}</p>
@@ -273,17 +285,18 @@ export default async function HomePage() {
       <section id="enquire" className="bg-brand-indigo-deep text-paper">
         <div className="wrap grid items-center gap-14 py-24 md:grid-cols-2">
           <div>
-            <div className="eyebrow text-brass-bright">Let&apos;s talk</div>
+            <div className="eyebrow text-brass-bright">{tLeadForm("eyebrow")}</div>
             <h2 className="mt-3.5 text-3xl md:text-4xl">
-              Tell us what you&apos;re{" "}
-              <em className="italic text-brass-bright">looking for.</em>
+              {tLeadForm("headingPart1")}
+              <em className="italic text-brass-bright">{tLeadForm("headingEm")}</em>
             </h2>
-            <p className="mt-4 text-paper/75">
-              Share a few details and we&apos;ll get back with matching options,
-              honest pricing and the next available site visit — usually the same day.
-            </p>
+            <p className="mt-4 text-paper/75">{tLeadForm("body")}</p>
             <div className="mt-6 space-y-3 text-sm">
-              <p><a href={`tel:${site.phonePrimary}`} className="font-medium text-white">{site.phonePrimary}</a> · <a href={`tel:${site.phoneSecondary}`} className="font-medium text-white">{site.phoneSecondary}</a></p>
+              <p>
+                <a href={`tel:${site.phonePrimary}`} className="font-medium text-white">{site.phonePrimary}</a>{" "}
+                ·{" "}
+                <a href={`tel:${site.phoneSecondary}`} className="font-medium text-white">{site.phoneSecondary}</a>
+              </p>
               <p><a href={`mailto:${site.email}`} className="text-white">{site.email}</a></p>
               <p className="text-paper/70">{site.address}</p>
             </div>
