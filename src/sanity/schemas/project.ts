@@ -1,4 +1,5 @@
 import { defineType, defineField } from "sanity";
+import { localizedStringField, localizedTextField } from "./lib/localizedFields";
 
 export default defineType({
   name: "project",
@@ -68,6 +69,13 @@ export default defineType({
       initialValue: false,
     }),
     defineField({
+      name: "order",
+      title: "Display order",
+      type: "number",
+      description: "Lower numbers appear first in the homepage grid when multiple projects are featured.",
+      initialValue: 0,
+    }),
+    defineField({
       name: "coverImage",
       title: "Cover image",
       type: "image",
@@ -86,13 +94,7 @@ export default defineType({
         },
       ],
     }),
-    defineField({
-      name: "summary",
-      title: "Summary",
-      type: "text",
-      rows: 4,
-      description: "Short intro paragraph for the project.",
-    }),
+    localizedTextField("summary", "Summary"),
     defineField({
       name: "configurations",
       title: "Configurations",
@@ -110,7 +112,7 @@ export default defineType({
               type: "string",
               title: "Display price (masked, e.g. ₹2.** Cr)",
             },
-            { name: "note", type: "string", title: "Note (e.g. All-inclusive · lower floor)" },
+            localizedStringField("note", "Note (e.g. All-inclusive · lower floor)"),
           ],
           preview: {
             select: { title: "type", subtitle: "displayPrice" },
@@ -125,11 +127,14 @@ export default defineType({
       of: [{ type: "string" }],
       options: { layout: "tags" },
     }),
-    defineField({
-      name: "body",
-      title: "Full description",
-      type: "blockContent",
-    }),
+    localizedTextField("body", "Full description", 8),
+  ],
+  orderings: [
+    {
+      title: "Display order",
+      name: "orderAsc",
+      by: [{ field: "order", direction: "asc" }],
+    },
   ],
   preview: {
     select: { title: "name", subtitle: "location", media: "coverImage" },
