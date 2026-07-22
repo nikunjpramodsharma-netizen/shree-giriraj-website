@@ -1,29 +1,19 @@
 import { defineType, defineField } from "sanity";
+import { localizedTextField, localizedStringField } from "./lib/localizedFields";
 
 export default defineType({
   name: "testimonial",
   title: "Testimonial",
   type: "document",
   fields: [
-    defineField({
-      name: "quote",
-      title: "Quote",
-      type: "text",
-      rows: 4,
-      validation: (rule) => rule.required(),
-    }),
+    localizedTextField("quote", "Quote"),
     defineField({
       name: "author",
       title: "Client name",
       type: "string",
       validation: (rule) => rule.required(),
     }),
-    defineField({
-      name: "role",
-      title: "Role / context",
-      type: "string",
-      description: "e.g. Borivali homeowner, or 'Bought 2 BHK in Kandivali'",
-    }),
+    localizedStringField("role", "Role / context"),
     defineField({
       name: "rating",
       title: "Rating (1-5)",
@@ -53,6 +43,6 @@ export default defineType({
     },
   ],
   preview: {
-    select: { title: "author", subtitle: "role" },
+    select: { title: "author", subtitle: "role.en" },
   },
 });
