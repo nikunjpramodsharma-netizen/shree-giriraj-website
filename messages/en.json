@@ -1,1 +1,131 @@
-{}
+{
+  "nav": {
+    "services": "Services",
+    "projects": "Projects",
+    "blog": "Blog",
+    "about": "About",
+    "enquireNow": "Enquire Now",
+    "menuLabel": "Menu",
+    "brandTagline": "Real Estate · Est. {year}",
+    "whatsappGenericMessage": "Hi Shree Giriraj, I'd like to know more about properties in the western suburbs.",
+    "whatsappEnquireMessage": "Hi Shree Giriraj, I'd like to enquire."
+  },
+  "hero": {
+    "headingPart1": "Your address in the western suburbs, ",
+    "headingEm": "found the right way.",
+    "body": "For over 25 years, families across Borivali have trusted us to buy, sell and rent homes — and to get first access to the suburb's most sought-after new launches.",
+    "ctaBook": "Book a consultation",
+    "ctaWhatsapp": "Chat on WhatsApp",
+    "whatsappMessage": "Hi Shree Giriraj, I'd like to enquire.",
+    "statYears": "Years in Borivali West",
+    "statSuburbs": "Suburbs covered",
+    "statRating": "Client rating",
+    "featuredBadge": "Now Booking · Featured"
+  },
+  "services": {
+    "eyebrow": "What we do",
+    "heading": "One team for every kind of move",
+    "resaleTitle": "Resale flats",
+    "resaleBody": "Buy or sell ready-to-move homes across Borivali, Kandivali and Malad, with fair pricing and clear title checks.",
+    "rentalsTitle": "Rentals",
+    "rentalsBody": "Tenants and owners matched quickly — from 1 BHK starter homes to premium family residences, with agreements sorted.",
+    "newProjectTitle": "New project bookings",
+    "newProjectBody": "Early access to upcoming launches through our direct builder network — often before they hit the open market.",
+    "redevelopmentTitle": "Redevelopment",
+    "redevelopmentBody": "Guidance for societies and owners through redevelopment — from developer selection to occupancy.",
+    "shopsTitle": "Shops & plots",
+    "shopsBody": "Commercial shops, offices and plots for investors and business owners looking to expand in the suburbs.",
+    "interiorsTitle": "Interiors & civil work",
+    "interiorsBody": "Once you have the keys, our team helps with fit-outs and civil work to get your home move-in ready."
+  },
+  "featuredProject": {
+    "eyebrow": "Featured Launch · Now Booking Through Us",
+    "nowBooking": "Now Booking",
+    "ctaPrice": "Get price & site visit",
+    "ctaView": "View project",
+    "whatsappPrefix": "Hi Shree Giriraj, I'm interested in",
+    "whatsappSuffix": "Please share the current price sheet, floor availability and a site visit slot."
+  },
+  "testimonials": {
+    "eyebrow": "What clients say",
+    "heading": "Trusted by families across the suburbs"
+  },
+  "areas": {
+    "eyebrow": "Where we work",
+    "heading": "Across the western suburbs",
+    "borivaliBody": "Our home turf. Resale, rentals and redevelopment across Borivali West and East.",
+    "kandivaliBody": "Premium new launches and family homes off M.G. Road and Link Road.",
+    "maladBody": "Growing residential and commercial options near Mindspace and the Link Road corridor."
+  },
+  "leadForm": {
+    "eyebrow": "Let's talk",
+    "headingPart1": "Tell us what you're ",
+    "headingEm": "looking for.",
+    "body": "Share a few details and we'll get back with matching options, honest pricing and the next available site visit — usually the same day.",
+    "namePlaceholder": "Your name",
+    "phonePlaceholder": "Phone number",
+    "areaPlaceholder": "Preferred area (e.g. Borivali West)",
+    "intentBuy": "Buy",
+    "intentSell": "Sell",
+    "intentRent": "Rent",
+    "intentNewProject": "New project",
+    "intentRedevelopment": "Redevelopment",
+    "submit": "Send enquiry on WhatsApp",
+    "disclaimer": "Opens WhatsApp with your details filled in. No spam, ever.",
+    "whatsappGreeting": "Hi Shree Giriraj, I'd like to enquire.",
+    "whatsappNameLabel": "Name",
+    "whatsappIntentLabel": "Looking to",
+    "whatsappAreaLabel": "Area",
+    "whatsappPhoneLabel": "Phone"
+  },
+  "footer": {
+    "description": "Interior & Civil Work · Flat, Shop, Plot & Bungalow Re-Development. Trusted property advice in Borivali West since {year}.",
+    "exploreHeading": "Explore",
+    "contactHeading": "Get in touch",
+    "whatsappUs": "WhatsApp us",
+    "whatsappMessage": "Hi Shree Giriraj!",
+    "copyright": "© {year} {name} · Borivali · Kandivali · Malad",
+    "rera": "MahaRERA Reg. No. {number}"
+  },
+  "whatsappFloat": {
+    "ariaLabel": "Chat on WhatsApp",
+    "message": "Hi Shree Giriraj, I'd like to enquire about a property."
+  },
+  "projectsPage": {
+    "eyebrow": "Projects",
+    "heading": "New launches & bookings",
+    "body": "Handpicked residential projects across the western suburbs — many available for booking through our direct builder relationships.",
+    "emptyState": "No projects added yet. Add your first one in the ",
+    "studioLink": "Studio",
+    "statusBooking": "Now Booking",
+    "statusUpcoming": "Upcoming",
+    "statusSold": "Sold Out",
+    "viewDetails": "View details →"
+  },
+  "projectDetail": {
+    "backLink": "← All projects",
+    "developerLabel": "Developer: ",
+    "reraLabel": "MahaRERA No. ",
+    "ctaPrice": "Get price & site visit",
+    "configEyebrow": "Configurations & pricing",
+    "configHeading": "Homes at {name}",
+    "priceSheetNote": "Exact all-inclusive pricing & floor-wise availability shared on request — ",
+    "priceSheetLink": "message us for the live price sheet",
+    "whatsappPriceSheet": "Hi Shree Giriraj, please share the live price sheet for {name}.",
+    "whatsappSiteVisit": "Hi Shree Giriraj, I'm interested in {name}. Please share the current price sheet, floor availability and a site visit slot.",
+    "amenitiesEyebrow": "Amenities",
+    "amenitiesHeading": "Life at {name}",
+    "galleryEyebrow": "Gallery",
+    "galleryHeading": "Take a look"
+  },
+  "blogPage": {
+    "eyebrow": "Blog",
+    "heading": "Property insights for the western suburbs",
+    "body": "Practical guides on buying, selling and renting in Borivali, Kandivali and Malad — plus notes on the local market.",
+    "emptyState": "No posts published yet. Add your first article in the ",
+    "studioLink": "Studio"
+  },
+  "blogPost": {
+    "backLink": "← Back to blog"
+  }
+}
