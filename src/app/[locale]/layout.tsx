@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { Fraunces, Inter } from "next/font/google";
+import { routing } from "@/i18n/routing";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -34,16 +38,34 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default function LocaleLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+  params,
+}: {
+  children: React.ReactNode;
+  params: { locale: string };
+}) {
+  const { locale } = params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  // Enables static rendering for this locale.
+  setRequestLocale(locale);
+
   return (
-    <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
+    <html lang={locale} className={`${inter.variable} ${fraunces.variable}`}>
       <body>
-        <Nav />
-        <main>{children}</main>
-        <Footer />
-        <WhatsAppFloat />
+        <NextIntlClientProvider>
+          <Nav />
+          <main>{children}</main>
+          <Footer />
+          <WhatsAppFloat />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
