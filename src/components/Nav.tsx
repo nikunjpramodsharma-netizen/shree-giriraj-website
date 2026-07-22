@@ -1,35 +1,37 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { site, waLink } from "@/lib/config";
-
-const links = [
-  { href: "/#services", label: "Services" },
-  { href: "/projects", label: "Projects" },
-  { href: "/blog", label: "Blog" },
-  { href: "/about", label: "About" },
-];
+import { LanguageToggle } from "@/components/LanguageToggle";
 
 export function Nav() {
+  const t = useTranslations("nav");
   const [open, setOpen] = useState(false);
+
+  const links = [
+    { href: "/#services", label: t("services") },
+    { href: "/projects", label: t("projects") },
+    { href: "/blog", label: t("blog") },
+    { href: "/about", label: t("about") },
+  ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-brand-indigo/10 bg-paper/85 backdrop-blur">
       <div className="wrap flex h-[72px] items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          {/* Replace with your logo image once added to /public */}
           <span className="flex flex-col leading-none">
             <span className="font-display text-lg font-semibold text-brand-indigo">
               Shree Giriraj
             </span>
             <span className="mt-0.5 text-[0.6rem] uppercase tracking-[0.2em] text-muted">
-              Real Estate · Est. {site.established}
+              {t("brandTagline", { year: site.established })}
             </span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-6 md:flex">
           {links.map((l) => (
             <Link
               key={l.href}
@@ -39,21 +41,20 @@ export function Nav() {
               {l.label}
             </Link>
           ))}
+          <LanguageToggle />
           <a
-            href={waLink(
-              "Hi Shree Giriraj, I'd like to know more about properties in the western suburbs."
-            )}
+            href={waLink(t("whatsappGenericMessage"))}
             target="_blank"
             rel="noopener"
             className="btn btn-wa"
           >
-            Enquire Now
+            {t("enquireNow")}
           </a>
         </nav>
 
         <button
           className="p-2 md:hidden"
-          aria-label="Menu"
+          aria-label={t("menuLabel")}
           onClick={() => setOpen((v) => !v)}
         >
           <div className="space-y-1.5">
@@ -76,13 +77,14 @@ export function Nav() {
               {l.label}
             </Link>
           ))}
+          <LanguageToggle />
           <a
-            href={waLink("Hi Shree Giriraj, I'd like to enquire.")}
+            href={waLink(t("whatsappEnquireMessage"))}
             target="_blank"
             rel="noopener"
             className="btn btn-wa w-fit"
           >
-            Enquire Now
+            {t("enquireNow")}
           </a>
         </nav>
       )}
