@@ -23,7 +23,7 @@ const fraunces = Fraunces({
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.shreegiriraj.com";
 
-const ogLocaleMap: Record<string, string> = { en: "en_IN", hi: "hi_IN", mr: "mr_IN" };
+const ogLocaleMap: Record<string, string> = { en: "en_IN", hi: "hi_IN", mr: "mr_IN", gu: "gu_IN" };
 
 export async function generateMetadata({
   params,

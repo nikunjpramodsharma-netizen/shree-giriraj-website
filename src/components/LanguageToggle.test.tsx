@@ -27,6 +27,12 @@ describe("LanguageToggle", () => {
     expect(replace).toHaveBeenCalledWith("/projects", { locale: "mr" });
   });
 
+  it("switches to Gujarati when ગુજરાતી is clicked", async () => {
+    render(<LanguageToggle />);
+    await userEvent.click(screen.getByRole("button", { name: "ગુજરાતી" }));
+    expect(replace).toHaveBeenCalledWith("/projects", { locale: "gu" });
+  });
+
   it("marks the active locale button with aria-current", () => {
     render(<LanguageToggle />);
     expect(screen.getByRole("button", { name: "EN" })).toHaveAttribute("aria-current", "true");

@@ -10,24 +10,24 @@ function fieldNames(def: any) {
 }
 
 describe("localized Sanity field builders", () => {
-  it("localizedStringField produces an object field with en/hi/mr string subfields", () => {
+  it("localizedStringField produces an object field with en/hi/mr/gu string subfields", () => {
     const def = localizedStringField("summary", "Summary");
     expect(def.name).toBe("summary");
     expect(def.title).toBe("Summary");
     expect(def.type).toBe("object");
-    expect(fieldNames(def)).toEqual(["en", "hi", "mr"]);
+    expect(fieldNames(def)).toEqual(["en", "hi", "mr", "gu"]);
     expect(def.fields.every((f: any) => f.type === "string")).toBe(true);
   });
 
-  it("localizedTextField produces en/hi/mr text subfields with the given row count", () => {
+  it("localizedTextField produces en/hi/mr/gu text subfields with the given row count", () => {
     const def = localizedTextField("body", "Body", 6);
-    expect(fieldNames(def)).toEqual(["en", "hi", "mr"]);
+    expect(fieldNames(def)).toEqual(["en", "hi", "mr", "gu"]);
     expect(def.fields.every((f: any) => f.type === "text" && f.rows === 6)).toBe(true);
   });
 
-  it("localizedBlockContentField produces en/hi/mr blockContent subfields", () => {
+  it("localizedBlockContentField produces en/hi/mr/gu blockContent subfields", () => {
     const def = localizedBlockContentField("body", "Full description");
-    expect(fieldNames(def)).toEqual(["en", "hi", "mr"]);
+    expect(fieldNames(def)).toEqual(["en", "hi", "mr", "gu"]);
     expect(def.fields.every((f: any) => f.type === "blockContent")).toBe(true);
   });
 });

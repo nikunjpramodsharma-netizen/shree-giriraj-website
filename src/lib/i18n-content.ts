@@ -1,4 +1,4 @@
-export type Locale = "en" | "hi" | "mr";
+export type Locale = "en" | "hi" | "mr" | "gu";
 
 export type LocalizedValue<T> = Partial<Record<Locale, T>>;
 

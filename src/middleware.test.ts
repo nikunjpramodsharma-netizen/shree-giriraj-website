@@ -19,6 +19,14 @@ describe("locale detection middleware", () => {
     expect(res.headers.get("location")).toContain("/mr");
   });
 
+  it("redirects a first-time Gujarati-preferring visitor to /gu", () => {
+    const req = new NextRequest("https://example.com/", {
+      headers: { "accept-language": "gu-IN,gu;q=0.9" },
+    });
+    const res = middleware(req);
+    expect(res.headers.get("location")).toContain("/gu");
+  });
+
   it("leaves English visitors on the unprefixed path", () => {
     const req = new NextRequest("https://example.com/projects", {
       headers: { "accept-language": "en-US,en;q=0.9" },

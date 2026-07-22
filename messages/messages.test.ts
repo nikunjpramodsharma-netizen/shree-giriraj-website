@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import en from "./en.json";
 import hi from "./hi.json";
 import mr from "./mr.json";
+import gu from "./gu.json";
 
 function flattenKeys(obj: Record<string, unknown>, prefix = ""): string[] {
   return Object.entries(obj).flatMap(([key, value]) => {
@@ -13,12 +14,14 @@ function flattenKeys(obj: Record<string, unknown>, prefix = ""): string[] {
 }
 
 describe("message catalog key parity", () => {
-  it("has identical keys across en, hi and mr", () => {
+  it("has identical keys across en, hi, mr and gu", () => {
     const enKeys = flattenKeys(en).sort();
     const hiKeys = flattenKeys(hi).sort();
     const mrKeys = flattenKeys(mr).sort();
+    const guKeys = flattenKeys(gu).sort();
     expect(hiKeys).toEqual(enKeys);
     expect(mrKeys).toEqual(enKeys);
+    expect(guKeys).toEqual(enKeys);
   });
 
   it("has no empty string values in any catalog", () => {
@@ -26,6 +29,7 @@ describe("message catalog key parity", () => {
       ["en", en],
       ["hi", hi],
       ["mr", mr],
+      ["gu", gu],
     ] as const) {
       const empty = flattenKeys(catalog).filter(
         (path) => path.split(".").reduce((o: any, k) => o[k], catalog) === ""

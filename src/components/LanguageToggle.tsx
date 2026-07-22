@@ -7,6 +7,7 @@ const LOCALES = [
   { code: "en" as const, label: "EN" },
   { code: "hi" as const, label: "हिंदी" },
   { code: "mr" as const, label: "मराठी" },
+  { code: "gu" as const, label: "ગુજરાતી" },
 ];
 
 export function LanguageToggle() {

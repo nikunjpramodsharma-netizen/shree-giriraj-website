@@ -120,14 +120,14 @@ Drop your logo file into `public/` (e.g. `public/logo.png`) and swap the text pl
 
 ## i18n smoke test (do this once, after your first real deploy)
 
-The site was localized into English, Hindi and Marathi (routes: `/`, `/hi`, `/mr`) in an environment with no live Sanity project, so `npm run build` was never run against real content during that work — only `npx tsc --noEmit`. Once you've created your Sanity project and filled in `.env.local` (see above), run `npm run build` for the first time and then manually check:
+The site was localized into English, Hindi, Marathi and Gujarati (routes: `/`, `/hi`, `/mr`, `/gu`) in an environment with no live Sanity project, so `npm run build` was never run against real content during that work — only `npx tsc --noEmit`. Once you've created your Sanity project and filled in `.env.local` (see above), run `npm run build` for the first time and then manually check:
 
 1. `npm run dev`, visit `http://localhost:3000/` — loads in English, no `/en` in the URL.
 2. Change your browser's language preference to Hindi (or clear cookies and set `Accept-Language: hi`), reload `/` — redirects to `/hi`.
-3. Click "मराठी" in the nav language toggle — URL becomes `/mr/...`, all static copy (nav, hero, services, footer) switches to Marathi.
-4. Visit `/hi/projects`, `/hi/blog`, `/hi/about` (after adding an `about` Page in Studio) — confirm each renders without `[object Object]` anywhere, and CMS text falls back to English where Hindi hasn't been entered yet.
+3. Click "मराठी" or "ગુજરાતી" in the nav language toggle — URL becomes `/mr/...` or `/gu/...`, all static copy (nav, hero, services, footer) switches language.
+4. Visit `/hi/projects`, `/hi/blog`, `/hi/about` (after adding an `about` Page in Studio) — confirm each renders without `[object Object]` anywhere, and CMS text falls back to English where a translation hasn't been entered yet.
 5. Visit `/studio` — confirm it still loads and is NOT wrapped in the site's Nav/Footer/WhatsApp button.
-6. In Studio, open a Project and confirm the Summary/Full description fields now show English/Hindi/Marathi tabs, and the Testimonial's Quote/Role fields do the same.
+6. In Studio, open a Project and confirm the Summary/Full description fields now show English/Hindi/Marathi/Gujarati tabs, and the Testimonial's Quote/Role fields do the same.
 
 ---
 
