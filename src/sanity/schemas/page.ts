@@ -1,4 +1,5 @@
 import { defineType, defineField } from "sanity";
+import { localizedStringField, localizedTextField, localizedBlockContentField } from "./lib/localizedFields";
 
 /**
  * A flexible page type for content like "About", "Services", "Privacy", etc.
@@ -23,22 +24,9 @@ export default defineType({
       options: { source: "title", maxLength: 96 },
       validation: (rule) => rule.required(),
     }),
-    defineField({
-      name: "heroHeading",
-      title: "Hero heading",
-      type: "string",
-    }),
-    defineField({
-      name: "heroSubheading",
-      title: "Hero subheading",
-      type: "text",
-      rows: 2,
-    }),
-    defineField({
-      name: "body",
-      title: "Body",
-      type: "blockContent",
-    }),
+    localizedStringField("heroHeading", "Hero heading"),
+    localizedTextField("heroSubheading", "Hero subheading", 2),
+    localizedBlockContentField("body", "Body"),
     defineField({
       name: "seoDescription",
       title: "SEO description",
