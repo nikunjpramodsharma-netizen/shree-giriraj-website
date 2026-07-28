@@ -46,7 +46,9 @@
   },
   "testimonials": {
     "eyebrow": "What clients say",
-    "heading": "Trusted by families across the suburbs"
+    "heading": "Trusted by families across the suburbs",
+    "prevAriaLabel": "Previous testimonial",
+    "nextAriaLabel": "Next testimonial"
   },
   "areas": {
     "eyebrow": "Where we work",

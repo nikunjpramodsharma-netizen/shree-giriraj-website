@@ -11,6 +11,7 @@ import {
 import { site, waLink } from "@/lib/config";
 import { LeadForm } from "@/components/LeadForm";
 import { FAQSection } from "@/components/FAQSection";
+import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
 import { getLowestPriceConfig } from "@/lib/project-helpers";
 
@@ -207,19 +208,8 @@ export default async function HomePage({
             <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
               {tTestimonials("heading")}
             </h2>
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
-              {testimonials.map((testimonial) => (
-                <figure key={testimonial._id} className="rounded-2xl bg-white p-8 shadow-sm">
-                  <div className="mb-3 text-brass">{"★".repeat(testimonial.rating || 5)}</div>
-                  <blockquote className="font-display text-lg text-brand-indigo">
-                    “{getLocalizedField(testimonial.quote, locale)}”
-                  </blockquote>
-                  <figcaption className="mt-4 text-sm text-muted">
-                    <span className="block font-semibold text-ink">{testimonial.author}</span>
-                    {getLocalizedField(testimonial.role, locale)}
-                  </figcaption>
-                </figure>
-              ))}
+            <div className="mt-10">
+              <TestimonialCarousel testimonials={testimonials} locale={locale} />
             </div>
           </div>
         </section>
