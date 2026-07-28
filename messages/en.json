@@ -95,6 +95,10 @@
     "ariaLabel": "Chat on WhatsApp",
     "message": "Hi Shree Giriraj, I'd like to enquire about a property."
   },
+  "stickyCta": {
+    "callLabel": "Call",
+    "whatsappLabel": "WhatsApp"
+  },
   "projectsPage": {
     "eyebrow": "Projects",
     "heading": "New launches & bookings",

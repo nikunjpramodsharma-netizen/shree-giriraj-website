@@ -8,6 +8,7 @@ import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -73,6 +74,7 @@ export default function LocaleLayout({
           <main>{children}</main>
           <Footer />
           <WhatsAppFloat />
+          <StickyMobileCTA locale={locale} />
         </NextIntlClientProvider>
       </body>
     </html>
