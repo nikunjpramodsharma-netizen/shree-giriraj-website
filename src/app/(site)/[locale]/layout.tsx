@@ -68,7 +68,7 @@ export default function LocaleLayout({
 
   return (
     <html lang={locale} className={`${inter.variable} ${fraunces.variable}`}>
-      <body>
+      <body className="pb-[52px] md:pb-0">
         <NextIntlClientProvider>
           <Nav />
           <main>{children}</main>

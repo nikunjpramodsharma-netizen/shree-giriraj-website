@@ -8,11 +8,13 @@ Content (blog posts, projects, testimonials, pages) is edited from a built-in Sa
 
 ## What's already built
 
-- **Homepage** (`/`) — hero, services, featured project (from CMS), testimonials (from CMS), areas, and a lead form that opens WhatsApp pre-filled.
+- **Homepage** (`/`) — hero, services, a 3-project grid (featured projects from CMS), an auto-rotating testimonial carousel (from CMS), an FAQ section (from CMS), areas, and a lead form that opens WhatsApp pre-filled.
 - **Blog** — listing at `/blog`, articles at `/blog/[slug]`.
 - **Projects** — listing at `/projects`, detail pages at `/projects/[slug]` with configurations, masked pricing, amenities and a gallery.
 - **Flexible pages** — e.g. `/about`, editable entirely from the CMS.
-- **Sanity Studio** — at `/studio`, with four content types: Blog Post, Project, Testimonial, Page.
+- **Sticky mobile Call/WhatsApp bar** — fixed to the bottom of the screen on mobile only; the floating WhatsApp button is hidden on mobile to avoid duplicating it.
+- **Sanity Studio** — at `/studio`, with six content types: Blog Post, Project, Testimonial, Page, FAQ, and Team Member (the last one isn't used on any page yet — added for a future `/about` page).
+- All content is localized into English, Hindi, Marathi and Gujarati.
 - Brand colours, fonts, contact details, and MahaRERA number are baked in.
 
 ---
@@ -58,8 +60,9 @@ npm run dev
 
 ### 4. Add your first content (important)
 In the Studio:
-- Create at least **one Project** and tick **"Feature on homepage?"** — the homepage hero pulls the featured project, so without this the hero image area stays empty.
-- Add a few **Testimonials** and tick "Show on homepage?".
+- Create at least **one Project** (up to 3 shown) and tick **"Feature on homepage?"** — the homepage grid pulls featured projects in `order` order, so without this the grid stays empty.
+- Add a few **Testimonials** and tick "Show on homepage?" — these feed the auto-rotating carousel.
+- Add a few **FAQs** — these populate the homepage FAQ section.
 - Create a **Page** with slug `about` so the `/about` link works.
 - Write a **Blog Post** or two.
 
