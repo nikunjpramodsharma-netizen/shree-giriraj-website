@@ -817,9 +817,10 @@ Expected: `2 passed`.
 
 - [ ] **Step 3: Write the failing `TestimonialCarousel` tests**
 
-Create `src/components/TestimonialCarousel.test.tsx`:
+Create `src/components/TestimonialCarousel.test.tsx`. Two things to note about why this test file is shaped the way it is: (1) the component's blockquote renders `“{quote}”` as three separate JSX children, so React does not merge them into one text node — `getByText` needs a regex/substring matcher, not an exact string, to match across that split; (2) fake timers are scoped to only the one test that needs them (`vi.useFakeTimers()` called locally, not globally via `beforeEach`) — combining global fake timers with `userEvent.click()` in the other tests causes `user-event` to deadlock waiting on internal timers that never resolve, so the click-based tests intentionally run under real timers with plain `userEvent.setup()`.
+
 ```tsx
-import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { TestimonialCarousel } from "./TestimonialCarousel";
@@ -835,40 +836,37 @@ const testimonials = [
   { _id: "3", quote: { en: "Highly recommend" }, author: "Client C", role: { en: "Malad homeowner" }, rating: 5 },
 ];
 
-beforeEach(() => {
-  vi.useFakeTimers();
-});
-
-afterEach(() => {
-  vi.useRealTimers();
-});
-
 describe("TestimonialCarousel", () => {
   it("shows the first testimonial initially", () => {
     render(<TestimonialCarousel testimonials={testimonials} locale="en" />);
-    expect(screen.getByText("Great service")).toBeInTheDocument();
-    expect(screen.queryByText("Very professional")).not.toBeInTheDocument();
+    expect(screen.getByText(/Great service/)).toBeInTheDocument();
+    expect(screen.queryByText(/Very professional/)).not.toBeInTheDocument();
   });
 
   it("advances to the next testimonial when the next button is clicked", async () => {
-    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
+    const user = userEvent.setup();
     render(<TestimonialCarousel testimonials={testimonials} locale="en" />);
     await user.click(screen.getByRole("button", { name: "Next testimonial" }));
-    expect(screen.getByText("Very professional")).toBeInTheDocument();
+    expect(screen.getByText(/Very professional/)).toBeInTheDocument();
   });
 
   it("goes back to the previous testimonial when the prev button is clicked", async () => {
-    const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
+    const user = userEvent.setup();
     render(<TestimonialCarousel testimonials={testimonials} locale="en" />);
     await user.click(screen.getByRole("button", { name: "Previous testimonial" }));
-    expect(screen.getByText("Highly recommend")).toBeInTheDocument();
+    expect(screen.getByText(/Highly recommend/)).toBeInTheDocument();
   });
 
   it("auto-advances after the rotation interval", () => {
-    render(<TestimonialCarousel testimonials={testimonials} locale="en" />);
-    expect(screen.getByText("Great service")).toBeInTheDocument();
-    vi.advanceTimersByTime(6000);
-    expect(screen.getByText("Very professional")).toBeInTheDocument();
+    vi.useFakeTimers();
+    try {
+      render(<TestimonialCarousel testimonials={testimonials} locale="en" />);
+      expect(screen.getByText(/Great service/)).toBeInTheDocument();
+      vi.advanceTimersByTime(6000);
+      expect(screen.getByText(/Very professional/)).toBeInTheDocument();
+    } finally {
+      vi.useRealTimers();
+    }
   });
 
   it("does not render at all when given an empty testimonials array", () => {
