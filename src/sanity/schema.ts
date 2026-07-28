@@ -7,6 +7,7 @@ import project from "./schemas/project";
 import testimonial from "./schemas/testimonial";
 import page from "./schemas/page";
 import author from "./schemas/author";
+import faq from "./schemas/faq";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -17,6 +18,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     page,
     author,
     category,
+    faq,
     // Objects
     blockContent,
   ],

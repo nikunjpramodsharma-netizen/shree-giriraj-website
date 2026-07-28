@@ -105,3 +105,10 @@ export const pageBySlugQuery = groq`
 export const pageSlugsQuery = groq`
   *[_type == "page" && defined(slug.current)][].slug.current
 `;
+
+// ---------- FAQs ----------
+export const faqsQuery = groq`
+  *[_type == "faq"] | order(order asc) {
+    _id, question, answer, category
+  }
+`;
