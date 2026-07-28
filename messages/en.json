@@ -38,13 +38,11 @@
     "interiorsTitle": "Interior design & civil work",
     "interiorsBody": "Local interior designers and a civil work team in Borivali, Kandivali and Malad — fit-outs, renovation and civil work to get your home move-in ready."
   },
-  "featuredProject": {
-    "eyebrow": "Featured Launch · Now Booking Through Us",
-    "nowBooking": "Now Booking",
-    "ctaPrice": "Get price & site visit",
-    "ctaView": "View project",
-    "whatsappPrefix": "Hi Shree Giriraj, I'm interested in",
-    "whatsappSuffix": "Please share the current price sheet, floor availability and a site visit slot."
+  "projectsGrid": {
+    "eyebrow": "Now Booking",
+    "heading": "Featured launches across the western suburbs",
+    "viewAll": "View all projects →",
+    "viewDetails": "View details →"
   },
   "testimonials": {
     "eyebrow": "What clients say",

@@ -48,20 +48,14 @@ export const projectsQuery = groq`
   }
 `;
 
-export const featuredProjectQuery = groq`
-  *[_type == "project" && featured == true] | order(_createdAt desc)[0] {
+export const featuredProjectsGridQuery = groq`
+  *[_type == "project" && featured == true] | order(order asc)[0...3] {
     _id,
     name,
     slug,
-    developer,
-    status,
     location,
-    area,
-    rera,
     coverImage,
-    summary,
-    configurations,
-    amenities
+    configurations
   }
 `;
 

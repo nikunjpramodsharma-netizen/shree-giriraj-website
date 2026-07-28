@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { client } from "@/sanity/client";
 import { urlFor } from "@/sanity/image";
 import {
-  featuredProjectQuery,
+  featuredProjectsGridQuery,
   featuredTestimonialsQuery,
   faqsQuery,
 } from "@/sanity/queries";
@@ -12,22 +12,20 @@ import { site, waLink } from "@/lib/config";
 import { LeadForm } from "@/components/LeadForm";
 import { FAQSection } from "@/components/FAQSection";
 import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
+import { getLowestPriceConfig } from "@/lib/project-helpers";
 
 // Re-fetch content periodically so CMS edits show up without a redeploy.
 export const revalidate = 60;
 
 type Config = { type?: string; displayPrice?: string; note?: LocalizedValue<string> };
-type FeaturedProject = {
+type GridProject = {
+  _id: string;
   name: string;
   slug: { current: string };
-  developer?: string;
   location?: string;
-  rera?: string;
   coverImage?: any;
-  summary?: LocalizedValue<string>;
   configurations?: Config[];
-  amenities?: string[];
-} | null;
+};
 
 type Testimonial = {
   _id: string;
@@ -51,14 +49,14 @@ export default async function HomePage({
 }) {
   const locale = params.locale as Locale;
 
-  const [project, testimonials, faqs, tHero, tServices, tFeatured, tTestimonials, tAreas, tFaq, tLeadForm] =
+  const [projects, testimonials, faqs, tHero, tServices, tProjectsGrid, tTestimonials, tAreas, tFaq, tLeadForm] =
     await Promise.all([
-      client.fetch<FeaturedProject>(featuredProjectQuery),
+      client.fetch<GridProject[]>(featuredProjectsGridQuery),
       client.fetch<Testimonial[]>(featuredTestimonialsQuery),
       client.fetch<Faq[]>(faqsQuery),
       getTranslations({ locale, namespace: "hero" }),
       getTranslations({ locale, namespace: "services" }),
-      getTranslations({ locale, namespace: "featuredProject" }),
+      getTranslations({ locale, namespace: "projectsGrid" }),
       getTranslations({ locale, namespace: "testimonials" }),
       getTranslations({ locale, namespace: "areas" }),
       getTranslations({ locale, namespace: "faq" }),
@@ -84,8 +82,8 @@ export default async function HomePage({
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-brand-indigo-deep text-paper">
-        <div className="wrap grid items-center gap-10 py-24 md:grid-cols-[1.15fr_0.85fr]">
-          <div>
+        <div className="wrap py-24">
+          <div className="max-w-3xl">
             <div className="eyebrow text-brass-bright">
               {site.areas.join(" · ")}
             </div>
@@ -118,25 +116,6 @@ export default async function HomePage({
               ))}
             </div>
           </div>
-
-          {project?.coverImage && (
-            <div className="relative overflow-hidden rounded-2xl border border-brass/35 shadow-2xl">
-              <Image
-                src={urlFor(project.coverImage).width(800).height(1050).url()}
-                alt={project.coverImage?.alt || project.name}
-                width={800}
-                height={1050}
-                className="aspect-[3/4] w-full object-cover"
-              />
-              <div className="absolute inset-x-4 bottom-4 rounded-xl border border-brass/40 bg-brand-indigo-deep/75 p-4 backdrop-blur">
-                <div className="text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-brass-bright">
-                  {tHero("featuredBadge")}
-                </div>
-                <div className="mt-0.5 font-display text-xl text-white">{project.name}</div>
-                <div className="text-sm text-paper/70">{project.location}</div>
-              </div>
-            </div>
-          )}
         </div>
       </section>
 
@@ -163,86 +142,58 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* FEATURED PROJECT */}
-      {project && (
-        <section className="relative overflow-hidden bg-brand-indigo-deep text-paper">
-          <div className="wrap grid items-center gap-14 py-24 md:grid-cols-[0.82fr_1.18fr]">
-            {project.coverImage && (
-              <div className="relative overflow-hidden rounded-2xl border border-brass/30 shadow-2xl">
-                <Image
-                  src={urlFor(project.coverImage).width(760).height(1000).url()}
-                  alt={project.coverImage?.alt || project.name}
-                  width={760}
-                  height={1000}
-                  className="aspect-[3/4] w-full object-cover"
-                />
-                <span className="absolute left-4 top-4 rounded-full bg-brass px-3 py-1.5 text-[0.68rem] font-bold uppercase tracking-wider text-brand-indigo-deep">
-                  {tFeatured("nowBooking")}
-                </span>
+      {/* PROJECTS GRID */}
+      {projects && projects.length > 0 && (
+        <section className="py-24">
+          <div className="wrap">
+            <div className="mb-13 flex flex-wrap items-end justify-between gap-4">
+              <div className="max-w-2xl">
+                <div className="eyebrow">{tProjectsGrid("eyebrow")}</div>
+                <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
+                  {tProjectsGrid("heading")}
+                </h2>
               </div>
-            )}
-            <div>
-              <div className="eyebrow">{tFeatured("eyebrow")}</div>
-              <h2 className="mb-1.5 mt-4 text-4xl md:text-5xl">{project.name}</h2>
-              <p className="mb-4 text-paper/70">{project.location}</p>
-              {project.summary && (
-                <p className="mb-6 max-w-[38em] text-paper/80">
-                  {getLocalizedField(project.summary, locale)}
-                </p>
-              )}
-
-              {project.configurations && project.configurations.length > 0 && (
-                <div className="mb-7 grid gap-3 sm:grid-cols-2">
-                  {project.configurations.map((c, i) => (
-                    <div
-                      key={i}
-                      className="rounded-xl border border-brass/20 bg-white/5 p-4 transition hover:border-brass hover:bg-brass/5"
-                    >
-                      <div className="text-xs font-semibold uppercase tracking-wider text-brass-bright">
-                        {c.type}
+              <Link href="/projects" className="text-sm font-semibold text-brand-blue">
+                {tProjectsGrid("viewAll")}
+              </Link>
+            </div>
+            <div className="grid gap-8 md:grid-cols-3">
+              {projects.map((project) => {
+                const lowest = getLowestPriceConfig(project.configurations);
+                return (
+                  <Link
+                    key={project._id}
+                    href={`/projects/${project.slug.current}`}
+                    className="group flex flex-col overflow-hidden rounded-2xl border border-brand-indigo/10 bg-white transition hover:-translate-y-1 hover:shadow-xl"
+                  >
+                    {project.coverImage && (
+                      <div className="relative aspect-[4/3] overflow-hidden">
+                        <Image
+                          src={urlFor(project.coverImage).width(700).height(525).url()}
+                          alt={project.coverImage?.alt || project.name}
+                          width={700}
+                          height={525}
+                          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        />
                       </div>
-                      <div className="my-1.5 font-display text-lg text-white">
-                        {c.displayPrice}
-                      </div>
-                      <div className="text-sm text-paper/80">
-                        {getLocalizedField(c.note, locale)}
-                      </div>
+                    )}
+                    <div className="flex flex-1 flex-col p-6">
+                      <h3 className="text-xl text-brand-indigo">{project.name}</h3>
+                      {project.location && (
+                        <p className="mt-1 text-sm text-muted">{project.location}</p>
+                      )}
+                      {lowest?.displayPrice && (
+                        <p className="mt-3 font-display text-lg text-brand-indigo">
+                          {lowest.displayPrice}
+                        </p>
+                      )}
+                      <span className="mt-4 text-sm font-semibold text-brand-blue">
+                        {tProjectsGrid("viewDetails")}
+                      </span>
                     </div>
-                  ))}
-                </div>
-              )}
-
-              {project.amenities && project.amenities.length > 0 && (
-                <div className="mb-7 flex flex-wrap gap-2">
-                  {project.amenities.map((a) => (
-                    <span
-                      key={a}
-                      className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-sm text-paper/80"
-                    >
-                      {a}
-                    </span>
-                  ))}
-                </div>
-              )}
-
-              <div className="flex flex-wrap gap-3.5">
-                <a
-                  href={waLink(
-                    `${tFeatured("whatsappPrefix")} ${project.name}. ${tFeatured("whatsappSuffix")}`
-                  )}
-                  target="_blank"
-                  rel="noopener"
-                  className="btn btn-brass"
-                >
-                  {tFeatured("ctaPrice")}
-                </a>
-                <Link
-                  href={`/projects/${project.slug.current}`}
-                  className="btn btn-outline border-paper/40 text-paper"
-                >
-                  {tFeatured("ctaView")}
-                </Link>
-              </div>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>
