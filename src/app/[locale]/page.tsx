@@ -6,9 +6,11 @@ import { urlFor } from "@/sanity/image";
 import {
   featuredProjectQuery,
   featuredTestimonialsQuery,
+  faqsQuery,
 } from "@/sanity/queries";
 import { site, waLink } from "@/lib/config";
 import { LeadForm } from "@/components/LeadForm";
+import { FAQSection } from "@/components/FAQSection";
 import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
 
 // Re-fetch content periodically so CMS edits show up without a redeploy.
@@ -35,6 +37,13 @@ type Testimonial = {
   rating?: number;
 };
 
+type Faq = {
+  _id: string;
+  question: LocalizedValue<string>;
+  answer: LocalizedValue<string>;
+  category?: string;
+};
+
 export default async function HomePage({
   params,
 }: {
@@ -42,15 +51,17 @@ export default async function HomePage({
 }) {
   const locale = params.locale as Locale;
 
-  const [project, testimonials, tHero, tServices, tFeatured, tTestimonials, tAreas, tLeadForm] =
+  const [project, testimonials, faqs, tHero, tServices, tFeatured, tTestimonials, tAreas, tFaq, tLeadForm] =
     await Promise.all([
       client.fetch<FeaturedProject>(featuredProjectQuery),
       client.fetch<Testimonial[]>(featuredTestimonialsQuery),
+      client.fetch<Faq[]>(faqsQuery),
       getTranslations({ locale, namespace: "hero" }),
       getTranslations({ locale, namespace: "services" }),
       getTranslations({ locale, namespace: "featuredProject" }),
       getTranslations({ locale, namespace: "testimonials" }),
       getTranslations({ locale, namespace: "areas" }),
+      getTranslations({ locale, namespace: "faq" }),
       getTranslations({ locale, namespace: "leadForm" }),
     ]);
 
@@ -280,6 +291,14 @@ export default async function HomePage({
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      <FAQSection
+        faqs={faqs}
+        locale={locale}
+        eyebrow={tFaq("eyebrow")}
+        heading={tFaq("heading")}
+      />
 
       {/* LEAD FORM */}
       <section id="enquire" className="bg-brand-indigo-deep text-paper">
