@@ -1,0 +1,384 @@
+{
+  "_readme": "Continuation of 2026-07-28-service-pages-content.json — same shape and conventions. Covers new-project-bookings, redevelopment, shops-plots, interiors, and the 4 existing-page rewrites (hero, areas, projectsPage, blogPage).",
+
+  "servicePages": {
+    "new-project-bookings": {
+      "seoDescription": "New residential projects in Borivali, Kandivali and Malad — early booking access through direct builder relationships, before public launch pricing.",
+      "waLinkMessage": "Hi Shree Giriraj, I'd like to enquire about new project bookings.",
+      "en": {
+        "title": "New Project Bookings in Borivali, Kandivali & Malad",
+        "heroHeading": "New Project Bookings in Borivali, Kandivali & Malad",
+        "heroSubheading": "Early access to new residential projects across the western suburbs through our direct builder network — often before they reach the open market.",
+        "body": [
+          {"type": "h2", "text": "Book a new project before it goes public"},
+          {"type": "p", "text": "New residential projects in Borivali often open to our clients before the public launch — earlier floor choice, launch-phase pricing, and direct answers from the developer's sales team instead of a call centre."},
+          {"type": "h2", "text": "What's included"},
+          {"type": "ul", "items": [
+            "Early access to floor plans and pricing before public launch",
+            "Site visits arranged directly with the developer",
+            "Help comparing configurations, payment plans and possession timelines across projects",
+            "RERA and title-document checks before you book"
+          ]},
+          {"type": "h2", "text": "Why book early"},
+          {"type": "p", "text": "Launch-phase pricing on a new project in Borivali, Kandivali or Malad is typically the lowest it will be — and the best floors and configurations go first. Early access through a direct builder relationship means you're choosing from the full inventory, not what's left."},
+          {"type": "h2", "text": "Areas we cover"},
+          {"type": "p", "text": "Borivali West and East, Kandivali off M.G. Road and Link Road, and Malad near Mindspace and the Link Road corridor."},
+          {"type": "p_cta", "before": "Want early access to a new launch? Call us on +91 93249 74133 or ", "linkText": "WhatsApp us", "after": "."}
+        ]
+      },
+      "hi": {
+        "title": "बोरिवली, कांदिवली और मलाड में नए प्रोजेक्ट बुकिंग",
+        "heroHeading": "बोरिवली, कांदिवली और मलाड में नए प्रोजेक्ट बुकिंग",
+        "heroSubheading": "पश्चिमी उपनगरों में नए रेजिडेंशियल प्रोजेक्ट्स तक हमारे सीधे बिल्डर नेटवर्क के ज़रिए जल्दी पहुंच — अक्सर उनके ओपन मार्केट में आने से पहले ही।",
+        "body": [
+          {"type": "h2", "text": "किसी नए प्रोजेक्ट को पब्लिक होने से पहले बुक करें"},
+          {"type": "p", "text": "बोरिवली में नए रेजिडेंशियल प्रोजेक्ट्स अक्सर पब्लिक लॉन्च से पहले ही हमारे क्लाइंट्स के लिए खुल जाते हैं — पहले फ्लोर चुनने का मौका, लॉन्च-फेज़ की कीमत, और कॉल सेंटर की बजाय डेवलपर की सेल्स टीम से सीधे जवाब।"},
+          {"type": "h2", "text": "इसमें क्या शामिल है"},
+          {"type": "ul", "items": [
+            "पब्लिक लॉन्च से पहले फ्लोर प्लान और कीमत तक जल्दी पहुंच",
+            "डेवलपर के साथ सीधे साइट विज़िट की व्यवस्था",
+            "अलग-अलग प्रोजेक्ट्स में कॉन्फ़िगरेशन, पेमेंट प्लान और पजेशन टाइमलाइन की तुलना में मदद",
+            "बुकिंग से पहले RERA और टाइटल डॉक्यूमेंट की जांच"
+          ]},
+          {"type": "h2", "text": "जल्दी बुकिंग क्यों करें"},
+          {"type": "p", "text": "बोरिवली, कांदिवली या मलाड में किसी नए प्रोजेक्ट की लॉन्च-फेज़ कीमत आमतौर पर सबसे कम होती है — और सबसे अच्छे फ्लोर व कॉन्फ़िगरेशन सबसे पहले बुक हो जाते हैं। सीधे बिल्डर से जुड़े होने के कारण जल्दी पहुंच का मतलब है कि आप पूरी इन्वेंटरी में से चुन रहे हैं, बचे हुए में से नहीं।"},
+          {"type": "h2", "text": "हम जिन इलाकों में काम करते हैं"},
+          {"type": "p", "text": "बोरिवली वेस्ट और ईस्ट, एम.जी. रोड और लिंक रोड के पास कांदिवली, और मिंडस्पेस व लिंक रोड कॉरिडोर के पास मलाड।"},
+          {"type": "p_cta", "before": "किसी नए लॉन्च तक जल्दी पहुंच चाहिए? +91 93249 74133 पर कॉल करें या ", "linkText": "व्हाट्सएप करें", "after": "।"}
+        ]
+      },
+      "mr": {
+        "title": "बोरिवली, कांदिवली आणि मलाडमध्ये नवीन प्रकल्प बुकिंग",
+        "heroHeading": "बोरिवली, कांदिवली आणि मलाडमध्ये नवीन प्रकल्प बुकिंग",
+        "heroSubheading": "पश्चिम उपनगरातील नवीन रेसिडेन्शियल प्रकल्पांमध्ये आमच्या थेट बिल्डर नेटवर्कद्वारे लवकर प्रवेश — बऱ्याचदा ते खुल्या बाजारात येण्यापूर्वीच.",
+        "body": [
+          {"type": "h2", "text": "नवीन प्रकल्प सार्वजनिक होण्यापूर्वी बुक करा"},
+          {"type": "p", "text": "बोरिवलीतील नवीन रेसिडेन्शियल प्रकल्प अनेकदा सार्वजनिक लाँचपूर्वीच आमच्या क्लायंट्ससाठी खुले होतात — आधी फ्लोर निवडण्याची संधी, लाँच-फेज किंमत, आणि कॉल सेंटरऐवजी डेव्हलपरच्या सेल्स टीमकडून थेट उत्तरे."},
+          {"type": "h2", "text": "यात काय समाविष्ट आहे"},
+          {"type": "ul", "items": [
+            "सार्वजनिक लाँचपूर्वी फ्लोर प्लॅन आणि किमतीपर्यंत लवकर प्रवेश",
+            "डेव्हलपरसोबत थेट साइट व्हिजिटची व्यवस्था",
+            "वेगवेगळ्या प्रकल्पांमधील कॉन्फिगरेशन, पेमेंट प्लॅन आणि ताबा वेळापत्रकाची तुलना करण्यास मदत",
+            "बुकिंगपूर्वी RERA आणि मालकी कागदपत्रांची तपासणी"
+          ]},
+          {"type": "h2", "text": "लवकर बुकिंग का करावी"},
+          {"type": "p", "text": "बोरिवली, कांदिवली किंवा मलाडमधील नवीन प्रकल्पाची लाँच-फेज किंमत सहसा सर्वात कमी असते — आणि सर्वोत्तम फ्लोर व कॉन्फिगरेशन आधी बुक होतात. थेट बिल्डर संबंधामुळे लवकर मिळणारा प्रवेश म्हणजे तुम्ही संपूर्ण इन्व्हेंटरीमधून निवडत आहात, उरलेल्यामधून नाही."},
+          {"type": "h2", "text": "आम्ही ज्या भागात काम करतो"},
+          {"type": "p", "text": "बोरिवली वेस्ट आणि ईस्ट, एम.जी. रोड आणि लिंक रोडजवळील कांदिवली, आणि मिंडस्पेस व लिंक रोड कॉरिडॉरजवळील मलाड."},
+          {"type": "p_cta", "before": "नवीन लाँचमध्ये लवकर प्रवेश हवा आहे? +91 93249 74133 वर कॉल करा किंवा ", "linkText": "व्हॉट्सअॅप करा", "after": "."}
+        ]
+      },
+      "gu": {
+        "title": "બોરીવલી, કાંદિવલી અને મલાડમાં નવા પ્રોજેક્ટ બુકિંગ",
+        "heroHeading": "બોરીવલી, કાંદિવલી અને મલાડમાં નવા પ્રોજેક્ટ બુકિંગ",
+        "heroSubheading": "પશ્ચિમ પરાંમાં નવા રહેણાંક પ્રોજેક્ટ્સમાં અમારા સીધા બિલ્ડર નેટવર્ક દ્વારા વહેલી પહોંચ — ઘણીવાર તેઓ ખુલ્લા બજારમાં આવે તે પહેલાં જ.",
+        "body": [
+          {"type": "h2", "text": "નવો પ્રોજેક્ટ જાહેર થાય તે પહેલાં બુક કરો"},
+          {"type": "p", "text": "બોરીવલીમાં નવા રહેણાંક પ્રોજેક્ટ્સ ઘણીવાર જાહેર લોન્ચ પહેલાં જ અમારા ક્લાયન્ટ્સ માટે ખુલે છે — વહેલી ફ્લોર પસંદગી, લોન્ચ-તબક્કાનો ભાવ, અને કૉલ સેન્ટરને બદલે ડેવલપરની સેલ્સ ટીમ તરફથી સીધા જવાબો."},
+          {"type": "h2", "text": "તેમાં શું સામેલ છે"},
+          {"type": "ul", "items": [
+            "જાહેર લોન્ચ પહેલાં ફ્લોર પ્લાન અને ભાવ સુધી વહેલી પહોંચ",
+            "ડેવલપર સાથે સીધી સાઇટ મુલાકાતની વ્યવસ્થા",
+            "વિવિધ પ્રોજેક્ટ્સમાં કન્ફિગરેશન, પેમેન્ટ પ્લાન અને કબજા સમયપત્રકની સરખામણીમાં મદદ",
+            "બુકિંગ પહેલાં RERA અને માલિકી દસ્તાવેજોની ચકાસણી"
+          ]},
+          {"type": "h2", "text": "વહેલું બુકિંગ કેમ કરવું"},
+          {"type": "p", "text": "બોરીવલી, કાંદિવલી અથવા મલાડમાં નવા પ્રોજેક્ટનો લોન્ચ-તબક્કાનો ભાવ સામાન્ય રીતે સૌથી ઓછો હોય છે — અને શ્રેષ્ઠ ફ્લોર અને કન્ફિગરેશન પહેલાં બુક થાય છે. સીધા બિલ્ડર સંબંધ દ્વારા વહેલી પહોંચનો અર્થ છે કે તમે સંપૂર્ણ ઇન્વેન્ટરીમાંથી પસંદ કરી રહ્યા છો, બાકી રહેલામાંથી નહીં."},
+          {"type": "h2", "text": "અમે જે વિસ્તારોમાં કામ કરીએ છીએ"},
+          {"type": "p", "text": "બોરીવલી વેસ્ટ અને ઈસ્ટ, એમ.જી. રોડ અને લિંક રોડ પાસે કાંદિવલી, અને મિન્ડસ્પેસ તથા લિંક રોડ કોરિડોર પાસે મલાડ."},
+          {"type": "p_cta", "before": "નવા લોન્ચમાં વહેલી પહોંચ જોઈએ છે? +91 93249 74133 પર કૉલ કરો અથવા ", "linkText": "વોટ્સએપ કરો", "after": "."}
+        ]
+      }
+    },
+
+    "redevelopment": {
+      "seoDescription": "Housing society redevelopment guidance in Borivali, Kandivali and Malad — feasibility reports, developer selection, agreement review and occupancy support.",
+      "waLinkMessage": "Hi Shree Giriraj, I'd like to enquire about society redevelopment.",
+      "en": {
+        "title": "Housing Society Redevelopment in Borivali, Kandivali & Malad",
+        "heroHeading": "Housing Society Redevelopment in Borivali, Kandivali & Malad",
+        "heroSubheading": "End-to-end guidance for housing society redevelopment — feasibility reports, developer selection and agreement review, through to occupancy.",
+        "body": [
+          {"type": "h2", "text": "Redeveloping your housing society, done right"},
+          {"type": "p", "text": "Society redevelopment is one of the biggest decisions a housing committee will make — and the process is usually unfamiliar to everyone involved. We guide societies in Borivali, Kandivali and Malad through every stage, from the first feasibility report to the day members get possession of their new flats."},
+          {"type": "h2", "text": "What's included"},
+          {"type": "ul", "items": [
+            "Feasibility report — what your society's plot can realistically support",
+            "Developer shortlisting and comparison, not just the first offer that comes in",
+            "Redevelopment agreement review, so members know exactly what they're signing",
+            "Support through construction and handover, until every member has possession"
+          ]},
+          {"type": "h2", "text": "Why independent guidance matters"},
+          {"type": "p", "text": "A redevelopment agreement signed without independent review can lock a society into unfavourable terms for a decade or more. Independent guidance at the feasibility and developer-selection stage is what protects members' interests before anything is signed — not after."},
+          {"type": "h2", "text": "Areas we cover"},
+          {"type": "p", "text": "Housing societies across Borivali West and East, Kandivali and Malad."},
+          {"type": "p_cta", "before": "Considering redevelopment for your society? Call us on +91 93249 74133 or ", "linkText": "WhatsApp us", "after": " to arrange a feasibility discussion."}
+        ]
+      },
+      "hi": {
+        "title": "बोरिवली, कांदिवली और मलाड में हाउसिंग सोसाइटी पुनर्विकास",
+        "heroHeading": "बोरिवली, कांदिवली और मलाड में हाउसिंग सोसाइटी पुनर्विकास",
+        "heroSubheading": "हाउसिंग सोसाइटी पुनर्विकास के लिए शुरू से अंत तक मार्गदर्शन — फिजिबिलिटी रिपोर्ट, डेवलपर चयन और एग्रीमेंट समीक्षा से लेकर पजेशन तक।",
+        "body": [
+          {"type": "h2", "text": "अपनी हाउसिंग सोसाइटी का पुनर्विकास, सही तरीके से"},
+          {"type": "p", "text": "सोसाइटी पुनर्विकास किसी भी हाउसिंग कमेटी के सबसे बड़े फैसलों में से एक होता है — और यह प्रक्रिया आमतौर पर इसमें शामिल सभी लोगों के लिए अनजानी होती है। हम बोरिवली, कांदिवली और मलाड की सोसाइटीज़ को हर चरण में मार्गदर्शन देते हैं, शुरुआती फिजिबिलिटी रिपोर्ट से लेकर उस दिन तक जब सदस्यों को उनके नए फ्लैट्स का पजेशन मिलता है।"},
+          {"type": "h2", "text": "इसमें क्या शामिल है"},
+          {"type": "ul", "items": [
+            "फिजिबिलिटी रिपोर्ट — आपकी सोसाइटी का प्लॉट वास्तव में क्या सपोर्ट कर सकता है",
+            "डेवलपर शॉर्टलिस्टिंग और तुलना, सिर्फ पहली आने वाली ऑफर नहीं",
+            "पुनर्विकास एग्रीमेंट की समीक्षा, ताकि सदस्यों को पता हो कि वे किस पर साइन कर रहे हैं",
+            "निर्माण और हैंडओवर के दौरान सहयोग, जब तक हर सदस्य को पजेशन न मिल जाए"
+          ]},
+          {"type": "h2", "text": "स्वतंत्र मार्गदर्शन क्यों ज़रूरी है"},
+          {"type": "p", "text": "बिना स्वतंत्र समीक्षा के साइन किया गया पुनर्विकास एग्रीमेंट किसी सोसाइटी को एक दशक या उससे ज़्यादा समय के लिए प्रतिकूल शर्तों में बांध सकता है। फिजिबिलिटी और डेवलपर चयन के चरण में स्वतंत्र मार्गदर्शन ही है जो साइन करने से पहले सदस्यों के हितों की रक्षा करता है — बाद में नहीं।"},
+          {"type": "h2", "text": "हम जिन इलाकों में काम करते हैं"},
+          {"type": "p", "text": "बोरिवली वेस्ट और ईस्ट, कांदिवली और मलाड की हाउसिंग सोसाइटीज़।"},
+          {"type": "p_cta", "before": "अपनी सोसाइटी के लिए पुनर्विकास पर विचार कर रहे हैं? +91 93249 74133 पर कॉल करें या फिजिबिलिटी डिस्कशन के लिए ", "linkText": "व्हाट्सएप करें", "after": "।"}
+        ]
+      },
+      "mr": {
+        "title": "बोरिवली, कांदिवली आणि मलाडमध्ये हाउसिंग सोसायटी पुनर्विकास",
+        "heroHeading": "बोरिवली, कांदिवली आणि मलाडमध्ये हाउसिंग सोसायटी पुनर्विकास",
+        "heroSubheading": "हाउसिंग सोसायटी पुनर्विकासासाठी सुरुवातीपासून शेवटपर्यंत मार्गदर्शन — फिजिबिलिटी रिपोर्ट, डेव्हलपर निवड आणि करार पुनरावलोकनापासून ताबा मिळेपर्यंत.",
+        "body": [
+          {"type": "h2", "text": "तुमच्या हाउसिंग सोसायटीचा पुनर्विकास, योग्य पद्धतीने"},
+          {"type": "p", "text": "सोसायटी पुनर्विकास हा कोणत्याही हाउसिंग कमिटीच्या सर्वात मोठ्या निर्णयांपैकी एक असतो — आणि ही प्रक्रिया सहसा त्यात सहभागी असलेल्या सर्वांसाठी अपरिचित असते. आम्ही बोरिवली, कांदिवली आणि मलाडमधील सोसायट्यांना प्रत्येक टप्प्यात मार्गदर्शन करतो, सुरुवातीच्या फिजिबिलिटी रिपोर्टपासून ते सदस्यांना त्यांच्या नवीन फ्लॅट्सचा ताबा मिळेपर्यंत."},
+          {"type": "h2", "text": "यात काय समाविष्ट आहे"},
+          {"type": "ul", "items": [
+            "फिजिबिलिटी रिपोर्ट — तुमच्या सोसायटीचा भूखंड प्रत्यक्षात काय सपोर्ट करू शकतो",
+            "डेव्हलपर शॉर्टलिस्टिंग आणि तुलना, फक्त पहिली येणारी ऑफर नाही",
+            "पुनर्विकास कराराचे पुनरावलोकन, जेणेकरून सदस्यांना समजेल की ते नेमके कशावर सही करत आहेत",
+            "बांधकाम आणि हस्तांतरणादरम्यान सहाय्य, प्रत्येक सदस्याला ताबा मिळेपर्यंत"
+          ]},
+          {"type": "h2", "text": "स्वतंत्र मार्गदर्शन का महत्त्वाचे आहे"},
+          {"type": "p", "text": "स्वतंत्र पुनरावलोकनाशिवाय सही केलेला पुनर्विकास करार सोसायटीला एक दशक किंवा त्याहून अधिक काळ प्रतिकूल अटींमध्ये बांधून ठेवू शकतो. फिजिबिलिटी आणि डेव्हलपर निवडीच्या टप्प्यावर स्वतंत्र मार्गदर्शन हेच सही करण्यापूर्वी सदस्यांच्या हिताचे रक्षण करते — नंतर नाही."},
+          {"type": "h2", "text": "आम्ही ज्या भागात काम करतो"},
+          {"type": "p", "text": "बोरिवली वेस्ट आणि ईस्ट, कांदिवली आणि मलाडमधील हाउसिंग सोसायट्या."},
+          {"type": "p_cta", "before": "तुमच्या सोसायटीसाठी पुनर्विकासाचा विचार करत आहात? +91 93249 74133 वर कॉल करा किंवा फिजिबिलिटी चर्चेसाठी ", "linkText": "व्हॉट्सअॅप करा", "after": "."}
+        ]
+      },
+      "gu": {
+        "title": "બોરીવલી, કાંદિવલી અને મલાડમાં હાઉસિંગ સોસાયટી પુનર્વિકાસ",
+        "heroHeading": "બોરીવલી, કાંદિવલી અને મલાડમાં હાઉસિંગ સોસાયટી પુનર્વિકાસ",
+        "heroSubheading": "હાઉસિંગ સોસાયટી પુનર્વિકાસ માટે શરૂઆતથી અંત સુધી માર્ગદર્શન — ફિઝિબિલિટી રિપોર્ટ, ડેવલપર પસંદગી અને કરાર સમીક્ષાથી લઈને કબજા સુધી.",
+        "body": [
+          {"type": "h2", "text": "તમારી હાઉસિંગ સોસાયટીનો પુનર્વિકાસ, યોગ્ય રીતે"},
+          {"type": "p", "text": "સોસાયટી પુનર્વિકાસ એ કોઈપણ હાઉસિંગ કમિટીના સૌથી મોટા નિર્ણયોમાંનો એક છે — અને આ પ્રક્રિયા સામાન્ય રીતે તેમાં સામેલ દરેક માટે અજાણી હોય છે. અમે બોરીવલી, કાંદિવલી અને મલાડની સોસાયટીઓને દરેક તબક્કે માર્ગદર્શન આપીએ છીએ, શરૂઆતના ફિઝિબિલિટી રિપોર્ટથી લઈને સભ્યોને તેમના નવા ફ્લેટ્સનો કબજો મળે ત્યાં સુધી."},
+          {"type": "h2", "text": "તેમાં શું સામેલ છે"},
+          {"type": "ul", "items": [
+            "ફિઝિબિલિટી રિપોર્ટ — તમારી સોસાયટીનો પ્લોટ ખરેખર શું સપોર્ટ કરી શકે છે",
+            "ડેવલપર શોર્ટલિસ્ટિંગ અને સરખામણી, ફક્ત પહેલી આવતી ઓફર નહીં",
+            "પુનર્વિકાસ કરારની સમીક્ષા, જેથી સભ્યોને ખબર હોય કે તેઓ બરાબર શેના પર સહી કરી રહ્યા છે",
+            "બાંધકામ અને હેન્ડઓવર દરમિયાન સહાય, દરેક સભ્યને કબજો મળે ત્યાં સુધી"
+          ]},
+          {"type": "h2", "text": "સ્વતંત્ર માર્ગદર્શન કેમ મહત્વનું છે"},
+          {"type": "p", "text": "સ્વતંત્ર સમીક્ષા વગર સહી કરેલો પુનર્વિકાસ કરાર સોસાયટીને એક દાયકા કે તેથી વધુ સમય માટે પ્રતિકૂળ શરતોમાં બાંધી શકે છે. ફિઝિબિલિટી અને ડેવલપર પસંદગીના તબક્કે સ્વતંત્ર માર્ગદર્શન જ સહી કરતાં પહેલાં સભ્યોના હિતોનું રક્ષણ કરે છે — પછી નહીં."},
+          {"type": "h2", "text": "અમે જે વિસ્તારોમાં કામ કરીએ છીએ"},
+          {"type": "p", "text": "બોરીવલી વેસ્ટ અને ઈસ્ટ, કાંદિવલી અને મલાડની હાઉસિંગ સોસાયટીઓ."},
+          {"type": "p_cta", "before": "તમારી સોસાયટી માટે પુનર્વિકાસ વિચારી રહ્યા છો? +91 93249 74133 પર કૉલ કરો અથવા ફિઝિબિલિટી ચર્ચા માટે ", "linkText": "વોટ્સએપ કરો", "after": "."}
+        ]
+      }
+    },
+
+    "shops-plots": {
+      "seoDescription": "Commercial shops, plots and office space for sale or rent in Borivali, Kandivali and Malad — for investors and businesses expanding in the suburbs.",
+      "waLinkMessage": "Hi Shree Giriraj, I'd like to enquire about shops and plots.",
+      "en": {
+        "title": "Shops & Plots in Borivali, Kandivali & Malad",
+        "heroHeading": "Shops & Plots in Borivali, Kandivali & Malad",
+        "heroSubheading": "Commercial shops, plots and office space for sale or rent in the western suburbs — for investors and business owners expanding in the suburbs.",
+        "body": [
+          {"type": "h2", "text": "Commercial property in Borivali, Kandivali and Malad"},
+          {"type": "p", "text": "Whether you're opening a shop, renting office space or buying a plot as an investment, commercial property in the western suburbs moves differently from residential — footfall, frontage and society commercial-use rules all matter more than they do for a flat. We work exclusively in Borivali, Kandivali and Malad, so we know which stretches actually work for which kind of business."},
+          {"type": "h2", "text": "What's included"},
+          {"type": "ul", "items": [
+            "Shops and office space for sale or rent, matched to your footfall and frontage needs",
+            "Plots for sale for investors and builders",
+            "Guidance on commercial-use permissions and society NOC requirements",
+            "Rent agreement or sale-deed support through registration"
+          ]},
+          {"type": "h2", "text": "Areas we cover"},
+          {"type": "p", "text": "Borivali West and East, Kandivali off M.G. Road and Link Road, and Malad near Mindspace and the Link Road corridor."},
+          {"type": "p_cta", "before": "Looking for a shop, office or plot? Call us on +91 93249 74133 or ", "linkText": "WhatsApp us", "after": "."}
+        ]
+      },
+      "hi": {
+        "title": "बोरिवली, कांदिवली और मलाड में दुकान और प्लॉट",
+        "heroHeading": "बोरिवली, कांदिवली और मलाड में दुकान और प्लॉट",
+        "heroSubheading": "पश्चिमी उपनगरों में बिक्री या किराए के लिए कमर्शियल दुकानें, प्लॉट और ऑफिस स्पेस — उन निवेशकों और व्यवसाय मालिकों के लिए जो उपनगरों में विस्तार करना चाहते हैं।",
+        "body": [
+          {"type": "h2", "text": "बोरिवली, कांदिवली और मलाड में कमर्शियल प्रॉपर्टी"},
+          {"type": "p", "text": "चाहे आप दुकान खोल रहे हों, ऑफिस स्पेस किराए पर ले रहे हों, या निवेश के तौर पर प्लॉट खरीद रहे हों — पश्चिमी उपनगरों में कमर्शियल प्रॉपर्टी रेजिडेंशियल से अलग तरह से चलती है। फुटफॉल, फ्रंटेज और सोसाइटी के कमर्शियल-उपयोग नियम, ये सब किसी फ्लैट से कहीं ज़्यादा मायने रखते हैं। हम सिर्फ बोरिवली, कांदिवली और मलाड में काम करते हैं, इसलिए हमें पता है कि किस तरह के बिज़नेस के लिए कौन-सा इलाका सही है।"},
+          {"type": "h2", "text": "इसमें क्या शामिल है"},
+          {"type": "ul", "items": [
+            "बिक्री या किराए के लिए दुकानें और ऑफिस स्पेस, आपके फुटफॉल और फ्रंटेज की ज़रूरत के हिसाब से",
+            "निवेशकों और बिल्डरों के लिए बिक्री हेतु प्लॉट",
+            "कमर्शियल-उपयोग परमिशन और सोसाइटी NOC की ज़रूरतों पर मार्गदर्शन",
+            "रजिस्ट्रेशन तक रेंट एग्रीमेंट या सेल-डीड में सहयोग"
+          ]},
+          {"type": "h2", "text": "हम जिन इलाकों में काम करते हैं"},
+          {"type": "p", "text": "बोरिवली वेस्ट और ईस्ट, एम.जी. रोड और लिंक रोड के पास कांदिवली, और मिंडस्पेस व लिंक रोड कॉरिडोर के पास मलाड।"},
+          {"type": "p_cta", "before": "दुकान, ऑफिस या प्लॉट ढूंढ रहे हैं? +91 93249 74133 पर कॉल करें या ", "linkText": "व्हाट्सएप करें", "after": "।"}
+        ]
+      },
+      "mr": {
+        "title": "बोरिवली, कांदिवली आणि मलाडमध्ये दुकाने आणि भूखंड",
+        "heroHeading": "बोरिवली, कांदिवली आणि मलाडमध्ये दुकाने आणि भूखंड",
+        "heroSubheading": "पश्चिम उपनगरात विक्री किंवा भाड्यासाठी व्यावसायिक दुकाने, भूखंड आणि ऑफिस स्पेस — उपनगरात विस्तार करू इच्छिणाऱ्या गुंतवणूकदार आणि व्यावसायिकांसाठी.",
+        "body": [
+          {"type": "h2", "text": "बोरिवली, कांदिवली आणि मलाडमध्ये व्यावसायिक मालमत्ता"},
+          {"type": "p", "text": "तुम्ही दुकान सुरू करत असाल, ऑफिस स्पेस भाड्याने घेत असाल, किंवा गुंतवणूक म्हणून भूखंड खरेदी करत असाल — पश्चिम उपनगरातील व्यावसायिक मालमत्ता निवासी मालमत्तेपेक्षा वेगळ्या पद्धतीने चालते. फुटफॉल, फ्रंटेज आणि सोसायटीचे व्यावसायिक-वापर नियम, हे सर्व फ्लॅटपेक्षा जास्त महत्त्वाचे असतात. आम्ही फक्त बोरिवली, कांदिवली आणि मलाडमध्ये काम करतो, त्यामुळे कोणत्या प्रकारच्या व्यवसायासाठी कोणता भाग योग्य आहे हे आम्हाला माहीत आहे."},
+          {"type": "h2", "text": "यात काय समाविष्ट आहे"},
+          {"type": "ul", "items": [
+            "विक्री किंवा भाड्यासाठी दुकाने आणि ऑफिस स्पेस, तुमच्या फुटफॉल आणि फ्रंटेज गरजेनुसार",
+            "गुंतवणूकदार आणि बिल्डरांसाठी विक्रीसाठी भूखंड",
+            "व्यावसायिक-वापर परवानगी आणि सोसायटी NOC आवश्यकतांवर मार्गदर्शन",
+            "नोंदणीपर्यंत भाडे करार किंवा विक्री-दस्तऐवजात सहाय्य"
+          ]},
+          {"type": "h2", "text": "आम्ही ज्या भागात काम करतो"},
+          {"type": "p", "text": "बोरिवली वेस्ट आणि ईस्ट, एम.जी. रोड आणि लिंक रोडजवळील कांदिवली, आणि मिंडस्पेस व लिंक रोड कॉरिडॉरजवळील मलाड."},
+          {"type": "p_cta", "before": "दुकान, ऑफिस किंवा भूखंड शोधत आहात? +91 93249 74133 वर कॉल करा किंवा ", "linkText": "व्हॉट्सअॅप करा", "after": "."}
+        ]
+      },
+      "gu": {
+        "title": "બોરીવલી, કાંદિવલી અને મલાડમાં દુકાનો અને પ્લોટ",
+        "heroHeading": "બોરીવલી, કાંદિવલી અને મલાડમાં દુકાનો અને પ્લોટ",
+        "heroSubheading": "પશ્ચિમ પરાંમાં વેચાણ અથવા ભાડા માટે વ્યાવસાયિક દુકાનો, પ્લોટ અને ઓફિસ સ્પેસ — પરાંમાં વિસ્તરણ ઇચ્છતા રોકાણકારો અને વ્યવસાય માલિકો માટે.",
+        "body": [
+          {"type": "h2", "text": "બોરીવલી, કાંદિવલી અને મલાડમાં વ્યાવસાયિક પ્રોપર્ટી"},
+          {"type": "p", "text": "તમે દુકાન ખોલી રહ્યા હો, ઓફિસ સ્પેસ ભાડે લઈ રહ્યા હો, અથવા રોકાણ તરીકે પ્લોટ ખરીદી રહ્યા હો — પશ્ચિમ પરાંમાં વ્યાવસાયિક પ્રોપર્ટી રહેણાંકથી અલગ રીતે ચાલે છે. ફૂટફૉલ, ફ્રન્ટેજ અને સોસાયટીના વ્યાવસાયિક-ઉપયોગના નિયમો, આ બધું ફ્લેટ કરતાં વધુ મહત્વનું હોય છે. અમે ફક્ત બોરીવલી, કાંદિવલી અને મલાડમાં કામ કરીએ છીએ, એટલે અમને ખબર છે કે કયા પ્રકારના વ્યવસાય માટે કયો વિસ્તાર બરાબર છે."},
+          {"type": "h2", "text": "તેમાં શું સામેલ છે"},
+          {"type": "ul", "items": [
+            "વેચાણ અથવા ભાડા માટે દુકાનો અને ઓફિસ સ્પેસ, તમારી ફૂટફૉલ અને ફ્રન્ટેજ જરૂરિયાત પ્રમાણે",
+            "રોકાણકારો અને બિલ્ડરો માટે વેચાણ માટેના પ્લોટ",
+            "વ્યાવસાયિક-ઉપયોગ પરવાનગી અને સોસાયટી NOC જરૂરિયાતો પર માર્ગદર્શન",
+            "નોંધણી સુધી ભાડા કરાર અથવા વેચાણ-દસ્તાવેજમાં સહાય"
+          ]},
+          {"type": "h2", "text": "અમે જે વિસ્તારોમાં કામ કરીએ છીએ"},
+          {"type": "p", "text": "બોરીવલી વેસ્ટ અને ઈસ્ટ, એમ.જી. રોડ અને લિંક રોડ પાસે કાંદિવલી, અને મિન્ડસ્પેસ તથા લિંક રોડ કોરિડોર પાસે મલાડ."},
+          {"type": "p_cta", "before": "દુકાન, ઓફિસ કે પ્લોટ શોધો છો? +91 93249 74133 પર કૉલ કરો અથવા ", "linkText": "વોટ્સએપ કરો", "after": "."}
+        ]
+      }
+    },
+
+    "interiors": {
+      "seoDescription": "Interior designers and civil work contractors in Borivali, Kandivali and Malad — fit-outs, renovation and transparent budgets for your flat.",
+      "waLinkMessage": "Hi Shree Giriraj, I'd like to enquire about interiors and civil work.",
+      "en": {
+        "title": "Interior Design & Civil Work in Borivali, Kandivali & Malad",
+        "heroHeading": "Interior Design & Civil Work in Borivali, Kandivali & Malad",
+        "heroSubheading": "Local interior designers and a civil work team — fit-outs, renovation and civil work to get your home move-in ready.",
+        "body": [
+          {"type": "h2", "text": "Interior design and civil work, from people who know your building"},
+          {"type": "p", "text": "A flat interior design project in Borivali or Kandivali runs into different constraints than one in a standalone house — society renovation rules, lift and material-access timing, shared walls. Our interior designers and civil work team handle both the design and the on-ground execution, so nothing gets lost between the drawing and the site."},
+          {"type": "h2", "text": "What's included"},
+          {"type": "ul", "items": [
+            "Interior design for new and resale flats — layout, materials and fit-out",
+            "Civil work: renovation, plumbing and electrical changes, structural repairs",
+            "A clear, itemised budget upfront — no surprise costs mid-project",
+            "Coordination with your society for renovation permissions and work-hour rules"
+          ]},
+          {"type": "h2", "text": "What it typically costs"},
+          {"type": "p", "text": "Interior design and civil work budgets vary widely with flat size and finish level — a basic fit-out for a 1 BHK costs meaningfully less than a full renovation with custom carpentry for a 3 BHK. We give a clear, itemised estimate before any work starts, so there's no guessing."},
+          {"type": "h2", "text": "Areas we cover"},
+          {"type": "p", "text": "Borivali West and East, Kandivali off M.G. Road and Link Road, and Malad near Mindspace and the Link Road corridor."},
+          {"type": "p_cta", "before": "Planning an interior fit-out or renovation? Call us on +91 93249 74133 or ", "linkText": "WhatsApp us", "after": " for a budget estimate."}
+        ]
+      },
+      "hi": {
+        "title": "बोरिवली, कांदिवली और मलाड में इंटीरियर डिज़ाइन और सिविल वर्क",
+        "heroHeading": "बोरिवली, कांदिवली और मलाड में इंटीरियर डिज़ाइन और सिविल वर्क",
+        "heroSubheading": "स्थानीय इंटीरियर डिज़ाइनर और सिविल वर्क टीम — फिट-आउट, रेनोवेशन और सिविल वर्क ताकि आपका घर रहने के लिए तैयार हो जाए।",
+        "body": [
+          {"type": "h2", "text": "इंटीरियर डिज़ाइन और सिविल वर्क, उन लोगों से जो आपकी बिल्डिंग को जानते हैं"},
+          {"type": "p", "text": "बोरिवली या कांदिवली में फ्लैट के इंटीरियर डिज़ाइन प्रोजेक्ट में अलग तरह की सीमाएं आती हैं जो किसी अकेले घर में नहीं होतीं — सोसाइटी के रेनोवेशन नियम, लिफ्ट और मटीरियल पहुंचाने का समय, शेयर्ड दीवारें। हमारे इंटीरियर डिज़ाइनर और सिविल वर्क टीम डिज़ाइन और ऑन-ग्राउंड काम, दोनों संभालते हैं, ताकि ड्रॉइंग और साइट के बीच कुछ भी छूटे नहीं।"},
+          {"type": "h2", "text": "इसमें क्या शामिल है"},
+          {"type": "ul", "items": [
+            "नए और रीसेल फ्लैट्स के लिए इंटीरियर डिज़ाइन — लेआउट, मटीरियल और फिट-आउट",
+            "सिविल वर्क: रेनोवेशन, प्लंबिंग और इलेक्ट्रिकल बदलाव, स्ट्रक्चरल रिपेयर",
+            "शुरुआत में ही स्पष्ट, आइटम-वाइज़ बजट — प्रोजेक्ट के बीच में कोई अचानक खर्च नहीं",
+            "रेनोवेशन परमिशन और काम के घंटों के नियमों के लिए आपकी सोसाइटी के साथ समन्वय"
+          ]},
+          {"type": "h2", "text": "आमतौर पर इसकी लागत क्या होती है"},
+          {"type": "p", "text": "इंटीरियर डिज़ाइन और सिविल वर्क का बजट फ्लैट के साइज़ और फिनिश लेवल के हिसाब से काफी अलग होता है — 1 बीएचके के लिए बेसिक फिट-आउट की लागत 3 बीएचके के लिए कस्टम कारपेंट्री वाले पूरे रेनोवेशन से काफी कम होती है। हम काम शुरू होने से पहले ही स्पष्ट, आइटम-वाइज़ एस्टिमेट देते हैं, ताकि कोई अंदाज़ा न लगाना पड़े।"},
+          {"type": "h2", "text": "हम जिन इलाकों में काम करते हैं"},
+          {"type": "p", "text": "बोरिवली वेस्ट और ईस्ट, एम.जी. रोड और लिंक रोड के पास कांदिवली, और मिंडस्पेस व लिंक रोड कॉरिडोर के पास मलाड।"},
+          {"type": "p_cta", "before": "इंटीरियर फिट-आउट या रेनोवेशन प्लान कर रहे हैं? +91 93249 74133 पर कॉल करें या बजट एस्टिमेट के लिए ", "linkText": "व्हाट्सएप करें", "after": "।"}
+        ]
+      },
+      "mr": {
+        "title": "बोरिवली, कांदिवली आणि मलाडमध्ये इंटिरिअर डिझाइन आणि सिव्हिल वर्क",
+        "heroHeading": "बोरिवली, कांदिवली आणि मलाडमध्ये इंटिरिअर डिझाइन आणि सिव्हिल वर्क",
+        "heroSubheading": "स्थानिक इंटिरिअर डिझायनर आणि सिव्हिल वर्क टीम — फिट-आउट, नूतनीकरण आणि सिव्हिल वर्क जेणेकरून तुमचे घर राहण्यासाठी सज्ज होईल.",
+        "body": [
+          {"type": "h2", "text": "इंटिरिअर डिझाइन आणि सिव्हिल वर्क, तुमची इमारत ओळखणाऱ्या लोकांकडून"},
+          {"type": "p", "text": "बोरिवली किंवा कांदिवलीतील फ्लॅट इंटिरिअर डिझाइन प्रकल्पात वेगळ्या मर्यादा येतात ज्या एकट्या घरात येत नाहीत — सोसायटीचे नूतनीकरण नियम, लिफ्ट आणि साहित्य पोहोचवण्याची वेळ, शेअर्ड भिंती. आमची इंटिरिअर डिझायनर आणि सिव्हिल वर्क टीम डिझाइन आणि प्रत्यक्ष काम, दोन्ही सांभाळते, जेणेकरून आराखडा आणि साइटमध्ये काहीही निसटणार नाही."},
+          {"type": "h2", "text": "यात काय समाविष्ट आहे"},
+          {"type": "ul", "items": [
+            "नवीन आणि पुनर्विक्री फ्लॅट्ससाठी इंटिरिअर डिझाइन — लेआउट, साहित्य आणि फिट-आउट",
+            "सिव्हिल वर्क: नूतनीकरण, प्लंबिंग आणि इलेक्ट्रिकल बदल, स्ट्रक्चरल दुरुस्ती",
+            "सुरुवातीलाच स्पष्ट, तपशीलवार बजेट — प्रकल्पादरम्यान कोणताही अनपेक्षित खर्च नाही",
+            "नूतनीकरण परवानगी आणि कामाच्या वेळेच्या नियमांसाठी तुमच्या सोसायटीशी समन्वय"
+          ]},
+          {"type": "h2", "text": "सहसा याची किंमत काय असते"},
+          {"type": "p", "text": "इंटिरिअर डिझाइन आणि सिव्हिल वर्कचे बजेट फ्लॅटचा आकार आणि फिनिश लेव्हलनुसार मोठ्या प्रमाणात बदलते — 1 बीएचकेसाठी बेसिक फिट-आउटची किंमत 3 बीएचकेसाठी कस्टम सुतारकामासह पूर्ण नूतनीकरणापेक्षा लक्षणीयरीत्या कमी असते. आम्ही काम सुरू होण्यापूर्वीच स्पष्ट, तपशीलवार अंदाज देतो, जेणेकरून कोणताही अंदाज बांधावा लागू नये."},
+          {"type": "h2", "text": "आम्ही ज्या भागात काम करतो"},
+          {"type": "p", "text": "बोरिवली वेस्ट आणि ईस्ट, एम.जी. रोड आणि लिंक रोडजवळील कांदिवली, आणि मिंडस्पेस व लिंक रोड कॉरिडॉरजवळील मलाड."},
+          {"type": "p_cta", "before": "इंटिरिअर फिट-आउट किंवा नूतनीकरण प्लॅन करत आहात? +91 93249 74133 वर कॉल करा किंवा बजेट अंदाजासाठी ", "linkText": "व्हॉट्सअॅप करा", "after": "."}
+        ]
+      },
+      "gu": {
+        "title": "બોરીવલી, કાંદિવલી અને મલાડમાં ઈન્ટીરિયર ડિઝાઇન અને સિવિલ વર્ક",
+        "heroHeading": "બોરીવલી, કાંદિવલી અને મલાડમાં ઈન્ટીરિયર ડિઝાઇન અને સિવિલ વર્ક",
+        "heroSubheading": "સ્થાનિક ઈન્ટીરિયર ડિઝાઇનર્સ અને સિવિલ વર્ક ટીમ — ફિટ-આઉટ, નવીનીકરણ અને સિવિલ વર્ક જેથી તમારું ઘર રહેવા માટે તૈયાર થાય.",
+        "body": [
+          {"type": "h2", "text": "ઈન્ટીરિયર ડિઝાઇન અને સિવિલ વર્ક, તમારી બિલ્ડિંગને ઓળખતા લોકો તરફથી"},
+          {"type": "p", "text": "બોરીવલી કે કાંદિવલીમાં ફ્લેટ ઈન્ટીરિયર ડિઝાઇન પ્રોજેક્ટમાં એવી અલગ મર્યાદાઓ આવે છે જે એકલા મકાનમાં નથી હોતી — સોસાયટીના નવીનીકરણ નિયમો, લિફ્ટ અને સામગ્રી પહોંચાડવાનો સમય, શેર કરેલી દીવાલો. અમારી ઈન્ટીરિયર ડિઝાઇનર્સ અને સિવિલ વર્ક ટીમ ડિઝાઇન અને પ્રત્યક્ષ કામ, બંને સંભાળે છે, જેથી ડ્રોઈંગ અને સાઇટ વચ્ચે કંઈ પણ છૂટે નહીં."},
+          {"type": "h2", "text": "તેમાં શું સામેલ છે"},
+          {"type": "ul", "items": [
+            "નવા અને રીસેલ ફ્લેટ્સ માટે ઈન્ટીરિયર ડિઝાઇન — લેઆઉટ, સામગ્રી અને ફિટ-આઉટ",
+            "સિવિલ વર્ક: નવીનીકરણ, પ્લમ્બિંગ અને ઇલેક્ટ્રિકલ ફેરફારો, સ્ટ્રક્ચરલ સમારકામ",
+            "શરૂઆતમાં જ સ્પષ્ટ, વિગતવાર બજેટ — પ્રોજેક્ટ દરમિયાન કોઈ અણધાર્યો ખર્ચ નહીં",
+            "નવીનીકરણ પરવાનગી અને કામના કલાકોના નિયમો માટે તમારી સોસાયટી સાથે સંકલન"
+          ]},
+          {"type": "h2", "text": "સામાન્ય રીતે તેનો ખર્ચ કેટલો હોય છે"},
+          {"type": "p", "text": "ઈન્ટીરિયર ડિઝાઇન અને સિવિલ વર્કનું બજેટ ફ્લેટના કદ અને ફિનિશ લેવલ પ્રમાણે મોટા પ્રમાણમાં બદલાય છે — 1 બીએચકે માટે બેઝિક ફિટ-આઉટનો ખર્ચ 3 બીએચકે માટે કસ્ટમ સુથારીકામ સાથેના સંપૂર્ણ નવીનીકરણ કરતાં નોંધપાત્ર રીતે ઓછો હોય છે. અમે કામ શરૂ થાય તે પહેલાં જ સ્પષ્ટ, વિગતવાર અંદાજ આપીએ છીએ, જેથી કોઈ અંદાજ લગાવવો ન પડે."},
+          {"type": "h2", "text": "અમે જે વિસ્તારોમાં કામ કરીએ છીએ"},
+          {"type": "p", "text": "બોરીવલી વેસ્ટ અને ઈસ્ટ, એમ.જી. રોડ અને લિંક રોડ પાસે કાંદિવલી, અને મિન્ડસ્પેસ તથા લિંક રોડ કોરિડોર પાસે મલાડ."},
+          {"type": "p_cta", "before": "ઈન્ટીરિયર ફિટ-આઉટ કે નવીનીકરણનું આયોજન કરો છો? +91 93249 74133 પર કૉલ કરો અથવા બજેટ અંદાજ માટે ", "linkText": "વોટ્સએપ કરો", "after": "."}
+        ]
+      }
+    }
+  },
+
+  "existingPageRewrites": {
+    "hero": {
+      "note": "messages/{locale}.json -> hero.headingPart1, hero.headingEm, hero.body. Also fix src/app/(site)/[locale]/page.tsx:109 hardcoded stat '25+' -> '30+' (site.established is 1996; 2026-1996=30) as part of this same task, since the copy and the stat both encode the same stale '25 years' figure.",
+      "en": {"headingPart1": "Your trusted real estate agent for the western suburbs, ", "headingEm": "found the right way.", "body": "For nearly 30 years, families across Borivali, Kandivali and Malad have trusted us to buy, sell and rent homes — and to get first access to the suburb's most sought-after new launches."},
+      "hi": {"headingPart1": "पश्चिमी उपनगरों के लिए आपका भरोसेमंद रियल एस्टेट एजेंट, ", "headingEm": "सही तरीके से पाया गया।", "body": "लगभग 30 वर्षों से, बोरिवली, कांदिवली और मलाड के परिवारों ने घर खरीदने, बेचने और किराए पर लेने के लिए हम पर भरोसा किया है — और उपनगर के सबसे लोकप्रिय नए प्रोजेक्ट्स तक सबसे पहले पहुंच पाने के लिए भी।"},
+      "mr": {"headingPart1": "पश्चिम उपनगरातील तुमचा विश्वासू रिअल इस्टेट एजंट, ", "headingEm": "योग्य मार्गाने मिळालेला.", "body": "जवळपास 30 वर्षांपासून, बोरिवली, कांदिवली आणि मलाडमधील कुटुंबांनी घर खरेदी, विक्री आणि भाड्याने देण्यासाठी आमच्यावर विश्वास ठेवला आहे — आणि उपनगरातील सर्वाधिक मागणी असलेल्या नवीन प्रकल्पांमध्ये सर्वप्रथम प्रवेश मिळवण्यासाठीही."},
+      "gu": {"headingPart1": "પશ્ચિમ પરાં માટે તમારો વિશ્વસનીય રિયલ એસ્ટેટ એજન્ટ, ", "headingEm": "યોગ્ય રીતે મળેલું.", "body": "લગભગ 30 વર્ષથી, બોરીવલી, કાંદિવલી અને મલાડના પરિવારોએ ઘર ખરીદવા, વેચવા અને ભાડે આપવા માટે અમારા પર વિશ્વાસ મૂક્યો છે — અને પરાંના સૌથી વધુ માંગવામાં આવતા નવા પ્રોજેક્ટ્સમાં સૌ પ્રથમ પ્રવેશ મેળવવા માટે પણ."}
+    },
+    "areas": {
+      "note": "messages/{locale}.json -> areas.borivaliBody, areas.kandivaliBody, areas.maladBody",
+      "en": {"borivaliBody": "Our home turf for property in Borivali West and East — resale flats, rentals and society redevelopment, all handled locally.", "kandivaliBody": "Real estate in Kandivali off M.G. Road and Link Road — premium new launches, resale flats and family homes.", "maladBody": "Flats in Malad near Mindspace and the Link Road corridor — growing residential and commercial options."},
+      "hi": {"borivaliBody": "बोरिवली वेस्ट और ईस्ट में प्रॉपर्टी के लिए हमारा गृह क्षेत्र — रीसेल फ्लैट, किराया और सोसाइटी पुनर्विकास, सब कुछ लोकल स्तर पर संभाला जाता है।", "kandivaliBody": "एम.जी. रोड और लिंक रोड के पास कांदिवली में रियल एस्टेट — प्रीमियम नए लॉन्च, रीसेल फ्लैट्स और फैमिली होम्स।", "maladBody": "मिंडस्पेस और लिंक रोड कॉरिडोर के पास मलाड में फ्लैट्स — बढ़ते हुए रेजिडेंशियल और कमर्शियल विकल्प।"},
+      "mr": {"borivaliBody": "बोरिवली वेस्ट आणि ईस्टमधील मालमत्तेसाठी आमचा मूळ भाग — पुनर्विक्री फ्लॅट्स, भाडेपट्टा आणि सोसायटी पुनर्विकास, सर्व काही स्थानिक पातळीवर हाताळले जाते.", "kandivaliBody": "एम.जी. रोड आणि लिंक रोडजवळील कांदिवलीतील रिअल इस्टेट — प्रीमियम नवीन लाँच, पुनर्विक्री फ्लॅट्स आणि फॅमिली होम्स.", "maladBody": "मिंडस्पेस आणि लिंक रोड कॉरिडॉरजवळील मलाडमधील फ्लॅट्स — वाढते निवासी आणि व्यावसायिक पर्याय."},
+      "gu": {"borivaliBody": "બોરીવલી વેસ્ટ અને ઈસ્ટમાં પ્રોપર્ટી માટે અમારો મૂળ વિસ્તાર — રીસેલ ફ્લેટ્સ, ભાડું અને સોસાયટી પુનર્વિકાસ, બધું જ સ્થાનિક સ્તરે સંભાળવામાં આવે છે.", "kandivaliBody": "એમ.જી. રોડ અને લિંક રોડ પાસે કાંદિવલીમાં રિયલ એસ્ટેટ — પ્રીમિયમ નવા લોન્ચ, રીસેલ ફ્લેટ્સ અને ફેમિલી હોમ્સ.", "maladBody": "મિન્ડસ્પેસ અને લિંક રોડ કોરિડોર પાસે મલાડમાં ફ્લેટ્સ — વધતા રહેણાંક અને કોમર્શિયલ વિકલ્પો."}
+    },
+    "projectsPage": {
+      "note": "messages/{locale}.json -> projectsPage.eyebrow, projectsPage.heading, projectsPage.body",
+      "en": {"eyebrow": "New Projects", "heading": "New residential projects in Borivali, Kandivali & Malad", "body": "Handpicked new projects across the western suburbs, many available for early booking through our direct builder relationships — before they reach the open market."},
+      "hi": {"eyebrow": "नए प्रोजेक्ट्स", "heading": "बोरिवली, कांदिवली और मलाड में नए रेजिडेंशियल प्रोजेक्ट्स", "body": "पश्चिमी उपनगरों में चुनिंदा नए प्रोजेक्ट्स, जिनमें से कई हमारे सीधे बिल्डर संबंधों के ज़रिए जल्दी बुकिंग के लिए उपलब्ध हैं — ओपन मार्केट में आने से पहले ही।"},
+      "mr": {"eyebrow": "नवीन प्रकल्प", "heading": "बोरिवली, कांदिवली आणि मलाडमधील नवीन रेसिडेन्शियल प्रकल्प", "body": "पश्चिम उपनगरातील निवडक नवीन प्रकल्प, त्यापैकी अनेक आमच्या थेट बिल्डर संबंधांद्वारे लवकर बुकिंगसाठी उपलब्ध — खुल्या बाजारात येण्यापूर्वीच."},
+      "gu": {"eyebrow": "નવા પ્રોજેક્ટ્સ", "heading": "બોરીવલી, કાંદિવલી અને મલાડમાં નવા રહેણાંક પ્રોજેક્ટ્સ", "body": "પશ્ચિમ પરાંમાં પસંદ કરેલા નવા પ્રોજેક્ટ્સ, જેમાંથી ઘણા અમારા સીધા બિલ્ડર સંબંધો દ્વારા વહેલા બુકિંગ માટે ઉપલબ્ધ — ખુલ્લા બજારમાં આવે તે પહેલાં જ."}
+    },
+    "blogPage": {
+      "note": "messages/{locale}.json -> blogPage.eyebrow, blogPage.heading, blogPage.body",
+      "en": {"eyebrow": "Blog", "heading": "Property insights for Borivali, Kandivali & Malad", "body": "Practical home buying tips and local market notes for Borivali, Kandivali and Malad — written by people who work here every day."},
+      "hi": {"eyebrow": "ब्लॉग", "heading": "बोरिवली, कांदिवली और मलाड के लिए प्रॉपर्टी इनसाइट्स", "body": "बोरिवली, कांदिवली और मलाड के लिए व्यावहारिक होम बाइंग टिप्स और लोकल मार्केट नोट्स — उन लोगों द्वारा लिखे गए जो यहां रोज़ काम करते हैं।"},
+      "mr": {"eyebrow": "ब्लॉग", "heading": "बोरिवली, कांदिवली आणि मलाडसाठी प्रॉपर्टी इनसाइट्स", "body": "बोरिवली, कांदिवली आणि मलाडसाठी व्यावहारिक घर खरेदी टिप्स आणि स्थानिक बाजार नोट्स — इथे रोज काम करणाऱ्या लोकांनी लिहिलेल्या."},
+      "gu": {"eyebrow": "બ્લોગ", "heading": "બોરીવલી, કાંદિવલી અને મલાડ માટે પ્રોપર્ટી ઇનસાઇટ્સ", "body": "બોરીવલી, કાંદિવલી અને મલાડ માટે વ્યવહારુ ઘર ખરીદી ટિપ્સ અને સ્થાનિક બજાર નોંધો — અહીં દરરોજ કામ કરતા લોકો દ્વારા લખાયેલ."}
+    }
+  }
+}
