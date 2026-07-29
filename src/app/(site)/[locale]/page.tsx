@@ -106,7 +106,7 @@ export default async function HomePage({
             </div>
             <div className="mt-12 flex flex-wrap gap-8">
               {[
-                { n: "25+", l: tHero("statYears") },
+                { n: "30+", l: tHero("statYears") },
                 { n: "3", l: tHero("statSuburbs") },
                 { n: "4.8★", l: tHero("statRating") },
               ].map((s) => (
