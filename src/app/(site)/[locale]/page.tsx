@@ -65,12 +65,12 @@ export default async function HomePage({
     ]);
 
   const services = [
-    { title: tServices("resaleTitle"), body: tServices("resaleBody") },
-    { title: tServices("rentalsTitle"), body: tServices("rentalsBody") },
-    { title: tServices("newProjectTitle"), body: tServices("newProjectBody") },
-    { title: tServices("redevelopmentTitle"), body: tServices("redevelopmentBody") },
-    { title: tServices("shopsTitle"), body: tServices("shopsBody") },
-    { title: tServices("interiorsTitle"), body: tServices("interiorsBody") },
+    { slug: "resale-flats", title: tServices("resaleTitle"), body: tServices("resaleBody") },
+    { slug: "rentals", title: tServices("rentalsTitle"), body: tServices("rentalsBody") },
+    { slug: "new-project-bookings", title: tServices("newProjectTitle"), body: tServices("newProjectBody") },
+    { slug: "redevelopment", title: tServices("redevelopmentTitle"), body: tServices("redevelopmentBody") },
+    { slug: "shops-plots", title: tServices("shopsTitle"), body: tServices("shopsBody") },
+    { slug: "interiors", title: tServices("interiorsTitle"), body: tServices("interiorsBody") },
   ];
 
   const areas = [
@@ -131,13 +131,14 @@ export default async function HomePage({
           </div>
           <div className="grid gap-5 md:grid-cols-3">
             {services.map((s) => (
-              <div
-                key={s.title}
-                className="rounded-2xl border border-brand-indigo/10 bg-white p-8 transition hover:-translate-y-1 hover:shadow-xl"
+              <Link
+                key={s.slug}
+                href={`/services/${s.slug}`}
+                className="block rounded-2xl border border-brand-indigo/10 bg-white p-8 transition hover:-translate-y-1 hover:shadow-xl"
               >
                 <h3 className="text-xl text-brand-indigo">{s.title}</h3>
                 <p className="mt-2.5 text-[0.96rem] text-muted">{s.body}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
