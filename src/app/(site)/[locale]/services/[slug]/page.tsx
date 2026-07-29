@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { client } from "@/sanity/client";
-import { pageBySlugQuery, pageSlugsQuery } from "@/sanity/queries";
+import { pageBySlugQuery } from "@/sanity/queries";
 import { PortableTextBody } from "@/components/PortableTextBody";
 import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
 
 export const revalidate = 60;
 
-type Page = {
+const SERVICE_SLUGS = [
+  "resale-flats",
+  "rentals",
+  "new-project-bookings",
+  "redevelopment",
+  "shops-plots",
+  "interiors",
+];
+
+type ServicePage = {
   title: string;
   heroHeading?: LocalizedValue<string>;
   heroSubheading?: LocalizedValue<string>;
@@ -15,21 +24,8 @@ type Page = {
   seoDescription?: string;
 };
 
-// Reserved top-level routes that must NOT be handled by this catch-all.
-// "studio" no longer needs to be listed here: it now lives outside the
-// [locale] segment entirely (see src/app/studio/layout.tsx), so a request
-// for /studio never reaches this route in the first place.
-const RESERVED = new Set(["blog", "projects", "services"]);
-
-export async function generateStaticParams() {
-  try {
-    const slugs = await client.fetch<string[]>(pageSlugsQuery);
-    return (slugs || [])
-      .filter((slug) => !RESERVED.has(slug))
-      .map((slug) => ({ slug }));
-  } catch {
-    return [];
-  }
+export function generateStaticParams() {
+  return SERVICE_SLUGS.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -37,7 +33,7 @@ export async function generateMetadata({
 }: {
   params: { locale: string; slug: string };
 }): Promise<Metadata> {
-  const page = await client.fetch<Page>(pageBySlugQuery, { slug: params.slug });
+  const page = await client.fetch<ServicePage>(pageBySlugQuery, { slug: params.slug });
   if (!page) return {};
   return {
     title: page.title,
@@ -45,15 +41,15 @@ export async function generateMetadata({
   };
 }
 
-export default async function DynamicPage({
+export default async function ServicePage({
   params,
 }: {
   params: { locale: string; slug: string };
 }) {
-  if (RESERVED.has(params.slug)) notFound();
+  if (!SERVICE_SLUGS.includes(params.slug)) notFound();
 
   const locale = params.locale as Locale;
-  const page = await client.fetch<Page>(pageBySlugQuery, { slug: params.slug });
+  const page = await client.fetch<ServicePage>(pageBySlugQuery, { slug: params.slug });
   if (!page) notFound();
 
   const heroHeading = getLocalizedField(page.heroHeading, locale) || page.title;
