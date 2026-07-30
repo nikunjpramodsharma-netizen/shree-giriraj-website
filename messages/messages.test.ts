@@ -37,4 +37,22 @@ describe("message catalog key parity", () => {
       expect(empty, `${name}.json has empty values at: ${empty.join(", ")}`).toEqual([]);
     }
   });
+
+  it("has no em dashes or en dashes in any catalog", () => {
+    for (const [name, catalog] of [
+      ["en", en],
+      ["hi", hi],
+      ["mr", mr],
+      ["gu", gu],
+    ] as const) {
+      const dashed = flattenKeys(catalog).filter((path) => {
+        const value = path.split(".").reduce((o: any, k) => o[k], catalog);
+        return typeof value === "string" && /[—–]/.test(value);
+      });
+      expect(
+        dashed,
+        `${name}.json has em/en dash characters at: ${dashed.join(", ")}`
+      ).toEqual([]);
+    }
+  });
 });
