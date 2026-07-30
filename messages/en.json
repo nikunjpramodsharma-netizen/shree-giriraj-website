@@ -13,7 +13,7 @@
   "hero": {
     "headingPart1": "Your trusted real estate agent for the western suburbs, ",
     "headingEm": "found the right way.",
-    "body": "For nearly 30 years, families across Borivali, Kandivali and Malad have trusted us to buy, sell and rent homes — and to get first access to the suburb's most sought-after new launches.",
+    "body": "For nearly 30 years, families across Borivali, Kandivali and Malad have trusted us to buy, sell and rent homes, and to get first access to the suburb's most sought-after new launches.",
     "ctaBook": "Book a consultation",
     "ctaWhatsapp": "Chat on WhatsApp",
     "whatsappMessage": "Hi Shree Giriraj, I'd like to enquire.",
@@ -28,15 +28,15 @@
     "resaleTitle": "Resale flats",
     "resaleBody": "Buy or sell resale flats in Borivali, Kandivali and Malad with fair pricing, verified carpet area and no hidden charges at registration.",
     "rentalsTitle": "Rentals",
-    "rentalsBody": "1 BHK to 3 BHK flats for rent across Borivali, Kandivali and Malad — tenants and owners matched quickly, with registered rent agreements sorted.",
+    "rentalsBody": "1 BHK to 3 BHK flats for rent across Borivali, Kandivali and Malad, tenants and owners matched quickly, with registered rent agreements sorted.",
     "newProjectTitle": "New project bookings",
-    "newProjectBody": "Early access to new and upcoming residential projects across Borivali, Kandivali and Malad through our direct builder network — often before they reach the open market.",
+    "newProjectBody": "Early access to new and upcoming residential projects across Borivali, Kandivali and Malad through our direct builder network, often before they reach the open market.",
     "redevelopmentTitle": "Housing society redevelopment",
-    "redevelopmentBody": "End-to-end guidance for housing society redevelopment in Borivali, Kandivali and Malad — feasibility reports, developer selection and agreement review, through to occupancy.",
+    "redevelopmentBody": "End to end guidance for housing society redevelopment in Borivali, Kandivali and Malad: feasibility reports, developer selection and agreement review, through to occupancy.",
     "shopsTitle": "Shops & plots",
     "shopsBody": "Commercial shops, plots and office space for sale or rent in Borivali, Kandivali and Malad, for investors and business owners looking to expand in the suburbs.",
     "interiorsTitle": "Interior design & civil work",
-    "interiorsBody": "Local interior designers and a civil work team in Borivali, Kandivali and Malad — fit-outs, renovation and civil work to get your home move-in ready."
+    "interiorsBody": "Local interior designers and a civil work team in Borivali, Kandivali and Malad, fit outs, renovation and civil work to get your home move in ready."
   },
   "projectsGrid": {
     "eyebrow": "Now Booking",
@@ -53,9 +53,9 @@
   "areas": {
     "eyebrow": "Where we work",
     "heading": "Across the western suburbs",
-    "borivaliBody": "Our home turf for property in Borivali West and East — resale flats, rentals and society redevelopment, all handled locally.",
-    "kandivaliBody": "Real estate in Kandivali off M.G. Road and Link Road — premium new launches, resale flats and family homes.",
-    "maladBody": "Flats in Malad near Mindspace and the Link Road corridor — growing residential and commercial options."
+    "borivaliBody": "Our home turf for property in Borivali West and East: resale flats, rentals and society redevelopment, all handled locally.",
+    "kandivaliBody": "Real estate in Kandivali off M.G. Road and Link Road: premium new launches, resale flats and family homes.",
+    "maladBody": "Flats in Malad near Mindspace and the Link Road corridor, growing residential and commercial options."
   },
   "faq": {
     "eyebrow": "Common questions",
@@ -65,7 +65,7 @@
     "eyebrow": "Let's talk",
     "headingPart1": "Tell us what you're ",
     "headingEm": "looking for.",
-    "body": "Share a few details and we'll get back with matching options, honest pricing and the next available site visit — usually the same day.",
+    "body": "Share a few details and we'll get back with matching options, honest pricing and the next available site visit, usually the same day.",
     "namePlaceholder": "Your name",
     "phonePlaceholder": "Phone number",
     "areaPlaceholder": "Preferred area (e.g. Borivali West)",
@@ -102,7 +102,7 @@
   "projectsPage": {
     "eyebrow": "New Projects",
     "heading": "New residential projects in Borivali, Kandivali & Malad",
-    "body": "Handpicked new projects across the western suburbs, many available for early booking through our direct builder relationships — before they reach the open market.",
+    "body": "Handpicked new projects across the western suburbs, many available for early booking through our direct builder relationships, before they reach the open market.",
     "emptyState": "No projects added yet. Add your first one in the ",
     "studioLink": "Studio",
     "statusBooking": "Now Booking",
@@ -117,7 +117,7 @@
     "ctaPrice": "Get price & site visit",
     "configEyebrow": "Configurations & pricing",
     "configHeading": "Homes at {name}",
-    "priceSheetNote": "Exact all-inclusive pricing & floor-wise availability shared on request — ",
+    "priceSheetNote": "Exact all inclusive pricing & floor wise availability shared on request, ",
     "priceSheetLink": "message us for the live price sheet",
     "whatsappPriceSheet": "Hi Shree Giriraj, please share the live price sheet for {name}.",
     "whatsappSiteVisit": "Hi Shree Giriraj, I'm interested in {name}. Please share the current price sheet, floor availability and a site visit slot.",
@@ -137,8 +137,8 @@
     "backLink": "← Back to blog"
   },
   "metadata": {
-    "siteTitle": "Shree Giriraj Real Estate — Homes in Borivali, Kandivali & Malad",
+    "siteTitle": "Shree Giriraj Real Estate: Homes in Borivali, Kandivali & Malad",
     "titleTemplate": "%s | Shree Giriraj Real Estate",
-    "siteDescription": "25+ years of trusted property advice in Borivali West. Resale, rentals & new project bookings across Borivali, Kandivali and Malad. MahaRERA A51800005726."
+    "siteDescription": "30+ years of trusted property advice in Borivali West. Resale, rentals & new project bookings across Borivali, Kandivali and Malad. MahaRERA A51800005726."
   }
 }

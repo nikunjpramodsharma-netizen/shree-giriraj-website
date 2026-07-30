@@ -1,26 +1,26 @@
 {
-  "_readme": "Content data backing docs/superpowers/plans/2026-07-28-service-pages-and-seo-content.md. All English copy is grounded in DataForSEO search-volume/SERP research recorded in that plan's Task 0. Hindi/Marathi/Gujarati are direct translations of the same English source (no separate keyword research per the design spec), using place-name spellings already established in messages/{hi,mr,gu}.json (Borivali->बोरिवली/બોરીવલી, Kandivali->कांदिवली/કાંદિવલી, Malad->मलाड/મલાડ, M.G. Road->एम.जी. रोड/એમ.જી. રોડ, Link Road->लिंक रोड/લિંક રોડ, Mindspace->मिंडस्पेस/મિન્ડસ્પેસ). Body content uses a simple typed-block shorthand: {type:'h2'|'p'|'ul'}. A closing CTA paragraph of type 'p_cta' contains {before, linkText, after} where linkText becomes a link mark pointing at a WhatsApp URL built from waLinkMessage (see Task 1 of the plan for the exact Portable Text conversion).",
+  "_readme": "Content data backing docs/superpowers/plans/2026-07-28-service-pages-and-seo-content.md. All English copy is grounded in DataForSEO search-volume/SERP research recorded in that plan's Task 0. Hindi/Marathi/Gujarati are direct translations of the same English source (no separate keyword research per the design spec), using place-name spellings already established in messages/{hi,mr,gu}.json (Borivali->बोरिवली/બોરીવલી, Kandivali->कांदिवली/કાંદિવલી, Malad->मलाड/મલાડ, M.G. Road->एम.जी. रोड/એમ.જી. રોડ, Link Road->लिंक रोड/લિંક રોડ, Mindspace->मिंडस्पेस/મિન્ડસ્પેસ). Body content uses a simple typed-block shorthand: {type:'h2'|'p'|'ul'}. A closing CTA paragraph of type 'p_cta' contains {before, linkText, after} where linkText becomes a link mark pointing at a WhatsApp URL built from waLinkMessage (see Task 1 of the plan for the exact Portable Text conversion). No em dashes or en dashes anywhere in this content, by standing rule -- replaced with commas, periods, or colons throughout.",
 
   "servicePages": {
     "resale-flats": {
-      "seoDescription": "Buy or sell a resale flat in Borivali, Kandivali or Malad with verified carpet area, fair pricing and transparent stamp duty — trusted by families since 1996.",
+      "seoDescription": "Buy or sell a resale flat in Borivali, Kandivali or Malad with verified carpet area, fair pricing and transparent stamp duty, trusted by families since 1996.",
       "waLinkMessage": "Hi Shree Giriraj, I'd like to enquire about resale flats.",
       "en": {
         "title": "Resale Flats in Borivali, Kandivali & Malad",
         "heroHeading": "Resale Flats in Borivali, Kandivali & Malad",
-        "heroSubheading": "Verified resale flats across the western suburbs — fair pricing, verified carpet area, and no hidden charges at registration.",
+        "heroSubheading": "Verified resale flats across the western suburbs, with fair pricing, verified carpet area, and no hidden charges at registration.",
         "body": [
           {"type": "h2", "text": "Buying or selling a resale flat in Mumbai's western suburbs"},
-          {"type": "p", "text": "For nearly 30 years, families across Borivali, Kandivali and Malad have trusted us to buy and sell resale flats — with verified carpet area, fair pricing based on recent transactions in the same building, and complete clarity on stamp duty and registration costs before you commit to anything."},
+          {"type": "p", "text": "For nearly 30 years, families across Borivali, Kandivali and Malad have trusted us to buy and sell resale flats, with verified carpet area, fair pricing based on recent transactions in the same building, and complete clarity on stamp duty and registration costs before you commit to anything."},
           {"type": "h2", "text": "What's included"},
           {"type": "ul", "items": [
             "Verified carpet area and building documentation before you view a flat",
             "Fair-market pricing based on recent resale transactions in the same society",
             "Help with stamp duty calculation, registration and society transfer paperwork",
-            "No hidden charges — every cost explained upfront"
+            "No hidden charges, with every cost explained upfront"
           ]},
           {"type": "h2", "text": "Why buy resale, and why work with a local agent"},
-          {"type": "p", "text": "A resale flat in Borivali, Kandivali or Malad typically costs less per square foot than a comparable new launch, comes with an established society, and is ready for immediate possession. Working with a local agent who knows the building, the society committee and the going rate protects you from overpaying — or missing an issue that only surfaces after registration."},
+          {"type": "p", "text": "A resale flat in Borivali, Kandivali or Malad typically costs less per square foot than a comparable new launch, comes with an established society, and is ready for immediate possession. Working with a local agent who knows the building, the society committee and the going rate protects you from overpaying, or from missing an issue that only surfaces after registration."},
           {"type": "h2", "text": "Areas we cover"},
           {"type": "p", "text": "Borivali West and East, Kandivali off M.G. Road and Link Road, and Malad near Mindspace and the Link Road corridor."},
           {"type": "p_cta", "before": "Call us on +91 93249 74133 or ", "linkText": "WhatsApp us", "after": " for resale flats matching your budget."}
@@ -29,16 +29,16 @@
       "hi": {
         "title": "बोरिवली, कांदिवली और मलाड में रीसेल फ्लैट्स",
         "heroHeading": "बोरिवली, कांदिवली और मलाड में रीसेल फ्लैट्स",
-        "heroSubheading": "पश्चिमी उपनगरों में सत्यापित रीसेल फ्लैट्स — उचित कीमत, सत्यापित कारपेट एरिया, और रजिस्ट्रेशन में कोई छुपा खर्च नहीं।",
+        "heroSubheading": "पश्चिमी उपनगरों में सत्यापित रीसेल फ्लैट्स, उचित कीमत, सत्यापित कारपेट एरिया, और रजिस्ट्रेशन में कोई छुपा खर्च नहीं।",
         "body": [
           {"type": "h2", "text": "मुंबई के पश्चिमी उपनगरों में रीसेल फ्लैट खरीदना या बेचना"},
-          {"type": "p", "text": "लगभग 30 वर्षों से, बोरिवली, कांदिवली और मलाड के परिवारों ने रीसेल फ्लैट खरीदने और बेचने के लिए हम पर भरोसा किया है — सत्यापित कारपेट एरिया, उसी बिल्डिंग में हाल की डील्स पर आधारित उचित कीमत, और किसी भी बात के लिए हामी भरने से पहले स्टाम्प ड्यूटी और रजिस्ट्रेशन खर्च पर पूरी स्पष्टता के साथ।"},
+          {"type": "p", "text": "लगभग 30 वर्षों से, बोरिवली, कांदिवली और मलाड के परिवारों ने रीसेल फ्लैट खरीदने और बेचने के लिए हम पर भरोसा किया है, सत्यापित कारपेट एरिया, उसी बिल्डिंग में हाल की डील्स पर आधारित उचित कीमत, और किसी भी बात के लिए हामी भरने से पहले स्टाम्प ड्यूटी और रजिस्ट्रेशन खर्च पर पूरी स्पष्टता के साथ।"},
           {"type": "h2", "text": "इसमें क्या शामिल है"},
           {"type": "ul", "items": [
             "फ्लैट देखने से पहले सत्यापित कारपेट एरिया और बिल्डिंग के दस्तावेज़",
             "उसी सोसाइटी में हाल की रीसेल डील्स पर आधारित उचित बाज़ार कीमत",
             "स्टाम्प ड्यूटी कैलकुलेशन, रजिस्ट्रेशन और सोसाइटी ट्रांसफर पेपरवर्क में मदद",
-            "कोई छुपा खर्च नहीं — हर लागत पहले ही स्पष्ट कर दी जाती है"
+            "कोई छुपा खर्च नहीं, हर लागत पहले ही स्पष्ट कर दी जाती है"
           ]},
           {"type": "h2", "text": "रीसेल फ्लैट क्यों, और लोकल एजेंट के साथ क्यों काम करें"},
           {"type": "p", "text": "बोरिवली, कांदिवली या मलाड में रीसेल फ्लैट आमतौर पर उसी इलाके के नए लॉन्च की तुलना में प्रति स्क्वायर फुट कम कीमत में मिलता है, साथ में एक स्थापित सोसाइटी और तुरंत पजेशन भी। बिल्डिंग, सोसाइटी कमेटी और चालू दर जानने वाले लोकल एजेंट के साथ काम करने से आप ज़्यादा कीमत देने से, या रजिस्ट्रेशन के बाद सामने आने वाली किसी समस्या से बचे रहते हैं।"},
@@ -50,16 +50,16 @@
       "mr": {
         "title": "बोरिवली, कांदिवली आणि मलाडमध्ये पुनर्विक्री फ्लॅट्स",
         "heroHeading": "बोरिवली, कांदिवली आणि मलाडमध्ये पुनर्विक्री फ्लॅट्स",
-        "heroSubheading": "पश्चिम उपनगरातील पडताळणी केलेले पुनर्विक्री फ्लॅट्स — योग्य किंमत, पडताळणी केलेले कार्पेट क्षेत्र, आणि नोंदणीत कोणताही लपलेला खर्च नाही.",
+        "heroSubheading": "पश्चिम उपनगरातील पडताळणी केलेले पुनर्विक्री फ्लॅट्स, योग्य किंमत, पडताळणी केलेले कार्पेट क्षेत्र, आणि नोंदणीत कोणताही लपलेला खर्च नाही.",
         "body": [
           {"type": "h2", "text": "मुंबईच्या पश्चिम उपनगरात पुनर्विक्री फ्लॅट खरेदी किंवा विक्री करणे"},
-          {"type": "p", "text": "जवळपास 30 वर्षांपासून, बोरिवली, कांदिवली आणि मलाडमधील कुटुंबांनी पुनर्विक्री फ्लॅट खरेदी-विक्रीसाठी आमच्यावर विश्वास ठेवला आहे — पडताळणी केलेले कार्पेट क्षेत्र, त्याच इमारतीतील अलीकडील व्यवहारांवर आधारित योग्य किंमत, आणि कोणतीही वचनबद्धता करण्यापूर्वी स्टॅम्प ड्युटी व नोंदणी खर्चाबाबत पूर्ण स्पष्टता."},
+          {"type": "p", "text": "जवळपास 30 वर्षांपासून, बोरिवली, कांदिवली आणि मलाडमधील कुटुंबांनी पुनर्विक्री फ्लॅट खरेदी-विक्रीसाठी आमच्यावर विश्वास ठेवला आहे, पडताळणी केलेले कार्पेट क्षेत्र, त्याच इमारतीतील अलीकडील व्यवहारांवर आधारित योग्य किंमत, आणि कोणतीही वचनबद्धता करण्यापूर्वी स्टॅम्प ड्युटी व नोंदणी खर्चाबाबत पूर्ण स्पष्टता."},
           {"type": "h2", "text": "यात काय समाविष्ट आहे"},
           {"type": "ul", "items": [
             "फ्लॅट पाहण्यापूर्वी पडताळणी केलेले कार्पेट क्षेत्र आणि इमारतीची कागदपत्रे",
             "त्याच सोसायटीतील अलीकडील पुनर्विक्री व्यवहारांवर आधारित योग्य बाजारभाव",
             "स्टॅम्प ड्युटी गणना, नोंदणी आणि सोसायटी ट्रान्सफर पेपरवर्कमध्ये मदत",
-            "कोणताही लपलेला खर्च नाही — प्रत्येक खर्च आधीच स्पष्ट केला जातो"
+            "कोणताही लपलेला खर्च नाही, प्रत्येक खर्च आधीच स्पष्ट केला जातो"
           ]},
           {"type": "h2", "text": "पुनर्विक्री फ्लॅट का, आणि स्थानिक एजंटसोबत का काम करावे"},
           {"type": "p", "text": "बोरिवली, कांदिवली किंवा मलाडमधील पुनर्विक्री फ्लॅट सहसा त्याच भागातील नवीन लाँचपेक्षा प्रति चौरस फूट कमी किमतीत मिळतो, सोबत स्थापित सोसायटी आणि तात्काळ ताबा. इमारत, सोसायटी कमिटी आणि चालू दर माहीत असलेल्या स्थानिक एजंटसोबत काम केल्याने तुम्ही जास्त किंमत देण्यापासून किंवा नोंदणीनंतर समोर येणाऱ्या समस्येपासून सुरक्षित राहता."},
@@ -71,16 +71,16 @@
       "gu": {
         "title": "બોરીવલી, કાંદિવલી અને મલાડમાં રીસેલ ફ્લેટ્સ",
         "heroHeading": "બોરીવલી, કાંદિવલી અને મલાડમાં રીસેલ ફ્લેટ્સ",
-        "heroSubheading": "પશ્ચિમ પરાંમાં ચકાસાયેલ રીસેલ ફ્લેટ્સ — વ્યાજબી ભાવ, ચકાસાયેલ કાર્પેટ એરિયા, અને નોંધણીમાં કોઈ છુપો ખર્ચ નહીં.",
+        "heroSubheading": "પશ્ચિમ પરાંમાં ચકાસાયેલ રીસેલ ફ્લેટ્સ, વ્યાજબી ભાવ, ચકાસાયેલ કાર્પેટ એરિયા, અને નોંધણીમાં કોઈ છુપો ખર્ચ નહીં.",
         "body": [
           {"type": "h2", "text": "મુંબઈના પશ્ચિમ પરાંમાં રીસેલ ફ્લેટ ખરીદવો કે વેચવો"},
-          {"type": "p", "text": "લગભગ 30 વર્ષથી, બોરીવલી, કાંદિવલી અને મલાડના પરિવારોએ રીસેલ ફ્લેટ ખરીદવા અને વેચવા માટે અમારા પર વિશ્વાસ મૂક્યો છે — ચકાસાયેલ કાર્પેટ એરિયા, એ જ બિલ્ડિંગમાં તાજેતરના સોદા પર આધારિત વ્યાજબી ભાવ, અને કંઈપણ નક્કી કરતાં પહેલાં સ્ટેમ્પ ડ્યુટી અને નોંધણી ખર્ચ પર સંપૂર્ણ સ્પષ્ટતા સાથે."},
+          {"type": "p", "text": "લગભગ 30 વર્ષથી, બોરીવલી, કાંદિવલી અને મલાડના પરિવારોએ રીસેલ ફ્લેટ ખરીદવા અને વેચવા માટે અમારા પર વિશ્વાસ મૂક્યો છે, ચકાસાયેલ કાર્પેટ એરિયા, એ જ બિલ્ડિંગમાં તાજેતરના સોદા પર આધારિત વ્યાજબી ભાવ, અને કંઈપણ નક્કી કરતાં પહેલાં સ્ટેમ્પ ડ્યુટી અને નોંધણી ખર્ચ પર સંપૂર્ણ સ્પષ્ટતા સાથે."},
           {"type": "h2", "text": "તેમાં શું સામેલ છે"},
           {"type": "ul", "items": [
             "ફ્લેટ જોતાં પહેલાં ચકાસાયેલ કાર્પેટ એરિયા અને બિલ્ડિંગના દસ્તાવેજો",
             "એ જ સોસાયટીમાં તાજેતરના રીસેલ સોદા પર આધારિત વ્યાજબી બજાર ભાવ",
             "સ્ટેમ્પ ડ્યુટી ગણતરી, નોંધણી અને સોસાયટી ટ્રાન્સફર પેપરવર્કમાં મદદ",
-            "કોઈ છુપો ખર્ચ નહીં — દરેક ખર્ચ અગાઉથી સ્પષ્ટ કરવામાં આવે છે"
+            "કોઈ છુપો ખર્ચ નહીં, દરેક ખર્ચ અગાઉથી સ્પષ્ટ કરવામાં આવે છે"
           ]},
           {"type": "h2", "text": "રીસેલ ફ્લેટ કેમ, અને સ્થાનિક એજન્ટ સાથે કેમ કામ કરવું"},
           {"type": "p", "text": "બોરીવલી, કાંદિવલી અથવા મલાડમાં રીસેલ ફ્લેટ સામાન્ય રીતે એ જ વિસ્તારના નવા લોન્ચ કરતાં પ્રતિ ચોરસ ફૂટ ઓછી કિંમતે મળે છે, સાથે સ્થાપિત સોસાયટી અને તાત્કાલિક કબજો. બિલ્ડિંગ, સોસાયટી કમિટી અને ચાલુ ભાવ જાણતા સ્થાનિક એજન્ટ સાથે કામ કરવાથી તમે વધારે ભાવ ચૂકવવાથી અથવા નોંધણી પછી સામે આવતી કોઈ સમસ્યાથી બચો છો."},
@@ -92,21 +92,21 @@
     },
 
     "rentals": {
-      "seoDescription": "Flats for rent in Borivali, Kandivali and Malad — 1 BHK to 3 BHK, verified listings, fast tenant matching and registered rent agreements handled for you.",
+      "seoDescription": "Flats for rent in Borivali, Kandivali and Malad: 1 BHK to 3 BHK, verified listings, fast tenant matching and registered rent agreements handled for you.",
       "waLinkMessage": "Hi Shree Giriraj, I'd like to enquire about rentals.",
       "en": {
         "title": "Flats for Rent in Borivali, Kandivali & Malad",
         "heroHeading": "Flats for Rent in Borivali, Kandivali & Malad",
-        "heroSubheading": "1 BHK to 3 BHK flats for rent across the western suburbs — tenants and owners matched quickly, with registered rent agreements sorted.",
+        "heroSubheading": "1 BHK to 3 BHK flats for rent across the western suburbs, with tenants and owners matched quickly, and registered rent agreements sorted.",
         "body": [
           {"type": "h2", "text": "Renting in Borivali, Kandivali and Malad, without the portal scroll"},
-          {"type": "p", "text": "Property portals list thousands of flats for rent in Borivali West alone — most outdated, many without verified photos or an owner who actually responds. We keep a live, verified shortlist of 1 BHK to 3 BHK flats for rent across Borivali, Kandivali and Malad, and match tenants directly with owners we already know."},
+          {"type": "p", "text": "Property portals list thousands of flats for rent in Borivali West alone, most outdated, many without verified photos or an owner who actually responds. We keep a live, verified shortlist of 1 BHK to 3 BHK flats for rent across Borivali, Kandivali and Malad, and match tenants directly with owners we already know."},
           {"type": "h2", "text": "What's included"},
           {"type": "ul", "items": [
-            "Verified listings — every flat is visited or confirmed before it's shown to you",
+            "Verified listings: every flat is visited or confirmed before it's shown to you",
             "Fast shortlisting based on your budget, area and move-in date",
             "Registered rent agreement drafted and filed, so both sides are protected",
-            "Direct owner contact — no chain of brokers adding to your rent"
+            "Direct owner contact, with no chain of brokers adding to your rent"
           ]},
           {"type": "h2", "text": "For owners"},
           {"type": "p", "text": "Listing your flat for rent with us means a verified tenant, a registered agreement, and no vacant months waiting on portal enquiries that go nowhere."},
@@ -118,16 +118,16 @@
       "hi": {
         "title": "बोरिवली, कांदिवली और मलाड में किराए के फ्लैट्स",
         "heroHeading": "बोरिवली, कांदिवली और मलाड में किराए के फ्लैट्स",
-        "heroSubheading": "पश्चिमी उपनगरों में 1 बीएचके से 3 बीएचके तक किराए के फ्लैट्स — किरायेदारों और मालिकों का तुरंत मिलान, रजिस्टर्ड रेंट एग्रीमेंट भी हम संभालते हैं।",
+        "heroSubheading": "पश्चिमी उपनगरों में 1 बीएचके से 3 बीएचके तक किराए के फ्लैट्स, किरायेदारों और मालिकों का तुरंत मिलान, रजिस्टर्ड रेंट एग्रीमेंट भी हम संभालते हैं।",
         "body": [
           {"type": "h2", "text": "बोरिवली, कांदिवली और मलाड में बिना पोर्टल स्क्रॉल किए किराए पर लें"},
-          {"type": "p", "text": "प्रॉपर्टी पोर्टल्स पर अकेले बोरिवली वेस्ट में ही हज़ारों किराए के फ्लैट लिस्टेड हैं — जिनमें से ज़्यादातर पुराने हैं, कई बिना सत्यापित फोटो के, और कई का मालिक जवाब ही नहीं देता। हम बोरिवली, कांदिवली और मलाड में 1 बीएचके से 3 बीएचके तक के किराए के फ्लैट्स की एक लाइव, सत्यापित शॉर्टलिस्ट रखते हैं, और किरायेदारों को सीधे उन मालिकों से मिलाते हैं जिन्हें हम पहले से जानते हैं।"},
+          {"type": "p", "text": "प्रॉपर्टी पोर्टल्स पर अकेले बोरिवली वेस्ट में ही हज़ारों किराए के फ्लैट लिस्टेड हैं, जिनमें से ज़्यादातर पुराने हैं, कई बिना सत्यापित फोटो के, और कई का मालिक जवाब ही नहीं देता। हम बोरिवली, कांदिवली और मलाड में 1 बीएचके से 3 बीएचके तक के किराए के फ्लैट्स की एक लाइव, सत्यापित शॉर्टलिस्ट रखते हैं, और किरायेदारों को सीधे उन मालिकों से मिलाते हैं जिन्हें हम पहले से जानते हैं।"},
           {"type": "h2", "text": "इसमें क्या शामिल है"},
           {"type": "ul", "items": [
-            "सत्यापित लिस्टिंग — हर फ्लैट दिखाने से पहले या तो देखा जाता है या कन्फर्म किया जाता है",
+            "सत्यापित लिस्टिंग: हर फ्लैट दिखाने से पहले या तो देखा जाता है या कन्फर्म किया जाता है",
             "आपके बजट, इलाके और शिफ्टिंग डेट के हिसाब से तुरंत शॉर्टलिस्टिंग",
             "रजिस्टर्ड रेंट एग्रीमेंट तैयार और फाइल किया जाता है, ताकि दोनों पक्ष सुरक्षित रहें",
-            "सीधा मालिक से संपर्क — बिना किसी बिचौलिए की चेन के जो किराया बढ़ाए"
+            "सीधा मालिक से संपर्क, बिना किसी बिचौलिए की चेन के जो किराया बढ़ाए"
           ]},
           {"type": "h2", "text": "मालिकों के लिए"},
           {"type": "p", "text": "अपना फ्लैट हमारे साथ किराए पर लिस्ट करने का मतलब है एक सत्यापित किरायेदार, एक रजिस्टर्ड एग्रीमेंट, और बिना किसी नतीजे वाली पोर्टल पूछताछ का इंतज़ार करते हुए खाली महीने नहीं।"},
@@ -139,16 +139,16 @@
       "mr": {
         "title": "बोरिवली, कांदिवली आणि मलाडमध्ये भाड्याचे फ्लॅट्स",
         "heroHeading": "बोरिवली, कांदिवली आणि मलाडमध्ये भाड्याचे फ्लॅट्स",
-        "heroSubheading": "पश्चिम उपनगरात 1 बीएचके ते 3 बीएचके भाड्याचे फ्लॅट्स — भाडेकरू आणि मालकांची जलद जुळणी, नोंदणीकृत भाडे करारही आम्हीच सांभाळतो.",
+        "heroSubheading": "पश्चिम उपनगरात 1 बीएचके ते 3 बीएचके भाड्याचे फ्लॅट्स, भाडेकरू आणि मालकांची जलद जुळणी, नोंदणीकृत भाडे करारही आम्हीच सांभाळतो.",
         "body": [
           {"type": "h2", "text": "बोरिवली, कांदिवली आणि मलाडमध्ये पोर्टल स्क्रोल न करता भाड्याने घ्या"},
-          {"type": "p", "text": "प्रॉपर्टी पोर्टल्सवर एकट्या बोरिवली वेस्टमध्ये हजारो भाड्याचे फ्लॅट्स लिस्ट आहेत — बहुतांश जुने, अनेक पडताळणी न केलेल्या फोटोंसह, आणि अनेकांचा मालक उत्तरच देत नाही. आम्ही बोरिवली, कांदिवली आणि मलाडमध्ये 1 बीएचके ते 3 बीएचके भाड्याच्या फ्लॅट्सची लाइव्ह, पडताळणी केलेली शॉर्टलिस्ट ठेवतो, आणि भाडेकरूंची थेट अशा मालकांशी जुळणी करतो ज्यांना आम्ही आधीच ओळखतो."},
+          {"type": "p", "text": "प्रॉपर्टी पोर्टल्सवर एकट्या बोरिवली वेस्टमध्ये हजारो भाड्याचे फ्लॅट्स लिस्ट आहेत, बहुतांश जुने, अनेक पडताळणी न केलेल्या फोटोंसह, आणि अनेकांचा मालक उत्तरच देत नाही. आम्ही बोरिवली, कांदिवली आणि मलाडमध्ये 1 बीएचके ते 3 बीएचके भाड्याच्या फ्लॅट्सची लाइव्ह, पडताळणी केलेली शॉर्टलिस्ट ठेवतो, आणि भाडेकरूंची थेट अशा मालकांशी जुळणी करतो ज्यांना आम्ही आधीच ओळखतो."},
           {"type": "h2", "text": "यात काय समाविष्ट आहे"},
           {"type": "ul", "items": [
-            "पडताळणी केलेल्या लिस्टिंग — प्रत्येक फ्लॅट दाखवण्यापूर्वी भेट दिली जाते किंवा खात्री केली जाते",
+            "पडताळणी केलेल्या लिस्टिंग: प्रत्येक फ्लॅट दाखवण्यापूर्वी भेट दिली जाते किंवा खात्री केली जाते",
             "तुमचे बजेट, भाग आणि शिफ्टिंग तारखेनुसार जलद शॉर्टलिस्टिंग",
             "नोंदणीकृत भाडे करार तयार करून दाखल केला जातो, जेणेकरून दोन्ही बाजू सुरक्षित राहतील",
-            "थेट मालकाशी संपर्क — भाडे वाढवणाऱ्या दलालांच्या साखळीशिवाय"
+            "थेट मालकाशी संपर्क, भाडे वाढवणाऱ्या दलालांच्या साखळीशिवाय"
           ]},
           {"type": "h2", "text": "मालकांसाठी"},
           {"type": "p", "text": "तुमचा फ्लॅट आमच्यासोबत भाड्याने लिस्ट करणे म्हणजे पडताळणी केलेला भाडेकरू, नोंदणीकृत करार, आणि निष्फळ पोर्टल चौकशीची वाट पाहत रिकामे महिने न जाणे."},
@@ -160,16 +160,16 @@
       "gu": {
         "title": "બોરીવલી, કાંદિવલી અને મલાડમાં ભાડાના ફ્લેટ્સ",
         "heroHeading": "બોરીવલી, કાંદિવલી અને મલાડમાં ભાડાના ફ્લેટ્સ",
-        "heroSubheading": "પશ્ચિમ પરાંમાં 1 બીએચકેથી 3 બીએચકે સુધીના ભાડાના ફ્લેટ્સ — ભાડુઆતો અને માલિકોનું ઝડપી મેચિંગ, નોંધાયેલ ભાડા કરાર પણ અમે સંભાળીએ છીએ.",
+        "heroSubheading": "પશ્ચિમ પરાંમાં 1 બીએચકેથી 3 બીએચકે સુધીના ભાડાના ફ્લેટ્સ, ભાડુઆતો અને માલિકોનું ઝડપી મેચિંગ, નોંધાયેલ ભાડા કરાર પણ અમે સંભાળીએ છીએ.",
         "body": [
           {"type": "h2", "text": "બોરીવલી, કાંદિવલી અને મલાડમાં પોર્ટલ સ્ક્રોલ કર્યા વગર ભાડે લો"},
-          {"type": "p", "text": "પ્રોપર્ટી પોર્ટલ્સ પર એકલા બોરીવલી વેસ્ટમાં જ હજારો ભાડાના ફ્લેટ્સ લિસ્ટેડ છે — મોટાભાગના જૂના, ઘણા ચકાસાયેલ ફોટા વગરના, અને ઘણાનો માલિક જવાબ જ નથી આપતો. અમે બોરીવલી, કાંદિવલી અને મલાડમાં 1 બીએચકેથી 3 બીએચકે સુધીના ભાડાના ફ્લેટ્સની લાઇવ, ચકાસાયેલ શોર્ટલિસ્ટ રાખીએ છીએ, અને ભાડુઆતોને સીધા એવા માલિકો સાથે મેચ કરીએ છીએ જેમને અમે પહેલેથી ઓળખીએ છીએ."},
+          {"type": "p", "text": "પ્રોપર્ટી પોર્ટલ્સ પર એકલા બોરીવલી વેસ્ટમાં જ હજારો ભાડાના ફ્લેટ્સ લિસ્ટેડ છે, મોટાભાગના જૂના, ઘણા ચકાસાયેલ ફોટા વગરના, અને ઘણાનો માલિક જવાબ જ નથી આપતો. અમે બોરીવલી, કાંદિવલી અને મલાડમાં 1 બીએચકેથી 3 બીએચકે સુધીના ભાડાના ફ્લેટ્સની લાઇવ, ચકાસાયેલ શોર્ટલિસ્ટ રાખીએ છીએ, અને ભાડુઆતોને સીધા એવા માલિકો સાથે મેચ કરીએ છીએ જેમને અમે પહેલેથી ઓળખીએ છીએ."},
           {"type": "h2", "text": "તેમાં શું સામેલ છે"},
           {"type": "ul", "items": [
-            "ચકાસાયેલ લિસ્ટિંગ — દરેક ફ્લેટ બતાવતાં પહેલાં કાં તો રૂબરૂ જોવાય છે અથવા કન્ફર્મ કરવામાં આવે છે",
+            "ચકાસાયેલ લિસ્ટિંગ: દરેક ફ્લેટ બતાવતાં પહેલાં કાં તો રૂબરૂ જોવાય છે અથવા કન્ફર્મ કરવામાં આવે છે",
             "તમારા બજેટ, વિસ્તાર અને શિફ્ટિંગ તારીખ પ્રમાણે ઝડપી શોર્ટલિસ્ટિંગ",
             "નોંધાયેલ ભાડા કરાર તૈયાર કરી ફાઇલ કરવામાં આવે છે, જેથી બંને પક્ષ સુરક્ષિત રહે",
-            "સીધો માલિક સાથે સંપર્ક — ભાડું વધારતી દલાલોની સાંકળ વગર"
+            "સીધો માલિક સાથે સંપર્ક, ભાડું વધારતી દલાલોની સાંકળ વગર"
           ]},
           {"type": "h2", "text": "માલિકો માટે"},
           {"type": "p", "text": "તમારો ફ્લેટ અમારી સાથે ભાડે લિસ્ટ કરવાનો અર્થ છે ચકાસાયેલ ભાડુઆત, નોંધાયેલ કરાર, અને નિષ્ફળ પોર્ટલ પૂછપરછની રાહ જોતાં ખાલી મહિનાઓ નહીં."},
@@ -181,5 +181,5 @@
     }
   },
 
-  "_note_remaining_services": "Full content for new-project-bookings, redevelopment, shops-plots, and interiors, plus the 4 existing-page rewrites (hero, areas, projectsPage, blogPage), continues in 2026-07-28-service-pages-content-2.json using the same shape — split across two files to keep each individually readable."
+  "_note_remaining_services": "Full content for new-project-bookings, redevelopment, shops-plots, and interiors, plus the 4 existing-page rewrites (hero, areas, projectsPage, blogPage), continues in 2026-07-28-service-pages-content-2.json using the same shape, split across two files to keep each individually readable."
 }
