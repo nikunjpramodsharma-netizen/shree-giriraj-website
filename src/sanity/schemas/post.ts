@@ -49,7 +49,43 @@ export default defineType({
       initialValue: () => new Date().toISOString(),
       validation: (rule) => rule.required(),
     }),
+    localizedTextField(
+      "answer",
+      "Answer block (40 to 60 words)",
+      3,
+    ),
     localizedBlockContentField("body", "Body"),
+    defineField({
+      name: "sources",
+      title: "Sources",
+      description:
+        "Primary sources only, not summaries of them. Citing sources is the highest ranked method for getting quoted by AI engines.",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "label", title: "Label", type: "string" },
+            { name: "url", title: "URL", type: "url" },
+          ],
+        },
+      ],
+    }),
+    defineField({
+      name: "sourcesCheckedOn",
+      title: "Sources last checked",
+      description:
+        "Shown on the page. Undated content loses to dated content, and this is what makes the quarterly refresh auditable.",
+      type: "date",
+    }),
+    defineField({
+      name: "relatedFaqs",
+      title: "FAQ block",
+      description:
+        "Only add questions this post genuinely answers on the page. Markup that does not match visible content is a policy violation.",
+      type: "array",
+      of: [{ type: "reference", to: { type: "faq" } }],
+    }),
   ],
   orderings: [
     {

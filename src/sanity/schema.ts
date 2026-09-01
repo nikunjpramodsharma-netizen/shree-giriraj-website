@@ -9,6 +9,7 @@ import page from "./schemas/page";
 import author from "./schemas/author";
 import faq from "./schemas/faq";
 import teamMember from "./schemas/teamMember";
+import lead from "./schemas/lead";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -21,6 +22,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     category,
     faq,
     teamMember,
+    lead,
     // Objects
     blockContent,
   ],

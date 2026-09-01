@@ -1,0 +1,201 @@
+/**
+ * Generates content/PLACEHOLDERS.md: one numbered list of everything on the
+ * site waiting on a real answer.
+ *
+ * Two sources, merged:
+ *   1. scripts/fills.mjs        site and code level gaps, hand maintained
+ *   2. content/drafts/*.md      the [ VERIFY ] [ YOUR WORDS ] [ DECISION ]
+ *                               markers already written into the drafts
+ *
+ * Generated rather than hand written so it cannot drift out of date. Run it
+ * after any content or config change:
+ *
+ *   node scripts/placeholders.mjs
+ *
+ * No dependencies, no build step.
+ */
+
+import { readdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
+import { join, basename } from "node:path";
+import { FILLS } from "./fills.mjs";
+
+const ROOT = process.cwd();
+const DRAFTS = join(ROOT, "content", "drafts");
+const OUT = join(ROOT, "content", "PLACEHOLDERS.md");
+
+/** Marker types already in use across the drafts. */
+const MARKERS = [
+  { type: "DECISION", label: "Decision" },
+  { type: "YOUR WORDS", label: "Your words" },
+  { type: "VERIFY", label: "Verify" },
+];
+
+/**
+ * Pull markers out of one draft.
+ *
+ * A marker runs from "[ TYPE" to its closing bracket and can span lines, so
+ * the text is flattened and squeezed before it is truncated. Frontmatter is
+ * scanned too, because answer blocks are stubbed there.
+ */
+function scanDraft(file) {
+  const raw = readFileSync(file, "utf8");
+  const lines = raw.split(/\r?\n/);
+  const found = [];
+
+  for (const m of MARKERS) {
+    const re = new RegExp(`\\[\\s*${m.type}\\b`, "g");
+    let hit;
+    while ((hit = re.exec(raw)) !== null) {
+      // Which line did this start on.
+      const line = raw.slice(0, hit.index).split(/\r?\n/).length;
+      // Take a window and cut at the first closing bracket.
+      const window = raw.slice(hit.index, hit.index + 1200);
+      const end = window.indexOf("]");
+      let body = (end === -1 ? window : window.slice(0, end))
+        .replace(new RegExp(`^\\[\\s*${m.type}\\s*:?\\s*`), "")
+        .replace(/\s+/g, " ")
+        .trim();
+
+      // An empty marker means the question lives outside the brackets, and
+      // which side depends on how it is used.
+      //
+      //   "## [ YOUR WORDS ] What we check"  the question is the heading tail
+      //                                      and the prompt bullets under it
+      //   "...still requires attendance. [ VERIFY ]"
+      //                                      the thing to check is the claim
+      //                                      BEFORE it, not the next paragraph
+      //
+      // Reading forward in the second case pulls in the following question and
+      // makes the item unreadable, so the two are handled separately.
+      if (!body && end !== -1) {
+        const onHeading = (lines[line - 1] || "").trimStart().startsWith("#");
+
+        if (onHeading) {
+          const parts = [];
+          for (const l of window.slice(end + 1).split(/\r?\n/)) {
+            const t = l.trim();
+            if (t === "---" || t.startsWith("#")) break;
+            if (!t) continue;
+            parts.push(t.replace(/^[-*]\s*/, "").replace(/[*_`]/g, ""));
+            if (parts.join(" ").length > 300) break;
+          }
+          body = parts.join(" ");
+        } else {
+          // The claim being flagged: back up to the previous sentence end.
+          const before = raw.slice(Math.max(0, hit.index - 400), hit.index);
+          const sentences = before
+            .replace(/\s+/g, " ")
+            .split(/(?<=[.?!])\s+/)
+            .filter(Boolean);
+          body = sentences.slice(-2).join(" ");
+        }
+        body = body.replace(/\s+/g, " ").trim();
+      }
+
+      found.push({ type: m.label, line, text: body });
+    }
+  }
+
+  // Title from frontmatter, so the list reads as posts rather than filenames.
+  const title = (raw.match(/^title:\s*"?(.+?)"?\s*$/m) || [])[1] || basename(file);
+  const volume = (raw.match(/^searchVolume:\s*(\d+)/m) || [])[1];
+
+  found.sort((a, b) => a.line - b.line);
+  return { file: basename(file), title, volume: volume ? Number(volume) : null, found };
+}
+
+function draftReports() {
+  if (!existsSync(DRAFTS)) return [];
+  return readdirSync(DRAFTS)
+    .filter((f) => f.endsWith(".md") && f !== "README.md")
+    .map((f) => scanDraft(join(DRAFTS, f)))
+    .filter((d) => d.found.length > 0)
+    .sort((a, b) => (b.volume ?? 0) - (a.volume ?? 0));
+}
+
+const STATUS_ORDER = ["blocked", "wrong", "hidden", "cosmetic"];
+const STATUS_NOTE = {
+  blocked: "Nothing can ship until this exists",
+  wrong: "Live right now and inaccurate, or a placeholder a visitor can see",
+  hidden: "Built and deliberately switched off until answered",
+  cosmetic: "Works without it, better with it",
+};
+
+function build() {
+  const drafts = draftReports();
+  let n = 0;
+  const out = [];
+
+  out.push("# What I need from you");
+  out.push("");
+  out.push(
+    "Generated by `node scripts/placeholders.mjs`. Do not edit by hand, it is overwritten.",
+  );
+  out.push("");
+  out.push(
+    "Answer by number. Anything you do not know yet, say so and it stays on the list rather than being guessed at.",
+  );
+  out.push("");
+
+  const totalDraftMarkers = drafts.reduce((s, d) => s + d.found.length, 0);
+  out.push(
+    `**${FILLS.length} site items and ${totalDraftMarkers} content gaps across ${drafts.length} drafts.**`,
+  );
+  out.push("");
+  out.push("---");
+  out.push("");
+  out.push("## Part one: the website");
+  out.push("");
+
+  for (const status of STATUS_ORDER) {
+    const group = FILLS.filter((f) => f.status === status);
+    if (group.length === 0) continue;
+    out.push(`### ${status.toUpperCase()}  ·  ${STATUS_NOTE[status]}`);
+    out.push("");
+    for (const f of group) {
+      n += 1;
+      out.push(`**${n}. ${f.ask}**`);
+      out.push("");
+      out.push(`> ${f.why}`);
+      out.push("");
+      out.push(`\`${f.id}\`  ·  ${f.area}  ·  ${f.where.join(", ")}`);
+      out.push("");
+    }
+  }
+
+  out.push("---");
+  out.push("");
+  out.push("## Part two: the drafts");
+  out.push("");
+  out.push(
+    "Ordered by monthly search volume. Each item is a marker already written into the draft at that line.",
+  );
+  out.push("");
+
+  for (const d of drafts) {
+    const vol = d.volume ? `${d.volume.toLocaleString("en-IN")} a month` : "no measured volume";
+    out.push(`### ${d.title}`);
+    out.push("");
+    out.push(`\`${d.file}\`  ·  ${vol}  ·  ${d.found.length} gaps`);
+    out.push("");
+    for (const g of d.found) {
+      n += 1;
+      const text = g.text.length > 260 ? g.text.slice(0, 260).trimEnd() + "..." : g.text;
+      out.push(`**${n}. [${g.type}, line ${g.line}]** ${text || "(see the draft)"}`);
+      out.push("");
+    }
+  }
+
+  out.push("---");
+  out.push("");
+  out.push(`Total: **${n} items.**`);
+  out.push("");
+
+  writeFileSync(OUT, out.join("\n"), "utf8");
+  return { n, site: FILLS.length, drafts: drafts.length, markers: totalDraftMarkers };
+}
+
+const r = build();
+console.log(
+  `wrote content/PLACEHOLDERS.md  ${r.n} items (${r.site} site, ${r.markers} across ${r.drafts} drafts)`,
+);

@@ -22,7 +22,7 @@ const fraunces = Fraunces({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.shreegiriraj.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.shreegiriraj.in";
 
 const ogLocaleMap: Record<string, string> = { en: "en_IN", hi: "hi_IN", mr: "mr_IN", gu: "gu_IN" };
 

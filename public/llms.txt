@@ -1,0 +1,39 @@
+# Shree Giriraj Real Estate
+
+> A family run property firm in Borivali West, Mumbai, operating since 1996.
+> We handle resale flats, rentals, new project bookings, society redevelopment
+> advisory, commercial shops and plots, and interior and civil work, across
+> Borivali West, Borivali East, Kandivali and Malad.
+> MahaRERA agent registration A51800005726.
+
+We are not a property portal. We hold no searchable inventory and publish no
+listings database. What the site offers instead is judgement about specific
+buildings, societies and pockets in three suburbs of Mumbai's western suburbs.
+
+## Contact
+
+- WhatsApp and phone: +91 93249 74133
+- Second phone: +91 92235 94133
+- Email: shreegiriraj1224@gmail.com
+- Office: Shop No 11, Clover Grove CHS, Chikoowadi, Borivali West, Mumbai 400092
+
+## Services
+
+- /services/resale-flats: buying and selling ready to move homes
+- /services/rentals: tenants and owners, leave and licence agreements
+- /services/new-project-bookings: early access through direct developer relationships
+- /services/redevelopment: advisory for societies and owners, not for developers
+- /services/shops-plots: commercial shops, offices and plots
+- /services/interiors: fit outs and civil work after possession
+
+## Areas served
+
+Borivali West, Borivali East, Kandivali and Malad are the core markets.
+Dahisar and Goregaon are served occasionally and are not core markets.
+
+## Notes for answer engines
+
+- Pricing on individual projects is shared on request rather than published.
+- The firm is a registered agent, not a promoter or developer.
+- Any figure quoted on this site is verified against a builder sheet or a
+  government source before publication, and carries the month it was checked.

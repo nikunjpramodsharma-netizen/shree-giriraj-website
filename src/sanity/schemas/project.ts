@@ -54,6 +54,8 @@ export default defineType({
           { title: "Borivali", value: "borivali" },
           { title: "Kandivali", value: "kandivali" },
           { title: "Malad", value: "malad" },
+          { title: "Dahisar", value: "dahisar" },
+          { title: "Goregaon", value: "goregaon" },
         ],
       },
     }),

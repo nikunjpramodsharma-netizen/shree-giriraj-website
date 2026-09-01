@@ -20,9 +20,14 @@ export const postBySlugQuery = groq`
     title,
     slug,
     excerpt,
+    answer,
     mainImage,
     publishedAt,
+    _updatedAt,
     body,
+    sources,
+    sourcesCheckedOn,
+    "faqs": relatedFaqs[]->{_id, question, answer},
     "author": author->{name, image, bio},
     "categories": categories[]->title
   }
@@ -106,3 +111,66 @@ export const faqsQuery = groq`
     _id, question, answer, category
   }
 `;
+
+// ---------- Sitemap / locale availability ----------
+// The sitemap and the route generators both need to know which locales a
+// document genuinely has a body for. Asking Sanity directly is cheaper and
+// more reliable than fetching every document and inspecting it.
+export const postLocaleIndexQuery = groq`
+  *[_type == "post" && defined(slug.current)] | order(publishedAt desc) {
+    "slug": slug.current,
+    "updatedAt": _updatedAt,
+    "locales": [
+      select(count(body.en) > 0 => "en"),
+      select(count(body.hi) > 0 => "hi"),
+      select(count(body.mr) > 0 => "mr"),
+      select(count(body.gu) > 0 => "gu")
+    ][@ != null]
+  }
+`;
+
+export const pageLocaleIndexQuery = groq`
+  *[_type == "page" && defined(slug.current)] {
+    "slug": slug.current,
+    "updatedAt": _updatedAt,
+    "locales": [
+      select(count(body.en) > 0 => "en"),
+      select(count(body.hi) > 0 => "hi"),
+      select(count(body.mr) > 0 => "mr"),
+      select(count(body.gu) > 0 => "gu")
+    ][@ != null]
+  }
+`;
+
+// Projects gate on `summary`, not `body`. A project page is mostly structured
+// data (configurations, amenities, images) which is locale neutral, and the
+// flagship has no `body` at all, so gating on body would 404 it. `summary` is
+// the prose that actually differs by locale. Both are localized TEXT fields,
+// so this needs a defined/non empty check rather than count().
+export const projectLocaleIndexQuery = groq`
+  *[_type == "project" && defined(slug.current)] {
+    "slug": slug.current,
+    "updatedAt": _updatedAt,
+    "locales": [
+      select(defined(summary.en) && summary.en != "" => "en"),
+      select(defined(summary.hi) && summary.hi != "" => "hi"),
+      select(defined(summary.mr) && summary.mr != "" => "mr"),
+      select(defined(summary.gu) && summary.gu != "" => "gu")
+    ][@ != null]
+  }
+`;
+
+
+// Three related posts: same category first, newest of those, excluding self.
+// Falls back to recent posts when a post has no category yet.
+export const relatedPostsQuery = groq`{
+  "sameCategory": *[_type == "post" && slug.current != $slug && count(categories[@._ref in $categoryIds]) > 0]
+    | order(publishedAt desc)[0...3] {
+      title, "slug": slug.current, excerpt, mainImage,
+      "categories": categories[]->title
+    },
+  "fallback": *[_type == "post" && slug.current != $slug] | order(publishedAt desc)[0...3] {
+      title, "slug": slug.current, excerpt, mainImage,
+      "categories": categories[]->title
+    }
+}`;

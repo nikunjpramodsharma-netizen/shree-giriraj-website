@@ -6,6 +6,7 @@ import { client } from "@/sanity/client";
 import { urlFor } from "@/sanity/image";
 import { postsQuery } from "@/sanity/queries";
 import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
+import { buildAlternates } from "@/lib/seo";
 
 export const revalidate = 60;
 
@@ -16,6 +17,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale, namespace: "blogPage" });
   return {
+    alternates: buildAlternates(params.locale, "/blog"),
     title: t("heading"),
     description: t("body"),
   };

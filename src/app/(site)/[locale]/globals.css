@@ -35,4 +35,39 @@
   .eyebrow {
     @apply text-xs font-semibold uppercase tracking-[0.22em] text-brass;
   }
+  .hero-kenburns {
+    animation: kenburns 20s ease-out forwards;
+  }
 }
+
+@keyframes kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-kenburns {
+    animation: none;
+  }
+}
+
+/* Slow drift on the active hero slide. Paired with HeroRotator's DRIFT_MS. */
+@keyframes hero-drift {
+  from {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.09) translate3d(-1.2%, -0.9%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [style*="hero-drift"] {
+    animation: none !important;
+  }
+}
+

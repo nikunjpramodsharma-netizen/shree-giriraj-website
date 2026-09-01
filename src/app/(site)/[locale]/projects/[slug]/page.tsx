@@ -5,12 +5,25 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { client } from "@/sanity/client";
 import { urlFor } from "@/sanity/image";
-import { projectBySlugQuery, projectSlugsQuery } from "@/sanity/queries";
+import { projectBySlugQuery, projectLocaleIndexQuery } from "@/sanity/queries";
 import { PortableTextBody } from "@/components/PortableTextBody";
 import { waLink } from "@/lib/config";
-import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
+import {
+  getLocalizedField,
+  getLocalizedBody,
+  availableLocales,
+  type Locale,
+  type LocalizedValue,
+} from "@/lib/i18n-content";
+import { buildAlternates } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
+import { graph, residenceNode, breadcrumbNode } from "@/lib/schema";
 
 export const revalidate = 60;
+
+type LocaleIndexRow = { slug: string; locales: Locale[] };
+
 
 type Config = { type?: string; displayPrice?: string; note?: LocalizedValue<string> };
 type Project = {
@@ -27,10 +40,17 @@ type Project = {
   body?: LocalizedValue<any>;
 };
 
-export async function generateStaticParams() {
+/** Only emit a locale route where the project has a summary in that locale. */
+export async function generateStaticParams({
+  params,
+}: {
+  params: { locale: string };
+}) {
   try {
-    const slugs = await client.fetch<string[]>(projectSlugsQuery);
-    return (slugs || []).map((slug) => ({ slug }));
+    const rows = await client.fetch<LocaleIndexRow[]>(projectLocaleIndexQuery);
+    return (rows || [])
+      .filter((r) => (r.locales ?? []).includes(params.locale as Locale))
+      .map((r) => ({ slug: r.slug }));
   } catch {
     return [];
   }
@@ -45,7 +65,10 @@ export async function generateMetadata({
     slug: params.slug,
   });
   if (!project) return {};
+  const locales = availableLocales(project.summary);
+  if (!locales.includes(params.locale as Locale)) return { robots: { index: false } };
   return {
+    alternates: buildAlternates(params.locale, `/projects/${params.slug}`, locales),
     title: project.name,
     description: getLocalizedField(project.summary, params.locale as Locale),
     openGraph: project.coverImage
@@ -66,8 +89,36 @@ export default async function ProjectPage({
   ]);
   if (!project) notFound();
 
+  // No summary in this locale means no genuinely localized page. 404 rather
+  // than serve the English text under a Marathi URL.
+  if (!getLocalizedBody(project.summary, locale)) notFound();
+
+  const trail: Crumb[] = [
+    { name: "Home", path: "/" },
+    { name: "Projects", path: "/projects" },
+    { name: project.name, path: `/projects/${params.slug}` },
+  ];
+
   return (
     <>
+      <JsonLd
+        data={graph(
+          residenceNode({
+            locale,
+            name: project.name,
+            slug: params.slug,
+            description: getLocalizedField(project.summary, locale),
+            image: project.coverImage
+              ? urlFor(project.coverImage).width(1200).height(630).url()
+              : undefined,
+            location: project.location,
+            // Only emitted when the project's own MahaRERA number exists. The
+            // agent registration is not a substitute for it.
+            rera: project.rera,
+          }),
+          breadcrumbNode(locale, trail),
+        )}
+      />
       <section className="bg-brand-indigo-deep py-16 text-paper">
         <div className="wrap grid items-center gap-12 md:grid-cols-[1fr_0.9fr]">
           <div>

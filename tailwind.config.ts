@@ -25,6 +25,19 @@ const config: Config = {
         },
         ink: "#1a1c28",
         muted: "#5c6072",
+        /**
+         * Hairline rules and card edges.
+         *
+         * `border-line` and `divide-line` were already used in 21 places on a
+         * single page and this token never existed, so every one of them was
+         * silently falling back to Tailwind's default border grey, #e5e7eb.
+         * That grey is cool and the rest of this palette is warm, which is why
+         * the rules always looked slightly foreign against the paper.
+         *
+         * Sampled to sit between paper and paper-alt so a border reads as the
+         * edge of the sheet rather than a drawn line.
+         */
+        line: "#e3ddcd",
         whatsapp: "#1c8f4d",
       },
       fontFamily: {

@@ -11,16 +11,18 @@
     "whatsappEnquireMessage": "Hi Shree Giriraj, I'd like to enquire."
   },
   "hero": {
-    "headingPart1": "Your trusted real estate agent for the western suburbs, ",
-    "headingEm": "found the right way.",
-    "body": "For nearly 30 years, families across Borivali, Kandivali and Malad have trusted us to buy, sell and rent homes, and to get first access to the suburb's most sought-after new launches.",
+    "headingPart1": "Listings are easy. ",
+    "headingEm": "Judgement is not.",
+    "body": "We know which societies have parking, and which have water at six in the morning.",
     "ctaBook": "Book a consultation",
-    "ctaWhatsapp": "Chat on WhatsApp",
+    "ctaWhatsapp": "Ask us on WhatsApp",
     "whatsappMessage": "Hi Shree Giriraj, I'd like to enquire.",
-    "statYears": "Years in Borivali West",
-    "statSuburbs": "Suburbs covered",
+    "statYears": "One office, same street",
+    "statSuburbs": "Borivali, Kandivali, Malad",
     "statRating": "Client rating",
-    "featuredBadge": "Now Booking · Featured"
+    "featuredBadge": "Now Booking · Featured",
+    "statRera": "MahaRERA registered",
+    "eyebrowSince": "Since {year}"
   },
   "services": {
     "eyebrow": "What we do",
@@ -37,6 +39,66 @@
     "shopsBody": "Commercial shops, plots and office space for sale or rent in Borivali, Kandivali and Malad, for investors and business owners looking to expand in the suburbs.",
     "interiorsTitle": "Interior design & civil work",
     "interiorsBody": "Local interior designers and a civil work team in Borivali, Kandivali and Malad, fit outs, renovation and civil work to get your home move in ready."
+  },
+  "serviceCta": {
+    "heading": "Ready to take the next step?",
+    "body": "Share a few details and we will get back with matching options and the next available site visit."
+  },
+  "serviceSteps": {
+    "resaleFlats": [
+      "Tell us your budget, area and BHK preference",
+      "We shortlist verified resale flats with clean paperwork",
+      "Site visits, negotiation and registration, handled end to end"
+    ],
+    "rentals": [
+      "Share your budget and preferred locality",
+      "We match you with flats and owners quickly",
+      "Site visit, negotiation and a registered rent agreement"
+    ],
+    "newProjectBookings": [
+      "Tell us your budget and preferred suburb",
+      "Early access through our direct builder network",
+      "Site visit, unit selection and the current price sheet"
+    ],
+    "redevelopment": [
+      "Free feasibility assessment for your society",
+      "Developer shortlisting, comparison and selection",
+      "Agreement review, negotiation and execution through to occupancy"
+    ],
+    "shopsPlots": [
+      "Share your business or investment requirement",
+      "We shortlist shops, plots and office space that fit",
+      "Site visits, due diligence and registration"
+    ],
+    "interiors": [
+      "Share your space, timeline and budget",
+      "Design consultation with a clear estimate",
+      "Civil work, fit outs and a move in ready handover"
+    ]
+  },
+  "showcase": {
+    "eyebrow": "Our benchmark",
+    "heading": "We recommend builds we would live in ourselves"
+  },
+  "compare": {
+    "eyebrow": "Why work with us",
+    "heading": "How we compare",
+    "colUs": "Shree Giriraj",
+    "colPortals": "Property portals",
+    "colBrokers": "Independent brokers",
+    "row1": "Direct access to new launches before the open market",
+    "row2": "Verified carpet area, no hidden charges at registration",
+    "row3": "30+ years of local presence in Borivali, Kandivali & Malad",
+    "row4": "Registered agreement handled end to end",
+    "row5": "One point of contact from enquiry to possession",
+    "row6": "Housing society redevelopment expertise",
+    "legendYes": "Yes",
+    "legendPartial": "Sometimes",
+    "legendNo": "No"
+  },
+  "handover": {
+    "eyebrow": "Where it ends",
+    "heading": "Every enquiry ends with someone holding their own keys"
   },
   "projectsGrid": {
     "eyebrow": "Now Booking",
@@ -55,7 +117,9 @@
     "heading": "Across the western suburbs",
     "borivaliBody": "Our home turf for property in Borivali West and East: resale flats, rentals and society redevelopment, all handled locally.",
     "kandivaliBody": "Real estate in Kandivali off M.G. Road and Link Road: premium new launches, resale flats and family homes.",
-    "maladBody": "Flats in Malad near Mindspace and the Link Road corridor, growing residential and commercial options."
+    "maladBody": "Flats in Malad near Mindspace and the Link Road corridor, growing residential and commercial options.",
+    "dahisarBody": "Homes in Dahisar along the Western Express Highway, a fast growing suburb just north of Borivali with good connectivity and family friendly pricing.",
+    "goregaonBody": "Flats in Goregaon near Oberoi Mall and Film City, a well connected suburb with strong resale demand and easy access to the Aarey corridor."
   },
   "faq": {
     "eyebrow": "Common questions",
