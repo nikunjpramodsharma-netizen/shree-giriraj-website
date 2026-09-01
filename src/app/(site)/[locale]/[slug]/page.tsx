@@ -36,7 +36,10 @@ type Page = {
 // URLs in every locale. That is duplicate content the site creates against
 // itself. Bare slugs 301 to the canonical path, see next.config.mjs.
 const RESERVED = new Set([
+  "about",
+  "areas",
   "blog",
+  "contact",
   "guides",
   "projects",
   "services",

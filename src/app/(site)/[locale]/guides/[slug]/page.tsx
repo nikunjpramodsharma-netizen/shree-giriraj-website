@@ -83,10 +83,7 @@ export default async function GuidePage({
 
   const trail: Crumb[] = [
     { name: "Home", path: "/" },
-    // No /guides index crumb. With one pillar an index would be a thin page
-    // with a single link on it, and a crumb pointing at a route that does not
-    // exist is exactly the hole this page is built to avoid. Add the crumb and
-    // the index together, once there are three or four pillars to list.
+    { name: "Guides", path: "/guides" },
     { name: pillar.title, path: `/guides/${pillar.slug}` },
   ];
 

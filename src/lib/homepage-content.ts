@@ -58,7 +58,10 @@ export const CHECKS: Check[] = [
  * exist yet and shipping links to 404s is worse than shipping no link.
  * Flip each to true in the same commit that creates the pages.
  */
-export const AREA_PAGES_READY = false;
+// The /areas/[slug] pages exist as of 1 September 2026. Several are still
+// drafts and carry noindex on the page itself, but they are real pages and
+// linking to them beats the switcher going nowhere.
+export const AREA_PAGES_READY = true;
 export const JOURNAL_POSTS_READY = false;
 
 export type AreaPanel = {

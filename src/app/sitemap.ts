@@ -9,6 +9,7 @@ import { routing } from "@/i18n/routing";
 import { absoluteUrl, sitemapAlternates, SERVICE_SLUGS } from "@/lib/seo";
 import { LOCALES, type Locale } from "@/lib/i18n-content";
 import { PILLAR_SLUGS } from "@/lib/pillars";
+import { AREA_SLUGS } from "@/lib/areas";
 
 export const revalidate = 3600;
 
@@ -64,13 +65,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const slug of PILLAR_SLUGS) {
     out.push(...entriesFor(`/guides/${slug}`, ["en"], undefined, 0.7));
   }
+  out.push(...entriesFor("/guides", ["en"], undefined, 0.6));
+
+  // Areas and contact are the local SEO spine. About is listed but individual
+  // area pages that are still drafts carry noindex on the page itself, which
+  // takes precedence over anything advertised here.
+  out.push(...entriesFor("/areas", ["en"], undefined, 0.8));
+  for (const slug of AREA_SLUGS) {
+    out.push(...entriesFor(`/areas/${slug}`, ["en"], undefined, 0.8));
+  }
+  out.push(...entriesFor("/contact", ["en"], undefined, 0.7));
+  out.push(...entriesFor("/about", ["en"], undefined, 0.5));
 
   // CMS content. Only the locales that actually have a body.
   // Must match RESERVED in the flexible [slug] route exactly. If the sitemap
   // advertises a URL the route no longer generates, Google finds a 404 inside
   // an hreflang cluster and discards the cluster.
   const reserved = new Set([
+    "about",
+    "areas",
     "blog",
+    "contact",
     "guides",
     "projects",
     "services",

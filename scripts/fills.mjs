@@ -33,10 +33,10 @@ export const FILLS = [
   {
     id: "about-page",
     area: "Site",
-    status: "wrong",
-    ask: "The story of the business for an About page: how it started in 1996, who runs it now, and what you want someone to feel after reading it.",
-    why: "About is in the main navigation right now and it is a live 404. Every visitor who clicks it hits a dead end.",
-    where: ["src/components/Nav.tsx"],
+    status: "hidden",
+    ask: "The story of the business: who started it in 1996 and what they did before, how you work and who you are not for, and what has actually changed in thirty years. A deal you turned down would be worth more than anything else on the page.",
+    why: "The page is built and the facts on it are real, but the story is not written, so it is served noindex. Flip STORY_IS_WRITTEN once it is.",
+    where: ["src/app/(site)/[locale]/about/page.tsx"],
   },
 
   // ---------------------------------------------------------------- wrong
@@ -78,9 +78,9 @@ export const FILLS = [
     id: "area-pages",
     area: "Areas",
     status: "hidden",
-    ask: "For Borivali West, Borivali East, Kandivali and Malad: what each area is actually like, who buys there, and what you would warn someone about.",
-    why: "The homepage area switcher has its links switched off because the four pages do not exist. These pages are the core of the local SEO plan and nobody else can write them.",
-    where: ["src/lib/homepage-content.ts", "src/components/AreaSwitcher.tsx"],
+    ask: "The pockets in Borivali, Kandivali and Malad: who lives where, how the two sides of each suburb differ, and what you would check before buying. Every prompt is written on the pages themselves.",
+    why: "All three area pages are built and linked, but each still carries flagged blocks only you can fill, so all three are served noindex. These are the core of the local SEO plan and the one thing a portal cannot copy.",
+    where: ["src/lib/areas.ts"],
   },
   {
     id: "testimonials",

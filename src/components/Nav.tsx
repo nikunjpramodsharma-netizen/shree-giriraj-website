@@ -2,20 +2,33 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { site, waLink } from "@/lib/config";
 import { LanguageToggle } from "@/components/LanguageToggle";
 
 export function Nav() {
   const t = useTranslations("nav");
+  const locale = useLocale();
   const [open, setOpen] = useState(false);
 
+  /**
+   * The 2026 pages (areas, guides, about, contact) are English only routes and
+   * return notFound in hi, mr and gu. So they are only linked in English,
+   * rather than translating four labels into a link that would 404.
+   */
   const links = [
     { href: "/#services", label: t("services") },
     { href: "/projects", label: t("projects") },
     { href: "/blog", label: t("blog") },
-    { href: "/about", label: t("about") },
+    ...(locale === "en"
+      ? [
+          { href: "/areas", label: "Areas" },
+          { href: "/guides", label: "Guides" },
+          { href: "/about", label: t("about") },
+          { href: "/contact", label: "Contact" },
+        ]
+      : []),
   ];
 
   return (

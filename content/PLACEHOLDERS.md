@@ -32,31 +32,25 @@ Answer by number. Anything you do not know yet, say so and it stays on the list 
 
 ### WRONG  ·  Live right now and inaccurate, or a placeholder a visitor can see
 
-**4. The story of the business for an About page: how it started in 1996, who runs it now, and what you want someone to feel after reading it.**
-
-> About is in the main navigation right now and it is a live 404. Every visitor who clicks it hits a dead end.
-
-`about-page`  ·  Site  ·  src/components/Nav.tsx
-
-**5. Three real names and roles for the team section, or a decision to cut the section.**
+**4. Three real names and roles for the team section, or a decision to cut the section.**
 
 > The entries currently read [ NAME ]. The section is gated off so nothing false ships, but the homepage is missing a trust block because of it.
 
 `team-names`  ·  Homepage  ·  src/lib/homepage-content.ts
 
-**6. Confirmation that the live domain is shreegiriraj.in, and that .in is what NEXT_PUBLIC_SITE_URL should be.**
+**5. Confirmation that the live domain is shreegiriraj.in, and that .in is what NEXT_PUBLIC_SITE_URL should be.**
 
 > The code still falls back to the .com if the variable is ever missing. Canonicals, hreflang, sitemap and JSON-LD all have to agree on one exact origin, and a mismatch makes Google discard the whole cluster.
 
 `site-url`  ·  Technical  ·  src/lib/seo.ts, .env.local
 
-**7. Your actual answer to the portals: what someone gets from you that 99acres and NoBroker cannot give them. Also whether you want to say anything about brokerage.**
+**6. Your actual answer to the portals: what someone gets from you that 99acres and NoBroker cannot give them. Also whether you want to say anything about brokerage.**
 
 > That section still carries the old copy and does not answer the zero brokerage claim the portals lead with, which is the first objection a buyer arrives with.
 
 `compare-section`  ·  Homepage  ·  src/app/(site)/[locale]/page.tsx
 
-**8. Real photographs: the shop, the team, buildings and streets in Borivali, Kandivali and Malad, and any completed interiors work.**
+**7. Real photographs: the shop, the team, buildings and streets in Borivali, Kandivali and Malad, and any completed interiors work.**
 
 > Every image on the site is stock at the moment, including the homepage and all six blog category images. Stock is the fastest way to look like every other property site.
 
@@ -64,17 +58,23 @@ Answer by number. Anything you do not know yet, say so and it stays on the list 
 
 ### HIDDEN  ·  Built and deliberately switched off until answered
 
+**8. The story of the business: who started it in 1996 and what they did before, how you work and who you are not for, and what has actually changed in thirty years. A deal you turned down would be worth more than anything else on the page.**
+
+> The page is built and the facts on it are real, but the story is not written, so it is served noindex. Flip STORY_IS_WRITTEN once it is.
+
+`about-page`  ·  Site  ·  src/app/(site)/[locale]/about/page.tsx
+
 **9. Who takes a paid consultation call, and whether the fee comes off the bill if the person later transacts with you. No price needed.**
 
 > The consultation band is built and switched off. These two answers, not a fee, are what it is actually waiting on.
 
 `consult-operations`  ·  Consultation  ·  src/lib/consult.ts
 
-**10. For Borivali West, Borivali East, Kandivali and Malad: what each area is actually like, who buys there, and what you would warn someone about.**
+**10. The pockets in Borivali, Kandivali and Malad: who lives where, how the two sides of each suburb differ, and what you would check before buying. Every prompt is written on the pages themselves.**
 
-> The homepage area switcher has its links switched off because the four pages do not exist. These pages are the core of the local SEO plan and nobody else can write them.
+> All three area pages are built and linked, but each still carries flagged blocks only you can fill, so all three are served noindex. These are the core of the local SEO plan and the one thing a portal cannot copy.
 
-`area-pages`  ·  Areas  ·  src/lib/homepage-content.ts, src/components/AreaSwitcher.tsx
+`area-pages`  ·  Areas  ·  src/lib/areas.ts
 
 **11. Real client testimonials, with permission to publish and a real first name and area.**
 
@@ -268,7 +268,7 @@ Ordered by monthly search volume. Each item is a marker already written into the
 
 **72. [Verify, line 53]** This is the number most quoted prices are based on. ### What the difference looks like on a real flat | Measure | What it includes | Example | |---|---|---| | Carpet | Usable floor inside the flat | [ VERIFY: use a real flat you have sold ] | | Built up | Carp...
 
-**73. [Verify, line 54]** umber most quoted prices are based on. ### What the difference looks like on a real flat | Measure | What it includes | Example | |---|---|---| | Carpet | Usable floor inside the flat | [ VERIFY: use a real flat you have sold ] | | Built up | Carpet plus wall...
+**73. [Verify, line 54]** t quoted prices are based on. ### What the difference looks like on a real flat | Measure | What it includes | Example | |---|---|---| | Carpet | Usable floor inside the flat | [ VERIFY: use a real flat you have sold ] | | Built up | Carpet plus wall thickness...
 
 **74. [Verify, line 78]** confirm the current position on what a builder must disclose and where, and whether resale transactions carry the same obligation. This paragraph makes a legal claim and must not publish unchecked.
 

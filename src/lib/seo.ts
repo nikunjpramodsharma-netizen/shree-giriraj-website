@@ -8,9 +8,29 @@ export type Locale = (typeof routing.locales)[number];
  * must agree on this exact string, protocol and host included. A mismatch
  * between any two of them makes Google discard the whole hreflang cluster.
  */
-export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.shreegiriraj.in"
-).replace(/\/$/, "");
+function resolveSiteUrl(): string {
+  // An explicit value always wins. This is what production will set once a
+  // domain exists.
+  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
+
+  // On Vercel with no domain yet, use the deployment's own hostname so a
+  // preview self canonicalises instead of pointing every canonical, hreflang
+  // entry and JSON-LD @id at a domain that does not exist. Both of these are
+  // bare hostnames with no protocol.
+  const vercel =
+    process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL;
+  if (vercel) return `https://${vercel}`;
+
+  return "https://www.shreegiriraj.in";
+}
+
+/**
+ * NOTE ON THE FALLBACK: shreegiriraj.in is not registered yet, so the last
+ * resort here is a domain that does not resolve. That is deliberate. It is the
+ * agreed name, and the Vercel branches above mean a real deployment never has
+ * to rely on it.
+ */
+export const SITE_URL = resolveSiteUrl().replace(/\/$/, "");
 
 /**
  * `localePrefix` is "as-needed", so English lives at the root and the other
