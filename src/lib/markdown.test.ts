@@ -234,3 +234,14 @@ describe("markers inside tables and lists", () => {
     expect(/[\x00-\x08\x0b\x0c\x0e-\x1f]/.test(src)).toBe(false);
   });
 });
+
+describe("a marker heading still counts as outstanding", () => {
+  it("emits both the heading and the marker", () => {
+    // Without the marker, a post whose only unfinished section was a marker
+    // heading reported itself ready and would have been indexed unwritten.
+    const b = parseBlocks("## [ YOUR WORDS ] What we check first");
+    expect(b.map((x) => x.t)).toEqual(["h2", "marker"]);
+    expect((b[0] as any).text).toBe("What we check first");
+    expect((b[1] as any).kind).toBe("YOUR WORDS");
+  });
+});

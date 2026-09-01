@@ -161,12 +161,24 @@ export function parseBlocks(body: string): Block[] {
     if (h) {
       // A marker used as a heading, "## [ YOUR WORDS ] What we check", keeps
       // its heading role: the tail is the real heading text.
-      const text = h[2].replace(/\[\s*(VERIFY|YOUR WORDS|DECISION)[^\]]*\]\s*/, "").trim();
+      const hm = /\[\s*(VERIFY|YOUR WORDS|DECISION)\b[^\]]*\]\s*/.exec(h[2]);
+      const text = h[2].replace(hm ? hm[0] : "", "").trim();
       out.push({
         t: h[1].length === 2 ? "h2" : "h3",
         text: text || h[2],
         id: slugify(text || h[2]),
       });
+      // AND emit the marker, or the section stops counting as outstanding.
+      // Without this a post whose only unfinished part was a marker heading
+      // reported itself as ready, and would have been indexed with a section
+      // that had never been written.
+      if (hm) {
+        out.push({
+          t: "marker",
+          kind: hm[1] as MarkerKind,
+          text: "This section is not written yet.",
+        });
+      }
       i += 1;
       continue;
     }
