@@ -17,12 +17,12 @@ const TOOL_LOCALE = "en";
  * the shape of what is coming, but only built tools are linked. Same readiness
  * rule as the guides hub: never link into a hole.
  */
-const PLANNED = [
-  "Interior cost estimator",
-  "HRA and rent receipt",
-  "BMC property tax",
-  "Capital gains on a sale",
-];
+/**
+ * All seven planned tools are built, so there is nothing left to preview
+ * here. Kept as an empty list rather than deleted, because the next tool to
+ * be planned goes straight back in.
+ */
+const PLANNED: string[] = [];
 
 export async function generateMetadata({
   params,

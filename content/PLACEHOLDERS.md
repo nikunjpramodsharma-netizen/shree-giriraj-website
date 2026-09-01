@@ -82,43 +82,43 @@ Answer by number. Anything you do not know yet, say so and it stays on the list 
 
 `testimonials`  ·  Homepage  ·  src/app/(site)/[locale]/page.tsx
 
-**12. The real cost band for a 2 BHK interior fit out in these suburbs, at a basic and at a premium specification. Plus what advance percentage you consider reasonable.**
-
-> The interiors cluster is the highest value commercial position on the site. Without bands the posts say contact us, which is what every competing result already says. This is the one pricing question with direct revenue consequences.
-
-`interiors-cost-bands`  ·  Blog  ·  content/drafts/choosing-an-interior-designer-in-borivali.md
-
 ### COSMETIC  ·  Works without it, better with it
 
-**13. Confirm two things against the Department of Registration and Stamps, or with your lawyer: that Mumbai is 6 percent for a male buyer and 5 percent for a female buyer in sole name including the 1 percent metro cess, and what actually applies to JOINT male plus female ownership.**
+**12. Confirm two things against the Department of Registration and Stamps, or with your lawyer: that Mumbai is 6 percent for a male buyer and 5 percent for a female buyer in sole name including the 1 percent metro cess, and what actually applies to JOINT male plus female ownership.**
 
 > Rates were cross checked against three independent sources on 1 September 2026 and the calculator shows that date and cites them. None is a primary source. Sources also genuinely conflict on joint ownership, so the tool shows a range of 6 to 6.5 percent rather than guessing. Confirming it would let us replace the range with one number, which is the last soft spot in the tool.
 
 `stamp-duty-rate`  ·  Tools  ·  src/lib/stampduty.ts
 
-**14. Your actual opening hours, including whether you work Sundays.**
+**13. Your actual opening hours, including whether you work Sundays.**
 
 > Deliberately left out of the business markup rather than guessed. Hours are one of the things the local pack and AI answers quote most often.
 
 `opening-hours`  ·  Local SEO  ·  src/lib/schema.ts
 
-**15. The exact latitude and longitude of the shop, taken from your Google Business Profile listing.**
+**14. The exact latitude and longitude of the shop, taken from your Google Business Profile listing.**
 
 > Omitted rather than approximated. A wrong pin is worse than no pin.
 
 `geo-coordinates`  ·  Local SEO  ·  src/lib/schema.ts
 
-**16. Links to every profile you own: Google Business Profile, Facebook, Instagram, JustDial, anything else.**
+**15. Links to every profile you own: Google Business Profile, Facebook, Instagram, JustDial, anything else.**
 
 > These connect the website to the profiles Google already trusts. Nothing is guessed, so the field is currently empty.
 
 `same-as-profiles`  ·  Local SEO  ·  src/lib/schema.ts
 
-**17. For Jaswanti Jewel: the project MahaRERA number, and confirmation of what you can say about configurations and possession.**
+**16. For Jaswanti Jewel: the project MahaRERA number, and confirmation of what you can say about configurations and possession.**
 
 > Prices stay masked by decision. The project registration number is a credibility marker a serious buyer looks for.
 
 `jaswanti-jewel`  ·  Projects  ·  src/sanity/schemas/project.ts
+
+**17. Per unit cost bands for interiors work: wardrobes and kitchen per running foot, false ceiling and painting per square foot, electrical points each. A low and a high for each.**
+
+> No longer a blocker. The interiors tool now builds a SCOPE in quantities rather than a price, which works without bands and is arguably better positioned than the Livspace and HomeLane cost calculators. Supplying bands would add indicative ranges on top: set them on the items in src/lib/interiors.ts and COST_BANDS_READY flips itself.
+
+`interiors-cost-bands`  ·  Tools  ·  src/lib/interiors.ts
 
 ---
 

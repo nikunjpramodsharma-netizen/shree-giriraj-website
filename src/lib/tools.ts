@@ -20,7 +20,14 @@ export type ToolFaq = { q: string; a: string };
 export type Tool = {
   slug: string;
   /** Which component renders. Kept as a key so the registry stays data only. */
-  component: "emi" | "stampDuty" | "area";
+  component:
+    | "emi"
+    | "stampDuty"
+    | "area"
+    | "hra"
+    | "interiors"
+    | "capitalGains"
+    | "propertyTax";
   title: string;
   metaTitle: string;
   metaDescription: string;
@@ -169,7 +176,183 @@ const areaTool: Tool = {
   ],
 };
 
-export const TOOLS: Tool[] = [stampDutyTool, areaTool, emiTool];
+const hraTool: Tool = {
+  slug: "hra-calculator-rent-receipts",
+  component: "hra",
+  title: "HRA exemption calculator and rent receipt generator",
+  metaTitle: "HRA calculator and free rent receipt generator",
+  metaDescription:
+    "Work out your HRA exemption on the least of three rule, then generate and print rent receipts for the financial year. Nothing is stored or sent anywhere.",
+  answer:
+    "HRA exemption is the least of three figures: the HRA you actually receive, the rent you pay less 10 percent of basic pay, and 50 percent of basic pay in a metro such as Mumbai. It is available only under the old tax regime.",
+  intro: [
+    "Two jobs on one page, because they are the same errand. You work out what you can claim, then you need the paper to claim it, and most tools do only one of those.",
+    "The receipts are generated in your browser and printed from it. Nothing is stored, nothing is emailed, and no account is required. A rent receipt has your name, your landlord's name and their PAN on it, which is not information anybody should have to hand to a website to get a printable form.",
+  ],
+  limits: [
+    "HRA exemption applies only under the old tax regime. On the new regime you cannot claim it at all.",
+    "Salary here means basic pay plus dearness allowance forming part of retirement benefits, not gross pay. Using gross is the most common error.",
+    "It is an estimate to help you plan and produce paperwork, not tax advice. Your employer and your chartered accountant have the final say.",
+    "Your landlord's PAN is required once annual rent passes one lakh, and a receipt without it may be rejected.",
+  ],
+  faqs: [
+    {
+      q: "How is HRA exemption calculated?",
+      a: "As the least of three figures: the HRA actually received, the rent paid less 10 percent of basic pay plus DA, and 50 percent of that salary in a metro or 40 percent elsewhere. Whichever is smallest is your exemption.",
+    },
+    {
+      q: "Is Mumbai a metro for HRA?",
+      a: "Yes. Mumbai, Delhi, Kolkata and Chennai are treated as metros, so the 50 percent limb applies rather than 40 percent.",
+    },
+    {
+      q: "Do I need my landlord's PAN?",
+      a: "Once annual rent passes one lakh rupees, yes. If your landlord does not have a PAN, a signed declaration giving their name and address is used instead.",
+    },
+    {
+      q: "Can I claim HRA under the new tax regime?",
+      a: "No. The exemption is available only under the old regime, so the calculation is worth doing only if you are on it or comparing the two.",
+    },
+  ],
+  readNext: [
+    { label: "Carpet area and loading", href: "/tools/carpet-area-calculator" },
+    { label: "Property paperwork in Maharashtra", href: "/guides/property-paperwork-maharashtra" },
+    { label: "Talk to us about renting", href: "/contact" },
+  ],
+};
+
+const interiorsTool: Tool = {
+  slug: "interior-scope-builder",
+  component: "interiors",
+  title: "Interior scope builder",
+  metaTitle: "Interior design scope builder: get quotes you can compare",
+  metaDescription:
+    "Build a scope in quantities for your flat, then take it to three designers and get back quotes that can actually be compared against each other.",
+  answer:
+    "A quote you can judge has three things in it: quantities, specifications and exclusions. Twelve running feet of wardrobe in a named board, not bedroom wardrobes. This builds that list for your flat so the quotes you get back are comparable.",
+  intro: [
+    "Most interior quotes arrive as a single number for the whole flat. That number cannot be compared against another single number, because you cannot see what either one contains, and the cheaper one automatically looks better whether it is or not.",
+    "The other calculators on this subject give you a price estimate in exchange for your phone number. This gives you a document instead. Take it to three designers and the quotes that come back can be laid side by side.",
+    "There are no prices on it, and that is deliberate rather than a gap. We have not published cost bands we can stand behind, and an invented range would anchor you on a number that is not real. Ask us what these quantities cost in Borivali right now and you will get a real answer for your flat.",
+  ],
+  limits: [
+    "It produces a scope, not a quotation. Only a designer who has seen the flat can price it.",
+    "Quantities are your estimate until somebody measures. Treat them as a brief, not a contract.",
+    "It does not cover structural work, which needs society permission and often an architect.",
+  ],
+  faqs: [
+    {
+      q: "Why does this not show me a price?",
+      a: "Because we have not published cost bands we can stand behind, and a made up range is worse than none: you would anchor on it and then be surprised. The quantities are the part that protects you, and they are what a designer needs to quote properly.",
+    },
+    {
+      q: "What should an interior quote include?",
+      a: "Quantities in running feet, square feet and unit counts, the specification for each item including board and hardware brands, and an explicit list of what is excluded. Without those three a quote cannot be compared with another.",
+    },
+    {
+      q: "How much advance is normal for interior work?",
+      a: "Advances are normal, large advances before anything physical arrives on site are not. A payment schedule tied to delivered stages rather than to dates protects both sides: money moves when something arrives or is installed.",
+    },
+    {
+      q: "Do I need society permission for interior work?",
+      a: "In most Mumbai societies yes, and the rules on working hours, lift use and debris removal are set locally. Ask before work starts rather than after it is stopped halfway.",
+    },
+  ],
+  readNext: [
+    { label: "Carpet area and loading", href: "/tools/carpet-area-calculator" },
+    { label: "Talk to us about interiors", href: "/contact" },
+  ],
+};
+
+const capitalGainsTool: Tool = {
+  slug: "capital-gains-calculator-property",
+  component: "capitalGains",
+  title: "Capital gains calculator for a property sale",
+  metaTitle: "Capital gains on property: 12.5% or 20% with indexation",
+  metaDescription:
+    "Work out long term capital gains on a property sale, and compare 12.5 percent without indexation against 20 percent with it where you still have the choice.",
+  answer:
+    "Property held more than 24 months is a long term capital asset. Gains are taxed at 12.5 percent without indexation. If you are a resident individual or HUF who bought before 23 July 2024, you may instead pay 20 percent with indexation, whichever is lower.",
+  intro: [
+    "The rules changed on 23 July 2024, and the change left a choice in place for people who already owned property. If you bought before that date you can take 12.5 percent flat or 20 percent with indexation, and which is cheaper depends entirely on how much inflation ran over your holding period.",
+    "Most calculators pick one method and show it. This shows both and names the cheaper one, because on a long held flat the gap between them is real money.",
+  ],
+  limits: [
+    "This is tax and tax is not our trade. Confirm any figure with a chartered accountant before filing on it.",
+    "Short term gains are taxed at your slab rate, which depends on your total income, so they are reported as a gain rather than a tax figure.",
+    "The cost inflation index is not hardcoded. One wrong value would produce a confidently wrong tax number, so the index for both years is asked for instead.",
+    "Reliefs under sections 54 and 54EC are listed but not computed, because each carries conditions and time limits a calculator would misrepresent.",
+  ],
+  faqs: [
+    {
+      q: "How long must I hold a property for a long term gain?",
+      a: "More than 24 months. At 24 months or less the gain is short term and is added to your income and taxed at your slab rate, which is usually a great deal more.",
+    },
+    {
+      q: "Is indexation still available on property?",
+      a: "Only as a grandfathered choice. A resident individual or HUF who acquired the property before 23 July 2024 may choose 20 percent with indexation or 12.5 percent without, whichever gives the lower tax. For anything acquired after that date, only the 12.5 percent option applies.",
+    },
+    {
+      q: "What can I deduct from the sale price?",
+      a: "The cost of acquisition, the cost of capital improvements, and expenses incurred wholly for the transfer such as brokerage and legal fees. Repairs and repainting are not improvements.",
+    },
+    {
+      q: "Can I avoid capital gains tax by buying another house?",
+      a: "Section 54 provides relief where the gain is reinvested in another residential property within prescribed time limits, and section 54EC covers specified bonds. Both have conditions, so take advice rather than assuming.",
+    },
+  ],
+  readNext: [
+    { label: "Stamp duty and registration, Mumbai", href: "/tools/stamp-duty-calculator-mumbai" },
+    { label: "Property paperwork in Maharashtra", href: "/guides/property-paperwork-maharashtra" },
+  ],
+};
+
+const propertyTaxTool: Tool = {
+  slug: "bmc-property-tax-calculator",
+  component: "propertyTax",
+  title: "BMC property tax calculator, Mumbai",
+  metaTitle: "BMC property tax calculator: are you exempt?",
+  metaDescription:
+    "Work out the capital value of a Mumbai flat and check whether the 500 sq ft exemption or the 700 sq ft concession applies to you.",
+  answer:
+    "BMC property tax is charged on capital value, which is the ready reckoner rate times the carpet area times weights for construction type, age and use. Residential flats of 500 sq ft carpet or less have been fully exempt since January 2022, and 500 to 700 sq ft carries a 60 percent concession.",
+  intro: [
+    "The exemption is the reason this page exists. A residential flat of 500 sq ft carpet or less pays no BMC property tax at all, and flats up to 700 sq ft get a large concession. In Borivali, Kandivali and Malad a great many flats sit under those lines and plenty of owners have never checked.",
+    "That check needs no tax rate and no arithmetic, which is why it comes first here and the calculation comes second.",
+  ],
+  limits: [
+    "The tax rate applied to capital value varies by ward and category, and we have not confirmed a figure we would publish. Enter the rate from your own bill for a rupee figure, or leave it blank for capital value only.",
+    "It is an estimate. The bill issued by the BMC is the authority.",
+    "The size relief is for residential use. Commercial property does not qualify.",
+  ],
+  faqs: [
+    {
+      q: "Is my flat exempt from BMC property tax?",
+      a: "Residential flats with a carpet area of 500 sq ft or less have been fully exempt since 1 January 2022. Between 500 and 700 sq ft a 60 percent concession applies. It is measured on carpet area, not super built up.",
+    },
+    {
+      q: "How is BMC property tax calculated?",
+      a: "On capital value, not rateable value. Capital value is the ready reckoner rate for the locality times the carpet area, times weights for construction type, age of the building and how it is used. The tax is a percentage of that.",
+    },
+    {
+      q: "Does unpaid property tax affect a sale?",
+      a: "Yes. Arrears attach to the property rather than the person, so a buyer who does not check inherits them. Ask for the last paid receipt before you pay a token.",
+    },
+  ],
+  readNext: [
+    { label: "Carpet area and loading", href: "/tools/carpet-area-calculator" },
+    { label: "Property paperwork in Maharashtra", href: "/guides/property-paperwork-maharashtra" },
+  ],
+};
+
+export const TOOLS: Tool[] = [
+  stampDutyTool,
+  areaTool,
+  hraTool,
+  interiorsTool,
+  propertyTaxTool,
+  capitalGainsTool,
+  emiTool,
+];
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug);
 

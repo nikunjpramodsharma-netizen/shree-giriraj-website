@@ -145,11 +145,11 @@ export const FILLS = [
   },
   {
     id: "interiors-cost-bands",
-    area: "Blog",
-    status: "hidden",
-    ask: "The real cost band for a 2 BHK interior fit out in these suburbs, at a basic and at a premium specification. Plus what advance percentage you consider reasonable.",
-    why: "The interiors cluster is the highest value commercial position on the site. Without bands the posts say contact us, which is what every competing result already says. This is the one pricing question with direct revenue consequences.",
-    where: ["content/drafts/choosing-an-interior-designer-in-borivali.md"],
+    area: "Tools",
+    status: "cosmetic",
+    ask: "Per unit cost bands for interiors work: wardrobes and kitchen per running foot, false ceiling and painting per square foot, electrical points each. A low and a high for each.",
+    why: "No longer a blocker. The interiors tool now builds a SCOPE in quantities rather than a price, which works without bands and is arguably better positioned than the Livspace and HomeLane cost calculators. Supplying bands would add indicative ranges on top: set them on the items in src/lib/interiors.ts and COST_BANDS_READY flips itself.",
+    where: ["src/lib/interiors.ts"],
   },
   {
     id: "analytics-ids",

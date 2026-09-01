@@ -7,6 +7,10 @@ import { ContactCTA } from "@/components/ContactCTA";
 import { EmiCalculator } from "@/components/EmiCalculator";
 import { StampDutyCalculator } from "@/components/StampDutyCalculator";
 import { AreaCalculator } from "@/components/AreaCalculator";
+import { HraRentReceipts } from "@/components/HraRentReceipts";
+import { InteriorsScope } from "@/components/InteriorsScope";
+import { CapitalGainsCalculator } from "@/components/CapitalGainsCalculator";
+import { PropertyTaxCalculator } from "@/components/PropertyTaxCalculator";
 import { graph, breadcrumbNode, faqNode } from "@/lib/schema";
 import { buildAlternates } from "@/lib/seo";
 import { TOOLS, getTool } from "@/lib/tools";
@@ -83,6 +87,10 @@ export default function ToolPage({
         {tool.component === "emi" && <EmiCalculator />}
         {tool.component === "stampDuty" && <StampDutyCalculator />}
         {tool.component === "area" && <AreaCalculator />}
+        {tool.component === "hra" && <HraRentReceipts />}
+        {tool.component === "interiors" && <InteriorsScope />}
+        {tool.component === "capitalGains" && <CapitalGainsCalculator />}
+        {tool.component === "propertyTax" && <PropertyTaxCalculator />}
       </div>
 
       <div className="wrap pb-16">
