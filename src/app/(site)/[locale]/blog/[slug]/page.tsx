@@ -11,6 +11,8 @@ import {
   relatedPostsQuery,
 } from "@/sanity/queries";
 import { PortableTextBody } from "@/components/PortableTextBody";
+import { MarkdownPost } from "@/components/MarkdownPost";
+import { getPost, getPostSlugs } from "@/lib/posts";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
@@ -74,13 +76,19 @@ export async function generateStaticParams({
 }: {
   params: { locale: string };
 }) {
+  // Markdown posts live in the repo and are English only. Sanity posts are
+  // added on top, so both sources can coexist while the CMS fills up.
+  const fromMarkdown =
+    params.locale === "en" ? getPostSlugs().map((slug) => ({ slug })) : [];
   try {
     const rows = await client.fetch<LocaleIndexRow[]>(postLocaleIndexQuery);
-    return (rows || [])
+    const fromSanity = (rows || [])
       .filter((r) => (r.locales ?? []).includes(params.locale as Locale))
       .map((r) => ({ slug: r.slug }));
+    const seen = new Set(fromMarkdown.map((x) => x.slug));
+    return [...fromMarkdown, ...fromSanity.filter((x) => !seen.has(x.slug))];
   } catch {
-    return [];
+    return fromMarkdown;
   }
 }
 
@@ -89,6 +97,19 @@ export async function generateMetadata({
 }: {
   params: { locale: string; slug: string };
 }): Promise<Metadata> {
+  // A markdown post wins, because that is where the drafts live today.
+  const md = params.locale === "en" ? getPost(params.slug) : null;
+  if (md) {
+    return {
+      title: md.title,
+      description: md.answer,
+      alternates: buildAlternates(params.locale, `/blog/${md.slug}`, ["en"]),
+      // A draft still carrying review markers must not be indexed. Same rule
+      // as the area pages: reviewable on the deployment, invisible to search.
+      ...(md.isReady ? {} : { robots: { index: false, follow: true } }),
+    };
+  }
+
   const post = await client.fetch<Post>(postBySlugQuery, { slug: params.slug });
   if (!post) return {};
   const locales = availableLocales(post.body);
@@ -115,6 +136,10 @@ export default async function PostPage({
   params: { locale: string; slug: string };
 }) {
   const locale = params.locale as Locale;
+
+  const md = locale === "en" ? getPost(params.slug) : null;
+  if (md) return <MarkdownPost post={md} locale={locale} />;
+
   const [post, t] = await Promise.all([
     client.fetch<Post>(postBySlugQuery, { slug: params.slug }),
     getTranslations({ locale, namespace: "blogPost" }),
