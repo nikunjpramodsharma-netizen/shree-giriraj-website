@@ -10,6 +10,7 @@ import { absoluteUrl, sitemapAlternates, SERVICE_SLUGS } from "@/lib/seo";
 import { LOCALES, type Locale } from "@/lib/i18n-content";
 import { PILLAR_SLUGS } from "@/lib/pillars";
 import { AREA_SLUGS } from "@/lib/areas";
+import { TOOL_SLUGS } from "@/lib/tools";
 
 export const revalidate = 3600;
 
@@ -77,6 +78,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   out.push(...entriesFor("/contact", ["en"], undefined, 0.7));
   out.push(...entriesFor("/about", ["en"], undefined, 0.5));
 
+  // Tools convert at the moment the reader gets their number, so they are
+  // worth more than the traffic they pull.
+  out.push(...entriesFor("/tools", ["en"], undefined, 0.7));
+  for (const slug of TOOL_SLUGS) {
+    out.push(...entriesFor(`/tools/${slug}`, ["en"], undefined, 0.7));
+  }
+
   // CMS content. Only the locales that actually have a body.
   // Must match RESERVED in the flexible [slug] route exactly. If the sitemap
   // advertises a URL the route no longer generates, Google finds a 404 inside
@@ -87,6 +95,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "blog",
     "contact",
     "guides",
+    "tools",
     "projects",
     "services",
     ...SERVICE_SLUGS,

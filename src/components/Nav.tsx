@@ -25,6 +25,7 @@ export function Nav() {
       ? [
           { href: "/areas", label: "Areas" },
           { href: "/guides", label: "Guides" },
+          { href: "/tools", label: "Tools" },
           { href: "/about", label: t("about") },
           { href: "/contact", label: "Contact" },
         ]

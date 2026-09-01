@@ -41,6 +41,7 @@ const RESERVED = new Set([
   "blog",
   "contact",
   "guides",
+  "tools",
   "projects",
   "services",
   ...SERVICE_SLUGS,

@@ -91,6 +91,15 @@ export const FILLS = [
     where: ["src/app/(site)/[locale]/page.tsx"],
   },
 
+  {
+    id: "stamp-duty-rate",
+    area: "Tools",
+    status: "wrong",
+    ask: "The stamp duty percentage that actually applies in Mumbai, including any metro cess, and the registration fee with its cap.",
+    why: "The EMI calculator defaults stamp duty to 6 percent so the tool works out of the box, and tells the reader to set their own rate. That default is unverified. It is the one number on the page that could be wrong in a way that costs somebody money.",
+    where: ["src/components/EmiCalculator.tsx", "content/drafts/stamp-duty-and-registration-charges-mumbai.md"],
+  },
+
   // ---------------------------------------------------------------- schema
   {
     id: "opening-hours",
