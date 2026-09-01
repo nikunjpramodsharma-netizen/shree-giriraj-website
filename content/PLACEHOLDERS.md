@@ -276,13 +276,13 @@ Ordered by monthly search volume. Each item is a marker already written into the
 
 **74. [Verify, line 54]** t quoted prices are based on. ### What the difference looks like on a real flat | Measure | What it includes | Example | |---|---|---| | Carpet | Usable floor inside the flat | [ VERIFY: use a real flat you have sold ] | | Built up | Carpet plus wall thickness...
 
-**75. [Verify, line 78]** confirm the current position on what a builder must disclose and where, and whether resale transactions carry the same obligation. This paragraph makes a legal claim and must not publish unchecked.
+**75. [Verify, line 80]** confirm the current position on what a builder must disclose and where, and whether resale transactions carry the same obligation. This paragraph makes a legal claim and must not publish unchecked.
 
-**76. [Your words, line 84]** What we see in Borivali, Kandivali and Malad This is the section that makes the post yours. Three or four sentences, written the way you would say them on the phone. Some prompts: Is there a typical loading range in the buildings you deal with, and does it dif...
+**76. [Your words, line 86]** What we see in Borivali, Kandivali and Malad This is the section that makes the post yours. Three or four sentences, written the way you would say them on the phone. Some prompts: Is there a typical loading range in the buildings you deal with, and does it dif...
 
-**77. [Verify, line 100]** . There is a commonly cited range but I am not going to state one you have not confirmed. What you consider normal in these three suburbs is the answer worth publishing here, and it is more useful than a national figure.
+**77. [Your words, line 104]** the national range is now sourced, but what you consider normal in Borivali, Kandivali and Malad is the answer worth publishing, and it is the one nobody else can give. Does it differ between the older station belt buildings and the newer Link Road towers?
 
-**78. [Verify, line 103]** ] **Do builders have to quote in carpet area?** They have to declare it. They are not stopped from advertising a price against super built up, which is why the two numbers keep appearing side by side.
+**78. [Verify, line 107]** ] **Do builders have to quote in carpet area?** They have to declare it. They are not stopped from advertising a price against super built up, which is why the two numbers keep appearing side by side.
 
 ### Stamp duty and registration charges in Mumbai, 2026
 

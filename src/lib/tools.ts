@@ -20,7 +20,7 @@ export type ToolFaq = { q: string; a: string };
 export type Tool = {
   slug: string;
   /** Which component renders. Kept as a key so the registry stays data only. */
-  component: "emi" | "stampDuty";
+  component: "emi" | "stampDuty" | "area";
   title: string;
   metaTitle: string;
   metaDescription: string;
@@ -125,7 +125,51 @@ const stampDutyTool: Tool = {
   ],
 };
 
-export const TOOLS: Tool[] = [stampDutyTool, emiTool];
+const areaTool: Tool = {
+  slug: "carpet-area-calculator",
+  component: "area",
+  title: "Carpet area and loading calculator",
+  metaTitle: "Carpet area calculator: what you actually get for the price",
+  metaDescription:
+    "Turn a super built up listing into the carpet area you can stand on, see the real rate per usable square foot, and compare two flats properly.",
+  answer:
+    "Carpet area is the usable floor space inside a flat. Super built up adds your share of lobbies, lifts and amenities, and it is the figure prices are quoted against. Loading is the gap, taken on the carpet area, so carpet equals super built up divided by one plus the loading.",
+  intro: [
+    "Every flat has three areas and a brochure leads with the largest one. You pay on super built up and you live on carpet, and in Mumbai the gap between them is the widest in India, commonly 40 to 50 percent.",
+    "That matters in one specific way people miss. Because the rate is quoted against super built up, two flats at the same rate can give you very different homes, and the cheaper looking one is often the worse buy. A flat at a higher rate with low loading regularly beats one advertised for less with heavy loading.",
+    "So this does two things. It turns a listing into the area you can actually stand on, and it compares two flats on the rate per carpet foot, which is the only number that is comparable.",
+  ],
+  limits: [
+    "It works from the loading figure you enter. If you do not know it, ask for the carpet area in writing: under RERA it has to be stated in the agreement for a registered project.",
+    "Built up area is approximate, because the allowance for walls and balcony varies. It is an input here rather than a fixed assumption.",
+    "It does not tell you whether the loading is fair, only how it compares with what is normal. What the loading buys you, in amenities and common space, is a judgement call.",
+  ],
+  faqs: [
+    {
+      q: "How do I calculate carpet area from super built up area?",
+      a: "Divide the super built up area by one plus the loading. A 1,400 sq ft flat at 40 percent loading gives 1,000 sq ft of carpet. Taking 40 percent off the super built up figure instead would give 840, which is wrong by 160 sq ft.",
+    },
+    {
+      q: "What is a normal loading percentage?",
+      a: "Nationally 25 to 35 percent is described as normal and above 40 percent as high. Mumbai runs the highest loading in India at roughly 40 to 50 percent, so a Mumbai figure that looks high by national standards may be ordinary here.",
+    },
+    {
+      q: "Do builders have to tell me the carpet area?",
+      a: "Under RERA a registered project has to declare carpet area and state it in the agreement. Nothing stops a price being advertised against super built up, which is why both numbers keep appearing side by side.",
+    },
+    {
+      q: "Why compare flats on carpet area rather than the quoted rate?",
+      a: "Because the quoted rate is per super built up foot, and the share of that you can actually use differs from flat to flat. Dividing the total price by the carpet area gives one number that is comparable across buildings.",
+    },
+  ],
+  readNext: [
+    { label: "Stamp duty and registration, Mumbai", href: "/tools/stamp-duty-calculator-mumbai" },
+    { label: "Home loan EMI and cost of buying", href: "/tools/home-loan-emi-calculator" },
+    { label: "Property paperwork in Maharashtra", href: "/guides/property-paperwork-maharashtra" },
+  ],
+};
+
+export const TOOLS: Tool[] = [stampDutyTool, areaTool, emiTool];
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug);
 

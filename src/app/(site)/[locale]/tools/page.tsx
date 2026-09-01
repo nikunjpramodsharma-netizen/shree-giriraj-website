@@ -18,7 +18,6 @@ const TOOL_LOCALE = "en";
  * rule as the guides hub: never link into a hole.
  */
 const PLANNED = [
-  "Carpet area and loading",
   "Interior cost estimator",
   "HRA and rent receipt",
   "BMC property tax",

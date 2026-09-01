@@ -55,6 +55,8 @@ Every flat has three areas, and a brochure will usually lead with the largest on
 
 *I have deliberately left this table empty. A worked example from a flat you actually transacted is worth more than a made up one, and it is the kind of specific that separates this post from every other article on the subject.*
 
+Readers can run their own numbers with the [carpet area and loading calculator](/tools/carpet-area-calculator), which also compares two flats on the rate per carpet foot.
+
 ---
 
 ## What loading actually means for your money
@@ -97,7 +99,9 @@ For a resale flat the position is looser, because you are buying from an individ
 Close, but not identical. Carpet area under RERA includes internal partition walls. Usable area is a looser term with no legal definition, so it is worth asking what somebody means when they use it.
 
 **What is a good loading percentage?**
-[ VERIFY. There is a commonly cited range but I am not going to state one you have not confirmed. What you consider normal in these three suburbs is the answer worth publishing here, and it is more useful than a national figure. ]
+Nationally, 25 to 35 percent is widely described as normal and anything above 40 percent as high. **Mumbai runs the highest loading in India, commonly 40 to 50 percent**, so a figure that looks alarming by national standards can be ordinary here. Sources checked 1 September 2026.
+
+[ YOUR WORDS: the national range is now sourced, but what you consider normal in Borivali, Kandivali and Malad is the answer worth publishing, and it is the one nobody else can give. Does it differ between the older station belt buildings and the newer Link Road towers? ]
 
 **Do builders have to quote in carpet area?**
 They have to declare it. They are not stopped from advertising a price against super built up, which is why the two numbers keep appearing side by side. [ VERIFY ]
