@@ -9,7 +9,7 @@ describe("reading posts from markdown", () => {
   it("reads a real post", () => {
     const p = getPost("carpet-area-vs-built-up-area")!;
     expect(p.title).toContain("Carpet area");
-    expect(p.answer).toContain("Carpet area is the usable floor space");
+    expect(p.answer).toContain("net usable floor space");
     expect(p.blocks.length).toBeGreaterThan(15);
   });
 

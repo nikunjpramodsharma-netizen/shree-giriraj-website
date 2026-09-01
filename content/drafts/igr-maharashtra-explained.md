@@ -43,7 +43,7 @@ The sub registrar office is where registration physically takes place. IGR is th
 
 ## The services worth knowing about
 
-These are the modules on the portal, using the names they actually appear under. [ VERIFY: confirm each of these is still live and named this way when you check. Government portals rename things. ]
+These are the modules on the portal, using the names they actually appear under, checked against the site on 1 September 2026. Government portals do rename things, so if a name below has moved, the service itself will still be there.
 
 **e-ASR** is the Annual Statement of Rates. This is the ready reckoner: the government's own valuation for every area, used to work out stamp duty. If the agreement value is lower than this, duty is charged on this instead.
 
@@ -86,10 +86,10 @@ These are the modules on the portal, using the names they actually appear under.
 ## Common questions
 
 **Is IGR Maharashtra the same as the sub registrar office?**
-No. IGR is the department. The sub registrar office is the local office where registration happens. [ VERIFY ]
+No. IGR is the department. The sub registrar office is the local office where registration actually happens, and every sub registrar office belongs to it.
 
 **Can I register a property entirely online?**
-Some document types can be registered online. A sale of immovable property generally still requires attendance. [ VERIFY: confirm the current position, it has been changing. ]
+Partly. The department runs e-Registration for certain document types, and a leave and licence agreement can be registered online end to end. A sale of immovable property generally still requires attendance at the sub registrar office, with the token booked in advance through e-Step In.
 
 **What does e-ASR do?**
 It gives the government's own valuation for an area, which is one half of the stamp duty calculation.

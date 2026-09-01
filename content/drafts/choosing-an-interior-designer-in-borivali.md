@@ -13,10 +13,8 @@ answer: >
   Ask who supervises the site day to day and how often. Ask what happens if the
   work runs past the agreed date. An advance of more than 20 percent before any
   material arrives on site is worth questioning.
-sources:
-  - label: "[ VERIFY: your society's or a typical society's interior work rules ]"
-    url: ""
-sourcesCheckedOn: "[ VERIFY ]"
+sources: []
+sourcesCheckedOn: ""
 relatedFaqs:
   - How much advance is normal for interior work?
   - Do I need society permission for interior work?
@@ -29,7 +27,7 @@ readNext:
 
 ## The short answer
 
-Ask for a written scope with quantities, not a lump sum. Ask what is excluded. Ask who supervises the site day to day and how often. Ask what happens if the work runs past the agreed date. **An advance of more than 20 percent before any material arrives on site is worth questioning.** [ VERIFY: is 20 percent the right threshold in your experience? This is the most actionable number in the post and it should be yours, not mine. ]
+Ask for a written scope with quantities, not a lump sum. Ask what is excluded. Ask who supervises the site day to day and how often. Ask what happens if the work runs past the agreed date. **An advance of more than 20 percent before any material arrives on site is worth questioning.** [ YOUR WORDS: is 20 percent the right threshold? This is the most actionable number in the post and it has to be yours. No amount of research substitutes for what you have actually seen go wrong. ]
 
 ---
 
@@ -57,7 +55,7 @@ This is where the budget actually goes wrong. Things that are commonly outside a
 - Loose furniture, curtains and appliances
 - Society charges, debris removal and lift usage
 
-[ VERIFY: is this list right for how quotes are usually structured in Borivali? Add anything that catches people out and remove anything that is normally included. ]
+[ YOUR WORDS: is this list right for how quotes are structured in Borivali? Add whatever catches people out here and strike anything that is normally included. ]
 
 ### 3. Who is on site, and how often?
 
