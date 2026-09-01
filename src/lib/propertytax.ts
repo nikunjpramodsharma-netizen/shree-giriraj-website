@@ -24,10 +24,11 @@
  * THE PART THAT ACTUALLY MATTERS
  *
  * Residential flats of 500 sq ft carpet or less have been fully exempt since
- * 1 January 2022, and 500 to 700 sq ft carries a concession. In Borivali,
- * Kandivali and Malad a great many flats fall under those lines, and plenty of
- * owners do not know it. That check needs no tax rate at all, which is why the
- * tool leads with it.
+ * 1 January 2022. In Borivali, Kandivali and Malad a great many flats fall
+ * under that line and plenty of owners do not know it. The check needs no tax
+ * rate at all, which is why the tool leads with it.
+ *
+ * The 500 to 700 band is a separate matter and is NOT applied. See below.
  */
 
 export const PT_VERIFIED_ON = "2026-09-01";
@@ -48,8 +49,24 @@ export const PT_SOURCES: { label: string; url: string }[] = [
 ];
 
 export const EXEMPT_UPTO_SQFT = 500;
+
+/**
+ * THE 500 TO 700 BAND IS NOT CONFIRMED.
+ *
+ * One secondary source said flats in this band "may receive" a 60 percent
+ * concession. A dedicated search for it found nothing, and every source that
+ * describes the relief in detail describes only the 500 sq ft exemption.
+ *
+ * So it is NOT applied to the computed tax. Telling somebody their bill should
+ * be 60 percent lower on a single hedged source could have them disputing a
+ * correct bill, which is worse than saying nothing. The band is still surfaced,
+ * as something to ask the ward office about, which is honest and still useful.
+ *
+ * Set CONCESSION_VERIFIED to true only once it is confirmed against the BMC.
+ */
 export const CONCESSION_UPTO_SQFT = 700;
 export const CONCESSION_PCT = 60;
+export const CONCESSION_VERIFIED = false;
 
 export type ConstructionType = "rcc" | "nonRcc" | "underConstruction";
 export type AgeBand = "pre1945" | "y1945to1985" | "post1985";
@@ -98,14 +115,17 @@ export type PtInput = {
   taxRatePct: number;
 };
 
-export type ExemptionStatus = "exempt" | "concession" | "none";
+export type ExemptionStatus = "exempt" | "possibleConcession" | "none";
 
 export type PtResult = {
   capitalValue: number;
   constructionWeight: number;
   ageWeight: number;
   exemption: ExemptionStatus;
-  /** Only residential flats qualify for the size relief. */
+  /**
+   * Applied to the tax. Zero for the 500 to 700 band while that concession is
+   * unverified, so the figure shown is never lower than the bill might be.
+   */
   concessionPct: number;
   /** Null when no tax rate was supplied. */
   taxBeforeRelief: number | null;
@@ -129,8 +149,9 @@ export function calculatePropertyTax(inp: PtInput): PtResult {
       exemption = "exempt";
       concessionPct = 100;
     } else if (carpet <= CONCESSION_UPTO_SQFT) {
-      exemption = "concession";
-      concessionPct = CONCESSION_PCT;
+      exemption = "possibleConcession";
+      // Deliberately not discounted while unverified. See the note above.
+      concessionPct = CONCESSION_VERIFIED ? CONCESSION_PCT : 0;
     }
   }
 

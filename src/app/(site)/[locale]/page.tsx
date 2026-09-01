@@ -394,7 +394,7 @@ export default async function HomePage({
           <Reveal className="mb-11 max-w-2xl">
             <div className="eyebrow text-brass-bright">{tAreas("eyebrow")}</div>
             <h2 className="mt-3.5 text-3xl text-white md:text-4xl">
-              Three suburbs, thirty years, one office
+              Three suburbs, one office, since 1996
             </h2>
             <p className="mt-3.5 text-[1.04rem] text-paper/70">
               Pick the one you are looking at.

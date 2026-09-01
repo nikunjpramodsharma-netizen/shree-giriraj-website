@@ -42,7 +42,7 @@ const STORY_PROMPTS: { heading: string; prompts: string[] }[] = [
     ],
   },
   {
-    heading: "What has changed in thirty years",
+    heading: "What has changed since 1996",
     prompts: [
       "What has RERA actually changed for a buyer here?",
       "What do people get wrong now that they did not get wrong before?",

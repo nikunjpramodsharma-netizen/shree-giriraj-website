@@ -310,24 +310,25 @@ const propertyTaxTool: Tool = {
   slug: "bmc-property-tax-calculator",
   component: "propertyTax",
   title: "BMC property tax calculator, Mumbai",
-  metaTitle: "BMC property tax calculator: are you exempt?",
+  metaTitle: "BMC property tax calculator: is your flat exempt?",
   metaDescription:
-    "Work out the capital value of a Mumbai flat and check whether the 500 sq ft exemption or the 700 sq ft concession applies to you.",
+    "Work out the capital value of a Mumbai flat and check whether the 500 sq ft carpet area exemption applies to you.",
   answer:
-    "BMC property tax is charged on capital value, which is the ready reckoner rate times the carpet area times weights for construction type, age and use. Residential flats of 500 sq ft carpet or less have been fully exempt since January 2022, and 500 to 700 sq ft carries a 60 percent concession.",
+    "BMC property tax is charged on capital value, which is the ready reckoner rate times the carpet area times weights for construction type, age and use. Residential flats with a carpet area of 500 sq ft or less have been fully exempt from BMC property tax since 1 January 2022.",
   intro: [
-    "The exemption is the reason this page exists. A residential flat of 500 sq ft carpet or less pays no BMC property tax at all, and flats up to 700 sq ft get a large concession. In Borivali, Kandivali and Malad a great many flats sit under those lines and plenty of owners have never checked.",
+    "The exemption is the reason this page exists. A residential flat with a carpet area of 500 sq ft or less pays no BMC property tax at all, and in Borivali, Kandivali and Malad a great many flats sit under that line while their owners have never checked.",
     "That check needs no tax rate and no arithmetic, which is why it comes first here and the calculation comes second.",
   ],
   limits: [
     "The tax rate applied to capital value varies by ward and category, and we have not confirmed a figure we would publish. Enter the rate from your own bill for a rupee figure, or leave it blank for capital value only.",
     "It is an estimate. The bill issued by the BMC is the authority.",
     "The size relief is for residential use. Commercial property does not qualify.",
+    "Some reports describe a concession between 500 and 700 sq ft. We could not verify it, so it is flagged but never applied to the figures.",
   ],
   faqs: [
     {
       q: "Is my flat exempt from BMC property tax?",
-      a: "Residential flats with a carpet area of 500 sq ft or less have been fully exempt since 1 January 2022. Between 500 and 700 sq ft a 60 percent concession applies. It is measured on carpet area, not super built up.",
+      a: "Residential flats with a carpet area of 500 sq ft or less have been fully exempt since 1 January 2022. It is measured on carpet area, not super built up, so check the carpet figure in your agreement rather than the area in the listing.",
     },
     {
       q: "How is BMC property tax calculated?",

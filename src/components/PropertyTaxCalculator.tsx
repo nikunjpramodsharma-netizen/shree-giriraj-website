@@ -26,6 +26,9 @@ import { inr } from "@/lib/emi";
  * January 2022, and a great many flats in Borivali, Kandivali and Malad are
  * under that line while their owners have no idea. That check needs no tax
  * rate at all, which is why it comes first and the calculation comes second.
+ *
+ * The 500 to 700 band is surfaced but never discounted, because we could not
+ * verify it. See lib/propertytax.ts.
  */
 
 const fmtDate = (iso: string) =>
@@ -125,23 +128,26 @@ export function PropertyTaxCalculator() {
             </p>
           </div>
         )}
-        {r.exemption === "concession" && (
-          <div className="rounded-xl border border-brass/40 bg-brass/10 px-5 py-4 text-ink">
+        {r.exemption === "possibleConcession" && (
+          <div className="rounded-xl border border-line bg-paper-alt px-5 py-4 text-ink">
             <div className="text-lg font-semibold">
-              A {CONCESSION_PCT}% concession should apply.
+              Worth asking about, but we could not confirm it.
             </div>
             <p className="mt-1 text-sm">
-              Residential flats between {EXEMPT_UPTO_SQFT} and{" "}
-              {CONCESSION_UPTO_SQFT} sq ft carpet qualify for a concession.
-              Check your bill reflects it.
+              Some reports describe a concession of around {CONCESSION_PCT}%
+              for residential flats between {EXEMPT_UPTO_SQFT} and{" "}
+              {CONCESSION_UPTO_SQFT} sq ft carpet. We could not verify it, so it
+              is <b>not</b> applied to the figures below and your bill may be
+              correct as issued. Ask your ward office whether anything applies
+              in this band.
             </p>
           </div>
         )}
         {r.exemption === "none" && user === "residential" && (
           <div className="rounded-xl border border-line bg-paper-alt px-5 py-4 text-sm text-ink">
-            Above {CONCESSION_UPTO_SQFT} sq ft carpet, so no size relief. Flats
-            at or under {EXEMPT_UPTO_SQFT} sq ft are exempt entirely and those
-            up to {CONCESSION_UPTO_SQFT} get {CONCESSION_PCT}% off.
+            Above {CONCESSION_UPTO_SQFT} sq ft carpet, so no size relief.
+            Residential flats at or under {EXEMPT_UPTO_SQFT} sq ft carpet are
+            exempt from BMC property tax entirely.
           </div>
         )}
 

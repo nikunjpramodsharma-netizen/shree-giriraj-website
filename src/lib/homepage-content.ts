@@ -86,7 +86,7 @@ export const AREA_PANELS: AreaPanel[] = [
     stats: [
       { value: "140/mo", label: "Searches, Borivali West" },
       { value: "High", label: "Competition" },
-      { value: "30 yrs", label: "We have been here" },
+      { value: "Since 1996", label: "We have been here" },
     ],
     watch:
       "The station belt and the Link Road side are two different markets at the same price. People conflate them and overpay on the wrong one.",
@@ -139,7 +139,7 @@ export const SERVICE_PANELS: ServicePanel[] = [
     slug: "resale-flats",
     title: "Resale flats",
     image: "/sections/svc-resale.jpg",
-    lead: "Our main business, and where thirty years of walking these buildings actually pays.",
+    lead: "Our main business, and where walking these buildings since 1996 actually pays.",
     body: "Buying or selling ready to move homes across Borivali, Kandivali and Malad. Title chain, society NOC and outstanding dues sorted before a price is agreed, which is the difference between a sale and a sale that collapses three weeks in.",
   },
   {

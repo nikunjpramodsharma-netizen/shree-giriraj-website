@@ -58,7 +58,7 @@ Answer by number. Anything you do not know yet, say so and it stays on the list 
 
 ### HIDDEN  ·  Built and deliberately switched off until answered
 
-**8. The story of the business: who started it in 1996 and what they did before, how you work and who you are not for, and what has actually changed in thirty years. A deal you turned down would be worth more than anything else on the page.**
+**8. The story of the business: who started it in 1996 and what they did before, how you work and who you are not for, and what has actually changed since 1996. A deal you turned down would be worth more than anything else on the page.**
 
 > The page is built and the facts on it are real, but the story is not written, so it is served noindex. Flip STORY_IS_WRITTEN once it is.
 

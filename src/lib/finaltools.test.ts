@@ -12,6 +12,7 @@ import {
   EXEMPT_UPTO_SQFT,
   CONCESSION_UPTO_SQFT,
   CONCESSION_PCT,
+  CONCESSION_VERIFIED,
   PT_SOURCES,
 } from "./propertytax";
 import {
@@ -149,10 +150,14 @@ describe("BMC property tax: the size relief, which is the point", () => {
     expect(r.concessionPct).toBe(100);
   });
 
-  it("gives a 60 percent concession between 500 and 700 sq ft", () => {
+  it("flags the 500 to 700 band but does NOT discount it, because it is unverified", () => {
+    // A single hedged source described a concession here and a dedicated
+    // search found nothing. Applying it could have somebody disputing a
+    // correct bill, so the band is surfaced and the tax is left alone.
     const r = calculatePropertyTax({ ...ptBase, carpetSqft: 650 });
-    expect(r.exemption).toBe("concession");
-    expect(r.concessionPct).toBe(CONCESSION_PCT);
+    expect(r.exemption).toBe("possibleConcession");
+    expect(r.concessionPct).toBe(0);
+    expect(CONCESSION_VERIFIED).toBe(false);
   });
 
   it("gives nothing above 700 sq ft", () => {
@@ -190,13 +195,13 @@ describe("BMC property tax: the unverified rate is an input, not a guess", () =>
     expect(r.taxPayable).toBe(r.taxBeforeRelief);
   });
 
-  it("applies the concession to the computed tax", () => {
+  it("charges the full tax in the unverified band rather than a discounted one", () => {
     const r = calculatePropertyTax({
       ...ptBase,
       carpetSqft: 650,
       taxRatePct: 0.5,
     });
-    expect(r.taxPayable).toBe(Math.round(r.taxBeforeRelief! * 0.4));
+    expect(r.taxPayable).toBe(r.taxBeforeRelief);
   });
 
   it("charges nothing on an exempt flat", () => {
