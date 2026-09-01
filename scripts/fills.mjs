@@ -94,10 +94,10 @@ export const FILLS = [
   {
     id: "stamp-duty-rate",
     area: "Tools",
-    status: "wrong",
-    ask: "The stamp duty percentage that actually applies in Mumbai, including any metro cess, and the registration fee with its cap.",
-    why: "The EMI calculator defaults stamp duty to 6 percent so the tool works out of the box, and tells the reader to set their own rate. That default is unverified. It is the one number on the page that could be wrong in a way that costs somebody money.",
-    where: ["src/components/EmiCalculator.tsx", "content/drafts/stamp-duty-and-registration-charges-mumbai.md"],
+    status: "cosmetic",
+    ask: "Confirm two things against the Department of Registration and Stamps, or with your lawyer: that Mumbai is 6 percent for a male buyer and 5 percent for a female buyer in sole name including the 1 percent metro cess, and what actually applies to JOINT male plus female ownership.",
+    why: "Rates were cross checked against three independent sources on 1 September 2026 and the calculator shows that date and cites them. None is a primary source. Sources also genuinely conflict on joint ownership, so the tool shows a range of 6 to 6.5 percent rather than guessing. Confirming it would let us replace the range with one number, which is the last soft spot in the tool.",
+    where: ["src/lib/stampduty.ts"],
   },
 
   // ---------------------------------------------------------------- schema

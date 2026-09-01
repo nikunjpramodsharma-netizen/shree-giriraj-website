@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
 import { EmiCalculator } from "@/components/EmiCalculator";
+import { StampDutyCalculator } from "@/components/StampDutyCalculator";
 import { graph, breadcrumbNode, faqNode } from "@/lib/schema";
 import { buildAlternates } from "@/lib/seo";
 import { TOOLS, getTool } from "@/lib/tools";
@@ -79,6 +80,7 @@ export default function ToolPage({
           hunt, and nothing to fill in before it works. */}
       <div className="wrap -mt-6 pb-12">
         {tool.component === "emi" && <EmiCalculator />}
+        {tool.component === "stampDuty" && <StampDutyCalculator />}
       </div>
 
       <div className="wrap pb-16">

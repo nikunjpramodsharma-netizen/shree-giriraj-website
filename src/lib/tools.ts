@@ -20,7 +20,7 @@ export type ToolFaq = { q: string; a: string };
 export type Tool = {
   slug: string;
   /** Which component renders. Kept as a key so the registry stays data only. */
-  component: "emi";
+  component: "emi" | "stampDuty";
   title: string;
   metaTitle: string;
   metaDescription: string;
@@ -80,7 +80,52 @@ const emiTool: Tool = {
   ],
 };
 
-export const TOOLS: Tool[] = [emiTool];
+const stampDutyTool: Tool = {
+  slug: "stamp-duty-calculator-mumbai",
+  component: "stampDuty",
+  title: "Stamp duty and registration calculator, Mumbai",
+  metaTitle: "Stamp duty calculator Mumbai: duty, metro cess and registration",
+  metaDescription:
+    "Work out stamp duty and registration on a Mumbai flat, on the ready reckoner value where that is higher, with the metro cess shown separately.",
+  answer:
+    "Stamp duty in Mumbai is 6 percent of the chargeable value for a male buyer and 5 percent for a female buyer in sole name, both including the 1 percent metro cess. Registration is 1 percent capped at 30,000 rupees. Duty is charged on the agreement value or the ready reckoner value, whichever is higher.",
+  intro: [
+    "National calculators handle Maharashtra badly, because they treat stamp duty as one number per state. Mumbai is not one number: the metro cess sits on top of the base rate, a woman buying in her sole name pays a point less, and the value the duty is charged on is often not the price you negotiated.",
+    "That last point catches more buyers than anything else. If the ready reckoner rate for the building is above your agreed price, duty is charged on the reckoner rate. The saving you negotiated does not reduce the tax.",
+    "Where the sources genuinely disagree, which is joint ownership by a man and a woman, this shows a range instead of inventing a figure. Budget for the top of it.",
+  ],
+  limits: [
+    "Mumbai only, inside the BMC area. Pune, Thane and Nagpur add a local body tax and rural rates are lower.",
+    "Rates were cross checked against three sources and are dated on the page. They change, so confirm before you budget on them.",
+    "It does not cover gift, lease, mortgage or commercial instruments, which are charged differently.",
+    "It is an estimate for planning, not a valuation and not a quotation.",
+  ],
+  faqs: [
+    {
+      q: "Is stamp duty calculated on the agreement value or the ready reckoner rate?",
+      a: "On whichever is higher. If a flat sells below the government valuation for the area, duty is still charged on that valuation, so buying cheaply does not reduce the duty.",
+    },
+    {
+      q: "How much stamp duty does a woman pay in Mumbai?",
+      a: "One percentage point less than a male buyer, so 5 percent against 6 percent, on a residential property held in her sole name. Adding a male co owner removes the concession.",
+    },
+    {
+      q: "What is the metro cess?",
+      a: "A 1 percent levy on top of the base stamp duty, used to fund the metro rail. It is why the headline figure in Mumbai is 6 percent rather than the 5 percent base rate.",
+    },
+    {
+      q: "Can stamp duty be paid from the home loan?",
+      a: "Generally no. Lenders fund a share of the agreement value, and stamp duty and registration sit outside it, so both have to be found in cash on top of the down payment.",
+    },
+  ],
+  readNext: [
+    { label: "Property paperwork in Maharashtra", href: "/guides/property-paperwork-maharashtra" },
+    { label: "Home loan EMI and cost of buying", href: "/tools/home-loan-emi-calculator" },
+    { label: "Talk to us about a specific flat", href: "/contact" },
+  ],
+};
+
+export const TOOLS: Tool[] = [stampDutyTool, emiTool];
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug);
 

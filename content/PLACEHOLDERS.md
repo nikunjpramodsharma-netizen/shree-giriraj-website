@@ -50,13 +50,7 @@ Answer by number. Anything you do not know yet, say so and it stays on the list 
 
 `compare-section`  ·  Homepage  ·  src/app/(site)/[locale]/page.tsx
 
-**7. The stamp duty percentage that actually applies in Mumbai, including any metro cess, and the registration fee with its cap.**
-
-> The EMI calculator defaults stamp duty to 6 percent so the tool works out of the box, and tells the reader to set their own rate. That default is unverified. It is the one number on the page that could be wrong in a way that costs somebody money.
-
-`stamp-duty-rate`  ·  Tools  ·  src/components/EmiCalculator.tsx, content/drafts/stamp-duty-and-registration-charges-mumbai.md
-
-**8. Real photographs: the shop, the team, buildings and streets in Borivali, Kandivali and Malad, and any completed interiors work.**
+**7. Real photographs: the shop, the team, buildings and streets in Borivali, Kandivali and Malad, and any completed interiors work.**
 
 > Every image on the site is stock at the moment, including the homepage and all six blog category images. Stock is the fastest way to look like every other property site.
 
@@ -64,37 +58,43 @@ Answer by number. Anything you do not know yet, say so and it stays on the list 
 
 ### HIDDEN  ·  Built and deliberately switched off until answered
 
-**9. The story of the business: who started it in 1996 and what they did before, how you work and who you are not for, and what has actually changed in thirty years. A deal you turned down would be worth more than anything else on the page.**
+**8. The story of the business: who started it in 1996 and what they did before, how you work and who you are not for, and what has actually changed in thirty years. A deal you turned down would be worth more than anything else on the page.**
 
 > The page is built and the facts on it are real, but the story is not written, so it is served noindex. Flip STORY_IS_WRITTEN once it is.
 
 `about-page`  ·  Site  ·  src/app/(site)/[locale]/about/page.tsx
 
-**10. Who takes a paid consultation call, and whether the fee comes off the bill if the person later transacts with you. No price needed.**
+**9. Who takes a paid consultation call, and whether the fee comes off the bill if the person later transacts with you. No price needed.**
 
 > The consultation band is built and switched off. These two answers, not a fee, are what it is actually waiting on.
 
 `consult-operations`  ·  Consultation  ·  src/lib/consult.ts
 
-**11. The pockets in Borivali, Kandivali and Malad: who lives where, how the two sides of each suburb differ, and what you would check before buying. Every prompt is written on the pages themselves.**
+**10. The pockets in Borivali, Kandivali and Malad: who lives where, how the two sides of each suburb differ, and what you would check before buying. Every prompt is written on the pages themselves.**
 
 > All three area pages are built and linked, but each still carries flagged blocks only you can fill, so all three are served noindex. These are the core of the local SEO plan and the one thing a portal cannot copy.
 
 `area-pages`  ·  Areas  ·  src/lib/areas.ts
 
-**12. Real client testimonials, with permission to publish and a real first name and area.**
+**11. Real client testimonials, with permission to publish and a real first name and area.**
 
 > Seeded placeholder testimonials are filtered out in code so they cannot ship, which means the homepage has no social proof at all.
 
 `testimonials`  ·  Homepage  ·  src/app/(site)/[locale]/page.tsx
 
-**13. The real cost band for a 2 BHK interior fit out in these suburbs, at a basic and at a premium specification. Plus what advance percentage you consider reasonable.**
+**12. The real cost band for a 2 BHK interior fit out in these suburbs, at a basic and at a premium specification. Plus what advance percentage you consider reasonable.**
 
 > The interiors cluster is the highest value commercial position on the site. Without bands the posts say contact us, which is what every competing result already says. This is the one pricing question with direct revenue consequences.
 
 `interiors-cost-bands`  ·  Blog  ·  content/drafts/choosing-an-interior-designer-in-borivali.md
 
 ### COSMETIC  ·  Works without it, better with it
+
+**13. Confirm two things against the Department of Registration and Stamps, or with your lawyer: that Mumbai is 6 percent for a male buyer and 5 percent for a female buyer in sole name including the 1 percent metro cess, and what actually applies to JOINT male plus female ownership.**
+
+> Rates were cross checked against three independent sources on 1 September 2026 and the calculator shows that date and cites them. None is a primary source. Sources also genuinely conflict on joint ownership, so the tool shows a range of 6 to 6.5 percent rather than guessing. Confirming it would let us replace the range with one number, which is the last soft spot in the tool.
+
+`stamp-duty-rate`  ·  Tools  ·  src/lib/stampduty.ts
 
 **14. Your actual opening hours, including whether you work Sundays.**
 

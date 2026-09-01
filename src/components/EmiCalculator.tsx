@@ -199,7 +199,7 @@ export function EmiCalculator() {
                   value={stampPct}
                   onChange={setStampPct}
                   step={0.5}
-                  hint="Set this to the rate that applies to you. Rates differ by buyer category and change, so confirm the current figure before relying on it."
+                  hint="Mumbai is 6% for a male buyer and 5% for a female buyer in sole name, both including the metro cess. Our stamp duty calculator works it out properly, including the ready reckoner floor."
                 />
                 <NumberField
                   label="Registration"
