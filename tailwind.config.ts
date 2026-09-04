@@ -41,8 +41,12 @@ const config: Config = {
         whatsapp: "#1c8f4d",
       },
       fontFamily: {
-        display: ["var(--font-fraunces)", "Georgia", "serif"],
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        // Geist across the board. `display` is kept as a separate token so
+        // headings can be given their own face again later without touching
+        // every component that uses font-display.
+        display: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
+        sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-geist-mono)", "ui-monospace", "monospace"],
       },
       maxWidth: {
         content: "1180px",

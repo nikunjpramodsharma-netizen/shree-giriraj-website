@@ -361,8 +361,29 @@ export default async function HomePage({
           </div>
         </div>
       </section>
-      {/* 02 CHECKS */}
+      {/* 02 SITUATION.
+          Moved directly under the hero. It was fourth, below the checks and
+          the areas, which put the one interactive thing on the page about
+          three screens down. It is a lead magnet, so it belongs where
+          attention still is. */}
       <section className="py-24">
+        <div className="wrap">
+          <Reveal className="mb-11 max-w-2xl">
+            <div className="eyebrow">Two questions</div>
+            <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
+              Tell us the situation and we will tell you what usually goes wrong
+            </h2>
+            <p className="mt-3.5 text-[1.04rem] text-muted">
+              Not a search box. There is nothing to search. This tells you what to watch
+              for before you speak to anybody, including us.
+            </p>
+          </Reveal>
+          <SituationTool situations={SITUATIONS} areas={SITUATION_AREAS} />
+        </div>
+      </section>
+
+      {/* 03 CHECKS */}
+      <section className="bg-paper-alt py-24">
         <div className="wrap">
           <Reveal className="mb-11 max-w-2xl">
             <div className="eyebrow">Before you sign</div>
@@ -388,7 +409,7 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* 03 AREAS */}
+      {/* 04 AREAS */}
       <section className="bg-brand-indigo-deep py-24 text-paper">
         <div className="wrap">
           <Reveal className="mb-11 max-w-2xl">
@@ -401,23 +422,6 @@ export default async function HomePage({
             </p>
           </Reveal>
           <AreaSwitcher panels={AREA_PANELS} />
-        </div>
-      </section>
-
-      {/* 04 SITUATION */}
-      <section className="py-24">
-        <div className="wrap">
-          <Reveal className="mb-11 max-w-2xl">
-            <div className="eyebrow">Two questions</div>
-            <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
-              Tell us the situation and we will tell you what usually goes wrong
-            </h2>
-            <p className="mt-3.5 text-[1.04rem] text-muted">
-              Not a search box. There is nothing to search. This tells you what to watch
-              for before you speak to anybody, including us.
-            </p>
-          </Reveal>
-          <SituationTool situations={SITUATIONS} areas={SITUATION_AREAS} />
         </div>
       </section>
 
