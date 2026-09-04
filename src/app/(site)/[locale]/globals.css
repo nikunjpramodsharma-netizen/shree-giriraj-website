@@ -20,17 +20,25 @@
   .wrap {
     @apply mx-auto max-w-content px-6;
   }
+  /*
+   * Buttons: a soft rectangle rather than a pill, and every variant resolves
+   * to the same hover state, white ground with black text and a black border.
+   *
+   * The border is on the base class and set to the button's own colour by
+   * default, so it is invisible until hover. Adding a border only on hover
+   * would grow the element by 3px and nudge everything beside it.
+   */
   .btn {
-    @apply inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition;
+    @apply inline-flex items-center gap-2 rounded-lg border-[1.5px] px-5 py-3 text-sm font-semibold transition;
   }
   .btn-wa {
-    @apply bg-whatsapp text-white hover:-translate-y-0.5 hover:shadow-lg;
+    @apply border-whatsapp bg-whatsapp text-white hover:-translate-y-0.5 hover:border-black hover:bg-white hover:text-black;
   }
   .btn-brass {
-    @apply bg-brass text-brand-indigo-deep hover:-translate-y-0.5 hover:shadow-lg;
+    @apply border-brass bg-brass text-brand-indigo-deep hover:-translate-y-0.5 hover:border-black hover:bg-white hover:text-black;
   }
   .btn-outline {
-    @apply border-[1.5px] border-brand-indigo text-brand-indigo hover:bg-brand-indigo hover:text-paper;
+    @apply border-brand-indigo text-brand-indigo hover:border-black hover:bg-white hover:text-black;
   }
   .eyebrow {
     @apply text-xs font-semibold uppercase tracking-[0.22em] text-brass;
