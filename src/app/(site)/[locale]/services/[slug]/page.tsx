@@ -9,7 +9,6 @@ import { PortableTextBody } from "@/components/PortableTextBody";
 import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/Reveal";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
-import { TiltImage } from "@/components/TiltImage";
 import { site, waLink } from "@/lib/config";
 import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
 import { getLowestPriceConfig } from "@/lib/project-helpers";
@@ -40,14 +39,34 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
   interiors: "interiors",
 };
 
-// One of the site's own photos per service, picked for thematic fit rather than reused identically everywhere.
+/**
+ * One image per service, and each one is now genuinely its own.
+ *
+ * Previously rentals and shops-plots shared a residential facade, which was
+ * both a duplicate and wrong: a commercial unit is not a block of flats.
+ * Redevelopment and interiors were both handover shots of keys, which says
+ * nothing about either service.
+ *
+ * All six are wide enough for a full bleed hero. The svc-*.jpg files used by
+ * the homepage panel track are only 760px across and would upscale badly here.
+ */
 const HERO_IMAGE: Record<(typeof SERVICE_SLUGS)[number], string> = {
   "resale-flats": "/architecture-facade-1.jpg",
-  rentals: "/architecture-facade-2.jpg",
+  rentals: "/moment-keys-1.jpg",
   "new-project-bookings": "/hero-skyline.jpg",
-  redevelopment: "/moment-keys-2.jpg",
-  "shops-plots": "/architecture-facade-2.jpg",
-  interiors: "/moment-keys-1.jpg",
+  redevelopment: "/services/hero-redevelopment.jpg",
+  "shops-plots": "/services/hero-shops.jpg",
+  interiors: "/services/hero-interiors.jpg",
+};
+
+/** Alt text per service. A hero image is content, not decoration. */
+const HERO_ALT: Record<(typeof SERVICE_SLUGS)[number], string> = {
+  "resale-flats": "The facade of a residential building",
+  rentals: "Keys being handed across a desk",
+  "new-project-bookings": "New residential towers on the Mumbai skyline",
+  redevelopment: "A high rise under construction with a crane against the sky",
+  "shops-plots": "An empty commercial floor with city views through full height windows",
+  interiors: "A finished living room with wooden furniture and daylight",
 };
 
 type Config = { type?: string; displayPrice?: string; note?: LocalizedValue<string> };
@@ -153,19 +172,48 @@ export default async function ServicePage({
       />
 
       {/* HERO */}
-      <section className="py-16 md:py-20">
-        <div className="wrap">
-          <Breadcrumbs trail={trail} />
-        </div>
-        <div className="wrap mt-6 grid items-center gap-10 md:grid-cols-2 md:gap-14">
+      {/*
+        Full bleed hero, built the same way as the homepage: photograph, a two
+        stop gradient for legibility, then content on top.
+
+        It replaces a split card layout where the image sat in a box beside the
+        text. That read as a section rather than as an opening, and it gave a
+        service page a much weaker entrance than the homepage.
+
+        The outline button becomes a light variant here, because the original
+        was indigo on indigo and would have been close to invisible.
+      */}
+      <section className="relative overflow-hidden bg-brand-indigo-deep text-paper">
+        <Image
+          src={HERO_IMAGE[slug]}
+          alt={HERO_ALT[slug]}
+          fill
+          priority
+          sizes="100vw"
+          className="hero-kenburns object-cover"
+        />
+        <span
+          aria-hidden="true"
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(100deg, rgba(21,27,61,.92) 0%, rgba(21,27,61,.74) 45%, rgba(21,27,61,.34) 78%, rgba(21,27,61,.55) 100%), linear-gradient(180deg, rgba(21,27,61,.5) 0%, rgba(21,27,61,0) 32%, rgba(21,27,61,.85) 100%)",
+          }}
+        />
+        <div className="wrap relative z-10 py-20 md:py-28">
+          <Breadcrumbs trail={trail} tone="dark" />
           <Reveal>
-            <div>
-              <div className="eyebrow">{site.areas.join(" · ")}</div>
-              <h1 className="mt-3.5 max-w-xl text-4xl text-brand-indigo md:text-5xl">
+            <div className="mt-6 max-w-3xl">
+              <div className="eyebrow text-brass-bright">
+                {site.areas.join(" \u00b7 ")}
+              </div>
+              <h1 className="mt-3.5 max-w-[20ch] text-4xl text-white md:text-6xl">
                 {heroHeading}
               </h1>
               {heroSubheading && (
-                <p className="mt-5 max-w-[38em] text-lg text-muted">{heroSubheading}</p>
+                <p className="mt-5 max-w-[38em] text-lg text-paper/80">
+                  {heroSubheading}
+                </p>
               )}
               <div className="mt-8 flex flex-wrap gap-3.5">
                 <a href="#enquire" className="btn btn-brass">
@@ -175,22 +223,12 @@ export default async function ServicePage({
                   href={waLink(tHero("whatsappMessage"))}
                   target="_blank"
                   rel="noopener"
-                  className="btn btn-outline"
+                  className="btn border-white/70 text-white hover:border-black hover:bg-white hover:text-black"
                 >
                   {tHero("ctaWhatsapp")}
                 </a>
               </div>
             </div>
-          </Reveal>
-          <Reveal className="delay-100">
-            <TiltImage
-              src={HERO_IMAGE[slug]}
-              alt=""
-              fill
-              priority
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="hero-kenburns object-cover"
-            />
           </Reveal>
         </div>
       </section>
