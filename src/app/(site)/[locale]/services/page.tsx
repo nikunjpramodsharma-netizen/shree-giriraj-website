@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
@@ -70,11 +71,26 @@ export default async function ServicesIndexPage({
           breadcrumbNode(locale, trail),
         )}
       />
-      <section className="bg-brand-indigo-deep py-20 text-paper">
-        <div className="wrap">
+      {/* The six pages below this one all open with a photograph. The page
+          that lists them should not be the flat one. */}
+      <section className="relative overflow-hidden bg-brand-indigo-deep text-paper">
+        <Image
+          src="/architecture-facade-1.jpg"
+          alt="The facade of a residential building in the western suburbs"
+          fill
+          priority
+          sizes="100vw"
+          className="hero-kenburns object-cover"
+        />
+        <span
+          aria-hidden="true"
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(100deg, rgba(21,27,61,.92) 0%, rgba(21,27,61,.74) 45%, rgba(21,27,61,.34) 78%, rgba(21,27,61,.55) 100%), linear-gradient(180deg, rgba(21,27,61,.5) 0%, rgba(21,27,61,0) 32%, rgba(21,27,61,.85) 100%)" }}
+        />
+        <div className="wrap relative z-10 pt-20 md:pt-28">
           <Breadcrumbs trail={trail} tone="dark" />
         </div>
-        <div className="wrap mt-6">
+        <div className="wrap relative z-10 mt-6 pb-20 md:pb-28">
           <div className="eyebrow text-brass-bright">{t("eyebrow")}</div>
           <h1 className="mt-3.5 text-4xl md:text-5xl">{t("heading")}</h1>
         </div>

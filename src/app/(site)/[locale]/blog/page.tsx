@@ -68,8 +68,21 @@ export default async function BlogPage({
 
   return (
     <>
-      <section className="bg-brand-indigo-deep py-20 text-paper">
-        <div className="wrap">
+      <section className="relative overflow-hidden bg-brand-indigo-deep text-paper">
+        <Image
+          src="/blog/paperwork.jpg"
+          alt="Hands stamping an official property document"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <span
+          aria-hidden="true"
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(100deg, rgba(21,27,61,.92) 0%, rgba(21,27,61,.74) 45%, rgba(21,27,61,.34) 78%, rgba(21,27,61,.55) 100%), linear-gradient(180deg, rgba(21,27,61,.5) 0%, rgba(21,27,61,0) 32%, rgba(21,27,61,.85) 100%)" }}
+        />
+        <div className="wrap relative z-10 py-20 md:py-28">
           <div className="eyebrow text-brass-bright">{t("eyebrow")}</div>
           <h1 className="mt-3.5 text-4xl md:text-5xl">{t("heading")}</h1>
           <p className="mt-4 max-w-[40em] text-paper/75">{t("body")}</p>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
@@ -63,8 +64,21 @@ export default function ToolsIndex({
         )}
       />
 
-      <header className="bg-brand-indigo-deep text-paper">
-        <div className="wrap py-14 md:py-20">
+      <header className="relative overflow-hidden bg-brand-indigo-deep text-paper">
+        <Image
+          src="/moment-keys-2.jpg"
+          alt="Paperwork and keys on a desk"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <span
+          aria-hidden="true"
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(100deg, rgba(21,27,61,.92) 0%, rgba(21,27,61,.74) 45%, rgba(21,27,61,.34) 78%, rgba(21,27,61,.55) 100%), linear-gradient(180deg, rgba(21,27,61,.5) 0%, rgba(21,27,61,0) 32%, rgba(21,27,61,.85) 100%)" }}
+        />
+        <div className="wrap relative z-10 py-20 md:py-28">
           <Breadcrumbs trail={trail} tone="dark" />
           <div className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-brass-bright">
             Tools
