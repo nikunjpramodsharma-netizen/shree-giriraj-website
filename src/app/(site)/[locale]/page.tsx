@@ -20,8 +20,6 @@ import {
   SITUATIONS,
   SITUATION_AREAS,
   SERVICE_PANELS,
-  JOURNAL_TEASERS,
-  JOURNAL_POSTS_READY,
   TEAM,
   TEAM_IS_REAL,
 } from "@/lib/homepage-content";
@@ -34,6 +32,8 @@ import { getLowestPriceConfig } from "@/lib/project-helpers";
 import type { Metadata } from "next";
 import { buildAlternates } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
+import { getAllPosts } from "@/lib/posts";
+import { categoryVisual } from "@/lib/blog";
 import { graph, organizationNode, websiteNode, faqNode } from "@/lib/schema";
 
 /**
@@ -274,6 +274,13 @@ export default async function HomePage({
   ];
 
   // Literal class names so Tailwind's build-time scanner can find them (dynamic template strings won't work).
+  /**
+   * Only posts with nothing outstanding. A draft still carrying review
+   * markers is served noindex and shows what it is waiting for, so linking
+   * the homepage at one would put an unfinished article in front of a client.
+   */
+  const journalPosts = getAllPosts().filter((p) => p.isReady).slice(0, 3);
+
   const revealDelays = ["delay-0", "delay-100", "delay-200"];
 
   // One project reads as chosen. A grid reads as a shelf, which is the thing
@@ -623,49 +630,69 @@ export default async function HomePage({
           heading={tFaq("heading")}
         />
       </Reveal>
-      {/* 11 JOURNAL */}
-      <section className="py-24">
-        <div className="wrap">
-          <Reveal className="mb-11 flex flex-wrap items-end justify-between gap-4">
-            <div className="max-w-2xl">
-              <div className="eyebrow">Worth reading</div>
-              <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
-                What we write when nobody is buying anything
-              </h2>
+      {/* 11 JOURNAL.
+          Real posts, not invented ones. This section previously advertised
+          three articles that did not exist, with titles written before the
+          blog did, and linked all three at /blog so they would not 404. The
+          titles were still fiction on a live page.
+
+          Now it lists genuinely publishable posts, and hides itself entirely
+          when there are none, the same gate used for the team and the
+          testimonials. It reappears on its own the moment a draft is
+          finished. */}
+      {journalPosts.length > 0 && (
+        <section className="py-24">
+          <div className="wrap">
+            <Reveal className="mb-11 flex flex-wrap items-end justify-between gap-4">
+              <div className="max-w-2xl">
+                <div className="eyebrow">Worth reading</div>
+                <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
+                  What we write when nobody is buying anything
+                </h2>
+              </div>
+              <Link href="/blog" className="text-sm font-semibold text-brand-blue">
+                All articles
+              </Link>
+            </Reveal>
+            <div className="grid gap-5 md:grid-cols-3">
+              {journalPosts.map((p, i) => {
+                const visual = categoryVisual(p.category ? [p.category] : undefined);
+                return (
+                  <Reveal key={p.slug} className={revealDelays[i % 3]}>
+                    <Link
+                      href={"/blog/" + p.slug}
+                      className="block h-full overflow-hidden rounded-2xl border border-brand-indigo/10 bg-white transition hover:-translate-y-1 hover:shadow-xl"
+                    >
+                      <div className="relative aspect-[14/9]">
+                        <Image
+                          src={visual.image}
+                          alt={visual.alt}
+                          fill
+                          sizes="(min-width: 768px) 33vw, 100vw"
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="p-5">
+                        {p.category && (
+                          <div className="font-mono text-[0.62rem] uppercase tracking-[0.06em] text-brass">
+                            {p.category}
+                          </div>
+                        )}
+                        <h3 className="mt-2 text-lg text-brand-indigo">{p.title}</h3>
+                        {p.answer && (
+                          <p className="mt-1.5 line-clamp-3 text-[0.88rem] text-muted">
+                            {p.answer}
+                          </p>
+                        )}
+                      </div>
+                    </Link>
+                  </Reveal>
+                );
+              })}
             </div>
-            <Link href="/blog" className="text-sm font-semibold text-brand-blue">
-              All articles
-            </Link>
-          </Reveal>
-          <div className="grid gap-5 md:grid-cols-3">
-            {JOURNAL_TEASERS.map((j, i) => (
-              <Reveal key={j.slug} className={revealDelays[i % 3]}>
-                <Link
-                  href={JOURNAL_POSTS_READY ? "/blog/" + j.slug : "/blog"}
-                  className="block h-full overflow-hidden rounded-2xl border border-brand-indigo/10 bg-white transition hover:-translate-y-1 hover:shadow-xl"
-                >
-                  <div className="relative aspect-[14/9]">
-                    <Image
-                      src={j.image}
-                      alt=""
-                      fill
-                      sizes="(min-width: 768px) 33vw, 100vw"
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <div className="font-mono text-[0.62rem] uppercase tracking-[0.06em] text-brass">
-                      {j.kicker}
-                    </div>
-                    <h3 className="mt-2 text-lg text-brand-indigo">{j.title}</h3>
-                    <p className="mt-1.5 text-[0.88rem] text-muted">{j.blurb}</p>
-                  </div>
-                </Link>
-              </Reveal>
-            ))}
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* LEAD FORM */}
       <section id="enquire" className="bg-brand-indigo-deep text-paper">

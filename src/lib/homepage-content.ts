@@ -62,7 +62,6 @@ export const CHECKS: Check[] = [
 // drafts and carry noindex on the page itself, but they are real pages and
 // linking to them beats the switcher going nowhere.
 export const AREA_PAGES_READY = true;
-export const JOURNAL_POSTS_READY = false;
 
 export type AreaPanel = {
   slug: string;
@@ -276,29 +275,6 @@ export type JournalTeaser = {
 };
 
 /** Section 11. Placeholders until the real posts exist. Slugs match plan/03-content-plan.md. */
-export const JOURNAL_TEASERS: JournalTeaser[] = [
-  {
-    kicker: "Paperwork",
-    title: "Stamp duty and registration in Mumbai, 2026",
-    blurb: "What you pay, on what basis, and the number most buyers get wrong.",
-    image: "/sections/journal-1.jpg",
-    slug: "stamp-duty-in-mumbai",
-  },
-  {
-    kicker: "Buying",
-    title: "What to check before you buy a resale flat in Borivali",
-    blurb: "The order we do it in, and the two checks people skip.",
-    image: "/sections/journal-2.jpg",
-    slug: "what-to-check-resale-flat-borivali",
-  },
-  {
-    kicker: "Redevelopment",
-    title: "Corpus fund: how it is calculated and what is fair",
-    blurb: "The number your committee will argue about for six months.",
-    image: "/sections/journal-3.jpg",
-    slug: "corpus-fund-in-redevelopment",
-  },
-];
 
 /**
  * Section 08. PLACEHOLDER NAMES. Nothing renders until real names replace
