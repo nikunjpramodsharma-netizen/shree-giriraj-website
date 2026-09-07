@@ -119,13 +119,51 @@ export default async function ProjectPage({
           breadcrumbNode(locale, trail),
         )}
       />
-      <section className="bg-brand-indigo-deep py-16 text-paper">
-        <div className="wrap grid items-center gap-12 md:grid-cols-[1fr_0.9fr]">
-          <div>
+      {/*
+        Full bleed hero using the project's own cover image, matching the
+        homepage and the service pages.
+
+        The cover was already in Sanity and was only being shown as a card
+        beside the text. A project is the most visual page on the site and it
+        had the least visual opening.
+      */}
+      <section className="relative overflow-hidden bg-brand-indigo-deep text-paper">
+        {/*
+          No project in the CMS carries a cover image yet, so without a
+          fallback every project hero rendered as a flat dark band. The real
+          cover wins the moment one is uploaded, and nothing here needs
+          changing when that happens.
+        */}
+        {true && (
+          <>
+            <Image
+              src={
+                project.coverImage
+                  ? urlFor(project.coverImage).width(2000).height(1200).url()
+                  : "/architecture-facade-2.jpg"
+              }
+              alt={
+                project.coverImage?.alt ||
+                `${project.name}${project.location ? `, ${project.location}` : ""}`
+              }
+              fill
+              priority
+              sizes="100vw"
+              className="hero-kenburns object-cover"
+            />
+            <span
+              aria-hidden="true"
+              className="absolute inset-0"
+              style={{ background: "linear-gradient(100deg, rgba(21,27,61,.92) 0%, rgba(21,27,61,.74) 45%, rgba(21,27,61,.34) 78%, rgba(21,27,61,.55) 100%), linear-gradient(180deg, rgba(21,27,61,.5) 0%, rgba(21,27,61,0) 32%, rgba(21,27,61,.85) 100%)" }}
+            />
+          </>
+        )}
+        <div className="wrap relative z-10 py-20 md:py-28">
+          <div className="max-w-3xl">
             <Link href="/projects" className="text-sm text-paper/60 hover:text-white">
               {t("backLink")}
             </Link>
-            <h1 className="mt-5 text-4xl md:text-5xl">{project.name}</h1>
+            <h1 className="mt-5 max-w-[20ch] text-4xl text-white md:text-6xl">{project.name}</h1>
             {project.location && (
               <p className="mt-2 text-paper/70">{project.location}</p>
             )}
@@ -156,18 +194,6 @@ export default async function ProjectPage({
             )}
           </div>
 
-          {project.coverImage && (
-            <div className="overflow-hidden rounded-2xl border border-brass/30 shadow-2xl">
-              <Image
-                src={urlFor(project.coverImage).width(760).height(950).url()}
-                alt={project.coverImage?.alt || project.name}
-                width={760}
-                height={950}
-                className="aspect-[4/5] w-full object-cover"
-                priority
-              />
-            </div>
-          )}
         </div>
       </section>
 
