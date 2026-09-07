@@ -396,50 +396,7 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* 03 CHECKS */}
-      <section className="bg-paper-alt py-24">
-        <div className="wrap">
-          <Reveal className="mb-11 max-w-2xl">
-            <div className="eyebrow">Before you sign</div>
-            <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
-              Six things we look at that a listing will never tell you
-            </h2>
-            <p className="mt-3.5 text-[1.04rem] text-muted">
-              This is the part of the job that does not fit in a photograph.
-            </p>
-          </Reveal>
-          <div className="grid gap-9 md:grid-cols-[.85fr_1.15fr] md:items-start md:gap-14">
-            <div className="relative aspect-[5/4] overflow-hidden rounded-xl md:sticky md:top-6">
-              <Image
-                src="/sections/checks.jpg"
-                alt="Keys and building plans on a desk"
-                fill
-                sizes="(min-width: 768px) 40vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-            <ChecksAccordion checks={CHECKS} />
-          </div>
-        </div>
-      </section>
-
-      {/* 04 AREAS */}
-      <section className="bg-brand-indigo-deep py-24 text-paper">
-        <div className="wrap">
-          <Reveal className="mb-11 max-w-2xl">
-            <div className="eyebrow text-brass-bright">{tAreas("eyebrow")}</div>
-            <h2 className="mt-3.5 text-3xl text-white md:text-4xl">
-              Three suburbs, one office, since 1996
-            </h2>
-            <p className="mt-3.5 text-[1.04rem] text-paper/70">
-              Pick the one you are looking at.
-            </p>
-          </Reveal>
-          <AreaSwitcher panels={AREA_PANELS} />
-        </div>
-      </section>
-
-      {/* 05 SERVICES */}
+      {/* 03 SERVICES */}
       <section id="services" className="bg-paper-alt py-24">
         <div className="wrap">
           <Reveal className="mb-11 max-w-2xl">
@@ -501,6 +458,49 @@ export default async function HomePage({
           </Reveal>
         </div>
       </section>
+      {/* 04 CHECKS */}
+      <section className="py-24">
+        <div className="wrap">
+          <Reveal className="mb-11 max-w-2xl">
+            <div className="eyebrow">Before you sign</div>
+            <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
+              Six things we look at that a listing will never tell you
+            </h2>
+            <p className="mt-3.5 text-[1.04rem] text-muted">
+              This is the part of the job that does not fit in a photograph.
+            </p>
+          </Reveal>
+          <div className="grid gap-9 md:grid-cols-[.85fr_1.15fr] md:items-start md:gap-14">
+            <div className="relative aspect-[5/4] overflow-hidden rounded-xl md:sticky md:top-6">
+              <Image
+                src="/sections/checks.jpg"
+                alt="Keys and building plans on a desk"
+                fill
+                sizes="(min-width: 768px) 40vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <ChecksAccordion checks={CHECKS} />
+          </div>
+        </div>
+      </section>
+
+      {/* 05 AREAS */}
+      <section className="bg-brand-indigo-deep py-24 text-paper">
+        <div className="wrap">
+          <Reveal className="mb-11 max-w-2xl">
+            <div className="eyebrow text-brass-bright">{tAreas("eyebrow")}</div>
+            <h2 className="mt-3.5 text-3xl text-white md:text-4xl">
+              Three suburbs, one office, since 1996
+            </h2>
+            <p className="mt-3.5 text-[1.04rem] text-paper/70">
+              Pick the one you are looking at.
+            </p>
+          </Reveal>
+          <AreaSwitcher panels={AREA_PANELS} />
+        </div>
+      </section>
+
       {/* 07 FEATURED PROJECT */}
       {featured && (
         <section className="relative overflow-hidden bg-brand-indigo-deep text-paper">
