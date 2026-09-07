@@ -2,6 +2,8 @@
 title: "Occupancy certificate: why taking possession without one is a mistake"
 slug: occupancy-certificate
 category: Paperwork
+heroImage: /blog/occupancy-certificate.jpg
+heroAlt: "Balconies on a newly finished apartment building"
 targetKeyword: occupancy certificate
 searchVolume: 12100
 competition: LOW

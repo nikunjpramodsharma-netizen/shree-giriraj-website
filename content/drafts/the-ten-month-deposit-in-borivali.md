@@ -2,6 +2,8 @@
 title: "The ten month deposit in the western suburbs, and when it is negotiable"
 slug: the-ten-month-deposit-in-borivali
 category: Renting
+heroImage: /blog/deposit-keys.jpg
+heroAlt: "One set of keys passing from one hand to another"
 targetKeyword: none measured
 searchVolume: 0
 funnelStage: consideration

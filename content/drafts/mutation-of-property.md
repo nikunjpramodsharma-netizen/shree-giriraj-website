@@ -2,6 +2,8 @@
 title: "Mutation of property: what it is, and what it is not"
 slug: mutation-of-property
 category: Paperwork
+heroImage: /blog/mutation.jpg
+heroAlt: "A person writing at a records counter"
 targetKeyword: mutation of property
 searchVolume: 6600
 competition: LOW

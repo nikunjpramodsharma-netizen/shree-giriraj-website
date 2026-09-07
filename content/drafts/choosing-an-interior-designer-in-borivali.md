@@ -2,6 +2,8 @@
 title: "Choosing an interior designer in Borivali: what to ask before you pay an advance"
 slug: choosing-an-interior-designer-in-borivali
 category: Interiors
+heroImage: /blog/interior-designer.jpg
+heroAlt: "Hands laying out laminate and fabric samples on a table"
 targetKeyword: interior designer borivali
 searchVolume: 480
 cpc: 1.30

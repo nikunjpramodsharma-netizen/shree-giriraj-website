@@ -2,6 +2,8 @@
 title: "Carpet area, built up and super built up: what you are actually paying for"
 slug: carpet-area-vs-built-up-area
 category: Buying
+heroImage: /blog/carpet-area.jpg
+heroAlt: "A room plan on a desk with a tape measure and a pen"
 targetKeyword: carpet area vs built up area
 searchVolume: 3600
 competition: LOW

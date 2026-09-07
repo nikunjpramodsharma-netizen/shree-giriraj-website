@@ -2,6 +2,8 @@
 title: "Encumbrance certificate: what it proves, and what it does not"
 slug: encumbrance-certificate
 category: Paperwork
+heroImage: /blog/encumbrance.jpg
+heroAlt: "A drawer of index cards in a record room"
 targetKeyword: encumbrance certificate
 searchVolume: 135000
 competition: LOW

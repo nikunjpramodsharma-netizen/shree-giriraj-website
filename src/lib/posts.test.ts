@@ -1,3 +1,5 @@
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import { describe, it, expect } from "vitest";
 import { getPost, getPostSlugs, getAllPosts, getRelated, displayDate } from "./posts";
 
@@ -78,5 +80,39 @@ describe("related posts", () => {
 
   it("returns at most the limit", () => {
     expect(getRelated(getPost("carpet-area-vs-built-up-area")!, 3).length).toBeLessThanOrEqual(3);
+  });
+});
+
+describe("every post brings its own hero image", () => {
+  /**
+   * Before this, a post with no image of its own fell back to one of six
+   * category pictures. Ten of the thirteen drafts are filed under Paperwork,
+   * so ten articles opened with the identical photograph and the index looked
+   * like one article printed ten times.
+   */
+  const posts = getAllPosts();
+
+  it("sets heroImage on all of them", () => {
+    const missing = posts.filter((p) => !p.heroImage).map((p) => p.slug);
+    expect(missing).toEqual([]);
+  });
+
+  it("never uses the same photograph twice", () => {
+    const used = posts.map((p) => p.heroImage);
+    expect(new Set(used).size).toBe(used.length);
+  });
+
+  it("points at a file that is actually in public", () => {
+    for (const p of posts) {
+      const file = join(process.cwd(), "public", p.heroImage!.replace(/^\//, ""));
+      expect(existsSync(file), `${p.slug} -> ${p.heroImage}`).toBe(true);
+    }
+  });
+
+  it("describes the picture, so a screen reader gets something useful", () => {
+    for (const p of posts) {
+      expect(p.heroAlt, p.slug).toBeTruthy();
+      expect(p.heroAlt!.length, p.slug).toBeGreaterThan(15);
+    }
   });
 });

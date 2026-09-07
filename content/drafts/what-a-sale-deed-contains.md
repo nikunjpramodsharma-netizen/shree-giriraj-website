@@ -2,6 +2,8 @@
 title: "What a sale deed actually contains, clause by clause"
 slug: what-a-sale-deed-contains
 category: Paperwork
+heroImage: /blog/sale-deed.jpg
+heroAlt: "A magnifying glass over the small print of an agreement"
 targetKeyword: sale deed
 searchVolume: 12100
 competition: LOW

@@ -2,6 +2,8 @@
 title: "Stamp duty and registration charges in Mumbai"
 slug: stamp-duty-and-registration-charges-mumbai
 category: Paperwork
+heroImage: /blog/stamp-duty.jpg
+heroAlt: "A wooden stamp resting on a legal document"
 targetKeyword: stamp duty and registration charges in mumbai
 searchVolume: 3600
 competition: LOW

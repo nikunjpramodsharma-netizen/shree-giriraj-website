@@ -40,6 +40,13 @@ export type PostMeta = {
   searchVolume?: number;
   answer?: string;
   note?: string;
+  /**
+   * This post's own hero image. Without one the category fallback applies,
+   * which meant ten paperwork posts opened with the identical photograph and
+   * the blog looked like one article repeated.
+   */
+  heroImage?: string;
+  heroAlt?: string;
   sources: { label: string; url?: string }[];
   sourcesCheckedOn?: string;
   readNext: string[];
@@ -119,6 +126,8 @@ export function getPost(slug: string): Post | null {
       typeof data.searchVolume === "number" ? data.searchVolume : undefined,
     answer,
     note: asString(data.note),
+    heroImage: asString(data.heroImage),
+    heroAlt: asString(data.heroAlt),
     sources: asSources(data.sources),
     sourcesCheckedOn: asString(data.sourcesCheckedOn),
     readNext: asStringList(data.readNext),

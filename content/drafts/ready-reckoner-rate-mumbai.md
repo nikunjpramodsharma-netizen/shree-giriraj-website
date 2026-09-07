@@ -2,6 +2,8 @@
 title: "Ready reckoner rates in Mumbai, and what they mean for your stamp duty"
 slug: ready-reckoner-rate-mumbai
 category: Paperwork
+heroImage: /blog/ready-reckoner.jpg
+heroAlt: "Mumbai from above, dense residential blocks to the horizon"
 targetKeyword: ready reckoner rate mumbai
 searchVolume: 4400
 competition: LOW

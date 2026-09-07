@@ -2,6 +2,8 @@
 title: "Index 2: the one page your buyer will ask for"
 slug: index-2-property-document
 category: Paperwork
+heroImage: /blog/index-2.jpg
+heroAlt: "A single page being handed across a desk"
 targetKeyword: index 2 property
 searchVolume: 590
 competition: LOW

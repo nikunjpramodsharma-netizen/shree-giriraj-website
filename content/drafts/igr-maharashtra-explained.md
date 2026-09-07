@@ -2,6 +2,8 @@
 title: "IGR Maharashtra: what it is and how to actually use it"
 slug: igr-maharashtra-explained
 category: Paperwork
+heroImage: /blog/igr-maharashtra.jpg
+heroAlt: "Two people filling in an online form on a laptop"
 targetKeyword: igr maharashtra
 searchVolume: 246000
 competition: LOW

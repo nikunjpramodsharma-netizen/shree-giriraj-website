@@ -189,7 +189,9 @@ export default async function BlogPage({
 }
 
 function MarkdownCard({ post }: { post: MdPost }) {
-  const visual = categoryVisual(post.category ? [post.category] : undefined);
+  const visual = post.heroImage
+    ? { image: post.heroImage, alt: post.heroAlt || post.title }
+    : categoryVisual(post.category ? [post.category] : undefined);
   return (
     <Link
       href={`/blog/${post.slug}`}

@@ -2,6 +2,8 @@
 title: "Conveyance and deemed conveyance for a Mumbai society"
 slug: conveyance-and-deemed-conveyance
 category: Paperwork
+heroImage: /blog/conveyance.jpg
+heroAlt: "Residential society buildings at dusk"
 targetKeyword: conveyance deed
 searchVolume: 8100
 competition: LOW

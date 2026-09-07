@@ -24,7 +24,16 @@ export function MarkdownPost({
   post: Post;
   locale: string;
 }) {
-  const visual = categoryVisual(post.category ? [post.category] : undefined);
+  /**
+   * A post's own image always wins. The category image is the fallback, and it
+   * is only ever a fallback: a specific photograph beats a generic one, and
+   * ten posts sharing a stock photo of paperwork made the blog look like a
+   * single article published thirteen times.
+   */
+  const fallback = categoryVisual(post.category ? [post.category] : undefined);
+  const visual = post.heroImage
+    ? { image: post.heroImage, alt: post.heroAlt || post.title }
+    : fallback;
   const headings = post.blocks.filter(
     (b): b is Extract<typeof b, { t: "h2" }> => b.t === "h2",
   );

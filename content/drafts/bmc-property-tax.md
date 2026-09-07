@@ -2,6 +2,8 @@
 title: "BMC property tax: how it is calculated, and whether you are exempt"
 slug: bmc-property-tax
 category: Paperwork
+heroImage: /blog/bmc-property-tax.jpg
+heroAlt: "A calculator and a stack of bills on a desk"
 targetKeyword: bmc property tax
 searchVolume: 18100
 competition: LOW
