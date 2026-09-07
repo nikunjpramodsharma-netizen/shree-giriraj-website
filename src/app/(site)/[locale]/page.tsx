@@ -22,8 +22,6 @@ import {
   PROPERTY_TYPES,
   TYPED_INTENTS,
   SERVICE_PANELS,
-  TEAM,
-  TEAM_IS_REAL,
 } from "@/lib/homepage-content";
 import { ContactCTA } from "@/components/ContactCTA";
 import { FAQSection } from "@/components/FAQSection";
@@ -459,7 +457,10 @@ export default async function HomePage({
         </div>
       </section>
       {/* 04 CHECKS */}
-      <section className="py-24">
+      {/* Alt tone so it separates from the compare section above it. Removing
+          the people section changed the rhythm, and two flat light sections
+          back to back read as one long block with no boundary. */}
+      <section className="bg-paper-alt py-24">
         <div className="wrap">
           <Reveal className="mb-11 max-w-2xl">
             <div className="eyebrow">Before you sign</div>
@@ -567,49 +568,6 @@ export default async function HomePage({
           </div>
         </section>
       )}
-
-      {/* 08 THE PEOPLE */}
-      <section className="py-24">
-        <div className="wrap">
-          <div className="grid gap-9 md:grid-cols-2 md:items-center md:gap-14">
-            <Reveal>
-              <div className="relative aspect-[5/4] overflow-hidden rounded-xl">
-                <Image
-                  src="/sections/people.jpg"
-                  alt="Handing over keys across a desk"
-                  fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-            </Reveal>
-            <Reveal>
-              <div className="eyebrow">Since {site.established}</div>
-              <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
-                The same shop, the same street, the same family
-              </h2>
-              <p className="mt-4 text-muted">
-                We opened in Chikoowadi in {site.established} and never moved. That is long
-                enough to have sold flats in the same building twice, and to remember why
-                the second sale was harder than the first.
-              </p>
-              {TEAM_IS_REAL ? (
-                <ul className="mt-6 flex flex-col gap-4">
-                  {TEAM.map((m) => (
-                    <li key={m.name} className="flex items-baseline gap-3.5">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brass" />
-                      <span>
-                        <b className="font-semibold text-ink">{m.name}</b>{" "}
-                        <span className="text-[0.93rem] text-muted">{m.role}</span>
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-            </Reveal>
-          </div>
-        </div>
-      </section>
 
       {/* TESTIMONIALS */}
       {realTestimonials.length > 0 && (

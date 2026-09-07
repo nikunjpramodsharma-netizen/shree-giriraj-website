@@ -138,6 +138,27 @@ export default function AboutPage({
           ))}
         </dl>
 
+        {/*
+          The one paragraph of real story the site has. It was the homepage
+          people section, which was removed: a stock photo of a foreign office
+          under the words "the same shop, the same street, the same family"
+          contradicted its own claim, and the team list beneath it was empty.
+
+          The sentence about selling in the same building twice is the best on
+          the site, so it moved here rather than being deleted with the
+          section. About is where somebody has come looking for exactly this.
+        */}
+        <div className="mt-12 max-w-[68ch]">
+          <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass">
+            The same shop, the same street
+          </div>
+          <p className="mt-3 text-lg text-ink/85">
+            We opened in Chikoowadi in {site.established} and never moved. That
+            is long enough to have sold flats in the same building twice, and to
+            remember why the second sale was harder than the first.
+          </p>
+        </div>
+
         <div className="mt-12 space-y-12">
           {STORY_PROMPTS.map((s) => (
             <section
