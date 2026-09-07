@@ -11,8 +11,6 @@ up, raised only when asked.
 - **Homepage journal section is hidden** while no post is publishable. It
   returns on its own the moment one draft is finished. No action needed, just
   worth knowing why the homepage is one section shorter than it was.
-- **Lead delivery by email** rather than writing to the public Sanity dataset.
-  Design change, not a bug fix. The form cannot save either way today.
 - **Analytics** are not wired. Matters before ads start, not before launch.
 - **Author document** would turn on bylines, author boxes and schema author.
 - **Real photography** everywhere. Every image is currently stock.
