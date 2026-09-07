@@ -218,30 +218,6 @@ export const SITUATIONS: Situation[] = [
       "The society NOC and the outstanding dues surface three weeks in, and the buyer walks. Sort them before listing.",
   },
   {
-    key: "bungalow",
-    label: "Bungalow",
-    heading: "Buying a bungalow in {area}",
-    body: "You are buying land with a structure on it, not a flat, so the value and the risk both sit in the title to the land rather than in the building.",
-    warning:
-      "The title chain on independent land is longer and older than on a society flat, and it is where the problems hide. Search thirty years, not thirteen.",
-  },
-  {
-    key: "shops",
-    label: "Shop or office",
-    heading: "Shops and offices in {area}",
-    body: "Commercial property is priced on what the space can earn rather than on what it costs to live in, so the tenant you can realistically attract sets the value.",
-    warning:
-      "Whether the unit is actually permitted for the use you have in mind. A residential unit being used as an office is not the same as a commercial one.",
-  },
-  {
-    key: "plots",
-    label: "Plot",
-    heading: "Buying a plot in {area}",
-    body: "With no building to inspect, everything rests on the paperwork: the title chain, what the land is zoned for, and what you are actually permitted to build.",
-    warning:
-      "Land use and permitted development. A plot you cannot build what you want on is a very expensive piece of ground.",
-  },
-  {
     key: "redevelop",
     label: "Redevelop our society",
     heading: "Redevelopment in {area}",
@@ -258,6 +234,60 @@ export const SITUATIONS: Situation[] = [
       "The society rules. Find out what you are allowed to move before you pay a designer to draw it.",
   },
 ];
+
+/**
+ * The middle row: what kind of property.
+ *
+ * Kept separate from intent on purpose. "Buy" and "Plot" are answers to two
+ * different questions, and putting them in one row asked the reader to hold
+ * both at once. Splitting them also means the lead that reaches us says what
+ * somebody wants AND what kind of thing it is, from clicks alone.
+ *
+ * `phrase` exists because the WhatsApp message is a sentence. "a flat" reads,
+ * "a something else" does not.
+ */
+export type PropertyType = {
+  key: string;
+  label: string;
+  phrase: string;
+  note: string;
+};
+
+export const PROPERTY_TYPES: PropertyType[] = [
+  {
+    key: "flat",
+    label: "Flat",
+    phrase: "a flat",
+    note: "The society decides more than the flat does: the dues, the NOC, the rules on what you may change, and who is above and below you.",
+  },
+  {
+    key: "bungalow",
+    label: "Bungalow",
+    phrase: "a bungalow",
+    note: "You are buying land with a structure on it, so both the value and the risk sit in the title to the land rather than in the building.",
+  },
+  {
+    key: "shop",
+    label: "Shop or office",
+    phrase: "a shop or office",
+    note: "Priced on what the space can earn rather than what it costs to live in. Check the unit is actually permitted for the use you have in mind.",
+  },
+  {
+    key: "plot",
+    label: "Plot",
+    phrase: "a plot",
+    note: "There is no building to inspect, so everything rests on the title chain, the zoning, and what you are permitted to build.",
+  },
+  {
+    key: "other",
+    label: "Something else",
+    phrase: "something else",
+    note: "Godown, garage, a share in a family property, something that does not fit a box. Tell us what it is and we will tell you what to check.",
+  },
+];
+
+/** Property type is only a meaningful question for these three intents. */
+export const TYPED_INTENTS = ["buy", "rent", "sell"] as const;
 
 export const SITUATION_AREAS = [
   "Borivali",

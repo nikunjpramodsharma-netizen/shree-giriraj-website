@@ -19,6 +19,8 @@ import {
   AREA_PANELS,
   SITUATIONS,
   SITUATION_AREAS,
+  PROPERTY_TYPES,
+  TYPED_INTENTS,
   SERVICE_PANELS,
   TEAM,
   TEAM_IS_REAL,
@@ -385,7 +387,12 @@ export default async function HomePage({
               before you speak to anybody, including us.
             </p>
           </Reveal>
-          <SituationTool situations={SITUATIONS} areas={SITUATION_AREAS} />
+          <SituationTool
+            situations={SITUATIONS}
+            types={PROPERTY_TYPES}
+            typedIntents={TYPED_INTENTS}
+            areas={SITUATION_AREAS}
+          />
         </div>
       </section>
 

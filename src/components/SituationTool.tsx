@@ -3,33 +3,54 @@
 import Image from "next/image";
 import { useState } from "react";
 import { waLink } from "@/lib/config";
-import type { Situation } from "@/lib/homepage-content";
+import type { Situation, PropertyType } from "@/lib/homepage-content";
 
 /**
- * Section 04. The answer to a portal's search box for a firm with no inventory
- * to search. Two taps, then something genuinely useful, then a WhatsApp
- * message already written.
+ * The answer to a portal's search box, for a firm with no inventory to search.
+ * A few taps, then something genuinely useful, then a WhatsApp message already
+ * written.
  *
  * No email field and no submit. The value is given before anything is asked
  * for, which is the opposite of a gated form.
+ *
+ * THREE ROWS, NOT TWO
+ *
+ * Intent and property type used to sit in one row, so "Buy" and "Plot" were
+ * offered as if they answered the same question. They do not. Splitting them
+ * asks one thing at a time, and it means the message that reaches us says what
+ * somebody wants AND what kind of property, from clicks alone.
+ *
+ * The type row only appears for buy, rent and sell. Asking a society what type
+ * of property it is redeveloping would be noise.
  */
 export function SituationTool({
   situations,
+  types,
+  typedIntents,
   areas,
 }: {
   situations: Situation[];
+  types: PropertyType[];
+  typedIntents: readonly string[];
   areas: readonly string[];
 }) {
   const [intent, setIntent] = useState<string | null>(null);
+  const [type, setType] = useState<string | null>(null);
   const [area, setArea] = useState<string | null>(null);
 
   const chosen = situations.find((s) => s.key === intent);
+  const chosenType = types.find((t) => t.key === type);
+  const needsType = intent !== null && typedIntents.includes(intent);
   const areaLabel = area === "Not sure yet" ? "the western suburbs" : area;
-  const ready = Boolean(chosen && area);
+
+  // The result waits for a type only where a type is a real question.
+  const ready = Boolean(chosen && area && (!needsType || chosenType));
 
   const message =
     chosen && area
-      ? `Hi Shree Giriraj, I am looking to ${chosen.label.toLowerCase()} in ${area}. Can you help?`
+      ? needsType && chosenType
+        ? `Hi Shree Giriraj, I am looking to ${chosen.label.toLowerCase()} ${chosenType.phrase} in ${area}. Can you help?`
+        : `Hi Shree Giriraj, I am looking to ${chosen.label.toLowerCase()} in ${area}. Can you help?`
       : "";
 
   const pill = (on: boolean) =>
@@ -39,21 +60,27 @@ export function SituationTool({
         : "border-line bg-paper text-ink hover:border-muted"
     }`;
 
+  const legend =
+    "mb-2.5 text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-muted";
+
   return (
     <div className="overflow-hidden rounded-2xl border border-line bg-paper-alt">
       <div className="grid lg:grid-cols-[1fr_.8fr]">
         <div className="p-8">
           <fieldset className="mb-6">
-            <legend className="mb-2.5 text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-muted">
-              I am looking to
-            </legend>
+            <legend className={legend}>I am looking to</legend>
             <div className="flex flex-wrap gap-2">
               {situations.map((s) => (
                 <button
                   key={s.key}
                   type="button"
                   aria-pressed={intent === s.key}
-                  onClick={() => setIntent(s.key)}
+                  onClick={() => {
+                    setIntent(s.key);
+                    // Clear a type that no longer applies, or a stale answer
+                    // would ride along into the message.
+                    if (!typedIntents.includes(s.key)) setType(null);
+                  }}
                   className={pill(intent === s.key)}
                 >
                   {s.label}
@@ -62,10 +89,27 @@ export function SituationTool({
             </div>
           </fieldset>
 
+          {needsType && (
+            <fieldset className="mb-6">
+              <legend className={legend}>What kind of property</legend>
+              <div className="flex flex-wrap gap-2">
+                {types.map((t) => (
+                  <button
+                    key={t.key}
+                    type="button"
+                    aria-pressed={type === t.key}
+                    onClick={() => setType(t.key)}
+                    className={pill(type === t.key)}
+                  >
+                    {t.label}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
+          )}
+
           <fieldset className="mb-6">
-            <legend className="mb-2.5 text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-muted">
-              In
-            </legend>
+            <legend className={legend}>In</legend>
             <div className="flex flex-wrap gap-2">
               {areas.map((a) => (
                 <button
@@ -88,8 +132,20 @@ export function SituationTool({
                   {chosen.heading.replace("{area}", areaLabel ?? "")}
                 </h3>
                 <p className="mb-3 text-[0.96rem] text-muted">{chosen.body}</p>
+
+                {/* The type note sits with the intent guidance rather than
+                    replacing it, so a buyer gets both what buying involves and
+                    what this kind of property involves. */}
+                {chosenType && (
+                  <p className="mb-3 text-[0.96rem] text-muted">
+                    <b className="text-ink">{chosenType.label}.</b>{" "}
+                    {chosenType.note}
+                  </p>
+                )}
+
                 <p className="border-l-2 border-brass pl-3.5 text-[0.94rem] text-muted">
-                  <b className="text-ink">Usually goes wrong:</b> {chosen.warning}
+                  <b className="text-ink">Usually goes wrong:</b>{" "}
+                  {chosen.warning}
                 </p>
                 <a
                   href={waLink(message)}
