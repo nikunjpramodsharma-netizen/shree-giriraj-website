@@ -7,6 +7,8 @@ import { MarkdownBody } from "@/components/MarkdownBody";
 import { graph, breadcrumbNode, blogPostingNode } from "@/lib/schema";
 import { categoryVisual, formatDate } from "@/lib/blog";
 import { displayDate, getRelated, type Post } from "@/lib/posts";
+import { plainText } from "@/lib/markdown";
+import { termsIn } from "@/lib/glossary";
 
 /**
  * A blog post rendered from markdown in the repo.
@@ -40,6 +42,7 @@ export function MarkdownPost({
   const showToc = headings.length >= 3;
   const related = getRelated(post, 3);
   const checked = displayDate(post.sourcesCheckedOn);
+  const terms = termsIn(plainText(post.blocks), { notAbout: post.title });
 
   const trail: Crumb[] = [
     { name: "Home", path: "/" },
@@ -128,6 +131,29 @@ export function MarkdownPost({
           )}
 
           <MarkdownBody blocks={post.blocks} />
+
+          {/* Plain words for the jargon this particular post uses. Property
+              writing carries a few words that stop a first time buyer dead,
+              and they are so ordinary inside the trade that they stop reading
+              as jargon. Only the terms actually used are shown. */}
+          {terms.length > 0 && (
+            <div className="mt-12 max-w-[68ch] rounded-xl bg-paper-alt p-6">
+              <h2 className="text-lg text-ink">Words you will see</h2>
+              <p className="mt-1 text-sm text-muted">
+                Plain meanings for the terms used above.
+              </p>
+              <dl className="mt-4 space-y-3">
+                {terms.map((t) => (
+                  <div key={t.term}>
+                    <dt className="text-sm font-semibold text-brand-indigo">
+                      {t.term}
+                    </dt>
+                    <dd className="mt-0.5 text-sm text-ink/75">{t.plain}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          )}
 
           {post.sources.length > 0 && (
             <div className="mt-12 max-w-[68ch] rounded-xl border border-line p-5">

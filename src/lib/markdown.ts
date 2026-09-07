@@ -342,3 +342,23 @@ export function wordCount(blocks: Block[]): number {
   }
   return n;
 }
+
+/**
+ * Everything a reader would actually read, as one string.
+ *
+ * Used to work out which glossary terms a post uses. It reads the rendered
+ * spans rather than the raw markdown so a word that only appears inside a
+ * frontmatter note, a source label or an unwritten marker does not count as
+ * something the reader has met.
+ */
+export function plainText(blocks: Block[]): string {
+  const out: string[] = [];
+  const join = (spans: Inline[]) => spans.map((x) => x.v).join(" ");
+  for (const b of blocks) {
+    if (b.t === "p" || b.t === "quote") out.push(join(b.spans));
+    else if (b.t === "ul" || b.t === "ol") out.push(b.items.map(join).join(" "));
+    else if (b.t === "h2" || b.t === "h3") out.push(b.text);
+    else if (b.t === "table") out.push(b.head.join(" "), b.rows.flat().join(" "));
+  }
+  return out.join("\n");
+}
