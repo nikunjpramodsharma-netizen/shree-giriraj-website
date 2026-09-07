@@ -67,7 +67,24 @@ export function ServiceTrack({ panels }: { panels: ServicePanel[] }) {
               <span className="font-mono text-[0.64rem] tracking-[0.1em] text-brass-bright">
                 {p.n}
               </span>
-              <h3 className="font-display text-xl leading-tight text-white md:text-2xl">
+              {/*
+                A closed panel is about a tenth of the row, and no readable
+                horizontal size fits "Redevelopment advisory" in that. It was
+                wrapping to three lines and clipping.
+
+                So a closed title is set vertically, reading bottom to top,
+                which is what the width actually allows. It returns to
+                horizontal when the panel opens, and stays horizontal on narrow
+                screens where the track is a column and every panel is full
+                width.
+              */}
+              <h3
+                className={`font-display leading-tight text-white ${
+                  isOpen
+                    ? "text-xl md:text-2xl"
+                    : "text-xl md:whitespace-nowrap md:text-2xl md:[writing-mode:vertical-rl] md:rotate-180"
+                }`}
+              >
                 {p.title}
               </h3>
               <div
