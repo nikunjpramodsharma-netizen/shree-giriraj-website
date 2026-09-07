@@ -371,11 +371,11 @@ export default async function HomePage({
           <Reveal className="mb-11 max-w-2xl">
             <div className="eyebrow">Two questions</div>
             <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
-              Tell us the situation and we will tell you what usually goes wrong
+              Tell us what you are looking for. We will tell you where to start.
             </h2>
             <p className="mt-3.5 text-[1.04rem] text-muted">
-              Not a search box. There is nothing to search. This tells you what to watch
-              for before you speak to anybody, including us.
+              Pick what you are doing and where. We will tell you what matters most,
+              before you speak to anybody, including us.
             </p>
           </Reveal>
           <SituationTool situations={SITUATIONS} areas={SITUATION_AREAS} />

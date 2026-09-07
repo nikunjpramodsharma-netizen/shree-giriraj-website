@@ -219,6 +219,30 @@ export const SITUATIONS: Situation[] = [
       "The society NOC and the outstanding dues surface three weeks in, and the buyer walks. Sort them before listing.",
   },
   {
+    key: "bungalow",
+    label: "Bungalow",
+    heading: "Buying a bungalow in {area}",
+    body: "You are buying land with a structure on it, not a flat, so the value and the risk both sit in the title to the land rather than in the building.",
+    warning:
+      "The title chain on independent land is longer and older than on a society flat, and it is where the problems hide. Search thirty years, not thirteen.",
+  },
+  {
+    key: "shops",
+    label: "Shop or office",
+    heading: "Shops and offices in {area}",
+    body: "Commercial property is priced on what the space can earn rather than on what it costs to live in, so the tenant you can realistically attract sets the value.",
+    warning:
+      "Whether the unit is actually permitted for the use you have in mind. A residential unit being used as an office is not the same as a commercial one.",
+  },
+  {
+    key: "plots",
+    label: "Plot",
+    heading: "Buying a plot in {area}",
+    body: "With no building to inspect, everything rests on the paperwork: the title chain, what the land is zoned for, and what you are actually permitted to build.",
+    warning:
+      "Land use and permitted development. A plot you cannot build what you want on is a very expensive piece of ground.",
+  },
+  {
     key: "redevelop",
     label: "Redevelop our society",
     heading: "Redevelopment in {area}",
