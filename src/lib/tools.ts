@@ -27,7 +27,8 @@ export type Tool = {
     | "hra"
     | "interiors"
     | "capitalGains"
-    | "propertyTax";
+    | "propertyTax"
+    | "rentalYield";
   title: string;
   metaTitle: string;
   metaDescription: string;
@@ -381,6 +382,64 @@ const propertyTaxTool: Tool = {
   ],
 };
 
+/**
+ * The largest single opportunity in the investment cluster, and the reason it
+ * is a tool rather than another article: "rental yield calculator" runs about
+ * 1,900 searches a month in India at low competition, measured on
+ * 8 September 2026, against 260 for the best keyword the advisory page itself
+ * can target. People want the number, not the essay.
+ *
+ * It carries no benchmark and no verdict, deliberately. See src/lib/yield.ts.
+ */
+const rentalYieldTool: Tool = {
+  slug: "rental-yield-calculator",
+  component: "rentalYield",
+  title: "Rental yield calculator",
+  metaTitle: "Rental yield calculator: gross and net yield on an Indian flat",
+  metaDescription:
+    "Work out the gross and net rental yield on a flat, after society maintenance, property tax, vacancy and the stamp duty and brokerage that are capital too. No benchmarks, just your own arithmetic.",
+  answer:
+    "Gross rental yield is annual rent divided by the purchase price. Net yield divides income after society maintenance, property tax, repairs and vacancy by the price plus stamp duty, registration, brokerage and fit out. Net is the figure that matters, and on an Indian flat it is usually well below gross.",
+  intro: [
+    "Almost every yield calculator asks for a price and a rent, divides one by the other and stops. That is gross yield, and it is the most flattering number available. It assumes the flat is never empty, that owning it costs nothing, and that the price is the only money you put in.",
+    "None of those hold. Society maintenance on an older Mumbai building is not a rounding error, property tax and repairs are real, tenants leave, and stamp duty, registration, brokerage and the fit out needed to let the flat are capital that has to earn its return exactly as the price does.",
+    "So this shows gross and net together, and puts the gap between them on screen as its own figure. The second mode runs the question backwards: tell it the return you need, and it says what monthly rent would have to be true to reach it. That is the version worth taking to a viewing.",
+  ],
+  limits: [
+    "It carries no benchmark and will never tell you a yield is good or bad. Yields vary by building, floor and pocket, and a figure quoted for a whole suburb tells you nothing about one flat.",
+    "Net income here is before income tax and before any loan. A geared return is a different calculation and needs assumptions about the loan this tool does not ask for.",
+    "It says nothing about resale. Payback is measured on rent alone, and rent is only half of what a property investment returns.",
+    "Every figure it produces is arithmetic on what you typed. It is a planning tool, not a valuation and not investment advice.",
+  ],
+  faqs: [
+    {
+      q: "What is a good rental yield?",
+      a: "We will not give you a number, and be careful with anyone who does without seeing the flat. What a yield should be depends on the building, the pocket, what you paid and what else you could have done with the money. Work out the figure for the specific property and judge it against your own alternatives.",
+    },
+    {
+      q: "What is the difference between gross and net rental yield?",
+      a: "Gross yield is annual rent divided by the purchase price, with nothing taken off. Net yield takes society maintenance, property tax, repairs and expected vacancy off the rent, and adds stamp duty, registration, brokerage and fit out to the capital. Net is what the flat actually pays you.",
+    },
+    {
+      q: "How do I calculate rental yield?",
+      a: "For gross yield, multiply the monthly rent by twelve and divide by the purchase price, then multiply by a hundred. For net yield, subtract a year of maintenance, property tax and repairs from the rent you expect to collect, then divide by the price plus all your buying costs.",
+    },
+    {
+      q: "Should stamp duty be included in a rental yield calculation?",
+      a: "In the net figure, yes. Stamp duty and registration in Mumbai run to several percent of the price and are paid in cash on top of it. That money is committed to the investment and cannot earn anywhere else, so leaving it out of the capital overstates the return.",
+    },
+    {
+      q: "Does rental yield tell me whether a property is a good investment?",
+      a: "Only half of it. Yield measures the income while you hold the flat. The other half is what the resale market gives you when you sell, which nobody can calculate in advance. A property can have a modest yield and still work, or a strong yield and be hard to sell.",
+    },
+  ],
+  readNext: [
+    { label: "Property investment advisory", href: "/services/investment-advisory" },
+    { label: "Stamp duty and registration calculator", href: "/tools/stamp-duty-calculator-mumbai" },
+    { label: "Carpet area and loading", href: "/tools/carpet-area-calculator" },
+  ],
+};
+
 export const TOOLS: Tool[] = [
   stampDutyTool,
   areaTool,
@@ -389,6 +448,7 @@ export const TOOLS: Tool[] = [
   propertyTaxTool,
   capitalGainsTool,
   emiTool,
+  rentalYieldTool,
 ];
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug);

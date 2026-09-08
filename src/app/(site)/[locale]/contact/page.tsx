@@ -32,7 +32,7 @@ export async function generateMetadata({
   if (params.locale !== CONTACT_LOCALE) return {};
   return {
     title: `Contact ${site.name}, Borivali West`,
-    description: `Talk to us about buying, selling, renting or redevelopment across ${site.areas.join(", ")}. WhatsApp, phone or send your details.`,
+    description: `Talk to us about buying, selling, renting or investing across ${site.areas.join(", ")}. WhatsApp, phone or send your details.`,
     ...pageUrls(params.locale, "/contact", [CONTACT_LOCALE]),
   };
 }

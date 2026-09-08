@@ -16,7 +16,7 @@ export default defineType({
         list: [
           { title: "Resale & Buying", value: "resale" },
           { title: "Rentals", value: "rentals" },
-          { title: "Redevelopment", value: "redevelopment" },
+          { title: "Investment advisory", value: "investment-advisory" },
           { title: "Pricing", value: "pricing" },
           { title: "General", value: "general" },
         ],

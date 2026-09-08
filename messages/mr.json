@@ -33,8 +33,8 @@
     "rentalsBody": "बोरिवली, कांदिवली आणि मलाडमध्ये 1 बीएचके ते 3 बीएचके भाड्याचे फ्लॅट, भाडेकरू आणि मालकांची जलद जुळणी, नोंदणीकृत भाडे करारही आम्हीच सांभाळतो.",
     "newProjectTitle": "नवीन प्रकल्प बुकिंग",
     "newProjectBody": "बोरिवली, कांदिवली आणि मलाडमध्ये नवीन आणि आगामी रेसिडेन्शियल प्रकल्पांमध्ये आमच्या थेट बिल्डर नेटवर्कद्वारे लवकर प्रवेश, बऱ्याचदा ते खुल्या बाजारात येण्यापूर्वीच.",
-    "redevelopmentTitle": "हाउसिंग सोसायटी पुनर्विकास",
-    "redevelopmentBody": "बोरिवली, कांदिवली आणि मलाडमध्ये हाउसिंग सोसायटी पुनर्विकासासाठी सुरुवातीपासून शेवटपर्यंत मार्गदर्शन, फिजिबिलिटी रिपोर्ट, डेव्हलपर निवड आणि करार पुनरावलोकनापासून ताबा मिळेपर्यंत.",
+    "investmentAdvisoryTitle": "Property investment advisory",
+    "investmentAdvisoryBody": "Guidance for investors buying in Borivali, Kandivali and Malad to hold rather than to live in: micro market assessment, rental yield arithmetic on the actual flat, title checks and negotiation.",
     "shopsTitle": "दुकाने आणि भूखंड",
     "shopsBody": "बोरिवली, कांदिवली आणि मलाडमध्ये विक्री किंवा भाड्यासाठी व्यावसायिक दुकाने, भूखंड आणि ऑफिस स्पेस, उपनगरात विस्तार करू इच्छिणाऱ्या गुंतवणूकदार आणि व्यावसायिकांसाठी.",
     "interiorsTitle": "इंटिरिअर डिझाइन आणि सिव्हिल वर्क",
@@ -60,10 +60,10 @@
       "आमच्या थेट बिल्डर नेटवर्कद्वारे लवकर प्रवेश",
       "साइट व्हिजिट, युनिट निवड आणि सध्याची प्राइस शीट"
     ],
-    "redevelopment": [
-      "तुमच्या सोसायटीसाठी मोफत फिजिबिलिटी असेसमेंट",
-      "डेव्हलपर शॉर्टलिस्टिंग, तुलना आणि निवड",
-      "करार पुनरावलोकन, वाटाघाटी आणि ताबा मिळेपर्यंत अंमलबजावणी"
+    "investmentAdvisory": [
+      "Tell us the budget, the hold period and whether you are buying for rent or resale",
+      "We assess the micro market and the specific building, and do the yield arithmetic",
+      "Title and society checks, negotiation, documentation and registration"
     ],
     "shopsPlots": [
       "तुमची व्यवसाय किंवा गुंतवणुकीची गरज सांगा",
@@ -137,7 +137,7 @@
     "intentSell": "विक्री",
     "intentRent": "भाडे",
     "intentNewProject": "नवीन प्रकल्प",
-    "intentRedevelopment": "पुनर्विकास",
+    "intentInvest": "Property investment",
     "submit": "व्हॉट्सअॅपवर चौकशी पाठवा",
     "disclaimer": "तुमची माहिती भरून व्हॉट्सअॅप उघडते. कधीही स्पॅम नाही.",
     "whatsappGreeting": "नमस्कार श्री गिरिराज, मला चौकशी करायची आहे.",

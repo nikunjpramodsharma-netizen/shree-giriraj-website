@@ -15,7 +15,7 @@
  * Each service's keyword was run through Google's People Also Ask on
  * 8 September 2026 (DataForSEO). Where a question people actually type could
  * be answered from a source the site already cites, it is here in their
- * words. Where it could not (typical rent per month, redevelopment timelines,
+ * words. Where it could not (typical rent per month, expected returns,
  * "best builders"), it is not, rather than answered with a guess.
  *
  * English only. The service routes exist in four locales, but these answers
@@ -107,31 +107,30 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
     },
   ],
 
-  redevelopment: [
+  "investment-advisory": [
     {
-      q: "How old does a building have to be for redevelopment?",
-      a: "There is no fixed age in law. A society can redevelop when its general body decides to and the plot can support it. In practice the trigger is a structural audit, which the municipal corporation requires for buildings over thirty years old under section 353B of the Mumbai Municipal Corporation Act, and the free feasibility assessment we offer starts from what that audit and the plot's development potential say.",
+      q: "Is real estate a good investment in Mumbai?",
+      a: "It can be, and it is not automatic. A flat here produces rent while you hold it and whatever the resale market gives you when you sell. The rent is measurable before you buy; the resale is not. What decides the outcome is usually the specific building, the pocket and the price you paid, not the city.",
     },
     {
-      q: "Does the society need conveyance before it can redevelop?",
-      a: "In practice, yes. A society signs a development agreement over land, and it cannot do that with confidence until the land is in its name. If the builder never conveyed it, the route is deemed conveyance through the District Deputy Registrar, which does not need the builder's signature and, since 31 December 2025, is open to RERA registered projects as well.",
-      href: "/blog/conveyance-and-deemed-conveyance",
-      hrefLabel: "Conveyance and deemed conveyance for a Mumbai society",
+      q: "What return should I expect on a flat in Borivali, Kandivali or Malad?",
+      a: "We do not publish an expected return, and it is worth being careful with anybody who does. Yields vary by building, floor, pocket and the price you actually negotiate, so a figure quoted for a whole suburb tells you nothing about the flat in front of you. We do the arithmetic on the specific property instead.",
+      href: "/tools/rental-yield-calculator",
+      hrefLabel: "Work out the gross yield on a flat you are considering",
     },
     {
-      q: "What are the rules for choosing a developer?",
-      a: "The state's guidelines under section 79A of the Maharashtra Co operative Societies Act set the process: a general body decision, a project management consultant or architect appointed by the society, developer selection by open tender rather than the first offer that walks in, and the decision recorded at a meeting with the registrar's authorised officer present. Following it is what makes the eventual agreement hard to challenge.",
+      q: "What is the 2% rule for properties?",
+      a: "An American rule of thumb suggesting monthly rent should be about two percent of the purchase price. It does not translate to Mumbai, where capital values are high relative to rents, and applying it here would rule out essentially every flat in the city. Judge a property on its own arithmetic instead.",
     },
     {
-      q: "What should the redevelopment agreement cover?",
-      a: "The carpet area each member gets, the corpus, the rent paid during construction and for how long, the bank guarantee, the completion date and the penalty for missing it, parking, the occupancy certificate before possession, and conveyance of the new building to the society. Signed without independent review, an agreement can lock a society into unfavourable terms for a decade. Reviewing it before signature is most of what we do.",
+      q: "Can an NRI buy investment property in these suburbs?",
+      a: "Yes. Under the Reserve Bank of India's rules on acquisition and transfer of immovable property, a non resident Indian or overseas citizen of India may buy residential or commercial property in India. The restriction is on agricultural land, plantation property and farmhouses, which cannot be bought this way.",
     },
     {
-      q: "What does a feasibility report tell us?",
-      a: "What the plot can realistically support under the development rules that apply to it, and therefore what a developer can honestly offer: how much additional area, whether a corpus is realistic, and whether the numbers being floated at the society meeting are numbers at all. It is the document that turns a redevelopment conversation from hope into arithmetic, and it is free from us.",
+      q: "Should an investor buy under construction or ready possession?",
+      a: "They are different risks rather than one being better. Ready possession earns rent immediately and you can see exactly what you are buying. Under construction ties up capital with no income until handover and carries delivery risk, which is why the MahaRERA registration and the developer's completion record matter more than the brochure.",
     },
   ],
-
   "shops-plots": [
     {
       q: "What should I check before buying a shop in a residential building?",

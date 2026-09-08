@@ -33,8 +33,8 @@
     "rentalsBody": "1 BHK to 3 BHK flats for rent across Borivali, Kandivali and Malad, tenants and owners matched quickly, with registered rent agreements sorted.",
     "newProjectTitle": "New project bookings",
     "newProjectBody": "Early access to new and upcoming residential projects across Borivali, Kandivali and Malad through our direct builder network, often before they reach the open market.",
-    "redevelopmentTitle": "Housing society redevelopment",
-    "redevelopmentBody": "End to end guidance for housing society redevelopment in Borivali, Kandivali and Malad: feasibility reports, developer selection and agreement review, through to occupancy.",
+    "investmentAdvisoryTitle": "Property investment advisory",
+    "investmentAdvisoryBody": "Guidance for investors buying in Borivali, Kandivali and Malad to hold rather than to live in: micro market assessment, rental yield arithmetic on the actual flat, title checks and negotiation.",
     "shopsTitle": "Shops & plots",
     "shopsBody": "Commercial shops, plots and office space for sale or rent in Borivali, Kandivali and Malad, for investors and business owners looking to expand in the suburbs.",
     "interiorsTitle": "Interior design & civil work",
@@ -60,10 +60,10 @@
       "Early access through our direct builder network",
       "Site visit, unit selection and the current price sheet"
     ],
-    "redevelopment": [
-      "Free feasibility assessment for your society",
-      "Developer shortlisting, comparison and selection",
-      "Agreement review, negotiation and execution through to occupancy"
+    "investmentAdvisory": [
+      "Tell us the budget, the hold period and whether you are buying for rent or resale",
+      "We assess the micro market and the specific building, and do the yield arithmetic",
+      "Title and society checks, negotiation, documentation and registration"
     ],
     "shopsPlots": [
       "Share your business or investment requirement",
@@ -91,7 +91,7 @@
     "row3": "Working in Borivali, Kandivali and Malad since 1996",
     "row4": "Registered agreement handled end to end",
     "row5": "One point of contact from enquiry to possession",
-    "row6": "Housing society redevelopment expertise",
+    "row6": "Investor level micro market knowledge",
     "legendYes": "Yes",
     "legendPartial": "Sometimes",
     "legendNo": "No"
@@ -115,7 +115,7 @@
   "areas": {
     "eyebrow": "Where we work",
     "heading": "Across the western suburbs",
-    "borivaliBody": "Our home turf for property in Borivali West and East: resale flats, rentals and society redevelopment, all handled locally.",
+    "borivaliBody": "Our home turf for property in Borivali West and East: resale flats, rentals and investment advice, all handled locally.",
     "kandivaliBody": "Real estate in Kandivali off M.G. Road and Link Road: premium new launches, resale flats and family homes.",
     "maladBody": "Flats in Malad near Mindspace and the Link Road corridor, growing residential and commercial options.",
     "dahisarBody": "Homes in Dahisar along the Western Express Highway, a fast growing suburb just north of Borivali with good connectivity and family friendly pricing.",
@@ -137,7 +137,7 @@
     "intentSell": "Sell",
     "intentRent": "Rent",
     "intentNewProject": "New project",
-    "intentRedevelopment": "Redevelopment",
+    "intentInvest": "Property investment",
     "submit": "Send enquiry on WhatsApp",
     "disclaimer": "Opens WhatsApp with your details filled in. No spam, ever.",
     "whatsappGreeting": "Hi Shree Giriraj, I'd like to enquire.",

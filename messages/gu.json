@@ -33,8 +33,8 @@
     "rentalsBody": "બોરીવલી, કાંદિવલી અને મલાડમાં 1 બીએચકેથી 3 બીએચકે સુધીના ભાડાના ફ્લેટ, ભાડુઆતો અને માલિકોનું ઝડપી મેચિંગ, નોંધાયેલ ભાડા કરાર પણ અમે સંભાળીએ છીએ.",
     "newProjectTitle": "નવા પ્રોજેક્ટ બુકિંગ",
     "newProjectBody": "બોરીવલી, કાંદિવલી અને મલાડમાં નવા અને આગામી રહેણાંક પ્રોજેક્ટ્સમાં અમારા સીધા બિલ્ડર નેટવર્ક દ્વારા વહેલી પહોંચ, ઘણીવાર તેઓ ખુલ્લા બજારમાં આવે તે પહેલાં જ.",
-    "redevelopmentTitle": "હાઉસિંગ સોસાયટી પુનર્વિકાસ",
-    "redevelopmentBody": "બોરીવલી, કાંદિવલી અને મલાડમાં હાઉસિંગ સોસાયટી પુનર્વિકાસ માટે શરૂઆતથી અંત સુધી માર્ગદર્શન, ફિઝિબિલિટી રિપોર્ટ, ડેવલપર પસંદગી અને કરાર સમીક્ષાથી લઈને કબજા સુધી.",
+    "investmentAdvisoryTitle": "Property investment advisory",
+    "investmentAdvisoryBody": "Guidance for investors buying in Borivali, Kandivali and Malad to hold rather than to live in: micro market assessment, rental yield arithmetic on the actual flat, title checks and negotiation.",
     "shopsTitle": "દુકાનો અને પ્લોટ",
     "shopsBody": "બોરીવલી, કાંદિવલી અને મલાડમાં વેચાણ અથવા ભાડા માટે વ્યાવસાયિક દુકાનો, પ્લોટ અને ઓફિસ સ્પેસ, પરાંમાં વિસ્તરણ ઇચ્છતા રોકાણકારો અને વ્યવસાય માલિકો માટે.",
     "interiorsTitle": "ઈન્ટીરિયર ડિઝાઇન અને સિવિલ વર્ક",
@@ -60,10 +60,10 @@
       "અમારા સીધા બિલ્ડર નેટવર્ક દ્વારા વહેલી પહોંચ",
       "સાઈટ વિઝિટ, યુનિટ પસંદગી અને હાલની પ્રાઇસ શીટ"
     ],
-    "redevelopment": [
-      "તમારી સોસાયટી માટે મફત ફિઝિબિલિટી એસેસમેન્ટ",
-      "ડેવલપર શોર્ટલિસ્ટિંગ, સરખામણી અને પસંદગી",
-      "કરાર સમીક્ષા, વાટાઘાટો અને કબજા સુધી અમલીકરણ"
+    "investmentAdvisory": [
+      "Tell us the budget, the hold period and whether you are buying for rent or resale",
+      "We assess the micro market and the specific building, and do the yield arithmetic",
+      "Title and society checks, negotiation, documentation and registration"
     ],
     "shopsPlots": [
       "તમારી બિઝનેસ અથવા રોકાણની જરૂરિયાત જણાવો",
@@ -137,7 +137,7 @@
     "intentSell": "વેચવું",
     "intentRent": "ભાડે",
     "intentNewProject": "નવો પ્રોજેક્ટ",
-    "intentRedevelopment": "પુનર્વિકાસ",
+    "intentInvest": "Property investment",
     "submit": "વોટ્સએપ પર પૂછપરછ મોકલો",
     "disclaimer": "તમારી વિગતો ભરીને વોટ્સએપ ખોલે છે. ક્યારેય કોઈ સ્પામ નહીં.",
     "whatsappGreeting": "નમસ્તે શ્રી ગિરિરાજ, મારે પૂછપરછ કરવી છે.",

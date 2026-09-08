@@ -11,7 +11,7 @@ export function LeadForm() {
     t("intentSell"),
     t("intentRent"),
     t("intentNewProject"),
-    t("intentRedevelopment"),
+    t("intentInvest"),
   ];
 
   const [name, setName] = useState("");

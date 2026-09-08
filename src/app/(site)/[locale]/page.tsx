@@ -260,7 +260,7 @@ export default async function HomePage({
     { slug: "resale-flats", title: tServices("resaleTitle"), body: tServices("resaleBody") },
     { slug: "rentals", title: tServices("rentalsTitle"), body: tServices("rentalsBody") },
     { slug: "new-project-bookings", title: tServices("newProjectTitle"), body: tServices("newProjectBody") },
-    { slug: "redevelopment", title: tServices("redevelopmentTitle"), body: tServices("redevelopmentBody") },
+    { slug: "investment-advisory", title: tServices("investmentAdvisoryTitle"), body: tServices("investmentAdvisoryBody") },
     { slug: "shops-plots", title: tServices("shopsTitle"), body: tServices("shopsBody") },
     { slug: "interiors", title: tServices("interiorsTitle"), body: tServices("interiorsBody") },
   ];

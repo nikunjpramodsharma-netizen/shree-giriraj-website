@@ -90,7 +90,7 @@ export const AREA_PANELS: AreaPanel[] = [
     slug: "borivali-west",
     name: "Borivali",
     image: "/sections/area-borivali.jpg",
-    body: "Our home turf. Resale, rentals and society redevelopment across Borivali West and East, from Chikoowadi to the station belt. The pocket you choose matters more here than the building does.",
+    body: "Our home turf. Resale, rentals and investment advice across Borivali West and East, from Chikoowadi to the station belt. The pocket you choose matters more here than the building does.",
     stats: [
       { value: "₹31,200", label: "Resale asking, per sq ft carpet, West" },
       { value: "₹31,400", label: "Resale asking, per sq ft carpet, East" },
@@ -197,11 +197,11 @@ export const SERVICE_PANELS: ServicePanel[] = [
   },
   {
     n: "05",
-    slug: "redevelopment",
-    title: "Redevelopment advisory",
-    image: "/sections/svc-redevelopment.jpg",
-    lead: "For societies and owners, not for developers.",
-    body: "Feasibility, developer shortlisting, the corpus fund, the rent during construction, and the clauses your committee will otherwise argue about for six months. We are paid by the society, which is why the advice can be blunt.",
+    slug: "investment-advisory",
+    title: "Investment advisory",
+    image: "/sections/svc-investment.jpg",
+    lead: "For buying to hold, not to live in.",
+    body: "Which pocket, which building, and what the flat actually earns as a yield at the price being asked. We do the arithmetic on the real property rather than quoting a number for the suburb, and we will tell you when it does not work.",
   },
   {
     n: "06",
@@ -248,12 +248,12 @@ export const SITUATIONS: Situation[] = [
       "The society NOC and the outstanding dues surface three weeks in, and the buyer walks. Sort them before listing.",
   },
   {
-    key: "redevelop",
-    label: "Redevelop our society",
-    heading: "Redevelopment in {area}",
-    body: "The corpus fund and the rent during construction are where committees spend six months arguing. Both are negotiable and most societies negotiate them badly.",
+    key: "invest",
+    label: "Invest in property here",
+    heading: "Investing in {area}",
+    body: "The per square foot number is the same across pockets that behave completely differently. What the flat rents for, and to whom, is the part that decides whether the investment works.",
     warning:
-      "The developer is chosen on the highest offer rather than on delivery record. The highest offer is not the offer that gets built.",
+      "Buying on the price per square foot alone. Two buildings a few hundred metres apart can carry the same rate and very different rent and resale liquidity.",
   },
   {
     key: "interiors",
@@ -344,7 +344,7 @@ export type TeamMember = { name: string; role: string };
 export const TEAM: TeamMember[] = [
   { name: "[ NAME ]", role: "Founder. In Borivali property since 1996." },
   { name: "[ NAME ]", role: "Rentals and tenant relations." },
-  { name: "[ NAME ]", role: "Redevelopment and society liaison." },
+  { name: "[ NAME ]", role: "Investment advisory and society liaison." },
 ];
 
 /** True once real names are in. Gates the team list so placeholders never ship. */

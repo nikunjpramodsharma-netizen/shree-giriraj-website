@@ -13,7 +13,7 @@ const SERVICES = [
   { slug: "resale-flats", key: "resale" },
   { slug: "rentals", key: "rentals" },
   { slug: "new-project-bookings", key: "newProject" },
-  { slug: "redevelopment", key: "redevelopment" },
+  { slug: "investment-advisory", key: "investmentAdvisory" },
   { slug: "shops-plots", key: "shops" },
   { slug: "interiors", key: "interiors" },
 ] as const;
@@ -39,7 +39,7 @@ const SERVICE_TITLE_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
   "resale-flats": "resaleTitle",
   rentals: "rentalsTitle",
   "new-project-bookings": "newProjectTitle",
-  redevelopment: "redevelopmentTitle",
+  "investment-advisory": "investmentAdvisoryTitle",
   "shops-plots": "shopsTitle",
   interiors: "interiorsTitle",
 };

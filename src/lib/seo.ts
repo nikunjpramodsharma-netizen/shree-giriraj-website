@@ -102,7 +102,7 @@ export const OG_IMAGE = {
   url: "/og/default.jpg",
   width: 1200,
   height: 630,
-  alt: "Shree Giriraj Real Estate, resale, rentals and redevelopment in Borivali, Kandivali and Malad",
+  alt: "Shree Giriraj Real Estate, resale, rentals and property investment advice in Borivali, Kandivali and Malad",
 } as const;
 
 /**
@@ -160,7 +160,7 @@ export const SERVICE_SLUGS = [
   "resale-flats",
   "rentals",
   "new-project-bookings",
-  "redevelopment",
+  "investment-advisory",
   "shops-plots",
   "interiors",
 ] as const;

@@ -1,7 +1,7 @@
 # Shree Giriraj Real Estate
 
 > A family run property firm in Borivali West, Mumbai, operating since 1996.
-> We handle resale flats, rentals, new project bookings, society redevelopment
+> We handle resale flats, rentals, new project bookings, property investment
 > advisory, commercial shops and plots, and interior and civil work, across
 > Borivali West, Borivali East, Kandivali and Malad.
 > MahaRERA agent registration A51800005726.
@@ -22,7 +22,7 @@ buildings, societies and pockets in three suburbs of Mumbai's western suburbs.
 - /services/resale-flats: buying and selling ready to move homes
 - /services/rentals: tenants and owners, leave and licence agreements
 - /services/new-project-bookings: early access through direct developer relationships
-- /services/redevelopment: advisory for societies and owners, not for developers
+- /services/investment-advisory: for investors buying here to hold rather than to live in
 - /services/shops-plots: commercial shops, offices and plots
 - /services/interiors: fit outs and civil work after possession
 

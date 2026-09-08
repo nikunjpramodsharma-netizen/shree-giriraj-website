@@ -6,7 +6,7 @@ const SERVICE_SLUGS = [
   "resale-flats",
   "rentals",
   "new-project-bookings",
-  "redevelopment",
+  "investment-advisory",
   "shops-plots",
   "interiors",
 ];
@@ -27,6 +27,29 @@ const nextConfig = {
       {
         source: `/:locale(hi|mr|gu)/:slug(${group})`,
         destination: "/:locale/services/:slug",
+        permanent: true,
+      },
+      // Redevelopment advisory was replaced by investment advisory on
+      // 8 September 2026. The two serve different buyers and the new page is
+      // written from scratch, so this is a replacement rather than a rename.
+      //
+      // The redirect is insurance rather than SEO recovery: the site has never
+      // been live (no domain, no DNS, canonicals still resolve to localhost),
+      // so nothing was ever indexed and there is no equity to carry over. It
+      // costs nothing and catches any link that was shared from a preview
+      // deployment. The bare slug /redevelopment is caught by the group rule
+      // above only while the slug is in SERVICE_SLUGS, which it no longer is,
+      // so both forms are handled explicitly here.
+      { source: "/redevelopment", destination: "/services/investment-advisory", permanent: true },
+      { source: "/services/redevelopment", destination: "/services/investment-advisory", permanent: true },
+      {
+        source: "/:locale(hi|mr|gu)/redevelopment",
+        destination: "/:locale/services/investment-advisory",
+        permanent: true,
+      },
+      {
+        source: "/:locale(hi|mr|gu)/services/redevelopment",
+        destination: "/:locale/services/investment-advisory",
         permanent: true,
       },
       // English is unprefixed under localePrefix "as-needed", so /en/* would

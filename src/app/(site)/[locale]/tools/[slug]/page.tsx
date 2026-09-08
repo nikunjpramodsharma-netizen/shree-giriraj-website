@@ -10,6 +10,7 @@ import { AreaCalculator } from "@/components/AreaCalculator";
 import { HraRentReceipts } from "@/components/HraRentReceipts";
 import { InteriorsScope } from "@/components/InteriorsScope";
 import { CapitalGainsCalculator } from "@/components/CapitalGainsCalculator";
+import { RentalYieldCalculator } from "@/components/RentalYieldCalculator";
 import { PropertyTaxCalculator } from "@/components/PropertyTaxCalculator";
 import { graph, breadcrumbNode, faqNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
@@ -91,6 +92,7 @@ export default function ToolPage({
         {tool.component === "interiors" && <InteriorsScope />}
         {tool.component === "capitalGains" && <CapitalGainsCalculator />}
         {tool.component === "propertyTax" && <PropertyTaxCalculator />}
+        {tool.component === "rentalYield" && <RentalYieldCalculator />}
       </div>
 
       <div className="wrap pb-16">

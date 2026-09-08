@@ -1,8 +1,12 @@
 import { describe, it, expect } from "vitest";
+import { SERVICE_SLUGS } from "./seo";
 import { SERVICE_FAQS, getServiceFaqs } from "./service-faqs";
 import { getPost } from "./posts";
 
-const SLUGS = ["resale-flats", "rentals", "new-project-bookings", "redevelopment", "shops-plots", "interiors"];
+// Imported rather than retyped. This list was a hand written copy and it went
+// stale the moment redevelopment advisory was replaced by investment advisory,
+// which is exactly the drift the import prevents.
+const SLUGS = SERVICE_SLUGS;
 
 describe("service page questions", () => {
   it("covers every service route", () => {

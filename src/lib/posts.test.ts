@@ -59,9 +59,24 @@ describe("draft versus ready", () => {
    * written the same evening from portal, firm and statute sources, with
    * every number attributed and dated in the post.
    */
-  it("has no drafts left waiting on anyone", () => {
+  it("names exactly the drafts that are genuinely waiting", () => {
+    // Pinned rather than asserted empty. The investment cluster added on
+    // 8 September 2026 brought one post back into draft on purpose: the
+    // commercial post carries a VERIFY on the GST registration threshold for
+    // letting commercial premises, which turns on both parties' registration
+    // status and has been amended more than once. Publishing a tax threshold
+    // we have not confirmed is exactly what the marker system exists to stop.
     const drafts = getAllPosts().filter((p) => !p.isReady).map((p) => p.slug);
-    expect(drafts).toEqual([]);
+    expect(drafts).toEqual(["commercial-property-investment-mumbai"]);
+  });
+
+  it("keeps the two finished investment posts out of draft", () => {
+    for (const slug of ["rental-yield-mumbai", "best-area-to-invest-in-mumbai"]) {
+      const post = getPost(slug);
+      expect(post, slug).toBeTruthy();
+      expect(post!.openMarkers, slug).toEqual([]);
+      expect(post!.isReady, slug).toBe(true);
+    }
   });
 
   it("still knows what a draft looks like", () => {

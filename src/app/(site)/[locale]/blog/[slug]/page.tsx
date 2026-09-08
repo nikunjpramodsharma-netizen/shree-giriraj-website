@@ -439,7 +439,7 @@ export default async function PostPage({
           <div className="mt-12 grid gap-10 md:grid-cols-2 md:items-center">
             <div>
               <h2 className="font-display text-2xl text-brand-indigo md:text-3xl">
-                Buying, renting or redeveloping in the western suburbs?
+                Buying, renting or investing in the western suburbs?
               </h2>
               <p className="mt-3 text-muted">
                 In Borivali, Kandivali and Malad since 1996. We will tell you what

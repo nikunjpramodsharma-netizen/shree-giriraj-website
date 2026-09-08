@@ -16,8 +16,10 @@ import { pageUrls } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
-import { graph, serviceNode, breadcrumbNode, faqNode } from "@/lib/schema";
+import { graph, serviceNode, breadcrumbNode, faqNode, organizationNode } from "@/lib/schema";
 import { getServiceFaqs } from "@/lib/service-faqs";
+import { getRepoService, repoServiceBlocks } from "@/lib/service-content";
+import { MarkdownBody } from "@/components/MarkdownBody";
 
 export const revalidate = 60;
 
@@ -25,7 +27,7 @@ const SERVICE_SLUGS = [
   "resale-flats",
   "rentals",
   "new-project-bookings",
-  "redevelopment",
+  "investment-advisory",
   "shops-plots",
   "interiors",
 ] as const;
@@ -35,7 +37,7 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
   "resale-flats": "resaleFlats",
   rentals: "rentals",
   "new-project-bookings": "newProjectBookings",
-  redevelopment: "redevelopment",
+  "investment-advisory": "investmentAdvisory",
   "shops-plots": "shopsPlots",
   interiors: "interiors",
 };
@@ -53,8 +55,9 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
  * society and its address as much as the flat. Rentals: the
  * keys, then the empty flat those keys open. New launches: towers on the
  * panel, one building close up on the page. Interiors: a fitted kitchen, then
- * a finished living room. Redevelopment: the crane, then the building going up
- * under it. Shops: retail units on a plaza, then shoppers walking a covered
+ * a finished living room. Investment advisory: one tall tower by day on the
+ * panel, then the lit skyline from above on the page, because the panel has
+ * to survive a narrow strip and a dense night aerial does not. Shops: retail units on a plaza, then shoppers walking a covered
  * arcade of glass shopfronts.
  *
  * TWO RULES LEARNED THE HARD WAY.
@@ -90,7 +93,7 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
   "resale-flats": "/services/hero-resale.jpg",
   rentals: "/services/hero-rentals.jpg",
   "new-project-bookings": "/services/hero-new-projects.jpg",
-  redevelopment: "/services/hero-redevelopment.jpg",
+  "investment-advisory": "/services/hero-investment.jpg",
   "shops-plots": "/services/hero-shops.jpg",
   interiors: "/services/hero-interiors.jpg",
 };
@@ -100,7 +103,7 @@ const HERO_ALT: Record<(typeof SERVICE_SLUGS)[number], string> = {
   "resale-flats": "The Hiranandani towers in Mumbai above a belt of mature trees and Powai lake",
   rentals: "An empty flat with the balcony door open to the light",
   "new-project-bookings": "A tall residential building in Mumbai against a clear sky",
-  redevelopment: "A residential building going up, wrapped in scaffolding and safety netting",
+  "investment-advisory": "Mumbai residential towers lit up at dusk, seen from above",
   "shops-plots": "Shoppers walking a covered shopping arcade lined with glass shopfronts",
   interiors: "A furnished living room in a Mumbai flat",
 };
@@ -132,7 +135,12 @@ export async function generateMetadata({
 }: {
   params: { locale: string; slug: string };
 }): Promise<Metadata> {
-  const page = await client.fetch<ServicePage>(pageBySlugQuery, { slug: params.slug });
+  // A repo backed service never touches Sanity. See service-content.ts for
+  // why one of the six lives in code.
+  const repo = getRepoService(params.slug);
+  const page = repo
+    ? { title: repo.title, seoDescription: repo.seoDescription }
+    : await client.fetch<ServicePage>(pageBySlugQuery, { slug: params.slug });
   if (!page) return {};
   const urls = pageUrls(params.locale, `/services/${params.slug}`);
   const slug = params.slug as (typeof SERVICE_SLUGS)[number];
@@ -158,12 +166,12 @@ export async function generateMetadata({
  */
 const SERVICE_INTENT: Record<
   string,
-  "intentBuy" | "intentSell" | "intentRent" | "intentNewProject" | "intentRedevelopment" | undefined
+  "intentBuy" | "intentSell" | "intentRent" | "intentNewProject" | "intentInvest" | undefined
 > = {
   "resale-flats": "intentBuy",
   rentals: "intentRent",
   "new-project-bookings": "intentNewProject",
-  redevelopment: "intentRedevelopment",
+  "investment-advisory": "intentInvest",
   "shops-plots": undefined,
   interiors: undefined,
 };
@@ -178,19 +186,27 @@ export default async function ServicePage({
   const locale = params.locale as Locale;
   const slug = params.slug as (typeof SERVICE_SLUGS)[number];
 
+  const repo = getRepoService(slug);
+
   const [page, projects, tHero, tServiceCta, tServiceSteps, tProjectsGrid] = await Promise.all([
-    client.fetch<ServicePage>(pageBySlugQuery, { slug: params.slug }),
+    repo
+      ? Promise.resolve(null)
+      : client.fetch<ServicePage>(pageBySlugQuery, { slug: params.slug }),
     client.fetch<GridProject[]>(featuredProjectsGridQuery),
     getTranslations({ locale, namespace: "hero" }),
     getTranslations({ locale, namespace: "serviceCta" }),
     getTranslations({ locale, namespace: "serviceSteps" }),
     getTranslations({ locale, namespace: "projectsGrid" }),
   ]);
-  if (!page) notFound();
+  if (!repo && !page) notFound();
 
-  const heroHeading = getLocalizedField(page.heroHeading, locale) || page.title;
-  const heroSubheading = getLocalizedField(page.heroSubheading, locale);
-  const body = getLocalizedField(page.body, locale);
+  const heroHeading = repo
+    ? repo.heroHeading
+    : getLocalizedField(page!.heroHeading, locale) || page!.title;
+  const heroSubheading = repo
+    ? repo.heroSubheading
+    : getLocalizedField(page!.heroSubheading, locale);
+  const body = repo ? null : getLocalizedField(page!.body, locale);
   const steps = tServiceSteps.raw(STEPS_KEY[slug]) as string[];
   // English only: the answers quote English sources and article titles.
   // Rendered and marked up together, or not at all.
@@ -209,6 +225,12 @@ export default async function ServicePage({
     <>
       <JsonLd
         data={graph(
+          // The business itself, on every service page. An answer engine
+          // reading this page alone then has the name, the address, the
+          // MahaRERA registration and the areas served without following a
+          // link, which is the whole point of putting it here rather than
+          // only on About.
+          organizationNode(),
           serviceNode({
             locale,
             name: heroHeading,
@@ -295,7 +317,11 @@ export default async function ServicePage({
       <section className="pb-16">
         <Reveal>
           <div className="mx-auto max-w-3xl px-6">
-            <PortableTextBody value={body} />
+            {repo ? (
+              <MarkdownBody blocks={repoServiceBlocks(repo)} />
+            ) : (
+              <PortableTextBody value={body} />
+            )}
           </div>
         </Reveal>
       </section>

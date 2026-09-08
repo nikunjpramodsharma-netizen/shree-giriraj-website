@@ -47,6 +47,15 @@ const CATEGORY_VISUALS: { match: RegExp; visual: CategoryVisual }[] = [
     },
   },
   {
+    // Before the buy rule on purpose. An investing post is about buying, and
+    // without this it would fall through to the generic buying photograph.
+    match: /invest|yield|roi|portfolio|commercial/i,
+    visual: {
+      image: "/blog/invest-area.jpg",
+      alt: "Mumbai residential towers at sunset, seen across the rooftops",
+    },
+  },
+  {
     match: /buy|resale|purchase|area|vastu/i,
     visual: {
       image: "/blog/buying.jpg",
