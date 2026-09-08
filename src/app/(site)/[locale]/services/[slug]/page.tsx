@@ -53,8 +53,8 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
  * much as the flat. Rentals: the keys, then the empty flat those keys open.
  * New launches: towers on the panel, one building close up on the page.
  * Interiors: a fitted kitchen, then a finished living room. Redevelopment: the
- * crane, then the building going up under it. Shops: the high street, then the
- * counter inside one of the shops on it.
+ * crane, then the building going up under it. Shops: a commercial building
+ * with glass frontage, then the retail units on its plaza.
  *
  * TWO RULES LEARNED THE HARD WAY.
  *
@@ -63,11 +63,16 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
  * like somewhere nobody would choose. This page is selling homes, so the
  * building has to look worth living in.
  *
- * And no identifiable foreign faces. A building from anywhere reads as a
- * building; a face from anywhere reads as a stock photo. Two strong
- * candidates, children on a playground and a family unpacking, were dropped
- * for exactly this. Where people appear, they are at a distance or seen from
- * behind.
+ * And no identifiable foreign faces or foreign signage. A building from
+ * anywhere reads as a building; a face or a shopfront in another script reads
+ * as a stock photo. Children on a playground, a family unpacking, and a
+ * shopping plaza with Chinese signage were all dropped for exactly this.
+ * Where people appear, they are at a distance or seen from behind.
+ *
+ * The shops pair was the third rule. Both halves were a real Indian high
+ * street and a real Indian shop counter, and both read as somewhere cheap.
+ * This page asks an investor to buy a commercial unit, so it has to show the
+ * kind of address they would want to own, not the kind they would walk past.
  *
  * Pexels, 8 September 2026. Heroes 1920 wide, panels 1100 by 1375.
  */const HERO_IMAGE: Record<(typeof SERVICE_SLUGS)[number], string> = {
@@ -85,7 +90,7 @@ const HERO_ALT: Record<(typeof SERVICE_SLUGS)[number], string> = {
   rentals: "An empty flat with the balcony door open to the light",
   "new-project-bookings": "A tall residential building in Mumbai against a clear sky",
   redevelopment: "A residential building going up, wrapped in scaffolding and safety netting",
-  "shops-plots": "Customers at the counter of a shop, with the shutters up and payment signs on the front",
+  "shops-plots": "New retail units with full height glass frontage on a modern shopping plaza",
   interiors: "A furnished living room in a Mumbai flat",
 };
 
