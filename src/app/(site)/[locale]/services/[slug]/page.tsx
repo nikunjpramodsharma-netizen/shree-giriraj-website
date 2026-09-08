@@ -49,18 +49,22 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
  * hero a pair of jeans holding keys. None of it could have been taken within
  * a thousand miles of Borivali, and the owner said so.
  *
- * All six are Indian: residential society blocks at dusk with people out on a
- * terrace for resale; hands exchanging keys for rentals, faces out of frame so
- * nobody has to look like a client; Mumbai residential towers for new
- * launches; a building going up in scaffolding and netting for redevelopment;
- * customers at a shop counter with the shutters up for shops; and a Mumbai
- * living room for interiors.
+ * All six are Indian: a landscaped courtyard inside a residential complex for
+ * resale; hands exchanging keys for rentals, faces out of frame so nobody has
+ * to look like a client; Mumbai residential towers for new launches; a
+ * building going up in scaffolding and netting for redevelopment; customers at
+ * a shop counter with the shutters up for shops; and a Mumbai living room for
+ * interiors.
  *
- * Three of these are the second attempt. The first set put an aerial on
- * redevelopment, which reads as a map rather than a building; a street of
- * signboards on shops, which shows a market rather than a unit somebody could
- * buy; and a close crop of one facade on resale, which read as a wall. Pexels,
- * 8 September 2026, 1920 wide.
+ * Resale took three attempts and the reason is worth keeping. A close crop of
+ * one facade read as a wall. Society blocks at dusk read as real but tired,
+ * and the owner's objection was the right one: this page is selling flats, so
+ * the building in the picture has to look like somewhere a buyer wants to
+ * live. Authenticity is not a licence to show something unappealing. The
+ * courtyard is well kept and planted, which is what a good society looks like,
+ * and it stays clear of the new build towers used for new launches.
+ *
+ * Pexels, 8 September 2026, 1920 wide.
  */
 const HERO_IMAGE: Record<(typeof SERVICE_SLUGS)[number], string> = {
   "resale-flats": "/services/hero-resale.jpg",
@@ -73,7 +77,7 @@ const HERO_IMAGE: Record<(typeof SERVICE_SLUGS)[number], string> = {
 
 /** Alt text per service. A hero image is content, not decoration. */
 const HERO_ALT: Record<(typeof SERVICE_SLUGS)[number], string> = {
-  "resale-flats": "Residential society buildings in the evening, with people sitting out on a terrace",
+  "resale-flats": "A landscaped courtyard between the wings of a residential building",
   rentals: "One set of keys passing from one hand to another",
   "new-project-bookings": "New residential towers in Mumbai under a clear sky",
   redevelopment: "A residential building going up, wrapped in scaffolding and safety netting",

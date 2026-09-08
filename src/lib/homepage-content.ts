@@ -147,9 +147,12 @@ export type ServicePanel = {
  * square proportion and five vertical strips about a fifth as wide, so an
  * image has to survive being cut to a narrow centre slice. Redevelopment uses
  * a tower crane rather than the hero's aerial, because an aerial in a strip
- * is texture and nothing else. Resale uses a sunlit facade with laundry and
- * air conditioners rather than the hero's close crop, which at panel size
- * read as a wall rather than a building.
+ * is texture and nothing else.
+ *
+ * Resale matches its page again and both changed. The panel showed a sunlit
+ * facade hung with laundry and air conditioners: honest, and the wrong
+ * argument to make on a panel whose job is to sell a flat. It is now the
+ * landscaped courtyard the service page uses.
  *
  * All six are 1100 by 1375, four to five, which gives the open panel width to
  * show and the strips height to keep. Pexels, 8 September 2026.
