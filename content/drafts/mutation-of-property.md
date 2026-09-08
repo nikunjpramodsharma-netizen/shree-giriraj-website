@@ -19,7 +19,11 @@ sources:
     url: https://privateclient.cyrilamarchandblogs.com/2025/11/mutation-follows-ownership-not-the-other-way-around-supreme-court/
   - label: "A.K. Legal and Associates, revenue record entries do not transfer ownership"
     url: https://aklegal.in/revenue-record-entries-do-not-transfer-ownership/
-sourcesCheckedOn: "1 September 2026"
+  - label: Basic Home Loan, changing the name on MCGM property tax records
+    url: https://www.basichomeloan.com/blog/home-loans/change-your-name-on-mcgm-property-tax-records
+  - label: NoBroker, property tax name change in Mumbai
+    url: https://www.nobroker.in/forum/how-to-change-name-in-property-tax-bill-online-in-mumbai/
+sourcesCheckedOn: "8 September 2026"
 relatedFaqs:
   - Does mutation prove ownership?
   - How soon after registration should I do it?
@@ -63,9 +67,13 @@ So mutation in your name does not make you the owner if the deed says otherwise,
 
 ---
 
-## [ YOUR WORDS ] How often this gets skipped
+## How often this gets skipped
 
-*Prompts: how many resale flats do you see where mutation was never done, and what does it take to sort out at that stage?*
+No public figure exists for how many Mumbai flats carry a tax bill still in an earlier owner's name, and we will not invent one. What can be said is that the step is easy to miss, because nothing forces it. Registration finishes at the sub registrar, the keys change hands, and the municipal record simply stays as it was until somebody applies to change it.
+
+Sorting it out later is paperwork rather than a legal fight, but it grows with every owner who skipped it. The application goes to the ward's assessment and collection office or through the MCGM property tax portal, with the registered sale deed, its Index 2, the latest paid tax bill, the society's letter or share certificate, and identity proof. Guides put the turnaround at fifteen to thirty days once the papers are accepted. If the seller's own name was never recorded either, the seller's purchase deed has to go in as well, and so on back to the last owner who did it. The longer the gap, the more deeds have to be found.
+
+That is the practical reason to do it in the first month. The deed is to hand, the seller is reachable, and there is one document to file instead of three.
 
 ---
 

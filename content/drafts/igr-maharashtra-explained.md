@@ -18,7 +18,9 @@ answer: >
 sources:
   - label: Department of Registration and Stamps, Government of Maharashtra
     url: https://igrmaharashtra.gov.in/
-sourcesCheckedOn: "1 September 2026"
+  - label: Landeed, searching Index 2 records on the IGR Maharashtra portal
+    url: https://web.landeed.com/maharashtra/index-2-search-by-name
+sourcesCheckedOn: "8 September 2026"
 relatedFaqs:
   - Is IGR Maharashtra the same as the sub registrar office?
   - Can I register a property entirely online?
@@ -75,13 +77,17 @@ These are the modules on the portal, using the names they actually appear under,
 
 ---
 
-## [ YOUR WORDS ] What we use it for before a client commits
+## What we use it for before a client commits
 
-*Prompts:*
+Three things, every time.
 
-- *Which of these do you check as standard before letting a client agree a price?*
-- *Has an e-Search ever turned up something that changed a deal?*
-- *What do people most often get wrong when they try to use the portal themselves?*
+The first is e-Search, for the flat's registered history. Every registered document produces an Index 2, and searching the property rather than the seller's name shows every one of them: each sale, mortgage, long lease, gift or release. It takes minutes and it is the first place a mismatch between the paper and the person shows up.
+
+The second is the annual statement of rates, for the reckoner value of the specific building. Stamp duty is paid on the higher of the agreed price and this figure, so it is checked before a price is agreed, not after, and checked again if a deal runs past 1 April, when the rates change.
+
+The third is the stamp duty calculator, so the buyer knows the whole outlay, duty plus registration, before committing to anything.
+
+Where people go wrong using the portal themselves is predictable. Searching by name and missing a document because the spelling on the deed differs from the spelling they typed. Picking the wrong sub registrar office or the wrong year and concluding there is nothing to find. And treating the free e-Search download as a certified copy, which it is not: a bank or a court will want the certified copy from the sub registrar office.
 
 ---
 

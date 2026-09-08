@@ -20,7 +20,11 @@ sources:
     url: https://aklegal.in/revenue-record-entries-do-not-transfer-ownership/
   - label: Department of Registration and Stamps, Government of Maharashtra
     url: https://igrmaharashtra.gov.in/
-sourcesCheckedOn: "1 September 2026"
+  - label: iPleaders, sale deed clauses and their execution
+    url: https://blog.ipleaders.in/sale-deed-important-clauses-execution/
+  - label: Mahindra Lifespaces, essential clauses in a flat sale deed
+    url: https://www.mahindralifespaces.com/blog/flat-sale-deed-clauses-and-format/
+sourcesCheckedOn: "8 September 2026"
 relatedFaqs:
   - What is the difference between a sale deed and an agreement to sale?
   - Does a sale deed need to be registered?
@@ -81,9 +85,19 @@ It is straightforward while both parties are cooperative and available. It becom
 
 ---
 
-## [ YOUR WORDS ] What we check before a client signs
+## What we check before a client signs
 
-*Prompts: which clause do you read first, and has a badly drafted deed ever caused a problem you had to fix?*
+In this order.
+
+The schedule first, because it is the clause most often wrong and the easiest to fix before signing. Flat number, floor, wing, carpet area, parking and the boundaries of the building have to match the share certificate and the seller's own purchase deed. An error here is carried into every document that follows.
+
+The recitals second. This is the paragraph that says how the seller came to own the flat. It has to match the chain of title from the search report, name for name and document for document. A recital that skips a link, or names a different buyer from the one on the earlier deed, is a question that has to be answered before anything else.
+
+Then the encumbrance declaration and the indemnity, together. The seller should state specifically that there is no mortgage, no litigation, no tenant and no claim from a family member, and should agree to make good any loss if that turns out to be untrue. A one line, all purpose declaration is not the same thing as a specific one.
+
+Then possession: the date, and the condition the flat is handed over in. And last the dues clause, which should put property tax, society charges, electricity and water up to the possession date on the seller.
+
+A deed that is right on these five is a deed you can sign.
 
 ---
 

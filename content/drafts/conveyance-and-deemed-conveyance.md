@@ -20,7 +20,15 @@ sources:
     url: https://www.vedlegal.com/provisions-deemed-conveyance-mofa/
   - label: "Rustomjee, deemed conveyance meaning and process"
     url: https://www.rustomjee.com/blog/what-is-deemed-conveyance/
-sourcesCheckedOn: "1 September 2026"
+  - label: Section 11, Maharashtra Ownership Flats Act, 1963
+    url: https://indiankanoon.org/doc/92055439/
+  - label: Free Press Journal, February 2026, Bombay High Court in Mahalaxmi City (Type D) CHS v. Deputy Registrar
+    url: https://www.freepressjournal.in/mumbai/builder-cannot-indefinitely-delay-executing-a-conveyance-deed-in-favour-of-a-housing-society-bombay-hc
+  - label: Legal Era, the Maharashtra Ownership Flats (Amendment and Validation) Act, 2025
+    url: https://www.legaleraonline.com/real-estate/deemed-conveyance-under-the-mofa-the-2025-amendment-and-its-implications-under-rera-987280
+  - label: Kaanoon, the 2014 Moneylife Foundation seminar figure on conveyance in Mumbai
+    url: https://www.kaanoon.com/269145/conveyance
+sourcesCheckedOn: "8 September 2026"
 relatedFaqs:
   - What happens if a society never gets conveyance?
   - Who is the competent authority for deemed conveyance?
@@ -69,13 +77,15 @@ Much of the process can now be done online, provided the society actually holds 
 
 ---
 
-## [ YOUR WORDS ] Why developers delay it, and what we see in Borivali
+## Why developers delay it, and what the courts have said
 
-*You will have seen the real reasons. Prompts:*
+The law gives a developer four months from the date the society is registered to convey the land and building to it. That is section 11 of the Maharashtra Ownership Flats Act read with rule 9 of the 1964 rules. The delay is rarely about paperwork.
 
-- *Is it unsold units, retained development rights, or plain inertia?*
-- *What proportion of the older buildings you deal with have conveyance done?*
-- *Has a missing conveyance ever changed a deal for a buyer?*
+The usual reason is development potential. Land that has not been conveyed is land whose unused FSI, and any TDR loaded onto it, still sits with the developer, and a clause in the agreement postponing conveyance until some future phase is complete is how that is held open. In February 2026 the Bombay High Court dealt with exactly that clause and refused to enforce it. Justice Amit Borkar held that if such clauses were honoured a promoter could delay conveyance indefinitely "by referring to some future plan, additional FSI, or a proposed phase that may or may not materialise", and that a contractual promise is not a licence to withhold conveyance at will. Unsold flats, disputed dues and plain inertia are the other reasons, and none of them is a defence either.
+
+The remedy is deemed conveyance through the District Deputy Registrar of Co operative Societies, who can order the sub registrar to register the conveyance without the developer's signature. From 31 December 2025 that route is open to RERA registered projects too, under a new section 11A added to the Act.
+
+How many societies in these suburbs still lack conveyance is not known. A figure of 85 percent for Mumbai was cited at a seminar in 2014; it is old, and no official count for Borivali, Kandivali or Malad exists. What is safe to say is that on any older building, ask, and do not assume.
 
 ---
 

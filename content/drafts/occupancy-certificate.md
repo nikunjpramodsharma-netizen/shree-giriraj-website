@@ -20,7 +20,13 @@ sources:
     url: https://www.brigadegroup.com/blog/residential/occupancy-certificate-vs-completion-certificate
   - label: NoBrokerHood, occupancy certificate and completion certificate
     url: https://www.nobrokerhood.com/blog/occupancy-certificate-and-completion-certificate/
-sourcesCheckedOn: "1 September 2026"
+  - label: Governance Now, 2014, on Mumbai buildings without occupancy certificates
+    url: https://www.governancenow.com/news/regular-story/occupancy-certificate-home-owners-you-must-be-joking-mumbai
+  - label: Deccan Herald, 2025, Piyush Goyal's directive to BMC, MMRDA, SRA and MHADA
+    url: https://www.deccanherald.com/india/maharashtra/piyush-goyal-issues-strong-directive-to-bmc-mmrda-sra-mhada-3785644
+  - label: Taxguru, promoter liabilities under section 11 of RERA
+    url: https://taxguru.in/corporate-law/promoter-liabilities-section-11-rera-act.html
+sourcesCheckedOn: "8 September 2026"
 relatedFaqs:
   - Can I move in without an occupancy certificate?
   - What is the difference between OC and completion certificate?
@@ -77,13 +83,13 @@ Taking those keys feels like progress. What it actually does is move the risk fr
 
 ---
 
-## [ YOUR WORDS ] What we see in these three suburbs
+## How common this is, and what to do if you are offered possession without one
 
-*Prompts:*
+The honest answer on numbers is that nobody has published a reliable one. A 2014 report put the count of Mumbai buildings without an occupancy certificate at nearly 50,000, but it named no source for the figure and nothing more recent has replaced it. The Supreme Court has since recorded its concern at buildings being occupied, and even certified, without meeting the rules, and in 2025 the Union commerce minister publicly directed the BMC and MHADA to blacklist developers who fail to obtain occupancy certificates for completed buildings. The problem is real and it is not confined to one suburb.
 
-- *How common is possession without OC in Borivali, Kandivali and Malad?*
-- *Have you had a resale complicated or blocked by a missing OC?*
-- *What do you tell a buyer when a builder offers possession without one?*
+For a flat bought in a RERA registered project, the position is simpler than it used to be. Section 11(4)(b) of the Act puts the duty to obtain the occupancy certificate on the developer and requires it to be handed to the buyers. Possession offered without one can be refused and taken to MahaRERA.
+
+What we say to a buyer offered keys without a certificate: do not take them. Taking possession does not cure the defect, it moves the problem onto you. A flat without an occupancy certificate is harder to insure, harder to mortgage and harder to sell, and it makes the society's own conveyance harder. Wait, and put the wait in writing.
 
 ---
 

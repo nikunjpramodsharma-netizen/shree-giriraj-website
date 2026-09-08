@@ -22,7 +22,11 @@ sources:
     url: https://homefirstindia.com/blog/article/encumbrance-certificate-maharashtra-igr/
   - label: NoBroker, how to get an encumbrance certificate in Maharashtra
     url: https://www.nobroker.in/blog/how-to-get-encumbrance-certificate-in-maharashtra/
-sourcesCheckedOn: "1 September 2026"
+  - label: Landeed, Mumbai home buying checklist and the thirty year search
+    url: https://www.landeed.com/post/mumbai-home-buying-checklist-title-checks-to-home-loans-more
+  - label: Jurigram, property title search checklist
+    url: https://jurigram.com/blog/property-law/property-title-search-verification-india
+sourcesCheckedOn: "8 September 2026"
 relatedFaqs:
   - How many years should an encumbrance certificate cover?
   - Does a clear certificate mean the title is clear?
@@ -84,9 +88,13 @@ Most people do step two after step four. That is the wrong order, and it is why 
 
 ---
 
-## [ YOUR WORDS ] What we pull alongside it
+## What we pull alongside it
 
-*Prompts: what else do you ask for at the same time, and has an encumbrance search ever actually caught something for a client here?*
+An encumbrance search only shows charges that were registered. It will not show society dues, an unregistered agreement, a family claim that has not reached a court, or a dispute that has. So it goes in a stack, never alone.
+
+The stack is: a search report on the title going back thirty years, which is what a bank asks for on an older building anyway; the Index 2 for every document in that chain, so each link is seen rather than taken on trust; the society share certificate and the society's no objection letter, which say whether the society recognises this seller and whether dues are outstanding; the latest property tax bill, in whose name it stands and whether it is paid; the occupancy certificate for the building; and, where the seller had a loan, the lender's closure letter and the return of the original documents.
+
+If the encumbrance search is clean and any one of those is not, the flat is not clean.
 
 ---
 

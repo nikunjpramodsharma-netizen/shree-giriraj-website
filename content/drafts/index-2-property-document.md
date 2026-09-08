@@ -20,7 +20,11 @@ sources:
     url: https://igrmaharashtra.gov.in/
   - label: "99acres, what is the Index II document"
     url: https://www.99acres.com/articles/what-is-index-ii-document.html
-sourcesCheckedOn: "1 September 2026"
+  - label: Landeed, what an Index 2 records and how a property's registered history is assembled
+    url: https://web.landeed.com/maharashtra/index-2
+  - label: 1acre, verifying a Maharashtra registration through Index 2
+    url: https://1acre.in/guides/maharashtra/index-ii-maharashtra
+sourcesCheckedOn: "8 September 2026"
 relatedFaqs:
   - How do I get a copy of Index 2?
   - Is Index 2 proof of ownership?
@@ -75,9 +79,15 @@ You need both. The deed for the rights, the Index 2 for the proof of registratio
 
 ---
 
-## [ YOUR WORDS ] When we pull it
+## When we pull it
 
-*Prompts: at what point in a deal do you ask for it, and what has it told you that the agreement did not?*
+Twice. Once at the start, before a token is paid, and once more just before registration.
+
+The first pull is part of the title check. Every registered document on the flat produces its own Index 2, so pulling all of them on the property gives its registered history in one stack: each sale, any mortgage, any lease over twelve months, any gift or release. Read against the seller's story, it answers questions the agreement cannot. Whether the person selling is the person who bought. What they paid, and the government value at the time, which sits on the same page. Whether a lender registered a charge that nobody has mentioned. Whether a document in the chain was registered at all.
+
+The second pull, a day or two before registration, is for anything new. A mortgage or a fresh agreement registered after the first search shows up as a later entry, and it is a cheap check against an expensive problem.
+
+Neither pull replaces a lawyer's search report, and the free e-Search download is not a certified copy. It is the fastest way to see whether the paper matches the person.
 
 ---
 

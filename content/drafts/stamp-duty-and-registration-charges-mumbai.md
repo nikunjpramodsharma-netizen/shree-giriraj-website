@@ -26,7 +26,15 @@ sources:
     url: https://homefirstindia.com/blog/article/stamp-duty-registration-charges-maharashtra
   - label: Kalpataru, stamp duty and registration charges in Mumbai
     url: https://www.kalpataru.com/blogs/stamp-duty-and-registration-charges-mumbai
-sourcesCheckedOn: "1 September 2026"
+  - label: Supreme Court, Shyamsundar Radheshyam Agrawal v. Pushpabai Nilkanth Patil, 2024 INSC 730, on duty falling on the agreement for sale
+    url: https://www.verdictum.in/court-updates/supreme-court/shyamsundar-radheshyam-agrawal-v-pushpabai-nilkanth-patil-2024-insc-730-sale-agreements-in-sale-deed-dont-stamp-duty-1552525
+  - label: Section 34, Maharashtra Stamp Act, 1958, penalty on deficient duty
+    url: https://indiankanoon.org/doc/50512957/
+  - label: Section 56(2)(x), Income Tax Act, 1961, and the 10 percent tolerance
+    url: https://taxguru.in/income-tax/stamp-duty-agreement-date-considered-section-562x.html
+  - label: Mumbai Property Exchange, resale asking rates against ready reckoner rates, 2025 to 2026
+    url: https://www.mumbaipropertyexchange.com/ready-reckoner-rates-mumbai
+sourcesCheckedOn: "8 September 2026"
 relatedFaqs:
   - Is stamp duty different for a woman buyer?
   - Is stamp duty payable on a gift deed between family?
@@ -91,9 +99,13 @@ We could not confirm the current time limit or the conditions to a standard wort
 
 ---
 
-## [ YOUR WORDS ] What we do before a client agrees a price
+## What we do before a client agrees a price
 
-*Prompts: when do you calculate this in a transaction, and have you seen a buyer caught short because the reckoner rate was above the agreed price?*
+We look up the reckoner value before anyone talks numbers, not after. Stamp duty is charged on whichever is higher, the price in the agreement or the government's ready reckoner value for that flat, so the reckoner figure is part of the price of the flat whether the buyer has heard of it or not.
+
+The timing matters for a second reason. In September 2024 the Supreme Court held that where an agreement for sale hands over possession, the duty is owed on that agreement when it is signed, and a later sale deed does not wipe out the earlier liability. Duty paid late attracts a penalty of 2 percent of the shortfall for every month it stays unpaid. So the duty is worked out at the agreement stage, and the money has to be ready then.
+
+The trap to know about is a reckoner value that sits above the agreed price. It is unusual in these suburbs, where asking prices generally run well above the reckoner, but it happens where a price is low for its zone: an old building, a sale in a hurry, a flat passing between relatives at a family price. When the gap is more than 10 percent, the buyer pays duty on the higher reckoner figure and, under section 56(2)(x) of the Income Tax Act, is taxed on the difference as income. The seller faces the mirror image under section 43CA. Checking the reckoner figure first is how that surprise is avoided.
 
 ---
 

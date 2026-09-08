@@ -51,8 +51,27 @@ describe("draft versus ready", () => {
     expect(p.isReady).toBe(false);
   });
 
-  it("has no ready posts yet, which is the honest current state", () => {
-    expect(getAllPosts().filter((p) => p.isReady)).toEqual([]);
+  /**
+   * Ten of the thirteen went ready on 8 September 2026, when the section
+   * each was waiting on was written from sourced research. The three that
+   * remain need the owner's own experience and nothing else will do.
+   */
+  it("has exactly the three posts still waiting on the owner as drafts", () => {
+    const drafts = getAllPosts()
+      .filter((p) => !p.isReady)
+      .map((p) => p.slug)
+      .sort();
+    expect(drafts).toEqual([
+      "carpet-area-vs-built-up-area",
+      "choosing-an-interior-designer-in-borivali",
+      "the-ten-month-deposit-in-borivali",
+    ]);
+  });
+
+  it("marks a finished post as ready", () => {
+    const p = getPost("stamp-duty-and-registration-charges-mumbai")!;
+    expect(p.openMarkers).toEqual([]);
+    expect(p.isReady).toBe(true);
   });
 });
 

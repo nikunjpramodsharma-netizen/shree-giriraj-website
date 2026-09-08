@@ -22,7 +22,13 @@ sources:
     url: https://taxguru.in/income-tax/tax-implications-buyers-property-purchased-stamp-duty-value.html
   - label: "Chartered Club, tax on property transactions below circle rate"
     url: https://www.charteredclub.com/tax-on-property-transaction-below-circle-rate-section-50c-sec-56/
-sourcesCheckedOn: "1 September 2026"
+  - label: Mumbai Property Exchange, resale asking rates against ready reckoner rates, 2025 to 2026
+    url: https://www.mumbaipropertyexchange.com/ready-reckoner-rates-mumbai
+  - label: Bombay Chartered Accountants' Society, stamp duty ready reckoner and depreciation for building age
+    url: https://bcajonline.org/journal/stamp-duty-ready-reckoner/
+  - label: Business Standard, Maharashtra ready reckoner revision from 1 April 2025
+    url: https://www.business-standard.com/amp/finance/personal-finance/maharashtra-hikes-property-rates-what-3-9-rr-rate-increase-means-for-you-125040100372_1.html
+sourcesCheckedOn: "8 September 2026"
 relatedFaqs:
   - Where do I check the reckoner rate for a building?
   - What if I buy below the reckoner rate?
@@ -64,13 +70,13 @@ This is tax rather than property, so take the specifics to a chartered accountan
 
 ---
 
-## [ YOUR WORDS ] Where the gap is biggest in our suburbs
+## Where the gap opens up, and where it closes
 
-*This is the section that makes the post local and it is the reason to write it. Prompts:*
+Across Mumbai, resale asking prices in 2025 to 2026 sat a median 103 percent above the reckoner rate for the same locality, so as a rule the reckoner is well below what a flat actually trades for. That figure is built on asking prices, not registered prices, so treat it as the direction of the gap rather than its exact size.
 
-- *Are there pockets in Borivali, Kandivali or Malad where the reckoner rate sits above what flats actually trade for?*
-- *Older buildings versus newer towers, which side does the gap fall on?*
-- *When do you check it in a transaction?*
+The gap is not even, and the reason is how the rate is set. One rate covers a whole zone, and a zone in Borivali or Kandivali holds thirty year old buildings without lifts and towers finished last year. The reckoner does allow a deduction for the age of a building, but it is a fixed schedule, nothing for a building under two years old rising to 70 percent at sixty years, and it applies only to the construction part of the value, not the land. It does not track what buyers will actually pay. So within a single zone the reckoner sits closest to the real price on the oldest buildings, and furthest below it on the newest. An old flat sold at a low price is where the reckoner can meet or overtake the agreed figure, with the duty and income tax consequences set out in the [stamp duty article](/blog/stamp-duty-and-registration-charges-mumbai).
+
+Which specific pockets of Borivali, Kandivali and Malad carry the narrowest gap is not something any published figure settles, and the answer changes every April. We check the reckoner value for the specific building before a price is agreed, once more when the agreement is drafted, and again if the deal crosses 1 April, because the rates are revised at the start of the financial year and the new figure applies from that day.
 
 ---
 

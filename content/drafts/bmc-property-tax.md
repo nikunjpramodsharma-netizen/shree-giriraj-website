@@ -23,7 +23,11 @@ sources:
     url: https://cleartax.in/s/property-tax-mumbai
   - label: HomeFirst India, BMC Mumbai property tax
     url: https://homefirstindia.com/blog/article/bmc-mumbai-property-tax
-sourcesCheckedOn: "1 September 2026"
+  - label: Bombay High Court, Nagri Niwara Parishad v. Municipal Corporation of Greater Mumbai, 2024, on section 212 and notice to a transferee
+    url: https://www.lawtext.in/judgement.php?bid=1192
+  - label: Deccan Herald, exemption for residential flats up to 500 square feet
+    url: https://www.deccanherald.com/india/mumbai-no-property-tax-on-residential-properties-up-to-500-sq-ft-says-uddhav-thackeray-1066898.html
+sourcesCheckedOn: "8 September 2026"
 relatedFaqs:
   - Is my flat exempt from BMC property tax?
   - How do I find my property account number?
@@ -104,13 +108,15 @@ Ask for the last paid receipt before you pay a token. It takes a minute.
 
 ---
 
-## [ YOUR WORDS ] What we check, and what we have seen
+## What we check before a client commits
 
-*Prompts:*
+Three things on the bill, before a token changes hands.
 
-- *Do you check the tax position as standard before a client commits?*
-- *Have you seen arrears actually derail or delay a sale here?*
-- *How often do you find an owner in Borivali paying tax on a flat that is under the 500 sq ft line?*
+Whose name is on it. If the seller's name is not on the latest bill, somebody in the chain skipped mutation, and that is corrected before the sale or it becomes the buyer's job with one more deed to file.
+
+Whether it is paid. Property tax under the Mumbai Municipal Corporation Act is a first charge on the property, which means the corporation looks to the flat for its money, not only to the person who owed it. The Bombay High Court has held that the charge cannot be enforced against a buyer who had no notice of it, but that is a defence to argue afterwards, not a reason to buy into arrears. The seller produces a paid up bill before registration, and the dues clause in the deed puts anything outstanding on the seller.
+
+The carpet area on the assessment. Since 1 January 2022 a residential flat of up to 500 square feet carpet area pays no property tax in Mumbai. If the assessment shows a larger area than the flat has, the exemption is being missed, and that is worth correcting at the ward office whether or not a sale is happening. How many owners in Borivali are paying tax on a flat that qualifies is not a number anyone has published, so we do not offer one.
 
 ---
 
