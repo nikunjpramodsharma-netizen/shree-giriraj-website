@@ -80,7 +80,9 @@ export type AreaPanel = {
  * per square foot of carpet (Mumbai Property Exchange, median of listings
  * over the 18 months to July 2026) and the new launch asking band
  * (Mumbai Property Exchange and PropertyPistol, September 2026). Asking, not
- * registered, and the labels say so. Refresh when the blog's carpet area
+ * registered, and the labels say so. Every panel shows both sides of its
+ * suburb; "Since 1996" was dropped from the Borivali row because the site
+ * header already says it and it left East uncovered. Refresh when the blog's carpet area
  * table is refreshed; the two must agree.
  */
 export const AREA_PANELS: AreaPanel[] = [
@@ -91,8 +93,8 @@ export const AREA_PANELS: AreaPanel[] = [
     body: "Our home turf. Resale, rentals and society redevelopment across Borivali West and East, from Chikoowadi to the station belt. The pocket you choose matters more here than the building does.",
     stats: [
       { value: "₹31,200", label: "Resale asking, per sq ft carpet, West" },
-      { value: "₹25k to 35k", label: "New launch asking, per sq ft, West" },
-      { value: "Since 1996", label: "We have been here" },
+      { value: "₹31,400", label: "Resale asking, per sq ft carpet, East" },
+      { value: "₹25k to 35k", label: "New launch asking, per sq ft, both sides" },
     ],
     watch:
       "The station belt and the Link Road side are two different markets at the same price. People conflate them and overpay on the wrong one.",

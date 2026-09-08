@@ -16,7 +16,8 @@ import { buildAlternates } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
-import { graph, serviceNode, breadcrumbNode } from "@/lib/schema";
+import { graph, serviceNode, breadcrumbNode, faqNode } from "@/lib/schema";
+import { getServiceFaqs } from "@/lib/service-faqs";
 
 export const revalidate = 60;
 
@@ -147,6 +148,9 @@ export default async function ServicePage({
   const heroSubheading = getLocalizedField(page.heroSubheading, locale);
   const body = getLocalizedField(page.body, locale);
   const steps = tServiceSteps.raw(STEPS_KEY[slug]) as string[];
+  // English only: the answers quote English sources and article titles.
+  // Rendered and marked up together, or not at all.
+  const faqs = locale === "en" ? getServiceFaqs(slug) : [];
 
   // Literal class names so Tailwind's build-time scanner can find them (dynamic template strings won't work).
   const revealDelays = ["delay-0", "delay-100", "delay-200"];
@@ -168,6 +172,7 @@ export default async function ServicePage({
             slug,
           }),
           breadcrumbNode(locale, trail),
+          faqs.length > 0 ? faqNode(faqs.map((f) => ({ question: f.q, answer: f.a }))) : null,
         )}
       />
 
@@ -250,6 +255,41 @@ export default async function ServicePage({
           </div>
         </Reveal>
       </section>
+
+      {/* COMMON QUESTIONS. The questions people actually type for this
+          service, answered from the same sourced figures the blog carries.
+          See service-faqs.ts for where each answer comes from. */}
+      {faqs.length > 0 && (
+        <section className="pb-16">
+          <Reveal>
+            <div className="mx-auto max-w-3xl px-6">
+              <h2 className="text-2xl text-ink md:text-3xl">Common questions</h2>
+              <dl className="mt-6 divide-y divide-line border-y border-line">
+                {faqs.map((f) => (
+                  <div key={f.q} className="py-5">
+                    <dt className="font-semibold text-ink">{f.q}</dt>
+                    <dd className="mt-2 text-ink/75">
+                      {f.a}
+                      {f.href && f.hrefLabel && (
+                        <>
+                          {" "}
+                          <Link
+                            href={f.href}
+                            className="text-brand-indigo underline underline-offset-4"
+                          >
+                            {f.hrefLabel}
+                          </Link>
+                          .
+                        </>
+                      )}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </Reveal>
+        </section>
+      )}
 
       {/* PROJECTS CROSS-SELL */}
       {projects && projects.length > 0 && (

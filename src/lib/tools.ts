@@ -77,6 +77,14 @@ const emiTool: Tool = {
       q: "Why is so much of my early EMI going to interest?",
       a: "Interest is charged on the balance outstanding, and the balance is at its largest at the start. In the first year of a twenty year loan the large majority of each instalment is interest, and the ratio only reverses in the later years. The year by year tab shows this on your own numbers.",
     },
+    {
+      q: "What is the EMI on a 30 lakh home loan over 15 years?",
+      a: "At 8.5 percent, about 29,500 rupees a month, and about 26,000 over 20 years. The rate is the illustration, not a quote: put your bank's actual rate into the calculator and it shows the EMI, the total interest and the cash you need on top of the loan for stamp duty and registration.",
+    },
+    {
+      q: "How much home loan can I get on a 40,000 rupee salary?",
+      a: "Lenders usually cap the EMI at roughly 40 to 50 percent of take home pay, so on 40,000 a month the EMI ceiling is about 16,000 to 20,000. At 8.5 percent over 20 years that supports a loan of roughly 18 to 23 lakh rupees. Each bank applies its own multiplier, so treat this as the range to plan around, not an offer.",
+    },
   ],
   readNext: [
     {
@@ -124,6 +132,10 @@ const stampDutyTool: Tool = {
       q: "Can stamp duty be paid from the home loan?",
       a: "Generally no. Lenders fund a share of the agreement value, and stamp duty and registration sit outside it, so both have to be found in cash on top of the down payment.",
     },
+    {
+      q: "What are the stamp duty rates in Maharashtra for 2026?",
+      a: "In Mumbai, 6 percent for a male buyer and 5 percent for a woman holding in her sole name, both including the 1 percent metro cess, plus registration at 1 percent capped at 30,000 rupees. Rates elsewhere in the state differ by municipal area, and this calculator is Mumbai only. Check the year on the reckoner statement, because the values it applies to change every 1 April.",
+    },
   ],
   readNext: [
     { label: "Property paperwork in Maharashtra", href: "/guides/property-paperwork-maharashtra" },
@@ -167,6 +179,10 @@ const areaTool: Tool = {
     {
       q: "Why compare flats on carpet area rather than the quoted rate?",
       a: "Because the quoted rate is per super built up foot, and the share of that you can actually use differs from flat to flat. Dividing the total price by the carpet area gives one number that is comparable across buildings.",
+    },
+    {
+      q: "How do I calculate carpet area from built up area?",
+      a: "Built up area is carpet plus the external walls and usually the balcony, typically 10 to 15 percent more. So divide the built up figure by 1.10 to 1.15 for an estimate of carpet. Built up has no statutory definition, so for a resale flat the reliable number is the carpet area in the original agreement, or a measurement.",
     },
   ],
   readNext: [
@@ -212,6 +228,10 @@ const hraTool: Tool = {
       q: "Can I claim HRA under the new tax regime?",
       a: "No. The exemption is available only under the old regime, so the calculation is worth doing only if you are on it or comparing the two.",
     },
+    {
+      q: "Is HRA exemption 50 percent of basic salary?",
+      a: "Not on its own. Fifty percent of basic pay plus DA is one of three limbs, and the exemption is the smallest of the three: that figure, the HRA actually received, and rent paid less 10 percent of basic. In a metro such as Mumbai the limb is 50 percent; elsewhere it is 40. The calculator works all three and shows which one binds.",
+    },
   ],
   readNext: [
     { label: "Carpet area and loading", href: "/tools/carpet-area-calculator" },
@@ -256,6 +276,10 @@ const interiorsTool: Tool = {
       q: "Do I need society permission for interior work?",
       a: "In most Mumbai societies yes, and the rules on working hours, lift use and debris removal are set locally. Ask before work starts rather than after it is stopped halfway.",
     },
+    {
+      q: "How do I write a scope for an interior quote?",
+      a: "Room by room, in quantities: running feet of wardrobe and kitchen, square feet of false ceiling and painting, counts of units and points, with a named material against each. That is what this tool produces. A quote given against that scope can be compared with another; a lump sum for the whole flat cannot.",
+    },
   ],
   readNext: [
     { label: "Carpet area and loading", href: "/tools/carpet-area-calculator" },
@@ -299,6 +323,14 @@ const capitalGainsTool: Tool = {
       q: "Can I avoid capital gains tax by buying another house?",
       a: "Section 54 provides relief where the gain is reinvested in another residential property within prescribed time limits, and section 54EC covers specified bonds. Both have conditions, so take advice rather than assuming.",
     },
+    {
+      q: "Is capital gains tax on property 12.5 percent or 20 percent?",
+      a: "For a property held more than 24 months, 12.5 percent without indexation. If you are a resident individual or HUF and bought before 23 July 2024, you may instead pay 20 percent with indexation, whichever is lower. Anything bought after that date has only the 12.5 percent option. The calculator shows both where the choice exists.",
+    },
+    {
+      q: "How much tax do I pay when I sell my flat in India?",
+      a: "It depends on the gain, not the price: sale price less the indexed or unindexed cost, improvements and transfer expenses. On a long term gain the tax is 12.5 percent of that figure, or 20 percent with indexation where the choice still applies. Reliefs under sections 54 and 54EC can reduce or remove it if the conditions are met.",
+    },
   ],
   readNext: [
     { label: "Stamp duty and registration, Mumbai", href: "/tools/stamp-duty-calculator-mumbai" },
@@ -337,6 +369,10 @@ const propertyTaxTool: Tool = {
     {
       q: "Does unpaid property tax affect a sale?",
       a: "Yes. Arrears attach to the property rather than the person, so a buyer who does not check inherits them. Ask for the last paid receipt before you pay a token.",
+    },
+    {
+      q: "How do I calculate property tax in Mumbai?",
+      a: "The BMC charges on capital value: the ready reckoner rate for the building multiplied by the carpet area and by weights for the type of construction, the age of the building and the floor, with the tax rate applied to that value. A residential flat of up to 500 square feet carpet has paid nothing since 1 January 2022. The calculator applies the published weights and shows each step.",
     },
   ],
   readNext: [
