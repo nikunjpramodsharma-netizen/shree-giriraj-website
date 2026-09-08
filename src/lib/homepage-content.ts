@@ -141,18 +141,16 @@ export type ServicePanel = {
  * is the main business. Rentals and interiors carry more search volume and
  * lead on the service pages and in ads instead.
  *
- * IMAGES. These are the same photographs as the service page heroes, so the
- * panel and the page it opens agree, except for two where the panel shape
- * forced a different choice. The track renders one open panel of roughly
- * square proportion and five vertical strips about a fifth as wide, so an
- * image has to survive being cut to a narrow centre slice. Redevelopment uses
- * a tower crane rather than the hero's aerial, because an aerial in a strip
- * is texture and nothing else.
+ * IMAGES. Each panel now carries a different photograph from the service page
+ * it opens, so the click shows the reader something new rather than the same
+ * picture again. See HERO_IMAGE in the service route for how the pairs were
+ * chosen.
  *
- * Resale matches its page again and both changed. The panel showed a sunlit
- * facade hung with laundry and air conditioners: honest, and the wrong
- * argument to make on a panel whose job is to sell a flat. It is now the
- * landscaped courtyard the service page uses.
+ * The panel shape does the choosing as much as the subject does. The track
+ * renders one open panel of roughly square proportion and five vertical strips
+ * about a fifth as wide, so an image has to survive being cut to a narrow
+ * centre slice. That is why the panels are the simpler, more vertical half of
+ * each pair, and the page heroes carry the wider scenes.
  *
  * All six are 1100 by 1375, four to five, which gives the open panel width to
  * show and the strips height to keep. Pexels, 8 September 2026.

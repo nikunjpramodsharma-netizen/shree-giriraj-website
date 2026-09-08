@@ -41,32 +41,36 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
 };
 
 /**
- * One image per service, and each one has to look like here.
+ * One image per service, and no image used twice.
  *
- * The previous set was stock in the worst sense: the "new projects" hero was
- * a night skyline of Chicago, the shops hero a bare concrete floor with
- * foreign city views, the resale hero an abstract facade, and the rentals
- * hero a pair of jeans holding keys. None of it could have been taken within
- * a thousand miles of Borivali, and the owner said so.
+ * Each service now has a pair: one photograph on the homepage panel and a
+ * different one on the page it opens. Four services were showing the same
+ * picture in both places, which made the click feel like it went nowhere.
  *
- * All six are Indian: a landscaped courtyard inside a residential complex for
- * resale; hands exchanging keys for rentals, faces out of frame so nobody has
- * to look like a client; Mumbai residential towers for new launches; a
- * building going up in scaffolding and netting for redevelopment; customers at
- * a shop counter with the shutters up for shops; and a Mumbai living room for
- * interiors.
+ * The pairs are chosen so the two halves say different things about the same
+ * service. Resale: a complex with its garden on the panel, then the play area
+ * and courts in use on the page, because a buyer is buying the society as
+ * much as the flat. Rentals: the keys, then the empty flat those keys open.
+ * New launches: towers on the panel, one building close up on the page.
+ * Interiors: a fitted kitchen, then a finished living room. Redevelopment: the
+ * crane, then the building going up under it. Shops: the high street, then the
+ * counter inside one of the shops on it.
  *
- * Resale took three attempts and the reason is worth keeping. A close crop of
- * one facade read as a wall. Society blocks at dusk read as real but tired,
- * and the owner's objection was the right one: this page is selling flats, so
- * the building in the picture has to look like somewhere a buyer wants to
- * live. Authenticity is not a licence to show something unappealing. The
- * courtyard is well kept and planted, which is what a good society looks like,
- * and it stays clear of the new build towers used for new launches.
+ * TWO RULES LEARNED THE HARD WAY.
  *
- * Pexels, 8 September 2026, 1920 wide.
- */
-const HERO_IMAGE: Record<(typeof SERVICE_SLUGS)[number], string> = {
+ * Authenticity is not a licence to show something unappealing. An earlier
+ * resale hero was society blocks at dusk: real, and it made the flats look
+ * like somewhere nobody would choose. This page is selling homes, so the
+ * building has to look worth living in.
+ *
+ * And no identifiable foreign faces. A building from anywhere reads as a
+ * building; a face from anywhere reads as a stock photo. Two strong
+ * candidates, children on a playground and a family unpacking, were dropped
+ * for exactly this. Where people appear, they are at a distance or seen from
+ * behind.
+ *
+ * Pexels, 8 September 2026. Heroes 1920 wide, panels 1100 by 1375.
+ */const HERO_IMAGE: Record<(typeof SERVICE_SLUGS)[number], string> = {
   "resale-flats": "/services/hero-resale.jpg",
   rentals: "/services/hero-rentals.jpg",
   "new-project-bookings": "/services/hero-new-projects.jpg",
@@ -77,9 +81,9 @@ const HERO_IMAGE: Record<(typeof SERVICE_SLUGS)[number], string> = {
 
 /** Alt text per service. A hero image is content, not decoration. */
 const HERO_ALT: Record<(typeof SERVICE_SLUGS)[number], string> = {
-  "resale-flats": "A landscaped courtyard between the wings of a residential building",
-  rentals: "One set of keys passing from one hand to another",
-  "new-project-bookings": "New residential towers in Mumbai under a clear sky",
+  "resale-flats": "A play area and sports courts in use inside a residential complex, seen from above",
+  rentals: "An empty flat with the balcony door open to the light",
+  "new-project-bookings": "A tall residential building in Mumbai against a clear sky",
   redevelopment: "A residential building going up, wrapped in scaffolding and safety netting",
   "shops-plots": "Customers at the counter of a shop, with the shutters up and payment signs on the front",
   interiors: "A furnished living room in a Mumbai flat",
