@@ -154,6 +154,13 @@ export type ServicePanel = {
  *
  * All six are 1100 by 1375, four to five, which gives the open panel width to
  * show and the strips height to keep. Pexels, 8 September 2026.
+ *
+ * Resale took four attempts. A close crop of a facade read as a wall, blocks
+ * at dusk read as tired, a facade hung with laundry was honest and unsellable,
+ * and a courtyard was handsome but empty. The brief that settled it came from
+ * the owner: a big building, fifteen to twenty floors, a proper garden, and
+ * life in it. The panel is now a tall Indian tower at golden hour and the page
+ * carries the garden.
  */
 export const SERVICE_PANELS: ServicePanel[] = [
   {

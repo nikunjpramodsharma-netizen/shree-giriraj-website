@@ -48,13 +48,14 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
  * picture in both places, which made the click feel like it went nowhere.
  *
  * The pairs are chosen so the two halves say different things about the same
- * service. Resale: a complex with its garden on the panel, then the play area
- * and courts in use on the page, because a buyer is buying the society as
- * much as the flat. Rentals: the keys, then the empty flat those keys open.
- * New launches: towers on the panel, one building close up on the page.
- * Interiors: a fitted kitchen, then a finished living room. Redevelopment: the
- * crane, then the building going up under it. Shops: a commercial building
- * with glass frontage, then the retail units on its plaza.
+ * service. Resale: a tall tower at golden hour on the panel, then towers of
+ * twenty odd floors standing around a large landscaped garden on the page,
+ * because a buyer is buying the society as much as the flat. Rentals: the
+ * keys, then the empty flat those keys open. New launches: towers on the
+ * panel, one building close up on the page. Interiors: a fitted kitchen, then
+ * a finished living room. Redevelopment: the crane, then the building going up
+ * under it. Shops: retail units on a plaza, then shoppers walking a covered
+ * arcade of glass shopfronts.
  *
  * TWO RULES LEARNED THE HARD WAY.
  *
@@ -73,6 +74,15 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
  * street and a real Indian shop counter, and both read as somewhere cheap.
  * This page asks an investor to buy a commercial unit, so it has to show the
  * kind of address they would want to own, not the kind they would walk past.
+ * The page then gained people, because an empty parade of units says nothing
+ * about footfall, and footfall is what a shop buyer is actually buying.
+ *
+ * A NOTE ON THE RESALE HERO. The brief was a building of fifteen to twenty
+ * floors with a proper garden, and it is the only frame in the set that
+ * delivers both at once. It is not Mumbai and its garden statues make that
+ * plain. Buildings read across borders where faces and signage do not, so
+ * this was judged worth it; if that ever stops being true, the thing to look
+ * for is a tall Indian society with its own landscaped podium.
  *
  * Pexels, 8 September 2026. Heroes 1920 wide, panels 1100 by 1375.
  */const HERO_IMAGE: Record<(typeof SERVICE_SLUGS)[number], string> = {
@@ -86,11 +96,11 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
 
 /** Alt text per service. A hero image is content, not decoration. */
 const HERO_ALT: Record<(typeof SERVICE_SLUGS)[number], string> = {
-  "resale-flats": "A play area and sports courts in use inside a residential complex, seen from above",
+  "resale-flats": "High rise apartment towers standing around a large landscaped garden",
   rentals: "An empty flat with the balcony door open to the light",
   "new-project-bookings": "A tall residential building in Mumbai against a clear sky",
   redevelopment: "A residential building going up, wrapped in scaffolding and safety netting",
-  "shops-plots": "New retail units with full height glass frontage on a modern shopping plaza",
+  "shops-plots": "Shoppers walking a covered shopping arcade lined with glass shopfronts",
   interiors: "A furnished living room in a Mumbai flat",
 };
 
