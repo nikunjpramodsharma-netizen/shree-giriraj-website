@@ -15,7 +15,7 @@ import {
   type Locale,
   type LocalizedValue,
 } from "@/lib/i18n-content";
-import { buildAlternates } from "@/lib/seo";
+import { pageUrls } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { graph, residenceNode, breadcrumbNode } from "@/lib/schema";
@@ -67,13 +67,20 @@ export async function generateMetadata({
   if (!project) return {};
   const locales = availableLocales(project.summary);
   if (!locales.includes(params.locale as Locale)) return { robots: { index: false } };
+  const urls = pageUrls(params.locale, `/projects/${params.slug}`, locales);
   return {
-    alternates: buildAlternates(params.locale, `/projects/${params.slug}`, locales),
+    ...urls,
     title: project.name,
     description: getLocalizedField(project.summary, params.locale as Locale),
-    openGraph: project.coverImage
-      ? { images: [urlFor(project.coverImage).width(1200).height(630).url()] }
-      : undefined,
+    // Falling back to `undefined` here used to wipe og:url as well as the
+    // image. Spreading urls.openGraph keeps the URL and lets the layout's
+    // default card fill in when a project has no cover of its own.
+    openGraph: {
+      ...urls.openGraph,
+      ...(project.coverImage
+        ? { images: [urlFor(project.coverImage).width(1200).height(630).url()] }
+        : {}),
+    },
   };
 }
 

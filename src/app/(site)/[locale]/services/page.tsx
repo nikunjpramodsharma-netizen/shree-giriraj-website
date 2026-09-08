@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { buildAlternates, SERVICE_SLUGS } from "@/lib/seo";
+import { pageUrls, SERVICE_SLUGS } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { graph, itemListNode, breadcrumbNode } from "@/lib/schema";
@@ -25,7 +25,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale, namespace: "services" });
   return {
-    alternates: buildAlternates(params.locale, "/services"),
+    ...pageUrls(params.locale, "/services"),
     title: t("heading"),
   };
 }

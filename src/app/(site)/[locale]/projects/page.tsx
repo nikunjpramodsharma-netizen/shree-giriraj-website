@@ -6,7 +6,10 @@ import { client } from "@/sanity/client";
 import { urlFor } from "@/sanity/image";
 import { projectsQuery } from "@/sanity/queries";
 import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
-import { buildAlternates } from "@/lib/seo";
+import { pageUrls } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { type Crumb } from "@/components/Breadcrumbs";
+import { graph, breadcrumbNode, itemListNode } from "@/lib/schema";
 
 export const revalidate = 60;
 
@@ -17,7 +20,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale, namespace: "projectsPage" });
   return {
-    alternates: buildAlternates(params.locale, "/projects"),
+    ...pageUrls(params.locale, "/projects"),
     title: t("heading"),
     description: t("body"),
   };
@@ -47,6 +50,17 @@ export default async function ProjectsPage({
     getTranslations({ locale, namespace: "projectsPage" }),
   ]);
 
+  /**
+   * This index and /blog were the only two pages on the site with no
+   * structured data at all, in four locales each. A list page's job in search
+   * is to be understood as a list, so it gets the trail plus an ItemList of
+   * what is actually on it.
+   */
+  const trail: Crumb[] = [
+    { name: "Home", path: "/" },
+    { name: t("heading"), path: "/projects" },
+  ];
+
   const statusLabel: Record<string, string> = {
     booking: t("statusBooking"),
     upcoming: t("statusUpcoming"),
@@ -55,6 +69,18 @@ export default async function ProjectsPage({
 
   return (
     <>
+      <JsonLd
+        data={graph(
+          breadcrumbNode(locale, trail),
+          itemListNode(
+            locale,
+            projects.map((p) => ({
+              name: p.name,
+              path: `/projects/${p.slug.current}`,
+            })),
+          ),
+        )}
+      />
       <section className="relative overflow-hidden bg-brand-indigo-deep text-paper">
         <Image
           src="/hero-mumbai-towers.jpg"

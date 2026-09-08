@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
 import { graph, breadcrumbNode, itemListNode } from "@/lib/schema";
-import { buildAlternates } from "@/lib/seo";
+import { pageUrls } from "@/lib/seo";
 import { PILLARS } from "@/lib/pillars";
 
 export const revalidate = 300;
@@ -23,7 +23,7 @@ export async function generateMetadata({
     title: "Guides: property paperwork, buying and renting in Mumbai",
     description:
       "Long form guides to the parts of a Mumbai property transaction that catch people out, each one hubbing the detailed articles underneath it.",
-    alternates: buildAlternates(params.locale, "/guides", [GUIDE_LOCALE]),
+    ...pageUrls(params.locale, "/guides", [GUIDE_LOCALE]),
   };
 }
 

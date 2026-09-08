@@ -31,7 +31,7 @@ import { Reveal } from "@/components/Reveal";
 import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
 import { getLowestPriceConfig } from "@/lib/project-helpers";
 import type { Metadata } from "next";
-import { buildAlternates } from "@/lib/seo";
+import { pageUrls } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { getAllPosts } from "@/lib/posts";
 import { postVisual } from "@/lib/blog";
@@ -60,7 +60,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   // Self canonical, plus the full four locale cluster. The homepage is
   // genuinely translated in all four, so the whole set is correct here.
-  return { alternates: buildAlternates(params.locale, "/") };
+  return { ...pageUrls(params.locale, "/") };
 }
 
 // Re-fetch content periodically so CMS edits show up without a redeploy.

@@ -7,7 +7,7 @@ import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ConsultCTA } from "@/components/ConsultCTA";
 import { ContactCTA } from "@/components/ContactCTA";
 import { graph, breadcrumbNode, faqNode } from "@/lib/schema";
-import { buildAlternates } from "@/lib/seo";
+import { pageUrls } from "@/lib/seo";
 import { site } from "@/lib/config";
 import {
   AREAS,
@@ -44,7 +44,7 @@ export async function generateMetadata({
   return {
     title: area.metaTitle,
     description: area.metaDescription,
-    alternates: buildAlternates(params.locale, `/areas/${area.slug}`, [
+    ...pageUrls(params.locale, `/areas/${area.slug}`, [
       AREA_LOCALE,
     ]),
     // A page still carrying an input block is half written. It can be reviewed

@@ -9,7 +9,8 @@ import { routing } from "@/i18n/routing";
 import { absoluteUrl, sitemapAlternates, SERVICE_SLUGS } from "@/lib/seo";
 import { LOCALES, type Locale } from "@/lib/i18n-content";
 import { PILLAR_SLUGS } from "@/lib/pillars";
-import { AREA_SLUGS } from "@/lib/areas";
+import { AREA_SLUGS, getArea, areaIsComplete } from "@/lib/areas";
+import { STORY_IS_WRITTEN } from "@/lib/about";
 import { TOOL_SLUGS } from "@/lib/tools";
 import { getAllPosts, displayDate } from "@/lib/posts";
 
@@ -69,15 +70,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
   out.push(...entriesFor("/guides", ["en"], undefined, 0.6));
 
-  // Areas and contact are the local SEO spine. About is listed but individual
-  // area pages that are still drafts carry noindex on the page itself, which
-  // takes precedence over anything advertised here.
+  // Areas and contact are the local SEO spine.
+  //
+  // A sitemap is a request to index. A noindex tag is an instruction not to.
+  // Sending both for the same URL is not a tie the page wins, it is a
+  // contradiction, and Search Console reports it as "Submitted URL marked
+  // noindex". This file used to list every area page and About regardless,
+  // on the reasoning that the page level tag took precedence. It does decide
+  // the outcome, but the error is still raised and it still costs crawl budget
+  // on URLs we have asked not to be indexed.
+  //
+  // So the readiness gates are read here too, and the rule is one way: nothing
+  // enters the sitemap while it is noindexed. Both gates live in libraries
+  // precisely so this file and the routes cannot drift apart again. Answer an
+  // area page's input blocks, or write the About story, and the URL appears
+  // here on the next build with no further change.
   out.push(...entriesFor("/areas", ["en"], undefined, 0.8));
   for (const slug of AREA_SLUGS) {
+    const area = getArea(slug);
+    if (!area || !areaIsComplete(area)) continue;
     out.push(...entriesFor(`/areas/${slug}`, ["en"], undefined, 0.8));
   }
   out.push(...entriesFor("/contact", ["en"], undefined, 0.7));
-  out.push(...entriesFor("/about", ["en"], undefined, 0.5));
+  if (STORY_IS_WRITTEN) {
+    out.push(...entriesFor("/about", ["en"], undefined, 0.5));
+  }
 
   // Tools convert at the moment the reader gets their number, so they are
   // worth more than the traffic they pull.

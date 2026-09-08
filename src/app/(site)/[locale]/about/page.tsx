@@ -5,9 +5,10 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
 import { graph, breadcrumbNode, organizationNode } from "@/lib/schema";
-import { buildAlternates } from "@/lib/seo";
+import { pageUrls } from "@/lib/seo";
 import { site } from "@/lib/config";
 import { TEAM, TEAM_IS_REAL } from "@/lib/homepage-content";
+import { STORY_IS_WRITTEN, STORY_PROMPTS } from "@/lib/about";
 
 export const revalidate = 300;
 
@@ -24,34 +25,6 @@ const ABOUT_LOCALE = "en";
  * address, the three suburbs. The story is not, because it is yours to tell,
  * so those blocks are flagged and the page is noindexed until they are filled.
  */
-const STORY_IS_WRITTEN = false;
-
-const STORY_PROMPTS: { heading: string; prompts: string[] }[] = [
-  {
-    heading: "How it started",
-    prompts: [
-      "Who started it in 1996, and what were they doing before?",
-      "What did Borivali look like as a property market then, compared with now?",
-      "Was there a moment early on that set how you work?",
-    ],
-  },
-  {
-    heading: "How we work, and why",
-    prompts: [
-      "What do you do differently from a portal or a larger agency?",
-      "What kind of client do you work best with, and who are you not for?",
-      "Is there a deal you turned down, and why? That single answer would do more for trust than anything else on this page.",
-    ],
-  },
-  {
-    heading: "What has changed since 1996",
-    prompts: [
-      "What has RERA actually changed for a buyer here?",
-      "What do people get wrong now that they did not get wrong before?",
-    ],
-  },
-];
-
 export async function generateMetadata({
   params,
 }: {
@@ -61,7 +34,7 @@ export async function generateMetadata({
   return {
     title: `About ${site.name}: in Borivali since ${site.established}`,
     description: `A family run estate agency working across ${site.areas.join(", ")}. MahaRERA registered agent, ${site.rera}.`,
-    alternates: buildAlternates(params.locale, "/about", [ABOUT_LOCALE]),
+    ...pageUrls(params.locale, "/about", [ABOUT_LOCALE]),
     ...(STORY_IS_WRITTEN ? {} : { robots: { index: false, follow: true } }),
   };
 }

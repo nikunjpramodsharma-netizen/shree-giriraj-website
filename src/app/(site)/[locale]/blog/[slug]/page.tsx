@@ -17,9 +17,10 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
 import { graph, blogPostingNode, breadcrumbNode, faqNode } from "@/lib/schema";
-import { buildAlternates } from "@/lib/seo";
+import { pageUrls } from "@/lib/seo";
 import {
   categoryVisual,
+  postVisual,
   readingMinutes,
   extractHeadings,
   formatDate,
@@ -100,10 +101,19 @@ export async function generateMetadata({
   // A markdown post wins, because that is where the drafts live today.
   const md = params.locale === "en" ? getPost(params.slug) : null;
   if (md) {
+    const urls = pageUrls(params.locale, `/blog/${md.slug}`, ["en"]);
     return {
       title: md.title,
       description: md.answer,
-      alternates: buildAlternates(params.locale, `/blog/${md.slug}`, ["en"]),
+      ...urls,
+      // Its own hero rather than the site card. openGraph is replaced whole
+      // when a page sets it, so url has to be carried across by hand or the
+      // page silently loses it.
+      openGraph: {
+        ...urls.openGraph,
+        type: "article",
+        images: [postVisual(md).image],
+      },
       // A draft still carrying review markers must not be indexed. Same rule
       // as the area pages: reviewable on the deployment, invisible to search.
       ...(md.isReady ? {} : { robots: { index: false, follow: true } }),
@@ -120,13 +130,14 @@ export async function generateMetadata({
     ? urlFor(post.mainImage).width(1200).height(630).url()
     : visual.image;
 
+  const urls = pageUrls(params.locale, `/blog/${params.slug}`, locales);
   return {
-    alternates: buildAlternates(params.locale, `/blog/${params.slug}`, locales),
+    ...urls,
     title: post.title,
     description:
       getLocalizedField(post.answer, params.locale as Locale) ??
       getLocalizedField(post.excerpt, params.locale as Locale),
-    openGraph: { images: [ogImage], type: "article" },
+    openGraph: { ...urls.openGraph, images: [ogImage], type: "article" },
   };
 }
 

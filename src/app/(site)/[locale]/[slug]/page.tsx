@@ -10,7 +10,7 @@ import {
   type Locale,
   type LocalizedValue,
 } from "@/lib/i18n-content";
-import { buildAlternates, SERVICE_SLUGS } from "@/lib/seo";
+import { pageUrls, SERVICE_SLUGS } from "@/lib/seo";
 
 export const revalidate = 60;
 
@@ -74,7 +74,7 @@ export async function generateMetadata({
   const locales = availableLocales(page.body);
   if (!locales.includes(params.locale as Locale)) return { robots: { index: false } };
   return {
-    alternates: buildAlternates(params.locale, `/${params.slug}`, locales),
+    ...pageUrls(params.locale, `/${params.slug}`, locales),
     title: page.title,
     description: page.seoDescription,
   };

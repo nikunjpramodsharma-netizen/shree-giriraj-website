@@ -12,7 +12,7 @@ import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { site, waLink } from "@/lib/config";
 import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
 import { getLowestPriceConfig } from "@/lib/project-helpers";
-import { buildAlternates } from "@/lib/seo";
+import { pageUrls } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
@@ -134,10 +134,19 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const page = await client.fetch<ServicePage>(pageBySlugQuery, { slug: params.slug });
   if (!page) return {};
+  const urls = pageUrls(params.locale, `/services/${params.slug}`);
+  const slug = params.slug as (typeof SERVICE_SLUGS)[number];
+  const hero = HERO_IMAGE[slug];
   return {
-    alternates: buildAlternates(params.locale, `/services/${params.slug}`),
+    ...urls,
     title: page.title,
     description: page.seoDescription,
+    // The page's own hero, not the site card. Somebody pasting a link to the
+    // shops page into a WhatsApp group should see shops.
+    openGraph: {
+      ...urls.openGraph,
+      ...(hero ? { images: [{ url: hero, alt: HERO_ALT[slug] }] } : {}),
+    },
   };
 }
 

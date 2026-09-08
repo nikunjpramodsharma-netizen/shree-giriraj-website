@@ -9,7 +9,7 @@ import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ConsultCTA } from "@/components/ConsultCTA";
 import { ContactCTA } from "@/components/ContactCTA";
 import { graph, breadcrumbNode, faqNode, itemListNode } from "@/lib/schema";
-import { buildAlternates } from "@/lib/seo";
+import { pageUrls } from "@/lib/seo";
 import { formatDate } from "@/lib/blog";
 import { PILLARS, getPillar, type Spoke } from "@/lib/pillars";
 import { getAllPosts } from "@/lib/posts";
@@ -40,7 +40,7 @@ export async function generateMetadata({
     description: pillar.metaDescription,
     // English only content, so a single available locale and therefore a
     // canonical with no hreflang cluster. See buildAlternates.
-    alternates: buildAlternates(params.locale, `/guides/${pillar.slug}`, [
+    ...pageUrls(params.locale, `/guides/${pillar.slug}`, [
       GUIDE_LOCALE,
     ]),
   };

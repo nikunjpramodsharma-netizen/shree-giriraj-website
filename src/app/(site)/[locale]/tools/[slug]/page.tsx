@@ -12,7 +12,7 @@ import { InteriorsScope } from "@/components/InteriorsScope";
 import { CapitalGainsCalculator } from "@/components/CapitalGainsCalculator";
 import { PropertyTaxCalculator } from "@/components/PropertyTaxCalculator";
 import { graph, breadcrumbNode, faqNode } from "@/lib/schema";
-import { buildAlternates } from "@/lib/seo";
+import { pageUrls } from "@/lib/seo";
 import { TOOLS, getTool } from "@/lib/tools";
 
 export const revalidate = 300;
@@ -38,7 +38,7 @@ export async function generateMetadata({
   return {
     title: tool.metaTitle,
     description: tool.metaDescription,
-    alternates: buildAlternates(params.locale, `/tools/${tool.slug}`, [
+    ...pageUrls(params.locale, `/tools/${tool.slug}`, [
       TOOL_LOCALE,
     ]),
   };

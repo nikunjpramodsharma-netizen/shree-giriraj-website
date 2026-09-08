@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
 import { graph, breadcrumbNode, itemListNode } from "@/lib/schema";
-import { buildAlternates } from "@/lib/seo";
+import { pageUrls } from "@/lib/seo";
 import { site } from "@/lib/config";
 import { AREAS, getAreaPanel } from "@/lib/areas";
 
@@ -24,7 +24,7 @@ export async function generateMetadata({
     title: "The areas we work in: Borivali, Kandivali and Malad",
     description:
       "Local guides to the three western suburbs we have worked in since 1996, including what changes between pockets and what to check before you commit.",
-    alternates: buildAlternates(params.locale, "/areas", [AREA_LOCALE]),
+    ...pageUrls(params.locale, "/areas", [AREA_LOCALE]),
   };
 }
 

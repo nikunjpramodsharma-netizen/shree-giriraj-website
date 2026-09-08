@@ -5,7 +5,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { routing } from "@/i18n/routing";
-import { SITE_URL } from "@/lib/seo";
+import { SITE_URL, OG_IMAGE } from "@/lib/seo";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -56,6 +56,14 @@ export async function generateMetadata({
       type: "website",
       locale: ogLocaleMap[params.locale] || "en_IN",
       siteName: "Shree Giriraj Real Estate",
+      // Inherited by every page that does not set its own. A page that does
+      // set one replaces this whole images array, which is the intent: a
+      // service page's own photograph beats the generic card.
+      images: [OG_IMAGE],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: [OG_IMAGE.url],
     },
   };
 }

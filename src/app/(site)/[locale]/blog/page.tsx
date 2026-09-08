@@ -7,7 +7,10 @@ import { client } from "@/sanity/client";
 import { urlFor } from "@/sanity/image";
 import { postsQuery } from "@/sanity/queries";
 import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
-import { buildAlternates } from "@/lib/seo";
+import { pageUrls } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { type Crumb } from "@/components/Breadcrumbs";
+import { graph, breadcrumbNode, itemListNode } from "@/lib/schema";
 import { postVisual } from "@/lib/blog";
 import { getAllPosts, type Post as MdPost } from "@/lib/posts";
 
@@ -20,7 +23,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale, namespace: "blogPage" });
   return {
-    alternates: buildAlternates(params.locale, "/blog"),
+    ...pageUrls(params.locale, "/blog"),
     title: t("heading"),
     description: t("body"),
   };
@@ -67,8 +70,32 @@ export default async function BlogPage({
   const drafts = mdPosts.filter((p) => !p.isReady);
   const nothingAtAll = (!posts || posts.length === 0) && mdPosts.length === 0;
 
+  /**
+   * Structured data. Both index pages had none in any locale.
+   *
+   * The ItemList carries only what a reader can actually reach and Google
+   * should actually index: published Sanity posts plus the markdown posts that
+   * pass the readiness gate. Drafts are rendered on the page for review but
+   * are served noindex, so listing them here would be the same contradiction
+   * the sitemap just stopped making.
+   */
+  const trail: Crumb[] = [
+    { name: "Home", path: "/" },
+    { name: t("heading"), path: "/blog" },
+  ];
+  const listed = [
+    ...(posts ?? []).map((p) => ({
+      name: p.title,
+      path: `/blog/${p.slug.current}`,
+    })),
+    ...ready.map((p) => ({ name: p.title, path: `/blog/${p.slug}` })),
+  ];
+
   return (
     <>
+      <JsonLd
+        data={graph(breadcrumbNode(locale, trail), itemListNode(locale, listed))}
+      />
       <section className="relative overflow-hidden bg-brand-indigo-deep text-paper">
         <Image
           src="/blog/paperwork.jpg"

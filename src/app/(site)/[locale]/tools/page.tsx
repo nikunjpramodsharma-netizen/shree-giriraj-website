@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
 import { graph, breadcrumbNode, itemListNode } from "@/lib/schema";
-import { buildAlternates } from "@/lib/seo";
+import { pageUrls } from "@/lib/seo";
 import { TOOLS } from "@/lib/tools";
 
 export const revalidate = 300;
@@ -35,7 +35,7 @@ export async function generateMetadata({
     title: "Free property calculators for Mumbai buyers and tenants",
     description:
       "Straightforward calculators for the numbers that decide a property purchase. No signup, no email, nothing gated.",
-    alternates: buildAlternates(params.locale, "/tools", [TOOL_LOCALE]),
+    ...pageUrls(params.locale, "/tools", [TOOL_LOCALE]),
   };
 }
 

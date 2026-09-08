@@ -85,6 +85,59 @@ export function buildAlternates(
   return { canonical, languages };
 }
 
+/**
+ * The default social card, used by every page that does not override it.
+ *
+ * A page with no og:image gets a bare grey box when it is pasted into
+ * WhatsApp, which is how most of this business actually travels. The card is
+ * a real Mumbai skyline under the site's own indigo wash with the name, the
+ * three suburbs and the MahaRERA number on it, so a shared link is legible
+ * even before anybody taps it.
+ *
+ * Relative on purpose. Next resolves it against metadataBase, which is the
+ * same resolveSiteUrl above, so the card follows the site to its real domain
+ * without an edit here.
+ */
+export const OG_IMAGE = {
+  url: "/og/default.jpg",
+  width: 1200,
+  height: 630,
+  alt: "Shree Giriraj Real Estate, resale, rentals and redevelopment in Borivali, Kandivali and Malad",
+} as const;
+
+/**
+ * Canonical, hreflang and og:url from a single call.
+ *
+ * These three have to describe the same URL, and when they were assembled
+ * separately og:url was simply forgotten on all sixteen page templates. Taking
+ * one path argument and deriving all of it removes the chance of them
+ * disagreeing.
+ *
+ * Spread it, do not nest it: `...pageUrls(locale, "/about", ["en"])`. A page
+ * that wants its own social image should spread this first and then set its
+ * own `openGraph`, merging in `url` from here.
+ *
+ * The default card is repeated here rather than left to the layout. Next does
+ * not deep merge metadata: a page that sets `openGraph` at all replaces the
+ * layout's whole object. So the first version of this helper, which returned
+ * only `url`, silently removed the site card from every page that used it,
+ * which was all of them. Carrying the image alongside the URL keeps the two
+ * from being separable.
+ */
+export function pageUrls(
+  locale: string,
+  path = "/",
+  availableLocales: readonly string[] = routing.locales,
+): {
+  alternates: NonNullable<Metadata["alternates"]>;
+  openGraph: { url: string; images: (typeof OG_IMAGE)[] };
+} {
+  return {
+    alternates: buildAlternates(locale, path, availableLocales),
+    openGraph: { url: absoluteUrl(locale, path), images: [OG_IMAGE] },
+  };
+}
+
 /** Sitemap entries need the same alternates, in the shape Next's sitemap wants. */
 export function sitemapAlternates(
   path = "/",

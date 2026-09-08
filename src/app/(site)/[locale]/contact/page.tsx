@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
 import { graph, breadcrumbNode, organizationNode } from "@/lib/schema";
-import { buildAlternates } from "@/lib/seo";
+import { pageUrls } from "@/lib/seo";
 import { site } from "@/lib/config";
 
 export const revalidate = 300;
@@ -33,7 +33,7 @@ export async function generateMetadata({
   return {
     title: `Contact ${site.name}, Borivali West`,
     description: `Talk to us about buying, selling, renting or redevelopment across ${site.areas.join(", ")}. WhatsApp, phone or send your details.`,
-    alternates: buildAlternates(params.locale, "/contact", [CONTACT_LOCALE]),
+    ...pageUrls(params.locale, "/contact", [CONTACT_LOCALE]),
   };
 }
 
