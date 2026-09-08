@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Link } from "@/i18n/navigation";
+import EnglishLink from "next/link";
 import { AREA_PAGES_READY, type AreaPanel } from "@/lib/homepage-content";
 
 /**
@@ -57,12 +58,12 @@ export function AreaSwitcher({ panels }: { panels: AreaPanel[] }) {
           </p>
 
           {AREA_PAGES_READY && (
-            <Link
+            <EnglishLink
               href={`/areas/${panel.slug}`}
               className="btn btn-outline mt-6 border-paper/40 text-paper"
             >
               See {panel.name} in detail
-            </Link>
+            </EnglishLink>
           )}
         </div>
 

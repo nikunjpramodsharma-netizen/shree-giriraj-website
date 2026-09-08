@@ -195,7 +195,9 @@
     "heading": "Property insights for Borivali, Kandivali & Malad",
     "body": "Practical home buying tips and local market notes for Borivali, Kandivali and Malad, written by people who work here every day.",
     "emptyState": "No posts published yet. Add your first article in the ",
-    "studioLink": "Studio"
+    "studioLink": "Studio",
+    "englishOnly": "Our articles are published in English.",
+    "readInEnglish": "Read the articles"
   },
   "blogPost": {
     "backLink": "← Back to blog"

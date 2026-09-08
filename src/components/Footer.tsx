@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import EnglishLink from "next/link";
 import { site, waLink } from "@/lib/config";
 
 export function Footer() {
@@ -29,7 +30,10 @@ export function Footer() {
               <li><Link href="/#services" className="hover:text-white">{nav("services")}</Link></li>
               <li><Link href="/projects" className="hover:text-white">{nav("projects")}</Link></li>
               <li><Link href="/blog" className="hover:text-white">{nav("blog")}</Link></li>
-              <li><Link href="/about" className="hover:text-white">{nav("about")}</Link></li>
+              {/* About exists only in English. Rendered through the locale aware
+                  Link it became /hi/about, /mr/about and /gu/about, all of which
+                  404, on every page of those three languages. */}
+              <li><EnglishLink href="/about" className="hover:text-white">{nav("about")}</EnglishLink></li>
             </ul>
           </div>
           <div>

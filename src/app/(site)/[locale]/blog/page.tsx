@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import EnglishLink from "next/link";
 import { client } from "@/sanity/client";
 import { urlFor } from "@/sanity/image";
 import { postsQuery } from "@/sanity/queries";
@@ -91,12 +92,20 @@ export default async function BlogPage({
 
       <section className="py-20">
         <div className="wrap">
+          {/* The empty state is only ever reached on hi, mr and gu, because the
+              English index has the markdown posts. It used to show the CMS
+              copy "no posts yet, add your first article here" followed by a
+              link to /studio, so three things went wrong at once: the link
+              rendered as /hi/studio and 404ed, a reader was pointed into the
+              CMS, and the sentence was addressed to the owner rather than to
+              them. It now says, in their language, that the articles are in
+              English, and links to them. */}
           {nothingAtAll && (
             <p className="text-muted">
-              {t("emptyState")}
-              <Link href="/studio" className="text-brand-blue underline">
-                {t("studioLink")}
-              </Link>
+              {t("englishOnly")}{" "}
+              <EnglishLink href="/blog" className="text-brand-blue underline">
+                {t("readInEnglish")}
+              </EnglishLink>
               .
             </p>
           )}

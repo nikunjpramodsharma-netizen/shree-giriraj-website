@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import EnglishLink from "next/link";
 import { client } from "@/sanity/client";
 import { urlFor } from "@/sanity/image";
 import {
@@ -624,7 +625,7 @@ export default async function HomePage({
                 const visual = categoryVisual(p.category ? [p.category] : undefined);
                 return (
                   <Reveal key={p.slug} className={revealDelays[i % 3]}>
-                    <Link
+                    <EnglishLink
                       href={"/blog/" + p.slug}
                       className="block h-full overflow-hidden rounded-2xl border border-brand-indigo/10 bg-white transition hover:-translate-y-1 hover:shadow-xl"
                     >
@@ -650,7 +651,7 @@ export default async function HomePage({
                           </p>
                         )}
                       </div>
-                    </Link>
+                    </EnglishLink>
                   </Reveal>
                 );
               })}

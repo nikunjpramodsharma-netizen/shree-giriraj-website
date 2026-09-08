@@ -11,6 +11,7 @@ import { LOCALES, type Locale } from "@/lib/i18n-content";
 import { PILLAR_SLUGS } from "@/lib/pillars";
 import { AREA_SLUGS } from "@/lib/areas";
 import { TOOL_SLUGS } from "@/lib/tools";
+import { getAllPosts, displayDate } from "@/lib/posts";
 
 export const revalidate = 3600;
 
@@ -101,8 +102,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...SERVICE_SLUGS,
   ]);
 
+  const fromSanity = new Set<string>();
   for (const p of posts) {
+    fromSanity.add(p.slug);
     out.push(...entriesFor(`/blog/${p.slug}`, p.locales ?? [], p.updatedAt, 0.5));
+  }
+
+  /**
+   * Posts written as markdown in the repo.
+   *
+   * These were missing entirely. The sitemap listed the /blog index and then
+   * nothing under it, so thirteen finished articles were declared nowhere,
+   * while the same articles were linked from the homepage and the guides hub.
+   *
+   * English only, because that is the only locale the route generates for
+   * them, and only once a post carries no review markers: an unfinished post
+   * is served noindex, and advertising a noindex URL in a sitemap is a
+   * contradiction Google reports as an error.
+   *
+   * lastModified is the date the sources were last checked, which is the only
+   * honest modification date the file carries.
+   */
+  for (const p of getAllPosts()) {
+    if (!p.isReady || fromSanity.has(p.slug)) continue;
+    const checked = displayDate(p.sourcesCheckedOn);
+    out.push(...entriesFor(`/blog/${p.slug}`, ["en"], checked ?? undefined, 0.5));
   }
   for (const p of projects) {
     out.push(...entriesFor(`/projects/${p.slug}`, p.locales ?? [], p.updatedAt, 0.5));
