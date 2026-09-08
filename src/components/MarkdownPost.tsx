@@ -5,7 +5,7 @@ import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
 import { MarkdownBody, Spans } from "@/components/MarkdownBody";
 import { graph, breadcrumbNode, blogPostingNode, faqNode } from "@/lib/schema";
-import { categoryVisual, formatDate } from "@/lib/blog";
+import { postVisual, formatDate } from "@/lib/blog";
 import { displayDate, getRelated, type Post } from "@/lib/posts";
 import { plainText } from "@/lib/markdown";
 import { termsIn } from "@/lib/glossary";
@@ -32,10 +32,7 @@ export function MarkdownPost({
    * ten posts sharing a stock photo of paperwork made the blog look like a
    * single article published thirteen times.
    */
-  const fallback = categoryVisual(post.category ? [post.category] : undefined);
-  const visual = post.heroImage
-    ? { image: post.heroImage, alt: post.heroAlt || post.title }
-    : fallback;
+  const visual = postVisual(post);
   const bodyHeadings = post.blocks.filter(
     (b): b is Extract<typeof b, { t: "h2" }> => b.t === "h2",
   );

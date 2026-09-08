@@ -8,7 +8,7 @@ import { urlFor } from "@/sanity/image";
 import { postsQuery } from "@/sanity/queries";
 import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
 import { buildAlternates } from "@/lib/seo";
-import { categoryVisual } from "@/lib/blog";
+import { postVisual } from "@/lib/blog";
 import { getAllPosts, type Post as MdPost } from "@/lib/posts";
 
 export const revalidate = 60;
@@ -198,9 +198,7 @@ export default async function BlogPage({
 }
 
 function MarkdownCard({ post }: { post: MdPost }) {
-  const visual = post.heroImage
-    ? { image: post.heroImage, alt: post.heroAlt || post.title }
-    : categoryVisual(post.category ? [post.category] : undefined);
+  const visual = postVisual(post);
   return (
     <Link
       href={`/blog/${post.slug}`}

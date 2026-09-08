@@ -78,6 +78,30 @@ export function categoryVisual(categories?: string[]): CategoryVisual {
 }
 
 /**
+ * The image for one post, wherever it is being shown.
+ *
+ * A post's own photograph always wins; the category image is only ever the
+ * safety net. This exists as one function because the rule was written out by
+ * hand in three separate places and a fourth was missed. The homepage journal
+ * kept using the category fallback, so its three cards, all filed under
+ * Paperwork, showed the identical photograph side by side on the front page.
+ *
+ * Every surface that renders a post now calls this, so there is one place to
+ * be wrong rather than four.
+ */
+export function postVisual(post: {
+  heroImage?: string;
+  heroAlt?: string;
+  category?: string;
+  title?: string;
+}): CategoryVisual {
+  if (post.heroImage) {
+    return { image: post.heroImage, alt: post.heroAlt || post.title || "" };
+  }
+  return categoryVisual(post.category ? [post.category] : undefined);
+}
+
+/**
  * Reading time from Portable Text. 200 words per minute, which is a
  * conservative rate for a reader skimming a reference article rather than
  * reading fiction.

@@ -34,7 +34,7 @@ import type { Metadata } from "next";
 import { buildAlternates } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { getAllPosts } from "@/lib/posts";
-import { categoryVisual } from "@/lib/blog";
+import { postVisual } from "@/lib/blog";
 import { graph, organizationNode, websiteNode, faqNode } from "@/lib/schema";
 
 /**
@@ -622,7 +622,7 @@ export default async function HomePage({
             </Reveal>
             <div className="grid gap-5 md:grid-cols-3">
               {journalPosts.map((p, i) => {
-                const visual = categoryVisual(p.category ? [p.category] : undefined);
+                const visual = postVisual(p);
                 return (
                   <Reveal key={p.slug} className={revealDelays[i % 3]}>
                     <EnglishLink

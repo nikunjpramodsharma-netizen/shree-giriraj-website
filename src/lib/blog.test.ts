@@ -1,10 +1,12 @@
 import { describe, it, expect } from "vitest";
 import {
   categoryVisual,
+  postVisual,
   readingMinutes,
   extractHeadings,
   slugifyHeading,
 } from "./blog";
+import { getAllPosts } from "./posts";
 
 function block(style: string, text: string) {
   return { _type: "block", style, children: [{ _type: "span", text }] };
@@ -99,5 +101,39 @@ describe("readingMinutes", () => {
   it("never returns zero, because '0 min read' is nonsense", () => {
     expect(readingMinutes([])).toBe(1);
     expect(readingMinutes(undefined)).toBe(1);
+  });
+});
+
+describe("postVisual, the rule every surface shares", () => {
+  it("prefers the post's own photograph over the category one", () => {
+    const v = postVisual({
+      heroImage: "/blog/stamp-duty.jpg",
+      heroAlt: "A hand pressing a rubber stamp onto a sheet of paper",
+      category: "Paperwork",
+      title: "Stamp duty",
+    });
+    expect(v.image).toBe("/blog/stamp-duty.jpg");
+    expect(v.alt).toContain("rubber stamp");
+  });
+
+  it("falls back to the title when the post has an image but no alt", () => {
+    expect(postVisual({ heroImage: "/blog/x.jpg", title: "A title" }).alt).toBe("A title");
+  });
+
+  it("uses the category image only when the post has none of its own", () => {
+    expect(postVisual({ category: "Paperwork" }).image).toBe("/blog/paperwork.jpg");
+    expect(postVisual({}).image).toBe("/blog/buying.jpg");
+  });
+
+  /**
+   * The bug this guards. Three homepage cards, all filed under Paperwork,
+   * showed the identical photograph because that one surface still used the
+   * category fallback while the other two had been fixed.
+   */
+  it("gives the real posts distinct images, wherever they are rendered", () => {
+    const posts = getAllPosts();
+    const images = posts.map((p) => postVisual(p).image);
+    expect(new Set(images).size).toBe(images.length);
+    expect(images.every((i) => i !== "/blog/paperwork.jpg")).toBe(true);
   });
 });
