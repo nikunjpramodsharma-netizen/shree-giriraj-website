@@ -4,11 +4,17 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
-import { graph, breadcrumbNode, organizationNode } from "@/lib/schema";
+import { graph, breadcrumbNode, organizationNode, faqNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
 import { site } from "@/lib/config";
 import { TEAM, TEAM_IS_REAL } from "@/lib/homepage-content";
-import { STORY_IS_WRITTEN, STORY_PROMPTS } from "@/lib/about";
+import {
+  STORY_IS_WRITTEN,
+  STORY_PROMPTS,
+  FOUNDER,
+  founderInitials,
+  ABOUT_FAQS,
+} from "@/lib/about";
 
 export const revalidate = 300;
 
@@ -32,7 +38,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   if (params.locale !== ABOUT_LOCALE) return {};
   return {
-    title: `About ${site.name}: in Borivali since ${site.established}`,
+    // "in Borivali since 1996" was the old wording here and in the h1. It
+    // reads as the shop having stood in Borivali since 1996, which is the
+    // exact implication the owner corrected: the trade dates from 1996, this
+    // address from 2005. The tenure claim is the safe half of it.
+    title: `About ${site.name}: in real estate since ${site.established}`,
     description: `A family run estate agency working across ${site.areas.join(", ")}. MahaRERA registered agent, ${site.rera}.`,
     ...pageUrls(params.locale, "/about", [ABOUT_LOCALE]),
     ...(STORY_IS_WRITTEN ? {} : { robots: { index: false, follow: true } }),
@@ -60,13 +70,31 @@ export default function AboutPage({
 
   return (
     <article>
-      <JsonLd data={graph(organizationNode(), breadcrumbNode(locale, trail))} />
+      <JsonLd
+        data={graph(
+          organizationNode({ founder: FOUNDER.name }),
+          breadcrumbNode(locale, trail),
+          faqNode(ABOUT_FAQS.map((f) => ({ question: f.q, answer: f.a }))),
+        )}
+      />
 
-      {/* Stock for now. This is the one hero on the site that should carry a real photograph of the actual team, and it will be obvious when it does not. */}
+      {/*
+        The suburbs, not a staged office.
+        
+        This hero used to be a stock photograph of three people at a desk,
+        captioned "The Shree Giriraj team at work". None of them work here and
+        two of them are not Indian, so the alt text was a plain untruth sitting
+        in the markup of the one page a reader opens specifically to find out
+        who they are dealing with. A skyline claims nothing it cannot back up.
+
+        It is still a placeholder. The right image is a photograph of the shop
+        in Chikoowadi, or of the people in it, and it is listed as such in
+        content/PLACEHOLDERS.md. Swap it the day one exists.
+      */}
       <header className="relative overflow-hidden bg-brand-indigo-deep text-paper">
         <Image
-          src="/sections/people.jpg"
-          alt="The Shree Giriraj team at work"
+          src="/sections/about-suburbs.jpg"
+          alt="Residential towers in Mumbai above a line of trees"
           fill
           priority
           sizes="100vw"
@@ -83,7 +111,7 @@ export default function AboutPage({
             About
           </div>
           <h1 className="mt-3 max-w-[20ch] text-3xl text-white md:text-5xl">
-            In Borivali since {site.established}
+            In real estate since {site.established}
           </h1>
           <p className="mt-5 max-w-[58ch] text-paper/80">
             A family run agency working across {site.areas.join(", ")}. We would
@@ -134,6 +162,45 @@ export default function AboutPage({
           </p>
         </div>
 
+        {/*
+          The founder. One confirmed fact, presented plainly.
+
+          The portrait is a monogram until a real photograph exists. That is a
+          design decision, not an apology: initials read as deliberate, whereas
+          a stock face under a real man's name is the thing this page was
+          already caught doing.
+        */}
+        <section className="mt-12 flex max-w-[68ch] items-center gap-5 rounded-xl border border-line bg-white/50 p-6">
+          {FOUNDER.photo ? (
+            <Image
+              src={FOUNDER.photo}
+              alt={`${FOUNDER.name}, ${FOUNDER.role.toLowerCase()} of ${site.name}`}
+              width={96}
+              height={96}
+              className="h-24 w-24 shrink-0 rounded-full object-cover"
+            />
+          ) : (
+            <span
+              aria-hidden="true"
+              className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-brand-indigo text-2xl font-semibold tracking-wide text-brass-bright"
+            >
+              {founderInitials()}
+            </span>
+          )}
+          <div>
+            <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass">
+              {FOUNDER.role}
+            </div>
+            <h2 className="mt-1.5 text-2xl text-ink md:text-3xl">
+              {FOUNDER.name}
+            </h2>
+            <p className="mt-2 text-ink/70">
+              Founded the firm in {site.established} and still runs it from the
+              shop in Chikoowadi.
+            </p>
+          </div>
+        </section>
+
         <div className="mt-12 space-y-12">
           {STORY_PROMPTS.map((s) => (
             <section
@@ -176,6 +243,25 @@ export default function AboutPage({
             </ul>
           </section>
         )}
+
+        {/*
+          Every service, tool and article on the site carries one of these for
+          answer engines, and About was the only section without. Facts only:
+          the founder, the two dates, the registration, the areas, the services
+          and the address. All of it is confirmed and all of it is stated
+          elsewhere on the site, so nothing here can drift from the rest.
+        */}
+        <section className="mt-16 max-w-[68ch]">
+          <h2 className="text-2xl text-ink md:text-3xl">Common questions</h2>
+          <dl className="mt-6 divide-y divide-line border-y border-line">
+            {ABOUT_FAQS.map((f) => (
+              <div key={f.q} className="py-5">
+                <dt className="font-semibold text-ink">{f.q}</dt>
+                <dd className="mt-2 text-ink/75">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
 
         <div className="mt-16 max-w-[68ch] rounded-xl border border-line p-5">
           <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-muted">

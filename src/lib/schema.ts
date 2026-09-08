@@ -28,7 +28,7 @@ type Json = Record<string, unknown>;
  * The business. RealEstateAgent is a subtype of LocalBusiness, so this
  * satisfies both without emitting two overlapping nodes.
  */
-export function organizationNode(): Json {
+export function organizationNode(opts: { founder?: string } = {}): Json {
   return {
     "@type": "RealEstateAgent",
     "@id": ORG_ID,
@@ -39,6 +39,12 @@ export function organizationNode(): Json {
     telephone: site.phonePrimary,
     email: site.email,
     foundingDate: site.established,
+    // Only emitted where the name is actually known. A Person node with a name
+    // and nothing else is still worth having: it is the entity Google ties the
+    // business to, and it is confirmed.
+    ...(opts.founder
+      ? { founder: { "@type": "Person", name: opts.founder } }
+      : {}),
     address: {
       "@type": "PostalAddress",
       streetAddress: "Shop No 11, Clover Grove CHS, Chikoowadi",
