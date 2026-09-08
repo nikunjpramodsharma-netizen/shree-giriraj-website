@@ -140,6 +140,19 @@ export type ServicePanel = {
  * Section 05. Order is commercial, not search driven: resale leads because it
  * is the main business. Rentals and interiors carry more search volume and
  * lead on the service pages and in ads instead.
+ *
+ * IMAGES. These are the same photographs as the service page heroes, so the
+ * panel and the page it opens agree, except for two where the panel shape
+ * forced a different choice. The track renders one open panel of roughly
+ * square proportion and five vertical strips about a fifth as wide, so an
+ * image has to survive being cut to a narrow centre slice. Redevelopment uses
+ * a tower crane rather than the hero's aerial, because an aerial in a strip
+ * is texture and nothing else. Resale uses a sunlit facade with laundry and
+ * air conditioners rather than the hero's close crop, which at panel size
+ * read as a wall rather than a building.
+ *
+ * All six are 1100 by 1375, four to five, which gives the open panel width to
+ * show and the strips height to keep. Pexels, 8 September 2026.
  */
 export const SERVICE_PANELS: ServicePanel[] = [
   {
