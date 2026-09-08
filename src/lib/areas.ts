@@ -52,11 +52,11 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
     longName: "Borivali",
     metaTitle: "Buying, selling and renting in Borivali: a local guide",
     metaDescription:
-      "What the pockets of Borivali West and East are actually like, who buys where, and what to check before you commit. Written by an agent based here since 1996.",
+      "What the pockets of Borivali West and East are actually like, who buys where, and what to check before you commit. Written by an agent who has worked Borivali since 1996.",
     answer:
       "Borivali splits into two markets that trade at similar prices for different reasons: the station belt, which is older, denser and better connected, and the Link Road side, which is newer and quieter. Choosing the wrong one for how you actually live is the most common and most expensive mistake here.",
     intro: [
-      "We have worked out of Chikoowadi since 1996, which means most of what is useful about Borivali is not on any listing site. It is knowing which buildings have water pressure problems on the upper floors, which societies actually approve interior work, and which lanes are a different proposition after dark.",
+      "We have worked Borivali since 1996 and out of the Chikoowadi office since 2005, which means most of what is useful about Borivali is not on any listing site. It is knowing which buildings have water pressure problems on the upper floors, which societies actually approve interior work, and which lanes are a different proposition after dark.",
       "This page is the general shape of the place. For a specific building, ask us.",
     ],
     sections: [

@@ -431,7 +431,7 @@ export default async function PostPage({
                 Buying, renting or redeveloping in the western suburbs?
               </h2>
               <p className="mt-3 text-muted">
-                Thirty years in Borivali, Kandivali and Malad. We will tell you what
+                In Borivali, Kandivali and Malad since 1996. We will tell you what
                 is wrong with a flat before you fall in love with it.
               </p>
             </div>

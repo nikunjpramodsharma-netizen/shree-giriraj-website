@@ -55,7 +55,7 @@ export default function AreasIndex({
 
       <header className="relative overflow-hidden bg-brand-indigo-deep text-paper">
         {/* The Borivali panel image: the home suburb, and the one this firm
-            has worked out of since 1996. */}
+            has worked in since 1996 (and out of the Borivali office since 2005). */}
         <Image
           src="/sections/area-borivali.jpg"
           alt="Residential buildings in Borivali, Mumbai"

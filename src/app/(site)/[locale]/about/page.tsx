@@ -19,7 +19,8 @@ const ABOUT_LOCALE = "en";
  * This route exists because About has been in the main navigation the whole
  * time and was a live 404. A dead end in the nav is worse than a thin page.
  *
- * The factual spine is real: established 1996, the MahaRERA agent number, the
+ * The factual spine is real: in property since 1996, at this office since
+ * 2005, the MahaRERA agent number, the
  * address, the three suburbs. The story is not, because it is yours to tell,
  * so those blocks are flagged and the page is noindexed until they are filled.
  */
@@ -153,8 +154,9 @@ export default function AboutPage({
             The same shop, the same street
           </div>
           <p className="mt-3 text-lg text-ink/85">
-            We opened in Chikoowadi in {site.established} and never moved. That
-            is long enough to have sold flats in the same building twice, and to
+            We have worked these suburbs since {site.established}, and out of
+            the same shop in Chikoowadi since {site.officeSince}. That is long
+            enough to have sold flats in the same building twice, and to
             remember why the second sale was harder than the first.
           </p>
         </div>

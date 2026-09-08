@@ -1,7 +1,11 @@
 export const site = {
   name: "Shree Giriraj Real Estate",
   tagline: "Real Estate · Interior & Civil Work",
+  /** In real estate since. The business claim. */
   established: "1996",
+  /** At the Borivali West office since. NOT the same year, and the site must
+   *  never imply the shop dates from 1996. Owner's correction, 8 Sept 2026. */
+  officeSince: "2005",
   rera: "A51800005726",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919324974133",
   phonePrimary: process.env.NEXT_PUBLIC_PHONE_PRIMARY || "+919324974133",

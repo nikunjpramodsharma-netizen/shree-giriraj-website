@@ -94,7 +94,8 @@ export default function ContactPage({
             </address>
             <p className="mt-2 text-sm text-muted">
               The complex is also known locally as Garden Groove Shopping
-              Centre, which is the same place.
+              Centre, which is the same place. We have been at this address
+              since 2005, and in property in these suburbs since 1996.
             </p>
 
             <dl className="mt-8 space-y-4">

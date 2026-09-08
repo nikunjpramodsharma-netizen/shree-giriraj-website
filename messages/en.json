@@ -17,7 +17,7 @@
     "ctaBook": "Book a consultation",
     "ctaWhatsapp": "Ask us on WhatsApp",
     "whatsappMessage": "Hi Shree Giriraj, I'd like to enquire.",
-    "statYears": "One office, same street",
+    "statYears": "In these suburbs",
     "statSuburbs": "Borivali, Kandivali, Malad",
     "statRating": "Client rating",
     "featuredBadge": "Now Booking · Featured",
@@ -88,7 +88,7 @@
     "colBrokers": "Independent brokers",
     "row1": "Direct access to new launches before the open market",
     "row2": "Verified carpet area, no hidden charges at registration",
-    "row3": "Local presence in Borivali, Kandivali and Malad since 1996",
+    "row3": "Working in Borivali, Kandivali and Malad since 1996",
     "row4": "Registered agreement handled end to end",
     "row5": "One point of contact from enquiry to possession",
     "row6": "Housing society redevelopment expertise",
@@ -147,7 +147,7 @@
     "whatsappPhoneLabel": "Phone"
   },
   "footer": {
-    "description": "Interior & Civil Work · Flat, Shop, Plot & Bungalow Re-Development. Trusted property advice in Borivali West since {year}.",
+    "description": "Interior & Civil Work · Flat, Shop, Plot & Bungalow Re-Development. Trusted property advice for Borivali, Kandivali and Malad since {year}.",
     "exploreHeading": "Explore",
     "contactHeading": "Get in touch",
     "whatsappUs": "WhatsApp us",
@@ -203,6 +203,6 @@
   "metadata": {
     "siteTitle": "Shree Giriraj Real Estate: Homes in Borivali, Kandivali & Malad",
     "titleTemplate": "%s | Shree Giriraj Real Estate",
-    "siteDescription": "Trusted property advice in Borivali West since 1996. Resale, rentals & new project bookings across Borivali, Kandivali and Malad. MahaRERA A51800005726."
+    "siteDescription": "Trusted property advice for Borivali, Kandivali and Malad since 1996. Resale, rentals & new project bookings across Borivali, Kandivali and Malad. MahaRERA A51800005726."
   }
 }
