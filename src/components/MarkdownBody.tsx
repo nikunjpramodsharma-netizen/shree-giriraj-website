@@ -142,7 +142,8 @@ function BlockView({ b }: { b: Block }) {
   }
 }
 
-function Spans({ spans }: { spans: Inline[] }) {
+/** Exported so the FAQ block can render an answer with its links intact. */
+export function Spans({ spans }: { spans: Inline[] }) {
   return (
     <>
       {spans.map((s, i) => {

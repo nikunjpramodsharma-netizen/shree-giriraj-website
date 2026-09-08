@@ -112,6 +112,9 @@ Either can, and you want your own rather than one handed to you. It can be searc
 **Is it the same as a title search?**
 No. An encumbrance certificate lists registered transactions. A title search is a lawyer reading the chain of documents and forming a view. The first is an input to the second.
 
+**Is an encumbrance certificate mandatory in Maharashtra?**
+No law makes it a condition of buying. In practice it is close to mandatory, because a lender will ask for it before sanctioning a loan and a careful buyer asks for it before paying a token. Treat it as a required step even though nobody will stop the sale without it.
+
 ---
 
 ## Before you pay a token

@@ -159,6 +159,12 @@ Nationally 25 to 35 percent is normal and above 40 percent is high, but Mumbai r
 **Do builders have to quote carpet area?**
 They have to declare it for a registered project and state it in the agreement. Nothing stops a price being advertised against super built up.
 
+**What is the difference between carpet area and built up area?**
+Carpet area is the floor inside the flat, measured wall to wall, including internal partition walls but not the external walls, balconies or shafts. Built up area adds the external walls and usually the balcony, so it is typically 10 to 15 percent larger. Super built up adds your share of the lobby, lifts and stairs on top of that.
+
+**How big is a typical 2 BHK here in carpet area?**
+On the new launches listed across Borivali, Kandivali and Malad in September 2026, 2 BHK carpet areas mostly ran from about 560 to 900 square feet, with the compact end near 550 and the larger end past 1,000 in the premium towers. A 2 BHK advertised at 1,000 square feet is almost always a super built up figure.
+
 ---
 
 ## Before you sign

@@ -107,6 +107,9 @@ The developer, not the buyer. That is precisely why it needs chasing while the d
 **Does a missing OC affect resale value?**
 Yes. Lenders are reluctant, the buyer pool shrinks to people paying cash or accepting the risk, and the price reflects it.
 
+**Is an occupancy certificate mandatory?**
+Yes. A building may not lawfully be occupied until the municipal corporation has certified it, and in a RERA registered project the developer's duty to obtain the certificate and hand it to buyers is written into section 11(4)(b) of the Act. Possession offered without one can be refused.
+
 ---
 
 ## Before you take the keys

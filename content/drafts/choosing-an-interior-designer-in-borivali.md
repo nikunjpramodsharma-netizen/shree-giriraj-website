@@ -137,6 +137,12 @@ About 10 percent to book, which is what the largest organised firms take, with t
 **What is not included in an interior quote?**
 See the exclusions list above. The short version is that anything structural, anything electrical beyond the existing load, and anything loose is usually separate.
 
+**How much does a 2 BHK interior cost in Mumbai?**
+Roughly 7 to 10 lakh rupees for a full home at a sensible specification, 12 to 15 lakh for premium finishes, plus 18 percent GST, based on the Mumbai figures Livspace, HomeLane and NoBroker publish. The three big pieces alone, a kitchen and two wardrobes with a TV unit, run from about 3.4 to 5.8 lakh.
+
+**How much do interior designers charge in Mumbai?**
+Two ways. The organised firms fold the design fee into the package price and charge nothing separately. Independent designers charge per square foot, anywhere from 40 or 50 rupees to 500, with 100 to 150 the usual middle, or a percentage of the project value. Ask which model applies before the first drawing.
+
 ---
 
 ## Before you pay anything

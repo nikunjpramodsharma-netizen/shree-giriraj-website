@@ -73,8 +73,15 @@ export type AreaPanel = {
 };
 
 /**
- * Section 03. Stats are real DataForSEO figures pulled 25 August 2026, not
- * illustrative. See plan/03-content-plan.md for the full dataset.
+ * Section 03. The tiles used to show DataForSEO search volumes and ad costs,
+ * which are planning data for us and meaningless to a visitor ("140/mo,
+ * searches, Borivali West" answered a question nobody on the page had). They
+ * now show what a buyer actually wants at a glance: the resale asking rate
+ * per square foot of carpet (Mumbai Property Exchange, median of listings
+ * over the 18 months to July 2026) and the new launch asking band
+ * (Mumbai Property Exchange and PropertyPistol, September 2026). Asking, not
+ * registered, and the labels say so. Refresh when the blog's carpet area
+ * table is refreshed; the two must agree.
  */
 export const AREA_PANELS: AreaPanel[] = [
   {
@@ -83,8 +90,8 @@ export const AREA_PANELS: AreaPanel[] = [
     image: "/sections/area-borivali.jpg",
     body: "Our home turf. Resale, rentals and society redevelopment across Borivali West and East, from Chikoowadi to the station belt. The pocket you choose matters more here than the building does.",
     stats: [
-      { value: "140/mo", label: "Searches, Borivali West" },
-      { value: "High", label: "Competition" },
+      { value: "₹31,200", label: "Resale asking, per sq ft carpet, West" },
+      { value: "₹25k to 35k", label: "New launch asking, per sq ft, West" },
       { value: "Since 1996", label: "We have been here" },
     ],
     watch:
@@ -96,9 +103,9 @@ export const AREA_PANELS: AreaPanel[] = [
     image: "/sections/area-kandivali.jpg",
     body: "Premium new launches and family homes off M.G. Road and Link Road, including Jaswanti Jewel. The strongest new build activity of the three, and the most room to get the floor wrong.",
     stats: [
-      { value: "390/mo", label: "Searches, Kandivali West" },
-      { value: "Medium", label: "Competition" },
-      { value: "720/mo", label: "Jaswanti Jewel alone" },
+      { value: "₹25,400", label: "Resale asking, per sq ft carpet, West" },
+      { value: "₹26,400", label: "Resale asking, per sq ft carpet, East" },
+      { value: "₹24k to 45k", label: "New launch asking, per sq ft, East" },
     ],
     watch:
       "In a G+37 tower the floor band changes the price more than the carpet area does. Ask what the view actually is at your floor, not at the sample flat.",
@@ -109,9 +116,9 @@ export const AREA_PANELS: AreaPanel[] = [
     image: "/sections/area-malad.jpg",
     body: "Growing residential and commercial options near Mindspace and the Link Road corridor. More investor money here than in the other two, which moves the price differently.",
     stats: [
-      { value: "110/mo", label: "Searches, Malad West" },
-      { value: "High", label: "Competition" },
-      { value: "Rs 345", label: "Cost per ad click" },
+      { value: "₹27,000", label: "Resale asking, per sq ft carpet, West" },
+      { value: "₹24,000", label: "Resale asking, per sq ft carpet, East" },
+      { value: "₹24k to 33k", label: "New launch asking, per sq ft, West" },
     ],
     watch:
       "The Mindspace pull makes rental yields look better on paper than they hold up over three years. Check who the actual tenant will be.",

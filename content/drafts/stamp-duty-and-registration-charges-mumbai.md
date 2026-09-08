@@ -123,6 +123,9 @@ For a gift of residential or agricultural property to a close relative, with no 
 **Can stamp duty be included in my home loan?**
 Generally no. Lenders fund a share of the agreement value, and stamp duty and registration sit outside it, so both have to be found in cash on top of the down payment. Our [home loan calculator](/tools/home-loan-emi-calculator) shows the total cash needed rather than the EMI alone.
 
+**How do I calculate stamp duty in Mumbai?**
+Take the higher of the agreed price and the ready reckoner value, then apply 6 percent for a male buyer or 5 percent for a female buyer holding in her sole name, both including the 1 percent metro cess. Add registration at 1 percent, capped at 30,000 rupees. The [stamp duty calculator](/tools/stamp-duty-calculator-mumbai) does the arithmetic and shows the cash needed on top of the price.
+
 ---
 
 ## Before you budget

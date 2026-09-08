@@ -115,6 +115,12 @@ A rectification deed between the same parties, registered in the same way. Easy 
 **Is mutation enough to prove I own it?**
 No. Mutation updates municipal records for tax. The deed is what gives you ownership. See [mutation of property](/blog/mutation-of-property).
 
+**Is a sale deed valid if it is not registered?**
+No. Under sections 17 and 49 of the Registration Act, 1908, a deed transferring immovable property must be registered to pass title, and an unregistered one cannot be used to prove the transfer. Signing and paying are not enough; the sub registrar's stamp is what makes the ownership yours.
+
+**What is the difference between a sale deed and a title deed?**
+Title deed is the general name for whatever document proves ownership. A sale deed is one kind of title deed, the kind created by a purchase. A gift deed, a partition deed or a court decree can also be a title deed. So every registered sale deed is a title deed, but not every title deed is a sale deed.
+
 ---
 
 ## Before you sign

@@ -88,6 +88,12 @@ While the paperwork is still in front of you. It is a small job immediately and 
 **What happens if mutation is never done?**
 Your ownership is unaffected, but the municipal record stays wrong. Bills go to the previous owner, arrears can accumulate without you seeing them, and a future buyer will ask why the record does not match the deed.
 
+**Is mutation of property mandatory?**
+Not for ownership, which the registered deed gives you the day it is registered. It is needed for the municipal record, so that the property tax bill and the assessment stand in your name. Skip it and you own the flat but keep receiving, and paying, somebody else's bill.
+
+**What documents are needed for mutation in Mumbai?**
+The registered sale deed, its Index 2, the latest paid property tax bill, the society's letter or a copy of the share certificate, and identity proof, filed at the ward's assessment and collection office or through the MCGM property tax portal.
+
 ---
 
 ## After you register

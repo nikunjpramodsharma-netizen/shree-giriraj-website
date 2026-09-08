@@ -122,6 +122,12 @@ Yes, less itemised deductions for unpaid rent, unpaid dues, and damage beyond or
 **When is it returned?**
 On the date the agreement says. If the agreement is silent, fifteen to thirty days from the day you hand back the keys is what courts treat as reasonable, and it is the number to write in.
 
+**Is there a legal limit on the security deposit in Maharashtra?**
+No. The Maharashtra Rent Control Act, 1999 sets no cap; the two month limit often quoted is the central Model Tenancy Act, 2021, which Maharashtra has not enacted. The deposit is whatever the registered agreement says, which is why the amount, the deductions and the return date all belong in writing.
+
+**What changed in the Maharashtra rent rules in 2025?**
+Less than the headlines suggest. The Maharashtra Rent Control (Amendment) Bill, 2025 dealt with structural alterations and the landlord's duty to keep a kitchen and essential services available. It did not cap deposits, change registration, or adopt the Model Tenancy Act. Section 55, which requires every agreement to be registered, is unchanged.
+
 ---
 
 ## Before you pay a deposit

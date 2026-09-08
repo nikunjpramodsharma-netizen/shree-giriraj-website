@@ -6,6 +6,7 @@ import {
   wordCount,
   type Block,
 } from "@/lib/markdown";
+import { splitFaqs, type Faq } from "@/lib/faq";
 
 /**
  * Blog posts from markdown in the repo.
@@ -54,7 +55,10 @@ export type PostMeta = {
 };
 
 export type Post = PostMeta & {
+  /** Body with the questions section lifted out. */
   blocks: Block[];
+  /** The "Common questions" section, as pairs, for the FAQ block and its markup. */
+  faqs: Faq[];
   readingMinutes: number;
   /** Outstanding review markers. Empty means the post is publishable. */
   openMarkers: { kind: string; text: string }[];
@@ -112,8 +116,11 @@ export function getPost(slug: string): Post | null {
 
   const { data, body } = parseFrontmatter(readFileSync(file, "utf8"));
   const answer = asString(data.answer);
-  const blocks = dropDuplicateAnswer(parseBlocks(body), answer);
-  const openMarkers = blocks
+  const all = dropDuplicateAnswer(parseBlocks(body), answer);
+  const { blocks, faqs } = splitFaqs(all);
+  // Markers and word count are taken over the whole document, so a question
+  // left unanswered still holds the post back and still counts as reading.
+  const openMarkers = all
     .filter((b): b is Extract<Block, { t: "marker" }> => b.t === "marker")
     .map((b) => ({ kind: b.kind, text: b.text }));
 
@@ -133,7 +140,8 @@ export function getPost(slug: string): Post | null {
     readNext: asStringList(data.readNext),
     relatedFaqs: asStringList(data.relatedFaqs),
     blocks,
-    readingMinutes: Math.max(1, Math.round(wordCount(blocks) / 200)),
+    faqs,
+    readingMinutes: Math.max(1, Math.round(wordCount(all) / 200)),
     openMarkers,
     isReady: openMarkers.length === 0,
   };

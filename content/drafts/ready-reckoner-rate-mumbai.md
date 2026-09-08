@@ -94,6 +94,9 @@ It is an annual statement, so a new set of rates is published each year. A rate 
 **Is the reckoner rate the same as the market rate?**
 No. It is a government minimum for valuation purposes. In some pockets it sits below what flats actually trade for and in others above, which is exactly why it has to be checked building by building rather than assumed.
 
+**How do I check the ready reckoner rate online?**
+On the IGR Maharashtra portal, open the annual statement of rates, choose the district, then the taluka, village and zone the building falls in, and read the residential rate for that zone. The rate is revised on 1 April each year, so check the year on the page matches the year you will register in.
+
 ---
 
 ## Before you agree a price

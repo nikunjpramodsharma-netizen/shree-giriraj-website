@@ -101,7 +101,7 @@ How many societies in these suburbs still lack conveyance is not known. A figure
 It stays dependent on the developer for anything requiring the landowner's consent, and it cannot redevelop on its own terms. The flats remain owned by their members throughout, but the collective asset stays out of reach.
 
 **Who is the competent authority for deemed conveyance?**
-The District Deputy Registrar.
+The District Deputy Registrar of Co operative Societies for the district, appointed under the Maharashtra Ownership Flats Act. The society applies there, the promoter is given a hearing, and the registrar has to decide within six months. A certificate from that office is what lets the sub registrar register the conveyance without the developer's signature.
 
 **How long does deemed conveyance take?**
 The proceedings are to be completed within six months. Assembling every member's registered agreement usually takes longer than the proceedings.

@@ -3,8 +3,8 @@ import { Link } from "@/i18n/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
-import { MarkdownBody } from "@/components/MarkdownBody";
-import { graph, breadcrumbNode, blogPostingNode } from "@/lib/schema";
+import { MarkdownBody, Spans } from "@/components/MarkdownBody";
+import { graph, breadcrumbNode, blogPostingNode, faqNode } from "@/lib/schema";
 import { categoryVisual, formatDate } from "@/lib/blog";
 import { displayDate, getRelated, type Post } from "@/lib/posts";
 import { plainText } from "@/lib/markdown";
@@ -36,13 +36,21 @@ export function MarkdownPost({
   const visual = post.heroImage
     ? { image: post.heroImage, alt: post.heroAlt || post.title }
     : fallback;
-  const headings = post.blocks.filter(
+  const bodyHeadings = post.blocks.filter(
     (b): b is Extract<typeof b, { t: "h2" }> => b.t === "h2",
   );
+  // The questions are lifted out of the body and rendered below it, so the
+  // contents list has to be told about them or the anchor vanishes.
+  const headings = post.faqs.length
+    ? [...bodyHeadings, { t: "h2" as const, text: "Common questions", id: "common-questions" }]
+    : bodyHeadings;
   const showToc = headings.length >= 3;
   const related = getRelated(post, 3);
   const checked = displayDate(post.sourcesCheckedOn);
-  const terms = termsIn(plainText(post.blocks), { notAbout: post.title });
+  const terms = termsIn(
+    [plainText(post.blocks), ...post.faqs.map((f) => `${f.question} ${f.answer}`)].join(" "),
+    { notAbout: post.title },
+  );
 
   const trail: Crumb[] = [
     { name: "Home", path: "/" },
@@ -55,6 +63,11 @@ export function MarkdownPost({
       <JsonLd
         data={graph(
           breadcrumbNode(locale, trail),
+          // The questions are rendered on the page below, so they may be
+          // marked up. This is what lets a post be the cited answer.
+          post.faqs.length > 0
+            ? faqNode(post.faqs.map((f) => ({ question: f.question, answer: f.answer })))
+            : null,
           // Only a finished post is marked up as an article. Advertising a
           // draft to Google as publishable content would undo the noindex.
           post.isReady
@@ -131,6 +144,25 @@ export function MarkdownPost({
           )}
 
           <MarkdownBody blocks={post.blocks} />
+
+          {/* The questions, lifted out of the body so they can be a visible
+              block and structured data at once. Same shape as the Sanity
+              path, so the two kinds of post read identically. */}
+          {post.faqs.length > 0 && (
+            <section id="common-questions" className="mt-12 max-w-[68ch] scroll-mt-24">
+              <h2 className="text-2xl text-ink md:text-3xl">Common questions</h2>
+              <dl className="mt-4">
+                {post.faqs.map((f) => (
+                  <div key={f.question} className="border-b border-line py-4">
+                    <dt className="text-lg font-semibold text-brand-indigo">{f.question}</dt>
+                    <dd className="mt-1.5 text-[0.95rem] text-ink/80">
+                      <Spans spans={f.answerSpans} />
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          )}
 
           {/* Plain words for the jargon this particular post uses. Property
               writing carries a few words that stop a first time buyer dead,

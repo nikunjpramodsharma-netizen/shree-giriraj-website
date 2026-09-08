@@ -134,6 +134,12 @@ On capital value: the ready reckoner rate for the locality, times the carpet are
 **What happens if it is unpaid when I sell?**
 It is a liability attached to the property, so a buyer will want it cleared before completion. Arrears also carry a 2 percent monthly penalty until they are paid.
 
+**Is property tax exempt below 500 square feet in Mumbai?**
+Yes. Since 1 January 2022 a residential flat of up to 500 square feet carpet area in Mumbai pays no property tax. The exemption applies to the carpet area on the assessment, so if that figure is wrong the exemption is being missed and the ward office can correct it.
+
+**How do I check my property tax in Mumbai online?**
+On the MCGM property tax portal, using the property account number printed on any earlier bill. It shows the current bill, the arrears if any, and the assessed area the bill is calculated on, which is the figure to check against the flat's actual carpet area.
+
 ---
 
 ## Before you buy
