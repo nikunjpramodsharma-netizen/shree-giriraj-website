@@ -49,14 +49,18 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
  * hero a pair of jeans holding keys. None of it could have been taken within
  * a thousand miles of Borivali, and the owner said so.
  *
- * All six are now Indian, four of them Mumbai: a lived-in society building
- * with window grilles and balconies for resale; hands exchanging keys for
- * rentals, faces out of frame so nobody has to look like a client; Mumbai
- * residential towers for new launches; an aerial of old rooftops beside a
- * construction site for redevelopment, which is the whole story in one
- * frame; an Indian high street with signboards and an auto rickshaw for
- * shops; and a Mumbai living room for interiors. Pexels, 8 September 2026,
- * 1920 wide.
+ * All six are Indian: residential society blocks at dusk with people out on a
+ * terrace for resale; hands exchanging keys for rentals, faces out of frame so
+ * nobody has to look like a client; Mumbai residential towers for new
+ * launches; a building going up in scaffolding and netting for redevelopment;
+ * customers at a shop counter with the shutters up for shops; and a Mumbai
+ * living room for interiors.
+ *
+ * Three of these are the second attempt. The first set put an aerial on
+ * redevelopment, which reads as a map rather than a building; a street of
+ * signboards on shops, which shows a market rather than a unit somebody could
+ * buy; and a close crop of one facade on resale, which read as a wall. Pexels,
+ * 8 September 2026, 1920 wide.
  */
 const HERO_IMAGE: Record<(typeof SERVICE_SLUGS)[number], string> = {
   "resale-flats": "/services/hero-resale.jpg",
@@ -69,11 +73,11 @@ const HERO_IMAGE: Record<(typeof SERVICE_SLUGS)[number], string> = {
 
 /** Alt text per service. A hero image is content, not decoration. */
 const HERO_ALT: Record<(typeof SERVICE_SLUGS)[number], string> = {
-  "resale-flats": "A lived in residential society building with window grilles and balconies",
+  "resale-flats": "Residential society buildings in the evening, with people sitting out on a terrace",
   rentals: "One set of keys passing from one hand to another",
   "new-project-bookings": "New residential towers in Mumbai under a clear sky",
-  redevelopment: "Old rooftops beside a construction site in Mumbai, seen from above",
-  "shops-plots": "A busy Indian shopping street with signboards and an auto rickshaw",
+  redevelopment: "A residential building going up, wrapped in scaffolding and safety netting",
+  "shops-plots": "Customers at the counter of a shop, with the shutters up and payment signs on the front",
   interiors: "A furnished living room in a Mumbai flat",
 };
 
