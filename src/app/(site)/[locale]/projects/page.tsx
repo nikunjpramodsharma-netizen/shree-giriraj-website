@@ -57,8 +57,8 @@ export default async function ProjectsPage({
     <>
       <section className="relative overflow-hidden bg-brand-indigo-deep text-paper">
         <Image
-          src="/hero-skyline.jpg"
-          alt="New residential towers on the Mumbai skyline"
+          src="/hero-mumbai-towers.jpg"
+          alt="A modern residential high rise in Mumbai on a clear day"
           fill
           priority
           sizes="100vw"

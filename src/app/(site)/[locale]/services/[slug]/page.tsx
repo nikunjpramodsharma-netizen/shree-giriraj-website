@@ -41,20 +41,27 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
 };
 
 /**
- * One image per service, and each one is now genuinely its own.
+ * One image per service, and each one has to look like here.
  *
- * Previously rentals and shops-plots shared a residential facade, which was
- * both a duplicate and wrong: a commercial unit is not a block of flats.
- * Redevelopment and interiors were both handover shots of keys, which says
- * nothing about either service.
+ * The previous set was stock in the worst sense: the "new projects" hero was
+ * a night skyline of Chicago, the shops hero a bare concrete floor with
+ * foreign city views, the resale hero an abstract facade, and the rentals
+ * hero a pair of jeans holding keys. None of it could have been taken within
+ * a thousand miles of Borivali, and the owner said so.
  *
- * All six are wide enough for a full bleed hero. The svc-*.jpg files used by
- * the homepage panel track are only 760px across and would upscale badly here.
+ * All six are now Indian, four of them Mumbai: a lived-in society building
+ * with window grilles and balconies for resale; hands exchanging keys for
+ * rentals, faces out of frame so nobody has to look like a client; Mumbai
+ * residential towers for new launches; an aerial of old rooftops beside a
+ * construction site for redevelopment, which is the whole story in one
+ * frame; an Indian high street with signboards and an auto rickshaw for
+ * shops; and a Mumbai living room for interiors. Pexels, 8 September 2026,
+ * 1920 wide.
  */
 const HERO_IMAGE: Record<(typeof SERVICE_SLUGS)[number], string> = {
-  "resale-flats": "/architecture-facade-1.jpg",
-  rentals: "/moment-keys-1.jpg",
-  "new-project-bookings": "/hero-skyline.jpg",
+  "resale-flats": "/services/hero-resale.jpg",
+  rentals: "/services/hero-rentals.jpg",
+  "new-project-bookings": "/services/hero-new-projects.jpg",
   redevelopment: "/services/hero-redevelopment.jpg",
   "shops-plots": "/services/hero-shops.jpg",
   interiors: "/services/hero-interiors.jpg",
@@ -62,12 +69,12 @@ const HERO_IMAGE: Record<(typeof SERVICE_SLUGS)[number], string> = {
 
 /** Alt text per service. A hero image is content, not decoration. */
 const HERO_ALT: Record<(typeof SERVICE_SLUGS)[number], string> = {
-  "resale-flats": "The facade of a residential building",
-  rentals: "Keys being handed across a desk",
-  "new-project-bookings": "New residential towers on the Mumbai skyline",
-  redevelopment: "A high rise under construction with a crane against the sky",
-  "shops-plots": "An empty commercial floor with city views through full height windows",
-  interiors: "A finished living room with wooden furniture and daylight",
+  "resale-flats": "A lived in residential society building with window grilles and balconies",
+  rentals: "One set of keys passing from one hand to another",
+  "new-project-bookings": "New residential towers in Mumbai under a clear sky",
+  redevelopment: "Old rooftops beside a construction site in Mumbai, seen from above",
+  "shops-plots": "A busy Indian shopping street with signboards and an auto rickshaw",
+  interiors: "A furnished living room in a Mumbai flat",
 };
 
 type Config = { type?: string; displayPrice?: string; note?: LocalizedValue<string> };

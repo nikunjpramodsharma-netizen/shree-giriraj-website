@@ -75,8 +75,8 @@ export default async function ServicesIndexPage({
           that lists them should not be the flat one. */}
       <section className="relative overflow-hidden bg-brand-indigo-deep text-paper">
         <Image
-          src="/architecture-facade-1.jpg"
-          alt="The facade of a residential building in the western suburbs"
+          src="/hero-mumbai-aerial.jpg"
+          alt="Mumbai from above, dense residential blocks under daylight"
           fill
           priority
           sizes="100vw"
