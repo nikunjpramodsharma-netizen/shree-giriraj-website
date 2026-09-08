@@ -48,9 +48,9 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
  * picture in both places, which made the click feel like it went nowhere.
  *
  * The pairs are chosen so the two halves say different things about the same
- * service. Resale: a tall tower at golden hour on the panel, then towers of
- * twenty odd floors standing around a large landscaped garden on the page,
- * because a buyer is buying the society as much as the flat. Rentals: the
+ * service. Resale: a tall tower at golden hour on the panel, then Hiranandani
+ * above its tree line and the lake on the page, because a buyer is buying the
+ * society and its address as much as the flat. Rentals: the
  * keys, then the empty flat those keys open. New launches: towers on the
  * panel, one building close up on the page. Interiors: a fitted kitchen, then
  * a finished living room. Redevelopment: the crane, then the building going up
@@ -77,12 +77,13 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
  * The page then gained people, because an empty parade of units says nothing
  * about footfall, and footfall is what a shop buyer is actually buying.
  *
- * A NOTE ON THE RESALE HERO. The brief was a building of fifteen to twenty
- * floors with a proper garden, and it is the only frame in the set that
- * delivers both at once. It is not Mumbai and its garden statues make that
- * plain. Buildings read across borders where faces and signage do not, so
- * this was judged worth it; if that ever stops being true, the thing to look
- * for is a tall Indian society with its own landscaped podium.
+ * THE RESALE HERO took one more pass. The frame that met the brief for height
+ * and garden was not Mumbai and its statues said so, which is a poor thing to
+ * put at the top of a page about buying in Borivali. It is now Hiranandani,
+ * twenty odd floors of it, above a belt of mature trees with Powai lake along
+ * the bottom. Local, tall, green, and a place a buyer in this belt recognises.
+ * The frame is anchored to the bottom of the original so the trees and the
+ * water survive the crop; centring it loses both to sky.
  *
  * Pexels, 8 September 2026. Heroes 1920 wide, panels 1100 by 1375.
  */const HERO_IMAGE: Record<(typeof SERVICE_SLUGS)[number], string> = {
@@ -96,7 +97,7 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
 
 /** Alt text per service. A hero image is content, not decoration. */
 const HERO_ALT: Record<(typeof SERVICE_SLUGS)[number], string> = {
-  "resale-flats": "High rise apartment towers standing around a large landscaped garden",
+  "resale-flats": "The Hiranandani towers in Mumbai above a belt of mature trees and Powai lake",
   rentals: "An empty flat with the balcony door open to the light",
   "new-project-bookings": "A tall residential building in Mumbai against a clear sky",
   redevelopment: "A residential building going up, wrapped in scaffolding and safety netting",
