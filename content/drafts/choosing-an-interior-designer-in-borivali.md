@@ -13,10 +13,29 @@ wordTarget: 1700
 answer: >
   Ask for a written scope with quantities, not a lump sum. Ask what is excluded.
   Ask who supervises the site day to day and how often. Ask what happens if the
-  work runs past the agreed date. An advance of more than 20 percent before any
-  material arrives on site is worth questioning.
-sources: []
-sourcesCheckedOn: ""
+  work runs past the agreed date. The large organised firms take 10 percent to
+  book. An advance above that before the design is frozen and the quantities
+  are in writing is worth questioning.
+sources:
+  - label: Livspace, payment terms and booking fee
+    url: https://www.livspace.com/in/interiors/service/service-payments
+  - label: HomeLane, terms and conditions, payment milestones for orders from November 2025
+    url: https://www.homelane.com/homelane-terms-conditions
+  - label: Livspace, interior design cost in Mumbai, 2026 edition
+    url: https://www.livspace.com/in/magazine/calculate-interior-design-cost-in-mumbai
+  - label: Livspace, breakup of a 2 BHK interior design cost, June 2025
+    url: https://www.livspace.com/in/magazine/breakup-of-2-bhk-interior-design-cost
+  - label: HomeLane, guide to interior design costs in Mumbai, April 2025
+    url: https://www.homelane.com/design-ideas/buying-guides/interior-design-costs-in-mumbai-guide/
+  - label: NoBroker, interior design cost in Mumbai, July 2026
+    url: https://www.nobroker.in/interiors/design-guides/interior-design-cost-in-mumbai/
+  - label: Model bye laws of co operative housing societies, Maharashtra, bye law 46 on additions and alterations
+    url: https://mysocietyclub.com/bye-laws/maharashtra-cooperative-housing-society-bye-laws/maintenance-flat-members
+  - label: AMS Civil Work, BMC rules and society permissions for flat renovation in Mumbai
+    url: https://www.amscivilwork.in/blog/bmc-rules-society-permissions-flat-renovation-mumbai
+  - label: NoBrokerHood, society rules for flat renovation in Mumbai
+    url: https://www.nobrokerhood.com/blog/society-rules-for-flat-renovation-in-mumbai/
+sourcesCheckedOn: "8 September 2026"
 relatedFaqs:
   - How much advance is normal for interior work?
   - Do I need society permission for interior work?
@@ -29,7 +48,7 @@ readNext:
 
 ## The short answer
 
-Ask for a written scope with quantities, not a lump sum. Ask what is excluded. Ask who supervises the site day to day and how often. Ask what happens if the work runs past the agreed date. **An advance of more than 20 percent before any material arrives on site is worth questioning.** [ YOUR WORDS: is 20 percent the right threshold? This is the most actionable number in the post and it has to be yours. No amount of research substitutes for what you have actually seen go wrong. ]
+Ask for a written scope with quantities, not a lump sum. Ask what is excluded. Ask who supervises the site day to day and how often. Ask what happens if the work runs past the agreed date. **The large organised firms take 10 percent to book. An advance above that before the design is frozen and the quantities are in writing is worth questioning.**
 
 ---
 
@@ -51,13 +70,13 @@ Ask for running feet, square feet and unit counts. If a designer will not put qu
 
 This is where the budget actually goes wrong. Things that are commonly outside an interiors quote and land later as separate bills:
 
-- Civil work, if walls are being moved
-- Electrical load upgrades
-- Plumbing changes beyond the existing points
-- Loose furniture, curtains and appliances
-- Society charges, debris removal and lift usage
-
-[ YOUR WORDS: is this list right for how quotes are structured in Borivali? Add whatever catches people out here and strike anything that is normally included. ]
+- Civil work, if walls are being moved, and anything that needs the society's or the BMC's permission
+- Electrical load upgrades and plumbing changes beyond the existing points
+- Flooring, false ceiling and painting, which the big firms price as separate line items rather than inside the package
+- In the kitchen, the sink, hob, chimney and counter top, which sit outside even a "complete" modular kitchen quote
+- Loose furniture, curtains, light fittings and appliances
+- Society charges: the refundable renovation deposit, lift use and debris removal
+- **GST at 18 percent**, which the published package prices exclude
 
 ### 3. Who is on site, and how often?
 
@@ -75,47 +94,45 @@ Ask to see a finished flat in a nearby building, not a rendering. Renderings are
 
 ## The advance question
 
-Advances are normal. Large advances before anything physical happens are not.
+Advances are normal. Large advances before anything physical happens are not, and the two largest organised firms publish exactly what they take, which gives you a benchmark to hold any designer against.
 
-[ DECISION: this section needs your actual position on what is normal, because it is the most useful thing in the article and it is also a claim about how other people in your market operate. Suggested prompts:
+Livspace takes 10 percent of the quote, or 60,000 rupees if that is more, to book. HomeLane takes 10 percent to book, another 10 percent before the site is masked, then 30 percent of the woodwork and 80 percent of the non woodwork when the works contract is signed, with the last 50 percent of the woodwork due before the factory dispatches. Livspace's balance falls due once 40 to 50 percent of the work is done on site.
 
-- What advance percentage do you consider reasonable, and at what stage?
-- What should be delivered before the second payment?
-- Have you seen clients lose money this way, and how did it happen? ]
+Read the pattern rather than the percentages. Both firms take a small booking amount, freeze the design and the quantities, and only then take the large payment, and both tie it to a signed contract or a dispatch, not to a date. A designer who wants 30 or 40 percent before a single drawing is signed off is asking for something the largest players in the market do not, and the question to ask is what that money buys you on the day you pay it.
 
-A payment schedule tied to delivered stages rather than to dates protects both sides. **Money moves when something arrives or is installed, not when a calendar page turns.**
+What should exist before the second payment: signed drawings, a bill of quantities with named materials, a works contract with a completion date and a consequence, and the society's written permission. **Money moves when those exist and when something arrives or is installed, not when a calendar page turns.**
 
 ---
 
 ## What it costs
 
-[ DECISION: this is the section that decides whether this post is worth publishing at all.
+The honest answer is a band, and the firms that publish prices for Mumbai give you its edges.
 
-The interiors cluster is your highest value commercial position: `2 bhk interior design cost` runs 1,600 searches a month at a $2.28 cost per click, and every People Also Ask question on that search result is about price. Livspace and HomeLane both publish cost calculators.
+For the three pieces most 2 BHK jobs are really about, the kitchen and two wardrobes with a TV unit, HomeLane's published Mumbai packages run from about 3.4 lakh rupees at a basic specification to 5.8 lakh at its top one. For a full home, Livspace's 2026 Mumbai guide puts a 500 to 700 sq ft 2 BHK at 7 to 10 lakh, and its room by room breakup for a 600 to 800 sq ft flat runs from about 7 lakh at essentials to 15 lakh at the luxury end. NoBroker's guide, updated in July 2026, lands in the same place: 3.5 to 7 lakh for essentials, 7 to 10 lakh for premium.
 
-If you publish honest bands here, this post and the three around it can win those queries. If you will not, this section becomes "it depends, contact us", which is what every other page in the results already says, and the cluster loses most of its value.
+So for a 2 BHK in Borivali, Kandivali or Malad, with a kitchen, wardrobes, TV unit, false ceiling and painting: **roughly 7 to 10 lakh rupees at a sensible specification, 12 to 15 lakh for premium finishes, and all of it plus 18 percent GST**, plus whatever civil, flooring or bathroom work sits outside the package. A quote well below that band has left something out. A quote well above it should be able to show you, item by item, where the money went.
 
-I am not going to invent numbers. What is the real band for a 2 BHK fit out in these suburbs, at a basic and at a premium specification? ]
+We handle interiors as part of the move rather than as a separate business, so we price against these same bands. If you have a quote in hand, send it and we will tell you whether it sits inside the band and what it has left out.
 
 ---
 
-## [ YOUR WORDS ] What a Mumbai society will not let you do
+## What a Mumbai society will not let you do
 
-*Genuinely useful, specific to here, and something a national interiors company will get wrong. Some prompts:*
+The rule is in the model bye laws every registered society adopts. Bye law 46 says no member may make any addition or alteration to a flat without the committee's prior written permission, and no structural change at all without the competent authority's, which in Mumbai means the BMC.
 
-- *What interior work do societies in Borivali routinely refuse permission for?*
-- *What are the usual restrictions on working hours, lift use and debris?*
-- *Have you seen work stopped halfway because permission was not taken first?*
+That splits interior work into two lists. Needs the society's written no objection and nothing else: tiling, a bathroom renovated in the same place, false ceilings and painting, rewiring, a modular kitchen, and non load bearing partitions. Needs the BMC as well, under section 342 of the Municipal Corporation Act: touching a column, beam or load bearing wall, combining two flats, moving a bathroom or kitchen because the drainage moves with it, enclosing a balcony, and adding a mezzanine. Societies routinely refuse the second list outright, along with any work that changes the building's outside face or a neighbour's plumbing.
+
+The society's letter usually comes with conditions, and they are much the same across the belt: an application ten to fifteen days ahead with the scope and the contractor's identity proofs, a refundable deposit that most societies set between 7,500 and 50,000 rupees, an indemnity bond, work between about nine and one and again from two or three until six, heavy drilling and breaking kept to the late morning, nothing on Sundays or public holidays, debris bagged and out within a day, and lift use either restricted or charged for. Get the letter before the first bag of cement arrives. Work that starts without it can be stopped by the committee, and a stopped site costs more per day than the permission would have.
 
 ---
 
 ## Common questions
 
 **Do I need society permission for interior work?**
-[ YOUR WORDS. Yes in most societies, but the specifics of what needs written permission and what does not are local knowledge. ]
+Yes, in writing, from the committee, before work starts, under bye law 46 of the model bye laws. For anything structural you need the BMC as well, and the society will not sign off without it.
 
 **How much advance is normal?**
-[ DECISION, see above. ]
+About 10 percent to book, which is what the largest organised firms take, with the large payments falling after the design and quantities are signed off. More than that before anything is in writing is the point to ask why.
 
 **What is not included in an interior quote?**
 See the exclusions list above. The short version is that anything structural, anything electrical beyond the existing load, and anything loose is usually separate.

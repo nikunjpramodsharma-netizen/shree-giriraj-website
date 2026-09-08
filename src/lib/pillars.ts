@@ -177,8 +177,8 @@ const propertyPaperwork: Pillar = {
             "The standard instrument for a Mumbai tenancy, and why it is not a lease.",
         },
         {
-          slug: "the-ten-month-deposit-in-borivali",
-          title: "The ten month deposit",
+          slug: "rent-deposit-months-western-suburbs",
+          title: "How many months of deposit is normal",
           blurb:
             "What the norm actually is in the western suburbs, and when there is room to move on it.",
         },

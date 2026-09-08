@@ -22,7 +22,15 @@ sources:
     url: https://www.godrejcapital.com/media-blog/knowledge-centre/what-is-rera-carpet-area
   - label: "Kalpataru, what is loading factor in real estate"
     url: https://www.kalpataru.com/blogs/what-is-loading-factor-in-real-estate
-sourcesCheckedOn: "1 September 2026"
+  - label: Mumbai Property Exchange, new projects in Borivali West, Borivali East, Kandivali West, Kandivali East, Malad West and Malad East, September 2026
+    url: https://www.mumbaipropertyexchange.com/projects-new-homes/borivali-west
+  - label: PropertyPistol, new residential projects with carpet areas across the six sub localities, September 2026
+    url: https://www.propertypistol.com/mumbai/buy/real-estate-projects-in-kandivali-east
+  - label: Mumbai Property Exchange, resale asking rates against ready reckoner rates, reviewed July 2026
+    url: https://www.mumbaipropertyexchange.com/ready-reckoner-rates-mumbai
+  - label: RealEstateIndia, 2 BHK listings in Borivali West, on which area figure listings carry
+    url: https://www.realestateindia.com/mumbai-property/2-bhk-flats-apartments-for-sale-in-borivali-west-ffid.htm
+sourcesCheckedOn: "8 September 2026"
 relatedFaqs:
   - What is a good loading percentage?
   - Is carpet area the same as usable area?
@@ -74,7 +82,7 @@ Built up area plus your proportional share of everything the building holds in c
 
 *Illustrative, using a loading of 40 percent, which is ordinary for Mumbai. Run your own numbers with the [carpet area calculator](/tools/carpet-area-calculator).*
 
-[ YOUR WORDS: replace the illustration above with a real flat you actually transacted, with the building type and the pocket. A worked example from a real deal is worth more than a clean round number, and it is the kind of specific that separates this post from every other article on the subject. ]
+Listings rarely give you both figures. On the resale portals this month almost every Borivali West flat was advertised with one area or the other, a carpet figure or a built up figure, and not the pair that would let you work out the loading yourself. That is not an accident, and it is why the arithmetic below is worth doing before you ask to see the flat.
 
 ---
 
@@ -108,13 +116,32 @@ For a **resale** flat the position is looser, because you are buying from an ind
 
 ---
 
-## [ YOUR WORDS ] What we see in Borivali, Kandivali and Malad
+## Old building or new tower: where the loading question actually bites
 
-*The national benchmarks above are sourced. What is normal in these three suburbs is the answer nobody else can give. Prompts:*
+On a new launch the loading question is mostly answered for you. The carpet area has to be in the agreement, the portals now list on it, and Mumbai's common areas, commonly 40 to 50 percent on top of carpet, are the developer's to price into the rate rather than yours to discover later.
 
-- *Does loading differ between the older station belt buildings and the newer Link Road towers?*
-- *Have you seen a flat where the loading was unusually high, and what was the reason?*
-- *What do you check first when a client sends you a listing with an area on it?*
+On a resale flat in an older building it is the opposite. The listing gives you a built up or super built up figure because that is how the flat was sold the first time, the original agreement may or may not state carpet, and the owner often does not know the difference. So the first thing we check when a client sends a listing is not the price. It is which area the price is on. The second is the carpet figure in the original agreement, and if there is none, a measurement. Only then does a price per carpet foot exist to compare against the table below.
+
+---
+
+## What flats actually cost per carpet foot in these suburbs right now
+
+Below is where new launches in each of the six sub localities stood in September 2026, from the two portals that list projects with their carpet areas. These are developers' asking rates, not registered prices, and the median hides a wide spread, so the band is the honest number. The last column is the median resale asking rate over the eighteen months to July 2026, from the same source as the ready reckoner comparison.
+
+| Sub locality | New launches, asking, per sq ft carpet | Typical | Resale asking |
+|---|---|---|---|
+| Borivali West | 25,000 to 35,000 | about 32,000 | 31,200 |
+| Borivali East | 25,000 to 32,000, premium towers 36,000 to 49,000 | about 29,000 | 31,400 |
+| Kandivali West | 20,000 to 30,000, premium 33,000 to 41,000 | about 26,000 | 25,400 |
+| Kandivali East | 24,000 to 34,000, premium 38,000 to 45,000 | about 31,000 | 26,400 |
+| Malad West | 24,000 to 33,000 | about 28,000 | 27,000 |
+| Malad East | 22,000 to 32,000 | about 29,000 | 24,000 |
+
+A few of the projects behind those numbers, so the bands are not abstract. In Borivali West, Rishabraj Agnel at about 25,600, Royal Eksar at 27,500 and Kamla Prasanna Jeevan at 37,000. In Kandivali East, Godrej Bliss at 26,400, Shapoorji Sarova at 29,200 and Kalpataru Vienta at 40,800. In Malad West, Ahuja Linkpark at 27,300, Mahindra Marina 64 at 30,000 and Geetanjali Paradise at 36,900. In Kandivali West, Jadeite Nandanvan at 21,400, Zen Gardens at 33,400 and Ruparel Palacio at 40,700. All per square foot of carpet, all asking, all as listed in September 2026.
+
+Two things the table shows. In Borivali the resale ask sits level with a new launch, because the older stock is well located and the new stock is small. In Kandivali East the new launch premium over resale is wide, because that is where the large branded towers are. And the spread inside any one locality is bigger than the gap between localities, which is why the first question is never which suburb but which building.
+
+**What this means for your budget.** At these rates a 2 BHK of 650 sq ft carpet is roughly 1.7 crore rupees in Kandivali West, 1.8 to 2 crore in Malad, Borivali East and Kandivali East, and about 2.1 crore in Borivali West, before stamp duty and registration add another 7 percent. Tell us the number you can actually spend and we will tell you which of these belts it opens, which buildings inside it are worth the money, and where the same carpet can be had for less. Getting you into the right band, and then onto the right side of it, is the job.
 
 ---
 

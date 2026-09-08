@@ -12,6 +12,7 @@ import { graph, breadcrumbNode, faqNode, itemListNode } from "@/lib/schema";
 import { buildAlternates } from "@/lib/seo";
 import { formatDate } from "@/lib/blog";
 import { PILLARS, getPillar, type Spoke } from "@/lib/pillars";
+import { getAllPosts } from "@/lib/posts";
 
 export const revalidate = 300;
 
@@ -53,18 +54,25 @@ export async function generateMetadata({
  * the cluster and fills in over time.
  */
 async function publishedSpokes(): Promise<Set<string>> {
+  // Posts written in the repo count as soon as they carry no open markers.
+  // Until this line existed the hub read Sanity alone, so all thirteen
+  // finished markdown articles sat on it labelled "Soon" with no link.
+  const fromRepo = getAllPosts()
+    .filter((p) => p.isReady)
+    .map((p) => p.slug);
   try {
     const rows = await client.fetch<{ slug: string; locales: string[] }[]>(
       postLocaleIndexQuery,
     );
-    return new Set(
-      (rows || [])
+    return new Set([
+      ...fromRepo,
+      ...(rows || [])
         .filter((r) => (r.locales ?? []).includes(GUIDE_LOCALE))
         .map((r) => r.slug),
-    );
+    ]);
   } catch {
     // Sanity unreachable is not a reason to 500 a static reference page.
-    return new Set();
+    return new Set(fromRepo);
   }
 }
 

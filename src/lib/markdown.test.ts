@@ -184,9 +184,11 @@ describe("against the real drafts", () => {
     expect(blocks.filter((b) => b.t === "h2").length).toBeGreaterThan(3);
   });
 
-  it("finds the review markers that are actually in it", () => {
+  it("finds no review markers, because the draft was finished on 8 September 2026", () => {
+    // Marker parsing itself is exercised on synthetic input above. This
+    // pins the real state of the real file: nothing left for anyone to write.
     const markers = blocks.filter((b) => b.t === "marker");
-    expect(markers.length).toBeGreaterThan(0);
+    expect(markers).toEqual([]);
   });
 
   it("counts a sensible number of words", () => {

@@ -23,4 +23,4 @@ Drafts awaiting review, before they go into Sanity.
 |---|---|---|---|---|
 | `carpet-area-vs-built-up-area.md` | Buying | carpet area vs built up area | 3,600 | Verification only |
 | `choosing-an-interior-designer-in-borivali.md` | Interiors | interior designer borivali | 480 | Your fee position, cost bands |
-| `the-ten-month-deposit-in-borivali.md` | Renting | none measured | none | Your words, most of it |
+| `rent-deposit-months-western-suburbs.md` | Renting | none measured | none | Your words, most of it |

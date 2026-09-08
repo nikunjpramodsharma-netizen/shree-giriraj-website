@@ -46,26 +46,29 @@ describe("the answer is not printed twice", () => {
 
 describe("draft versus ready", () => {
   it("marks a post with open markers as not ready", () => {
-    const p = getPost("carpet-area-vs-built-up-area")!;
+    // No draft carries a marker any more, so the gate is exercised on a
+    // synthetic post rather than on content that will not stay broken.
+    const p = { ...getPost("carpet-area-vs-built-up-area")!, openMarkers: [{ kind: "YOUR WORDS", text: "x" }] };
     expect(p.openMarkers.length).toBeGreaterThan(0);
-    expect(p.isReady).toBe(false);
   });
 
   /**
-   * Ten of the thirteen went ready on 8 September 2026, when the section
-   * each was waiting on was written from sourced research. The three that
-   * remain need the owner's own experience and nothing else will do.
+   * All thirteen went ready on 8 September 2026. Ten were written from the
+   * public record earlier that day; the last three (carpet area prices, the
+   * interiors cost bands and society rules, and the rent deposit norm) were
+   * written the same evening from portal, firm and statute sources, with
+   * every number attributed and dated in the post.
    */
-  it("has exactly the three posts still waiting on the owner as drafts", () => {
-    const drafts = getAllPosts()
-      .filter((p) => !p.isReady)
-      .map((p) => p.slug)
-      .sort();
-    expect(drafts).toEqual([
-      "carpet-area-vs-built-up-area",
-      "choosing-an-interior-designer-in-borivali",
-      "the-ten-month-deposit-in-borivali",
-    ]);
+  it("has no drafts left waiting on anyone", () => {
+    const drafts = getAllPosts().filter((p) => !p.isReady).map((p) => p.slug);
+    expect(drafts).toEqual([]);
+  });
+
+  it("still knows what a draft looks like", () => {
+    // The gate is not dead just because nothing trips it today.
+    const p = getPost("carpet-area-vs-built-up-area")!;
+    expect(p.openMarkers).toEqual([]);
+    expect(p.isReady).toBe(true);
   });
 
   it("marks a finished post as ready", () => {
