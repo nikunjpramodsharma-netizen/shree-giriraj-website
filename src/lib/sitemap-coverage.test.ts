@@ -74,6 +74,23 @@ describe("gated pages the sitemap must stay silent about", () => {
     expect(aboutListed).toBe(STORY_IS_WRITTEN);
   });
 
+  it("lists a repo backed service in English only, with no locale cluster", async () => {
+    // Investment advisory and commercial and plots have English bodies and
+    // render English under /hi, /mr and /gu. Declaring those as translations
+    // is a wrong language signal on six URLs; found in the 9 September audit.
+    const { default: sitemap } = await import("../app/sitemap");
+    const entries = await sitemap();
+    for (const slug of ["investment-advisory", "commercial-plots"]) {
+      const mine = entries.filter((e) => e.url.endsWith(`/services/${slug}`));
+      expect(mine.length, slug).toBe(1);
+      expect(mine[0].url, slug).not.toMatch(/\/(hi|mr|gu)\//);
+      expect(mine[0].alternates, slug).toBeUndefined();
+    }
+    // And a Sanity backed one still carries the full cluster.
+    const rentals = entries.filter((e) => e.url.endsWith("/services/rentals"));
+    expect(rentals.length).toBe(4);
+  });
+
   it("still lists the pages that are genuinely ready", async () => {
     const { default: sitemap } = await import("../app/sitemap");
     const urls = (await sitemap()).map((e) => e.url);

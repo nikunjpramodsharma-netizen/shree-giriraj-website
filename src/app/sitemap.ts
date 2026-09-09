@@ -11,6 +11,7 @@ import { LOCALES, type Locale } from "@/lib/i18n-content";
 import { PILLAR_SLUGS } from "@/lib/pillars";
 import { AREA_SLUGS, getArea, areaIsComplete } from "@/lib/areas";
 import { STORY_IS_WRITTEN } from "@/lib/about";
+import { getRepoService } from "@/lib/service-content";
 import { TOOL_SLUGS } from "@/lib/tools";
 import { getAllPosts, displayDate } from "@/lib/posts";
 
@@ -58,7 +59,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   out.push(...entriesFor("/", LOCALES, undefined, 1));
   out.push(...entriesFor("/services", LOCALES, undefined, 0.8));
   for (const slug of SERVICE_SLUGS) {
-    out.push(...entriesFor(`/services/${slug}`, LOCALES, undefined, 0.8));
+    // A repo backed service has an English body and nothing else. Its locale
+    // routes still render, so the Hindi nav does not dead end, but they serve
+    // English with a noindex and canonical to the English page. Listing them
+    // here as a four locale cluster told Google a Marathi translation existed
+    // when the page was seven percent Marathi. English only, no cluster.
+    const locales = getRepoService(slug) ? (["en"] as const) : LOCALES;
+    out.push(...entriesFor(`/services/${slug}`, locales, undefined, 0.8));
   }
   out.push(...entriesFor("/projects", LOCALES, undefined, 0.6));
   out.push(...entriesFor("/blog", LOCALES, undefined, 0.6));

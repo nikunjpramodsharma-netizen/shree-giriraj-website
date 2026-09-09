@@ -142,11 +142,20 @@ export async function generateMetadata({
     ? { title: repo.title, seoDescription: repo.seoDescription }
     : await client.fetch<ServicePage>(pageBySlugQuery, { slug: params.slug });
   if (!page) return {};
-  const urls = pageUrls(params.locale, `/services/${params.slug}`);
+  // A repo backed service exists in English only. Under /hi, /mr or /gu the
+  // same English body renders (the owner chose to skip translation for now),
+  // so those renders must not compete with, or be declared as translations
+  // of, the English page: canonical points at English, no hreflang cluster,
+  // and noindex on the non English render. The route stays alive so the
+  // localised nav does not dead end.
+  const urls = repo
+    ? pageUrls("en", `/services/${params.slug}`, ["en"])
+    : pageUrls(params.locale, `/services/${params.slug}`);
   const slug = params.slug as (typeof SERVICE_SLUGS)[number];
   const hero = HERO_IMAGE[slug];
   return {
     ...urls,
+    ...(repo && params.locale !== "en" ? { robots: { index: false, follow: true } } : {}),
     title: page.title,
     description: page.seoDescription,
     // The page's own hero, not the site card. Somebody pasting a link to the
