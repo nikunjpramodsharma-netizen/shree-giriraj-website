@@ -15,12 +15,20 @@
 export const FILLS = [
   // ---------------------------------------------------------------- blocked
   {
-    id: "sanity-write-token",
+    id: "resend-api-key",
     area: "Technical",
     status: "blocked",
-    ask: "A Sanity API write token, added to .env.local as SANITY_API_WRITE_TOKEN.",
-    why: "Without it no blog post can be created and the enquiry form cannot save a lead. The form currently returns a 503 and the visitor is told to use WhatsApp. This is the single biggest blocker on the site.",
+    ask: "A Resend API key, added to .env.local as RESEND_API_KEY, and the inbox enquiries should land in.",
+    why: "The enquiry form emails through Resend and nothing else. Without the key /api/lead returns a 503 and every enquiry sent through the site is lost; only WhatsApp works. Now that the copy is written to produce leads, this is the single biggest blocker on the site.",
     where: ["src/app/api/lead/route.ts", ".env.local"],
+  },
+  {
+    id: "sanity-write-token",
+    area: "Technical",
+    status: "hidden",
+    ask: "A Sanity API write token, added to .env.local as SANITY_API_WRITE_TOKEN.",
+    why: "Not needed for enquiries, which go by email. It is needed to edit the five service pages, the homepage FAQs and the projects that live in Sanity, and to move finished posts into the Studio. Three service pages and all the posts were built in the repo instead, which works but is not editable in the Studio. The resale page still says 'for nearly 30 years', which cannot be changed without it.",
+    where: ["src/lib/service-content.ts", ".env.local"],
   },
   {
     id: "author-document",
@@ -34,7 +42,7 @@ export const FILLS = [
     id: "about-page",
     area: "Site",
     status: "hidden",
-    ask: "The story of the business: who started it in 1996 and what they did before, how you work and who you are not for, and what has actually changed since 1996. A deal you turned down would be worth more than anything else on the page.",
+    ask: "The founder's story, in his words: what he was doing before 1996 and what Borivali looked like then, how the firm works and who it is not for, what RERA changed for a buyer here, and a deal it turned down. The name, the portrait and the two dates are already on the page.",
     why: "The page is built and the facts on it are real, but the story is not written, so it is served noindex. Flip STORY_IS_WRITTEN once it is.",
     where: ["src/app/(site)/[locale]/about/page.tsx"],
   },
@@ -53,7 +61,7 @@ export const FILLS = [
     area: "Technical",
     status: "wrong",
     ask: "Confirmation that the live domain is shreegiriraj.in, and that .in is what NEXT_PUBLIC_SITE_URL should be.",
-    why: "The code still falls back to the .com if the variable is ever missing. Canonicals, hreflang, sitemap and JSON-LD all have to agree on one exact origin, and a mismatch makes Google discard the whole cluster.",
+    why: "The domain is not registered yet and every canonical, hreflang entry and og:url currently resolves to localhost. The code falls back to https://www.shreegiriraj.in, so the www versus apex choice must match whatever is bought, or canonicals, hreflang, sitemap and JSON-LD will disagree with the real URL and Google discards the cluster.",
     where: ["src/lib/seo.ts", ".env.local"],
   },
   {

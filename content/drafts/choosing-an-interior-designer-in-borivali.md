@@ -108,9 +108,9 @@ What should exist before the second payment: signed drawings, a bill of quantiti
 
 The honest answer is a band, and the firms that publish prices for Mumbai give you its edges.
 
-For the three pieces most 2 BHK jobs are really about, the kitchen and two wardrobes with a TV unit, HomeLane's published Mumbai packages run from about 3.4 lakh rupees at a basic specification to 5.8 lakh at its top one. For a full home, Livspace's 2026 Mumbai guide puts a 500 to 700 sq ft 2 BHK at 7 to 10 lakh, and its room by room breakup for a 600 to 800 sq ft flat runs from about 7 lakh at essentials to 15 lakh at the luxury end. NoBroker's guide, updated in July 2026, lands in the same place: 3.5 to 7 lakh for essentials, 7 to 10 lakh for premium.
+The organised firms publish Mumbai package prices, and the spread between a basic specification and a premium one for the same flat is wide, wider than most people expect before they start. That spread is exactly why we do not print a band here. The number that matters is the itemised estimate for your flat, with your quantities and your finishes, and we give it before any work starts.
 
-So for a 2 BHK in Borivali, Kandivali or Malad, with a kitchen, wardrobes, TV unit, false ceiling and painting: **roughly 7 to 10 lakh rupees at a sensible specification, 12 to 15 lakh for premium finishes, and all of it plus 18 percent GST**, plus whatever civil, flooring or bathroom work sits outside the package. A quote well below that band has left something out. A quote well above it should be able to show you, item by item, where the money went.
+So for a 2 BHK in Borivali, Kandivali or Malad, with a kitchen, wardrobes, TV unit, false ceiling and painting, the honest answer is **an itemised estimate for that flat, plus 18 percent GST**, plus whatever civil, flooring or bathroom work sits outside the package. A quote far below the market's published packages is worth asking about. A quote above them should show you, item by item, where the money goes.
 
 We handle interiors as part of the move rather than as a separate business, so we price against these same bands. If you have a quote in hand, send it and we will tell you whether it sits inside the band and what it has left out.
 
@@ -138,10 +138,10 @@ About 10 percent to book, which is what the largest organised firms take, with t
 See the exclusions list above. The short version is that anything structural, anything electrical beyond the existing load, and anything loose is usually separate.
 
 **How much does a 2 BHK interior cost in Mumbai?**
-Roughly 7 to 10 lakh rupees for a full home at a sensible specification, 12 to 15 lakh for premium finishes, plus 18 percent GST, based on the Mumbai figures Livspace, HomeLane and NoBroker publish. The three big pieces alone, a kitchen and two wardrobes with a TV unit, run from about 3.4 to 5.8 lakh.
+It depends on the specification more than on the flat, and the spread between basic and premium for the same 2 BHK is wide. We give an itemised estimate for your flat before any work starts, plus 18 percent GST. List the quantities first with the [interior scope builder](/tools/interior-scope-builder) and the estimate is quicker and closer.
 
 **How much do interior designers charge in Mumbai?**
-Two ways. The organised firms fold the design fee into the package price and charge nothing separately. Independent designers charge per square foot, anywhere from 40 or 50 rupees to 500, with 100 to 150 the usual middle, or a percentage of the project value. Ask which model applies before the first drawing.
+Two ways. The organised firms fold the design fee into the package price and charge nothing separately. Independent designers charge per square foot or a percentage of the project value. Ask which model applies before the first drawing, and get it in writing.
 
 ---
 
