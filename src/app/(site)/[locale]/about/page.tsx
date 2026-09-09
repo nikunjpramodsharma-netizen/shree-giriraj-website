@@ -165,24 +165,31 @@ export default function AboutPage({
         {/*
           The founder. One confirmed fact, presented plainly.
 
-          The portrait is a monogram until a real photograph exists. That is a
-          design decision, not an apology: initials read as deliberate, whereas
-          a stock face under a real man's name is the thing this page was
-          already caught doing.
+          The full portrait, not a thumbnail. The first version put him in a
+          96 pixel circle beside his name, which read as an avatar on a contact
+          card. The owner's instruction on 9 September 2026 was the whole
+          image, so it runs at its own proportions in a two column block: the
+          photograph on one side, the name and the one confirmed sentence on
+          the other. Nothing is cropped away.
+
+          The monogram remains as the fallback if the photograph is ever
+          pulled: initials read as deliberate, whereas a stock face under a
+          real man's name is the thing this page was already caught doing.
         */}
-        <section className="mt-12 flex max-w-[68ch] items-center gap-5 rounded-xl border border-line bg-white/50 p-6">
+        <section className="mt-12 grid max-w-4xl gap-8 rounded-xl border border-line bg-white/50 p-6 md:grid-cols-[minmax(0,20rem)_1fr] md:items-center md:gap-10 md:p-8">
           {FOUNDER.photo ? (
             <Image
               src={FOUNDER.photo}
               alt={`${FOUNDER.name}, ${FOUNDER.role.toLowerCase()} of ${site.name}`}
-              width={96}
-              height={96}
-              className="h-24 w-24 shrink-0 rounded-full object-cover"
+              width={1024}
+              height={1536}
+              sizes="(min-width: 768px) 20rem, 100vw"
+              className="w-full max-w-xs justify-self-center rounded-xl md:max-w-none"
             />
           ) : (
             <span
               aria-hidden="true"
-              className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-brand-indigo text-2xl font-semibold tracking-wide text-brass-bright"
+              className="flex aspect-[2/3] w-full max-w-xs items-center justify-center justify-self-center rounded-xl bg-brand-indigo text-5xl font-semibold tracking-wide text-brass-bright"
             >
               {founderInitials()}
             </span>
@@ -194,7 +201,7 @@ export default function AboutPage({
             <h2 className="mt-1.5 text-2xl text-ink md:text-3xl">
               {FOUNDER.name}
             </h2>
-            <p className="mt-2 text-ink/70">
+            <p className="mt-3 text-lg text-ink/75">
               Founded the firm in {site.established} and still runs it from the
               shop in Chikoowadi.
             </p>

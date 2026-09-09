@@ -59,10 +59,10 @@ export const STORY_PROMPTS: StorySection[] = [
  * The portrait was supplied by the owner on 9 September 2026 and identified
  * by him as Pramod Sharma. The file he supplied carried a ChatGPT image name,
  * so it is at minimum AI processed; he chose it for the page knowingly. It is
- * stored as an 800 by 800 head and shoulders crop, because the page renders it
- * in a 96 pixel circle and a full length frame would show a lapel, not a face.
- * The null branch and the monogram stay in the component in case the photo is
- * ever pulled.
+ * stored at its full 1024 by 1536 frame and the page shows all of it, on his
+ * instruction; an earlier version cropped it into a 96 pixel circle and he
+ * did not want a thumbnail. The null branch and the monogram stay in the
+ * component in case the photo is ever pulled.
  */
 export const FOUNDER = {
   name: "Pramod Kishanlal Sharma",
