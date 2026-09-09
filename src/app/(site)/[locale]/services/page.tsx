@@ -15,6 +15,7 @@ const SERVICES = [
   { slug: "new-project-bookings", key: "newProject" },
   { slug: "investment-advisory", key: "investmentAdvisory" },
   { slug: "commercial-plots", key: "commercial" },
+  { slug: "mhada-paperwork", key: "mhada" },
   { slug: "interiors", key: "interiors" },
 ] as const;
 
@@ -41,6 +42,7 @@ const SERVICE_TITLE_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
   "new-project-bookings": "newProjectTitle",
   "investment-advisory": "investmentAdvisoryTitle",
   "commercial-plots": "commercialTitle",
+  "mhada-paperwork": "mhadaTitle",
   interiors: "interiorsTitle",
 };
 
@@ -71,7 +73,7 @@ export default async function ServicesIndexPage({
           breadcrumbNode(locale, trail),
         )}
       />
-      {/* The six pages below this one all open with a photograph. The page
+      {/* The seven pages below this one all open with a photograph. The page
           that lists them should not be the flat one. */}
       <section className="relative overflow-hidden bg-brand-indigo-deep text-paper">
         <Image

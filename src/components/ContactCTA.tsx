@@ -42,7 +42,8 @@ type Props = {
     | "intentSell"
     | "intentRent"
     | "intentNewProject"
-    | "intentInvest";
+    | "intentInvest"
+    | "intentMhada";
   presetArea?: string;
 };
 
@@ -80,6 +81,7 @@ export function ContactCTA({
     t("intentRent"),
     t("intentNewProject"),
     t("intentInvest"),
+    t("intentMhada"),
   ];
 
   const dark = tone === "dark";

@@ -171,7 +171,7 @@ export function isEnglishOnlyPath(path: string): boolean {
 /** Routes that must never be indexed. Kept in one place so robots and sitemap agree. */
 export const NOINDEX_PREFIXES = ["/studio", "/lp/", "/api/"] as const;
 
-/** The six service slugs are fixed and shared by the sitemap and the nav. */
+/** The seven service slugs are fixed and shared by the sitemap and the nav. */
 export const SERVICE_SLUGS = [
   "resale-flats",
   "rentals",
@@ -179,4 +179,5 @@ export const SERVICE_SLUGS = [
   "investment-advisory",
   "commercial-plots",
   "interiors",
+  "mhada-paperwork",
 ] as const;

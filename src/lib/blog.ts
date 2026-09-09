@@ -47,6 +47,15 @@ const CATEGORY_VISUALS: { match: RegExp; visual: CategoryVisual }[] = [
     },
   },
   {
+    // MHADA before paperwork, because every MHADA post is paperwork and would
+    // otherwise take the generic stamping photograph.
+    match: /mhada/i,
+    visual: {
+      image: "/blog/mhada-sell.jpg",
+      alt: "A hand signing an application form with a pen",
+    },
+  },
+  {
     // Before the buy rule on purpose. An investing post is about buying, and
     // without this it would fall through to the generic buying photograph.
     match: /invest|yield|roi|portfolio|commercial/i,

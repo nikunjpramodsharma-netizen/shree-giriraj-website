@@ -30,6 +30,7 @@ const SERVICE_SLUGS = [
   "investment-advisory",
   "commercial-plots",
   "interiors",
+  "mhada-paperwork",
 ] as const;
 
 // Maps each service slug to its messages key (services.json uses camelCase, slugs use kebab-case).
@@ -40,6 +41,7 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
   "investment-advisory": "investmentAdvisory",
   "commercial-plots": "commercialPlots",
   interiors: "interiors",
+  "mhada-paperwork": "mhadaPaperwork",
 };
 
 /**
@@ -96,6 +98,7 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
   "investment-advisory": "/services/hero-investment.jpg",
   "commercial-plots": "/services/hero-commercial.jpg",
   interiors: "/services/hero-interiors.jpg",
+  "mhada-paperwork": "/services/hero-mhada.jpg",
 };
 
 /** Alt text per service. A hero image is content, not decoration. */
@@ -106,6 +109,7 @@ const HERO_ALT: Record<(typeof SERVICE_SLUGS)[number], string> = {
   "investment-advisory": "Mumbai residential towers lit up at dusk, seen from above",
   "commercial-plots": "Shoppers walking a covered shopping arcade lined with glass shopfronts",
   interiors: "A furnished living room in a Mumbai flat",
+  "mhada-paperwork": "A hand pressing a rubber stamp onto an application form on a desk",
 };
 
 type Config = { type?: string; displayPrice?: string; note?: LocalizedValue<string> };
@@ -136,7 +140,7 @@ export async function generateMetadata({
   params: { locale: string; slug: string };
 }): Promise<Metadata> {
   // A repo backed service never touches Sanity. See service-content.ts for
-  // why one of the six lives in code.
+  // why three of the seven live in code.
   const repo = getRepoService(params.slug);
   const page = repo
     ? { title: repo.title, seoDescription: repo.seoDescription }
@@ -175,13 +179,14 @@ export async function generateMetadata({
  */
 const SERVICE_INTENT: Record<
   string,
-  "intentBuy" | "intentSell" | "intentRent" | "intentNewProject" | "intentInvest" | undefined
+  "intentBuy" | "intentSell" | "intentRent" | "intentNewProject" | "intentInvest" | "intentMhada" | undefined
 > = {
   "resale-flats": "intentBuy",
   rentals: "intentRent",
   "new-project-bookings": "intentNewProject",
   "investment-advisory": "intentInvest",
   "commercial-plots": undefined,
+  "mhada-paperwork": "intentMhada",
   interiors: undefined,
 };
 

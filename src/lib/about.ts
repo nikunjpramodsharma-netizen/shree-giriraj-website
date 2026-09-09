@@ -85,7 +85,7 @@ export function founderInitials(): string {
  * The rest of the site carries a FAQ block on every service, tool and article
  * for answer engines, and About was the gap. Every answer here is drawn from a
  * fact already confirmed by the owner and already stated elsewhere on the site:
- * the founder, the two dates, the MahaRERA number, the address and the six
+ * the founder, the two dates, the MahaRERA number, the address and the seven
  * services. Nothing about awards, deal volume, client numbers or years of
  * "experience" beyond the two dates, because none of that is confirmed.
  *
@@ -115,7 +115,7 @@ export const ABOUT_FAQS: AboutFaq[] = [
   },
   {
     q: "What does Shree Giriraj do?",
-    a: "Six things: resale flats, rentals, new project bookings, property investment advisory, commercial property and plots, and interior and civil work. Resale is the main business. The firm handles a transaction end to end, from shortlisting and site visits through negotiation, documentation and registration.",
+    a: "Seven things: resale flats, rentals, new project bookings, property investment advisory, commercial property and plots, MHADA paperwork, and interior and civil work. Resale is the main business. The firm handles a transaction end to end, from shortlisting and site visits through negotiation, documentation and registration.",
   },
   {
     q: "Where is the office?",
@@ -163,8 +163,8 @@ export const JOURNEY: JourneyEntry[] = [
   },
   {
     when: "Today",
-    title: "Six services, three suburbs, one address",
-    body: "Resale, rentals, new project bookings, property investment advisory, commercial and plots, and interior and civil work. MahaRERA registered agent A51800005726. Still run by the founder, still from the same shop.",
+    title: "Seven services, three suburbs, one address",
+    body: "Resale, rentals, new project bookings, property investment advisory, commercial and plots, MHADA paperwork, and interior and civil work. MahaRERA registered agent A51800005726. Still run by the founder, still from the same shop.",
     chips: ["MahaRERA A51800005726", "Family run"],
     image: { src: "/services/hero-commercial.jpg", alt: "Shoppers walking a covered shopping arcade lined with glass shopfronts" },
   },

@@ -17,6 +17,7 @@ export default defineType({
           { title: "Resale & Buying", value: "resale" },
           { title: "Rentals", value: "rentals" },
           { title: "Investment advisory", value: "investment-advisory" },
+          { title: "MHADA paperwork", value: "mhada-paperwork" },
           { title: "Pricing", value: "pricing" },
           { title: "General", value: "general" },
         ],

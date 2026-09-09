@@ -262,6 +262,7 @@ export default async function HomePage({
     { slug: "new-project-bookings", title: tServices("newProjectTitle"), body: tServices("newProjectBody") },
     { slug: "investment-advisory", title: tServices("investmentAdvisoryTitle"), body: tServices("investmentAdvisoryBody") },
     { slug: "commercial-plots", title: tServices("commercialTitle"), body: tServices("commercialBody") },
+    { slug: "mhada-paperwork", title: tServices("mhadaTitle"), body: tServices("mhadaBody") },
     { slug: "interiors", title: tServices("interiorsTitle"), body: tServices("interiorsBody") },
   ];
 

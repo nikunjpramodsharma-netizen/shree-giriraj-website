@@ -11,7 +11,7 @@ import { parseBlocks, type Block } from "@/lib/markdown";
  * the route calls notFound() when no document matches, so a code-only service
  * would have been a 404 no matter what was written around it.
  *
- * The trade is explicit. Investment Advisory and Commercial are not editable in the Studio
+ * The trade is explicit. Investment advisory, commercial and MHADA paperwork are not editable in the Studio
  * until somebody creates the document there and this entry is deleted. In
  * exchange the copy is version controlled, reviewable in a diff, and testable,
  * which for a page making claims about money is arguably the better half of
@@ -290,6 +290,143 @@ costs are high. Nothing on this page is a guarantee of rent, occupancy or
 resale value, and nothing on this page is investment, tax or legal advice.
 `.trim();
 
+const MHADA_PAPERWORK_BODY = `
+## MHADA paperwork in Borivali, Kandivali and Malad
+
+Shree Giriraj Real Estate is a MahaRERA registered estate agent, registration
+number A51800005726, working from Shop No 11, Clover Grove CHS, Chikoowadi,
+Borivali West, Mumbai 400092. The firm has worked in real estate since 1996
+and has operated from this office since 2005.
+
+MHADA is the Maharashtra Housing and Area Development Authority. A great many
+flats in the western suburbs were allotted through it, and every one of them
+carries a set of rules that a privately built flat does not: permission
+before a sale, permission before a tenant, a transfer procedure when an
+allottee dies, and an income group that the buyer has to fit. This service
+handles that paperwork end to end for owners, heirs, buyers and landlords of
+MHADA flats in Borivali, Kandivali and Malad.
+
+## What the service covers
+
+- **Transfer of tenement (TOT)** with the Mumbai Board's Estate Manager, for
+  a sale, a gift within the family, or a transfer to a legal heir
+- **No objection certificate for sale**, including the society's permission
+  and the Board's, and the unearned increase where the Board asks for it
+- **No objection certificate for leave and licence**, so the flat can be let
+  legally
+- **No objection certificate for a mortgage**, which a lender needs before
+  sanctioning a loan on a MHADA flat
+- **Transfer on death** of the original allottee, with the heirship documents
+  the Board asks for
+- **Regularisation** where a flat changed hands without the Board's permission
+- **Society and redevelopment paperwork** for MHADA layouts, including the
+  conveyance position and what a redevelopment under the MHADA regulations
+  needs from members
+
+## Can a MHADA flat be transferred to another person?
+
+Yes, with permission. Under the Estate Management, Sale, Transfer and Exchange
+of Tenements Regulations, 1981, no allottee may transfer a tenement except
+with the previous permission in writing of the Board, and of the housing
+society where one has been formed. The society may permit a transfer once five
+years have passed from the date of allotment, the buyer falls in the same
+income group as the scheme, and all dues to the Board have been paid.
+
+A transfer made without that permission can be declared invalid. The
+transferee is then treated as an unauthorised occupant and can be evicted,
+and the money is refunded to the allottee without interest, less rent for the
+period the flat was occupied. That is the single most expensive mistake in
+this market, and it is the reason the paperwork comes first.
+
+## What are the MHADA transfer fees?
+
+The Mumbai Board publishes a schedule for transfer of tenancy rights on its
+document list: 45 rupees per square foot for Low Income Group flats capped at
+15,000 rupees, 55 rupees per square foot for Middle Income Group capped at
+25,000 rupees, and 60 rupees per square foot for High Income Group capped at
+35,000 rupees. Those figures are as published on mhada.gov.in and checked on
+9 September 2026; the Board revises them, so confirm the current schedule
+before you pay.
+
+Separately, the 1981 Regulations let the Board make its permission for a sale
+conditional on payment of a portion of the unearned increase in the value of
+the flat, up to fifty percent of that increase, at the Authority's discretion.
+Whether that applies, and how much, depends on the scheme and the flat. We
+find out before you agree a price, not after.
+
+## What documents does a MHADA transfer need?
+
+The Mumbai Board's published list for transfer of tenancy rights runs to
+fourteen items. The ones that decide the outcome:
+
+1. The application in the prescribed format from the Estate Manager's office
+2. A certificate from the applicant stating the reason for the transfer
+3. The original death certificate, where the allottee has died
+4. An affidavit that the applicant and immediate family hold no other land or
+   tenement in Mumbai city and suburbs
+5. The no objection certificate from the original tenement holder
+6. The society's no objection certificate, or an affidavit that no society has
+   been formed
+7. Proof of income, whether an employer's certificate or income tax returns
+8. A heirship certificate from the competent authority, for a transfer to an
+   heir
+9. The latest rent receipt showing no arrears
+10. The transfer charges, paid by demand draft or pay order and receipted
+
+The Board's list says the application and documents are to be submitted to
+the Estate Manager within fifteen days. Missing one item restarts the clock,
+which is why we assemble the file before it goes in.
+
+## Can I rent out my MHADA flat?
+
+Yes, with a no objection certificate for rent from the Mumbai Board. It is a
+notified service under the Maharashtra Right to Public Services Act, listed on
+the Aaple Sarkar portal as a no objection certificate for letting a flat, plot
+or commercial unit, with a time limit of eight days and the Estate Manager as
+the designated officer. Appeals lie to the Executive Engineer and then the
+Chief Officer if it is delayed or refused without reason.
+
+Letting a MHADA flat without it puts the allotment itself at risk. Get the
+NOC, then register the leave and licence agreement under section 55 of the
+Maharashtra Rent Control Act as you would for any flat.
+
+## What happens to a MHADA flat when the allottee dies?
+
+The tenancy can be transferred to a legal heir. Section 24 of the Maharashtra
+Housing and Area Development Act, 1976 lists who qualifies: the husband or
+wife, an unmarried son or daughter, a married son and his family, a widowed
+daughter and her unmarried children, and the father and mother. The Board's
+document list adds the original death certificate and a heirship certificate
+from the competent authority to the standard file.
+
+Where there is more than one heir, the family's consent has to be in order
+before the Board will act. We handle that part carefully, because it is where
+these transfers stall.
+
+## What this service does not do
+
+We do not sell MHADA lottery forms, register you for a lottery, or predict
+lottery results. We do not give legal opinions; where a matter needs an
+advocate, we say so and work alongside one. And we do not promise the Board's
+decision or its timing. What we promise is a complete, correct file, submitted
+to the right desk, followed up until it is decided.
+
+## How to start
+
+Tell us which flat, which board scheme, and what you need: a sale, a tenant,
+a loan, a transfer to an heir, or a transfer that happened without permission
+and needs regularising. Bring the allotment letter and the latest receipt if
+you have them. We will tell you what the file needs, what it will cost in
+official charges, and how long the Board has to decide.
+
+---
+
+**A note on accuracy.** The rules, fees and time limits on this page are taken
+from documents published by MHADA and the Government of Maharashtra and were
+checked on 9 September 2026. They change. Nothing here is legal advice, and
+the Board's decision on any application is its own.
+`.trim();
+
 export const REPO_SERVICES: Record<string, RepoService> = {
   "investment-advisory": {
     title: "Property Investment Advisory in Borivali, Kandivali & Malad",
@@ -308,6 +445,15 @@ export const REPO_SERVICES: Record<string, RepoService> = {
     seoDescription:
       "Commercial property in Borivali, Kandivali and Malad: shops for rent and sale, office space and plots, through Shree Giriraj Real Estate, MahaRERA agent A51800005726. Approved use, society rules and frontage checked before you commit.",
     body: COMMERCIAL_PLOTS_BODY,
+  },
+  "mhada-paperwork": {
+    title: "MHADA Paperwork in Borivali, Kandivali & Malad",
+    heroHeading: "MHADA paperwork, handled end to end",
+    heroSubheading:
+      "Transfer of tenement, no objection certificates for sale, rent and mortgage, transfer to heirs, and regularisation, for MHADA flats across Borivali, Kandivali and Malad. A complete file to the right desk, followed up until it is decided.",
+    seoDescription:
+      "MHADA transfer, NOC for sale, rent and mortgage, transfer on death and regularisation for MHADA flats in Borivali, Kandivali and Malad, through Shree Giriraj Real Estate, MahaRERA agent A51800005726. Rules and charges from MHADA's own documents.",
+    body: MHADA_PAPERWORK_BODY,
   },
 };
 

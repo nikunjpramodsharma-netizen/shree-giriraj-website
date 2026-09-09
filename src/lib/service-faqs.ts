@@ -1,5 +1,5 @@
 /**
- * Questions and answers for the six service pages.
+ * Questions and answers for the seven service pages.
  *
  * WHY THIS IS IN THE REPO AND NOT IN SANITY
  *
@@ -153,6 +153,32 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
     {
       q: "Are there actually plots for sale in Borivali, Kandivali or Malad?",
       a: "Rarely, and rarely small. Most of what is called a plot in these suburbs is an old bungalow plot, a society plot heading for redevelopment, or land with a development potential that depends on its reservation in the development plan. We will tell you what genuinely exists at any given time rather than list something that does not.",
+    },
+  ],
+  "mhada-paperwork": [
+    {
+      q: "Can I sell a MHADA flat after 5 years?",
+      a: "Five years from allotment is the point at which the society may permit a transfer under the 1981 Regulations, but the Board's written permission is still required, the buyer has to fall in the same income group as the scheme, and all dues must be paid. Selling without that permission can void the sale.",
+      href: "/blog/can-we-sell-mhada-flat",
+      hrefLabel: "The full rules on selling a MHADA flat",
+    },
+    {
+      q: "What are the MHADA name transfer fees?",
+      a: "The Mumbai Board's published schedule for transfer of tenancy rights is 45 rupees per square foot for LIG capped at 15,000 rupees, 55 for MIG capped at 25,000, and 60 for HIG capped at 35,000, as published on mhada.gov.in and checked on 9 September 2026. The Board may also ask for a share of the unearned increase on a sale. Confirm the current schedule before paying.",
+    },
+    {
+      q: "Can we transfer a MHADA flat to another person?",
+      a: "Yes, with the previous written permission of the Board and of the society where one exists. Within a family, and to a legal heir on death, the Regulations provide for transfer in the name of a family member. Outside the family it is a sale, with the five year, income group and dues conditions attached.",
+    },
+    {
+      q: "Can I rent out a MHADA flat?",
+      a: "Yes, with a no objection certificate for rent from the Mumbai Board. It is a notified Right to Public Services item with an eight day time limit and the Estate Manager as the designated officer. Once you have it, register the leave and licence agreement under section 55 of the Rent Control Act as for any flat.",
+      href: "/blog/can-we-rent-mhada-flat",
+      hrefLabel: "How the NOC for rent works",
+    },
+    {
+      q: "What is a MHADA NOC?",
+      a: "A no objection certificate from the Board for a specific act: selling the flat, letting it, or mortgaging it to a lender. Each is a separate application to the Estate Manager with its own documents. A lender will not sanction a loan on a MHADA flat without the mortgage NOC, and a sale or tenancy without the relevant one puts the allotment at risk.",
     },
   ],
   interiors: [

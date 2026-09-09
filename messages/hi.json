@@ -37,6 +37,8 @@
     "investmentAdvisoryBody": "Guidance for investors buying in Borivali, Kandivali and Malad to hold rather than to live in: micro market assessment, rental yield arithmetic on the actual flat, title checks and negotiation.",
     "commercialTitle": "Commercial & plots",
     "commercialBody": "Shops, showrooms, office space and plots for sale or rent in Borivali, Kandivali and Malad, for businesses that need premises here and investors buying a unit to let.",
+    "mhadaTitle": "MHADA paperwork",
+    "mhadaBody": "Transfer of tenement, no objection certificates for sale, rent and mortgage, transfer to heirs and regularisation for MHADA flats in Borivali, Kandivali and Malad.",
     "interiorsTitle": "इंटीरियर डिज़ाइन और सिविल वर्क",
     "interiorsBody": "बोरिवली, कांदिवली और मलाड में स्थानीय इंटीरियर डिज़ाइनर और सिविल वर्क टीम, फिट आउट, रेनोवेशन और सिविल वर्क ताकि आपका घर रहने के लिए तैयार हो जाए।"
   },
@@ -69,6 +71,11 @@
       "Tell us the business or the investment, and the stretch you have in mind",
       "We shortlist units on approved use, frontage and what they let for today",
       "Site visits, society and title checks, then registration"
+    ],
+    "mhadaPaperwork": [
+      "Tell us the flat, the scheme and what you need: sale, tenant, loan, heir or regularisation",
+      "We assemble the complete file against the Board's own document list",
+      "Submitted to the Estate Manager, followed up until it is decided"
     ],
     "interiors": [
       "अपनी जगह, समयसीमा और बजट बताएं",
@@ -138,6 +145,7 @@
     "intentRent": "किराया",
     "intentNewProject": "नया प्रोजेक्ट",
     "intentInvest": "Property investment",
+    "intentMhada": "MHADA paperwork",
     "submit": "व्हाट्सएप पर पूछताछ भेजें",
     "disclaimer": "आपकी जानकारी भरकर व्हाट्सएप खोलता है। कभी कोई स्पैम नहीं।",
     "whatsappGreeting": "नमस्ते श्री गिरिराज, मुझे पूछताछ करनी है।",

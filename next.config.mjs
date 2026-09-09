@@ -9,6 +9,7 @@ const SERVICE_SLUGS = [
   "investment-advisory",
   "commercial-plots",
   "interiors",
+  "mhada-paperwork",
 ];
 
 /** @type {import('next').NextConfig} */

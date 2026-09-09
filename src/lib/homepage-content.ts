@@ -147,12 +147,12 @@ export type ServicePanel = {
  * chosen.
  *
  * The panel shape does the choosing as much as the subject does. The track
- * renders one open panel of roughly square proportion and five vertical strips
+ * renders one open panel of roughly square proportion and six vertical strips
  * about a fifth as wide, so an image has to survive being cut to a narrow
  * centre slice. That is why the panels are the simpler, more vertical half of
  * each pair, and the page heroes carry the wider scenes.
  *
- * All six are 1100 by 1375, four to five, which gives the open panel width to
+ * All seven are 1100 by 1375, four to five, which gives the open panel width to
  * show and the strips height to keep. Pexels, 8 September 2026.
  *
  * Resale took four attempts. A close crop of a facade read as a wall, blocks
@@ -210,6 +210,14 @@ export const SERVICE_PANELS: ServicePanel[] = [
     image: "/sections/svc-commercial.jpg",
     lead: "Shops, offices and the rare genuine plot.",
     body: "Commercial space across Borivali, Kandivali and Malad, for businesses that need premises here and investors buying a unit to let. Approved use, society rules and frontage checked before you commit.",
+  },
+  {
+    n: "07",
+    slug: "mhada-paperwork",
+    title: "MHADA paperwork",
+    image: "/sections/svc-mhada.jpg",
+    lead: "Transfer, NOC, heirs, regularisation.",
+    body: "The permissions a MHADA flat needs before it can be sold, let, mortgaged or passed to an heir, taken from the Board's own rules and filed as one complete application. The mistake we exist to prevent is a transfer made without permission.",
   },
 ];
 

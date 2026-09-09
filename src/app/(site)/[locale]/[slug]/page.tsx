@@ -29,7 +29,7 @@ type Page = {
 // "studio" no longer needs to be listed here: it now lives outside the
 // [locale] segment entirely (see src/app/studio/layout.tsx), so a request
 // for /studio never reaches this route in the first place.
-// Section prefixes the flexible route does not own, plus the six service
+// Section prefixes the flexible route does not own, plus the seven service
 // slugs. The service pages are `page` documents but they are rendered by
 // /services/[slug], so without this they would ALSO resolve at /resale-flats
 // and every other bare slug, giving the same content two self canonicalising
