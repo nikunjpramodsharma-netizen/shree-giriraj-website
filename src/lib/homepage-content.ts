@@ -205,11 +205,11 @@ export const SERVICE_PANELS: ServicePanel[] = [
   },
   {
     n: "06",
-    slug: "shops-plots",
-    title: "Shops and plots",
-    image: "/sections/svc-shops.jpg",
-    lead: "Quietest service, most repeat business.",
-    body: "Commercial shops, offices and plots for investors and business owners across the western suburbs. Mostly people we have already sold a home to.",
+    slug: "commercial-plots",
+    title: "Commercial and plots",
+    image: "/sections/svc-commercial.jpg",
+    lead: "Shops, offices and the rare genuine plot.",
+    body: "Commercial space across Borivali, Kandivali and Malad, for businesses that need premises here and investors buying a unit to let. Approved use, society rules and frontage checked before you commit.",
   },
 ];
 

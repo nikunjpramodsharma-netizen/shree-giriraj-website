@@ -2,7 +2,7 @@
 
 > A family run property firm in Borivali West, Mumbai, operating since 1996.
 > We handle resale flats, rentals, new project bookings, property investment
-> advisory, commercial shops and plots, and interior and civil work, across
+> advisory, commercial property and plots, and interior and civil work, across
 > Borivali West, Borivali East, Kandivali and Malad.
 > MahaRERA agent registration A51800005726.
 
@@ -23,7 +23,7 @@ buildings, societies and pockets in three suburbs of Mumbai's western suburbs.
 - /services/rentals: tenants and owners, leave and licence agreements
 - /services/new-project-bookings: early access through direct developer relationships
 - /services/investment-advisory: for investors buying here to hold rather than to live in
-- /services/shops-plots: commercial shops, offices and plots
+- /services/commercial-plots: shops, showrooms, office space and plots
 - /services/interiors: fit outs and civil work after possession
 
 ## Areas served

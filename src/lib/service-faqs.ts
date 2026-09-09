@@ -131,14 +131,18 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
       a: "They are different risks rather than one being better. Ready possession earns rent immediately and you can see exactly what you are buying. Under construction ties up capital with no income until handover and carries delivery risk, which is why the MahaRERA registration and the developer's completion record matter more than the brochure.",
     },
   ],
-  "shops-plots": [
+  "commercial-plots": [
     {
-      q: "What should I check before buying a shop in a residential building?",
-      a: "Whether the unit is sanctioned for commercial use, whether the society's bye laws and the committee permit the kind of business you intend, and what the society's no objection will cost. Then the frontage and the footfall on that stretch, which is the part a portal listing cannot tell you. Registration under the Maharashtra Shops and Establishments Act follows the purchase.",
+      q: "Can residential property be used as commercial in Mumbai?",
+      a: "Generally no. A flat is sanctioned for residential use, and running a shop or a general office from it is a change of use the building was not approved for. Certain professionals may use part of their own residence for their practice, subject to the society's bye laws, but that does not extend to retail or to a business bringing customers through a residential lobby.",
+    },
+    {
+      q: "How much is GST on commercial property in Mumbai?",
+      a: "Renting commercial premises is a taxable supply of services, charged at eighteen percent where the landlord is liable to be registered. A completed commercial unit sold after its completion certificate does not attract GST on the sale; an under construction one does. Ask whether a quoted rent is inclusive or exclusive before you compare two units.",
     },
     {
       q: "Is stamp duty different on commercial property?",
-      a: "The base rate is the same, but the 1 percent concession for a woman buyer applies only to residential property, so a shop or office pays the full rate whoever buys it. Duty is still on the higher of the agreed price and the ready reckoner value, and reckoner rates for commercial units are set separately from residential ones and usually run higher.",
+      a: "The base rate is the same, but the 1 percent concession for a woman buyer applies only to residential property, so a shop or office pays the full rate whoever buys it. Duty is still charged on the agreement value or the ready reckoner value, whichever is higher.",
       href: "/tools/stamp-duty-calculator-mumbai",
       hrefLabel: "Stamp duty and registration calculator",
     },
@@ -150,12 +154,7 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
       q: "Are there actually plots for sale in Borivali, Kandivali or Malad?",
       a: "Rarely, and rarely small. Most of what is called a plot in these suburbs is an old bungalow plot, a society plot heading for redevelopment, or land with a development potential that depends on its reservation in the development plan. We will tell you what genuinely exists at any given time rather than list something that does not.",
     },
-    {
-      q: "What decides what a plot is worth?",
-      a: "Its development potential more than its area: the floor space index that applies, any transferable development rights it can absorb, what the development plan reserves it for, and whether the title is clean enough for a lender. Two plots of the same size on the same road can differ several times over on those four points.",
-    },
   ],
-
   interiors: [
     {
       q: "How much does an interior designer charge in Mumbai?",

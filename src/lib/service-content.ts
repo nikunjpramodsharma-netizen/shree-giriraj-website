@@ -11,7 +11,7 @@ import { parseBlocks, type Block } from "@/lib/markdown";
  * the route calls notFound() when no document matches, so a code-only service
  * would have been a 404 no matter what was written around it.
  *
- * The trade is explicit. Investment Advisory is not editable in the Studio
+ * The trade is explicit. Investment Advisory and Commercial are not editable in the Studio
  * until somebody creates the document there and this entry is deleted. In
  * exchange the copy is version controlled, reviewable in a diff, and testable,
  * which for a page making claims about money is arguably the better half of
@@ -148,6 +148,148 @@ legal advice. Consider your own circumstances and take independent professional
 advice before committing capital.
 `.trim();
 
+const COMMERCIAL_PLOTS_BODY = `
+## Commercial property in Borivali, Kandivali and Malad
+
+Shree Giriraj Real Estate is a MahaRERA registered estate agent, registration
+number A51800005726, working from Shop No 11, Clover Grove CHS, Chikoowadi,
+Borivali West, Mumbai 400092. The firm has worked in real estate since 1996
+and has operated from this office since 2005.
+
+This service covers commercial space in three suburbs of the Mumbai western
+suburbs: Borivali West and East, Kandivali West and East, and Malad West and
+East. That means shops, showrooms, office units and, where they genuinely
+exist, plots. It is for two kinds of client: a business that needs premises
+here, and an investor buying a commercial unit to let.
+
+Commercial property moves differently from a flat. Footfall, frontage,
+approved use and the society's position on trade all matter more than the
+square footage does, and none of them appear in a listing. Knowing which
+stretch of which road works for which kind of business is the whole of what we
+add.
+
+## What is included
+
+- **Shops for sale and for rent** in Borivali West, Kandivali West and Malad
+  West, and on the east side of each, matched to the footfall and frontage the
+  business actually needs
+- **Office space** in Borivali West and Malad West, from single units to small
+  floors, for rent or purchase
+- **Showrooms and larger frontage units** on the main trading roads
+- **Plots**, on the rare occasions a genuine one comes up, for investors and
+  small builders
+- Checking the approved use, the society's commercial rules and the no
+  objection position before you commit
+- Leave and licence or sale deed, negotiated and taken through registration
+
+## Where commercial space works in these suburbs
+
+Each suburb has a small number of stretches where commercial space genuinely
+trades, and a great deal of frontage where it does not. In Borivali West the
+trading spine runs through the station belt and along the main roads out of
+it, and the Link Road side is a different, quieter proposition. In Kandivali
+the established trade sits off M.G. Road and along the Link Road corridor. In
+Malad West the office demand clusters near the Mindspace end and the Link Road,
+and the retail demand sits on a different set of streets altogether.
+
+A unit two hundred metres off the right stretch is a different asset from one
+on it, at a similar rate per square foot. That is the thing to get right first.
+
+## Shop for rent in Borivali West, Kandivali West or Malad West
+
+Most of the enquiries we take for commercial space are for a shop for rent in
+Borivali West, Kandivali West or Malad West, and most of them arrive with a
+budget and a trade but not a stretch. The stretch is the decision. A shop for
+rent on the wrong road, at the same rent, is a business that closes in eighteen
+months. Tell us the trade and we will tell you which two or three stretches
+actually see that trade's customers, and what is available on them this month.
+
+Office space in Borivali West and Malad West works the same way. Proximity to
+the station, to parking and to the kind of client the office serves matters
+more than the floor plate, and a first floor unit above the right parade is
+often a better office than a bigger one on a quieter road.
+
+## Can residential property be used as commercial in Mumbai?
+
+Generally no, and the exceptions are narrow. A flat is sanctioned for
+residential use, and running a shop or a general office from it is a change of
+use the building was not approved for. Certain professionals have long been
+permitted to use part of their own residence for their practice, subject to the
+society's bye laws and to limits on how much of the flat is used, but that does
+not extend to retail or to a business that brings customers and stock through a
+residential lobby.
+
+If you need commercial premises, buy or rent a unit that is sanctioned as one.
+It is cheaper than discovering the restriction after the fit out.
+
+## How much is GST on commercial property in Mumbai?
+
+Renting commercial premises is a taxable supply of services under GST, charged
+at the rate applicable to renting of commercial property, which is currently
+eighteen percent, where the landlord is liable to be registered. Residential
+letting to an individual for use as a residence is treated differently. On a
+purchase, a completed commercial unit sold after its completion certificate
+does not attract GST; an under construction one does.
+
+The practical point: ask whether a rent quoted to you is inclusive or exclusive
+of GST before you compare two units, because the difference is material.
+Confirm your own position with an accountant, since it turns on the
+registration status of both parties.
+
+## What is the price range for commercial property in Mumbai?
+
+We do not publish rates, and a Mumbai wide range would be meaningless for a
+unit in Kandivali anyway. What we will tell you is what a specific stretch is
+trading at this month, and why the unit you are looking at sits where it does
+in that range: the frontage, the floor, the approved use, the parade around it
+and what it is letting for today.
+
+## Is it wise to invest in commercial property?
+
+It is a different investment from a flat rather than a better or worse one. The
+income profile is stronger: leases run longer, deposits are larger, and the
+tenant commonly carries the outgoings. Against that, vacancies are longer when
+they happen, lending is on tighter terms, and the pool of buyers when you want
+to exit is far smaller than for a two bedroom flat.
+
+If you are buying to let rather than to occupy, our
+[property investment advisory](/services/investment-advisory) covers the
+arithmetic, and the
+[rental yield calculator](/tools/rental-yield-calculator) will show you the
+net figure before you go to a viewing.
+
+## What we check before you commit
+
+1. **The approved use.** What the unit is sanctioned for is a matter of record,
+   not of what the last occupant did in it.
+2. **The society's position.** Some societies with ground floor commercial
+   units restrict trades, hours, signage and cooking. That restricts your
+   tenant pool or your own business.
+3. **Frontage and access.** Where the shutter faces, how visible it is from the
+   road, whether a delivery vehicle can actually stop.
+4. **The parade around it.** A unit beside trades that pull traffic is a
+   different asset from the same unit beside three vacant shutters.
+5. **Title and outgoings.** The same checks as a flat, plus who has been paying
+   the property tax and on what assessment.
+6. **What it lets for today.** Not what it could let for. What a tenant is
+   paying, or would pay, this month.
+
+## A note on plots
+
+Genuine plots are rare in these suburbs and rarely small. Most of what is
+called a plot is an old bungalow plot, a society plot heading for
+redevelopment, or land whose development potential depends on its reservation
+in the development plan. We will tell you what actually exists when you ask
+rather than list something that does not.
+
+---
+
+**A note on risk.** Commercial property carries risk, including the risk of
+capital loss and of extended vacancy. Property is illiquid and transaction
+costs are high. Nothing on this page is a guarantee of rent, occupancy or
+resale value, and nothing on this page is investment, tax or legal advice.
+`.trim();
+
 export const REPO_SERVICES: Record<string, RepoService> = {
   "investment-advisory": {
     title: "Property Investment Advisory in Borivali, Kandivali & Malad",
@@ -157,6 +299,15 @@ export const REPO_SERVICES: Record<string, RepoService> = {
     seoDescription:
       "Property investment advisory in Borivali, Kandivali and Malad by Shree Giriraj Real Estate, MahaRERA agent A51800005726. Micro market assessment, rental yield arithmetic and title checks for investors in the Mumbai western suburbs.",
     body: INVESTMENT_ADVISORY_BODY,
+  },
+  "commercial-plots": {
+    title: "Commercial Property in Borivali, Kandivali & Malad",
+    heroHeading: "Commercial property in Borivali, Kandivali and Malad",
+    heroSubheading:
+      "Shops, showrooms, office space and the occasional genuine plot, for sale or rent across the western suburbs. For businesses that need premises here and investors buying a unit to let.",
+    seoDescription:
+      "Commercial property in Borivali, Kandivali and Malad: shops for rent and sale, office space and plots, through Shree Giriraj Real Estate, MahaRERA agent A51800005726. Approved use, society rules and frontage checked before you commit.",
+    body: COMMERCIAL_PLOTS_BODY,
   },
 };
 

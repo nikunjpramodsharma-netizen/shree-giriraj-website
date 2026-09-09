@@ -261,7 +261,7 @@ export default async function HomePage({
     { slug: "rentals", title: tServices("rentalsTitle"), body: tServices("rentalsBody") },
     { slug: "new-project-bookings", title: tServices("newProjectTitle"), body: tServices("newProjectBody") },
     { slug: "investment-advisory", title: tServices("investmentAdvisoryTitle"), body: tServices("investmentAdvisoryBody") },
-    { slug: "shops-plots", title: tServices("shopsTitle"), body: tServices("shopsBody") },
+    { slug: "commercial-plots", title: tServices("commercialTitle"), body: tServices("commercialBody") },
     { slug: "interiors", title: tServices("interiorsTitle"), body: tServices("interiorsBody") },
   ];
 

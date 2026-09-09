@@ -152,6 +152,22 @@ export function sitemapAlternates(
   return { languages };
 }
 
+/**
+ * Sections that exist in English only. A link to one of these from a page
+ * rendered under /hi, /mr or /gu must NOT carry the locale prefix, because
+ * /hi/tools/... is not a route and returns 404.
+ *
+ * Found the hard way: the repo backed service pages render in all four
+ * locales, their markdown bodies link to the rental yield calculator, and the
+ * locale aware Link dutifully produced three dead URLs. The crawler caught it,
+ * not the diff.
+ */
+export const ENGLISH_ONLY_PREFIXES = ["/tools", "/guides", "/blog", "/areas", "/about", "/contact"] as const;
+
+export function isEnglishOnlyPath(path: string): boolean {
+  return ENGLISH_ONLY_PREFIXES.some((p) => path === p || path.startsWith(p + "/"));
+}
+
 /** Routes that must never be indexed. Kept in one place so robots and sitemap agree. */
 export const NOINDEX_PREFIXES = ["/studio", "/lp/", "/api/"] as const;
 
@@ -161,6 +177,6 @@ export const SERVICE_SLUGS = [
   "rentals",
   "new-project-bookings",
   "investment-advisory",
-  "shops-plots",
+  "commercial-plots",
   "interiors",
 ] as const;

@@ -13,7 +13,7 @@ note: >
   Primary keyword measured at 880 a month in India, low competition, CPC around
   80 paise, on 8 September 2026 via DataForSEO. That is more than three times
   the volume of any residential investment term measured, and the firm already
-  handles commercial through the shops and plots service, so this is the
+  handles commercial through the commercial and plots service, so this is the
   strongest commercial angle in the cluster. Publishes no yield figures.
 answer: >
   A commercial property is let under different rules from a flat. Leases run
@@ -38,7 +38,7 @@ relatedFaqs:
 readNext:
   - rental-yield-mumbai
   - rent-deposit-months-western-suburbs
-  - services/shops-plots
+  - services/commercial-plots
 ---
 
 ## The short answer
@@ -123,4 +123,4 @@ There are, and availability moves constantly, so we will tell you what genuinely
 
 Commercial is the part of this market where local knowledge changes the answer most, because footfall does not appear in a price per square foot and cannot be checked from a listing. Stand outside the unit at the hours the trade would actually run.
 
-If you want somebody who knows these parades to look at a specific unit with you, that is what our [shops and plots](/services/shops-plots) service and our [property investment advisory](/services/investment-advisory) cover. Work the income through the [rental yield calculator](/tools/rental-yield-calculator) first so you arrive with the arithmetic already done.
+If you want somebody who knows these parades to look at a specific unit with you, that is what our [commercial and plots](/services/commercial-plots) service and our [property investment advisory](/services/investment-advisory) cover. Work the income through the [rental yield calculator](/tools/rental-yield-calculator) first so you arrive with the arithmetic already done.

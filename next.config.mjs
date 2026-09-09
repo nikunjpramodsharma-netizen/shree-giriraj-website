@@ -7,7 +7,7 @@ const SERVICE_SLUGS = [
   "rentals",
   "new-project-bookings",
   "investment-advisory",
-  "shops-plots",
+  "commercial-plots",
   "interiors",
 ];
 
@@ -40,6 +40,20 @@ const nextConfig = {
       // deployment. The bare slug /redevelopment is caught by the group rule
       // above only while the slug is in SERVICE_SLUGS, which it no longer is,
       // so both forms are handled explicitly here.
+      // Shops and plots became commercial and plots on 9 September 2026, with
+      // the page rewritten around commercial space rather than renamed.
+      { source: "/shops-plots", destination: "/services/commercial-plots", permanent: true },
+      { source: "/services/shops-plots", destination: "/services/commercial-plots", permanent: true },
+      {
+        source: "/:locale(hi|mr|gu)/shops-plots",
+        destination: "/:locale/services/commercial-plots",
+        permanent: true,
+      },
+      {
+        source: "/:locale(hi|mr|gu)/services/shops-plots",
+        destination: "/:locale/services/commercial-plots",
+        permanent: true,
+      },
       { source: "/redevelopment", destination: "/services/investment-advisory", permanent: true },
       { source: "/services/redevelopment", destination: "/services/investment-advisory", permanent: true },
       {

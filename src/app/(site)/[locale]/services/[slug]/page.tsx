@@ -28,7 +28,7 @@ const SERVICE_SLUGS = [
   "rentals",
   "new-project-bookings",
   "investment-advisory",
-  "shops-plots",
+  "commercial-plots",
   "interiors",
 ] as const;
 
@@ -38,7 +38,7 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
   rentals: "rentals",
   "new-project-bookings": "newProjectBookings",
   "investment-advisory": "investmentAdvisory",
-  "shops-plots": "shopsPlots",
+  "commercial-plots": "commercialPlots",
   interiors: "interiors",
 };
 
@@ -94,7 +94,7 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
   rentals: "/services/hero-rentals.jpg",
   "new-project-bookings": "/services/hero-new-projects.jpg",
   "investment-advisory": "/services/hero-investment.jpg",
-  "shops-plots": "/services/hero-shops.jpg",
+  "commercial-plots": "/services/hero-commercial.jpg",
   interiors: "/services/hero-interiors.jpg",
 };
 
@@ -104,7 +104,7 @@ const HERO_ALT: Record<(typeof SERVICE_SLUGS)[number], string> = {
   rentals: "An empty flat with the balcony door open to the light",
   "new-project-bookings": "A tall residential building in Mumbai against a clear sky",
   "investment-advisory": "Mumbai residential towers lit up at dusk, seen from above",
-  "shops-plots": "Shoppers walking a covered shopping arcade lined with glass shopfronts",
+  "commercial-plots": "Shoppers walking a covered shopping arcade lined with glass shopfronts",
   interiors: "A furnished living room in a Mumbai flat",
 };
 
@@ -172,7 +172,7 @@ const SERVICE_INTENT: Record<
   rentals: "intentRent",
   "new-project-bookings": "intentNewProject",
   "investment-advisory": "intentInvest",
-  "shops-plots": undefined,
+  "commercial-plots": undefined,
   interiors: undefined,
 };
 

@@ -110,7 +110,7 @@ export const ABOUT_FAQS: AboutFaq[] = [
   },
   {
     q: "What does Shree Giriraj do?",
-    a: "Six things: resale flats, rentals, new project bookings, property investment advisory, shops and plots, and interior and civil work. Resale is the main business. The firm handles a transaction end to end, from shortlisting and site visits through negotiation, documentation and registration.",
+    a: "Six things: resale flats, rentals, new project bookings, property investment advisory, commercial property and plots, and interior and civil work. Resale is the main business. The firm handles a transaction end to end, from shortlisting and site visits through negotiation, documentation and registration.",
   },
   {
     q: "Where is the office?",

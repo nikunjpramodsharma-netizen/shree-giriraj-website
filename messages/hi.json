@@ -35,8 +35,8 @@
     "newProjectBody": "बोरिवली, कांदिवली और मलाड में नए और आगामी रेजिडेंशियल प्रोजेक्ट्स तक हमारे सीधे बिल्डर नेटवर्क के ज़रिए जल्दी पहुंच, अक्सर उनके ओपन मार्केट में आने से पहले ही।",
     "investmentAdvisoryTitle": "Property investment advisory",
     "investmentAdvisoryBody": "Guidance for investors buying in Borivali, Kandivali and Malad to hold rather than to live in: micro market assessment, rental yield arithmetic on the actual flat, title checks and negotiation.",
-    "shopsTitle": "दुकान और प्लॉट",
-    "shopsBody": "बोरिवली, कांदिवली और मलाड में बिक्री या किराए के लिए कमर्शियल दुकानें, प्लॉट और ऑफिस स्पेस, उन निवेशकों और व्यवसाय मालिकों के लिए जो उपनगरों में विस्तार करना चाहते हैं।",
+    "commercialTitle": "Commercial & plots",
+    "commercialBody": "Shops, showrooms, office space and plots for sale or rent in Borivali, Kandivali and Malad, for businesses that need premises here and investors buying a unit to let.",
     "interiorsTitle": "इंटीरियर डिज़ाइन और सिविल वर्क",
     "interiorsBody": "बोरिवली, कांदिवली और मलाड में स्थानीय इंटीरियर डिज़ाइनर और सिविल वर्क टीम, फिट आउट, रेनोवेशन और सिविल वर्क ताकि आपका घर रहने के लिए तैयार हो जाए।"
   },
@@ -65,10 +65,10 @@
       "We assess the micro market and the specific building, and do the yield arithmetic",
       "Title and society checks, negotiation, documentation and registration"
     ],
-    "shopsPlots": [
-      "अपनी बिज़नेस या निवेश की ज़रूरत बताएं",
-      "हम उपयुक्त दुकानें, प्लॉट और ऑफिस स्पेस शॉर्टलिस्ट करते हैं",
-      "साइट विज़िट, ड्यू डिलिजेंस और रजिस्ट्रेशन"
+    "commercialPlots": [
+      "Tell us the business or the investment, and the stretch you have in mind",
+      "We shortlist units on approved use, frontage and what they let for today",
+      "Site visits, society and title checks, then registration"
     ],
     "interiors": [
       "अपनी जगह, समयसीमा और बजट बताएं",

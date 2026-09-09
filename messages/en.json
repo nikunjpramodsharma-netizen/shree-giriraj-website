@@ -35,8 +35,8 @@
     "newProjectBody": "Early access to new and upcoming residential projects across Borivali, Kandivali and Malad through our direct builder network, often before they reach the open market.",
     "investmentAdvisoryTitle": "Property investment advisory",
     "investmentAdvisoryBody": "Guidance for investors buying in Borivali, Kandivali and Malad to hold rather than to live in: micro market assessment, rental yield arithmetic on the actual flat, title checks and negotiation.",
-    "shopsTitle": "Shops & plots",
-    "shopsBody": "Commercial shops, plots and office space for sale or rent in Borivali, Kandivali and Malad, for investors and business owners looking to expand in the suburbs.",
+    "commercialTitle": "Commercial & plots",
+    "commercialBody": "Shops, showrooms, office space and plots for sale or rent in Borivali, Kandivali and Malad, for businesses that need premises here and investors buying a unit to let.",
     "interiorsTitle": "Interior design & civil work",
     "interiorsBody": "Local interior designers and a civil work team in Borivali, Kandivali and Malad, fit outs, renovation and civil work to get your home move in ready."
   },
@@ -65,10 +65,10 @@
       "We assess the micro market and the specific building, and do the yield arithmetic",
       "Title and society checks, negotiation, documentation and registration"
     ],
-    "shopsPlots": [
-      "Share your business or investment requirement",
-      "We shortlist shops, plots and office space that fit",
-      "Site visits, due diligence and registration"
+    "commercialPlots": [
+      "Tell us the business or the investment, and the stretch you have in mind",
+      "We shortlist units on approved use, frontage and what they let for today",
+      "Site visits, society and title checks, then registration"
     ],
     "interiors": [
       "Share your space, timeline and budget",
