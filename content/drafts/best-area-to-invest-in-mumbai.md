@@ -125,4 +125,4 @@ No. It means the project is registered and its declared details, including the c
 
 Real estate investment carries risk, including the risk of capital loss. Property is illiquid, transaction costs are high, and rental income is not guaranteed. Nothing here is a guarantee of return, appreciation or rental income, and nothing here is investment, tax or legal advice. Past performance of any market or building does not indicate future results.
 
-If you want the six questions above answered for a specific property in Borivali, Kandivali or Malad, that is what our [property investment advisory](/services/investment-advisory) does.
+Run the six questions on a specific flat and the answer usually becomes clear. If you would like them answered for a property in Borivali, Kandivali or Malad, that is what our [property investment advisory](/services/investment-advisory) does, and the first conversation is free.

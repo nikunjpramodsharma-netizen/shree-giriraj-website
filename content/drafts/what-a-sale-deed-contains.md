@@ -125,4 +125,4 @@ Title deed is the general name for whatever document proves ownership. A sale de
 
 ## Before you sign
 
-Read the property description and the title covenant yourself, out loud if it helps. Those two clauses are the ones you will care about if anything ever goes wrong.
+Read the property description and the title covenant yourself. Those two clauses are the ones that protect you, and understanding them is what makes the rest of the deed hold together. If you would like us to read a draft with you before you sign, for a flat in Borivali, Kandivali or Malad, send it across.

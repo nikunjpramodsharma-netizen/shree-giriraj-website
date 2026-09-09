@@ -115,4 +115,4 @@ Not in their own name. The Board issues the NOC to the allottee on its record. I
 
 ## Before you hand over the keys
 
-Get the NOC, then register the agreement, then hand over. If you want somebody to take the application through the Estate Manager's office and to draft the licence so it sits inside what the NOC allows, that is part of our [MHADA paperwork service](/services/mhada-paperwork). For what a deposit and a term look like in this belt, read [how many months of deposit is normal in the western suburbs](/blog/rent-deposit-months-western-suburbs).
+Get the NOC, register the agreement, then hand over the keys, and you let with a clear record. If you would like us to take the application through the Estate Manager's office and draft the licence to sit inside it, that is part of our [MHADA paperwork service](/services/mhada-paperwork). For what a deposit and a term look like in this belt, read [how many months of deposit is normal in the western suburbs](/blog/rent-deposit-months-western-suburbs).

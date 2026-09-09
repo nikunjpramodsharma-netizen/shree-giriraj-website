@@ -109,4 +109,4 @@ Yes. Sale, gift, mortgage, lease and partition all generate an Index 2.
 
 ## If you are selling
 
-Have it ready before you list. A buyer who asks for it and waits three days starts wondering what else is not in order, and that is an impression you do not get to undo.
+Have it ready before you list. A seller who can produce the Index 2 on the day it is asked for is a seller a buyer trusts, and trust is what shortens a sale. If you are selling in Borivali, Kandivali or Malad and want the file in order before the first viewing, that is exactly the work we do.

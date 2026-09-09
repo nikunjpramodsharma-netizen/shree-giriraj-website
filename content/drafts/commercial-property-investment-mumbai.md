@@ -123,4 +123,4 @@ There are, and availability moves constantly, so we will tell you what genuinely
 
 Commercial is the part of this market where local knowledge changes the answer most, because footfall does not appear in a price per square foot and cannot be checked from a listing. Stand outside the unit at the hours the trade would actually run.
 
-If you want somebody who knows these parades to look at a specific unit with you, that is what our [commercial and plots](/services/commercial-plots) service and our [property investment advisory](/services/investment-advisory) cover. Work the income through the [rental yield calculator](/tools/rental-yield-calculator) first so you arrive with the arithmetic already done.
+Stand outside the unit at the hours the trade would run, and work the income through the [rental yield calculator](/tools/rental-yield-calculator) before you go. If you would like somebody who knows these parades to look at a unit with you, our [commercial and plots](/services/commercial-plots) service and our [property investment advisory](/services/investment-advisory) do exactly that, without obligation.

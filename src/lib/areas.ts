@@ -104,7 +104,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
     metaDescription:
       "New launches, family homes and the towers off M.G. Road and Link Road. What changes with the floor band, and what to ask before booking.",
     answer:
-      "Kandivali has the strongest new build activity of the three suburbs we cover, which makes it the easiest place to buy well and the easiest place to overpay. In a tall tower the floor band moves the price more than the carpet area does, so the number worth negotiating is not always the one on the brochure.",
+      "Kandivali has the strongest new build activity of the three suburbs we cover, which makes it the best place in the belt to buy well, provided the floor is chosen with care. In a tall tower the floor band moves the price more than the carpet area does, so the number worth negotiating is not always the one on the brochure.",
     intro: [
       "Kandivali is where most of the new launch activity in our patch sits, including Jaswanti Jewel off Link Road. New build buying is a different exercise from resale: you are buying a drawing and a promise, and the checks are different ones.",
     ],

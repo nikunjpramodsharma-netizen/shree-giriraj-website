@@ -37,115 +37,72 @@ export type RepoService = {
 };
 
 const INVESTMENT_ADVISORY_BODY = `
-## Is real estate a good investment in Mumbai?
-
-It can be, and it is not automatic. A Mumbai flat produces two returns: rent
-while you hold it, and whatever the resale market gives you when you sell.
-The rent is measurable before you buy. The resale is not, and anybody who
-tells you what a building will be worth in ten years is guessing.
-
-What decides the outcome is usually not the city. It is the specific building,
-the specific pocket, and the price you paid on the day. That is the part local
-knowledge changes, and it is the part we work on.
-
-## What Shree Giriraj Investment Advisory covers
+## Property investment advisory in Borivali, Kandivali and Malad
 
 Shree Giriraj Real Estate is a MahaRERA registered estate agent, registration
 number A51800005726, working from Shop No 11, Clover Grove CHS, Chikoowadi,
-Borivali West, Mumbai 400092. The firm has worked in real estate since 1996
-and has operated from this office since 2005.
+Borivali West, Mumbai 400092. We have worked in real estate since 1996 and
+from this office since 2005.
 
 Investment advisory is for people buying property here to hold rather than to
-live in. It covers four suburbs of the Mumbai western suburbs: Borivali West,
-Borivali East, Kandivali and Malad. It does not cover the rest of Mumbai,
-because pocket level knowledge is the whole of what makes the service worth
-anything and we do not have it everywhere.
+live in. It covers Borivali West and East, Kandivali and Malad, and nothing
+else, because pocket level knowledge is the whole of what makes the service
+worth having. Thirty years of walking these buildings is what you are hiring.
 
-What the service includes:
+## What you get
 
-- Reading the micro market you are considering, pocket by pocket rather than
-  suburb by suburb
-- Assessing a specific building on the things that move a resale price later:
-  age, society condition, conveyance status, water, parking, the redevelopment
-  question, and what the lane is like after dark
-- Working out the rent the flat can realistically command today, and what that
-  is as a yield on the price being asked
-- Checking the title, the encumbrance position and the society paperwork
-  before money moves
-- Negotiation, documentation and registration, handled end to end
-- Telling you when the answer is that this particular flat is not worth buying
+- A reading of the micro market you are considering, pocket by pocket, so
+  you know why two buildings at the same rate behave differently
+- An assessment of the specific building on the things that hold resale
+  value: age, society, conveyance, water, parking, and the lane itself
+- The rent the flat can realistically command today, and what that is as a
+  yield on the price being asked, worked on the real property rather than
+  quoted for the suburb
+- Title, encumbrance and society paperwork checked before money moves
+- Negotiation, documentation and registration handled end to end
+- A straight answer. If a particular flat does not stack up, we say so and
+  find you one that does
+
+## Is real estate a good investment in Mumbai?
+
+It can be a very good one, and the western suburbs have rewarded patient
+owners for decades. A flat here produces two returns: rent while you hold
+it, and what the resale market gives you when you sell. The rent you can
+measure before you buy, and we do. The resale depends on the building and the
+pocket more than the city, which is exactly where local knowledge earns its
+keep.
 
 ## What return should an investor expect?
 
-We do not publish an expected return, and you should be careful with anybody
-who does. Yields and appreciation vary by building, floor, pocket and the price
-you actually negotiate, and a number quoted for "Borivali" as a whole tells you
-nothing about the flat in front of you.
-
-What we will do is the arithmetic on the specific property: the achievable rent,
-the price, the outgoings, and therefore the gross yield you would be buying at
-today. That is a fact about a real flat rather than a forecast, and it is the
-number an investment decision should actually rest on.
-
-## What is the 2% rule for properties?
-
-The 2% rule is an American rule of thumb suggesting a rental property should
-produce monthly rent of about 2% of its purchase price. It does not translate
-to Mumbai. Indian residential yields are structurally far lower than that,
-because capital values here are high relative to rents, and applying the rule
-to a Borivali flat would rule out essentially every property in the city.
-
-It is worth knowing only so you can recognise it when an overseas article
-quotes it at you. Judge a flat here on its own arithmetic instead.
+We do the arithmetic on the flat in front of you rather than publishing a
+number for the suburb, because the achievable rent, the outgoings and the
+price you actually negotiate decide the answer, and they differ from one
+building to the next. You leave with the gross and net yield on the specific
+property, and with the [rental yield calculator](/tools/rental-yield-calculator)
+you can test any other flat the same way.
 
 ## Why local knowledge decides the outcome here
 
-Borivali, Kandivali and Malad are not single markets. Borivali splits between
-the station belt, which is older and denser and better connected, and the Link
-Road side, which is newer and quieter. Two buildings a few hundred metres apart
-can trade at similar prices for completely different reasons, and rent very
-differently.
-
-The things that separate them are not on any listing site. Which buildings have
-water pressure problems on the upper floors. Which societies actually approve
-interior work, and which will refuse a tenant. Which plots have a conveyance
-problem that will surface the moment redevelopment is discussed. Which lanes a
-family will not rent in. None of that appears in a price per square foot, and
-all of it shows up in what you can charge and what you can sell for.
-
-## What can go wrong
-
-The failure modes we see most often, in order:
-
-1. **Buying the brochure rather than the building.** The carpet area, the
-   parking allotment and the amenities as promised are not always the ones the
-   society will actually give you.
-2. **Buying into a title or conveyance problem.** It does not stop the purchase.
-   It stops the sale, years later, when you want your money back.
-3. **Overpaying on a pocket comparison.** Paying a Link Road price for a station
-   belt flat, or the reverse, because the per square foot number looked similar.
-4. **Assuming rent.** A flat that a family will not take, or a society that will
-   not permit the tenant you have in mind, does not earn what the spreadsheet said.
-5. **No exit plan.** Resale liquidity varies sharply between buildings here.
-   Some flats sell in weeks and some sit for a year.
+Borivali splits between the station belt, older and better connected, and
+the Link Road side, newer and quieter. Kandivali has the widest choice of new
+stock in the belt. Malad has the Mindspace corridor keeping rental demand
+steady. Inside each, the things that separate a good buy from an ordinary one
+are not on any listing: which buildings have strong water on the upper
+floors, which societies welcome tenants, which lanes families choose. We know
+them because we have sold in these buildings, more than once.
 
 ## How to start
 
-Tell us the budget, whether you are buying for rent or for resale, and how long
-you expect to hold. We will tell you which of the four suburbs fits that, what
-is realistically available, and what the arithmetic looks like on anything you
-are considering. If the honest answer is that the numbers do not work, that is
-the answer you will get.
+Tell us the budget, whether you are buying for rent or for resale, and how
+long you expect to hold. We will tell you which suburb and pocket fit that,
+what is realistically available this month, and what the numbers look like
+on anything you shortlist. No obligation, and usually the same day.
 
 ---
 
-**A note on risk.** Real estate investment carries risk, including the risk of
-capital loss. Property is illiquid, transaction costs are high, and rental
-income is not guaranteed. Past performance of any market or building does not
-indicate future results. Nothing on this page is a guarantee of return,
-appreciation or rental income, and nothing on this page is investment, tax or
-legal advice. Consider your own circumstances and take independent professional
-advice before committing capital.
+**A note on risk.** Property is a long term asset. Values and rents move, the
+asset is illiquid and transaction costs are real, and nothing on this page is
+a guarantee of return or a substitute for independent financial advice.
 `.trim();
 
 const COMMERCIAL_PLOTS_BODY = `
@@ -153,141 +110,65 @@ const COMMERCIAL_PLOTS_BODY = `
 
 Shree Giriraj Real Estate is a MahaRERA registered estate agent, registration
 number A51800005726, working from Shop No 11, Clover Grove CHS, Chikoowadi,
-Borivali West, Mumbai 400092. The firm has worked in real estate since 1996
-and has operated from this office since 2005.
+Borivali West, Mumbai 400092. We have worked in real estate since 1996 and
+from this office since 2005.
 
-This service covers commercial space in three suburbs of the Mumbai western
-suburbs: Borivali West and East, Kandivali West and East, and Malad West and
-East. That means shops, showrooms, office units and, where they genuinely
-exist, plots. It is for two kinds of client: a business that needs premises
-here, and an investor buying a commercial unit to let.
+This service covers commercial space across Borivali, Kandivali and Malad:
+shops, showrooms, office units and, when a genuine one comes up, plots. It is
+for two kinds of client. A business that needs premises here, and an investor
+buying a commercial unit to let. Footfall, frontage and approved use decide
+whether a unit works, and knowing which stretch of which road suits which
+trade is what we bring.
 
-Commercial property moves differently from a flat. Footfall, frontage,
-approved use and the society's position on trade all matter more than the
-square footage does, and none of them appear in a listing. Knowing which
-stretch of which road works for which kind of business is the whole of what we
-add.
-
-## What is included
+## What you get
 
 - **Shops for sale and for rent** in Borivali West, Kandivali West and Malad
-  West, and on the east side of each, matched to the footfall and frontage the
-  business actually needs
-- **Office space** in Borivali West and Malad West, from single units to small
-  floors, for rent or purchase
+  West, and on the east side of each, matched to the footfall and frontage
+  your business needs
+- **Office space** in Borivali West and Malad West, from a single unit to a
+  small floor, for rent or purchase
 - **Showrooms and larger frontage units** on the main trading roads
-- **Plots**, on the rare occasions a genuine one comes up, for investors and
-  small builders
-- Checking the approved use, the society's commercial rules and the no
-  objection position before you commit
-- Leave and licence or sale deed, negotiated and taken through registration
-
-## Where commercial space works in these suburbs
-
-Each suburb has a small number of stretches where commercial space genuinely
-trades, and a great deal of frontage where it does not. In Borivali West the
-trading spine runs through the station belt and along the main roads out of
-it, and the Link Road side is a different, quieter proposition. In Kandivali
-the established trade sits off M.G. Road and along the Link Road corridor. In
-Malad West the office demand clusters near the Mindspace end and the Link Road,
-and the retail demand sits on a different set of streets altogether.
-
-A unit two hundred metres off the right stretch is a different asset from one
-on it, at a similar rate per square foot. That is the thing to get right first.
+- **Plots**, on the occasions a genuine one exists, for investors and small
+  builders
+- The approved use, the society's commercial rules and the title confirmed
+  before you commit, so the unit you take is the unit you can trade from
+- Leave and licence or sale deed negotiated and taken through registration
 
 ## Shop for rent in Borivali West, Kandivali West or Malad West
 
-Most of the enquiries we take for commercial space are for a shop for rent in
-Borivali West, Kandivali West or Malad West, and most of them arrive with a
-budget and a trade but not a stretch. The stretch is the decision. A shop for
-rent on the wrong road, at the same rent, is a business that closes in eighteen
-months. Tell us the trade and we will tell you which two or three stretches
-actually see that trade's customers, and what is available on them this month.
-
-Office space in Borivali West and Malad West works the same way. Proximity to
-the station, to parking and to the kind of client the office serves matters
+Most enquiries we take for commercial space are for a shop for rent in
+Borivali West, Kandivali West or Malad West, and most arrive with a budget and
+a trade but not a stretch. The stretch is the decision. Tell us the trade and
+we will tell you which two or three stretches actually see that trade's
+customers, and what is available on them this month. Office space works the
+same way: proximity to the station, to parking and to your clients matters
 more than the floor plate, and a first floor unit above the right parade is
-often a better office than a bigger one on a quieter road.
+often the better office.
 
 ## Can residential property be used as commercial in Mumbai?
 
-Generally no, and the exceptions are narrow. A flat is sanctioned for
-residential use, and running a shop or a general office from it is a change of
-use the building was not approved for. Certain professionals have long been
-permitted to use part of their own residence for their practice, subject to the
-society's bye laws and to limits on how much of the flat is used, but that does
-not extend to retail or to a business that brings customers and stock through a
-residential lobby.
-
-If you need commercial premises, buy or rent a unit that is sanctioned as one.
-It is cheaper than discovering the restriction after the fit out.
-
-## How much is GST on commercial property in Mumbai?
-
-Renting commercial premises is a taxable supply of services under GST, charged
-at the rate applicable to renting of commercial property, which is currently
-eighteen percent, where the landlord is liable to be registered. Residential
-letting to an individual for use as a residence is treated differently. On a
-purchase, a completed commercial unit sold after its completion certificate
-does not attract GST; an under construction one does.
-
-The practical point: ask whether a rent quoted to you is inclusive or exclusive
-of GST before you compare two units, because the difference is material.
-Confirm your own position with an accountant, since it turns on the
-registration status of both parties.
-
-## What is the price range for commercial property in Mumbai?
-
-We do not publish rates, and a Mumbai wide range would be meaningless for a
-unit in Kandivali anyway. What we will tell you is what a specific stretch is
-trading at this month, and why the unit you are looking at sits where it does
-in that range: the frontage, the floor, the approved use, the parade around it
-and what it is letting for today.
+Generally no. A flat is sanctioned for residential use, and a shop or general
+office is a change of use the building was not approved for. Certain
+professionals may use part of their own residence for their practice, subject
+to the society's rules. For a business that brings customers through the
+door, a unit sanctioned as commercial is the right answer, and we will find
+you one.
 
 ## Is it wise to invest in commercial property?
 
-It is a different investment from a flat rather than a better or worse one. The
-income profile is stronger: leases run longer, deposits are larger, and the
-tenant commonly carries the outgoings. Against that, vacancies are longer when
-they happen, lending is on tighter terms, and the pool of buyers when you want
-to exit is far smaller than for a two bedroom flat.
-
+Commercial has a stronger income profile than a flat: leases run longer,
+deposits are larger and the tenant commonly carries the outgoings. The pool
+of buyers when you sell is smaller, so it suits money that can stay invested.
 If you are buying to let rather than to occupy, our
-[property investment advisory](/services/investment-advisory) covers the
-arithmetic, and the
-[rental yield calculator](/tools/rental-yield-calculator) will show you the
-net figure before you go to a viewing.
+[investment advisory](/services/investment-advisory) covers the numbers, and
+the [rental yield calculator](/tools/rental-yield-calculator) shows the net
+figure before a viewing.
 
-## What we check before you commit
+## How to start
 
-1. **The approved use.** What the unit is sanctioned for is a matter of record,
-   not of what the last occupant did in it.
-2. **The society's position.** Some societies with ground floor commercial
-   units restrict trades, hours, signage and cooking. That restricts your
-   tenant pool or your own business.
-3. **Frontage and access.** Where the shutter faces, how visible it is from the
-   road, whether a delivery vehicle can actually stop.
-4. **The parade around it.** A unit beside trades that pull traffic is a
-   different asset from the same unit beside three vacant shutters.
-5. **Title and outgoings.** The same checks as a flat, plus who has been paying
-   the property tax and on what assessment.
-6. **What it lets for today.** Not what it could let for. What a tenant is
-   paying, or would pay, this month.
-
-## A note on plots
-
-Genuine plots are rare in these suburbs and rarely small. Most of what is
-called a plot is an old bungalow plot, a society plot heading for
-redevelopment, or land whose development potential depends on its reservation
-in the development plan. We will tell you what actually exists when you ask
-rather than list something that does not.
-
----
-
-**A note on risk.** Commercial property carries risk, including the risk of
-capital loss and of extended vacancy. Property is illiquid and transaction
-costs are high. Nothing on this page is a guarantee of rent, occupancy or
-resale value, and nothing on this page is investment, tax or legal advice.
+Tell us the business or the investment, the budget, and any stretch you
+already have in mind. We will come back with the two or three that fit, what
+is available on them now, and a viewing. No obligation, usually the same day.
 `.trim();
 
 const MHADA_PAPERWORK_BODY = `
@@ -295,136 +176,76 @@ const MHADA_PAPERWORK_BODY = `
 
 Shree Giriraj Real Estate is a MahaRERA registered estate agent, registration
 number A51800005726, working from Shop No 11, Clover Grove CHS, Chikoowadi,
-Borivali West, Mumbai 400092. The firm has worked in real estate since 1996
-and has operated from this office since 2005.
+Borivali West, Mumbai 400092. We have worked in real estate since 1996 and
+from this office since 2005.
 
-MHADA is the Maharashtra Housing and Area Development Authority. A great many
-flats in the western suburbs were allotted through it, and every one of them
-carries a set of rules that a privately built flat does not: permission
-before a sale, permission before a tenant, a transfer procedure when an
-allottee dies, and an income group that the buyer has to fit. This service
-handles that paperwork end to end for owners, heirs, buyers and landlords of
-MHADA flats in Borivali, Kandivali and Malad.
+MHADA is the Maharashtra Housing and Area Development Authority, and a great
+many flats in the western suburbs were allotted through it. Each one carries
+a set of permissions a privately built flat does not need: before a sale,
+before a tenant, before a mortgage, and when an allottee dies. Done properly,
+none of it is difficult. We prepare the complete file against the Board's own
+document list, submit it to the right desk, and follow it through until it is
+decided, for owners, heirs, buyers and landlords across Borivali, Kandivali
+and Malad.
 
-## What the service covers
+## What you get
 
-- **Transfer of tenement (TOT)** with the Mumbai Board's Estate Manager, for
-  a sale, a gift within the family, or a transfer to a legal heir
+- **Transfer of tenement** with the Mumbai Board's Estate Manager, for a
+  sale, a gift within the family, or a transfer to a legal heir
 - **No objection certificate for sale**, including the society's permission
-  and the Board's, and the unearned increase where the Board asks for it
+  and the Board's
 - **No objection certificate for leave and licence**, so the flat can be let
-  legally
+  with the Board's blessing
 - **No objection certificate for a mortgage**, which a lender needs before
   sanctioning a loan on a MHADA flat
 - **Transfer on death** of the original allottee, with the heirship documents
   the Board asks for
-- **Regularisation** where a flat changed hands without the Board's permission
-- **Society and redevelopment paperwork** for MHADA layouts, including the
-  conveyance position and what a redevelopment under the MHADA regulations
-  needs from members
+- **Regularisation** where a flat changed hands without the Board's
+  permission, so the record matches the reality
+- **Society paperwork** for MHADA layouts, including the lease and conveyance
+  position a redevelopment will need
 
 ## Can a MHADA flat be transferred to another person?
 
-Yes, with permission. Under the Estate Management, Sale, Transfer and Exchange
-of Tenements Regulations, 1981, no allottee may transfer a tenement except
-with the previous permission in writing of the Board, and of the housing
-society where one has been formed. The society may permit a transfer once five
-years have passed from the date of allotment, the buyer falls in the same
-income group as the scheme, and all dues to the Board have been paid.
-
-A transfer made without that permission can be declared invalid. The
-transferee is then treated as an unauthorised occupant and can be evicted,
-and the money is refunded to the allottee without interest, less rent for the
-period the flat was occupied. That is the single most expensive mistake in
-this market, and it is the reason the paperwork comes first.
+Yes. Under the Estate Management, Sale, Transfer and Exchange of Tenements
+Regulations, 1981, a transfer needs the previous written permission of the
+Board and of the housing society, and the society may permit one once five
+years have passed from allotment, the buyer falls in the scheme's income
+group, and dues are paid. With those in place the transfer is routine, and
+the file we prepare is built to satisfy each one the first time.
 
 ## What are the MHADA transfer fees?
 
-The Mumbai Board publishes a schedule for transfer of tenancy rights on its
-document list: 45 rupees per square foot for Low Income Group flats capped at
-15,000 rupees, 55 rupees per square foot for Middle Income Group capped at
-25,000 rupees, and 60 rupees per square foot for High Income Group capped at
-35,000 rupees. Those figures are as published on mhada.gov.in and checked on
-9 September 2026; the Board revises them, so confirm the current schedule
-before you pay.
-
-Separately, the 1981 Regulations let the Board make its permission for a sale
-conditional on payment of a portion of the unearned increase in the value of
-the flat, up to fifty percent of that increase, at the Authority's discretion.
-Whether that applies, and how much, depends on the scheme and the flat. We
-find out before you agree a price, not after.
-
-## What documents does a MHADA transfer need?
-
-The Mumbai Board's published list for transfer of tenancy rights runs to
-fourteen items. The ones that decide the outcome:
-
-1. The application in the prescribed format from the Estate Manager's office
-2. A certificate from the applicant stating the reason for the transfer
-3. The original death certificate, where the allottee has died
-4. An affidavit that the applicant and immediate family hold no other land or
-   tenement in Mumbai city and suburbs
-5. The no objection certificate from the original tenement holder
-6. The society's no objection certificate, or an affidavit that no society has
-   been formed
-7. Proof of income, whether an employer's certificate or income tax returns
-8. A heirship certificate from the competent authority, for a transfer to an
-   heir
-9. The latest rent receipt showing no arrears
-10. The transfer charges, paid by demand draft or pay order and receipted
-
-The Board's list says the application and documents are to be submitted to
-the Estate Manager within fifteen days. Missing one item restarts the clock,
-which is why we assemble the file before it goes in.
+The Mumbai Board publishes a schedule for transfer of tenancy rights: 45
+rupees per square foot for Low Income Group flats capped at 15,000 rupees, 55
+per square foot for Middle Income Group capped at 25,000, and 60 per square
+foot for High Income Group capped at 35,000, as published on mhada.gov.in and
+checked on 9 September 2026. On a sale the Board may also ask for a share of
+the unearned increase. We confirm both for your scheme before you agree a
+price, so the numbers you plan on are the numbers you pay.
 
 ## Can I rent out my MHADA flat?
 
-Yes, with a no objection certificate for rent from the Mumbai Board. It is a
-notified service under the Maharashtra Right to Public Services Act, listed on
-the Aaple Sarkar portal as a no objection certificate for letting a flat, plot
-or commercial unit, with a time limit of eight days and the Estate Manager as
-the designated officer. Appeals lie to the Executive Engineer and then the
-Chief Officer if it is delayed or refused without reason.
-
-Letting a MHADA flat without it puts the allotment itself at risk. Get the
-NOC, then register the leave and licence agreement under section 55 of the
-Maharashtra Rent Control Act as you would for any flat.
-
-## What happens to a MHADA flat when the allottee dies?
-
-The tenancy can be transferred to a legal heir. Section 24 of the Maharashtra
-Housing and Area Development Act, 1976 lists who qualifies: the husband or
-wife, an unmarried son or daughter, a married son and his family, a widowed
-daughter and her unmarried children, and the father and mother. The Board's
-document list adds the original death certificate and a heirship certificate
-from the competent authority to the standard file.
-
-Where there is more than one heir, the family's consent has to be in order
-before the Board will act. We handle that part carefully, because it is where
-these transfers stall.
-
-## What this service does not do
-
-We do not sell MHADA lottery forms, register you for a lottery, or predict
-lottery results. We do not give legal opinions; where a matter needs an
-advocate, we say so and work alongside one. And we do not promise the Board's
-decision or its timing. What we promise is a complete, correct file, submitted
-to the right desk, followed up until it is decided.
+Yes. The no objection certificate for rent is a notified service under the
+Maharashtra Right to Public Services Act, with a time limit of eight days and
+the Estate Manager as the designated officer. We take the application
+through, then register the leave and licence agreement under section 55 of
+the Rent Control Act as for any flat, so you let with a clear record.
 
 ## How to start
 
-Tell us which flat, which board scheme, and what you need: a sale, a tenant,
-a loan, a transfer to an heir, or a transfer that happened without permission
-and needs regularising. Bring the allotment letter and the latest receipt if
-you have them. We will tell you what the file needs, what it will cost in
-official charges, and how long the Board has to decide.
+Tell us which flat, which scheme and what you need: a sale, a tenant, a
+loan, a transfer to an heir, or a transfer that needs regularising. Bring the
+allotment letter and the latest receipt if you have them. We will tell you
+what the file needs, what the official charges are, and how long the Board
+has to decide. Free to ask, and usually answered the same day.
 
 ---
 
-**A note on accuracy.** The rules, fees and time limits on this page are taken
-from documents published by MHADA and the Government of Maharashtra and were
-checked on 9 September 2026. They change. Nothing here is legal advice, and
-the Board's decision on any application is its own.
+**A note on accuracy.** The rules, fees and time limits on this page come
+from documents published by MHADA and the Government of Maharashtra, checked
+on 9 September 2026. They change, so we confirm the current position for
+every application before it goes in.
 `.trim();
 
 export const REPO_SERVICES: Record<string, RepoService> = {

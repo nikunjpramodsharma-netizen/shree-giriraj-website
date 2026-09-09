@@ -144,4 +144,4 @@ On the MCGM property tax portal, using the property account number printed on an
 
 ## Before you buy
 
-Ask for the last paid receipt, and check the carpet area against the 500 sq ft line. One of those tells you whether there is a debt attached to the flat, and the other tells you whether there should be a bill at all.
+Ask for the last paid receipt and check the carpet area against the 500 sq ft line, and you will know both whether anything is owed on the flat and whether there should be a bill at all. If you would like us to check a specific flat in Borivali, Kandivali or Malad, send us the building's name and we will tell you what we find, free.

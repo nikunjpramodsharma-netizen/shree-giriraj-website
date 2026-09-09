@@ -101,4 +101,4 @@ On the IGR Maharashtra portal, open the annual statement of rates, choose the di
 
 ## Before you agree a price
 
-Check the reckoner rate for that specific building first. It is the difference between a stamp duty figure you planned for and one that arrives as a surprise, and past a 10 percent gap it stops being only a stamp duty question.
+Check the reckoner rate for the specific building first, so the stamp duty figure you plan for is the one you pay. The [stamp duty calculator](/tools/stamp-duty-calculator-mumbai) works it out for you, and if you are looking at a flat in Borivali, Kandivali or Malad we will confirm the rate for that building on request.

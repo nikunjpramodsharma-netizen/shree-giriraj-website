@@ -68,7 +68,7 @@ Ask for running feet, square feet and unit counts. If a designer will not put qu
 
 ### 2. What is excluded?
 
-This is where the budget actually goes wrong. Things that are commonly outside an interiors quote and land later as separate bills:
+This is where a budget is won or lost. Things that are commonly outside an interiors quote and land later as separate bills:
 
 - Civil work, if walls are being moved, and anything that needs the society's or the BMC's permission
 - Electrical load upgrades and plumbing changes beyond the existing points
@@ -149,4 +149,4 @@ Two ways. The organised firms fold the design fee into the package price and cha
 
 Get the scope in writing with quantities. Get the exclusions in writing. Check one finished flat in person. Then pay an advance that matches what has actually been committed on your behalf.
 
-We handle interiors as part of the move rather than as a separate business, which means we are still there after the keys.
+We handle interiors as part of the move rather than as a separate business, which means we are still there after the keys. If you are planning a fit out in Borivali, Kandivali or Malad, tell us the flat and the budget you have in mind and we will come back with an itemised estimate before you commit to anything.

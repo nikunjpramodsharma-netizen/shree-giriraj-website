@@ -113,4 +113,4 @@ Materially. It is the difference between a society negotiating from ownership an
 
 ## If you are buying in an older building
 
-Ask whether conveyance is done. Almost no buyer asks, and the answer tells you a great deal about how well the society is run.
+Ask whether conveyance is done. Few buyers do, and a society that has completed it is telling you it is well run. If you are looking at a flat in Borivali, Kandivali or Malad and would like us to check the society's position before you decide, send us the building's name. It is free, and it is usually the same day.

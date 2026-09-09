@@ -87,8 +87,8 @@ export default function ToolsIndex({
             Work out the numbers yourself
           </h1>
           <p className="mt-5 max-w-[58ch] text-paper/80">
-            No signup, no email, nothing behind a form. If a calculator is any
-            good it should not need to hold your details hostage.
+            No signup, no email, nothing behind a form. The numbers are yours. If one of them raises a
+              question, we are a message away.
           </p>
         </div>
       </header>

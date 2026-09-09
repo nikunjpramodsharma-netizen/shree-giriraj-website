@@ -124,4 +124,4 @@ Living there does not change the record. Until the transfer is granted, the Boar
 
 ## Where to start
 
-The death certificate and the heirship certificate first, then the society's position, then the file. If the flat is in Borivali, Kandivali or Malad and you would like the application assembled against the Board's list and taken through the Estate Manager's office, that is what our [MHADA paperwork service](/services/mhada-paperwork) is for. For the parallel process on the municipal record, read [mutation of property](/blog/mutation-of-property).
+Start with the death certificate and the heirship certificate, settle the society's position, and the file follows. If the flat is in Borivali, Kandivali or Malad and you would like the application assembled against the Board's list and taken through the Estate Manager's office, that is what our [MHADA paperwork service](/services/mhada-paperwork) is for. For the parallel step on the municipal record, read [mutation of property](/blog/mutation-of-property).

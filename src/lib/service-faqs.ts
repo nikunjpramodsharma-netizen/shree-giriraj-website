@@ -51,7 +51,7 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
     },
     {
       q: "Which is the better side of Borivali West to buy in?",
-      a: "The station belt and the Link Road side are two different markets at about the same price, and people conflate them and overpay on the wrong one. The station side is older stock and a shorter walk to the train; the Link Road side is newer buildings and a longer commute. Which is better depends on who is living there and how they travel, and that is the first thing we ask.",
+      a: "The station belt and the Link Road side are two different markets at about the same price, and it is easy to pay one side's price for the other. The station side is older stock and a shorter walk to the train; the Link Road side is newer buildings and a longer commute. Which is better depends on who is living there and how they travel, and that is the first thing we ask.",
     },
   ],
 
@@ -93,7 +93,7 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
     },
     {
       q: "What should I check before booking a new flat?",
-      a: "The MahaRERA registration number and its page, which shows the carpet area, the promised possession date and any encumbrance on the land. The title report. The approvals the project actually holds today. And the rule in section 13 of RERA: a promoter may not take more than 10 percent of the price before a registered agreement for sale exists, so a larger booking demand is itself a warning.",
+      a: "The MahaRERA registration number and its page, which shows the carpet area, the promised possession date and any encumbrance on the land. The title report. The approvals the project actually holds today. And the rule in section 13 of RERA: a promoter may not take more than 10 percent of the price before a registered agreement for sale exists, so a demand above that is your cue to ask why.",
     },
     {
       q: "When do I pay stamp duty on an under construction flat?",
@@ -114,7 +114,7 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
     },
     {
       q: "What return should I expect on a flat in Borivali, Kandivali or Malad?",
-      a: "We do not publish an expected return, and it is worth being careful with anybody who does. Yields vary by building, floor, pocket and the price you actually negotiate, so a figure quoted for a whole suburb tells you nothing about the flat in front of you. We do the arithmetic on the specific property instead.",
+      a: "We do not publish an expected return, because yields vary by building, floor, pocket and the price you actually negotiate, and a figure for a whole suburb tells you nothing about the flat in front of you. We do the arithmetic on the specific property, which is the number worth deciding on.",
       href: "/tools/rental-yield-calculator",
       hrefLabel: "Work out the gross yield on a flat you are considering",
     },
@@ -158,7 +158,7 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
   "mhada-paperwork": [
     {
       q: "Can I sell a MHADA flat after 5 years?",
-      a: "Five years from allotment is the point at which the society may permit a transfer under the 1981 Regulations, but the Board's written permission is still required, the buyer has to fall in the same income group as the scheme, and all dues must be paid. Selling without that permission can void the sale.",
+      a: "Five years from allotment is the point at which the society may permit a transfer under the 1981 Regulations, but the Board's written permission is still required, the buyer has to fall in the same income group as the scheme, and all dues must be paid. With those in place the sale goes through cleanly; without them the Board can set it aside.",
       href: "/blog/can-we-sell-mhada-flat",
       hrefLabel: "The full rules on selling a MHADA flat",
     },
@@ -190,7 +190,7 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
     },
     {
       q: "What does a 2 BHK fit out cost here?",
-      a: "Roughly 7 to 10 lakh rupees for a full home at a sensible specification and 12 to 15 lakh for premium finishes, plus 18 percent GST, on the Mumbai figures the large firms publish. The three big pieces alone, a kitchen and two wardrobes with a TV unit, run from about 3.4 to 5.8 lakh. A quote well below that has left something out.",
+      a: "Roughly 7 to 10 lakh rupees for a full home at a sensible specification and 12 to 15 lakh for premium finishes, plus 18 percent GST, on the Mumbai figures the large firms publish. The three big pieces alone, a kitchen and two wardrobes with a TV unit, run from about 3.4 to 5.8 lakh. A quote well below that is worth asking about.",
     },
     {
       q: "How much advance is normal?",

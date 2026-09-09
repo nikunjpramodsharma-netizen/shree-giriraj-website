@@ -442,8 +442,8 @@ export default async function PostPage({
                 Buying, renting or investing in the western suburbs?
               </h2>
               <p className="mt-3 text-muted">
-                In Borivali, Kandivali and Malad since 1996. We will tell you what
-                is wrong with a flat before you fall in love with it.
+                In Borivali, Kandivali and Malad since 1996. Tell us the building you are looking at and we will
+                tell you what to check, free, usually the same day.
               </p>
             </div>
             <ContactCTA

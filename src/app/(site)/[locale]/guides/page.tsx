@@ -22,7 +22,7 @@ export async function generateMetadata({
   return {
     title: "Guides: property paperwork, buying and renting in Mumbai",
     description:
-      "Long form guides to the parts of a Mumbai property transaction that catch people out, each one hubbing the detailed articles underneath it.",
+      "Long form guides to the parts of a Mumbai property transaction that decide how smoothly it goes, each one hubbing the detailed articles underneath it.",
     ...pageUrls(params.locale, "/guides", [GUIDE_LOCALE]),
   };
 }
@@ -72,7 +72,7 @@ export default function GuidesIndex({
             Guides
           </div>
           <h1 className="mt-3 max-w-[18ch] text-3xl text-white md:text-5xl">
-            The parts that catch people out
+            The parts worth understanding before you sign
           </h1>
           <p className="mt-5 max-w-[58ch] text-paper/80">
             Free to read, no form in the way. Each guide is a map of one subject

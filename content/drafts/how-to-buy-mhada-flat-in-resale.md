@@ -124,4 +124,4 @@ Then the seller is describing exactly the transfer the Regulations allow the Boa
 
 ## Before you pay a token
 
-Have the allotment letter, the latest Board receipt, the society's position and your own income declarations checked against the Regulations by somebody who does this regularly, and make the agreement conditional on both permissions. If the flat is in Borivali, Kandivali or Malad, that is what our [MHADA paperwork service](/services/mhada-paperwork) does, and the seller's side of the same rules is in [can we sell a MHADA flat](/blog/can-we-sell-mhada-flat).
+Have the allotment letter, the latest Board receipt, the society's position and your own income declarations checked against the Regulations, and make the agreement conditional on both permissions. Do that and a MHADA resale is a safe buy at a sensible price. If the flat is in Borivali, Kandivali or Malad, our [MHADA paperwork service](/services/mhada-paperwork) does the checking, and the seller's side is in [can we sell a MHADA flat](/blog/can-we-sell-mhada-flat).

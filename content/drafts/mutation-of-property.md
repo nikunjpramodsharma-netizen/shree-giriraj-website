@@ -98,4 +98,4 @@ The registered sale deed, its Index 2, the latest paid property tax bill, the so
 
 ## After you register
 
-Do it straight away. It changes nothing about your ownership and it prevents a series of small problems that are much easier to avoid than to unpick.
+Do it straight away. It is a small piece of housekeeping that keeps every future step simple, from the tax bill to the next sale. If you have just bought in Borivali, Kandivali or Malad and would like it handled along with the rest of the paperwork, ask us.

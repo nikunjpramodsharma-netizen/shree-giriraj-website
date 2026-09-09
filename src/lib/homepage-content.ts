@@ -23,32 +23,32 @@ export const CHECKS: Check[] = [
   {
     n: "01",
     title: "Who actually owns it",
-    body: "More rental disputes in Borivali start with a flat let out by a family member who was not authorised to let it than with anything else. We see the ownership document, not a photograph of it.",
+    body: "We meet the owner and see the ownership document before you see the flat, so the person you sign with is the person entitled to let it.",
   },
   {
     n: "02",
     title: "Whether the society will register you",
-    body: "Some of the older buildings in Chikoowadi still resist non member tenants, particularly single tenants. Better to know in week one than after you have paid the deposit.",
+    body: "Some older societies in Chikoowadi have their own views on tenants, single people included. We ask the society before the first visit, so the buildings you see are ones that will welcome you.",
   },
   {
     n: "03",
     title: "Water timing, not water supply",
-    body: "Almost every building has water. The question is at what hour and for how long. You will hear it from us before you see the flat.",
+    body: "Every building has water. We tell you at what hour and for how long before you visit, because it is the thing you will notice every morning.",
   },
   {
     n: "04",
     title: "What the parking allotment really is",
-    body: "A parking space in the brochure and a parking space the society will actually allot you are two different things, and the gap is where arguments start.",
+    body: "We confirm the parking the society will actually allot you, in writing, so the space in the brochure is the space you park in.",
   },
   {
     n: "05",
-    title: "Redevelopment that has been starting next year for six years",
-    body: "Every suburb has buildings where redevelopment is permanently imminent. It changes what the flat is worth and whether you should buy it at all.",
+    title: "Where redevelopment really stands",
+    body: "Every suburb has buildings where redevelopment has been next year for a while. We tell you what stage a building is genuinely at, because it changes what the flat is worth and what you should pay.",
   },
   {
     n: "06",
     title: "What the deposit actually means here",
-    body: "Ten months is common in this belt. If somebody asks for less, there is usually a reason, and it is worth knowing what it is.",
+    body: "Two to three months' rent is the norm in newer societies here, more in some older buildings. We tell you the going rate for the building before you negotiate, so you pay what the street pays and not a rupee more.",
   },
 ];
 
@@ -97,20 +97,20 @@ export const AREA_PANELS: AreaPanel[] = [
       { value: "₹25k to 35k", label: "New launch asking, per sq ft, both sides" },
     ],
     watch:
-      "The station belt and the Link Road side are two different markets at the same price. People conflate them and overpay on the wrong one.",
+      "The station belt and the Link Road side are two different markets at the same price. We help you pick the one that fits how you actually live.",
   },
   {
     slug: "kandivali",
     name: "Kandivali",
     image: "/sections/area-kandivali.jpg",
-    body: "Premium new launches and family homes off M.G. Road and Link Road, including Jaswanti Jewel. The strongest new build activity of the three, and the most room to get the floor wrong.",
+    body: "Premium new launches and family homes off M.G. Road and Link Road, including Jaswanti Jewel. The strongest new build activity of the three, which means the widest choice for a first buyer.",
     stats: [
       { value: "₹25,400", label: "Resale asking, per sq ft carpet, West" },
       { value: "₹26,400", label: "Resale asking, per sq ft carpet, East" },
       { value: "₹24k to 45k", label: "New launch asking, per sq ft, East" },
     ],
     watch:
-      "In a G+37 tower the floor band changes the price more than the carpet area does. Ask what the view actually is at your floor, not at the sample flat.",
+      "In a tall tower the floor band changes the price more than the carpet area does. We show you the view at your floor, not at the sample flat.",
   },
   {
     slug: "malad",
@@ -123,7 +123,7 @@ export const AREA_PANELS: AreaPanel[] = [
       { value: "₹24k to 33k", label: "New launch asking, per sq ft, West" },
     ],
     watch:
-      "The Mindspace pull makes rental yields look better on paper than they hold up over three years. Check who the actual tenant will be.",
+      "The Mindspace corridor keeps rental demand steady. We tell you who the realistic tenant is and what they pay, so the yield you plan on is the one you get.",
   },
 ];
 
@@ -168,8 +168,8 @@ export const SERVICE_PANELS: ServicePanel[] = [
     slug: "resale-flats",
     title: "Resale flats",
     image: "/sections/svc-resale.jpg",
-    lead: "Our main business, and where walking these buildings since 1996 actually pays.",
-    body: "Buying or selling ready to move homes across Borivali, Kandivali and Malad. Title chain, society NOC and outstanding dues sorted before a price is agreed, which is the difference between a sale and a sale that collapses three weeks in.",
+    lead: "Our main business since 1996.",
+    body: "Buying or selling ready to move homes across Borivali, Kandivali and Malad. Title chain, society NOC and dues checked before a price is agreed, so the deal completes on the date you planned.",
   },
   {
     n: "02",
@@ -177,23 +177,23 @@ export const SERVICE_PANELS: ServicePanel[] = [
     title: "Rentals",
     image: "/sections/svc-rentals.jpg",
     lead: "The busiest thing we do, and how most people meet us first.",
-    body: "Tenants and owners matched across all three suburbs, with the leave and licence agreement drawn and registered properly. We check who actually owns the flat and whether the society will register you, before you see it.",
+    body: "Tenants and owners matched across all three suburbs, with a registered leave and licence agreement handled for you. We confirm the owner and the society's welcome before your first visit.",
   },
   {
     n: "03",
     slug: "new-project-bookings",
     title: "New project bookings",
     image: "/sections/svc-new-projects.jpg",
-    lead: "The price is the same. What changes is what you know.",
-    body: "Early access through developers we deal with directly. We will tell you which floor band is overpriced for what it is, and what the view actually becomes once the next tower goes up.",
+    lead: "Early access, and the floor that is worth it.",
+    body: "Launch access through developers we deal with directly, with the current price sheet and a straight answer on which floor and view are worth the money.",
   },
   {
     n: "04",
     slug: "interiors",
     title: "Interiors and civil work",
     image: "/sections/svc-interiors.jpg",
-    lead: "What happens after the keys, and the least understood work on this list.",
-    body: "Fit outs and civil work once the flat is yours. You get a real cost band before you commit, not after, and we tell you what the society will not permit before a designer draws it.",
+    lead: "After the keys, the home you actually wanted.",
+    body: "Fit outs and civil work once the flat is yours, with an itemised estimate before you commit and the society's permission handled, so the design that is drawn is the one that gets built.",
   },
   {
     n: "05",
@@ -201,7 +201,7 @@ export const SERVICE_PANELS: ServicePanel[] = [
     title: "Investment advisory",
     image: "/sections/svc-investment.jpg",
     lead: "For buying to hold, not to live in.",
-    body: "Which pocket, which building, and what the flat actually earns as a yield at the price being asked. We do the arithmetic on the real property rather than quoting a number for the suburb, and we will tell you when it does not work.",
+    body: "Which pocket, which building, and what the flat actually earns at the price being asked. We do the arithmetic on the real property, so you buy on numbers rather than on a suburb's reputation.",
   },
   {
     n: "06",
@@ -217,7 +217,7 @@ export const SERVICE_PANELS: ServicePanel[] = [
     title: "MHADA paperwork",
     image: "/sections/svc-mhada.jpg",
     lead: "Transfer, NOC, heirs, regularisation.",
-    body: "The permissions a MHADA flat needs before it can be sold, let, mortgaged or passed to an heir, taken from the Board's own rules and filed as one complete application. The mistake we exist to prevent is a transfer made without permission.",
+    body: "The permissions a MHADA flat needs before it can be sold, let, mortgaged or passed to an heir, taken from the Board's own rules, filed as one complete application and followed through with the Estate Manager until it is done.",
   },
 ];
 
@@ -226,7 +226,8 @@ export type Situation = {
   label: string;
   heading: string;
   body: string;
-  warning: string;
+  /** What we handle for the reader in this situation. Used to be a warning. */
+  help: string;
 };
 
 /** Section 04. The answer to a portal search box when you have no inventory to search. */
@@ -235,41 +236,41 @@ export const SITUATIONS: Situation[] = [
     key: "buy",
     label: "Buy",
     heading: "Buying in {area}",
-    body: "The two things that decide whether this goes smoothly are the title chain and the society, and neither is visible in a listing.",
-    warning:
-      "The society NOC. People sort it after agreeing a price instead of before, and that is when deals collapse at the last minute.",
+    body: "A resale flat comes with an established society and immediate possession. We check the title chain and the society position before a price is agreed, so the deal you shake on is the deal that completes.",
+    help:
+      "We line up the society's no objection before you agree a price, which is what keeps a good deal on track.",
   },
   {
     key: "rent",
     label: "Rent",
     heading: "Renting in {area}",
-    body: "Deposits in this belt run to around ten months, and the society decides whether you are acceptable before the owner does.",
-    warning:
-      "The owner is not the person authorised to let the flat. Ask for the ownership document, not a photograph of it.",
+    body: "Two to three months' deposit is the norm in newer societies here. We match you with owners we know and buildings that will register you, so the first flat you see is one you can actually take.",
+    help:
+      "We verify who owns the flat and who is entitled to let it, so your agreement is with the right person from day one.",
   },
   {
     key: "sell",
     label: "Sell",
     heading: "Selling in {area}",
-    body: "What you get depends less on the asking price than on how ready the paperwork is when a serious buyer appears.",
-    warning:
-      "The society NOC and the outstanding dues surface three weeks in, and the buyer walks. Sort them before listing.",
+    body: "A flat with its paperwork ready sells faster and closer to the asking price. We get the file in order before we list, so a serious buyer can move the day they appear.",
+    help:
+      "Society NOC and dues sorted before listing. That is what turns an offer into a registration.",
   },
   {
     key: "invest",
     label: "Invest in property here",
     heading: "Investing in {area}",
-    body: "The per square foot number is the same across pockets that behave completely differently. What the flat rents for, and to whom, is the part that decides whether the investment works.",
-    warning:
-      "Buying on the price per square foot alone. Two buildings a few hundred metres apart can carry the same rate and very different rent and resale liquidity.",
+    body: "The same rate per square foot buys very different flats in different pockets. We show you what each one actually rents for, and to whom, so the numbers work before you commit.",
+    help:
+      "We compare buildings on rent, resale demand and the society, not on the rate alone.",
   },
   {
     key: "interiors",
     label: "Do interiors",
     heading: "Interiors in {area}",
-    body: "A 2 BHK fit out has a real cost band, and anyone refusing to give you one before a site visit is managing you, not quoting you.",
-    warning:
-      "The society rules. Find out what you are allowed to move before you pay a designer to draw it.",
+    body: "You get an itemised estimate before any work starts, and we handle the society permission, so the design that is drawn is the design that gets built.",
+    help:
+      "We check the society's rules first, so nothing is drawn that cannot be built.",
   },
 ];
 
@@ -296,25 +297,25 @@ export const PROPERTY_TYPES: PropertyType[] = [
     key: "flat",
     label: "Flat",
     phrase: "a flat",
-    note: "The society decides more than the flat does: the dues, the NOC, the rules on what you may change, and who is above and below you.",
+    note: "A good society is half of a good flat. We tell you about the dues, the rules and the neighbours before you decide.",
   },
   {
     key: "bungalow",
     label: "Bungalow",
     phrase: "a bungalow",
-    note: "You are buying land with a structure on it, so both the value and the risk sit in the title to the land rather than in the building.",
+    note: "With a bungalow you are buying the land as much as the house. We check the land title first, because that is where the value is.",
   },
   {
     key: "shop",
     label: "Shop or office",
     phrase: "a shop or office",
-    note: "Priced on what the space can earn rather than what it costs to live in. Check the unit is actually permitted for the use you have in mind.",
+    note: "A shop or office is priced on what it can earn. We confirm the approved use and the frontage, so the unit works for the business you have in mind.",
   },
   {
     key: "plot",
     label: "Plot",
     phrase: "a plot",
-    note: "There is no building to inspect, so everything rests on the title chain, the zoning, and what you are permitted to build.",
+    note: "With a plot the value is in the title, the zoning and what you may build. We check all three before you pay a token.",
   },
   {
     key: "other",

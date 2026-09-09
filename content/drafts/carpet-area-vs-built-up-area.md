@@ -169,4 +169,4 @@ On the new launches listed across Borivali, Kandivali and Malad in September 202
 
 ## Before you sign
 
-The area on the brochure is the least reliable number in the transaction. Ask for the carpet area in writing, work out the price per carpet foot yourself, and compare flats on that basis rather than on the headline rate.
+Ask for the carpet area in writing, work out the price per carpet foot, and compare flats on that basis. It is the single habit that makes you a sharper buyer than most. The [carpet area calculator](/tools/carpet-area-calculator) does the arithmetic, and if you want a second pair of eyes on a flat in Borivali, Kandivali or Malad, send us the listing and we will read it with you.

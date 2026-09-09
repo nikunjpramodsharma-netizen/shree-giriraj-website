@@ -131,4 +131,4 @@ No. The deposit is not income; it is money you hold and give back. It can be inv
 
 The [rental yield calculator](/tools/rental-yield-calculator) on this site shows gross and net side by side and puts the gap between them on screen, because that gap is the whole point. It also runs the question backwards: tell it the return you need and it says what monthly rent would have to be true to get there. That is the version worth taking to a viewing.
 
-If you are weighing a specific flat in Borivali, Kandivali or Malad and want somebody to look at the building as well as the arithmetic, that is what our [property investment advisory](/services/investment-advisory) is for.
+The [rental yield calculator](/tools/rental-yield-calculator) shows gross and net side by side, and runs the question backwards: tell it the return you want and it tells you the rent that delivers it. If you are weighing a specific flat in Borivali, Kandivali or Malad, our [property investment advisory](/services/investment-advisory) will look at the building as well as the arithmetic, with no obligation.

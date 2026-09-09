@@ -106,4 +106,4 @@ It gives the government's own valuation for an area, which is one half of the st
 
 ## Before you transact
 
-Check the reckoner rate before you agree a price, and run an e-Search on the property before you pay a token. Both are free and both are quicker than the problems they prevent.
+Check the reckoner rate before you agree a price, and run an e-Search before you pay a token. Both are free and both put you in a stronger position at the table. If you would rather we did it for a flat you are considering in Borivali, Kandivali or Malad, send us the building and we will come back with what we find.

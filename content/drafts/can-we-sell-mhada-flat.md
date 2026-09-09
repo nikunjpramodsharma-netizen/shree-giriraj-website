@@ -117,4 +117,4 @@ Yes. For EWS, LIG and MIG schemes the transferee must fall in one of those group
 
 Get the allotment letter, the latest rent receipt and the society's position in front of somebody who knows the Regulations. Find out whether the unearned increase applies to your scheme. Then price the flat, knowing what the transfer will cost and how long the Board has to decide.
 
-If the flat is in Borivali, Kandivali or Malad, that is what our [MHADA paperwork service](/services/mhada-paperwork) does, and the buyer's side of the same transaction is covered in [how to buy a MHADA flat in resale](/blog/how-to-buy-mhada-flat-in-resale).
+Get the allotment letter, the latest receipt and the society's position together, find out whether the unearned increase applies to your scheme, and price the flat knowing what the transfer costs. Done in that order, a MHADA sale is a straightforward one. If the flat is in Borivali, Kandivali or Malad, our [MHADA paperwork service](/services/mhada-paperwork) handles the whole file, and the buyer's side is in [how to buy a MHADA flat in resale](/blog/how-to-buy-mhada-flat-in-resale).

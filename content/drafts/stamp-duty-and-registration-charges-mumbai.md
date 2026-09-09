@@ -130,4 +130,4 @@ Take the higher of the agreed price and the ready reckoner value, then apply 6 p
 
 ## Before you budget
 
-Work out duty on the reckoner value rather than the agreed price, and treat that as your number. If the agreed price turns out to be the higher of the two, you get a pleasant surprise instead of an unpleasant one.
+Work out duty on the reckoner value and treat that as your number; if the agreed price turns out lower, the surprise is a pleasant one. The [stamp duty calculator](/tools/stamp-duty-calculator-mumbai) does it in a minute, and if you would like the exact figure for a specific flat in Borivali, Kandivali or Malad, tell us the building and we will confirm it.

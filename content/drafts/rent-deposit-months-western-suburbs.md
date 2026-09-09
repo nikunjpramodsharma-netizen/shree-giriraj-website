@@ -134,4 +134,4 @@ Less than the headlines suggest. The Maharashtra Rent Control (Amendment) Bill, 
 
 Get the amount, the permitted deductions and the return date into the written agreement, and get the agreement registered. Photograph everything on day one. Pay by transfer. And if a deposit looks unusually low for the building, ask why, because there is normally a reason.
 
-If you are looking at a flat in Borivali, Kandivali or Malad and want somebody to read the agreement before you sign it, that is part of what we do.
+Get the amount, the deductions and the return date into the written agreement, register it, and photograph the flat on day one. Do those and the deposit comes back the way it should. If you are looking at a flat in Borivali, Kandivali or Malad and would like us to read the agreement before you sign, send it over. That is part of what we do, and there is no charge for a look.

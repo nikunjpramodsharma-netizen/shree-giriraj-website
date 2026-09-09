@@ -84,7 +84,7 @@ So the certificate answers one question well and stays silent on several others.
 4. Agree a price
 5. Agreement, stamp duty, registration
 
-Most people do step two after step four. That is the wrong order, and it is why deals collapse late.
+Most people do step two after step four. Doing it first is what keeps a good deal on schedule.
 
 ---
 
@@ -119,4 +119,4 @@ No law makes it a condition of buying. In practice it is close to mandatory, bec
 
 ## Before you pay a token
 
-Get the certificate before money moves, not after. It is one of the cheapest steps in the whole purchase and one of the most commonly skipped.
+Get the certificate before money moves. It is one of the cheapest steps in the purchase and one of the most reassuring, because it tells you the flat is yours to buy with nothing hanging over it. If you would like us to run the search on a flat in Borivali, Kandivali or Malad, send us the details and we will do it with you.

@@ -129,4 +129,4 @@ Rarely. The offer that gets built is the one that matters, and the developer's c
 
 ## Before the first builder meeting
 
-Get the lease, the Board's account and every member's file in order, and read the regulation as it stands today. If the society is in Borivali, Kandivali or Malad, our [MHADA paperwork service](/services/mhada-paperwork) handles the members' transfers and regularisation that a clean society file needs.
+Get the lease, the Board's account and every member's file in order, and read the regulation as it stands today, and the society goes to the market from a position of strength. If the society is in Borivali, Kandivali or Malad, our [MHADA paperwork service](/services/mhada-paperwork) handles the members' transfers and regularisation a clean society file needs.

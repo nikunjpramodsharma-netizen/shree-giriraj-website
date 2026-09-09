@@ -144,8 +144,8 @@ export function SituationTool({
                 )}
 
                 <p className="border-l-2 border-brass pl-3.5 text-[0.94rem] text-muted">
-                  <b className="text-ink">Usually goes wrong:</b>{" "}
-                  {chosen.warning}
+                  <b className="text-ink">Where we come in:</b>{" "}
+                  {chosen.help}
                 </p>
                 <a
                   href={waLink(message)}

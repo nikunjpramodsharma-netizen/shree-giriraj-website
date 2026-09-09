@@ -114,4 +114,4 @@ Yes. A building may not lawfully be occupied until the municipal corporation has
 
 ## Before you take the keys
 
-Ask for the OC in writing before possession, not after. It is far easier to hold a builder to it while they are still waiting on your final payment.
+Ask for the OC in writing before possession. It is the document that turns a finished building into a home you can insure, mortgage and sell, and it is far easier to secure while the builder is still waiting on your final payment. If you are booking in Borivali, Kandivali or Malad, we check it for you before you commit.
