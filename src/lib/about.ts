@@ -50,20 +50,25 @@ export const STORY_PROMPTS: StorySection[] = [
  * that is the whole of what this says. No invented biography, no invented
  * previous career, no invented quote.
  *
- * `photo` is null until a real photograph of him exists. It renders as a
- * monogram, which is an honest empty state rather than a stock face wearing
- * somebody's real name. The About hero used to do exactly that, captioning
- * three foreign models as "the Shree Giriraj team", so the rule here is
- * deliberate: a real person's name never sits next to a face that is not his.
+ * `photo` was null until 9 September 2026, rendering a monogram: an honest
+ * empty state rather than a stock face wearing somebody's real name. The
+ * About hero used to do exactly that, captioning three foreign models as
+ * "the Shree Giriraj team", so the rule stands: a real person's name never
+ * sits next to a face that is not his.
  *
- * To finish it: drop the photograph in as /public/team/pramod-sharma.jpg and
- * set `photo` to that path. Nothing else needs changing.
+ * The portrait was supplied by the owner on 9 September 2026 and identified
+ * by him as Pramod Sharma. The file he supplied carried a ChatGPT image name,
+ * so it is at minimum AI processed; he chose it for the page knowingly. It is
+ * stored as an 800 by 800 head and shoulders crop, because the page renders it
+ * in a 96 pixel circle and a full length frame would show a lapel, not a face.
+ * The null branch and the monogram stay in the component in case the photo is
+ * ever pulled.
  */
 export const FOUNDER = {
   name: "Pramod Kishanlal Sharma",
   role: "Founder",
-  /** Set once a real photograph exists. Null renders the monogram. */
-  photo: null as string | null,
+  /** Null renders the monogram. */
+  photo: "/team/pramod-sharma.jpg" as string | null,
 } as const;
 
 /** Initials for the placeholder monogram, derived so they cannot drift. */
