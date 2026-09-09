@@ -122,3 +122,50 @@ export const ABOUT_FAQS: AboutFaq[] = [
     a: "Shop No 11, Clover Grove CHS, Chikoowadi, Borivali West, Mumbai 400092. The commercial complex is known locally as Garden Groove Shopping Centre, which is the same place, so either name will get you to the door.",
   },
 ];
+
+/**
+ * The journey rail.
+ *
+ * Modelled on the About page of nextyn.com, at the owner's request on
+ * 9 September 2026: a rail down the centre of the page that fills as the
+ * reader scrolls, with a dated entry lighting up as the fill reaches it.
+ *
+ * Only confirmed dates ride it. The firm has exactly two, 1996 and 2005, and
+ * a present state that is a matter of record. Nextyn's rail has seven rows
+ * because Nextyn has seven dated events it can stand behind; inventing four
+ * more here to make the rail look busier would put fiction on the one page
+ * that exists to establish trust. When the owner answers the story prompts,
+ * anything dated in the answers becomes a row. Until then, three.
+ */
+export type JourneyEntry = {
+  /** What sits in the year column. A year, or a word if it is the present. */
+  when: string;
+  title: string;
+  body: string;
+  chips: string[];
+  image: { src: string; alt: string };
+};
+
+export const JOURNEY: JourneyEntry[] = [
+  {
+    when: "1996",
+    title: "Started in real estate, in the western suburbs",
+    body: "Pramod Kishanlal Sharma began working the property market of Borivali, Kandivali and Malad. Resale, rentals and the paperwork that goes with both, in the same three suburbs the firm still works today.",
+    chips: ["Borivali", "Kandivali", "Malad"],
+    image: { src: "/services/hero-resale.jpg", alt: "The Hiranandani towers in Mumbai above a belt of trees and Powai lake" },
+  },
+  {
+    when: "2005",
+    title: "The shop in Chikoowadi",
+    body: "The firm took the office it still occupies: Shop No 11, Clover Grove CHS, Chikoowadi, Borivali West. Long enough at one address to have sold flats in the same building twice.",
+    chips: ["Clover Grove CHS", "Borivali West"],
+    image: { src: "/sections/about-suburbs.jpg", alt: "Residential towers in Mumbai above a line of trees" },
+  },
+  {
+    when: "Today",
+    title: "Six services, three suburbs, one address",
+    body: "Resale, rentals, new project bookings, property investment advisory, commercial and plots, and interior and civil work. MahaRERA registered agent A51800005726. Still run by the founder, still from the same shop.",
+    chips: ["MahaRERA A51800005726", "Family run"],
+    image: { src: "/services/hero-commercial.jpg", alt: "Shoppers walking a covered shopping arcade lined with glass shopfronts" },
+  },
+];
