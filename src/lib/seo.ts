@@ -171,6 +171,17 @@ export function isEnglishOnlyPath(path: string): boolean {
 /** Routes that must never be indexed. Kept in one place so robots and sitemap agree. */
 export const NOINDEX_PREFIXES = ["/studio", "/lp/", "/api/"] as const;
 
+/**
+ * Service slugs that were retired and now redirect. Redevelopment became
+ * investment advisory and shops and plots became commercial and plots, both
+ * on 8 and 9 September 2026, but their Sanity `page` documents still exist.
+ * Anything that treats "a Sanity page whose slug is not a service" as a
+ * flexible page must exclude these too, or it will publish a URL that only
+ * ever answers with a 308. The sitemap did exactly that, in four locales,
+ * until the 9 September audit caught it.
+ */
+export const RETIRED_SERVICE_SLUGS = ["redevelopment", "shops-plots"] as const;
+
 /** The seven service slugs are fixed and shared by the sitemap and the nav. */
 export const SERVICE_SLUGS = [
   "resale-flats",

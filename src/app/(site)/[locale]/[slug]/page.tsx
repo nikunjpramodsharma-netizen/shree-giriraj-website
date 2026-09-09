@@ -10,7 +10,7 @@ import {
   type Locale,
   type LocalizedValue,
 } from "@/lib/i18n-content";
-import { pageUrls, SERVICE_SLUGS } from "@/lib/seo";
+import { pageUrls, SERVICE_SLUGS, RETIRED_SERVICE_SLUGS } from "@/lib/seo";
 
 export const revalidate = 60;
 
@@ -45,6 +45,10 @@ const RESERVED = new Set([
   "projects",
   "services",
   ...SERVICE_SLUGS,
+  // Retired services keep their Sanity documents; without this the route
+  // would generate /redevelopment and /shops-plots as flexible pages that the
+  // redirects in next.config.mjs then have to catch. Better not to build them.
+  ...RETIRED_SERVICE_SLUGS,
 ]);
 
 /** Only emit a locale route where the page genuinely has a body in that locale. */

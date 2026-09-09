@@ -70,7 +70,7 @@ That last part matters more than it sounds. A notified service has a time limit,
 
 The portal's own page lists no separate document requirements against the service, because the particulars are collected in the application itself. In practice the Estate Manager's office wants to see that the applicant is the allottee, that the flat is the flat, and that the Board's dues are clear.
 
-[ VERIFY ] The Mumbai Board's exact document checklist and any fee for the NOC for rent are not published on the Aaple Sarkar page for the service. Confirm both at the Estate Manager's office before submitting, and treat any figure quoted to you by a third party as unconfirmed until the Board's receipt says so.
+The Mumbai Board's exact document checklist and any fee for the NOC for rent are not published on the Aaple Sarkar page for the service. Confirm both at the Estate Manager's office before submitting, and treat any figure quoted to you by a third party as unconfirmed until the Board's receipt says so.
 
 What you should have ready regardless: the allotment letter, the latest rent or maintenance receipt from the Board, the society's no objection where a society exists, identity proof for the allottee, and the tenant's details. If the allottee has died and the tenancy has not yet been transferred to an heir, that transfer comes first; the Board will not issue an NOC in the name of somebody who is not on its record.
 
@@ -82,7 +82,7 @@ The NOC clears the flat to be let. It does not create the tenancy. That is the l
 
 Two things are worth writing into a MHADA leave and licence in particular. The agreement should say plainly that it is a licence, not a transfer of any interest in the tenement, because the Regulations are precisely about transfers. And the term should sit inside the period the NOC covers. A licence that outruns its NOC is a licence without permission for its last months.
 
-[ VERIFY ] Whether the Board's NOC for rent carries a fixed validity period, and whether it must be revalidated for a renewed licence, should be confirmed with the Estate Manager. MHADA does operate a revalidation of NOC process, and it is safer to assume a renewal needs one than to find out it did.
+Whether the Board's NOC for rent carries a fixed validity period, and whether it must be revalidated for a renewed licence, should be confirmed with the Estate Manager. MHADA does operate a revalidation of NOC process, and it is safer to assume a renewal needs one than to find out it did.
 
 ---
 

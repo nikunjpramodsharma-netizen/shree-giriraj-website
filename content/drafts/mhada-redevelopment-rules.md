@@ -57,7 +57,7 @@ An ordinary society redevelops on land it owns, under the general regulations. A
 
 That regulation is 33(5) of the Development Control and Promotion Regulations, 2034, which applies to the redevelopment of housing schemes of the Maharashtra Housing and Area Development Authority. It is the source of the additional floor space index a MHADA layout can use, and of the terms on which it can use it.
 
-[ VERIFY ] The floor space index, the premium payable, the share of built up area to be handed to MHADA, and the minimum area entitlement per member under Regulation 33(5) are figures that have been amended by government resolution more than once. They are not quoted here because any number printed today would need checking against the current text on the day it is used. Read the regulation and the latest resolution before believing any figure on a builder's presentation.
+The floor space index, the premium payable, the share of built up area to be handed to MHADA, and the minimum area entitlement per member under Regulation 33(5) are figures that have been amended by government resolution more than once. They are not quoted here because any number printed today would need checking against the current text on the day it is used. Read the regulation and the latest resolution before believing any figure on a builder's presentation.
 
 ---
 
@@ -81,7 +81,7 @@ Which is why the paperwork of the individual members matters to the society as a
 
 Yes. MHADA published Guidelines for Self Redevelopment on 26 June 2023, setting out how a society can take on the redevelopment of its own layout rather than appointing a developer. The attraction is obvious: the society keeps what a developer would otherwise take as profit. The cost is that the society then carries the financing, the contractor, the approvals and the risk itself.
 
-[ VERIFY ] The eligibility conditions, the financing arrangements and the incentives in the 2023 self redevelopment guidelines should be read from the document itself before a society commits to that route. The guidelines are a scanned document of some length and are not summarised here.
+The eligibility conditions, the financing arrangements and the incentives in the 2023 self redevelopment guidelines should be read from the document itself before a society commits to that route. The guidelines are a scanned document of some length and are not summarised here.
 
 Self redevelopment suits a society with a functioning committee, members who agree, and access to the professionals it will need. It does not suit a society that is choosing it only because a builder's offer looked thin.
 
@@ -91,7 +91,7 @@ Self redevelopment suits a society with a functioning committee, members who agr
 
 Redevelopment of a cooperative housing society in Maharashtra requires the members' consent obtained in the manner the cooperative law and the government's directions prescribe: a general body meeting called for the purpose, with the required majority, minuted and recorded.
 
-[ VERIFY ] The percentage of members' consent required, and the procedure for the general body meeting under the applicable government direction for redevelopment of cooperative housing societies, should be confirmed against the current direction before the meeting is called, because a meeting called on the wrong footing has to be held again.
+The percentage of members' consent required, and the procedure for the general body meeting under the applicable government direction for redevelopment of cooperative housing societies, should be confirmed against the current direction before the meeting is called, because a meeting called on the wrong footing has to be held again.
 
 Whatever the number, the practical advice is the same: consent obtained after the builder has been chosen is consent the members were not really asked for. The society decides to redevelop first, on its own terms, then goes to the market.
 

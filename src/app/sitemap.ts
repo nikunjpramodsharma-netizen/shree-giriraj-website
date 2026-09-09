@@ -6,7 +6,7 @@ import {
   projectLocaleIndexQuery,
 } from "@/sanity/queries";
 import { routing } from "@/i18n/routing";
-import { absoluteUrl, sitemapAlternates, SERVICE_SLUGS } from "@/lib/seo";
+import { absoluteUrl, sitemapAlternates, SERVICE_SLUGS, RETIRED_SERVICE_SLUGS } from "@/lib/seo";
 import { LOCALES, type Locale } from "@/lib/i18n-content";
 import { PILLAR_SLUGS } from "@/lib/pillars";
 import { AREA_SLUGS, getArea, areaIsComplete } from "@/lib/areas";
@@ -124,6 +124,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "projects",
     "services",
     ...SERVICE_SLUGS,
+    // Retired services still have Sanity documents. Listing them here would
+    // put a redirecting URL in the sitemap, four times over.
+    ...RETIRED_SERVICE_SLUGS,
   ]);
 
   const fromSanity = new Set<string>();

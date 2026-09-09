@@ -66,25 +66,16 @@ describe("draft versus ready", () => {
     // letting commercial premises, which turns on both parties' registration
     // status and has been amended more than once. Publishing a tax threshold
     // we have not confirmed is exactly what the marker system exists to stop.
-    // The MHADA cluster added on 9 September 2026 brought four more into
-    // draft, each on a specific unconfirmed point: the NOC for rent document
-    // list and fee, whether transfer charges apply in full to heirs, the
-    // figures under Regulation 33(5) and the consent percentage, and lenders'
-    // policies on MHADA resale. Each marker says exactly what to confirm.
-    const drafts = getAllPosts().filter((p) => !p.isReady).map((p) => p.slug).sort();
-    expect(drafts).toEqual(
-      [
-        "commercial-property-investment-mumbai",
-        "can-we-rent-mhada-flat",
-        "mhada-transfer-on-death",
-        "mhada-redevelopment-rules",
-        "how-to-buy-mhada-flat-in-resale",
-      ].sort(),
-    );
+    // The four MHADA posts each carried a VERIFY on one unconfirmed point.
+    // On 9 September 2026 the owner chose to publish them with those caveats
+    // as written, so the sentences stayed and the markers went. Only the
+    // commercial post remains in draft, on the GST registration threshold.
+    const drafts = getAllPosts().filter((p) => !p.isReady).map((p) => p.slug);
+    expect(drafts).toEqual(["commercial-property-investment-mumbai"]);
   });
 
   it("keeps the finished investment and MHADA posts out of draft", () => {
-    for (const slug of ["rental-yield-mumbai", "best-area-to-invest-in-mumbai", "can-we-sell-mhada-flat"]) {
+    for (const slug of ["rental-yield-mumbai", "best-area-to-invest-in-mumbai", "can-we-sell-mhada-flat", "can-we-rent-mhada-flat", "mhada-transfer-on-death", "mhada-redevelopment-rules", "how-to-buy-mhada-flat-in-resale"]) {
       const post = getPost(slug);
       expect(post, slug).toBeTruthy();
       expect(post!.openMarkers, slug).toEqual([]);

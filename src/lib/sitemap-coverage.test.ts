@@ -55,7 +55,20 @@ describe("what the sitemap can say about a markdown post", () => {
  * checks the output directly, because the only version of this test worth
  * having is one that would have caught the original bug.
  */
-vi.mock("@/sanity/client", () => ({ client: { fetch: async () => [] } }));
+vi.mock("@/sanity/client", () => ({
+  client: {
+    // The retired service documents are still in Sanity. Returning them here
+    // is what reproduces the bug where the sitemap listed /redevelopment and
+    // /shops-plots in four locales, each answering only with a 308.
+    fetch: async (query: string) =>
+      /_type == "page"/.test(query)
+        ? [
+            { slug: "redevelopment", updatedAt: "2026-07-28", locales: ["en", "hi", "mr", "gu"] },
+            { slug: "shops-plots", updatedAt: "2026-07-28", locales: ["en", "hi", "mr", "gu"] },
+          ]
+        : [],
+  },
+}));
 
 describe("gated pages the sitemap must stay silent about", () => {
   it("never advertises a URL that its own page marks noindex", async () => {
@@ -89,6 +102,14 @@ describe("gated pages the sitemap must stay silent about", () => {
     // And a Sanity backed one still carries the full cluster.
     const rentals = entries.filter((e) => e.url.endsWith("/services/rentals"));
     expect(rentals.length).toBe(4);
+  });
+
+  it("never lists a retired service that now only redirects", async () => {
+    const { default: sitemap } = await import("../app/sitemap");
+    const urls = (await sitemap()).map((e) => e.url);
+    for (const slug of ["redevelopment", "shops-plots"]) {
+      expect(urls.filter((u) => u.endsWith(`/${slug}`)), slug).toEqual([]);
+    }
   });
 
   it("still lists the pages that are genuinely ready", async () => {
