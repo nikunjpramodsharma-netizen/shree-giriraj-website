@@ -152,7 +152,22 @@
     "whatsappNameLabel": "Name",
     "whatsappIntentLabel": "Looking to",
     "whatsappAreaLabel": "Area",
-    "whatsappPhoneLabel": "Phone"
+    "whatsappPhoneLabel": "Phone",
+    "doneHeading": "Thank you, that has reached us.",
+    "doneBody": "We reply during working hours, usually within the hour. If it is urgent, call {phone}.",
+    "waButton": "Message us on WhatsApp",
+    "waNote": "Opens WhatsApp in a new tab. Fastest reply.",
+    "formOpen": "Rather not use WhatsApp? Send your details",
+    "formOpenNote": "We will call or email you back instead.",
+    "formIntro": "Prefer a call or an email? Leave your details and we will come back to you.",
+    "emailPlaceholder": "Email address",
+    "messagePlaceholder": "Anything else we should know (optional)",
+    "sending": "Sending...",
+    "sendDetails": "Send my details",
+    "validation": "Please add your name and either a phone number or an email.",
+    "failed": "Something went wrong. Please call {phone} or email {email}.",
+    "unconfigured": "We could not save that just now. Please call {phone} or email {email} and we will pick it up straight away.",
+    "privacy": "No spam, ever. We use your details only to answer this enquiry."
   },
   "footer": {
     "description": "Resale, rentals, new project bookings, investment advice, commercial, MHADA paperwork and interiors. Trusted property advice for Borivali, Kandivali and Malad since {year}.",

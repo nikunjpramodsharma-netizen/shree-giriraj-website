@@ -5,19 +5,20 @@ import { useState } from "react";
 import { Link } from "@/i18n/navigation";
 import EnglishLink from "next/link";
 import { AREA_PAGES_READY, type AreaPanel } from "@/lib/homepage-content";
+import { tr } from "@/lib/copy-i18n";
 
 /**
  * Section 03. Sits third rather than seventh because "do you cover where I am
  * looking" is the earliest real question a visitor has, and because this is the
  * main internal link hub into the area pages.
  */
-export function AreaSwitcher({ panels }: { panels: AreaPanel[] }) {
+export function AreaSwitcher({ panels, locale = "en" }: { panels: AreaPanel[]; locale?: string }) {
   const [active, setActive] = useState(0);
   const panel = panels[active];
 
   return (
     <div>
-      <div className="mb-7 flex flex-wrap gap-2.5" role="tablist" aria-label="Choose a suburb">
+      <div className="mb-7 flex flex-wrap gap-2.5" role="tablist" aria-label={tr(locale, "Choose a suburb")}>
         {panels.map((p, i) => (
           <button
             key={p.slug}
@@ -54,7 +55,7 @@ export function AreaSwitcher({ panels }: { panels: AreaPanel[] }) {
           </dl>
 
           <p className="mt-5 border-l-2 border-brass pl-3.5 text-[0.94rem] text-paper/70">
-            <b className="text-white">What to watch:</b> {panel.watch}
+            <b className="text-white">{tr(locale, "What to watch:")}</b> {panel.watch}
           </p>
 
           {AREA_PAGES_READY && (
@@ -62,7 +63,7 @@ export function AreaSwitcher({ panels }: { panels: AreaPanel[] }) {
               href={`/areas/${panel.slug}`}
               className="btn btn-outline mt-6 border-paper/40 text-paper"
             >
-              See {panel.name} in detail
+              {tr(locale, "See {name} in detail").replace("{name}", panel.name)}
             </EnglishLink>
           )}
         </div>
@@ -72,7 +73,7 @@ export function AreaSwitcher({ panels }: { panels: AreaPanel[] }) {
             <Image
               key={p.slug}
               src={p.image}
-              alt={`Property in ${p.name}`}
+              alt={tr(locale, "Property in {name}").replace("{name}", p.name)}
               fill
               sizes="(min-width: 768px) 45vw, 100vw"
               className="object-cover transition-opacity duration-500"

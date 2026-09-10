@@ -21,7 +21,7 @@
     "statSuburbs": "આવરી લેવાયેલા પરાં",
     "statRating": "ક્લાયન્ટ રેટિંગ",
     "featuredBadge": "હમણાં બુકિંગ · વિશેષ",
-    "statRera": "MahaRERA registered",
+    "statRera": "MahaRERA નોંધાયેલ",
     "eyebrowSince": "Since {year}"
   },
   "services": {
@@ -33,12 +33,12 @@
     "rentalsBody": "બોરીવલી, કાંદિવલી અને મલાડમાં 1 બીએચકેથી 3 બીએચકે સુધીના ભાડાના ફ્લેટ, ભાડુઆતો અને માલિકોનું ઝડપી મેચિંગ, નોંધાયેલ ભાડા કરાર પણ અમે સંભાળીએ છીએ.",
     "newProjectTitle": "નવા પ્રોજેક્ટ બુકિંગ",
     "newProjectBody": "બોરીવલી, કાંદિવલી અને મલાડમાં નવા અને આગામી રહેણાંક પ્રોજેક્ટ્સમાં અમારા સીધા બિલ્ડર નેટવર્ક દ્વારા વહેલી પહોંચ, ઘણીવાર તેઓ ખુલ્લા બજારમાં આવે તે પહેલાં જ.",
-    "investmentAdvisoryTitle": "Property investment advisory",
-    "investmentAdvisoryBody": "Guidance for investors buying in Borivali, Kandivali and Malad to hold rather than to live in: micro market assessment, rental yield arithmetic on the actual flat, title checks and negotiation.",
-    "commercialTitle": "Commercial & plots",
-    "commercialBody": "Shops, showrooms, office space and plots for sale or rent in Borivali, Kandivali and Malad, for businesses that need premises here and investors buying a unit to let.",
-    "mhadaTitle": "MHADA paperwork",
-    "mhadaBody": "Transfer of tenement, no objection certificates for sale, rent and mortgage, transfer to heirs and regularisation for MHADA flats in Borivali, Kandivali and Malad.",
+    "investmentAdvisoryTitle": "પ્રોપર્ટી રોકાણ સલાહ",
+    "investmentAdvisoryBody": "બોરીવલી, કાંદિવલી અને મલાડમાં રહેવા માટે નહીં, રાખવા માટે ખરીદતા રોકાણકારો માટે માર્ગદર્શન: વિસ્તારનું મૂલ્યાંકન, ખરા ફ્લેટ પર ભાડાની યીલ્ડનો હિસાબ, ટાઇટલ ચકાસણી અને ભાવતાલ.",
+    "commercialTitle": "કમર્શિયલ અને પ્લોટ",
+    "commercialBody": "બોરીવલી, કાંદિવલી અને મલાડમાં વેચાણ કે ભાડે દુકાનો, શોરૂમ, ઑફિસ સ્પેસ અને પ્લોટ, જેમને અહીં જગ્યા જોઈએ એવા ધંધા માટે અને ભાડે આપવા યુનિટ ખરીદતા રોકાણકારો માટે.",
+    "mhadaTitle": "MHADA કાગળકામ",
+    "mhadaBody": "બોરીવલી, કાંદિવલી અને મલાડના MHADA ફ્લેટ માટે ટેનમેન્ટ ટ્રાન્સફર, વેચાણ, ભાડા અને ગીરોની NOC, વારસોને ટ્રાન્સફર અને નિયમિતીકરણ.",
     "interiorsTitle": "ઈન્ટીરિયર ડિઝાઇન અને સિવિલ વર્ક",
     "interiorsBody": "બોરીવલી, કાંદિવલી અને મલાડમાં સ્થાનિક ઈન્ટીરિયર ડિઝાઇનર્સ અને સિવિલ વર્ક ટીમ, ફિટ આઉટ, નવીનીકરણ અને સિવિલ વર્ક જેથી તમારું ઘર રહેવા માટે તૈયાર થાય."
   },
@@ -63,19 +63,19 @@
       "સાઈટ વિઝિટ, યુનિટ પસંદગી અને હાલની પ્રાઇસ શીટ"
     ],
     "investmentAdvisory": [
-      "Tell us the budget, the hold period and whether you are buying for rent or resale",
-      "We assess the micro market and the specific building, and do the yield arithmetic",
-      "Title and society checks, negotiation, documentation and registration"
+      "બજેટ, કેટલો સમય રાખશો, અને ભાડા માટે ખરીદો છો કે રીસેલ માટે તે કહો",
+      "અમે વિસ્તાર અને એ બિલ્ડિંગનું મૂલ્યાંકન કરીએ છીએ, અને યીલ્ડનો હિસાબ કરીએ છીએ",
+      "ટાઇટલ અને સોસાયટી ચકાસણી, ભાવતાલ, દસ્તાવેજ અને રજિસ્ટ્રેશન"
     ],
     "commercialPlots": [
-      "Tell us the business or the investment, and the stretch you have in mind",
-      "We shortlist units on approved use, frontage and what they let for today",
-      "Site visits, society and title checks, then registration"
+      "ધંધો કે રોકાણ, અને મનમાં હોય તો રસ્તાનો ભાગ કહો",
+      "અમે મંજૂર ઉપયોગ, ફ્રન્ટેજ અને આજના ભાડા પર યુનિટ શોર્ટલિસ્ટ કરીએ છીએ",
+      "સાઇટ મુલાકાત, સોસાયટી અને ટાઇટલ ચકાસણી, પછી રજિસ્ટ્રેશન"
     ],
     "mhadaPaperwork": [
-      "Tell us the flat, the scheme and what you need: sale, tenant, loan, heir or regularisation",
-      "We assemble the complete file against the Board's own document list",
-      "Submitted to the Estate Manager, followed up until it is decided"
+      "ફ્લેટ, યોજના અને જરૂરિયાત કહો: વેચાણ, ભાડૂત, લોન, વારસ કે નિયમિતીકરણ",
+      "અમે બોર્ડની પોતાની દસ્તાવેજ યાદી પ્રમાણે પૂરી ફાઇલ તૈયાર કરીએ છીએ",
+      "એસ્ટેટ મેનેજર પાસે જમા, અને નિર્ણય થાય ત્યાં સુધી ફોલો અપ"
     ],
     "interiors": [
       "તમારી જગ્યા, સમયમર્યાદા અને બજેટ જણાવો",
@@ -98,7 +98,7 @@
     "row3": "1996થી બોરીવલી, કાંદિવલી અને મલાડમાં કામ",
     "row4": "નોંધાયેલ કરાર શરૂઆતથી અંત સુધી અમે સંભાળીએ છીએ",
     "row5": "પૂછપરછથી કબજા સુધી એક જ સંપર્ક વ્યક્તિ",
-    "row6": "Knows the pocket, the building and the society, not just the suburb",
+    "row6": "માત્ર ઉપનગર નહીં, વિસ્તાર, બિલ્ડિંગ અને સોસાયટીને ઓળખે છે",
     "legendYes": "હા",
     "legendPartial": "ક્યારેક",
     "legendNo": "ના"
@@ -122,7 +122,7 @@
   "areas": {
     "eyebrow": "અમે ક્યાં કામ કરીએ છીએ",
     "heading": "પશ્ચિમ પરાંમાં",
-    "borivaliBody": "Our home turf for property in Borivali West and East: resale flats, rentals and investment advice, all handled locally.",
+    "borivaliBody": "બોરીવલી વેસ્ટ અને ઈસ્ટમાં પ્રોપર્ટી માટે અમારો પોતાનો વિસ્તાર: રીસેલ ફ્લેટ, ભાડું અને રોકાણ સલાહ, બધું સ્થાનિક સ્તરે.",
     "kandivaliBody": "એમ.જી. રોડ અને લિંક રોડ પાસે કાંદિવલીમાં રિયલ એસ્ટેટ, પ્રીમિયમ નવા લોન્ચ, રીસેલ ફ્લેટ્સ અને ફેમિલી હોમ્સ.",
     "maladBody": "મિન્ડસ્પેસ અને લિંક રોડ કોરિડોર પાસે મલાડમાં ફ્લેટ્સ, વધતા રહેણાંક અને કોમર્શિયલ વિકલ્પો.",
     "dahisarBody": "દહિસરમાં વેસ્ટર્ન એક્સપ્રેસ હાઈવે નજીક ઘરો, બોરીવલીની બરાબર ઉત્તરે ઝડપથી વધતું પરું, સારી કનેક્ટિવિટી અને પરિવાર માટે અનુકૂળ ભાવો સાથે.",
@@ -144,15 +144,30 @@
     "intentSell": "વેચવું",
     "intentRent": "ભાડે",
     "intentNewProject": "નવો પ્રોજેક્ટ",
-    "intentInvest": "Property investment",
-    "intentMhada": "MHADA paperwork",
+    "intentInvest": "પ્રોપર્ટી રોકાણ",
+    "intentMhada": "MHADA કાગળકામ",
     "submit": "વોટ્સએપ પર પૂછપરછ મોકલો",
     "disclaimer": "તમારી વિગતો ભરીને વોટ્સએપ ખોલે છે. ક્યારેય કોઈ સ્પામ નહીં.",
     "whatsappGreeting": "નમસ્તે શ્રી ગિરિરાજ, મારે પૂછપરછ કરવી છે.",
     "whatsappNameLabel": "નામ",
     "whatsappIntentLabel": "શોધી રહ્યા છીએ",
     "whatsappAreaLabel": "વિસ્તાર",
-    "whatsappPhoneLabel": "ફોન"
+    "whatsappPhoneLabel": "ફોન",
+    "doneHeading": "આભાર, તમારો સંદેશ અમારા સુધી પહોંચી ગયો છે.",
+    "doneBody": "અમે કામના કલાકોમાં જવાબ આપીએ છીએ, સામાન્ય રીતે એક કલાકમાં. તાકીદનું હોય તો {phone} પર કૉલ કરો.",
+    "waButton": "અમને WhatsApp પર સંદેશ મોકલો",
+    "waNote": "WhatsApp નવા ટેબમાં ખૂલે છે. સૌથી ઝડપી જવાબ.",
+    "formOpen": "WhatsApp વાપરવું નથી? તમારી વિગતો મોકલો",
+    "formOpenNote": "અમે તમને કૉલ કે ઈમેલથી જવાબ આપીશું.",
+    "formIntro": "કૉલ કે ઈમેલ પસંદ છે? તમારી વિગતો મૂકો અને અમે તમારો સંપર્ક કરીશું.",
+    "emailPlaceholder": "ઈમેલ સરનામું",
+    "messagePlaceholder": "બીજું કંઈ અમારે જાણવું જોઈએ (વૈકલ્પિક)",
+    "sending": "મોકલી રહ્યા છીએ...",
+    "sendDetails": "મારી વિગતો મોકલો",
+    "validation": "કૃપા કરીને તમારું નામ અને ફોન નંબર કે ઈમેલમાંથી એક જરૂર લખો.",
+    "failed": "કંઈક ખોટું થયું. કૃપા કરીને {phone} પર કૉલ કરો અથવા {email} પર ઈમેલ કરો.",
+    "unconfigured": "અમે હમણાં આ સેવ કરી શક્યા નહીં. કૃપા કરીને {phone} પર કૉલ કરો અથવા {email} પર ઈમેલ કરો, અમે તરત સંભાળી લઈશું.",
+    "privacy": "ક્યારેય સ્પામ નહીં. તમારી વિગતો માત્ર આ પૂછપરછનો જવાબ આપવા માટે વપરાય છે."
   },
   "footer": {
     "description": "{year} થી બોરીવલી વેસ્ટમાં વિશ્વસનીય પ્રોપર્ટી સલાહ.",

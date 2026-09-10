@@ -20,9 +20,10 @@ import { captureAttribution, getAttribution } from "@/lib/attribution";
  * that captures name, phone, email and requirement and posts them to the site.
  * Neither pretends to be the other.
  *
- * LOCALE NOTE: labels that already existed reuse the translated `leadForm`
- * namespace. The strings new to this component are English only for now, in
- * line with the rest of the 2026 rebuild.
+ * LOCALE NOTE: every visible string comes from the translated `leadForm`
+ * namespace. Until 10 September 2026 the strings new to this component were
+ * English in all four locales, which the owner saw the moment the language
+ * switch was used.
  */
 
 type Props = {
@@ -101,7 +102,7 @@ export function ContactCTA({
     setError(null);
 
     if (!name.trim() || (!phone.trim() && !email.trim())) {
-      setError("Please add your name and either a phone number or an email.");
+      setError(t("validation"));
       return;
     }
 
@@ -143,11 +144,10 @@ export function ContactCTA({
         }`}
       >
         <h3 className={`font-display text-2xl ${dark ? "text-white" : "text-brand-indigo"}`}>
-          Thank you, that has reached us.
+          {t("doneHeading")}
         </h3>
         <p className={`mt-3 text-sm ${dark ? "text-paper/75" : "text-muted"}`}>
-          We reply during working hours, usually within the hour. If it is urgent,
-          call {site.phonePrimary}.
+          {t("doneBody", { phone: site.phonePrimary })}
         </p>
       </div>
     );
@@ -169,10 +169,10 @@ export function ContactCTA({
         <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5.1-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.3-5-4.5-.1-.2-1.1-1.5-1.1-2.9s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.1.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3s.4.1.6-.1.7-.8.9-1.1.4-.2.6-.1 1.5.7 1.8.9.4.2.5.3.1.6-.1 1.3z" />
         </svg>
-        Message us on WhatsApp
+        {t("waButton")}
       </a>
       <p className={`mt-2 text-center text-xs ${label}`}>
-        Opens WhatsApp in a new tab. Fastest reply.
+        {t("waNote")}
       </p>
 
       {/* --- Route two: a real form, for everyone else --- */}
@@ -187,16 +187,16 @@ export function ContactCTA({
                 : "btn-outline border-brand-indigo text-brand-indigo"
             }`}
           >
-            Rather not use WhatsApp? Send your details
+            {t("formOpen")}
           </button>
           <p className={`mt-2 text-center text-xs ${label}`}>
-            We will call or email you back instead.
+            {t("formOpenNote")}
           </p>
         </div>
       ) : (
         <form onSubmit={submit} className="mt-5 space-y-3.5 border-t border-white/10 pt-5">
           <p className={`text-xs ${label}`}>
-            Prefer a call or an email? Leave your details and we will come back to you.
+            {t("formIntro")}
           </p>
 
           <input
@@ -218,7 +218,7 @@ export function ContactCTA({
           />
           <input
             className={field}
-            placeholder="Email address"
+            placeholder={t("emailPlaceholder")}
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -244,7 +244,7 @@ export function ContactCTA({
           <textarea
             className={field}
             rows={3}
-            placeholder="Anything else we should know (optional)"
+            placeholder={t("messagePlaceholder")}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
@@ -266,27 +266,25 @@ export function ContactCTA({
             disabled={state === "sending"}
             className="btn btn-brass w-full justify-center disabled:opacity-60"
           >
-            {state === "sending" ? "Sending..." : "Send my details"}
+            {state === "sending" ? t("sending") : t("sendDetails")}
           </button>
 
           <div aria-live="polite">
             {error && <p className="text-center text-xs text-red-300">{error}</p>}
             {state === "error" && (
               <p className="text-center text-xs text-red-300">
-                Something went wrong. Please call {site.phonePrimary} or email{" "}
-                {site.email}.
+                {t("failed", { phone: site.phonePrimary, email: site.email })}
               </p>
             )}
             {state === "unconfigured" && (
               <p className="text-center text-xs text-red-300">
-                We could not save that just now. Please call {site.phonePrimary} or
-                email {site.email} and we will pick it up straight away.
+                {t("unconfigured", { phone: site.phonePrimary, email: site.email })}
               </p>
             )}
           </div>
 
           <p className={`text-center text-xs ${label}`}>
-            No spam, ever. We use your details only to answer this enquiry.
+            {t("privacy")}
           </p>
         </form>
       )}

@@ -18,7 +18,8 @@ import { ContactCTA } from "@/components/ContactCTA";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { graph, serviceNode, breadcrumbNode, faqNode, organizationNode } from "@/lib/schema";
 import { getServiceFaqs } from "@/lib/service-faqs";
-import { getRepoService, repoServiceBlocks } from "@/lib/service-content";
+import { getRepoService, repoServiceBlocks, repoServiceLocales } from "@/lib/service-content";
+import { tr } from "@/lib/copy-i18n";
 import { MarkdownBody } from "@/components/MarkdownBody";
 
 export const revalidate = 60;
@@ -141,25 +142,28 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   // A repo backed service never touches Sanity. See service-content.ts for
   // why three of the seven live in code.
-  const repo = getRepoService(params.slug);
+  const repo = getRepoService(params.slug, params.locale);
   const page = repo
     ? { title: repo.title, seoDescription: repo.seoDescription }
     : await client.fetch<ServicePage>(pageBySlugQuery, { slug: params.slug });
   if (!page) return {};
-  // A repo backed service exists in English only. Under /hi, /mr or /gu the
-  // same English body renders (the owner chose to skip translation for now),
-  // so those renders must not compete with, or be declared as translations
-  // of, the English page: canonical points at English, no hreflang cluster,
-  // and noindex on the non English render. The route stays alive so the
-  // localised nav does not dead end.
+  // A repo backed service carries exactly the locales it is translated into
+  // (repoServiceLocales, the list the sitemap also reads). A locale with a
+  // real body gets a self canonical and the cluster of real translations. A
+  // locale without one would render English, so it canonicals to English
+  // and is noindexed rather than declared as a translation it is not.
+  const available = repo ? repoServiceLocales(params.slug) : null;
+  const translated = !available || available.includes(params.locale as "en");
   const urls = repo
-    ? pageUrls("en", `/services/${params.slug}`, ["en"])
+    ? translated
+      ? pageUrls(params.locale, `/services/${params.slug}`, available!)
+      : pageUrls("en", `/services/${params.slug}`, available!)
     : pageUrls(params.locale, `/services/${params.slug}`);
   const slug = params.slug as (typeof SERVICE_SLUGS)[number];
   const hero = HERO_IMAGE[slug];
   return {
     ...urls,
-    ...(repo && params.locale !== "en" ? { robots: { index: false, follow: true } } : {}),
+    ...(repo && !translated ? { robots: { index: false, follow: true } } : {}),
     title: page.title,
     description: page.seoDescription,
     // The page's own hero, not the site card. Somebody pasting a link to the
@@ -200,7 +204,7 @@ export default async function ServicePage({
   const locale = params.locale as Locale;
   const slug = params.slug as (typeof SERVICE_SLUGS)[number];
 
-  const repo = getRepoService(slug);
+  const repo = getRepoService(slug, locale);
 
   const [page, projects, tHero, tServiceCta, tServiceSteps, tProjectsGrid] = await Promise.all([
     repo
@@ -230,8 +234,8 @@ export default async function ServicePage({
   const revealDelays = ["delay-0", "delay-100", "delay-200"];
 
   const trail: Crumb[] = [
-    { name: "Home", path: "/" },
-    { name: "Services", path: "/services" },
+    { name: tr(locale, "Home"), path: "/" },
+    { name: tr(locale, "Services"), path: "/services" },
     { name: heroHeading, path: `/services/${slug}` },
   ];
 
@@ -290,7 +294,7 @@ export default async function ServicePage({
           <Reveal>
             <div className="mt-6 max-w-3xl">
               <div className="eyebrow text-brass-bright">
-                {site.areas.join(" \u00b7 ")}
+                {site.areas.map((a) => tr(locale, a)).join(" \u00b7 ")}
               </div>
               <h1 className="mt-3.5 max-w-[20ch] text-4xl text-white md:text-6xl">
                 {heroHeading}
@@ -442,11 +446,11 @@ export default async function ServicePage({
               <h2 className="text-3xl md:text-4xl">{tServiceCta("heading")}</h2>
               <p className="mt-3 text-paper/75">{tServiceCta("body")}</p>
               <p className="mt-6 text-sm text-paper/60">
-                Or call{" "}
+                {tr(locale, "Or call")}{" "}
                 <a href={`tel:${site.phonePrimary}`} className="font-medium text-white">
                   {site.phonePrimary}
                 </a>{" "}
-                during working hours.
+                {tr(locale, "during working hours.")}
               </p>
             </div>
             <ContactCTA

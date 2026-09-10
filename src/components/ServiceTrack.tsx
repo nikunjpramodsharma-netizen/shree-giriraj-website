@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Link } from "@/i18n/navigation";
 import type { ServicePanel } from "@/lib/homepage-content";
+import { tr } from "@/lib/copy-i18n";
 
 /**
  * Section 05. Deliberately not a card grid, and deliberately a different
@@ -18,7 +19,7 @@ import type { ServicePanel } from "@/lib/homepage-content";
  * than wrapping it, because the open panel contains a link and a link inside a
  * button is invalid HTML.
  */
-export function ServiceTrack({ panels }: { panels: ServicePanel[] }) {
+export function ServiceTrack({ panels, locale = "en" }: { panels: ServicePanel[]; locale?: string }) {
   const [open, setOpen] = useState(0);
 
   return (
@@ -100,7 +101,10 @@ export function ServiceTrack({ panels }: { panels: ServicePanel[] }) {
                     tabIndex={isOpen ? 0 : -1}
                     className="pointer-events-auto mt-3.5 inline-block text-sm font-semibold text-brass-bright underline decoration-brass/40 underline-offset-4"
                   >
-                    More on {p.title.toLowerCase()}
+                    {tr(locale, "More on {title}").replace(
+                      "{title}",
+                      locale === "en" ? p.title.toLowerCase() : p.title,
+                    )}
                   </Link>
                 </div>
               </div>

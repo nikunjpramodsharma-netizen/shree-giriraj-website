@@ -1,4 +1,5 @@
 import { parseBlocks, type Block } from "@/lib/markdown";
+import { REPO_SERVICE_LOCALES } from "@/lib/service-content-locales";
 
 /**
  * Service pages whose body lives in this repo rather than in Sanity.
@@ -278,8 +279,28 @@ export const REPO_SERVICES: Record<string, RepoService> = {
   },
 };
 
-export function getRepoService(slug: string): RepoService | undefined {
-  return REPO_SERVICES[slug];
+/**
+ * The service in the locale asked for, falling back to English. The Hindi,
+ * Marathi and Gujarati versions live in service-content-locales.ts and are
+ * adapted rather than literal, so a copy edit in English should be checked
+ * against all three.
+ */
+export function getRepoService(slug: string, locale: string = "en"): RepoService | undefined {
+  const base = REPO_SERVICES[slug];
+  if (!base) return undefined;
+  if (locale === "en") return base;
+  return REPO_SERVICE_LOCALES[slug]?.[locale as "hi" | "mr" | "gu"] ?? base;
+}
+
+/**
+ * Every locale that has a genuine translation of this service, English first.
+ * The route's hreflang cluster and the sitemap both read this, so the two
+ * cannot disagree about which locale URLs are real.
+ */
+export function repoServiceLocales(slug: string): readonly ("en" | "hi" | "mr" | "gu")[] {
+  if (!REPO_SERVICES[slug]) return [];
+  const extra = Object.keys(REPO_SERVICE_LOCALES[slug] ?? {}) as ("hi" | "mr" | "gu")[];
+  return ["en", ...extra];
 }
 
 /** Parsed once per render, the same way a markdown blog post is. */

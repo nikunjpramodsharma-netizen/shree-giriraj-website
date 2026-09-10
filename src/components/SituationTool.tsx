@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { waLink } from "@/lib/config";
+import { tr } from "@/lib/copy-i18n";
 import type { Situation, PropertyType } from "@/lib/homepage-content";
 
 /**
@@ -22,17 +23,24 @@ import type { Situation, PropertyType } from "@/lib/homepage-content";
  *
  * The type row only appears for buy, rent and sell. Asking a society what type
  * of property it is redeveloping would be noise.
+ *
+ * LOCALE. The situations and types arrive already translated by the page
+ * (localizeDeep), keyed on stable English keys. The area list stays English
+ * because "Not sure yet" is compared by value; it is translated for display
+ * and for the WhatsApp message here, with tr().
  */
 export function SituationTool({
   situations,
   types,
   typedIntents,
   areas,
+  locale = "en",
 }: {
   situations: Situation[];
   types: PropertyType[];
   typedIntents: readonly string[];
   areas: readonly string[];
+  locale?: string;
 }) {
   const [intent, setIntent] = useState<string | null>(null);
   const [type, setType] = useState<string | null>(null);
@@ -41,16 +49,23 @@ export function SituationTool({
   const chosen = situations.find((s) => s.key === intent);
   const chosenType = types.find((t) => t.key === type);
   const needsType = intent !== null && typedIntents.includes(intent);
-  const areaLabel = area === "Not sure yet" ? "the western suburbs" : area;
+  const areaLabel =
+    area === "Not sure yet" ? tr(locale, "the western suburbs") : area ? tr(locale, area) : area;
 
   // The result waits for a type only where a type is a real question.
   const ready = Boolean(chosen && area && (!needsType || chosenType));
 
   const message =
     chosen && area
-      ? needsType && chosenType
-        ? `Hi Shree Giriraj, I am looking to ${chosen.label.toLowerCase()} ${chosenType.phrase} in ${area}. Can you help?`
-        : `Hi Shree Giriraj, I am looking to ${chosen.label.toLowerCase()} in ${area}. Can you help?`
+      ? (needsType && chosenType
+          ? tr(locale, "Hi Shree Giriraj, I am looking to {intent} {type} in {area}. Can you help?")
+          : tr(locale, "Hi Shree Giriraj, I am looking to {intent} in {area}. Can you help?")
+        )
+          .replace("{intent}", locale === "en" ? chosen.label.toLowerCase() : chosen.label)
+          .replace("{type}", chosenType ? tr(locale, chosenType.phrase) : "")
+          // areaLabel, not area: "Not sure yet" reads as "the western
+          // suburbs" in the message too, in every language.
+          .replace("{area}", areaLabel ?? "")
       : "";
 
   const pill = (on: boolean) =>
@@ -68,7 +83,7 @@ export function SituationTool({
       <div className="grid lg:grid-cols-[1fr_.8fr]">
         <div className="p-8">
           <fieldset className="mb-6">
-            <legend className={legend}>I am looking to</legend>
+            <legend className={legend}>{tr(locale, "I am looking to")}</legend>
             <div className="flex flex-wrap gap-2">
               {situations.map((s) => (
                 <button
@@ -91,7 +106,7 @@ export function SituationTool({
 
           {needsType && (
             <fieldset className="mb-6">
-              <legend className={legend}>What kind of property</legend>
+              <legend className={legend}>{tr(locale, "What kind of property")}</legend>
               <div className="flex flex-wrap gap-2">
                 {types.map((t) => (
                   <button
@@ -109,7 +124,7 @@ export function SituationTool({
           )}
 
           <fieldset className="mb-6">
-            <legend className={legend}>In</legend>
+            <legend className={legend}>{tr(locale, "In")}</legend>
             <div className="flex flex-wrap gap-2">
               {areas.map((a) => (
                 <button
@@ -119,7 +134,7 @@ export function SituationTool({
                   onClick={() => setArea(a)}
                   className={pill(area === a)}
                 >
-                  {a}
+                  {tr(locale, a)}
                 </button>
               ))}
             </div>
@@ -144,7 +159,7 @@ export function SituationTool({
                 )}
 
                 <p className="border-l-2 border-brass pl-3.5 text-[0.94rem] text-muted">
-                  <b className="text-ink">Where we come in:</b>{" "}
+                  <b className="text-ink">{tr(locale, "Where we come in:")}</b>{" "}
                   {chosen.help}
                 </p>
                 <a
@@ -153,7 +168,7 @@ export function SituationTool({
                   rel="noopener"
                   className="btn btn-wa mt-5"
                 >
-                  Send this to us on WhatsApp
+                  {tr(locale, "Send this to us on WhatsApp")}
                 </a>
               </div>
             )}

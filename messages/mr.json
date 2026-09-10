@@ -21,7 +21,7 @@
     "statSuburbs": "समाविष्ट उपनगरे",
     "statRating": "क्लायंट रेटिंग",
     "featuredBadge": "आता बुकिंग सुरू · वैशिष्ट्यीकृत",
-    "statRera": "MahaRERA registered",
+    "statRera": "MahaRERA नोंदणीकृत",
     "eyebrowSince": "Since {year}"
   },
   "services": {
@@ -33,12 +33,12 @@
     "rentalsBody": "बोरिवली, कांदिवली आणि मलाडमध्ये 1 बीएचके ते 3 बीएचके भाड्याचे फ्लॅट, भाडेकरू आणि मालकांची जलद जुळणी, नोंदणीकृत भाडे करारही आम्हीच सांभाळतो.",
     "newProjectTitle": "नवीन प्रकल्प बुकिंग",
     "newProjectBody": "बोरिवली, कांदिवली आणि मलाडमध्ये नवीन आणि आगामी रेसिडेन्शियल प्रकल्पांमध्ये आमच्या थेट बिल्डर नेटवर्कद्वारे लवकर प्रवेश, बऱ्याचदा ते खुल्या बाजारात येण्यापूर्वीच.",
-    "investmentAdvisoryTitle": "Property investment advisory",
-    "investmentAdvisoryBody": "Guidance for investors buying in Borivali, Kandivali and Malad to hold rather than to live in: micro market assessment, rental yield arithmetic on the actual flat, title checks and negotiation.",
-    "commercialTitle": "Commercial & plots",
-    "commercialBody": "Shops, showrooms, office space and plots for sale or rent in Borivali, Kandivali and Malad, for businesses that need premises here and investors buying a unit to let.",
-    "mhadaTitle": "MHADA paperwork",
-    "mhadaBody": "Transfer of tenement, no objection certificates for sale, rent and mortgage, transfer to heirs and regularisation for MHADA flats in Borivali, Kandivali and Malad.",
+    "investmentAdvisoryTitle": "मालमत्ता गुंतवणूक सल्ला",
+    "investmentAdvisoryBody": "बोरिवली, कांदिवली आणि मलाडमध्ये राहण्यासाठी नव्हे, ठेवण्यासाठी विकत घेणाऱ्या गुंतवणूकदारांसाठी मार्गदर्शन: भागाचे मूल्यांकन, खऱ्या फ्लॅटवर भाड्याच्या परताव्याचा हिशोब, टायटल तपासणी आणि वाटाघाटी.",
+    "commercialTitle": "कमर्शियल आणि प्लॉट",
+    "commercialBody": "बोरिवली, कांदिवली आणि मलाडमध्ये विक्री किंवा भाड्याने दुकाने, शोरूम, ऑफिस जागा आणि प्लॉट, ज्यांना इथे जागा हवी अशा व्यवसायांसाठी आणि भाड्याने देण्यासाठी युनिट घेणाऱ्या गुंतवणूकदारांसाठी.",
+    "mhadaTitle": "MHADA कागदपत्रे",
+    "mhadaBody": "बोरिवली, कांदिवली आणि मलाडमधील MHADA फ्लॅटसाठी टेनमेंट हस्तांतरण, विक्री, भाडे आणि गहाणाची NOC, वारसांकडे हस्तांतरण आणि नियमितीकरण.",
     "interiorsTitle": "इंटिरिअर डिझाइन आणि सिव्हिल वर्क",
     "interiorsBody": "बोरिवली, कांदिवली आणि मलाडमध्ये स्थानिक इंटिरिअर डिझायनर आणि सिव्हिल वर्क टीम, फिट आउट, नूतनीकरण आणि सिव्हिल वर्क जेणेकरून तुमचे घर राहण्यासाठी सज्ज होईल."
   },
@@ -63,19 +63,19 @@
       "साइट व्हिजिट, युनिट निवड आणि सध्याची प्राइस शीट"
     ],
     "investmentAdvisory": [
-      "Tell us the budget, the hold period and whether you are buying for rent or resale",
-      "We assess the micro market and the specific building, and do the yield arithmetic",
-      "Title and society checks, negotiation, documentation and registration"
+      "बजेट, किती काळ ठेवणार, आणि भाड्यासाठी घेत आहात की रीसेलसाठी हे सांगा",
+      "आम्ही भागाचे आणि त्या इमारतीचे मूल्यांकन करतो, आणि परताव्याचा हिशोब करतो",
+      "टायटल आणि सोसायटी तपासणी, वाटाघाटी, दस्तऐवज आणि नोंदणी"
     ],
     "commercialPlots": [
-      "Tell us the business or the investment, and the stretch you have in mind",
-      "We shortlist units on approved use, frontage and what they let for today",
-      "Site visits, society and title checks, then registration"
+      "व्यवसाय किंवा गुंतवणूक, आणि मनात असलेला रस्त्याचा भाग सांगा",
+      "आम्ही मंजूर वापर, दर्शनी भाग आणि आजच्या भाड्यावर युनिट निवडतो",
+      "जागेची पाहणी, सोसायटी आणि टायटल तपासणी, मग नोंदणी"
     ],
     "mhadaPaperwork": [
-      "Tell us the flat, the scheme and what you need: sale, tenant, loan, heir or regularisation",
-      "We assemble the complete file against the Board's own document list",
-      "Submitted to the Estate Manager, followed up until it is decided"
+      "फ्लॅट, योजना आणि गरज सांगा: विक्री, भाडेकरू, कर्ज, वारस किंवा नियमितीकरण",
+      "आम्ही मंडळाच्या स्वतःच्या कागदपत्र यादीनुसार पूर्ण फाइल तयार करतो",
+      "इस्टेट मॅनेजरकडे सादर, आणि निर्णय होईपर्यंत पाठपुरावा"
     ],
     "interiors": [
       "तुमची जागा, वेळापत्रक आणि बजेट सांगा",
@@ -98,7 +98,7 @@
     "row3": "1996 पासून बोरिवली, कांदिवली आणि मलाडमध्ये काम",
     "row4": "नोंदणीकृत करार सुरुवातीपासून शेवटपर्यंत आम्ही सांभाळतो",
     "row5": "चौकशीपासून ताब्यापर्यंत एकच संपर्क व्यक्ती",
-    "row6": "Knows the pocket, the building and the society, not just the suburb",
+    "row6": "केवळ उपनगर नव्हे, भाग, इमारत आणि सोसायटी ओळखतो",
     "legendYes": "होय",
     "legendPartial": "कधी कधी",
     "legendNo": "नाही"
@@ -122,7 +122,7 @@
   "areas": {
     "eyebrow": "आम्ही कुठे काम करतो",
     "heading": "पश्चिम उपनगरात",
-    "borivaliBody": "Our home turf for property in Borivali West and East: resale flats, rentals and investment advice, all handled locally.",
+    "borivaliBody": "बोरिवली पश्चिम आणि पूर्वमधील मालमत्तेसाठी आमचा स्वतःचा भाग: रीसेल फ्लॅट, भाडे आणि गुंतवणूक सल्ला, सगळे स्थानिक पातळीवर.",
     "kandivaliBody": "एम.जी. रोड आणि लिंक रोडजवळील कांदिवलीतील रिअल इस्टेट, प्रीमियम नवीन लाँच, पुनर्विक्री फ्लॅट्स आणि फॅमिली होम्स.",
     "maladBody": "मिंडस्पेस आणि लिंक रोड कॉरिडॉरजवळील मलाडमधील फ्लॅट्स, वाढते निवासी आणि व्यावसायिक पर्याय.",
     "dahisarBody": "दहिसरमध्ये वेस्टर्न एक्सप्रेस हायवेजवळ घरे, बोरिवलीच्या अगदी उत्तरेला वेगाने वाढणारे उपनगर, चांगली कनेक्टिव्हिटी आणि कुटुंबासाठी परवडणाऱ्या किमतींसह.",
@@ -144,15 +144,30 @@
     "intentSell": "विक्री",
     "intentRent": "भाडे",
     "intentNewProject": "नवीन प्रकल्प",
-    "intentInvest": "Property investment",
-    "intentMhada": "MHADA paperwork",
+    "intentInvest": "मालमत्ता गुंतवणूक",
+    "intentMhada": "MHADA कागदपत्रे",
     "submit": "व्हॉट्सअॅपवर चौकशी पाठवा",
     "disclaimer": "तुमची माहिती भरून व्हॉट्सअॅप उघडते. कधीही स्पॅम नाही.",
     "whatsappGreeting": "नमस्कार श्री गिरिराज, मला चौकशी करायची आहे.",
     "whatsappNameLabel": "नाव",
     "whatsappIntentLabel": "इच्छुक",
     "whatsappAreaLabel": "भाग",
-    "whatsappPhoneLabel": "फोन"
+    "whatsappPhoneLabel": "फोन",
+    "doneHeading": "धन्यवाद, तुमचा संदेश आमच्यापर्यंत पोहोचला आहे.",
+    "doneBody": "आम्ही कामाच्या वेळेत उत्तर देतो, बहुधा तासाभरात. तातडीचे असेल तर {phone} वर कॉल करा.",
+    "waButton": "आम्हाला WhatsApp वर संदेश पाठवा",
+    "waNote": "WhatsApp नव्या टॅबमध्ये उघडते. सर्वात जलद उत्तर.",
+    "formOpen": "WhatsApp वापरायचे नाही? तुमची माहिती पाठवा",
+    "formOpenNote": "आम्ही तुम्हाला कॉल किंवा ईमेलने उत्तर देऊ.",
+    "formIntro": "कॉल किंवा ईमेल हवा आहे? तुमची माहिती द्या आणि आम्ही तुमच्याशी संपर्क करू.",
+    "emailPlaceholder": "ईमेल पत्ता",
+    "messagePlaceholder": "आणखी काही आम्हाला माहीत असावे असे (ऐच्छिक)",
+    "sending": "पाठवत आहोत...",
+    "sendDetails": "माझी माहिती पाठवा",
+    "validation": "कृपया तुमचे नाव आणि फोन नंबर किंवा ईमेल यापैकी एक नक्की लिहा.",
+    "failed": "काहीतरी चुकले. कृपया {phone} वर कॉल करा किंवा {email} वर ईमेल करा.",
+    "unconfigured": "आम्ही हे आत्ता जतन करू शकलो नाही. कृपया {phone} वर कॉल करा किंवा {email} वर ईमेल करा, आम्ही लगेच पाहू.",
+    "privacy": "कधीही स्पॅम नाही. तुमची माहिती फक्त या चौकशीला उत्तर देण्यासाठी वापरली जाते."
   },
   "footer": {
     "description": "{year} पासून बोरिवली वेस्टमध्ये विश्वासार्ह मालमत्ता सल्ला.",

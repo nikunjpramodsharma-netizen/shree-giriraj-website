@@ -36,6 +36,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { getAllPosts } from "@/lib/posts";
 import { postVisual } from "@/lib/blog";
 import { graph, organizationNode, websiteNode, faqNode } from "@/lib/schema";
+import { tr, localizeDeep } from "@/lib/copy-i18n";
 
 /**
  * PLACEHOLDER PHOTOGRAPHY. Stock images from Pexels, not Borivali, Kandivali
@@ -240,6 +241,7 @@ export default async function HomePage({
     tShowcase,
     tCompare,
     tHandover,
+    tBlog,
   ] = await Promise.all([
       client.fetch<GridProject[]>(featuredProjectsGridQuery),
       client.fetch<Testimonial[]>(featuredTestimonialsQuery),
@@ -254,6 +256,7 @@ export default async function HomePage({
       getTranslations({ locale, namespace: "showcase" }),
       getTranslations({ locale, namespace: "compare" }),
       getTranslations({ locale, namespace: "handover" }),
+      getTranslations({ locale, namespace: "blogPage" }),
     ]);
 
   const services = [
@@ -284,6 +287,17 @@ export default async function HomePage({
   const journalPosts = getAllPosts().filter((p) => p.isReady).slice(0, 3);
 
   const revealDelays = ["delay-0", "delay-100", "delay-200"];
+
+  // The homepage's authored content is English in homepage-content.ts and is
+  // translated here, once, at the page boundary. See copy-i18n.ts for why the
+  // dictionary is keyed on the English string. Anything without an entry
+  // falls back to English rather than to nothing.
+  const t = (s: string) => tr(locale, s);
+  const checks = localizeDeep(locale, CHECKS);
+  const situations = localizeDeep(locale, SITUATIONS);
+  const propertyTypes = localizeDeep(locale, PROPERTY_TYPES);
+  const servicePanels = localizeDeep(locale, SERVICE_PANELS);
+  const areaPanels = localizeDeep(locale, AREA_PANELS);
 
   // One project reads as chosen. A grid reads as a shelf, which is the thing
   // we are deliberately not. Prefer the flagship, fall back to the first.
@@ -338,7 +352,7 @@ export default async function HomePage({
         <div className="wrap relative z-[6] py-24">
           <div className="max-w-3xl">
             <div className="eyebrow text-brass-bright">
-              {[...site.areas, `Since ${site.established}`].join(" · ")}
+              {[...site.areas.map(t), t("Since {year}").replace("{year}", String(site.established))].join(" · ")}
             </div>
             <h1 className="mt-6 text-4xl font-semibold sm:text-5xl md:text-6xl">
               {tHero("headingPart1")}
@@ -357,7 +371,7 @@ export default async function HomePage({
             </div>
             <div className="mt-12 flex flex-wrap gap-8">
               {[
-                { n: `Since ${site.established}`, l: tHero("statYears") },
+                { n: t("Since {year}").replace("{year}", String(site.established)), l: tHero("statYears") },
                 { n: String(site.areas.length), l: tHero("statSuburbs") },
                 { n: tHero("statRera"), l: site.rera },
               ].map((s) => (
@@ -378,20 +392,22 @@ export default async function HomePage({
       <section className="py-24">
         <div className="wrap">
           <Reveal className="mb-11 max-w-2xl">
-            <div className="eyebrow">Two questions</div>
+            <div className="eyebrow">{t("Two questions")}</div>
             <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
-              Tell us what you are looking for. We will tell you where to start.
+              {t("Tell us what you are looking for. We will tell you where to start.")}
             </h2>
             <p className="mt-3.5 text-[1.04rem] text-muted">
-              Pick what you are doing and where. We will tell you what matters most,
-              before you speak to anybody, including us.
+              {t(
+                "Pick what you are doing and where. We will tell you what matters most, before you speak to anybody, including us.",
+              )}
             </p>
           </Reveal>
           <SituationTool
-            situations={SITUATIONS}
-            types={PROPERTY_TYPES}
+            situations={situations}
+            types={propertyTypes}
             typedIntents={TYPED_INTENTS}
             areas={SITUATION_AREAS}
+            locale={locale}
           />
         </div>
       </section>
@@ -402,16 +418,16 @@ export default async function HomePage({
           <Reveal className="mb-11 max-w-2xl">
             <div className="eyebrow">{tServices("eyebrow")}</div>
             <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
-              Resale is the business. The rest is what a move actually needs.
+              {t("Resale is the business. The rest is what a move actually needs.")}
             </h2>
             <p className="mt-3.5 text-[1.04rem] text-muted">
-              Most people meet us over one flat and come back for the next three things.
-              That is why all of it sits under one roof instead of being handed to a
-              stranger at every step.
+              {t(
+                "Most people meet us over one flat and come back for the next three things. That is why all of it sits under one roof instead of being handed to a stranger at every step.",
+              )}
             </p>
           </Reveal>
         </div>
-        <ServiceTrack panels={SERVICE_PANELS} />
+        <ServiceTrack panels={servicePanels} locale={locale} />
       </section>
 
       {/* COMPARE */}
@@ -465,12 +481,12 @@ export default async function HomePage({
       <section className="bg-paper-alt py-24">
         <div className="wrap">
           <Reveal className="mb-11 max-w-2xl">
-            <div className="eyebrow">Before you sign</div>
+            <div className="eyebrow">{t("Before you sign")}</div>
             <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
-              Six things we look at that a listing will never tell you
+              {t("Six things we look at that a listing will never tell you")}
             </h2>
             <p className="mt-3.5 text-[1.04rem] text-muted">
-              This is the part of the job that does not fit in a photograph.
+              {t("This is the part of the job that does not fit in a photograph.")}
             </p>
           </Reveal>
           <div className="grid gap-9 md:grid-cols-[.85fr_1.15fr] md:items-start md:gap-14">
@@ -483,7 +499,7 @@ export default async function HomePage({
                 className="object-cover"
               />
             </div>
-            <ChecksAccordion checks={CHECKS} />
+            <ChecksAccordion checks={checks} />
           </div>
         </div>
       </section>
@@ -494,13 +510,13 @@ export default async function HomePage({
           <Reveal className="mb-11 max-w-2xl">
             <div className="eyebrow text-brass-bright">{tAreas("eyebrow")}</div>
             <h2 className="mt-3.5 text-3xl text-white md:text-4xl">
-              In these three suburbs since 1996, at this office since 2005
+              {t("In these three suburbs since 1996, at this office since 2005")}
             </h2>
             <p className="mt-3.5 text-[1.04rem] text-paper/70">
-              Pick the one you are looking at.
+              {t("Pick the one you are looking at.")}
             </p>
           </Reveal>
-          <AreaSwitcher panels={AREA_PANELS} />
+          <AreaSwitcher panels={areaPanels} locale={locale} />
         </div>
       </section>
 
@@ -551,8 +567,9 @@ export default async function HomePage({
               )}
 
               <p className="mt-6 max-w-[52ch] text-[0.84rem] text-paper/50">
-                Exact all inclusive pricing and floor availability shared on request. Every
-                figure is verified against the builder sheet before it goes out.
+                {t(
+                  "Exact all inclusive pricing and floor availability shared on request. Every figure is verified against the builder sheet before it goes out.",
+                )}
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3.5">
@@ -560,7 +577,7 @@ export default async function HomePage({
                   href={`/projects/${featured.slug.current}`}
                   className="btn btn-brass"
                 >
-                  See the project
+                  {t("See the project")}
                 </Link>
                 <Link href="/projects" className="btn btn-outline border-paper/40 text-paper">
                   {tProjectsGrid("viewAll")}
@@ -612,14 +629,17 @@ export default async function HomePage({
           <div className="wrap">
             <Reveal className="mb-11 flex flex-wrap items-end justify-between gap-4">
               <div className="max-w-2xl">
-                <div className="eyebrow">Worth reading</div>
+                <div className="eyebrow">{t("Worth reading")}</div>
                 <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
-                  What we write when nobody is buying anything
+                  {t("What we write when nobody is buying anything")}
                 </h2>
+                {locale !== "en" && (
+                  <p className="mt-3.5 text-[1.04rem] text-muted">{tBlog("englishOnly")}</p>
+                )}
               </div>
-              <Link href="/blog" className="text-sm font-semibold text-brand-blue">
-                All articles
-              </Link>
+              <EnglishLink href="/blog" className="text-sm font-semibold text-brand-blue">
+                {t("All articles")}
+              </EnglishLink>
             </Reveal>
             <div className="grid gap-5 md:grid-cols-3">
               {journalPosts.map((p, i) => {

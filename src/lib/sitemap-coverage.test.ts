@@ -87,17 +87,24 @@ describe("gated pages the sitemap must stay silent about", () => {
     expect(aboutListed).toBe(STORY_IS_WRITTEN);
   });
 
-  it("lists a repo backed service in English only, with no locale cluster", async () => {
-    // Investment advisory and commercial and plots have English bodies and
-    // render English under /hi, /mr and /gu. Declaring those as translations
-    // is a wrong language signal on six URLs; found in the 9 September audit.
+  it("lists a repo backed service in exactly the locales it is translated into", async () => {
+    // Until 10 September 2026 these pages were English only and were listed
+    // that way, because declaring an untranslated render as a translation is
+    // a wrong language signal. They now carry hi, mr and gu bodies, and the
+    // sitemap must follow repoServiceLocales, the same list the route's
+    // hreflang cluster is built from, so the two can never disagree.
     const { default: sitemap } = await import("../app/sitemap");
+    const { repoServiceLocales } = await import("./service-content");
     const entries = await sitemap();
-    for (const slug of ["investment-advisory", "commercial-plots"]) {
+    for (const slug of ["investment-advisory", "commercial-plots", "mhada-paperwork"]) {
+      const expected = repoServiceLocales(slug);
+      expect(expected.length, slug).toBeGreaterThan(0);
       const mine = entries.filter((e) => e.url.endsWith(`/services/${slug}`));
-      expect(mine.length, slug).toBe(1);
-      expect(mine[0].url, slug).not.toMatch(/\/(hi|mr|gu)\//);
-      expect(mine[0].alternates, slug).toBeUndefined();
+      expect(mine.length, slug).toBe(expected.length);
+      for (const l of expected) {
+        const prefix = l === "en" ? "" : `/${l}`;
+        expect(mine.some((e) => e.url.endsWith(`${prefix}/services/${slug}`)), `${l} ${slug}`).toBe(true);
+      }
     }
     // And a Sanity backed one still carries the full cluster.
     const rentals = entries.filter((e) => e.url.endsWith("/services/rentals"));
