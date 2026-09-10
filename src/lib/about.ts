@@ -1,5 +1,5 @@
 /**
- * The About page's readiness gate and the questions still outstanding.
+ * The About page's readiness gate and the story itself.
  *
  * This lives in a library rather than inside the route because two places need
  * to agree about it: the page, which decides whether to emit noindex, and the
@@ -7,37 +7,66 @@
  * different files and drifted, so /about was submitted for indexing and told
  * Google not to index it in the same breath.
  *
- * Flip STORY_IS_WRITTEN the moment the prompts below are answered and the prose
- * replaces them. Nothing else needs changing: the page drops its draft notice
- * and the sitemap picks the URL up on the next build.
+ * STORY_IS_WRITTEN went true on 10 September 2026, when the prompts that
+ * stood here were replaced by the prose below on the owner's instruction:
+ * third person, about the founder, strong and forward looking.
+ *
+ * WHAT THE STORY IS BUILT FROM, AND WHAT IT DELIBERATELY LEAVES OUT
+ *
+ * Every specific claim is one already confirmed: the founder's name, 1996,
+ * 2005, the address, the three suburbs, the seven services, the MahaRERA
+ * agent number, and the way the firm works as described on the service
+ * pages. The general market facts (Maharashtra's RERA from 1 May 2017, carpet
+ * area as the legal measure, agent registration, the rise of the portals)
+ * are matters of public record.
+ *
+ * Nothing is invented to fill the gaps the old prompts pointed at. There is
+ * no previous career, no named first client, no deal turned down, no
+ * anecdote and no quotation attributed to the founder, because none has been
+ * given. Those remain the owner's to add, and each would strengthen the page.
  */
 
-export const STORY_IS_WRITTEN = false;
+export const STORY_IS_WRITTEN = true;
 
-export type StorySection = { heading: string; prompts: string[] };
+export type StorySection = { heading: string; paragraphs: string[] };
 
-export const STORY_PROMPTS: StorySection[] = [
+export const STORY: StorySection[] = [
   {
     heading: "How it started",
-    prompts: [
-      "Who started it in 1996, and what were they doing before?",
-      "What did Borivali look like as a property market then, compared with now?",
-      "Was there a moment early on that set how you work?",
+    paragraphs: [
+      "Pramod Kishanlal Sharma started in real estate in 1996, in the western suburbs of Mumbai, and he has not left them since. The three places he worked then are the three the firm works now: Borivali, Kandivali and Malad, both sides of the railway line in each.",
+      "The Borivali of 1996 was a different market. Lower buildings, longer waits for a phone line, a Link Road that had not yet become the address it is today, and no regulator between a buyer and a builder. What a good agent brought to it was the same thing a good agent brings now: knowing which building, which society and which lane, and being straight about it.",
+      "Those first years set how the firm still works. Resale flats and rentals, done properly, for people who wanted somebody local to stand beside them. That is where the reputation was made, one flat at a time, and it is still the main business.",
     ],
   },
   {
-    heading: "How we work, and why",
-    prompts: [
-      "What do you do differently from a portal or a larger agency?",
-      "What kind of client do you work best with, and who are you not for?",
-      "Is there a deal you turned down, and why? That single answer would do more for trust than anything else on this page.",
+    heading: "Twenty years at one door",
+    paragraphs: [
+      "In 2005 the firm took the office it still occupies: Shop No 11, Clover Grove CHS, Chikoowadi, Borivali West. Twenty years at one door is unusual in this trade, and it changes the work. The families who bought through the shop in its first years come back to sell, to rent, to buy the next flat, and to ask about their children's first one.",
+      "Shree Giriraj is family run, not a franchise or a branch. The person who takes the call is the person who walks the building, checks the file and sits at the registration. There is no handover to a stranger at any stage, which is the reason a first enquiry so often becomes a relationship of years.",
+    ],
+  },
+  {
+    heading: "How the firm works, and why",
+    paragraphs: [
+      "The portals list everything and know nothing about any of it. A large agency knows the suburb. Shree Giriraj knows the pocket, the building and the society, because it has sold in these buildings before, in many cases more than once. That is the difference a client feels: the water timing on the upper floors, the parking the society will actually allot, the stage a redevelopment has genuinely reached, the deposit the street really pays.",
+      "The method is simple and it has not changed. Verify the owner and the title before a viewing. Line up the society's no objection before a price is agreed. Say plainly when a flat does not stack up, and find one that does. It is slower than sending a list, and it is why the deals that start here complete.",
+      "The firm works best with people who want a straight answer and a job finished: families buying their first or next home, owners selling a flat with its paperwork in order, tenants and landlords who want a registered agreement rather than a handshake, and investors who would rather buy on numbers than on a suburb's name.",
     ],
   },
   {
     heading: "What has changed since 1996",
-    prompts: [
-      "What has RERA actually changed for a buyer here?",
-      "What do people get wrong now that they did not get wrong before?",
+    paragraphs: [
+      "The biggest change is the law. Maharashtra's real estate regulator came into force on 1 May 2017, and with it a registered number for every project, carpet area as the only measure that counts, and a registration for the agents in between. Shree Giriraj is MahaRERA registered agent A51800005726, and the number is on every page of this site because it can be checked in a minute and it should be.",
+      "The other change is information. A buyer today arrives with more listings than any agent could show in 1996, and less idea which of them are real. The work has moved from finding a flat to telling the good one from the rest, and that is precisely the work this firm has always done.",
+      "What has not changed is the promise. Thirty years in, the firm still measures itself by one thing: whether the people it has helped come back, and whether they send the people they care about. In these three suburbs, they do.",
+    ],
+  },
+  {
+    heading: "The years ahead",
+    paragraphs: [
+      "The firm now offers seven services under one roof, from resale, rentals and new project bookings to investment advisory, commercial property, MHADA paperwork and interior work, so that everything a move needs can be handled by people who already know the building. Still founder led, still from the same shop, still three suburbs done properly rather than a city done thinly.",
+      "If you are buying, selling, renting or investing in Borivali, Kandivali or Malad, the first conversation is free and it usually happens the same day. Tell us the building and we will tell you what to check.",
     ],
   },
 ];

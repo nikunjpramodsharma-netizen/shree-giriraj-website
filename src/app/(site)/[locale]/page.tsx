@@ -6,7 +6,6 @@ import { client } from "@/sanity/client";
 import { urlFor } from "@/sanity/image";
 import {
   featuredProjectsGridQuery,
-  featuredTestimonialsQuery,
   faqsQuery,
 } from "@/sanity/queries";
 import { site, waLink } from "@/lib/config";
@@ -26,7 +25,8 @@ import {
 } from "@/lib/homepage-content";
 import { ContactCTA } from "@/components/ContactCTA";
 import { FAQSection } from "@/components/FAQSection";
-import { TestimonialCarousel } from "@/components/TestimonialCarousel";
+import { TestimonialMarquee } from "@/components/TestimonialMarquee";
+import { TESTIMONIALS } from "@/lib/testimonials";
 import { Reveal } from "@/components/Reveal";
 import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
 import { getLowestPriceConfig } from "@/lib/project-helpers";
@@ -75,14 +75,6 @@ type GridProject = {
   location?: string;
   coverImage?: any;
   configurations?: Config[];
-};
-
-type Testimonial = {
-  _id: string;
-  quote: LocalizedValue<string>;
-  author: string;
-  role?: LocalizedValue<string>;
-  rating?: number;
 };
 
 type Faq = {
@@ -229,7 +221,6 @@ export default async function HomePage({
 
   const [
     projects,
-    testimonials,
     faqs,
     tHero,
     tServices,
@@ -244,7 +235,6 @@ export default async function HomePage({
     tBlog,
   ] = await Promise.all([
       client.fetch<GridProject[]>(featuredProjectsGridQuery),
-      client.fetch<Testimonial[]>(featuredTestimonialsQuery),
       client.fetch<Faq[]>(faqsQuery),
       getTranslations({ locale, namespace: "hero" }),
       getTranslations({ locale, namespace: "services" }),
@@ -310,19 +300,6 @@ export default async function HomePage({
     no: tCompare("legendNo"),
   };
 
-  /**
-   * Seeded placeholder testimonials are marked featured in Sanity, so without
-   * this the homepage renders "Placeholder Client (Borivali)" with five stars.
-   * Filtering in code rather than unfeaturing them in Studio means a future
-   * placeholder cannot quietly ship either.
-   *
-   * An invented testimonial is not a soft problem: it is a false claim about a
-   * real person's experience, and in a market this small it gets noticed.
-   */
-  const realTestimonials = (testimonials ?? []).filter((x) => {
-    const hay = `${x.author ?? ""} ${getLocalizedField(x.quote, locale) ?? ""}`;
-    return !/placeholder|lorem ipsum|sample/i.test(hay);
-  });
 
   // Only the FAQs actually rendered on this page go into the markup. The
   // FAQSection below reads the same list, so the two cannot drift apart.
@@ -504,6 +481,32 @@ export default async function HomePage({
         </div>
       </section>
 
+      {/* TESTIMONIALS. Fifteen five star reviews on a continuous rail, with
+          the Google rating linked above them. Placeholder cards until the
+          owner supplies the real ones; see testimonials.ts for the gate and
+          for why the rating reads 5.0. Sits between the checks and the areas
+          so the proof follows the promise. */}
+      <section className="overflow-hidden py-24">
+        <div className="wrap">
+          <Reveal className="mb-8 max-w-2xl">
+            <div className="eyebrow">{tTestimonials("eyebrow")}</div>
+            <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
+              {tTestimonials("heading")}
+            </h2>
+          </Reveal>
+        </div>
+        <Reveal>
+          <TestimonialMarquee
+            items={TESTIMONIALS}
+            labels={{
+              onGoogle: tTestimonials("onGoogle"),
+              readReviews: tTestimonials("readReviews"),
+              placeholder: tTestimonials("placeholder"),
+            }}
+          />
+        </Reveal>
+      </section>
+
       {/* 05 AREAS */}
       <section className="bg-brand-indigo-deep py-24 text-paper">
         <div className="wrap">
@@ -582,23 +585,6 @@ export default async function HomePage({
                 <Link href="/projects" className="btn btn-outline border-paper/40 text-paper">
                   {tProjectsGrid("viewAll")}
                 </Link>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-      )}
-
-      {/* TESTIMONIALS */}
-      {realTestimonials.length > 0 && (
-        <section className="bg-paper-alt py-24">
-          <div className="wrap">
-            <Reveal>
-              <div className="eyebrow">{tTestimonials("eyebrow")}</div>
-              <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
-                {tTestimonials("heading")}
-              </h2>
-              <div className="mt-10">
-                <TestimonialCarousel testimonials={realTestimonials} locale={locale} />
               </div>
             </Reveal>
           </div>

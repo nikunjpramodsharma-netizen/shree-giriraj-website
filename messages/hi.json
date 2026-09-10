@@ -117,7 +117,10 @@
     "eyebrow": "ग्राहक क्या कहते हैं",
     "heading": "उपनगरों भर के परिवारों का भरोसा",
     "prevAriaLabel": "पिछला प्रशंसापत्र",
-    "nextAriaLabel": "अगला प्रशंसापत्र"
+    "nextAriaLabel": "अगला प्रशंसापत्र",
+    "onGoogle": "Google पर",
+    "readReviews": "हमारे रिव्यू पढ़ें",
+    "placeholder": "प्लेसहोल्डर"
   },
   "areas": {
     "eyebrow": "हम कहां काम करते हैं",

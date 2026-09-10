@@ -12,7 +12,7 @@ import { site } from "@/lib/config";
 import { TEAM, TEAM_IS_REAL } from "@/lib/homepage-content";
 import {
   STORY_IS_WRITTEN,
-  STORY_PROMPTS,
+  STORY,
   FOUNDER,
   founderInitials,
   ABOUT_FAQS,
@@ -37,8 +37,8 @@ const ABOUT_LOCALE = "en";
  * The factual spine is real: in property since 1996, at this office since
  * 2005, the founder's name, the MahaRERA agent number, the address, the three
  * suburbs. The story is not, because it is the owner's to tell, so the letter
- * carries his one confirmed sentence and then the prompts he has yet to
- * answer, visibly marked, and the page stays noindexed until they are.
+ * carried his one confirmed sentence and then the prompts he had yet to
+ * answer; the story replaced them on 10 September 2026 and the page indexes.
  */
 export async function generateMetadata({
   params,
@@ -162,19 +162,16 @@ export default function AboutPage({
       )}
 
       {/*
-        FOREWORD. The founder's portrait pinned beside his letter.
-
-        The letter is the part only he can write. Until he does, the body is
-        his one confirmed sentence followed by the prompts he has yet to
-        answer, each visibly marked, sitting exactly where the prose will go.
-        That is a more honest draft than lorem ipsum in his voice, and it
-        means the layout is finished the day the words arrive.
+        THE STORY. The founder's portrait pinned beside the firm's story,
+        told in the third person on the owner's instruction (10 September
+        2026). The sections come from about.ts, where the note on what they
+        are built from and what they leave out lives.
       */}
       <section className="bg-paper-alt py-16 md:py-24">
         <div className="wrap">
           <Reveal>
             <div className="max-w-3xl">
-              <div className="eyebrow">From the founder</div>
+              <div className="eyebrow">The founder</div>
               <h2 className="mt-3 text-3xl leading-tight text-ink md:text-5xl">
                 Founded the firm in {site.established}.{" "}
                 <span className="text-brand-blue">
@@ -182,8 +179,8 @@ export default function AboutPage({
                 </span>
               </h2>
               <p className="mt-4 max-w-[58ch] text-lg text-ink/70">
-                {FOUNDER.name}, {FOUNDER.role.toLowerCase()}, on the years
-                behind {site.name} and the ones ahead of it.
+                {FOUNDER.name}, {FOUNDER.role.toLowerCase()} of {site.name}: the
+                years behind the firm and the ones ahead of it.
               </p>
             </div>
           </Reveal>
@@ -221,41 +218,28 @@ export default function AboutPage({
             <div className="fw-body max-w-[62ch]">
               <Reveal>
                 <p className="fw-open">
-                  We have worked these suburbs since {site.established}, and out
-                  of the same shop in Chikoowadi since {site.officeSince}. That
-                  is long enough to have sold flats in the same building twice,
-                  and to remember why the second sale was harder than the first.
+                  {FOUNDER.name} has worked these suburbs since{" "}
+                  {site.established}, and out of the same shop in Chikoowadi
+                  since {site.officeSince}. That is long enough to have sold
+                  flats in the same building twice, and to know why the second
+                  sale was harder than the first.
                 </p>
               </Reveal>
 
-              {!STORY_IS_WRITTEN && (
-                <div className="mt-10 space-y-8">
-                  {STORY_PROMPTS.map((s) => (
-                    <Reveal key={s.heading}>
-                      <section className="rounded-xl border border-dashed border-brass/50 bg-paper/60 p-6">
-                        <div className="flex items-baseline gap-3">
-                          <h3 className="text-xl text-ink/80 md:text-2xl">
-                            {s.heading}
-                          </h3>
-                          <span className="shrink-0 rounded-full border border-brass/40 px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wider text-brass">
-                            Needs you
-                          </span>
-                        </div>
-                        <ul className="mt-4 space-y-2 text-sm text-ink/60">
-                          {s.prompts.map((p) => (
-                            <li key={p} className="flex gap-2.5">
-                              <span aria-hidden="true" className="text-brass">
-                                ·
-                              </span>
-                              <span>{p}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </section>
-                    </Reveal>
-                  ))}
-                </div>
-              )}
+              <div className="mt-10 space-y-10">
+                {STORY.map((s) => (
+                  <Reveal key={s.heading}>
+                    <section>
+                      <h3 className="text-xl text-ink md:text-2xl">{s.heading}</h3>
+                      <div className="mt-3">
+                        {s.paragraphs.map((p) => (
+                          <p key={p.slice(0, 40)}>{p}</p>
+                        ))}
+                      </div>
+                    </section>
+                  </Reveal>
+                ))}
+              </div>
             </div>
           </div>
         </div>

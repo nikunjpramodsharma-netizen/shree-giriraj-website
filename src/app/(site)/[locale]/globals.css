@@ -414,3 +414,60 @@
   .jr.js .jr-txt, .jr.js .jr-art { opacity: 1; transform: none; transition: none; }
   .jr-fill, .jr-head, .jr-dot, .jr-yr { transition: none !important; }
 }
+
+/* ============================================================
+   TESTIMONIAL MARQUEE
+   Two copies of the row sit side by side; the track slides by half its
+   own width and snaps back, which reads as one endless row. The owner asked
+   for left to right, so the track starts pulled back and travels forward.
+   To reverse: swap the from and to values. Hover and keyboard focus pause
+   it. Reduced motion turns it into a plain horizontal scroller.
+   ============================================================ */
+.tm {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.tm-track {
+  display: flex;
+  width: max-content;
+  animation: tm-slide 75s linear infinite;
+  will-change: transform;
+}
+.tm:hover .tm-track,
+.tm:focus-within .tm-track {
+  animation-play-state: paused;
+}
+.tm-row {
+  display: flex;
+  gap: 1.25rem;
+  padding: 0.5rem 0.625rem;
+  margin: 0;
+  list-style: none;
+}
+.tm-card {
+  flex: 0 0 auto;
+  width: clamp(17rem, 24vw, 22rem);
+  border-radius: 1rem;
+  border: 1px solid rgba(28, 36, 80, 0.1);
+  background: #fff;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px rgba(21, 27, 61, 0.04), 0 12px 32px -18px rgba(21, 27, 61, 0.35);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.tm-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 162, 77, 0.55);
+  box-shadow: 0 1px 2px rgba(21, 27, 61, 0.04), 0 22px 44px -18px rgba(21, 27, 61, 0.45);
+}
+@keyframes tm-slide {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tm { mask-image: none; -webkit-mask-image: none; overflow-x: auto; }
+  .tm-track { animation: none; }
+  .tm-row[aria-hidden="true"] { display: none; }
+}

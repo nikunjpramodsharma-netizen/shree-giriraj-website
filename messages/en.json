@@ -115,9 +115,12 @@
   },
   "testimonials": {
     "eyebrow": "What clients say",
-    "heading": "Trusted by families across the suburbs",
+    "heading": "What clients say, in their own words",
     "prevAriaLabel": "Previous testimonial",
-    "nextAriaLabel": "Next testimonial"
+    "nextAriaLabel": "Next testimonial",
+    "onGoogle": "on Google",
+    "readReviews": "Read our reviews",
+    "placeholder": "Placeholder"
   },
   "areas": {
     "eyebrow": "Where we work",

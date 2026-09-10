@@ -38,14 +38,6 @@ export const FILLS = [
     why: "The byline, the author box and the schema author field all stay hidden until an author exists. Content with no named author is weaker for both search and AI citation.",
     where: ["src/sanity/schemas/author.ts"],
   },
-  {
-    id: "about-page",
-    area: "Site",
-    status: "hidden",
-    ask: "The founder's story, in his words: what he was doing before 1996 and what Borivali looked like then, how the firm works and who it is not for, what RERA changed for a buyer here, and a deal it turned down. The name, the portrait and the two dates are already on the page.",
-    why: "The page is built and the facts on it are real, but the story is not written, so it is served noindex. Flip STORY_IS_WRITTEN once it is.",
-    where: ["src/app/(site)/[locale]/about/page.tsx"],
-  },
 
   // ---------------------------------------------------------------- wrong
   {
@@ -94,9 +86,9 @@ export const FILLS = [
     id: "testimonials",
     area: "Homepage",
     status: "hidden",
-    ask: "Real client testimonials, with permission to publish and a real first name and area.",
-    why: "Seeded placeholder testimonials are filtered out in code so they cannot ship, which means the homepage has no social proof at all.",
-    where: ["src/app/(site)/[locale]/page.tsx"],
+    ask: "The fifteen real reviews promised on 10 September 2026: each with the client's words, first name, suburb, and what they bought, sold, rented or did with you. Also the review count on the Google profile, if you want it shown beside the 5.0.",
+    why: "The homepage carries a scrolling reviews rail with fifteen cards, but every card is a labelled placeholder until the real ones arrive (TESTIMONIALS_ARE_REAL in testimonials.ts). The Google rating link is live and reads 5.0, which is what the profile showed on 10 September 2026; the 4.8 quoted was not what Google displays.",
+    where: ["src/lib/testimonials.ts"],
   },
 
   {
