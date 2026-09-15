@@ -120,7 +120,9 @@
     "nextAriaLabel": "अगला प्रशंसापत्र",
     "onGoogle": "Google पर",
     "readReviews": "हमारे रिव्यू पढ़ें",
-    "placeholder": "प्लेसहोल्डर"
+    "placeholder": "प्लेसहोल्डर",
+    "reviewCount": "{count} रिव्यू",
+    "postedOn": "Google पर लिखा गया"
   },
   "areas": {
     "eyebrow": "हम कहां काम करते हैं",

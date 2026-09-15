@@ -76,9 +76,9 @@ Answer by number. Anything you do not know yet, say so and it stays on the list 
 
 `area-pages`  ·  Areas  ·  src/lib/areas.ts
 
-**11. The fifteen real reviews promised on 10 September 2026: each with the client's words, first name, suburb, and what they bought, sold, rented or did with you. Also the review count on the Google profile, if you want it shown beside the 5.0.**
+**11. Twelve more reviews to fill the rail: each with the client's words, first name, suburb, and what they bought, sold, rented or did with you. Three Google reviews are already on it.**
 
-> The homepage carries a scrolling reviews rail with fifteen cards, but every card is a labelled placeholder until the real ones arrive (TESTIMONIALS_ARE_REAL in testimonials.ts). The Google rating link is live and reads 5.0, which is what the profile showed on 10 September 2026; the 4.8 quoted was not what Google displays.
+> The rail carries the three text reviews from the Google profile, quoted exactly and linked to it, and twelve labelled placeholders (testimonials.ts). The rating link reads 5.0 from 5 reviews, as the profile showed on 15 September 2026.
 
 `testimonials`  ·  Homepage  ·  src/lib/testimonials.ts
 

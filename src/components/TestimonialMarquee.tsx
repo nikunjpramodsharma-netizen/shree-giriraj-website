@@ -1,4 +1,4 @@
-import { GOOGLE_RATING, TESTIMONIALS_ARE_REAL, type Testimonial } from "@/lib/testimonials";
+import { GOOGLE_RATING, type Testimonial } from "@/lib/testimonials";
 
 /**
  * A continuously scrolling row of review cards, with the Google rating as a
@@ -28,7 +28,15 @@ export function TestimonialMarquee({
   labels,
 }: {
   items: Testimonial[];
-  labels: { onGoogle: string; readReviews: string; placeholder: string };
+  labels: {
+    onGoogle: string;
+    readReviews: string;
+    placeholder: string;
+    /** "{count} reviews", already formatted by the page. */
+    reviewCount?: string;
+    /** "Posted on Google" */
+    postedOn: string;
+  };
 }) {
   const rating = GOOGLE_RATING;
   return (
@@ -44,7 +52,7 @@ export function TestimonialMarquee({
         <Stars className="text-brass" />
         <span className="text-sm text-muted">
           {labels.onGoogle}
-          {rating.count ? ` · ${rating.count}` : ""}
+          {rating.count && labels.reviewCount ? ` · ${labels.reviewCount}` : ""}
         </span>
         <span className="ml-1 text-sm font-semibold text-brand-blue underline decoration-brand-blue/30 underline-offset-4 group-hover:decoration-brand-blue">
           {labels.readReviews}
@@ -62,13 +70,25 @@ export function TestimonialMarquee({
               {items.map((t, i) => (
                 <li key={`${copy}-${i}`} className="tm-card">
                   <figure>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between gap-2">
                       <Stars className="text-brass" />
-                      {!TESTIMONIALS_ARE_REAL && (
+                      {t.placeholder ? (
                         <span className="rounded-full border border-brass/40 px-2 py-0.5 text-[0.58rem] font-semibold uppercase tracking-wider text-brass">
                           {labels.placeholder}
                         </span>
-                      )}
+                      ) : t.source?.kind === "google" ? (
+                        <a
+                          href={t.source.url}
+                          target="_blank"
+                          rel="noopener"
+                          className="pointer-events-auto inline-flex items-center gap-1.5 text-[0.7rem] text-muted hover:text-ink"
+                        >
+                          <GoogleMark small />
+                          <span>
+                            {labels.postedOn} · {t.source.postedOn}
+                          </span>
+                        </a>
+                      ) : null}
                     </div>
                     <blockquote className="mt-4 text-[0.98rem] leading-relaxed text-ink/85">
                       “{t.quote}”
@@ -118,9 +138,9 @@ function Stars({ className = "" }: { className?: string }) {
 }
 
 /** The four colour G, drawn inline so nothing is fetched from Google to show it. */
-function GoogleMark() {
+function GoogleMark({ small = false }: { small?: boolean }) {
   return (
-    <svg viewBox="0 0 48 48" className="h-6 w-6" aria-hidden="true">
+    <svg viewBox="0 0 48 48" className={small ? "h-3.5 w-3.5" : "h-6 w-6"} aria-hidden="true">
       <path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z" />
       <path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.7 6c4.5-4.2 6.9-10.3 6.9-17.7z" />
       <path fill="#FBBC05" d="M10.5 28.6A14.5 14.5 0 0 1 9.7 24c0-1.6.3-3.1.8-4.6l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z" />

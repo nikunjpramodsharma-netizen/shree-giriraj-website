@@ -120,7 +120,9 @@
     "nextAriaLabel": "पुढील प्रशस्तिपत्र",
     "onGoogle": "Google वर",
     "readReviews": "आमचे रिव्ह्यू वाचा",
-    "placeholder": "प्लेसहोल्डर"
+    "placeholder": "प्लेसहोल्डर",
+    "reviewCount": "{count} रिव्ह्यू",
+    "postedOn": "Google वर लिहिलेले"
   },
   "areas": {
     "eyebrow": "आम्ही कुठे काम करतो",

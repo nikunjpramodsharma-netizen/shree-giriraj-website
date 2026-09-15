@@ -120,7 +120,9 @@
     "nextAriaLabel": "Next testimonial",
     "onGoogle": "on Google",
     "readReviews": "Read our reviews",
-    "placeholder": "Placeholder"
+    "placeholder": "Placeholder",
+    "reviewCount": "{count} reviews",
+    "postedOn": "Posted on Google"
   },
   "areas": {
     "eyebrow": "Where we work",

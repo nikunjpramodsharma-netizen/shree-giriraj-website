@@ -26,7 +26,7 @@ import {
 import { ContactCTA } from "@/components/ContactCTA";
 import { FAQSection } from "@/components/FAQSection";
 import { TestimonialMarquee } from "@/components/TestimonialMarquee";
-import { TESTIMONIALS } from "@/lib/testimonials";
+import { TESTIMONIALS, GOOGLE_RATING } from "@/lib/testimonials";
 import { Reveal } from "@/components/Reveal";
 import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
 import { getLowestPriceConfig } from "@/lib/project-helpers";
@@ -502,6 +502,10 @@ export default async function HomePage({
               onGoogle: tTestimonials("onGoogle"),
               readReviews: tTestimonials("readReviews"),
               placeholder: tTestimonials("placeholder"),
+              postedOn: tTestimonials("postedOn"),
+              reviewCount: GOOGLE_RATING.count
+                ? tTestimonials("reviewCount", { count: GOOGLE_RATING.count })
+                : undefined,
             }}
           />
         </Reveal>
