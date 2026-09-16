@@ -5,6 +5,15 @@ import { client } from "@/sanity/client";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ConsultCTA } from "@/components/ConsultCTA";
+import { HeroVideo } from "@/components/HeroVideo";
+import { FactChips } from "@/components/motion/FactChips";
+import { GrowBars } from "@/components/motion/GrowBars";
+import { DrawLine } from "@/components/motion/DrawLine";
+import { AutoScene } from "@/components/motion/AutoScene";
+import { InView } from "@/components/motion/InView";
+import { Parallax } from "@/components/motion/Parallax";
+import { CountUp } from "@/components/motion/CountUp";
+import { StickyBar } from "@/components/motion/StickyBar";
 import { ContactCTA } from "@/components/ContactCTA";
 import { graph, breadcrumbNode, faqNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
@@ -83,14 +92,13 @@ export default async function AreaPage({
       />
 
       <header className="relative overflow-hidden bg-brand-indigo-deep text-paper">
-        <Image
-          src={area.hero?.src ?? panel.image}
-          alt={area.hero?.alt ?? `${area.longName}, Mumbai`}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover opacity-40"
-        />
+        <div className="absolute inset-0 opacity-50">
+          <HeroVideo
+            src={area.motion.video.src}
+            poster={area.motion.video.poster}
+            alt={area.hero?.alt ?? `${area.longName}, Mumbai`}
+          />
+        </div>
         <div
           aria-hidden="true"
           className="absolute inset-0"
@@ -104,12 +112,20 @@ export default async function AreaPage({
           <div className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-brass-bright">
             Area guide
           </div>
-          <h1 className="mt-3 max-w-[20ch] text-3xl text-white md:text-5xl">
+          <h1 className="rise mt-3 max-w-[20ch] text-3xl text-white md:text-5xl">
             {area.longName}
           </h1>
-          <p className="mt-5 max-w-[58ch] text-paper/80">
+          <p className="rise-2 mt-5 max-w-[58ch] text-paper/80">
             {area.metaDescription}
           </p>
+          <FactChips
+            facts={panel.stats.map((s) => {
+              const m = s.value.match(/^₹([\d,]+)$/);
+              return m
+                ? { value: Number(m[1].replace(/,/g, "")), prefix: "₹", label: s.label }
+                : { text: s.value, label: s.label };
+            })}
+          />
         </div>
       </header>
 
@@ -145,7 +161,13 @@ export default async function AreaPage({
               <dt className="text-xs uppercase tracking-wider text-muted">
                 {s.label}
               </dt>
-              <dd className="mt-1 text-2xl text-ink">{s.value}</dd>
+              <dd className="mt-1 text-2xl text-ink">
+                {/^₹[\d,]+$/.test(s.value) ? (
+                  <CountUp value={Number(s.value.replace(/[₹,]/g, ""))} prefix="₹" />
+                ) : (
+                  s.value
+                )}
+              </dd>
             </div>
           ))}
         </dl>
@@ -163,29 +185,80 @@ export default async function AreaPage({
               <PendingSection key={s.heading} block={s} />
             ) : (
               <section key={s.heading}>
-                <div className="max-w-[68ch]">
-                  <h2 className="text-2xl text-ink md:text-3xl">{s.heading}</h2>
+                <InView className="cascade max-w-[68ch]">
+                  <h2 style={{ ["--i" as string]: 0 }} className="text-2xl text-ink md:text-3xl">{s.heading}</h2>
                   <div className="mt-4 space-y-4 text-[1.02rem] leading-relaxed text-ink/85">
-                    {s.body.map((para) => (
-                      <p key={para.slice(0, 48)}>{para}</p>
+                    {s.body.map((para, pi) => (
+                      <p key={para.slice(0, 48)} style={{ ["--i" as string]: pi + 1 }}>{para}</p>
                     ))}
                   </div>
-                </div>
+                </InView>
                 {s.image && (
                   <figure className="mt-8 max-w-[76ch]">
                     <div className="relative aspect-[16/9] overflow-hidden rounded-2xl">
-                      <Image
-                        src={s.image.src}
-                        alt={s.image.alt}
-                        fill
-                        sizes="(min-width: 1024px) 760px, 100vw"
-                        className="object-cover"
-                      />
+                      <Parallax strength={40} className="absolute -inset-y-6 inset-x-0">
+                        <div className="relative h-full w-full">
+                          <Image
+                            src={s.image.src}
+                            alt={s.image.alt}
+                            fill
+                            sizes="(min-width: 1024px) 760px, 100vw"
+                            className="object-cover"
+                          />
+                        </div>
+                      </Parallax>
                     </div>
                     {s.image.caption && (
                       <figcaption className="mt-2.5 text-sm text-muted">{s.image.caption}</figcaption>
                     )}
                   </figure>
+                )}
+                {s.scene === "pockets" && (
+                  <div className="mt-10 grid gap-8 lg:grid-cols-[.9fr_1.1fr] lg:items-start">
+                    <div className="rounded-2xl border border-line bg-white p-6">
+                      <div className="eyebrow">Asking rates by pocket</div>
+                      <div className="mt-5">
+                        <GrowBars bars={area.motion.pockets} footnote={area.motion.pocketsNote} />
+                      </div>
+                    </div>
+                    <AutoScene scenes={area.motion.pocketScenes} />
+                  </div>
+                )}
+                {s.scene === "commute" && (
+                  <div className="mt-10 rounded-3xl bg-brand-indigo-deep p-6 text-paper md:p-9">
+                    <InView className="cascade grid gap-6 sm:grid-cols-2 lg:grid-cols-4" threshold={0.2}>
+                      {area.motion.commute.map((c, i) => (
+                        <div key={c.label} style={{ ["--i" as string]: i }} className="border-l-2 border-brass/60 pl-4">
+                          <div className="font-display text-3xl font-semibold text-white">
+                            {c.value !== undefined ? (
+                              <CountUp value={c.value} prefix={c.prefix} suffix={c.suffix} decimals={(c as { decimals?: number }).decimals} />
+                            ) : (
+                              c.text
+                            )}
+                          </div>
+                          <div className="mt-1 text-sm text-paper/75">{c.label}</div>
+                        </div>
+                      ))}
+                    </InView>
+                    <div className="mt-10 space-y-8">
+                      {area.motion.metro.map((m) => (
+                        <DrawLine key={m.label} label={m.label} stops={m.stops} tone="dark" />
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {s.scene === "landmarks" && (
+                  <div className="mt-10">
+                    <AutoScene scenes={area.motion.landmarks} interval={5500} />
+                  </div>
+                )}
+                {s.scene === "rents" && (
+                  <div className="mt-10 max-w-[68ch] rounded-2xl border border-line bg-white p-6">
+                    <div className="eyebrow">Asking rents by size</div>
+                    <div className="mt-5">
+                      <GrowBars bars={area.motion.rents} footnote={area.motion.rentsNote} />
+                    </div>
+                  </div>
                 )}
                 {s.invite && <Invite invite={s.invite} />}
               </section>
@@ -195,21 +268,26 @@ export default async function AreaPage({
 
         <section className="mt-16 max-w-[68ch]">
           <h2 className="text-2xl text-ink md:text-3xl">Common questions</h2>
-          <dl className="mt-6 divide-y divide-line border-y border-line">
-            {area.faqs.map((f) => (
-              <div key={f.q} className="py-5">
-                <dt className="font-semibold text-ink">{f.q}</dt>
-                <dd className="mt-2 text-ink/75">{f.a}</dd>
-              </div>
+          <InView className="cascade mt-6 space-y-3" threshold={0.1}>
+            {area.faqs.map((f, i) => (
+              <details key={f.q} style={{ ["--i" as string]: i }} open={i === 0} className="group rounded-2xl border border-line bg-white p-5 open:shadow-sm">
+                <summary className="cursor-pointer list-none font-medium text-brand-indigo marker:content-none">
+                  <span className="flex items-center justify-between gap-4">
+                    {f.q}
+                    <span className="shrink-0 text-brass transition group-open:rotate-45">+</span>
+                  </span>
+                </summary>
+                <p className="mt-3 text-[0.97rem] text-ink/75">{f.a}</p>
+              </details>
             ))}
-          </dl>
+          </InView>
         </section>
 
         {area.sources.length > 0 && (
-          <div className="mt-12 max-w-[68ch] rounded-xl border border-line p-5">
-            <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-muted">
-              Sources. Market figures as of {area.figuresAsOf}; asking rates, not prices paid.
-            </div>
+          <details className="mt-12 max-w-[68ch] rounded-xl border border-line p-5">
+            <summary className="cursor-pointer list-none text-[0.62rem] font-bold uppercase tracking-[0.18em] text-muted marker:content-none">
+              Where these figures come from. Market figures as of {area.figuresAsOf}; asking rates, not prices paid.
+            </summary>
             <ul className="mt-3 space-y-1.5 text-sm">
               {area.sources.map((src) => (
                 <li key={src.url}>
@@ -224,7 +302,7 @@ export default async function AreaPage({
                 </li>
               ))}
             </ul>
-          </div>
+          </details>
         )}
 
         <p className="mt-10 max-w-[68ch] text-sm text-muted">
@@ -241,6 +319,11 @@ export default async function AreaPage({
           presetArea={area.longName}
         />
       </div>
+      <StickyBar
+        message={`Hi Shree Giriraj, I am looking at property in ${area.longName}. Can you help?`}
+        waLabel="WhatsApp"
+        callLabel="Call"
+      />
     </article>
   );
 }

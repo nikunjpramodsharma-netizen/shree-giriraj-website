@@ -22,6 +22,11 @@ import { getRepoService, repoServiceBlocks, repoServiceLocales } from "@/lib/ser
 import { tr } from "@/lib/copy-i18n";
 import { MarkdownBody } from "@/components/MarkdownBody";
 import { HeroVideo } from "@/components/HeroVideo";
+import { ServiceScenes } from "@/components/ServiceScenes";
+import { FactChips } from "@/components/motion/FactChips";
+import { StickyBar } from "@/components/motion/StickyBar";
+import { InView } from "@/components/motion/InView";
+import { SERVICE_SCENES } from "@/lib/service-scenes";
 
 export const revalidate = 60;
 
@@ -126,6 +131,7 @@ const HERO_VIDEO: Partial<Record<(typeof SERVICE_SLUGS)[number], { src: string; 
   "investment-advisory": { src: "/services/video/investment.mp4", poster: "/services/video/investment-poster.jpg" },
   "commercial-plots": { src: "/services/video/commercial.mp4", poster: "/services/video/commercial-poster.jpg" },
   interiors: { src: "/services/video/interiors.mp4", poster: "/services/video/interiors-poster.jpg" },
+  "mhada-paperwork": { src: "/services/video/mhada.mp4", poster: "/services/video/mhada-poster.jpg" },
 };
 
 /** Alt text per service. A hero image is content, not decoration. */
@@ -231,6 +237,7 @@ export default async function ServicePage({
   const slug = params.slug as (typeof SERVICE_SLUGS)[number];
 
   const repo = getRepoService(slug, locale);
+  const sceneData = SERVICE_SCENES[slug];
 
   const [page, projects, tHero, tServiceCta, tServiceSteps, tProjectsGrid] = await Promise.all([
     repo
@@ -330,15 +337,20 @@ export default async function ServicePage({
               <div className="eyebrow text-brass-bright">
                 {site.areas.map((a) => tr(locale, a)).join(" \u00b7 ")}
               </div>
-              <h1 className="mt-3.5 max-w-[20ch] text-4xl text-white md:text-6xl">
+              <h1 className="rise mt-3.5 max-w-[20ch] text-4xl text-white md:text-6xl">
                 {heroHeading}
               </h1>
               {heroSubheading && (
-                <p className="mt-5 max-w-[38em] text-lg text-paper/80">
+                <p className="rise-2 mt-5 max-w-[38em] text-lg text-paper/80">
                   {heroSubheading}
                 </p>
               )}
-              <div className="mt-8 flex flex-wrap gap-3.5">
+              {sceneData && (
+                <FactChips
+                  facts={sceneData.facts.map((f) => ({ ...f, label: tr(locale, f.label) }))}
+                />
+              )}
+              <div className="rise-3 mt-8 flex flex-wrap gap-3.5">
                 <a href="#enquire" className="btn btn-brass">
                   {tHero("ctaBook")}
                 </a>
@@ -365,51 +377,63 @@ export default async function ServicePage({
         </Reveal>
       </section>
 
-      {/* BODY */}
-      <section className="pb-16">
-        <Reveal>
-          <div className="mx-auto max-w-3xl px-6">
-            {repo ? (
-              <MarkdownBody blocks={repoServiceBlocks(repo)} />
-            ) : (
-              <PortableTextBody value={body} />
-            )}
-          </div>
-        </Reveal>
-      </section>
+      {/* BODY. Staged as scenes: lead, cards, numbers, alternating
+          photograph scenes, a worked example, the closing band. Every word
+          of the markdown is still rendered; see ServiceScenes. */}
+      {repo && sceneData ? (
+        <ServiceScenes blocks={repoServiceBlocks(repo)} scene={sceneData} locale={locale} />
+      ) : (
+        <section className="pb-16">
+          <Reveal>
+            <div className="mx-auto max-w-3xl px-6">
+              {repo ? <MarkdownBody blocks={repoServiceBlocks(repo)} /> : <PortableTextBody value={body} />}
+            </div>
+          </Reveal>
+        </section>
+      )}
 
       {/* COMMON QUESTIONS. The questions people actually type for this
           service, answered from the same sourced figures the blog carries.
           See service-faqs.ts for where each answer comes from. */}
       {faqs.length > 0 && (
-        <section className="pb-16">
-          <Reveal>
-            <div className="mx-auto max-w-3xl px-6">
-              <h2 className="text-2xl text-ink md:text-3xl">Common questions</h2>
-              <dl className="mt-6 divide-y divide-line border-y border-line">
-                {faqs.map((f) => (
-                  <div key={f.q} className="py-5">
-                    <dt className="font-semibold text-ink">{f.q}</dt>
-                    <dd className="mt-2 text-ink/75">
-                      {f.a}
-                      {f.href && f.hrefLabel && (
-                        <>
-                          {" "}
-                          <Link
-                            href={f.href}
-                            className="text-brand-indigo underline underline-offset-4"
-                          >
-                            {f.hrefLabel}
-                          </Link>
-                          .
-                        </>
-                      )}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          </Reveal>
+        <section className="py-16 md:py-20">
+          <div className="mx-auto max-w-3xl px-6">
+            <InView className="cascade">
+              <div style={{ ["--i" as string]: 0 }} className="eyebrow">Common questions</div>
+              <h2 style={{ ["--i" as string]: 1 }} className="mt-3 text-2xl text-brand-indigo md:text-3xl">
+                The questions people ask before they call
+              </h2>
+            </InView>
+            <InView className="cascade mt-8 space-y-3" threshold={0.1}>
+              {faqs.map((f, i) => (
+                <details
+                  key={f.q}
+                  style={{ ["--i" as string]: i }}
+                  open={i === 0}
+                  className="group rounded-2xl border border-line bg-white p-6 open:shadow-sm"
+                >
+                  <summary className="cursor-pointer list-none text-lg font-medium text-brand-indigo marker:content-none">
+                    <span className="flex items-center justify-between gap-4">
+                      {f.q}
+                      <span className="shrink-0 text-brass transition group-open:rotate-45">+</span>
+                    </span>
+                  </summary>
+                  <p className="mt-3 text-[0.97rem] text-ink/75">
+                    {f.a}
+                    {f.href && f.hrefLabel && (
+                      <>
+                        {" "}
+                        <Link href={f.href} className="text-brand-indigo underline underline-offset-4">
+                          {f.hrefLabel}
+                        </Link>
+                        .
+                      </>
+                    )}
+                  </p>
+                </details>
+              ))}
+            </InView>
+          </div>
         </section>
       )}
 
@@ -496,6 +520,13 @@ export default async function ServicePage({
           </div>
         </Reveal>
       </section>
+      {sceneData && (
+        <StickyBar
+          message={sceneData.message}
+          waLabel={tHero("ctaWhatsapp")}
+          callLabel={tr(locale, "Call")}
+        />
+      )}
     </>
   );
 }

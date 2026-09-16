@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import type { ServicePanel } from "@/lib/homepage-content";
 import { tr } from "@/lib/copy-i18n";
@@ -21,6 +21,16 @@ import { tr } from "@/lib/copy-i18n";
  */
 export function ServiceTrack({ panels, locale = "en" }: { panels: ServicePanel[]; locale?: string }) {
   const [open, setOpen] = useState(0);
+  const [touched, setTouched] = useState(false);
+
+  // Advances on its own every six seconds until the reader touches it, so
+  // the track reads as a moving scene rather than a row of closed doors.
+  useEffect(() => {
+    if (touched) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const t = setInterval(() => setOpen((o) => (o + 1) % panels.length), 6000);
+    return () => clearInterval(t);
+  }, [touched, panels.length]);
 
   return (
     <div className="mx-auto flex max-w-content flex-col gap-1.5 px-6 md:h-[520px] md:flex-row">
@@ -57,7 +67,11 @@ export function ServiceTrack({ panels, locale = "en" }: { panels: ServicePanel[]
 
             <button
               type="button"
-              onClick={() => setOpen(i)}
+              onClick={() => {
+                setOpen(i);
+                setTouched(true);
+              }}
+              onMouseEnter={() => setTouched(true)}
               aria-expanded={isOpen}
               className="absolute inset-0 z-10 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-brass"
             >

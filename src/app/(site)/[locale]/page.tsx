@@ -37,6 +37,8 @@ import { getAllPosts } from "@/lib/posts";
 import { postVisual } from "@/lib/blog";
 import { graph, organizationNode, websiteNode, faqNode } from "@/lib/schema";
 import { tr, localizeDeep } from "@/lib/copy-i18n";
+import { CountUp } from "@/components/motion/CountUp";
+import { InView } from "@/components/motion/InView";
 
 /**
  * PLACEHOLDER PHOTOGRAPHY. Stock images from Pexels, not Borivali, Kandivali
@@ -363,7 +365,9 @@ export default async function HomePage({
                 { n: tHero("statRera"), l: site.rera },
               ].map((s) => (
                 <div key={s.l}>
-                  <div className="font-display text-2xl font-semibold text-white sm:text-3xl">{s.n}</div>
+                  <div className="font-display text-2xl font-semibold text-white sm:text-3xl">
+                    {/^\d+$/.test(s.n) ? <CountUp value={Number(s.n)} /> : s.n}
+                  </div>
                   <div className="text-sm text-paper/60">{s.l}</div>
                 </div>
               ))}
@@ -438,10 +442,11 @@ export default async function HomePage({
                     <th className="p-5 text-sm font-semibold text-muted">{tCompare("colBrokers")}</th>
                   </tr>
                 </thead>
-                <tbody>
+                <InView as="tbody" className="cascade" threshold={0.1}>
                   {COMPARE_ROWS.map((row, i) => (
                     <tr
                       key={row.key}
+                      style={{ ["--i" as string]: i }}
                       className={i % 2 === 1 ? "bg-paper-alt/50" : undefined}
                     >
                       <td className="p-5 text-sm text-ink">{tCompare(row.key)}</td>
@@ -456,7 +461,7 @@ export default async function HomePage({
                       </td>
                     </tr>
                   ))}
-                </tbody>
+                </InView>
               </table>
             </div>
             <p className="mt-4 max-w-[70ch] text-sm text-muted">{tCompare("footnote")}</p>

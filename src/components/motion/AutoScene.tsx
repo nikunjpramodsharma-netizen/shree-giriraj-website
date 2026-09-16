@@ -1,0 +1,110 @@
+"use client";
+
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+
+export type Scene = {
+  title: string;
+  text: string;
+  image?: { src: string; alt: string };
+  /** Small line above the title, e.g. "West" or a rate. */
+  kicker?: string;
+};
+
+/**
+ * A panel that changes on its own every few seconds with a crossfade, and
+ * pauses the moment the reader touches or hovers it. The dots beneath show
+ * where in the sequence it is; tapping one jumps there. Under reduced motion
+ * it shows the first scene and the dots still work.
+ */
+export function AutoScene({
+  scenes,
+  interval = 6000,
+  tone = "light",
+  aspect = "aspect-[4/3]",
+}: {
+  scenes: Scene[];
+  interval?: number;
+  tone?: "light" | "dark";
+  aspect?: string;
+}) {
+  const [i, setI] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const io = new IntersectionObserver(([e]) => setVisible(e.isIntersecting), { threshold: 0.3 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (paused || !visible || scenes.length < 2) return;
+    const t = setInterval(() => setI((x) => (x + 1) % scenes.length), interval);
+    return () => clearInterval(t);
+  }, [paused, visible, scenes.length, interval]);
+
+  const dark = tone === "dark";
+  const s = scenes[i];
+
+  return (
+    <div
+      ref={ref}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onTouchStart={() => setPaused(true)}
+      className={`overflow-hidden rounded-2xl border ${dark ? "border-white/10 bg-white/5" : "border-line bg-white"}`}
+    >
+      <div className="grid md:grid-cols-[1.1fr_.9fr]">
+        <div className={`relative ${aspect} md:aspect-auto md:min-h-[260px]`}>
+          {scenes.map((sc, k) =>
+            sc.image ? (
+              <Image
+                key={sc.title}
+                src={sc.image.src}
+                alt={k === i ? sc.image.alt : ""}
+                fill
+                sizes="(min-width: 768px) 45vw, 100vw"
+                className="object-cover transition-opacity duration-700"
+                style={{ opacity: k === i ? 1 : 0 }}
+              />
+            ) : null,
+          )}
+        </div>
+        <div className="flex flex-col justify-between p-6 md:p-7">
+          <div key={s.title} className="scene-in">
+            {s.kicker && (
+              <div className={`text-[0.62rem] font-bold uppercase tracking-[0.16em] ${dark ? "text-brass-bright" : "text-brass"}`}>
+                {s.kicker}
+              </div>
+            )}
+            <h3 className={`mt-2 font-display text-xl ${dark ? "text-white" : "text-brand-indigo"} md:text-2xl`}>{s.title}</h3>
+            <p className={`mt-3 text-[0.97rem] ${dark ? "text-paper/80" : "text-ink/80"}`}>{s.text}</p>
+          </div>
+          <div className="mt-6 flex items-center gap-2" role="tablist">
+            {scenes.map((sc, k) => (
+              <button
+                key={sc.title}
+                type="button"
+                role="tab"
+                aria-selected={k === i}
+                aria-label={sc.title}
+                onClick={() => {
+                  setI(k);
+                  setPaused(true);
+                }}
+                className={`h-1.5 rounded-full transition-all ${
+                  k === i ? "w-7 bg-brass" : `w-2.5 ${dark ? "bg-white/25" : "bg-brand-indigo/15"}`
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

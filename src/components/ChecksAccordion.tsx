@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Check } from "@/lib/homepage-content";
 
 /**
@@ -9,6 +9,14 @@ import type { Check } from "@/lib/homepage-content";
  */
 export function ChecksAccordion({ checks }: { checks: Check[] }) {
   const [open, setOpen] = useState(0);
+  const [touched, setTouched] = useState(false);
+
+  useEffect(() => {
+    if (touched) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const t = setInterval(() => setOpen((o) => (o + 1) % checks.length), 5500);
+    return () => clearInterval(t);
+  }, [touched, checks.length]);
 
   return (
     <div className="flex flex-col">
@@ -19,7 +27,10 @@ export function ChecksAccordion({ checks }: { checks: Check[] }) {
             <h3>
               <button
                 type="button"
-                onClick={() => setOpen(isOpen ? -1 : i)}
+                onClick={() => {
+                  setTouched(true);
+                  setOpen(isOpen ? -1 : i);
+                }}
                 aria-expanded={isOpen}
                 className="flex w-full items-baseline gap-3.5 py-5 text-left"
               >

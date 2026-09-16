@@ -62,6 +62,8 @@ export type ProseSection = {
   body: string[];
   image?: AreaImage;
   invite?: AreaInvite;
+  /** A motion scene rendered after this section. */
+  scene?: "pockets" | "commute" | "landmarks" | "rents";
 };
 
 export type AreaSection = ProseSection | InputBlock;
@@ -70,9 +72,28 @@ export function isInputBlock(s: AreaSection): s is InputBlock {
   return (s as InputBlock).kind === NEEDS_INPUT;
 }
 
+/**
+ * The motion data for an area page: the hero clip, the commute counters,
+ * the metro line that draws itself, the pocket bars, the pocket scenes that
+ * change on their own, the landmark strip and the rent bars. All figures are
+ * the ones in the prose and sources below; the scenes show them moving.
+ */
+export type AreaMotion = {
+  video: { src: string; poster: string };
+  commute: { value?: number; text?: string; prefix?: string; suffix?: string; label: string }[];
+  metro: { label: string; stops: { name: string; here?: boolean }[] }[];
+  pockets: { label: string; value: number; note?: string }[];
+  pocketsNote: string;
+  pocketScenes: { kicker?: string; title: string; text: string; image?: { src: string; alt: string } }[];
+  landmarks: { kicker?: string; title: string; text: string; image?: { src: string; alt: string } }[];
+  rents: { label: string; value: number; note: string }[];
+  rentsNote: string;
+};
+
 export type AreaPage = {
   slug: string;
   name: string;
+  motion: AreaMotion;
   /** Full name for headings and title tags, where the panel name is short. */
   longName: string;
   metaTitle: string;
@@ -97,6 +118,46 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       src: "/areas/borivali-aerial.jpg",
       alt: "Mumbai's suburban rooftops and towers with trees between them, seen from above at sunset",
     },
+    motion: {
+      video: { src: "/areas/video/borivali.mp4", poster: "/areas/video/borivali-poster.jpg" },
+      commute: [
+        { value: 23, suffix: " min", label: "to Andheri by local" },
+        { value: 12, suffix: " km", label: "to the airport by road" },
+        { value: 2.87, decimals: 2, suffix: " lakh", label: "passengers a day at the station" } as never,
+        { value: 10, label: "platforms at Borivali" },
+      ],
+      metro: [
+        { label: "Metro Line 2A, west side", stops: [{ name: "Dahisar East" }, { name: "Mandapeshwar" }, { name: "Eksar" }, { name: "Borivali West", here: true }, { name: "Shimpoli" }, { name: "Kandivali West" }, { name: "Andheri West" }] },
+        { label: "Metro Line 7, east side", stops: [{ name: "Dahisar East" }, { name: "Ovaripada" }, { name: "Rashtriya Udyan", here: true }, { name: "Devipada" }, { name: "Magathane" }, { name: "Poisar" }, { name: "Gundavali" }] },
+      ],
+      pockets: [
+        { label: "Yogi Nagar", value: 30400, note: "27,000 to 33,800" },
+        { label: "Shimpoli", value: 29000, note: "27,500 to 30,500" },
+        { label: "Chikoowadi", value: 25500, note: "25,000 to 26,000" },
+        { label: "I.C. Colony", value: 25250, note: "19,000 to 31,500, by building age" },
+        { label: "Eksar Road", value: 19500, note: "13,000 to 26,000" },
+        { label: "Gorai stretch", value: 17050, note: "10,900 to 23,200" },
+      ],
+      pocketsNote: "Midpoints of asking rate ranges per square foot, NoBroker, May 2026. Asking is not the registered price.",
+      pocketScenes: [
+        { kicker: "West · the shop's own pocket", title: "Chikoowadi", text: "Older cooperative societies alongside newer towers, near the Shimpoli metro and a little further from the station. Quiet, established, and the pocket we know best.", image: { src: "/areas/borivali-aerial.jpg", alt: "Mumbai's suburban rooftops among trees" } },
+        { kicker: "West · East Indian heart", title: "I.C. Colony", text: "A parish from 1547, Mount Poinsur, St. Francis school, the Mandapeshwar caves, and a Christmas market on Brother Cyprian Street. Prices vary more by building age here than anywhere in Borivali.", image: { src: "/areas/borivali-sgnp.jpg", alt: "Trees and rock cut caves at the national park" } },
+        { kicker: "West · the station belt", title: "L.T. Road and Chandavarkar Road", text: "The old commercial heart: the municipal market, the shopping lanes, Veer Savarkar Udyan's 1.5 kilometre track, and a MHADA colony by the Borivali West metro.", image: { src: "/areas/train.jpg", alt: "A Mumbai suburban train at a busy platform" } },
+        { kicker: "East · against the forest", title: "Kulupwadi and Dattapada Road", text: "Ten minutes from the national park gate, Raheja Estate's societies, and Oberoi Sky City rising on 25 acres with possession declared for December 2027.", image: { src: "/areas/borivali-hills.jpg", alt: "Mumbai's suburbs seen from a hill" } },
+      ],
+      landmarks: [
+        { kicker: "Borivali East", title: "Sanjay Gandhi National Park", text: "103.84 square kilometres, more than two million visitors a year, three to five thousand morning walkers, and the 109 Kanheri caves inside.", image: { src: "/areas/borivali-sgnp.jpg", alt: "Trees and ancient caves at Sanjay Gandhi National Park" } },
+        { kicker: "Borivali West", title: "Mandapeshwar caves", text: "A Shiva shrine cut from Buddhist viharas near Mount Poinsur, with the ruins of a 1544 Portuguese church above them.", image: { src: "/areas/borivali-hills.jpg", alt: "Green hills above the western suburbs" } },
+        { kicker: "Across the creek", title: "Gorai and the pagoda", text: "A ten to fifteen minute ferry from Gorai jetty to the village and the 99 metre Global Vipassana Pagoda, inaugurated in 2009.", image: { src: "/areas/malad-beach.jpg", alt: "A quiet sunset over a Mumbai beach" } },
+        { kicker: "Borivali West", title: "Veer Savarkar Udyan", text: "About seven acres in the station belt with a 1.5 kilometre jogging track, ten minutes from the station.", image: { src: "/areas/borivali-aerial.jpg", alt: "Suburban rooftops and trees from above" } },
+      ],
+      rents: [
+        { label: "1 BHK", value: 31000, note: "22,000 to 40,000 a month" },
+        { label: "2 BHK", value: 50000, note: "35,000 to 65,000" },
+        { label: "3 BHK", value: 77500, note: "55,000 to 1 lakh" },
+      ],
+      rentsNote: "Midpoints of asking rents, NoBroker 2026. Deposits run two to three months in newer societies.",
+    },
     figuresAsOf: "mid 2026",
     answer:
       "Borivali is two markets at one price. The station belt is older, denser and better connected; the Link Road side is newer and quieter. Asking rates in the West cluster around 30,000 to 31,300 rupees per square foot and in the East around 32,000 to 34,750, with a wide spread inside each by pocket and by the age of the building. Choose the pocket for how you actually live, and the building for how it is run, and Borivali is one of the most liveable addresses in the western suburbs.",
@@ -120,6 +181,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       },
       {
         heading: "Borivali West, pocket by pocket",
+        scene: "pockets",
         body: [
           "Chikoowadi is where our shop is, between Borivali and Kandivali near New Link Road: older cooperative societies alongside newer towers, close to the Shimpoli metro station and a little further from the railway station. It is a quiet, established pocket, and the one we know best. Shimpoli next door began as a village and has become a locality of high rises along Shimpoli Road, which runs from S.V. Road to Chikoowadi, about fifteen minutes on foot from the station.",
           "I.C. Colony takes its name from the Church of Our Lady of the Immaculate Conception, a parish that dates from 1547, was razed in 1739 and restored from 1912. Around it are Mount Poinsur, St. Francis D'Assisi High School (founded 1908 and one of the largest schools in Maharashtra) and the Mandapeshwar caves. It is Borivali's East Indian heart, and in December Brother Cyprian Street opposite the church becomes a Christmas market. Prices here vary more by the age of the building than anywhere else in Borivali.",
@@ -142,6 +204,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       },
       {
         heading: "Getting around",
+        scene: "commute",
         body: [
           "Borivali station is the reason the suburb exists. Ten platforms, a terminus for slow, semi fast and fast locals, and the last stop inside the city for every long distance train on the Western Railway. It handles around 2.87 lakh passengers a day, and in July 2026 the Rail Land Development Authority set out a redevelopment with new station buildings on both sides, elevated concourses and multi level parking. Andheri is about 23 minutes away by train.",
           "The metro changed the West and the East differently. Metro Line 2A along New Link Road serves the West with stations at Eksar, Borivali West, Shimpoli and Mandapeshwar in I.C. Colony, and connects to Line 1 at Andheri West. Metro Line 7 along the Western Express Highway serves the East at Ovaripada, Rashtriya Udyan, Devipada and Magathane, and its extension to the airport is due in December 2026. Both run every eight minutes at peak.",
@@ -155,6 +218,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       },
       {
         heading: "Green, and why it matters to the price",
+        scene: "landmarks",
         body: [
           "Sanjay Gandhi National Park, once Borivali National Park, is 103.84 square kilometres of forest with its headquarters and main gate in Borivali East. It draws more than two million visitors a year and, on a normal morning, three to five thousand walkers from Borivali, Kandivali and Dahisar between half past five and half past seven. Inside are the 109 Kanheri caves, cut into basalt between the first and tenth centuries, and the catchments of Tulsi and Vihar lakes. A 2022 study found the leopard density here among the highest recorded anywhere.",
           "In the West, the Mandapeshwar caves near Mount Poinsur are a Shiva shrine cut from Buddhist viharas, with the ruins of a 1544 Portuguese church above them. Across the creek stands the Global Vipassana Pagoda, 99 metres tall, inaugurated in 2009, reached by ferry. Gorai beach is quieter and cleaner than most of Mumbai's, though the sea is not for swimming. The old EsselWorld park beside it has been closed since 2022.",
@@ -188,6 +252,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       },
       {
         heading: "Renting in Borivali",
+        scene: "rents",
         body: [
           "Borivali is a family rental market more than a bachelor one, and the societies here are particular about registering tenants, which we settle before your first visit. On asking rents read in 2026, a 1 BHK runs roughly 22,000 to 40,000 rupees a month, a 2 BHK 35,000 to 65,000 and a 3 BHK 55,000 to a lakh, with the pocket and the building's age setting where in the range you land.",
           "Deposits are two to three months' rent in the newer societies and more in some older buildings. Gross rental yields in Borivali West sit around 2.65 percent on Square Yards' mid 2026 figures, which is typical of an owner occupier suburb: people buy here to live, and the rent is steady rather than spectacular. For a landlord that means a tenant who stays.",
@@ -247,6 +312,46 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       src: "/areas/kandivali-aerial.jpg",
       alt: "An aerial panorama of Mumbai with towers rising among dense residential blocks",
     },
+    motion: {
+      video: { src: "/areas/video/kandivali.mp4", poster: "/areas/video/kandivali-poster.jpg" },
+      commute: [
+        { value: 12, suffix: " min", label: "to Andheri by slow local" },
+        { value: 16, suffix: " km", label: "to the airport by road" },
+        { value: 2, label: "metro lines, one each side" },
+        { value: 1907, label: "the year the station opened" },
+      ],
+      metro: [
+        { label: "Metro Line 2A, west side", stops: [{ name: "Borivali West" }, { name: "Shimpoli" }, { name: "Kandivali West", here: true }, { name: "Dahanukarwadi", here: true }, { name: "Valnai" }, { name: "Malad West" }, { name: "Andheri West" }] },
+        { label: "Metro Line 7, east side", stops: [{ name: "Magathane" }, { name: "Poisar", here: true }, { name: "Akurli", here: true }, { name: "Kurar" }, { name: "Dindoshi" }, { name: "Aarey" }, { name: "Gundavali" }] },
+      ],
+      pockets: [
+        { label: "Lokhandwala, East", value: 43700, note: "HomeBazaar, May 2026" },
+        { label: "Mahavir Nagar, West", value: 36450, note: "Square Yards, 2026" },
+        { label: "Thakur Village, East", value: 33050, note: "HomeBazaar, May 2026" },
+        { label: "Samata Nagar, East", value: 29554, note: "HomeBazaar, May 2026" },
+        { label: "Dahanukarwadi, West", value: 27750, note: "Square Yards, 2026" },
+        { label: "Charkop sectors, West", value: 24750, note: "23,350 to 26,150, Square Yards" },
+      ],
+      pocketsNote: "Asking rates per square foot as reported, with the portal and month. Asking is not the registered price.",
+      pocketScenes: [
+        { kicker: "West · Gujarati heart", title: "Mahavir Nagar", text: "About 450 metres from the Kandivali West metro, the MCA gymkhana, good schools and a vegetarian Khau Galli across several lanes. The highest asking rate in the West.", image: { src: "/areas/kandivali-green.jpg", alt: "Residential buildings among mature trees" } },
+        { kicker: "West · the MHADA grid", title: "Charkop", text: "Sectors cut by twelve metre roads and six metre lanes since 1986, mangroves at Sector 8, and a 53 society complex heading for cluster redevelopment that would triple each owner's carpet area.", image: { src: "/areas/kandivali-aerial.jpg", alt: "Mumbai's towers and residential blocks from above" } },
+        { kicker: "East · the planned suburb", title: "Thakur Village", text: "About 50,000 people over two square kilometres, wide internal roads, evening walkers, Thakur College since 1992, and towers against the national park.", image: { src: "/areas/kandivali-towers.jpg", alt: "An aerial view of Mumbai's urban landscape" } },
+        { kicker: "East · the new Kandivali", title: "Akurli Road", text: "Mahindra's plant since 1948, and beside it Mahindra Vista, Godrej Reserve on 18.5 acres, Kalpataru and Lodha, with Growel's 101 at the highway end.", image: { src: "/blog/under-construction.jpg", alt: "A tower under construction with a crane" } },
+      ],
+      landmarks: [
+        { kicker: "Kandivali East", title: "Growel's 101", text: "The East's mall on Akurli Road off the highway, with a PVR and more than a hundred brands.", image: { src: "/areas/kandivali-towers.jpg", alt: "Mumbai's urban landscape from above" } },
+        { kicker: "Kandivali West", title: "Raghuleela Mega Mall", text: "Behind Poisar depot since 2009: 800 shops and an INOX, the West's mall.", image: { src: "/areas/kandivali-aerial.jpg", alt: "An aerial panorama of Mumbai" } },
+        { kicker: "Kandivali West", title: "Charkop mangroves", text: "About 136 hectares at the sectors' edge, the West's flood barrier and its bird life.", image: { src: "/areas/kandivali-green.jpg", alt: "Green trees among residential buildings" } },
+        { kicker: "Kandivali West", title: "Poinsur Gymkhana", text: "Forty thousand square metres adopted from the BMC, with cricket, archery and a 750 metre walking track.", image: { src: "/areas/train.jpg", alt: "A Mumbai suburban train at a station" } },
+      ],
+      rents: [
+        { label: "1 BHK", value: 26500, note: "18,000 to 35,000 a month, West" },
+        { label: "2 BHK", value: 50000, note: "35,000 to 65,000" },
+        { label: "3 BHK", value: 77500, note: "60,000 to 95,000" },
+      ],
+      rentsNote: "Midpoints of asking rents, NoBroker 2026. Gross yields around 3.9 percent West and 3.2 percent East on Square Yards' figures.",
+    },
     figuresAsOf: "mid 2026",
     answer:
       "Kandivali has the widest choice of new homes in this belt and two sides that feel like different suburbs. The West is the older, busier, more Gujarati and Maharashtrian market of Mahavir Nagar, Charkop and the station lanes, at asking rates around 25,000 to 27,000 rupees per square foot in mid 2026. The East is Thakur Village, Lokhandwala and the new Akurli Road towers along the national park, around 31,000. In a tall tower here the floor you choose moves the price more than the carpet area does.",
@@ -264,6 +369,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       },
       {
         heading: "Kandivali West, pocket by pocket",
+        scene: "pockets",
         body: [
           "Mahavir Nagar is the West's best known address: a largely Gujarati pocket between Kandivali West and Borivali West, about 450 metres from the Kandivali West metro station, with the MCA's Sachin Tendulkar Gymkhana and Kamla Vihar Sports Club, good schools, and a vegetarian Khau Galli that spreads across several lanes and draws people from across the suburbs in the evening. Its towers include Chandak Harmony and Bharat Asbury Park, and its asking rate, around 36,450 rupees per square foot on Square Yards' 2026 micro market figures, is the highest in the West.",
           "Charkop is the West's other great pocket and its most distinctive. In 1986 MHADA drained the marsh and laid out a sites and services scheme: sectors cut by twelve metre roads and six metre lanes, courtyard plots of thirty five households each, and ground floor structures that owners have added to for forty years. Addresses still read Sector 8, RSC 1, Plot 33. Sectors 1 to 9 are Maharashtrian first and Gujarati second, mostly middle class, with mangroves at the Sector 8 edge. The Chhatrapati Shivaji Raje Complex, 53 societies and about 3,488 families in small MHADA flats, is heading for cluster redevelopment that would roughly triple each owner's carpet area. Charkop sectors ask around 23,000 to 26,000 rupees per square foot.",
@@ -296,6 +402,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       },
       {
         heading: "Getting around",
+        scene: "commute",
         body: [
           "Kandivali station is a slow train stop on the Western line, which is the one thing to know before you fall for a flat here: fast trains do not halt, though Borivali's terminus is one stop north. Andheri is about twelve minutes by slow local. Regulars know the unscheduled pause between Kandivali and Borivali as Thambevali, a phantom station where trains wait for the signal.",
           "The metro is what has changed the suburb. Metro Line 2A runs along New Link Road with stations at Kandivali West and Dahanukarwadi, both open since April 2022, and joins Line 1 at Andheri West. Metro Line 7 runs along the Western Express Highway with stations at Poisar and Akurli in Kandivali East, and its airport extension is due in December 2026. Both run at eight minute peak frequency. The airport is about 16 kilometres from either side by road.",
@@ -304,6 +411,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       },
       {
         heading: "Green, shopping and daily life",
+        scene: "landmarks",
         body: [
           "Sanjay Gandhi National Park forms the East's boundary, and Thakur Village and Lokhandwala back straight onto it. The Poisar river rises inside the park and runs seven kilometres to the creek through Kandivali; it is an urban stream today, and the BMC's cleanup works and flood wall are underway along it. Charkop's 136 hectares of mangroves are the West's flood barrier and its bird life.",
           "Growel's 101 on Akurli Road is the East's mall, with a PVR and more than a hundred brands. Raghuleela Mega Mall behind Poisar depot is the West's, 800 shops and an INOX since 2009. Schools include Thakur Public School, Children's Academy and Ryan in Thakur Complex, Lokhandwala Foundation School, and Kapol Vidyanidhi in Mahavir Nagar. Hospitals include the BMC's Shatabdi Hospital in the West, about to be rebuilt as a 325 bed super speciality hospital, Namaha Hospital on S.V. Road, and a cluster of private hospitals in Thakur Village.",
@@ -323,6 +431,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       },
       {
         heading: "Renting in Kandivali",
+        scene: "rents",
         body: [
           "The West rents to families and to young professionals working along the metro; the East rents strongly to families who want Thakur Village's roads and schools. On 2026 asking rents, a 1 BHK in the West runs about 18,000 to 35,000 rupees a month, a 2 BHK 35,000 to 65,000 and a 3 BHK 60,000 to 95,000; a 2 BHK in Thakur Village asks around 35,000 to 50,000. Gross yields are around 3.9 percent in the West and 3.2 percent in the East on Square Yards' figures, among the better in this belt.",
           "Deposits are two to three months' rent in the newer societies. We settle the society's answer, the owner's identity and the going deposit before your first visit, and register the leave and licence agreement as part of every tenancy.",
@@ -379,6 +488,45 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       src: "/areas/malad-towers.jpg",
       alt: "Modern high rise towers in Mumbai seen from a railway platform with greenery in the foreground",
     },
+    motion: {
+      video: { src: "/areas/video/malad.mp4", poster: "/areas/video/malad-poster.jpg" },
+      commute: [
+        { value: 14, suffix: " min", label: "to Andheri by local" },
+        { value: 15, suffix: " km", label: "from Mindspace to the airport" },
+        { value: 12, suffix: " km", label: "from Malad West to BKC" },
+        { value: 0.8, decimals: 1, suffix: " mn sq ft", label: "leased at Paradigm Mindspace" } as never,
+      ],
+      metro: [
+        { label: "Metro Line 2A, west side", stops: [{ name: "Kandivali West" }, { name: "Dahanukarwadi" }, { name: "Valnai" , here: true }, { name: "Malad West", here: true }, { name: "Lower Malad", here: true }, { name: "Bangur Nagar" }, { name: "Andheri West" }] },
+        { label: "Metro Line 7, east side", stops: [{ name: "Poisar" }, { name: "Akurli" }, { name: "Kurar", here: true }, { name: "Dindoshi", here: true }, { name: "Aarey" }, { name: "Goregaon East" }, { name: "Gundavali" }] },
+      ],
+      pockets: [
+        { label: "Evershine Nagar, West", value: 32000, note: "Dwello, 2026" },
+        { label: "Malad West average", value: 30800, note: "Square Yards, September 2026" },
+        { label: "Malad East average", value: 30400, note: "Square Yards, 2026" },
+        { label: "Dindoshi, East", value: 37500, note: "25,000 to 50,000, NoBroker" },
+        { label: "Jankalyan Nagar, West", value: 14543, note: "10,666 to 23,846, NoBroker" },
+      ],
+      pocketsNote: "Asking rates per square foot as reported, with the portal and month. Asking is not the registered price.",
+      pocketScenes: [
+        { kicker: "West · the office district", title: "Mindspace and the Link Road belt", text: "Paradigm Mindspace since 2004: 0.8 million square feet leased to JP Morgan, Tech Mahindra and Concentrix at 98.6 percent occupancy, with Inorbit and Infiniti beside it. The workforce is Malad's largest source of tenants.", image: { src: "/areas/malad-towers.jpg", alt: "Modern towers seen across greenery" } },
+        { kicker: "West · the premium pocket", title: "Evershine Nagar", text: "Lodha Raj Infinia, Narang Vivenda and Arkade Eden near New Link Road and the Malad West metro, asking around 32,000 rupees per square foot.", image: { src: "/blog/reit-office.jpg", alt: "A glass office facade" } },
+        { kicker: "West · the village heart", title: "Orlem and Marve Road", text: "Once Valnai, the village on the curving path. The largest parish in the archdiocese by a 2004 census, St. Anne's since 1916, hockey and football, and 15,000 at the Christmas midnight mass.", image: { src: "/areas/malad-beach.jpg", alt: "A quiet sunset over a Mumbai beach" } },
+        { kicker: "East · at the park's edge", title: "Rani Sati Marg and Dindoshi", text: "The arterial from the station to the highway, now a metro hotspot, and Dindoshi's Infinity IT Park, civil court and one of BEST's largest depots.", image: { src: "/areas/train.jpg", alt: "A Mumbai suburban train at a busy platform" } },
+      ],
+      landmarks: [
+        { kicker: "Marve Road", title: "Aksa Beach", text: "One of Mumbai's cleanest, about 15,000 visitors on a weekend, INS Hamla at one end. For sunsets, not swimming.", image: { src: "/areas/malad-beach.jpg", alt: "Sunset over a Mumbai beach" } },
+        { kicker: "Madh Island", title: "Madh Fort and the Versova ferry", text: "A seventeenth century Portuguese watchtower under Air Force control, a five minute ferry to Versova, and a bridge cleared in September 2026 for 2029.", image: { src: "/areas/malad-beach-people.jpg", alt: "People silhouetted on a Mumbai beach at sunset" } },
+        { kicker: "Orlem", title: "Our Lady of Lourdes", text: "A private chapel in 1880 for a dozen families, a parish in 1916, the present church in 1976, and the lanes lit with stars and cribs every December.", image: { src: "/areas/malad-towers.jpg", alt: "Towers seen across greenery" } },
+        { kicker: "Chincholi Bunder", title: "Somwar Bazaar", text: "Beside Malad's oldest settlement, a Koli village from 1845, the weekly Monday market fills the road with household goods, vegetables and fish.", image: { src: "/areas/train.jpg", alt: "A Mumbai suburban train at a station" } },
+      ],
+      rents: [
+        { label: "1 BHK", value: 37500, note: "25,000 to 50,000 a month, East" },
+        { label: "2 BHK", value: 63500, note: "45,000 to 82,000, East" },
+        { label: "3 BHK", value: 80000, note: "60,000 to 1 lakh, West" },
+      ],
+      rentsNote: "Midpoints of asking rents, NoBroker April 2026 and Broker Network July 2026. Yields reported at 3 to 4 percent gross.",
+    },
     figuresAsOf: "September 2026",
     answer:
       "Malad has more investor money in it than Borivali or Kandivali, and one reason: the Mindspace office district in Malad West keeps a large, steady population of renters within fifteen minutes of their desks. Asking rates in 2026 ran around 29,000 to 30,800 rupees per square foot in the West and 27,000 to 30,400 in the East, with a 2 BHK renting for roughly 45,000 to 82,000 a month. The suburb also has Mumbai's beaches, an East Indian village heart in Orlem, and two metro lines. Buy the pocket and the tenant, not the yield on the brochure.",
@@ -396,6 +544,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       },
       {
         heading: "Malad West: Mindspace and the Link Road belt",
+        scene: "pockets",
         body: [
           "Mindspace is the reason Malad rents. Paradigm Mindspace Malad on the Goregaon Malad Link Road has been operating since 2004: two buildings on 4.2 acres, about 0.8 million square feet of leasable space, tenants including JP Morgan, Tech Mahindra, Concentrix and Firstsource, and 98.6 percent committed occupancy on the REIT's own figures. Intelenet, one of India's largest business process firms, is headquartered here. Inorbit Mall, open since 2004, and Infiniti Mall, since 2011, sit beside it. The Chincholi Bunder food strip serves the shifts: dosas from six in the morning to three at night, Irani chai till half past one.",
           "Evershine Nagar is the premium residential pocket that grew up next to the offices: complexes like Lodha Raj Infinia, Narang Vivenda and Arkade Eden, close to New Link Road and the Malad West metro station, asking around 32,000 rupees per square foot, with a 737 square foot flat renting for about 35,000 to 55,000 a month. Kanchpada, Liberty Garden, Sunder Nagar on S.V. Road and Ekta Nagar around the metro station are the settled middle of the West, and the Link Road corridor carries the large newer complexes: Auris Serenity, Marina Enclave, Sheth Irene.",
@@ -413,6 +562,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       },
       {
         heading: "Malad West: Orlem, Marve Road and the coast",
+        scene: "landmarks",
         body: [
           "Orlem branches off Marve Road and was once Valnai, the village on the curving path. It is Malad's East Indian heart: Our Lady of Lourdes began as a private chapel in 1880 for a hamlet of a dozen families, became a parish in 1916, and was called the largest parish in the Archdiocese of Bombay in a 2004 census. More than 15,000 people attend its Christmas midnight mass, and the lanes glow with stars and cribs. St. Anne's High School has been here since 1916. Orlem is a hockey and football neighbourhood, and in the 2000s it filled with young professionals from the call centres.",
           "Marve Road runs out past Jankalyan Nagar and Malwani to the coast. Aksa Beach is one of Mumbai's cleanest, with about 15,000 visitors on a weekend and swimming prohibited because of the currents; Marve is quieter, with the ferry across to Manori; Madh Island has a seventeenth century Portuguese fort under Air Force control, resorts and bungalows the film industry has used for decades, and a five minute ferry to Versova. The Madh to Versova bridge, 2,064 metres and 2,395 crore rupees, was cleared by the Bombay High Court in September 2026 and is targeted for 2029; it would turn a 21 kilometre drive into a few minutes.",
@@ -434,6 +584,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       },
       {
         heading: "Getting around",
+        scene: "commute",
         body: [
           "Malad station is a Western line stop between Goregaon and Kandivali, about fourteen minutes from Andheri. Metro Line 2A along New Link Road serves the West at Valnai Meeth Chowky, Malad West (now carrying Motilal Oswal's name), Lower Malad and Bangur Nagar on the Goregaon side, and joins Line 1 at Andheri West; the line carried more than two lakh passengers a day within months of opening. Metro Line 7 along the highway serves the East at Kurar and Dindoshi, and its airport extension is due in December 2026.",
           "By road, Mindspace is about fifteen kilometres from both airport terminals, and Malad West about twelve kilometres from BKC. Two projects will change the map: the Coastal Road North from Versova to Dahisar, 20 kilometres and 16,621 crore rupees, with tunnels between Mindspace and Charkop creek and a December 2028 target, and the Madh to Versova bridge for 2029. Both run through or beside Malad West, and both are why investors are watching the Link Road belt.",
@@ -446,6 +597,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       },
       {
         heading: "Who really rents here, and what that means for a landlord",
+        scene: "rents",
         body: [
           "The Mindspace workforce is large, young and on shifts, and it wants to live within a short auto ride of the office. That keeps vacancy low across the Link Road belt and makes Malad West one of the easier places in this belt to find a tenant quickly. Ruparel's 2026 analysis of 99acres data put gross yields at three to four percent, higher than Borivali's owner occupier market, and Square Yards showed rents averaging 93 rupees per square foot in the West.",
           "The number to plan on is the net one, after society charges, property tax, a month or two of vacancy at tenant changes and the deposit convention of two to three months. That is where a yield that looked like four percent on the brochure settles, and it is the arithmetic we do on the actual flat before you buy. Our rental yield calculator does the first pass; we do the second with the building's real outgoings.",
