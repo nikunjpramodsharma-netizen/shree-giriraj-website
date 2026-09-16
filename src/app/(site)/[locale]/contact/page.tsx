@@ -20,9 +20,9 @@ const CONTACT_LOCALE = "en";
  * address, phone and name have to match the Google Business Profile character
  * for character, or the two records compete instead of reinforcing.
  *
- * Opening hours are NOT on this page. They are not confirmed, and hours are
- * exactly the kind of detail someone acts on, so a guess would send a person
- * to a closed shop.
+ * Opening hours were confirmed by the owner on 16 September 2026: 9 am to
+ * 9 pm, every day of the week. They come from site.hours in config.ts, the
+ * same value the business markup uses, so the two cannot disagree.
  */
 export async function generateMetadata({
   params,
@@ -139,20 +139,11 @@ export default function ContactPage({
               </div>
             </dl>
 
-            {/* Deliberately not stating hours. See the note at the top. */}
-            <div className="mt-8 rounded-xl border border-dashed border-brass/50 p-5">
-              <div className="flex items-baseline gap-3">
-                <div className="text-sm font-semibold text-ink/70">
-                  Opening hours
-                </div>
-                <span className="shrink-0 rounded-full border border-brass/40 px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wider text-brass">
-                  Needs you
-                </span>
-              </div>
-              <p className="mt-2 text-sm text-ink/60">
-                Not published yet, because a guess would send somebody to a
-                closed shop. Confirm your hours including Sundays and they go
-                here and into the business markup.
+            <div className="mt-8 rounded-xl border border-line bg-paper-alt p-5">
+              <div className="text-sm font-semibold text-ink">Opening hours</div>
+              <p className="mt-2 text-ink">
+                {site.hours.label}. Walk in, call, or WhatsApp; a message sent
+                after hours is answered first thing the next morning.
               </p>
             </div>
           </div>

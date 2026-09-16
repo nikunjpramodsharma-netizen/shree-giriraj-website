@@ -151,12 +151,19 @@ const AREA_SKYLINES: SkylineRect[][] = [
 type CompareValue = true | false | "partial";
 type CompareRow = { key: string; us: CompareValue; portals: CompareValue; brokers: CompareValue };
 const COMPARE_ROWS: CompareRow[] = [
-  { key: "row1", us: true, portals: false, brokers: "partial" },
+  // Marks are judged against what each service actually does, 16 September
+  // 2026. 99acres and MagicBricks are listing platforms: they show what owners
+  // and agents upload and sell visibility. NoBroker connects tenants and
+  // buyers to owners directly, verifies owners for some plans, and sells rent
+  // agreement and paid plans up front. "Sometimes" is where a portal offers a
+  // partial or paid version of the thing.
+  { key: "row1", us: true, portals: false, brokers: false },
   { key: "row2", us: true, portals: false, brokers: "partial" },
-  { key: "row3", us: true, portals: false, brokers: "partial" },
-  { key: "row4", us: true, portals: false, brokers: false },
-  { key: "row5", us: true, portals: false, brokers: "partial" },
-  { key: "row6", us: true, portals: false, brokers: false },
+  { key: "row3", us: true, portals: false, brokers: false },
+  { key: "row4", us: true, portals: false, brokers: "partial" },
+  { key: "row5", us: true, portals: "partial", brokers: false },
+  { key: "row6", us: true, portals: false, brokers: "partial" },
+  { key: "row7", us: true, portals: false, brokers: false },
 ];
 
 function CompareMark({
@@ -415,6 +422,7 @@ export default async function HomePage({
             <h2 className="mt-3.5 text-3xl text-brand-indigo md:text-4xl">
               {tCompare("heading")}
             </h2>
+            <p className="mt-3.5 text-[1.04rem] text-muted">{tCompare("intro")}</p>
           </Reveal>
           <Reveal>
             <div className="overflow-x-auto rounded-2xl border border-brand-indigo/10">
@@ -448,6 +456,7 @@ export default async function HomePage({
                 </tbody>
               </table>
             </div>
+            <p className="mt-4 max-w-[70ch] text-sm text-muted">{tCompare("footnote")}</p>
           </Reveal>
         </div>
       </section>

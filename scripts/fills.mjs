@@ -31,23 +31,15 @@ export const FILLS = [
     where: ["src/lib/service-content.ts", ".env.local"],
   },
   {
-    id: "author-document",
+    id: "author-photo",
     area: "Blog",
-    status: "blocked",
-    ask: "One author: full name, role, a two or three line bio, and a photograph.",
-    why: "The byline, the author box and the schema author field all stay hidden until an author exists. Content with no named author is weaker for both search and AI citation.",
-    where: ["src/sanity/schemas/author.ts"],
+    status: "cosmetic",
+    ask: "A photograph of Nikunj Sharma for the byline and the author box.",
+    why: "Nikunj Sharma, Senior Associate, is the named author on every article since 16 September 2026 (src/lib/author.ts). The byline shows his initials until the photo arrives.",
+    where: ["src/lib/author.ts", "public/team/"],
   },
 
   // ---------------------------------------------------------------- wrong
-  {
-    id: "team-names",
-    area: "Homepage",
-    status: "wrong",
-    ask: "Three real names and roles for the team section, or a decision to cut the section.",
-    why: "The entries currently read [ NAME ]. The section is gated off so nothing false ships, but the homepage is missing a trust block because of it.",
-    where: ["src/lib/homepage-content.ts"],
-  },
   {
     id: "site-url",
     area: "Technical",
@@ -56,24 +48,8 @@ export const FILLS = [
     why: "The domain is not registered yet and every canonical, hreflang entry and og:url currently resolves to localhost. The code falls back to https://www.shreegiriraj.in, so the www versus apex choice must match whatever is bought, or canonicals, hreflang, sitemap and JSON-LD will disagree with the real URL and Google discards the cluster.",
     where: ["src/lib/seo.ts", ".env.local"],
   },
-  {
-    id: "compare-section",
-    area: "Homepage",
-    status: "wrong",
-    ask: "Your actual answer to the portals: what someone gets from you that 99acres and NoBroker cannot give them. Also whether you want to say anything about brokerage.",
-    why: "That section still carries the old copy and does not answer the zero brokerage claim the portals lead with, which is the first objection a buyer arrives with.",
-    where: ["src/app/(site)/[locale]/page.tsx"],
-  },
 
   // ---------------------------------------------------------------- hidden
-  {
-    id: "consult-operations",
-    area: "Consultation",
-    status: "hidden",
-    ask: "Who takes a paid consultation call, and whether the fee comes off the bill if the person later transacts with you. No price needed.",
-    why: "The consultation band is built and switched off. These two answers, not a fee, are what it is actually waiting on.",
-    where: ["src/lib/consult.ts"],
-  },
   {
     id: "area-pages",
     area: "Areas",
@@ -91,38 +67,14 @@ export const FILLS = [
     where: ["src/lib/testimonials.ts"],
   },
 
-  {
-    id: "stamp-duty-rate",
-    area: "Tools",
-    status: "cosmetic",
-    ask: "Confirm two things against the Department of Registration and Stamps, or with your lawyer: that Mumbai is 6 percent for a male buyer and 5 percent for a female buyer in sole name including the 1 percent metro cess, and what actually applies to JOINT male plus female ownership.",
-    why: "Rates were cross checked against three independent sources on 1 September 2026 and the calculator shows that date and cites them. None is a primary source. Sources also genuinely conflict on joint ownership, so the tool shows a range of 6 to 6.5 percent rather than guessing. Confirming it would let us replace the range with one number, which is the last soft spot in the tool.",
-    where: ["src/lib/stampduty.ts"],
-  },
 
   // ---------------------------------------------------------------- schema
-  {
-    id: "opening-hours",
-    area: "Local SEO",
-    status: "cosmetic",
-    ask: "Your actual opening hours, including whether you work Sundays.",
-    why: "Deliberately left out of the business markup rather than guessed. Hours are one of the things the local pack and AI answers quote most often.",
-    where: ["src/lib/schema.ts"],
-  },
   {
     id: "geo-coordinates",
     area: "Local SEO",
     status: "cosmetic",
     ask: "The exact latitude and longitude of the shop, taken from your Google Business Profile listing.",
     why: "Omitted rather than approximated. A wrong pin is worse than no pin.",
-    where: ["src/lib/schema.ts"],
-  },
-  {
-    id: "same-as-profiles",
-    area: "Local SEO",
-    status: "cosmetic",
-    ask: "Links to every profile you own: Google Business Profile, Facebook, Instagram, JustDial, anything else.",
-    why: "These connect the website to the profiles Google already trusts. Nothing is guessed, so the field is currently empty.",
     where: ["src/lib/schema.ts"],
   },
 
@@ -134,22 +86,6 @@ export const FILLS = [
     ask: "Real photographs: the shop, the team, buildings and streets in Borivali, Kandivali and Malad, and any completed interiors work.",
     why: "Every image on the site is stock at the moment, including the homepage and all six blog category images. Stock is the fastest way to look like every other property site.",
     where: ["src/lib/blog.ts", "src/app/(site)/[locale]/page.tsx", "public/blog/"],
-  },
-  {
-    id: "jaswanti-jewel",
-    area: "Projects",
-    status: "cosmetic",
-    ask: "For Jaswanti Jewel: the project MahaRERA number, and confirmation of what you can say about configurations and possession.",
-    why: "Prices stay masked by decision. The project registration number is a credibility marker a serious buyer looks for.",
-    where: ["src/sanity/schemas/project.ts"],
-  },
-  {
-    id: "interiors-cost-bands",
-    area: "Tools",
-    status: "cosmetic",
-    ask: "Per unit cost bands for interiors work: wardrobes and kitchen per running foot, false ceiling and painting per square foot, electrical points each. A low and a high for each.",
-    why: "No longer a blocker. The interiors tool now builds a SCOPE in quantities rather than a price, which works without bands and is arguably better positioned than the Livspace and HomeLane cost calculators. Supplying bands would add indicative ranges on top: set them on the items in src/lib/interiors.ts and COST_BANDS_READY flips itself.",
-    where: ["src/lib/interiors.ts"],
   },
   {
     id: "analytics-ids",

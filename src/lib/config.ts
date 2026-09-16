@@ -21,6 +21,30 @@ export const site = {
   areas: ["Borivali", "Kandivali", "Malad"],
   /** Served occasionally, not core. Mentioned on the areas page only, never the hero. */
   extendedAreas: ["Dahisar", "Goregaon"],
+  /**
+   * Opening hours, confirmed by the owner on 16 September 2026. Every day of
+   * the week, 9 am to 9 pm. Used on the contact page and in the business
+   * markup; change both by changing this.
+   */
+  hours: { opens: "09:00", closes: "21:00", days: "Monday to Sunday", label: "9 am to 9 pm, all seven days" },
+  /**
+   * The firm's own profiles elsewhere, for the sameAs field in the business
+   * markup and the footer. Only a URL that was opened and matched on the
+   * business name plus the Chikoowadi address or a phone number goes here.
+   * The Google Business Profile is the Maps listing by its identifier.
+   */
+  sameAs: [
+    "https://www.google.com/maps/place/?cid=5587711998336126142",
+    // JustDial, listed as "Giriraj Real Estate Interior & Civil Work": same
+    // shop, same RERA number, the secondary phone. Checked 16 September 2026.
+    "https://www.justdial.com/Mumbai/Giriraj-Real-Estate-Interior-And-Civil-Works-Near-Chikuwadi-Borivali-West/022PXX22-XX22-140314134631-H1T4_BZDET",
+    // Square Yards agent page for Pramod Sharma, Shree Giriraj Real Estate,
+    // same RERA number. Dormant but genuine. Checked 16 September 2026.
+    "https://www.squareyards.com/agent/pramod-sharma/490321",
+    // No Facebook or Instagram page for this business could be found on
+    // 16 September 2026; the ones that surface belong to firms in Dadar and
+    // Indore. Add here only once the owner confirms a URL.
+  ] as string[],
 };
 
 /** Build a wa.me link with a pre-filled message. */

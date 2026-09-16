@@ -63,10 +63,31 @@ export function organizationNode(opts: { founder?: string } = {}): Json {
       name: "MahaRERA Agent Registration",
       value: site.rera,
     },
+    // Confirmed by the owner on 16 September 2026: 9 am to 9 pm, all seven
+    // days. One specification covering the week, because that is the truth
+    // and Google reads it the same as seven identical rows.
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "09:00",
+        closes: "21:00",
+      },
+    ],
+    // The profiles Google already trusts, so it can tie this site to them.
+    // Only URLs that were opened and matched on the name plus the Chikoowadi
+    // address or one of the phone numbers; see SAME_AS in config.ts.
+    ...(site.sameAs.length > 0 ? { sameAs: site.sameAs } : {}),
     // DELIBERATELY ABSENT until the Google Business Profile supplies real values:
     //   geo                       needs verified latitude and longitude
-    //   openingHoursSpecification needs confirmed hours, including Sundays
-    //   sameAs                    needs the real GBP, Facebook, JustDial URLs
     //   priceRange                would be invented; there is no published one
     //   aggregateRating           see rule 2 above. Never add this.
   };

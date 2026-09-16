@@ -60,18 +60,15 @@ describe("draft versus ready", () => {
    * every number attributed and dated in the post.
    */
   it("names exactly the drafts that are genuinely waiting", () => {
-    // Pinned rather than asserted empty. The investment cluster added on
-    // 8 September 2026 brought one post back into draft on purpose: the
-    // commercial post carries a VERIFY on the GST registration threshold for
-    // letting commercial premises, which turns on both parties' registration
-    // status and has been amended more than once. Publishing a tax threshold
-    // we have not confirmed is exactly what the marker system exists to stop.
-    // The four MHADA posts each carried a VERIFY on one unconfirmed point.
-    // On 9 September 2026 the owner chose to publish them with those caveats
-    // as written, so the sentences stayed and the markers went. Only the
-    // commercial post remains in draft, on the GST registration threshold.
+    // Pinned rather than asserted empty, so a post slipping back into draft
+    // is noticed. History: the four MHADA posts published with their caveats
+    // on 9 September 2026; the commercial post held on one VERIFY about the
+    // GST registration threshold until 16 September 2026, when the threshold
+    // (20 lakh, CGST Act section 22), the 18 percent rate and the reverse
+    // charge entry 5AB were confirmed against the gazette and written in.
+    // Nothing is waiting today.
     const drafts = getAllPosts().filter((p) => !p.isReady).map((p) => p.slug);
-    expect(drafts).toEqual(["commercial-property-investment-mumbai"]);
+    expect(drafts).toEqual([]);
   });
 
   it("keeps the finished investment and MHADA posts out of draft", () => {

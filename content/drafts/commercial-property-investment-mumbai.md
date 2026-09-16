@@ -24,13 +24,17 @@ answer: >
 sources:
   - label: "Section 55, Maharashtra Rent Control Act 1999, registration of leave and licence agreements"
     url: https://indiankanoon.org/doc/8402442/
-  - label: "Central Goods and Services Tax Act 2017, registration threshold for suppliers of services"
-    url: https://cbic-gst.gov.in/
+  - label: "Central Goods and Services Tax Act 2017, section 22, registration threshold of twenty lakh rupees"
+    url: https://cdnbbsr.s3waas.gov.in/s3b1301141feffabac455e1f90a7de2054/uploads/2025/01/202501181039148974.pdf
+  - label: "Notification No. 09/2024 Central Tax (Rate), 8 October 2024, reverse charge on renting of property other than a residential dwelling by an unregistered person to a registered person"
+    url: https://gstcouncil.gov.in/sites/default/files/2024-10/ctr-09-2024.pdf
+  - label: "Notification No. 07/2025 Central Tax (Rate), 16 January 2025, composition taxpayers excluded from entry 5AB"
+    url: https://gstcouncil.gov.in/sites/default/files/2025-01/ctr07-2025.pdf
   - label: "Income Tax Act 1961, section 194-I, tax deducted at source on rent"
     url: https://incometaxindia.gov.in/pages/acts/income-tax-act.aspx
   - label: "DataForSEO, Google search volume for commercial property investment terms in India, measured 8 September 2026"
     url: https://dataforseo.com
-sourcesCheckedOn: "8 September 2026"
+sourcesCheckedOn: "16 September 2026"
 relatedFaqs:
   - Is commercial property a better investment than residential?
   - Is GST charged on commercial rent?
@@ -73,11 +77,11 @@ None of that makes commercial better. It makes the income side of it behave diff
 
 ## Is GST charged on commercial rent?
 
-Renting a commercial property is a supply of services under GST. Where the landlord's aggregate turnover crosses the registration threshold for services, GST applies to the rent and the landlord must register, charge it and remit it. Residential letting to a person for use as a residence is treated differently.
+Yes, at 18 percent, and who pays it depends on who is registered. Renting a commercial property is a supply of services under GST. A landlord whose aggregate turnover crosses 20 lakh rupees in a financial year must register, charge GST on the rent and remit it; Maharashtra is not a special category state, so the lower 10 lakh threshold does not apply here. Aggregate turnover is counted across everything on the same PAN, exempt residential rent included, so a landlord with several flats and one shop can cross the line sooner than the shop rent alone suggests.
 
-[ VERIFY ] Confirm the current threshold and the position on reverse charge where the tenant is registered and the landlord is not, before you budget on this. The rules here have been amended more than once and the answer depends on both parties' registration status.
+Where the landlord is not registered but the tenant is, the tenant pays the GST under reverse charge. That rule came in on 10 October 2024 under Notification 09/2024 Central Tax (Rate), which added entry 5AB to the reverse charge list for renting any property other than a residential dwelling, and from 16 January 2025 tenants on the composition scheme were taken out of it by Notification 07/2025. A registered tenant self invoices, pays the 18 percent and claims the credit where the rules allow.
 
-The practical point for an investor: a rent quoted to you may or may not be inclusive of GST, and the difference is material. Ask which it is before you compare two units.
+The practical point for an investor: a rent quoted to you may or may not be inclusive of GST, and the difference is material. Ask which it is, and ask whether the tenant is registered, before you compare two units.
 
 ---
 

@@ -19,7 +19,8 @@ import { inr, inrShort } from "@/lib/emi";
  *    government valuation shows the higher duty that will actually be charged.
  * 2. It breaks the metro cess out of the headline rate, so somebody quoted
  *    "six percent" can see where the sixth point comes from.
- * 3. It shows a RANGE for joint ownership instead of inventing certainty,
+ * 3. It can show a RANGE where sources genuinely conflict (none do today;
+ *    joint ownership was resolved to the male rate on 16 September 2026),
  *    because the sources genuinely disagree. See lib/stampduty.ts.
  */
 
@@ -184,13 +185,21 @@ export function StampDutyCalculator() {
           </Callout>
         )}
 
-        {/* The genuine ambiguity, stated rather than hidden. */}
+        {/* Kept for any future conflict between sources; none today. */}
         {r.isRange && (
           <Callout tone="warn">
-            <b>Joint ownership is where sources disagree.</b> Some apply the
-            male rate of {r.basePct}%, others a blended {r.basePctHigh}%. We are
-            not going to guess, so both are shown. Budget for the higher one and
-            confirm at the sub registrar office.
+            <b>Sources disagree on this case.</b> Both figures are shown rather
+            than a guess. Budget for the higher one and confirm at the sub
+            registrar office.
+          </Callout>
+        )}
+
+        {category === "joint" && (
+          <Callout>
+            <b>Joint ownership pays the full rate.</b> The women&apos;s one percent
+            concession applies only where women are the only purchasers, under
+            the Maharashtra government order of 31 March 2021, so adding a male
+            co owner brings the duty to {r.basePct}% plus the metro cess.
           </Callout>
         )}
 

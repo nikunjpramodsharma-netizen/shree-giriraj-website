@@ -36,9 +36,19 @@ export function ConsultCTA({
             </h2>
             <p className="mt-5 max-w-[60ch] text-paper/80">
               Everything above is free to read and always will be. If your own
-              situation needs someone to actually look at it, you can book time
-              with us and pay for the hour.
+              situation needs someone to actually look at it, we start with a
+              conversation, understand exactly what you need, and then connect
+              you to the right person for an hour on your papers.
             </p>
+
+            <ol className="mt-6 grid gap-2.5 text-sm text-paper/80 sm:grid-cols-2">
+              {CONSULT.howItRuns.map((step, i) => (
+                <li key={step} className="flex gap-3">
+                  <span className="font-display text-base text-brass-bright">{i + 1}</span>
+                  <span>{step}</span>
+                </li>
+              ))}
+            </ol>
 
             <div className="mt-8 grid gap-8 sm:grid-cols-2">
               <div>
@@ -81,12 +91,17 @@ export function ConsultCTA({
                 </>
               ) : (
                 <>
-                  ₹{fee.toLocaleString("en-IN")} an hour, billed in{" "}
-                  {CONSULT.slotMinutes} minute slots, agreed before the call.
+                  {CONSULT.freeIfWeTransact
+                    ? "Free if we are involved in your deal. "
+                    : ""}
+                  If you only need the advice, a session of{" "}
+                  {CONSULT.slotMinutes} minutes is ₹{fee.toLocaleString("en-IN")} as the
+                  basic rate; it can differ with what the matter needs, and it is
+                  agreed before anything is booked.
                 </>
               )}{" "}
               If what you need turns out to be a lawyer or an accountant, we
-              will tell you on the call and point you at one.
+              will tell you in that first conversation and point you at one.
             </p>
           </div>
 

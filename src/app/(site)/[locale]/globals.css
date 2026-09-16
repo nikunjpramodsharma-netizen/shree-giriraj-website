@@ -471,3 +471,19 @@
   .tm-track { animation: none; }
   .tm-row[aria-hidden="true"] { display: none; }
 }
+
+/* ============================================================
+   HERO VIDEO
+   The still renders first through next/image; the clip sits above it and
+   fades in once it is playing. Reduced motion removes the clip entirely.
+   ============================================================ */
+.hv-video {
+  opacity: 0;
+  animation: hv-in 1.2s ease 0.3s forwards;
+}
+@keyframes hv-in {
+  to { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hv-video { display: none; }
+}

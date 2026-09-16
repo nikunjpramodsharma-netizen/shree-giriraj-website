@@ -28,22 +28,42 @@
 
 export type ConsultOffer = {
   /**
-   * The hourly fee, in rupees. NULL until confirmed.
-   *
-   * Nothing invents a number here. While this is null the band renders without
-   * a price and says the fee is confirmed before booking, which is honest and
-   * still converts. A wrong price is worse than no price.
+   * The fee for one session, in rupees. Confirmed by the owner on
+   * 16 September 2026: 5,000 rupees for a one hour session, the basic rate,
+   * which may differ with what the matter needs. Null would render the band
+   * without a price; a wrong price is worse than no price, so this is only
+   * ever a number the owner has given.
    */
   feePerHour: number | null;
-  /** Minimum billable slot, in minutes. */
+  /** Length of one session, in minutes. */
   slotMinutes: number;
+  /**
+   * Waived when the firm is involved in the transaction. Owner's decision,
+   * 16 September 2026: if we are in the deal the conversation is free; the fee
+   * applies only when somebody wants the advice on its own.
+   */
+  freeIfWeTransact: boolean;
+  /**
+   * How a booking runs. The owner's words, 16 September 2026: first a
+   * conversation to understand exactly what the need or trouble is, then the
+   * right person is connected. The band says so, because "book an hour"
+   * without that step reads as a call centre.
+   */
+  howItRuns: string[];
   what: string[];
   whatNot: string[];
 };
 
 export const CONSULT: ConsultOffer = {
-  feePerHour: null,
-  slotMinutes: 30,
+  feePerHour: 5000,
+  slotMinutes: 60,
+  freeIfWeTransact: true,
+  howItRuns: [
+    "You tell us what the matter is, on WhatsApp or by phone, in a few lines",
+    "We talk it through first, free, to understand exactly what you need",
+    "If it needs a session, we connect you to the right person and fix a time",
+    "One hour, focused on your papers and your position, with clear next steps",
+  ],
   what: [
     "A document you have been sent and do not want to sign blind",
     "A society, redevelopment or conveyance position you cannot read",
@@ -58,19 +78,11 @@ export const CONSULT: ConsultOffer = {
 };
 
 /**
- * Until this is true the band stays off the site entirely, rather than
- * advertising a service nobody can buy.
- *
- * A PRICE IS NOT REQUIRED TO GO LIVE. Decided 1 September 2026: no fee is
- * being set for now. The null branch in ConsultCTA is a real launch mode, not
- * a placeholder, and it says the fee is agreed before anything is booked.
- * Quoting on enquiry is normal for advisory work and lets the number vary with
- * how much is actually involved, which a published hourly rate cannot.
- *
- * So the only genuine blocker is operational:
- *   1. Agreed what happens when someone books, and who takes the call
- *   2. Decided whether the fee is credited back if they transact with us
- *
- * Set CONSULT.feePerHour later only if a fixed public rate is wanted.
+ * Live since 16 September 2026. The two operational questions that held it
+ * back were answered by the owner that day: a conversation comes first and
+ * then the right person is connected, and the fee is waived when the firm is
+ * involved in the deal. The fee is 5,000 rupees for an hour, described as the
+ * basic rate that may differ with the requirement, and the band says exactly
+ * that.
  */
-export const CONSULT_READY = false;
+export const CONSULT_READY = true;

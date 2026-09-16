@@ -25,19 +25,21 @@ describe("Mumbai stamp duty", () => {
     expect(r.dutyLow).toBe(500_000);
   });
 
-  it("returns a RANGE for joint ownership, because the sources genuinely conflict", () => {
-    // Two sources say the male rate applies (6%). One says a blended 5.5% base
-    // (6.5%). This must not be silently resolved into a single number.
+  it("charges joint male and female ownership the male rate, with no range", () => {
+    // The 31 March 2021 concession order applies only where women are the
+    // ONLY purchasers, so a male co owner means full Article 25(b) duty.
+    // Resolved against the instrument on 16 September 2026; the earlier
+    // range of 6 to 6.5 percent reflected secondary sources that were wrong.
     const r = calculateStampDuty({ agreementValue: CR, category: "joint" });
-    expect(r.isRange).toBe(true);
+    expect(r.isRange).toBe(false);
     expect(r.dutyLow).toBe(600_000);
-    expect(r.dutyHigh).toBe(650_000);
+    expect(r.dutyHigh).toBe(600_000);
   });
 
-  it("puts the joint range no lower than the male rate", () => {
+  it("gives joint ownership exactly the male total", () => {
     const male = calculateStampDuty({ agreementValue: CR, category: "male" });
     const joint = calculateStampDuty({ agreementValue: CR, category: "joint" });
-    expect(joint.dutyLow).toBeGreaterThanOrEqual(male.dutyLow);
+    expect(joint.totalLow).toBe(male.totalLow);
   });
 });
 

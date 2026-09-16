@@ -5,6 +5,7 @@ import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
 import { MarkdownBody, Spans } from "@/components/MarkdownBody";
 import { graph, breadcrumbNode, blogPostingNode, faqNode } from "@/lib/schema";
+import { AUTHOR, authorInitials } from "@/lib/author";
 import { postVisual, formatDate } from "@/lib/blog";
 import { displayDate, getRelated, type Post } from "@/lib/posts";
 import { plainText } from "@/lib/markdown";
@@ -75,6 +76,7 @@ export function MarkdownPost({
                 description: post.answer,
                 image: visual.image,
                 published: checked ?? new Date().toISOString(),
+                authorName: AUTHOR.name,
               })
             : null,
         )}
@@ -110,6 +112,27 @@ export function MarkdownPost({
           {/* Reading time and a checked date only. Search volume is internal
               planning data and has no business on a page a client reads. */}
           <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-paper/70">
+            <span className="flex items-center gap-2.5">
+              {AUTHOR.photo ? (
+                <Image
+                  src={AUTHOR.photo}
+                  alt=""
+                  width={32}
+                  height={32}
+                  className="rounded-full object-cover"
+                />
+              ) : (
+                <span
+                  aria-hidden="true"
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-brass/20 font-display text-xs font-semibold text-brass-bright"
+                >
+                  {authorInitials()}
+                </span>
+              )}
+              <span>
+                By <b className="font-semibold text-white">{AUTHOR.name}</b>
+              </span>
+            </span>
             <span>{post.readingMinutes} min read</span>
             {checked && <span>Checked {formatDate(checked, locale)}</span>}
           </div>
@@ -184,8 +207,34 @@ export function MarkdownPost({
             </div>
           )}
 
+          {/* AUTHOR BOX. A named author is the E-E-A-T signal no competitor
+              in this belt carries. Photo to follow; initials until then. */}
+          <div className="mt-12 flex max-w-[68ch] items-start gap-4 rounded-xl border border-line bg-paper-alt p-5">
+            {AUTHOR.photo ? (
+              <Image
+                src={AUTHOR.photo}
+                alt=""
+                width={56}
+                height={56}
+                className="shrink-0 rounded-full object-cover"
+              />
+            ) : (
+              <span
+                aria-hidden="true"
+                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-brand-indigo font-display text-lg font-semibold text-brass-bright"
+              >
+                {authorInitials()}
+              </span>
+            )}
+            <div>
+              <div className="font-display text-lg text-brand-indigo">{AUTHOR.name}</div>
+              <div className="text-xs uppercase tracking-wider text-muted">{AUTHOR.role}</div>
+              <p className="mt-1.5 text-[0.9rem] text-muted">{AUTHOR.bio}</p>
+            </div>
+          </div>
+
           {post.sources.length > 0 && (
-            <div className="mt-12 max-w-[68ch] rounded-xl border border-line p-5">
+            <div className="mt-8 max-w-[68ch] rounded-xl border border-line p-5">
               <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-muted">
                 Sources
                 {checked && `, last checked ${formatDate(checked, locale)}`}

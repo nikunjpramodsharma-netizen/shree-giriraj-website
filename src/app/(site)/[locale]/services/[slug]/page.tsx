@@ -21,6 +21,7 @@ import { getServiceFaqs } from "@/lib/service-faqs";
 import { getRepoService, repoServiceBlocks, repoServiceLocales } from "@/lib/service-content";
 import { tr } from "@/lib/copy-i18n";
 import { MarkdownBody } from "@/components/MarkdownBody";
+import { HeroVideo } from "@/components/HeroVideo";
 
 export const revalidate = 60;
 
@@ -100,6 +101,31 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
   "commercial-plots": "/services/hero-commercial.jpg",
   interiors: "/services/hero-interiors.jpg",
   "mhada-paperwork": "/services/hero-mhada.jpg",
+};
+
+/**
+ * A short silent clip behind the hero of each service, at the owner's request
+ * on 16 September 2026 ("video gives a premium touch that images don't").
+ * Pexels footage, ten to twelve seconds, 720p, no audio, one to three
+ * megabytes each; the poster is the clip's own first frame. MHADA paperwork
+ * keeps its photograph: no clip of an application form read as anything but
+ * stock, and the stamp on paper says more.
+ *
+ * Clips, all Pexels, downloaded and transcoded 16 September 2026:
+ *   resale       35213736  aerial of Mumbai housing in daylight, Rajkumarrr
+ *   rentals       8293504  a couple holding the keys to a flat, RDNE
+ *   new projects 15985460  towers under construction in Mumbai, Manav
+ *   investment   30295540  aerial of Mumbai buildings, aksinfo7 universe
+ *   commercial   35213737  aerial of Mumbai's urban landscape, Rajkumarrr
+ *   interiors     7314522  a kitchen and living room, Yan Krukau
+ */
+const HERO_VIDEO: Partial<Record<(typeof SERVICE_SLUGS)[number], { src: string; poster: string }>> = {
+  "resale-flats": { src: "/services/video/resale.mp4", poster: "/services/video/resale-poster.jpg" },
+  rentals: { src: "/services/video/rentals.mp4", poster: "/services/video/rentals-poster.jpg" },
+  "new-project-bookings": { src: "/services/video/new-projects.mp4", poster: "/services/video/new-projects-poster.jpg" },
+  "investment-advisory": { src: "/services/video/investment.mp4", poster: "/services/video/investment-poster.jpg" },
+  "commercial-plots": { src: "/services/video/commercial.mp4", poster: "/services/video/commercial-poster.jpg" },
+  interiors: { src: "/services/video/interiors.mp4", poster: "/services/video/interiors-poster.jpg" },
 };
 
 /** Alt text per service. A hero image is content, not decoration. */
@@ -273,14 +299,22 @@ export default async function ServicePage({
         was indigo on indigo and would have been close to invisible.
       */}
       <section className="relative overflow-hidden bg-brand-indigo-deep text-paper">
-        <Image
-          src={HERO_IMAGE[slug]}
-          alt={HERO_ALT[slug]}
-          fill
-          priority
-          sizes="100vw"
-          className="hero-kenburns object-cover"
-        />
+        {HERO_VIDEO[slug] ? (
+          <HeroVideo
+            src={HERO_VIDEO[slug]!.src}
+            poster={HERO_VIDEO[slug]!.poster}
+            alt={HERO_ALT[slug]}
+          />
+        ) : (
+          <Image
+            src={HERO_IMAGE[slug]}
+            alt={HERO_ALT[slug]}
+            fill
+            priority
+            sizes="100vw"
+            className="hero-kenburns object-cover"
+          />
+        )}
         <span
           aria-hidden="true"
           className="absolute inset-0"

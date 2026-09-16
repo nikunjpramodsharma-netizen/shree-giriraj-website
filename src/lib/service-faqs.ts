@@ -184,13 +184,13 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
   interiors: [
     {
       q: "How much does an interior designer charge in Mumbai?",
-      a: "Two ways. The large organised firms fold the design fee into the package price and charge nothing separately. Independent designers charge per square foot, anywhere from 40 or 50 rupees to 500 with 100 to 150 the usual middle, or a percentage of the project value. We quote design and execution together, itemised, before any work starts.",
+      a: "Two ways. The large organised firms fold the design fee into the package price and charge nothing separately. Independent designers charge per square foot or a percentage of the project value, and the spread between them is wide. We quote design and execution together, itemised, before any work starts, so you see what each part costs before you commit to any of it.",
       href: "/blog/choosing-an-interior-designer-in-borivali",
       hrefLabel: "What to ask an interior designer before you pay an advance",
     },
     {
       q: "What does a 2 BHK fit out cost here?",
-      a: "Roughly 7 to 10 lakh rupees for a full home at a sensible specification and 12 to 15 lakh for premium finishes, plus 18 percent GST, on the Mumbai figures the large firms publish. The three big pieces alone, a kitchen and two wardrobes with a TV unit, run from about 3.4 to 5.8 lakh. A quote well below that is worth asking about.",
+      a: "It depends on three things more than anything else: the kitchen, the wardrobes and the finish level you choose, with GST at 18 percent on top. Rather than quote a range for a flat we have not seen, we walk the flat, agree the scope room by room and give you an itemised estimate, so the number you plan on is the number for your home.",
     },
     {
       q: "How much advance is normal?",
