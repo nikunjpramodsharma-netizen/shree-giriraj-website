@@ -137,6 +137,17 @@ export default function ContactPage({
                 </dt>
                 <dd className="mt-1 text-ink">{site.rera}</dd>
               </div>
+              <div>
+                <dt className="text-xs uppercase tracking-wider text-muted">
+                  Find us online
+                </dt>
+                <dd className="mt-1 flex flex-wrap gap-x-4 gap-y-1 text-ink">
+                  <a className="underline underline-offset-4" href={site.social.instagram} target="_blank" rel="noopener">Instagram</a>
+                  <a className="underline underline-offset-4" href={site.social.facebook} target="_blank" rel="noopener">Facebook</a>
+                  <a className="underline underline-offset-4" href={site.social.google} target="_blank" rel="noopener">Google reviews</a>
+                  <a className="underline underline-offset-4" href={site.social.justdial} target="_blank" rel="noopener">JustDial</a>
+                </dd>
+              </div>
             </dl>
 
             <div className="mt-8 rounded-xl border border-line bg-paper-alt p-5">

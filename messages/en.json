@@ -184,7 +184,8 @@
     "whatsappUs": "WhatsApp us",
     "whatsappMessage": "Hi Shree Giriraj!",
     "copyright": "© {year} {name} · Borivali · Kandivali · Malad",
-    "rera": "MahaRERA Reg. No. {number}"
+    "rera": "MahaRERA Reg. No. {number}",
+    "followHeading": "Find us online"
   },
   "whatsappFloat": {
     "ariaLabel": "Chat on WhatsApp",

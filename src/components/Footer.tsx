@@ -50,6 +50,17 @@ export function Footer() {
                 </a>
               </li>
             </ul>
+            {/* The profiles the owner confirmed on 16 September 2026. The same
+                four URLs feed sameAs in the business markup (config.ts). */}
+            <h4 className="mb-3 mt-8 text-xs font-semibold uppercase tracking-[0.16em] text-brass-bright">
+              {t("followHeading")}
+            </h4>
+            <ul className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+              <li><a href={site.social.instagram} target="_blank" rel="noopener" className="hover:text-white">Instagram</a></li>
+              <li><a href={site.social.facebook} target="_blank" rel="noopener" className="hover:text-white">Facebook</a></li>
+              <li><a href={site.social.google} target="_blank" rel="noopener" className="hover:text-white">Google</a></li>
+              <li><a href={site.social.justdial} target="_blank" rel="noopener" className="hover:text-white">JustDial</a></li>
+            </ul>
           </div>
         </div>
         <div className="flex flex-col gap-2.5 pt-6 text-xs text-paper/50 sm:flex-row sm:items-center sm:justify-between">

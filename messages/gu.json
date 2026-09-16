@@ -184,7 +184,8 @@
     "whatsappUs": "અમને વોટ્સએપ કરો",
     "whatsappMessage": "નમસ્તે શ્રી ગિરિરાજ!",
     "copyright": "© {year} {name} · બોરીવલી · કાંદિવલી · મલાડ",
-    "rera": "મહારેરા નોંધણી નં. {number}"
+    "rera": "મહારેરા નોંધણી નં. {number}",
+    "followHeading": "અમને ઓનલાઇન શોધો"
   },
   "whatsappFloat": {
     "ariaLabel": "વોટ્સએપ પર ચેટ કરો",

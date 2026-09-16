@@ -41,10 +41,19 @@ export const site = {
     // Square Yards agent page for Pramod Sharma, Shree Giriraj Real Estate,
     // same RERA number. Dormant but genuine. Checked 16 September 2026.
     "https://www.squareyards.com/agent/pramod-sharma/490321",
-    // No Facebook or Instagram page for this business could be found on
-    // 16 September 2026; the ones that surface belong to firms in Dadar and
-    // Indore. Add here only once the owner confirms a URL.
+    // Instagram and Facebook, supplied by the owner on 16 September 2026.
+    // Neither was findable by search that day; both open and carry the name.
+    "https://www.instagram.com/shree_giriraj_real_estate/",
+    "https://www.facebook.com/p/Shree-Giriraj-Real-Estate-61583163166769/",
   ] as string[],
+  /** The profiles shown as links in the footer and on the contact page. */
+  social: {
+    instagram: "https://www.instagram.com/shree_giriraj_real_estate/",
+    facebook: "https://www.facebook.com/p/Shree-Giriraj-Real-Estate-61583163166769/",
+    google: "https://www.google.com/maps/place/?cid=5587711998336126142",
+    justdial:
+      "https://www.justdial.com/Mumbai/Giriraj-Real-Estate-Interior-And-Civil-Works-Near-Chikuwadi-Borivali-West/022PXX22-XX22-140314134631-H1T4_BZDET",
+  },
 };
 
 /** Build a wa.me link with a pre-filled message. */

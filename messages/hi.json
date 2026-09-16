@@ -184,7 +184,8 @@
     "whatsappUs": "हमें व्हाट्सएप करें",
     "whatsappMessage": "नमस्ते श्री गिरिराज!",
     "copyright": "© {year} {name} · बोरिवली · कांदिवली · मलाड",
-    "rera": "महारेरा पंजीकरण संख्या {number}"
+    "rera": "महारेरा पंजीकरण संख्या {number}",
+    "followHeading": "हमें ऑनलाइन देखें"
   },
   "whatsappFloat": {
     "ariaLabel": "व्हाट्सएप पर चैट करें",
