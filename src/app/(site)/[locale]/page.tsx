@@ -295,6 +295,9 @@ export default async function HomePage({
   const propertyTypes = localizeDeep(locale, PROPERTY_TYPES);
   const servicePanels = localizeDeep(locale, SERVICE_PANELS);
   const areaPanels = localizeDeep(locale, AREA_PANELS);
+  // Placeholder review cards translate; the three real Google reviews stay
+  // in the words they were posted in, because they are quotations.
+  const testimonials = localizeDeep(locale, TESTIMONIALS);
 
   // One project reads as chosen. A grid reads as a shelf, which is the thing
   // we are deliberately not. Prefer the flagship, fall back to the first.
@@ -506,7 +509,7 @@ export default async function HomePage({
         </div>
         <Reveal>
           <TestimonialMarquee
-            items={TESTIMONIALS}
+            items={testimonials}
             labels={{
               onGoogle: tTestimonials("onGoogle"),
               readReviews: tTestimonials("readReviews"),
@@ -570,7 +573,7 @@ export default async function HomePage({
                       className="rounded-lg border border-brass/25 bg-white/5 p-3.5"
                     >
                       <div className="text-[0.62rem] uppercase tracking-[0.12em] text-brass-bright">
-                        {c.type}
+                        {c.type?.replace(/\s*[–—]\s*/g, " to ")}
                       </div>
                       {c.displayPrice && (
                         <div className="mt-1 font-display text-base text-white">

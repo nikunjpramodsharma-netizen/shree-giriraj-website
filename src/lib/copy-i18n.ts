@@ -370,6 +370,13 @@ const HI_UI: Record<string, string> = {
   "during working hours.": "काम के घंटों में।",
   "Property in {name}": "{name} में प्रॉपर्टी",
   "Since {year}": "{year} से",
+  "Placeholder review. The client's own words go here, exactly as they said them, once the owner shares them.": "प्लेसहोल्डर रिव्यू। ग्राहक के अपने शब्द यहाँ आएंगे, ठीक वैसे जैसे उन्होंने कहे, जब मालिक उन्हें साझा करेंगे।",
+  "Suburb to come": "उपनगर आना बाकी",
+  "What they did with us": "उन्होंने हमारे साथ क्या किया",
+  "Let a 3 BHK": "3 BHK किराए पर दिया",
+  "Rented a 2 BHK": "2 BHK किराए पर लिया",
+  "Bought a 1 BHK": "1 BHK खरीदा",
+  "Borivali West": "बोरिवली वेस्ट",
 };
 const MR_UI: Record<string, string> = {
   "a flat": "एक फ्लॅट",
@@ -385,6 +392,13 @@ const MR_UI: Record<string, string> = {
   "during working hours.": "कामाच्या वेळेत.",
   "Property in {name}": "{name} मधील मालमत्ता",
   "Since {year}": "{year} पासून",
+  "Placeholder review. The client's own words go here, exactly as they said them, once the owner shares them.": "प्लेसहोल्डर रिव्ह्यू. ग्राहकाचे स्वतःचे शब्द इथे येतील, त्यांनी सांगितले तसेच, मालक ते देतील तेव्हा.",
+  "Suburb to come": "उपनगर येणे बाकी",
+  "What they did with us": "त्यांनी आमच्यासोबत काय केले",
+  "Let a 3 BHK": "3 BHK भाड्याने दिला",
+  "Rented a 2 BHK": "2 BHK भाड्याने घेतला",
+  "Bought a 1 BHK": "1 BHK विकत घेतला",
+  "Borivali West": "बोरिवली पश्चिम",
 };
 const GU_UI: Record<string, string> = {
   "a flat": "એક ફ્લેટ",
@@ -400,6 +414,13 @@ const GU_UI: Record<string, string> = {
   "during working hours.": "કામના કલાકોમાં.",
   "Property in {name}": "{name} માં પ્રોપર્ટી",
   "Since {year}": "{year} થી",
+  "Placeholder review. The client's own words go here, exactly as they said them, once the owner shares them.": "પ્લેસહોલ્ડર રિવ્યૂ. ગ્રાહકના પોતાના શબ્દો અહીં આવશે, તેમણે કહ્યા તેમ જ, માલિક તે આપશે ત્યારે.",
+  "Suburb to come": "ઉપનગર આવવાનું બાકી",
+  "What they did with us": "તેમણે અમારી સાથે શું કર્યું",
+  "Let a 3 BHK": "3 BHK ભાડે આપ્યો",
+  "Rented a 2 BHK": "2 BHK ભાડે લીધો",
+  "Bought a 1 BHK": "1 BHK ખરીદ્યો",
+  "Borivali West": "બોરીવલી વેસ્ટ",
 };
 
 export const COPY: Record<CopyLocale, Record<string, string>> = {
