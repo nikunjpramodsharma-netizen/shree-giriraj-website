@@ -8,7 +8,7 @@ import { ConsultCTA } from "@/components/ConsultCTA";
 import { ContactCTA } from "@/components/ContactCTA";
 import { graph, breadcrumbNode, faqNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
-import { site } from "@/lib/config";
+import { site, waLink } from "@/lib/config";
 import {
   AREAS,
   getArea,
@@ -16,6 +16,7 @@ import {
   areaIsComplete,
   isInputBlock,
   type InputBlock,
+  type AreaInvite,
 } from "@/lib/areas";
 
 export const revalidate = 300;
@@ -83,8 +84,8 @@ export default async function AreaPage({
 
       <header className="relative overflow-hidden bg-brand-indigo-deep text-paper">
         <Image
-          src={panel.image}
-          alt={`${area.longName}, Mumbai`}
+          src={area.hero?.src ?? panel.image}
+          alt={area.hero?.alt ?? `${area.longName}, Mumbai`}
           fill
           priority
           sizes="100vw"
@@ -156,14 +157,37 @@ export default async function AreaPage({
           <p className="mt-2 text-ink">{panel.watch}</p>
         </div>
 
-        <div className="mt-14 space-y-12">
+        <div className="mt-14 space-y-14">
           {area.sections.map((s) =>
             isInputBlock(s) ? (
               <PendingSection key={s.heading} block={s} />
             ) : (
-              <section key={s.heading} className="max-w-[68ch]">
-                <h2 className="text-2xl text-ink md:text-3xl">{s.heading}</h2>
-                <p className="mt-3 text-ink/80">{s.body}</p>
+              <section key={s.heading}>
+                <div className="max-w-[68ch]">
+                  <h2 className="text-2xl text-ink md:text-3xl">{s.heading}</h2>
+                  <div className="mt-4 space-y-4 text-[1.02rem] leading-relaxed text-ink/85">
+                    {s.body.map((para) => (
+                      <p key={para.slice(0, 48)}>{para}</p>
+                    ))}
+                  </div>
+                </div>
+                {s.image && (
+                  <figure className="mt-8 max-w-[76ch]">
+                    <div className="relative aspect-[16/9] overflow-hidden rounded-2xl">
+                      <Image
+                        src={s.image.src}
+                        alt={s.image.alt}
+                        fill
+                        sizes="(min-width: 1024px) 760px, 100vw"
+                        className="object-cover"
+                      />
+                    </div>
+                    {s.image.caption && (
+                      <figcaption className="mt-2.5 text-sm text-muted">{s.image.caption}</figcaption>
+                    )}
+                  </figure>
+                )}
+                {s.invite && <Invite invite={s.invite} />}
               </section>
             ),
           )}
@@ -181,6 +205,28 @@ export default async function AreaPage({
           </dl>
         </section>
 
+        {area.sources.length > 0 && (
+          <div className="mt-12 max-w-[68ch] rounded-xl border border-line p-5">
+            <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-muted">
+              Sources. Market figures as of {area.figuresAsOf}; asking rates, not prices paid.
+            </div>
+            <ul className="mt-3 space-y-1.5 text-sm">
+              {area.sources.map((src) => (
+                <li key={src.url}>
+                  <a
+                    href={src.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand-indigo underline underline-offset-4"
+                  >
+                    {src.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         <p className="mt-10 max-w-[68ch] text-sm text-muted">
           We work across {site.areas.join(", ")}, and occasionally in{" "}
           {site.extendedAreas.join(" and ")}.
@@ -188,12 +234,42 @@ export default async function AreaPage({
       </div>
 
       <ConsultCTA locale={locale} formLocation={`area-${area.slug}`} />
-      <ContactCTA
-        locale={locale}
-        formLocation={`area-${area.slug}-footer`}
-        presetArea={area.longName}
-      />
+      <div id="enquire">
+        <ContactCTA
+          locale={locale}
+          formLocation={`area-${area.slug}-footer`}
+          presetArea={area.longName}
+        />
+      </div>
     </article>
+  );
+}
+
+/**
+ * The invitation that follows a section. One hook sentence, one WhatsApp
+ * button with the message already written, one quiet alternative. The offer
+ * is always the answer to the reader's own case, free, which is what makes
+ * it an invitation rather than a sales interruption.
+ */
+function Invite({ invite }: { invite: AreaInvite }) {
+  return (
+    <aside className="mt-8 max-w-[68ch] rounded-2xl border border-brass/30 bg-brand-indigo-deep p-6 text-paper md:p-7">
+      <p className="font-display text-lg leading-snug text-white md:text-xl">{invite.hook}</p>
+      <div className="mt-5 flex flex-wrap items-center gap-3">
+        <a
+          href={waLink(invite.message)}
+          target="_blank"
+          rel="noopener"
+          className="btn btn-wa"
+        >
+          {invite.button}
+        </a>
+        <a href="#enquire" className="text-sm font-semibold text-brass-bright underline decoration-brass/40 underline-offset-4">
+          Or leave your details below
+        </a>
+      </div>
+      <p className="mt-3 text-xs text-paper/60">Free, no obligation, usually answered the same day.</p>
+    </aside>
   );
 }
 

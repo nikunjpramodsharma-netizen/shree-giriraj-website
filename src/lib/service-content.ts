@@ -1,5 +1,6 @@
 import { parseBlocks, type Block } from "@/lib/markdown";
 import { REPO_SERVICE_LOCALES } from "@/lib/service-content-locales";
+import { CORE_SERVICES } from "@/lib/service-content-core";
 
 /**
  * Service pages whose body lives in this repo rather than in Sanity.
@@ -250,6 +251,9 @@ every application before it goes in.
 `.trim();
 
 export const REPO_SERVICES: Record<string, RepoService> = {
+  // Resale, rentals, new project bookings and interiors moved here from
+  // Sanity on 16 September 2026; see service-content-core.ts for why.
+  ...CORE_SERVICES,
   "investment-advisory": {
     title: "Property Investment Advisory in Borivali, Kandivali & Malad",
     heroHeading: "Property investment advisory in the western suburbs",

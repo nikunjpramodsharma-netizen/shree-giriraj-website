@@ -51,14 +51,6 @@ export const FILLS = [
 
   // ---------------------------------------------------------------- hidden
   {
-    id: "area-pages",
-    area: "Areas",
-    status: "hidden",
-    ask: "The pockets in Borivali, Kandivali and Malad: who lives where, how the two sides of each suburb differ, and what you would check before buying. Every prompt is written on the pages themselves.",
-    why: "All three area pages are built and linked, but each still carries flagged blocks only you can fill, so all three are served noindex. These are the core of the local SEO plan and the one thing a portal cannot copy.",
-    where: ["src/lib/areas.ts"],
-  },
-  {
     id: "testimonials",
     area: "Homepage",
     status: "hidden",

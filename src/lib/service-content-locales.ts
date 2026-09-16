@@ -1,4 +1,5 @@
 import type { RepoService } from "@/lib/service-content";
+import { CORE_SERVICE_LOCALES } from "@/lib/service-content-core-locales";
 
 /**
  * Hindi, Marathi and Gujarati versions of the three repo backed service pages.
@@ -27,6 +28,8 @@ import type { RepoService } from "@/lib/service-content";
  */
 
 export const REPO_SERVICE_LOCALES: Record<string, Partial<Record<"hi" | "mr" | "gu", RepoService>>> = {
+  // The four services that moved from Sanity on 16 September 2026.
+  ...CORE_SERVICE_LOCALES,
   "investment-advisory": {
     hi: {
       title: "बोरिवली, कांदिवली और मलाड में प्रॉपर्टी निवेश सलाह",
