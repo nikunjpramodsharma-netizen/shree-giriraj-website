@@ -5,11 +5,11 @@ import { InView } from "@/components/motion/InView";
 import { Parallax } from "@/components/motion/Parallax";
 import { pickIcon } from "@/components/motion/LineIcon";
 import { BenefitDeck } from "@/components/motion/BenefitDeck";
+import { SectionDeck } from "@/components/motion/SectionDeck";
 import { waLink } from "@/lib/config";
 import { tr } from "@/lib/copy-i18n";
 import type { Block, Inline } from "@/lib/markdown";
 import type { ServiceScene } from "@/lib/service-scenes";
-import { creditsForSources } from "@/lib/area-photo-credits";
 
 /**
  * The body of a service page, staged as scenes instead of a column.
@@ -166,64 +166,55 @@ export function ServiceScenes({
         </section>
       )}
 
-      {/* MIDDLE SECTIONS as alternating scenes */}
-      {middle.map((s, si) => {
-        const image = scene.images[img++ % scene.images.length];
-        const flip = si % 2 === 1;
-        return (
-          <section key={s.id} id={s.id} className={`scroll-mt-24 py-16 md:py-20 ${si % 2 === 1 ? "bg-paper-alt" : ""}`}>
-            <div className={`wrap grid items-center gap-10 md:grid-cols-2 md:gap-14 ${flip ? "md:[&>*:first-child]:order-2" : ""}`}>
-              <InView className="cascade">
-                <h2 style={{ ["--i" as string]: 0 }} className="text-2xl text-brand-indigo md:text-3xl">
-                  {s.heading}
-                </h2>
-                {s.blocks.map((b, bi) => {
-                  const style = { ["--i" as string]: bi + 1 };
-                  if (b.t === "p")
-                    return (
-                      <p key={bi} style={style} className="mt-4 text-[1.02rem] leading-relaxed text-ink/85">
-                        <Spans spans={b.spans} />
-                      </p>
-                    );
-                  if (b.t === "ul")
-                    return (
-                      <ul key={bi} style={style} className="mt-4 space-y-2">
-                        {b.items.map((it, k) => (
-                          <li key={k} className="flex gap-2.5 text-ink/85">
-                            <span aria-hidden="true" className="text-brass">·</span>
-                            <span><Spans spans={it} /></span>
-                          </li>
-                        ))}
-                      </ul>
-                    );
-                  if (b.t === "ol")
-                    return (
-                      <ol key={bi} style={style} className="mt-4 space-y-2">
-                        {b.items.map((it, k) => (
-                          <li key={k} className="flex gap-3 text-ink/85">
-                            <span aria-hidden="true" className="mt-0.5 text-sm font-bold tabular-nums text-brass">{k + 1}</span>
-                            <span><Spans spans={it} /></span>
-                          </li>
-                        ))}
-                      </ol>
-                    );
-                  return null;
-                })}
-              </InView>
-              <Parallax strength={50}>
-                <div className="relative aspect-[5/4] overflow-hidden rounded-2xl shadow-2xl shadow-brand-indigo/20">
-                  <Image src={image.src} alt={image.alt} fill sizes="(min-width: 768px) 45vw, 100vw" className="object-cover" />
-                  {image.credit && (
-                    <span className="absolute bottom-0 left-0 max-w-full truncate bg-black/45 px-2 py-1 text-[0.6rem] text-white/85">
-                      Photo: {image.credit}
-                    </span>
-                  )}
-                </div>
-              </Parallax>
-            </div>
-          </section>
-        );
-      })}
+      {/* MIDDLE SECTIONS, folded into one tabbed block */}
+      {middle.length > 0 && (
+        <section className="py-14 md:py-16">
+          <div className="wrap">
+            <SectionDeck
+              sections={middle.map((s) => ({
+                id: s.id,
+                heading: s.heading,
+                image: scene.images[img++ % scene.images.length],
+                body: (
+                  <>
+                    {s.blocks.map((b, bi) => {
+                      if (b.t === "p")
+                        return (
+                          <p key={bi} className="mt-4 text-[1.02rem] leading-relaxed text-ink/85">
+                            <Spans spans={b.spans} />
+                          </p>
+                        );
+                      if (b.t === "ul")
+                        return (
+                          <ul key={bi} className="mt-4 space-y-2">
+                            {b.items.map((it, k) => (
+                              <li key={k} className="flex gap-2.5 text-ink/85">
+                                <span aria-hidden="true" className="text-brass">·</span>
+                                <span><Spans spans={it} /></span>
+                              </li>
+                            ))}
+                          </ul>
+                        );
+                      if (b.t === "ol")
+                        return (
+                          <ol key={bi} className="mt-4 space-y-2">
+                            {b.items.map((it, k) => (
+                              <li key={k} className="flex gap-3 text-ink/85">
+                                <span aria-hidden="true" className="mt-0.5 text-sm font-bold tabular-nums text-brass">{k + 1}</span>
+                                <span><Spans spans={it} /></span>
+                              </li>
+                            ))}
+                          </ol>
+                        );
+                      return null;
+                    })}
+                  </>
+                ),
+              }))}
+            />
+          </div>
+        </section>
+      )}
 
       {/* WORKED EXAMPLE */}
       {scene.example && (
@@ -284,30 +275,6 @@ export function ServiceScenes({
           </div>
         </section>
       )}
-
-      {/* PHOTO CREDITS. The free licences ask for the photographer to be named. */}
-      {(() => {
-        const photos = creditsForSources(scene.images.map((im) => im.src));
-        if (photos.length === 0) return null;
-        return (
-          <section className="wrap pt-8">
-            <details className="mx-auto max-w-[62ch] rounded-xl border border-line p-4">
-              <summary className="cursor-pointer list-none text-[0.62rem] font-bold uppercase tracking-[0.18em] text-muted marker:content-none">
-                Photo credits. Photographs from Wikimedia Commons, resized, under the licences shown.
-              </summary>
-              <ul className="mt-3 space-y-1.5 text-sm">
-                {photos.map((ph) => (
-                  <li key={ph.src}>
-                    <a href={ph.page} target="_blank" rel="noopener noreferrer" className="text-brand-indigo underline underline-offset-4">{ph.artist}</a>
-                    {", "}
-                    <a href={ph.licenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{ph.license}</a>
-                  </li>
-                ))}
-              </ul>
-            </details>
-          </section>
-        );
-      })()}
 
       {/* SMALL PRINT */}
       {note.length > 0 && (

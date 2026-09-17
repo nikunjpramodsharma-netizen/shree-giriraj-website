@@ -15,7 +15,6 @@ import { Parallax } from "@/components/motion/Parallax";
 import { CountUp } from "@/components/motion/CountUp";
 import { StickyBar } from "@/components/motion/StickyBar";
 import { RelatedLinks } from "@/components/RelatedLinks";
-import { creditsFor } from "@/lib/area-photo-credits";
 import { LitMap } from "@/components/motion/LitMap";
 import { RisingTower } from "@/components/motion/RisingTower";
 import { interlinksForArea } from "@/lib/interlinks";
@@ -319,32 +318,6 @@ export default async function AreaPage({
             </ul>
           </details>
         )}
-
-        {(() => {
-          const prefix = area.slug.startsWith("borivali") ? "bor-" : area.slug.startsWith("kandivali") ? "kan-" : "mal-";
-          const photos = creditsFor(prefix);
-          if (photos.length === 0) return null;
-          return (
-            <details className="mt-4 max-w-[68ch] rounded-xl border border-line p-5">
-              <summary className="cursor-pointer list-none text-[0.62rem] font-bold uppercase tracking-[0.18em] text-muted marker:content-none">
-                Photo credits. Photographs of {area.longName} from Wikimedia Commons, resized, under the licences shown.
-              </summary>
-              <ul className="mt-3 space-y-1.5 text-sm">
-                {photos.map((ph) => (
-                  <li key={ph.src}>
-                    <a href={ph.page} target="_blank" rel="noopener noreferrer" className="text-brand-indigo underline underline-offset-4">
-                      {ph.artist}
-                    </a>
-                    {", "}
-                    <a href={ph.licenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">
-                      {ph.license}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </details>
-          );
-        })()}
 
         <p className="mt-10 max-w-[68ch] text-sm text-muted">
           We work across {site.areas.join(", ")}, and occasionally in{" "}

@@ -67,8 +67,6 @@ export type AreaPanel = {
   slug: string;
   name: string;
   image: string;
-  /** Photographer and licence, shown on the photograph. */
-  imageCredit?: string;
   body: string;
   stats: { value: string; label: string }[];
   watch: string;
@@ -91,8 +89,7 @@ export const AREA_PANELS: AreaPanel[] = [
   {
     slug: "borivali-west",
     name: "Borivali",
-    image: "/areas/real/bor-west-skyline.jpg",
-    imageCredit: "Aziz, CC0, Wikimedia Commons",
+    image: "/premium/mumbai-aerial-green.jpg",
     body: "Our home turf. Resale, rentals and investment advice across Borivali West and East, from Chikoowadi to the station belt. The pocket you choose matters more here than the building does.",
     stats: [
       { value: "₹31,200", label: "Resale asking, per sq ft carpet, West" },
@@ -106,7 +103,6 @@ export const AREA_PANELS: AreaPanel[] = [
     slug: "kandivali",
     name: "Kandivali",
     image: "/areas/real/kan-lokhandwala.jpg",
-    imageCredit: "Ask27, CC BY-SA 4.0, Wikimedia Commons",
     body: "Premium new launches and family homes off M.G. Road and Link Road, including Jaswanti Jewel. The strongest new build activity of the three, which means the widest choice for a first buyer.",
     stats: [
       { value: "₹25,400", label: "Resale asking, per sq ft carpet, West" },
@@ -120,7 +116,6 @@ export const AREA_PANELS: AreaPanel[] = [
     slug: "malad",
     name: "Malad",
     image: "/areas/real/mal-palm-court.jpg",
-    imageCredit: "Rakesh Krishna Kumar, CC BY-SA 2.0, Wikimedia Commons",
     body: "Growing residential and commercial options near Mindspace and the Link Road corridor. More investor money here than in the other two, which moves the price differently.",
     stats: [
       { value: "₹27,000", label: "Resale asking, per sq ft carpet, West" },

@@ -96,11 +96,6 @@ export function AreaSwitcher({
                 priority={i === 0}
               />
             ))}
-            {panel.imageCredit && (
-              <span className="absolute bottom-0 left-0 max-w-full truncate bg-black/45 px-2 py-1 text-[0.6rem] text-white/85">
-                Photo: {panel.imageCredit}
-              </span>
-            )}
           </div>
         )}
       </div>

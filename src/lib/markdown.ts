@@ -211,8 +211,15 @@ export function parseBlocks(body: string): Block[] {
     if (/^[-*]\s+/.test(line)) {
       const items: Inline[][] = [];
       while (i < lines.length && /^[-*]\s+/.test(lines[i].trim())) {
-        items.push(parseInline(lines[i].trim().replace(/^[-*]\s+/, "")));
+        // A hard wrapped bullet continues on indented lines. Without this each
+        // continuation became a stray paragraph and each bullet its own list.
+        let text = lines[i].trim().replace(/^[-*]\s+/, "");
         i += 1;
+        while (i < lines.length && /^\s{2,}\S/.test(lines[i]) && !/^[-*]\s+/.test(lines[i].trim()) && !/^\d+\.\s+/.test(lines[i].trim())) {
+          text += " " + lines[i].trim();
+          i += 1;
+        }
+        items.push(parseInline(text));
       }
       out.push({ t: "ul", items });
       continue;
@@ -221,8 +228,13 @@ export function parseBlocks(body: string): Block[] {
     if (/^\d+\.\s+/.test(line)) {
       const items: Inline[][] = [];
       while (i < lines.length && /^\d+\.\s+/.test(lines[i].trim())) {
-        items.push(parseInline(lines[i].trim().replace(/^\d+\.\s+/, "")));
+        let text = lines[i].trim().replace(/^\d+\.\s+/, "");
         i += 1;
+        while (i < lines.length && /^\s{2,}\S/.test(lines[i]) && !/^[-*]\s+/.test(lines[i].trim()) && !/^\d+\.\s+/.test(lines[i].trim())) {
+          text += " " + lines[i].trim();
+          i += 1;
+        }
+        items.push(parseInline(text));
       }
       out.push({ t: "ol", items });
       continue;

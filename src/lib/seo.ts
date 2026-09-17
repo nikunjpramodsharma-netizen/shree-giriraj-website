@@ -162,7 +162,7 @@ export function sitemapAlternates(
  * locale aware Link dutifully produced three dead URLs. The crawler caught it,
  * not the diff.
  */
-export const ENGLISH_ONLY_PREFIXES = ["/tools", "/guides", "/blog", "/areas", "/about", "/contact"] as const;
+export const ENGLISH_ONLY_PREFIXES = ["/tools", "/guides", "/blog", "/areas", "/about", "/contact", "/photo-credits"] as const;
 
 export function isEnglishOnlyPath(path: string): boolean {
   return ENGLISH_ONLY_PREFIXES.some((p) => path === p || path.startsWith(p + "/"));

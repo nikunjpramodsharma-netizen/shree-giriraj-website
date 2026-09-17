@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 export type Scene = {
   title: string;
   text: string;
-  image?: { src: string; alt: string; credit?: string };
+  image?: { src: string; alt: string };
   /** Small line above the title, e.g. "West" or a rate. */
   kicker?: string;
 };
@@ -78,11 +78,6 @@ export function AutoScene({
                 style={{ opacity: k === i ? 1 : 0 }}
               />
             ) : null,
-          )}
-          {scenes[i].image?.credit && (
-            <span className="absolute bottom-0 left-0 max-w-full truncate bg-black/45 px-2 py-1 text-[0.6rem] text-white/85">
-              Photo: {scenes[i].image!.credit}
-            </span>
           )}
         </div>
         <div className={`flex flex-col justify-between p-6 md:p-7`}>
