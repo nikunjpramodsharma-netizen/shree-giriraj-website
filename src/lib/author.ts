@@ -1,5 +1,3 @@
-import { existsSync } from "node:fs";
-import { join } from "node:path";
 /**
  * The blog's author.
  *
@@ -19,8 +17,10 @@ export const AUTHOR = {
   role: "Senior Associate",
   bio: "Senior Associate at Shree Giriraj Real Estate, handling marketing and sales across Borivali, Kandivali and Malad. Writes the articles here from the questions clients actually ask.",
   /** Null renders initials. */
-  // Drop the file at public/team/nikunj-sharma.jpg and it appears; until then the initials show.
-  photo: (existsSync(join(process.cwd(), "public", "team", "nikunj-sharma.jpg")) ? "/team/nikunj-sharma.jpg" : null) as string | null,
+  // A fixed path, never a check of the disk: pages here rebuild themselves on
+  // Vercel where the public folder cannot be read, and a disk check there
+  // silently brought the initials back on every article.
+  photo: "/team/nikunj-sharma.jpg" as string | null,
 } as const;
 
 export function authorInitials(): string {

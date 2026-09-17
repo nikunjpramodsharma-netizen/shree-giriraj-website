@@ -13,8 +13,7 @@ import { getAllPosts } from "./posts";
  * sure every article has one, so a fallback never reaches a reader.
  */
 const ROOT = process.cwd();
-// author.ts names a photograph that is optional until the owner supplies it.
-const SKIP = new Set(["blog.ts", "author.ts"]);
+const SKIP = new Set(["blog.ts"]);
 
 function walk(dir: string, out: string[] = []): string[] {
   for (const name of readdirSync(dir)) {
