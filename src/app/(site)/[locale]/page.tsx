@@ -12,6 +12,7 @@ import { site, waLink } from "@/lib/config";
 import { HeroRotator, type HeroSlide, type HeroOpener } from "@/components/HeroRotator";
 import { ChecksAccordion } from "@/components/ChecksAccordion";
 import { AreaSwitcher } from "@/components/AreaSwitcher";
+import { AREAS } from "@/lib/areas";
 import { SituationTool } from "@/components/SituationTool";
 import { ServiceTrack } from "@/components/ServiceTrack";
 import {
@@ -555,7 +556,11 @@ export default async function HomePage({
               {t("Pick the one you are looking at.")}
             </p>
           </Reveal>
-          <AreaSwitcher panels={areaPanels} locale={locale} />
+          <AreaSwitcher
+            panels={areaPanels}
+            locale={locale}
+            scenes={locale === "en" ? Object.fromEntries(AREAS.map((a) => [a.slug, a.motion.pocketScenes])) : undefined}
+          />
         </div>
       </section>
 

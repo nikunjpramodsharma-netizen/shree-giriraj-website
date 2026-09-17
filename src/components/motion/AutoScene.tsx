@@ -22,11 +22,14 @@ export function AutoScene({
   interval = 2000,
   tone = "light",
   aspect = "aspect-[4/3]",
+  stacked = false,
 }: {
   scenes: Scene[];
   interval?: number;
   tone?: "light" | "dark";
   aspect?: string;
+  /** Image above the text instead of beside it, for a narrow column. */
+  stacked?: boolean;
 }) {
   const [i, setI] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -62,8 +65,8 @@ export function AutoScene({
       }}
       className={`overflow-hidden rounded-2xl border ${dark ? "border-white/10 bg-white/5" : "border-line bg-white"}`}
     >
-      <div className="grid md:grid-cols-[1.1fr_.9fr]">
-        <div className={`relative ${aspect} md:aspect-auto md:min-h-[260px]`}>
+      <div className={stacked ? "grid" : "grid md:grid-cols-[1.1fr_.9fr]"}>
+        <div className={stacked ? "relative aspect-[16/9]" : `relative ${aspect} md:aspect-auto md:min-h-[260px]`}>
           {scenes.map((sc, k) =>
             sc.image ? (
               <Image
@@ -78,7 +81,7 @@ export function AutoScene({
             ) : null,
           )}
         </div>
-        <div className="flex flex-col justify-between p-6 md:p-7">
+        <div className={`flex flex-col justify-between p-6 md:p-7 ${stacked ? "min-h-[15rem]" : ""}`}>
           <div key={s.title} className="scene-in">
             {s.kicker && (
               <div className={`text-[0.62rem] font-bold uppercase tracking-[0.16em] ${dark ? "text-brass-bright" : "text-brass"}`}>

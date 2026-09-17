@@ -6,13 +6,23 @@ import { Link } from "@/i18n/navigation";
 import EnglishLink from "next/link";
 import { AREA_PAGES_READY, type AreaPanel } from "@/lib/homepage-content";
 import { tr } from "@/lib/copy-i18n";
+import { AutoScene, type Scene } from "@/components/motion/AutoScene";
 
 /**
  * Section 03. Sits third rather than seventh because "do you cover where I am
  * looking" is the earliest real question a visitor has, and because this is the
  * main internal link hub into the area pages.
  */
-export function AreaSwitcher({ panels, locale = "en" }: { panels: AreaPanel[]; locale?: string }) {
+export function AreaSwitcher({
+  panels,
+  locale = "en",
+  scenes,
+}: {
+  panels: AreaPanel[];
+  locale?: string;
+  /** The rotating pocket cards for each suburb, keyed by slug. English only. */
+  scenes?: Record<string, Scene[]>;
+}) {
   const [active, setActive] = useState(0);
   const panel = panels[active];
 
@@ -68,20 +78,26 @@ export function AreaSwitcher({ panels, locale = "en" }: { panels: AreaPanel[]; l
           )}
         </div>
 
-        <div className="relative aspect-[11/8] overflow-hidden rounded-xl">
-          {panels.map((p, i) => (
-            <Image
-              key={p.slug}
-              src={p.image}
-              alt={tr(locale, "Property in {name}").replace("{name}", p.name)}
-              fill
-              sizes="(min-width: 768px) 45vw, 100vw"
-              className="object-cover transition-opacity duration-500"
-              style={{ opacity: i === active ? 1 : 0 }}
-              priority={i === 0}
-            />
-          ))}
-        </div>
+        {scenes?.[panel.slug]?.length ? (
+          // Keyed by suburb so the rotation restarts from the first pocket
+          // when the reader switches tabs.
+          <AutoScene key={panel.slug} scenes={scenes[panel.slug]} tone="dark" stacked />
+        ) : (
+          <div className="relative aspect-[11/8] overflow-hidden rounded-xl">
+            {panels.map((p, i) => (
+              <Image
+                key={p.slug}
+                src={p.image}
+                alt={tr(locale, "Property in {name}").replace("{name}", p.name)}
+                fill
+                sizes="(min-width: 768px) 45vw, 100vw"
+                className="object-cover transition-opacity duration-500"
+                style={{ opacity: i === active ? 1 : 0 }}
+                priority={i === 0}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
