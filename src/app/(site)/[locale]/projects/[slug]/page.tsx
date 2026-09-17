@@ -267,7 +267,24 @@ export default async function ProjectPage({
       {project.body && (
         <section className="py-16">
           <div className="mx-auto max-w-3xl px-6">
-            <PortableTextBody value={getLocalizedField(project.body, locale)} />
+            {(() => {
+              // The CMS holds some project bodies as plain text and others as
+              // rich text. Plain text handed to the rich text renderer shows
+              // nothing at all, so each shape gets its own path.
+              const bodyValue = getLocalizedField(project.body, locale) as unknown;
+              if (typeof bodyValue === "string") {
+                return bodyValue
+                  .split(/\n{2,}/)
+                  .map((para) => para.replace(/\s*[–—]\s*/g, ", ").trim())
+                  .filter(Boolean)
+                  .map((para, i) => (
+                    <p key={i} className={`text-[1.05rem] leading-relaxed text-ink/85 ${i > 0 ? "mt-5" : ""}`}>
+                      {para}
+                    </p>
+                  ));
+              }
+              return <PortableTextBody value={bodyValue as never} />;
+            })()}
           </div>
         </section>
       )}
