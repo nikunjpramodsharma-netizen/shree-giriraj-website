@@ -3,7 +3,8 @@ import { Spans } from "@/components/MarkdownBody";
 import { CountUp } from "@/components/motion/CountUp";
 import { InView } from "@/components/motion/InView";
 import { Parallax } from "@/components/motion/Parallax";
-import { LineIcon, pickIcon } from "@/components/motion/LineIcon";
+import { pickIcon } from "@/components/motion/LineIcon";
+import { BenefitDeck } from "@/components/motion/BenefitDeck";
 import { waLink } from "@/lib/config";
 import { tr } from "@/lib/copy-i18n";
 import type { Block, Inline } from "@/lib/markdown";
@@ -58,6 +59,20 @@ function split(blocks: Block[]): { lead: Block[]; sections: Section[]; note: Blo
   return { lead, sections, note };
 }
 
+/**
+ * The list under "what you get" arrives in pieces: the markdown is hard
+ * wrapped, so each bullet is its own one item list and its continuation lines
+ * are paragraphs after it. This puts every bullet back together.
+ */
+function mergeItems(blocks: Block[]): Inline[][] {
+  const items: Inline[][] = [];
+  for (const b of blocks) {
+    if (b.t === "ul") items.push(...b.items.map((it) => [...it]));
+    else if (b.t === "p" && items.length > 0) items[items.length - 1].push({ t: "text", v: " " }, ...b.spans);
+  }
+  return items;
+}
+
 function plain(spans: Inline[]): string {
   return spans.map((s) => ("v" in s ? s.v : "")).join("");
 }
@@ -100,7 +115,7 @@ export function ServiceScenes({
 
       {/* WHAT YOU GET: a cascade of cards */}
       {cards && (
-        <section className="bg-paper-alt py-16 md:py-20">
+        <section className="bg-paper-alt py-14 md:py-16">
           <div className="wrap">
             <InView className="cascade">
               <div style={{ ["--i" as string]: 0 }} className="eyebrow">{t("What you get")}</div>
@@ -108,33 +123,22 @@ export function ServiceScenes({
                 {cards.heading}
               </h2>
             </InView>
-            {cards.blocks.map((b, bi) =>
-              b.t === "ul" ? (
-                <InView key={bi} as="ul" className="cascade mt-9 grid gap-4 md:grid-cols-2 lg:grid-cols-3" threshold={0.15}>
-                  {b.items.map((it, i) => {
-                    const text = plain(it);
-                    return (
-                      <li
-                        key={i}
-                        style={{ ["--i" as string]: i }}
-                        className="group rounded-2xl border border-line bg-white p-6 transition duration-500 hover:-translate-y-1 hover:shadow-xl"
-                      >
-                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-indigo text-brass-bright">
-                          <LineIcon name={pickIcon(text)} />
-                        </div>
-                        <p className="mt-4 text-[0.98rem] leading-relaxed text-ink/85">
-                          <Spans spans={it} />
-                        </p>
-                      </li>
-                    );
-                  })}
-                </InView>
-              ) : b.t === "p" ? (
-                <p key={bi} className="mt-6 max-w-[62ch] text-ink/80">
-                  <Spans spans={b.spans} />
-                </p>
-              ) : null,
-            )}
+            <BenefitDeck
+              items={mergeItems(cards.blocks).map((it) => {
+                const text = plain(it);
+                // A bold lead is the title and the rest is the detail. With no
+                // bold lead the first clause stands in, and the whole line stays.
+                const lead = it[0]?.t === "bold" ? it[0].v : null;
+                const title = (lead ?? text.split(/[,.;:]/)[0].split(" ").slice(0, 7).join(" ")).replace(/[.,:;]+$/, "");
+                const rest = lead ? it.slice(1) : it;
+                const first = rest[0];
+                const body =
+                  lead && first && first.t === "text"
+                    ? [{ ...first, v: first.v.replace(/^[\s,.:;]+/, "").replace(/^./, (c) => c.toUpperCase()) }, ...rest.slice(1)]
+                    : rest;
+                return { title, icon: pickIcon(text), body: <Spans spans={body} /> };
+              })}
+            />
           </div>
         </section>
       )}

@@ -53,16 +53,16 @@ worth having. Thirty years of walking these buildings is what you are hiring.
 
 ## What you get
 
-- A reading of the micro market you are considering, pocket by pocket, so
+- **The pocket, read for you.** A reading of the micro market you are considering, pocket by pocket, so
   you know why two buildings at the same rate behave differently
-- An assessment of the specific building on the things that hold resale
+- **The building, assessed.** An assessment of the specific building on the things that hold resale
   value: age, society, conveyance, water, parking, and the lane itself
-- The rent the flat can realistically command today, and what that is as a
+- **The realistic rent.** The rent the flat can realistically command today, and what that is as a
   yield on the price being asked, worked on the real property rather than
   quoted for the suburb
-- Title, encumbrance and society paperwork checked before money moves
-- Negotiation, documentation and registration handled end to end
-- A straight answer. If a particular flat does not stack up, we say so and
+- **Paperwork checked first.** Title, encumbrance and society paperwork checked before money moves
+- **Handled end to end.** Negotiation, documentation and registration handled end to end
+- **A straight answer.** If a particular flat does not stack up, we say so and
   find you one that does
 
 ## Is real estate a good investment in Mumbai?
@@ -132,9 +132,9 @@ trade is what we bring.
 - **Showrooms and larger frontage units** on the main trading roads
 - **Plots**, on the occasions a genuine one exists, for investors and small
   builders
-- The approved use, the society's commercial rules and the title confirmed
+- **Use and title confirmed.** The approved use, the society's commercial rules and the title confirmed
   before you commit, so the unit you take is the unit you can trade from
-- Leave and licence or sale deed negotiated and taken through registration
+- **Negotiated and registered.** Leave and licence or sale deed negotiated and taken through registration
 
 ## Shop for rent in Borivali West, Kandivali West or Malad West
 

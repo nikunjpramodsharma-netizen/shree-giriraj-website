@@ -611,3 +611,9 @@
    on a dark banner hands that room to the banner instead (see Nav.tsx). */
 main { padding-top: 72px; }
 html[data-nav-over] main { padding-top: 0; }
+
+/* Benefit deck: the bar that fills under the lit title, and its icon drawing. */
+.deck-bar { width: 0; animation: deck-bar linear forwards; }
+@keyframes deck-bar { to { width: 100%; } }
+.deck-draw path { animation: li-draw 1s ease 0.1s forwards; }
+@media (prefers-reduced-motion: reduce) { .deck-bar { display: none; } .deck-draw path { animation: none; stroke-dashoffset: 0; } }
