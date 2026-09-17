@@ -6,12 +6,15 @@ import { client } from "@/sanity/client";
 import { urlFor } from "@/sanity/image";
 import {
   featuredProjectsGridQuery,
+  allProjectsCarouselQuery,
   faqsQuery,
 } from "@/sanity/queries";
 import { site, waLink } from "@/lib/config";
 import { HeroRotator, type HeroSlide, type HeroOpener } from "@/components/HeroRotator";
 import { ChecksAccordion } from "@/components/ChecksAccordion";
 import { AreaSwitcher } from "@/components/AreaSwitcher";
+import { ProjectCarousel } from "@/components/ProjectCarousel";
+import { projectFallback } from "@/lib/project-images";
 import { AREAS } from "@/lib/areas";
 import { SituationTool } from "@/components/SituationTool";
 import { ServiceTrack } from "@/components/ServiceTrack";
@@ -305,6 +308,9 @@ export default async function HomePage({
 
   // One project reads as chosen. A grid reads as a shelf, which is the thing
   // we are deliberately not. Prefer the flagship, fall back to the first.
+  const carouselProjects = await client
+    .fetch<(GridProject & { summary?: Partial<Record<"en" | "hi" | "mr" | "gu", string>> })[]>(allProjectsCarouselQuery)
+    .catch(() => [] as (GridProject & { summary?: Partial<Record<"en" | "hi" | "mr" | "gu", string>> })[]);
   const featured =
     projects?.find((p) => p.slug?.current === "jaswanti-jewel") ?? projects?.[0];
 
@@ -559,91 +565,35 @@ export default async function HomePage({
           <AreaSwitcher
             panels={areaPanels}
             locale={locale}
-            scenes={
-              locale === "en"
-                ? Object.fromEntries(
-                    AREAS.map((a) => {
-                      // The pocket text rotates here as it does on the suburb's own
-                      // page, but over this panel's own photograph, so no picture
-                      // appears on two pages.
-                      const panel = areaPanels.find((p) => p.slug === a.slug);
-                      const image = panel ? { src: panel.image, alt: `Homes in ${panel.name}` } : undefined;
-                      return [a.slug, a.motion.pocketScenes.map((sc) => ({ ...sc, image }))];
-                    }),
-                  )
-                : undefined
-            }
+            // The same rotating pocket cards, with their own pictures, that each
+            // suburb's page carries. The owner asked for exactly these here.
+            scenes={locale === "en" ? Object.fromEntries(AREAS.map((a) => [a.slug, a.motion.pocketScenes])) : undefined}
           />
         </div>
       </section>
 
-      {/* 07 FEATURED PROJECT */}
-      {featured && (
-        <section className="relative overflow-hidden bg-brand-indigo-deep text-paper">
-          <div className="absolute inset-0">
-            <Image
-              src={
-                featured.coverImage
-                  ? urlFor(featured.coverImage).width(1600).height(1120).url()
-                  : "/premium/u/complex-05.jpg"
-              }
-              alt=""
-              fill
-              sizes="100vw"
-              className="object-cover opacity-40"
-            />
-          </div>
-          <div className="wrap relative py-24">
-            <Reveal className="max-w-3xl">
-              <span className="inline-block rounded-sm bg-brass px-3 py-1.5 text-[0.6rem] font-bold uppercase tracking-[0.14em] text-brand-indigo-deep">
-                {tProjectsGrid("eyebrow")}
-              </span>
-              <h2 className="mt-4 text-3xl text-white md:text-5xl">{featured.name}</h2>
-              {featured.location && (
-                <p className="mt-2 text-paper/70">{featured.location}</p>
-              )}
-
-              {featured.configurations && featured.configurations.length > 0 && (
-                <div className="mt-7 grid max-w-2xl grid-cols-2 gap-2.5 md:grid-cols-4">
-                  {featured.configurations.slice(0, 4).map((c, i) => (
-                    <div
-                      key={`${c.type}-${i}`}
-                      className="rounded-lg border border-brass/25 bg-white/5 p-3.5"
-                    >
-                      <div className="text-[0.62rem] uppercase tracking-[0.12em] text-brass-bright">
-                        {c.type?.replace(/\s*[–—]\s*/g, " to ")}
-                      </div>
-                      {c.displayPrice && (
-                        <div className="mt-1 font-display text-base text-white">
-                          {c.displayPrice}
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              <p className="mt-6 max-w-[52ch] text-[0.84rem] text-paper/50">
-                {t(
-                  "Exact all inclusive pricing and floor availability shared on request. Every figure is verified against the builder sheet before it goes out.",
-                )}
-              </p>
-
-              <div className="mt-6 flex flex-wrap gap-3.5">
-                <Link prefetch={false}
-                  href={`/projects/${featured.slug.current}`}
-                  className="btn btn-brass"
-                >
-                  {t("See the project")}
-                </Link>
-                <Link prefetch={false} href="/projects" className="btn btn-outline border-paper/40 text-paper">
-                  {tProjectsGrid("viewAll")}
-                </Link>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-      )}
+      {/* 07 PROJECTS. Every project in turn, two seconds each, pausing under a
+          cursor. A project only appears in a language it has a page in. */}
+      <ProjectCarousel
+        slides={(carouselProjects ?? [])
+          .filter((p) => p.slug?.current && (locale === "en" || Boolean(p.summary?.[locale as "hi" | "mr" | "gu"])))
+          .map((p) => ({
+            slug: p.slug.current,
+            name: p.name,
+            location: p.location,
+            image: p.coverImage ? urlFor(p.coverImage).width(1600).height(1120).url() : projectFallback(p.slug.current),
+            configs: (p.configurations ?? []).map((c) => ({
+              type: (c.type ?? "").replace(/\s*[\u2013\u2014]\s*/g, " to "),
+              price: c.displayPrice,
+            })),
+          }))}
+        labels={{
+          eyebrow: tProjectsGrid("eyebrow"),
+          note: t("Exact all inclusive pricing and floor availability shared on request. Every figure is verified against the builder sheet before it goes out."),
+          see: t("See the project"),
+          viewAll: tProjectsGrid("viewAll"),
+        }}
+      />
 
       {/* FAQ */}
       <Reveal>

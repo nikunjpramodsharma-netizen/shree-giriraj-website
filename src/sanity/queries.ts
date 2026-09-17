@@ -174,3 +174,16 @@ export const relatedPostsQuery = groq`{
       "categories": categories[]->title
     }
 }`;
+
+/** Every project for the homepage carousel, featured first, then by order. */
+export const allProjectsCarouselQuery = groq`
+  *[_type == "project"] | order(featured desc, order asc) {
+    _id,
+    name,
+    slug,
+    location,
+    coverImage,
+    configurations,
+    summary
+  }
+`;

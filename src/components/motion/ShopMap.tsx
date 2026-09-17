@@ -1,7 +1,7 @@
 import { InView } from "@/components/motion/InView";
 
 /**
- * Where the shop is, drawn the way we would draw it for a caller: Link Road
+ * Where the office is, drawn the way we would draw it for a caller: Link Road
  * running north to south, Shimpoli Road coming in from S.V. Road, the
  * Shimpoli metro at the corner, the station a little way east, and the pin
  * dropping onto the Chikoowadi shopping complex once the block is in view.
@@ -11,10 +11,10 @@ export function ShopMap({ mapsUrl }: { mapsUrl: string }) {
   return (
     <InView className="sm-map mt-8 overflow-hidden rounded-2xl border border-line bg-white" threshold={0.3}>
       <div className="flex flex-wrap items-baseline justify-between gap-2 px-5 pt-4">
-        <div className="eyebrow">Finding the shop</div>
+        <div className="eyebrow">Finding the office</div>
         <div className="text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-muted">Schematic, not to scale</div>
       </div>
-      <svg viewBox="0 0 640 360" className="block w-full" role="img" aria-label="A schematic showing the shop on Link Road in Chikoowadi, near the Shimpoli metro station, west of Borivali station">
+      <svg viewBox="0 0 640 360" className="block w-full" role="img" aria-label="A schematic showing the office on Link Road in Chikoowadi, near the Shimpoli metro station, west of Borivali station">
         {/* Link Road, vertical */}
         <line x1="180" y1="10" x2="180" y2="350" className="lm-road" pathLength={1} stroke="#c9ced8" strokeWidth="10" strokeLinecap="round" />
         <text x="192" y="30" className="lm-label lm-fade" fill="#7a8290">New Link Road</text>

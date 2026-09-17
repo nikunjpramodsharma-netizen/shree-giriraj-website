@@ -211,7 +211,7 @@ export function LitMap({
                     {text}
                   </text>
                   {p.here && (
-                    <text x="0" y="-22" textAnchor="middle" className="lm-t-here" fill={GOLD}>OUR SHOP</text>
+                    <text x="0" y="-22" textAnchor="middle" className="lm-t-here" fill={GOLD}>OUR OFFICE</text>
                   )}
                 </g>
               </g>

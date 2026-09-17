@@ -14,7 +14,9 @@ import { RentalYieldCalculator } from "@/components/RentalYieldCalculator";
 import { PropertyTaxCalculator } from "@/components/PropertyTaxCalculator";
 import { graph, breadcrumbNode, faqNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
+import Image from "next/image";
 import { TOOLS, getTool } from "@/lib/tools";
+import { TOOL_IMAGES } from "@/lib/tool-images";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { interlinksForTool } from "@/lib/interlinks";
 
@@ -71,8 +73,30 @@ export default function ToolPage({
         )}
       />
 
-      <header className="bg-brand-indigo-deep text-paper">
-        <div className="wrap py-12 md:py-16">
+      <header className="relative overflow-hidden bg-brand-indigo-deep text-paper">
+        {/* The tool's own picture, on the right and fading into the navy, so the
+            heading stays fully legible on the left. */}
+        {TOOL_IMAGES[tool.slug] && (
+          <div
+            aria-hidden="true"
+            className="absolute inset-y-0 right-0 hidden w-[58%] overflow-hidden md:block"
+            style={{
+              // The picture fades in from nothing, so there is no edge where it begins.
+              WebkitMaskImage: "linear-gradient(90deg, transparent 0%, rgba(0,0,0,.55) 38%, black 72%)",
+              maskImage: "linear-gradient(90deg, transparent 0%, rgba(0,0,0,.55) 38%, black 72%)",
+            }}
+          >
+            <Image
+              src={TOOL_IMAGES[tool.slug].src}
+              alt=""
+              fill
+              priority
+              sizes="(min-width: 768px) 58vw, 0px"
+              className="object-cover opacity-60"
+            />
+          </div>
+        )}
+        <div className="wrap relative py-12 md:py-16">
           <Breadcrumbs trail={trail} tone="dark" />
           <div className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-brass-bright">
             Free tool

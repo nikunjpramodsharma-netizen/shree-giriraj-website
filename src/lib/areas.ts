@@ -162,7 +162,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       ],
       pocketsNote: "Midpoints of asking rate ranges per square foot, NoBroker, May 2026. Asking is not the registered price.",
       pocketScenes: [
-        { kicker: "West · the shop's own pocket", title: "Chikoowadi", text: "Older cooperative societies alongside newer towers, near the Shimpoli metro and a little further from the station. Quiet, established, and the pocket we know best.", image: { src: "/premium/u/complex-04.jpg", alt: "A marble entrance hall with a chandelier and a curved stair" } },
+        { kicker: "West · our own pocket", title: "Chikoowadi", text: "Older cooperative societies alongside newer towers, near the Shimpoli metro and a little further from the station. Quiet, established, and the pocket we know best.", image: { src: "/premium/u/complex-04.jpg", alt: "A marble entrance hall with a chandelier and a curved stair" } },
         { kicker: "West · East Indian heart", title: "I.C. Colony", text: "A parish from 1547, Mount Poinsur, St. Francis school, the Mandapeshwar caves, and a Christmas market on Brother Cyprian Street. Prices vary more by building age here than anywhere in Borivali.", image: { src: "/premium/u/tower-11.jpg", alt: "A grand tower in a classical style against a dramatic sky" } },
         { kicker: "West · the station belt", title: "L.T. Road and Chandavarkar Road", text: "The old commercial heart: the municipal market, the shopping lanes, Veer Savarkar Udyan's 1.5 kilometre track, and a MHADA colony by the Borivali West metro.", image: { src: "/premium/metro-elevated.jpg", alt: "A modern train arriving on elevated tracks" } },
         { kicker: "East · against the forest", title: "Kulupwadi and Dattapada Road", text: "Ten minutes from the national park gate, Raheja Estate's societies, and Oberoi Sky City rising on 25 acres with possession declared for December 2027.", image: { src: "/premium/u/tower-01.jpg", alt: "The city skyline lit at night across still water" } },
@@ -184,7 +184,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
     answer:
       "Borivali is two markets at one price. The station belt is older, denser and better connected; the Link Road side is newer and quieter. Asking rates in the West cluster around 30,000 to 31,300 rupees per square foot and in the East around 32,000 to 34,750, with a wide spread inside each by pocket and by the age of the building. Choose the pocket for how you actually live, and the building for how it is run, and Borivali is one of the most liveable addresses in the western suburbs.",
     intro: [
-      "We have worked Borivali since 1996 and from the shop in Chikoowadi since 2005. What follows is the Borivali we actually walk, pocket by pocket, with every figure dated so you know how fresh it is. For a specific building, ask us. That is the part no page can do.",
+      "We have worked Borivali since 1996 and from our office in Chikoowadi since 2005. What follows is the Borivali we actually walk, pocket by pocket, with every figure dated so you know how fresh it is. For a specific building, ask us. That is the part no page can do.",
     ],
     sections: [
       {
@@ -264,6 +264,10 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       {
         q: "Which are the well known schools and hospitals in Borivali?",
         a: "St. Francis D'Assisi High School at Mount Poinsur, founded in 1908, is one of the largest in the state; St. Francis Institute of Technology is in I.C. Colony; Don Bosco, Rustomjee Cambridge and Ryan also have Borivali campuses. Hospitals include the BMC's Bhagwati Hospital in the West, being rebuilt to more than 370 beds, Karuna Hospital in Jeevan Bima Nagar and Apex Hospital on Chandavarkar Road.",
+      },
+      {
+        q: "What should I check before buying in an older Borivali building?",
+        a: "Water pressure on the upper floors in the morning, the parking the society will allot in writing, the society's no objection before a price is agreed, carpet area as RERA defines it, and the stage any redevelopment has really reached, because that changes what the flat is worth. Send us the building's name and we will tell you what we know about it.",
       },
     ],
     sources: [
@@ -428,6 +432,10 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
         q: "Does the floor make much difference to price in a new tower?",
         a: "Yes, often more than a small difference in carpet area does. Higher floors carry a floor rise and a different view and light. We show you what your specific floor looks out on rather than the sample flat, and read the RERA registration with you before you book.",
       },
+      {
+        q: "How do you help with a new launch in Kandivali?",
+        a: "We check the drawing against the sanctioned plan and the promise against the MahaRERA registration, which carries the declared possession date. Then we take you to the floor band you are considering, because in a tall tower the floor moves the price more than the carpet area does.",
+      },
     ],
     sources: [
       { label: "Wikipedia, Kandivali: origins, name, pockets and roads", url: "https://en.wikipedia.org/wiki/Kandivali" },
@@ -591,6 +599,10 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       {
         q: "How is Malad East different from Malad West?",
         a: "The East is smaller, denser near the station and newer along the highway, with Rani Sati Marg as its spine and Metro Line 7 at Kurar and Dindoshi. It is more Marwari in character and a little cheaper. The West has the offices, the malls, the beaches, Orlem and Metro Line 2A.",
+      },
+      {
+        q: "What do you check before I buy a flat to let out in Malad?",
+        a: "Who the realistic tenant is and what they pay, then the net figure after society charges, property tax and a month of vacancy at tenant changes. We also check what a tenant will ask about: water timing, parking, the society's rules on tenants, and the walk to the office or the metro.",
       },
     ],
     sources: [

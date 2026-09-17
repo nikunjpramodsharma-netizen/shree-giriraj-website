@@ -158,7 +158,7 @@ export default function ContactPage({
                 <OpenNow opens={site.hours.opens} closes={site.hours.closes} />
               </div>
               <p className="mt-2 text-ink">
-                {site.hours.label}. Walk in, call, or WhatsApp; a message sent
+                {site.hours.label}. Visit, call, or WhatsApp; a message sent
                 after hours is answered first thing the next morning.
               </p>
             </div>

@@ -135,13 +135,12 @@ export default function AboutPage({
           <h1 className="mt-4 max-w-[17ch] text-4xl leading-[1.05] text-white md:text-6xl">
             In real estate since {site.established}.{" "}
             <span className="text-brass-bright">
-              In the same shop since {site.officeSince}.
+              At the same office since {site.officeSince}.
             </span>
           </h1>
           <p className="mt-7 max-w-[54ch] text-lg text-paper/80">
             A family run agency in Borivali West, working{" "}
-            {site.areas.join(", ")}. We would rather know three suburbs properly
-            than claim to cover the city.
+            {site.areas.join(", ")}. Three suburbs, known building by building.
           </p>
           <div className="about-legend mt-12">
             <span>{site.established}</span>
@@ -176,7 +175,7 @@ export default function AboutPage({
               <h2 className="mt-3 text-3xl leading-tight text-ink md:text-5xl">
                 Founded the firm in {site.established}.{" "}
                 <span className="text-brand-blue">
-                  Still runs it from the shop.
+                  Still leads it every day.
                 </span>
               </h2>
               <p className="mt-4 max-w-[58ch] text-lg text-ink/70">
@@ -220,10 +219,10 @@ export default function AboutPage({
               <Reveal>
                 <p className="fw-open">
                   {FOUNDER.name} has worked these suburbs since{" "}
-                  {site.established}, and out of the same shop in Chikoowadi
-                  since {site.officeSince}. That is long enough to have sold
-                  flats in the same building twice, and to know why the second
-                  sale was harder than the first.
+                  {site.established}, and from the same office in Chikoowadi
+                  since {site.officeSince}. That is long enough to have helped
+                  many of the same families more than once, and to know these
+                  buildings from the inside.
                 </p>
               </Reveal>
 
@@ -269,7 +268,7 @@ export default function AboutPage({
                   <CountUp value={new Date().getFullYear() - Number(site.established)} suffix=" years" duration={2200} />
                 </div>
                 <div className="text-sm text-muted">
-                  in these suburbs, counted from {site.established}. {new Date().getFullYear() - Number(site.officeSince)} of them from the shop in Chikoowadi.
+                  in these suburbs, counted from {site.established}. {new Date().getFullYear() - Number(site.officeSince)} of them from the office in Chikoowadi.
                 </div>
               </div>
             </div>

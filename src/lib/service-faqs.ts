@@ -53,6 +53,10 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
       q: "Which is the better side of Borivali West to buy in?",
       a: "The station belt and the Link Road side are two different markets at about the same price, and it is easy to pay one side's price for the other. The station side is older stock and a shorter walk to the train; the Link Road side is newer buildings and a longer commute. Which is better depends on who is living there and how they travel, and that is the first thing we ask.",
     },
+    {
+      q: "Can you sell my flat as well as help me buy one?",
+      a: "Yes. Most of our sellers are owners in buildings we already know. We check that the paperwork is in order before the flat is shown, so a buyer's bank and lawyer find nothing to pause over, and we stay with the sale through negotiation, agreement, registration and the society transfer.",
+    },
   ],
 
   rentals: [
@@ -77,6 +81,10 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
     {
       q: "I own a flat here. What does listing it with you involve?",
       a: "A verified tenant, a registered agreement, and no vacant months waiting on portal enquiries that go nowhere. You tell us the rent and the move in date; we bring tenants we have met and documents we have checked, and we handle the agreement through registration.",
+    },
+    {
+      q: "Do I pay anything before I find a flat?",
+      a: "No. There is nothing to pay until your tenancy actually completes. Tell us the budget and the move in date, and we show you only flats where the owner is verified and the society will register you.",
     },
   ],
 
@@ -105,6 +113,10 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
       q: "How does early access actually work?",
       a: "Developers open floor plans and launch pricing to agents they know before the public launch, and we pass that on to clients who have told us their budget and suburb. It means choosing from the full inventory rather than what is left. It does not mean pressure: the RERA checks above apply to a launch just as much as to a resale.",
     },
+    {
+      q: "Is the sample flat a fair guide to the flat I will get?",
+      a: "It shows the finish and the layout, which is useful. What it cannot show is your floor, your view and your carpet area as the law defines it. We take you to the floor band you are considering, read the carpet area on the MahaRERA page with you, and compare the two before you book.",
+    },
   ],
 
   "investment-advisory": [
@@ -130,6 +142,10 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
       q: "Should an investor buy under construction or ready possession?",
       a: "They are different risks rather than one being better. Ready possession earns rent immediately and you can see exactly what you are buying. Under construction ties up capital with no income until handover and carries delivery risk, which is why the MahaRERA registration and the developer's completion record matter more than the brochure.",
     },
+    {
+      q: "Will you tell me if a flat is not worth buying?",
+      a: "Yes, and plainly. The advice is only useful if it can say no. We work out the rent the flat can realistically earn and what that is on the price being asked, check the building and the paperwork, and if it does not add up we say so and help you find one that does.",
+    },
   ],
   "commercial-plots": [
     {
@@ -153,6 +169,10 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
     {
       q: "Are there actually plots for sale in Borivali, Kandivali or Malad?",
       a: "Rarely, and rarely small. Most of what is called a plot in these suburbs is an old bungalow plot, a society plot heading for redevelopment, or land with a development potential that depends on its reservation in the development plan. We will tell you what genuinely exists at any given time rather than list something that does not.",
+    },
+    {
+      q: "What do you check before I take a shop or an office?",
+      a: "Three things before anything else: that the use you have in mind is approved for the premises, what the society's own rules say about commercial use and signage, and that the title is clear. Only then do we negotiate, and we take the leave and licence or the sale deed through registration with you.",
     },
   ],
   "mhada-paperwork": [
@@ -180,6 +200,10 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
       q: "What is a MHADA NOC?",
       a: "A no objection certificate from the Board for a specific act: selling the flat, letting it, or mortgaging it to a lender. Each is a separate application to the Estate Manager with its own documents. A lender will not sanction a loan on a MHADA flat without the mortgage NOC, and a sale or tenancy without the relevant one puts the allotment at risk.",
     },
+    {
+      q: "Which MHADA paperwork do you handle?",
+      a: "Transfer of tenement, the no objection certificates for sale, for leave and licence and for a mortgage, transfer on the death of the original allottee, regularisation where a flat changed hands without the Board's permission, and the society's lease and conveyance papers. Tell us what you hold and we will tell you which of these you need.",
+    },
   ],
   interiors: [
     {
@@ -203,6 +227,12 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
     {
       q: "What is the 70/30 rule in interior design?",
       a: "A designer's rule of thumb, not a regulation: keep about 70 percent of a room in one dominant style or a neutral palette and use the other 30 percent for accent, colour and contrast. It is a way of stopping a flat from looking like a showroom of everything at once. It says nothing about cost, which is the question that actually matters.",
+    },
+    {
+      q: "Can I see what needs doing before I ask for a quote?",
+      a: "Yes. Our interior scope builder lets you go room by room and note what you want done, so the estimate you receive is for the right job. We then walk through the flat with you and give an itemised estimate before any work begins.",
+      href: "/tools/interior-scope-builder",
+      hrefLabel: "Open the interior scope builder",
     },
   ],
 };
