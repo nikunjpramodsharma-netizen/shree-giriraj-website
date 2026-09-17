@@ -20,6 +20,19 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { graph, residenceNode, breadcrumbNode } from "@/lib/schema";
 
+/**
+ * A project with no cover of its own still opens on a photograph, and each
+ * gets a different one so no picture appears on two pages. The real cover
+ * replaces it the moment one is uploaded.
+ */
+const PROJECT_FALLBACK: Record<string, string> = {
+  "the-landmark-borivali-west": "/premium/p/p1.jpg",
+  "veena-celestia": "/premium/p/p3.jpg",
+  "luxury-living-punit-nagar": "/premium/p/p4.jpg",
+  "blissful-living": "/premium/p/p5.jpg",
+  "jaswanti-jewel": "/premium/p/p7.jpg",
+};
+
 export const revalidate = 60;
 
 type LocaleIndexRow = { slug: string; locales: Locale[] };
@@ -147,7 +160,7 @@ export default async function ProjectPage({
               src={
                 project.coverImage
                   ? urlFor(project.coverImage).width(2000).height(1200).url()
-                  : "/architecture-facade-2.jpg"
+                  : PROJECT_FALLBACK[params.slug] ?? "/premium/p/p6.jpg"
               }
               alt={
                 project.coverImage?.alt ||

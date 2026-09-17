@@ -54,7 +54,7 @@ export default function GuidesIndex({
 
       <header className="relative overflow-hidden bg-brand-indigo-deep text-paper">
         <Image
-          src="/architecture-facade-2.jpg"
+          src="/premium/u/paperwork-06.jpg"
           alt="A residential building facade"
           fill
           priority

@@ -97,7 +97,7 @@ export default function AreasIndex({
                   {panel && (
                     <div className="relative aspect-[4/3]">
                       <Image
-                        src={panel.image}
+                        src={a.hero?.src ?? panel.image}
                         alt={`${a.longName}, Mumbai`}
                         fill
                         sizes="(min-width: 768px) 33vw, 100vw"

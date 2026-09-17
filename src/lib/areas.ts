@@ -289,8 +289,8 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
     metaDescription:
       "Kandivali West and East, pocket by pocket: Mahavir Nagar, Charkop's sectors, Dahanukarwadi, Thakur Village, Lokhandwala and Akurli Road, with 2026 asking rates, the two metro lines, and how to buy a new launch here well.",
     hero: {
-      src: "/areas/kandivali-aerial.jpg",
-      alt: "An aerial panorama of Mumbai with towers rising among dense residential blocks",
+      src: "/premium/p/p8.jpg",
+      alt: "A white terraced apartment tower against a deep blue sky",
     },
     motion: {
       video: { src: "/areas/video/kandivali.mp4", poster: "/areas/video/kandivali-poster.jpg" },
