@@ -52,7 +52,6 @@ export function AutoScene({
   }, [paused, visible, scenes.length, interval]);
 
   const dark = tone === "dark";
-  const s = scenes[i];
 
   return (
     <div
@@ -63,9 +62,9 @@ export function AutoScene({
         setPaused(true);
         window.setTimeout(() => setPaused(false), 5000);
       }}
-      className={`overflow-hidden rounded-2xl border ${dark ? "border-white/10 bg-white/5" : "border-line bg-white"}`}
+      className={`h-full overflow-hidden rounded-2xl border ${dark ? "border-white/10 bg-white/5" : "border-line bg-white"}`}
     >
-      <div className={stacked ? "grid" : "grid md:grid-cols-[1.1fr_.9fr]"}>
+      <div className={stacked ? "grid h-full" : "grid h-full md:grid-cols-[1.1fr_.9fr]"}>
         <div className={stacked ? "relative aspect-[16/9]" : `relative ${aspect} md:aspect-auto md:min-h-[260px]`}>
           {scenes.map((sc, k) =>
             sc.image ? (
@@ -81,15 +80,25 @@ export function AutoScene({
             ) : null,
           )}
         </div>
-        <div className={`flex flex-col justify-between p-6 md:p-7 ${stacked ? "min-h-[15rem]" : ""}`}>
-          <div key={s.title} className="scene-in">
-            {s.kicker && (
-              <div className={`text-[0.62rem] font-bold uppercase tracking-[0.16em] ${dark ? "text-brass-bright" : "text-brass"}`}>
-                {s.kicker}
+        <div className={`flex flex-col justify-between p-6 md:p-7`}>
+          {/* Every scene's text sits in the same grid cell, so the card is
+              always as tall as its longest scene and never jumps as it turns. */}
+          <div className="grid">
+            {scenes.map((sc, k) => (
+              <div
+                key={sc.title}
+                aria-hidden={k !== i}
+                className={`col-start-1 row-start-1 ${k === i ? "scene-in" : "invisible"}`}
+              >
+                {sc.kicker && (
+                  <div className={`text-[0.62rem] font-bold uppercase tracking-[0.16em] ${dark ? "text-brass-bright" : "text-brass"}`}>
+                    {sc.kicker}
+                  </div>
+                )}
+                <h3 className={`mt-2 font-display text-xl ${dark ? "text-white" : "text-brand-indigo"} md:text-2xl`}>{sc.title}</h3>
+                <p className={`mt-3 text-[0.97rem] ${dark ? "text-paper/80" : "text-ink/80"}`}>{sc.text}</p>
               </div>
-            )}
-            <h3 className={`mt-2 font-display text-xl ${dark ? "text-white" : "text-brand-indigo"} md:text-2xl`}>{s.title}</h3>
-            <p className={`mt-3 text-[0.97rem] ${dark ? "text-paper/80" : "text-ink/80"}`}>{s.text}</p>
+            ))}
           </div>
           <div className="mt-6 flex items-center gap-2" role="tablist">
             {scenes.map((sc, k) => (

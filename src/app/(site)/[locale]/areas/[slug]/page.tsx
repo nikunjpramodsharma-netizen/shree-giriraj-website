@@ -228,7 +228,7 @@ export default async function AreaPage({
                   <RisingTower caption="A society of four floors becomes a tower on the same plot. The extra floors are what pays for the new flats; how they are shared is what the agreement is for." />
                 )}
                 {s.scene === "pockets" && (
-                  <div className="mt-10 grid gap-8 lg:grid-cols-[.9fr_1.1fr] lg:items-start">
+                  <div className="mt-10 grid gap-8 lg:grid-cols-[.9fr_1.1fr] lg:items-stretch">
                     <div className="rounded-2xl border border-line bg-white p-6">
                       <div className="eyebrow">Asking rates by pocket</div>
                       <div className="mt-5">
