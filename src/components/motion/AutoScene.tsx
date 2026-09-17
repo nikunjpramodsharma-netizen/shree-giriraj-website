@@ -12,14 +12,14 @@ export type Scene = {
 };
 
 /**
- * A panel that changes on its own every few seconds with a crossfade, and
- * pauses the moment the reader touches or hovers it. The dots beneath show
+ * A panel that changes on its own every two seconds with a crossfade. It
+ * never stops for a hovering cursor; a touch holds it for five seconds. The dots beneath show
  * where in the sequence it is; tapping one jumps there. Under reduced motion
  * it shows the first scene and the dots still work.
  */
 export function AutoScene({
   scenes,
-  interval = 6000,
+  interval = 2000,
   tone = "light",
   aspect = "aspect-[4/3]",
 }: {
@@ -54,9 +54,12 @@ export function AutoScene({
   return (
     <div
       ref={ref}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onTouchStart={() => setPaused(true)}
+      onTouchStart={() => {
+        // A touch holds the card for a few seconds so it can be read, then
+        // the rotation picks up again on its own.
+        setPaused(true);
+        window.setTimeout(() => setPaused(false), 5000);
+      }}
       className={`overflow-hidden rounded-2xl border ${dark ? "border-white/10 bg-white/5" : "border-line bg-white"}`}
     >
       <div className="grid md:grid-cols-[1.1fr_.9fr]">

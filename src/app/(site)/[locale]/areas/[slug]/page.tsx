@@ -263,7 +263,7 @@ export default async function AreaPage({
                 )}
                 {s.scene === "landmarks" && (
                   <div className="mt-10">
-                    <AutoScene scenes={area.motion.landmarks} interval={5500} />
+                    <AutoScene scenes={area.motion.landmarks} />
                   </div>
                 )}
                 {s.scene === "rents" && (
