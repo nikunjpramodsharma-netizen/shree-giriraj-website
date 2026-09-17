@@ -13,51 +13,12 @@ import type { Interlinks, LinkCard, LinkKind } from "@/lib/interlinks";
  * locale Link; a service card keeps the reader's language.
  */
 
-const KIND_LABEL: Record<LinkKind, string> = {
-  service: "Service",
-  area: "Suburb",
-  tool: "Free tool",
-  article: "Article",
-};
-
 const KIND_ICON: Record<LinkKind, IconName> = {
   service: "handshake",
   area: "building",
   tool: "rupee",
   article: "file",
 };
-
-function Card({ card, locale, index }: { card: LinkCard; locale: string; index: number }) {
-  const inner = (
-    <>
-      <div className="flex items-center gap-3">
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-indigo text-brass-bright transition-colors group-hover:bg-brass group-hover:text-brand-indigo">
-          <LineIcon name={KIND_ICON[card.kind]} className="h-5 w-5" />
-        </span>
-        <span className="text-[0.58rem] font-bold uppercase tracking-[0.18em] text-muted">
-          {tr(locale, KIND_LABEL[card.kind])}
-        </span>
-      </div>
-      <div className="mt-3 font-semibold leading-snug text-ink group-hover:text-brand-indigo">{card.title}</div>
-      {card.hook && <p className="mt-2 line-clamp-2 text-sm text-ink/70">{card.hook}</p>}
-      <span aria-hidden="true" className="mt-4 inline-block text-sm font-semibold text-brand-blue transition-transform group-hover:translate-x-1">
-        {tr(locale, "Open")} →
-      </span>
-    </>
-  );
-  const className =
-    "group flex h-full flex-col rounded-2xl border border-line bg-white p-5 transition duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-indigo/10";
-  const style = { ["--i" as string]: index };
-  return card.englishOnly ? (
-    <EnglishLink href={card.href} className={className} style={style}>
-      {inner}
-    </EnglishLink>
-  ) : (
-    <Link href={card.href} className={className} style={style}>
-      {inner}
-    </Link>
-  );
-}
 
 export function RelatedLinks({
   links,
@@ -72,56 +33,47 @@ export function RelatedLinks({
   tone?: "light" | "alt";
 }) {
   const t = (s: string) => tr(locale, s);
-  // One row of cards for the things a reader acts on (tools, services), and
-  // two slim lists for the things they read (suburbs, articles). Four full
-  // lanes of cards made every page a screen and a half longer.
-  const cards = [...links.tools.slice(0, 2), ...links.services.slice(0, 2)];
-  const lists: { label: string; items: LinkCard[] }[] = [
-    { label: "Where we do it", items: links.areas },
-    { label: "Read the long version", items: links.articles.slice(0, 3) },
-  ].filter((l) => l.items.length > 0);
-  if (cards.length === 0 && lists.length === 0) return null;
+  // Four short rows of link chips, one per kind of page. The band used to be
+  // a row of cards and two lists, most of a screen tall; every link is still
+  // here, in about a third of the height.
+  const rows: { label: string; kind: LinkKind; items: LinkCard[] }[] = [
+    { label: "Do the arithmetic", kind: "tool" as const, items: links.tools },
+    { label: "Where we do it", kind: "area" as const, items: links.areas },
+    { label: "The services that go with this", kind: "service" as const, items: links.services },
+    { label: "Read the long version", kind: "article" as const, items: links.articles.slice(0, 3) },
+  ].filter((r) => r.items.length > 0);
+  if (rows.length === 0) return null;
 
   return (
-    <section className={`py-14 md:py-16 ${tone === "alt" ? "bg-paper-alt" : ""}`}>
+    <section className={`py-10 md:py-12 ${tone === "alt" ? "bg-paper-alt" : ""}`}>
       <div className="wrap">
-        <InView className="cascade">
-          <div style={{ ["--i" as string]: 0 }} className="eyebrow">
-            {t("Keep going")}
-          </div>
-          <h2 style={{ ["--i" as string]: 1 }} className="mt-3 max-w-[30ch] text-2xl text-brand-indigo md:text-3xl">
-            {heading ?? t("Everything on this site connects to this page")}
-          </h2>
+        <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+          <div className="eyebrow">{t("Keep going")}</div>
+          <h2 className="text-lg font-semibold text-brand-indigo md:text-xl">{heading ?? t("Everything on this site connects to this page")}</h2>
+        </div>
+        <InView className="cascade mt-5 grid gap-x-10 gap-y-4 md:grid-cols-2" threshold={0.1}>
+          {rows.map((r, ri) => (
+            <div key={r.label} style={{ ["--i" as string]: ri }} className="flex flex-wrap items-center gap-2">
+              <span className="flex w-full items-center gap-2 text-[0.62rem] font-bold uppercase tracking-[0.16em] text-brass">
+                <LineIcon name={KIND_ICON[r.kind]} className="h-4 w-4" />
+                {t(r.label)}
+              </span>
+              {r.items.map((c) => {
+                const cls =
+                  "rounded-full border border-line bg-white px-3.5 py-1.5 text-sm font-medium text-ink transition hover:-translate-y-0.5 hover:border-brand-indigo hover:text-brand-indigo";
+                return c.englishOnly ? (
+                  <EnglishLink key={c.href} prefetch={false} href={c.href} title={c.hook} className={cls}>
+                    {c.title}
+                  </EnglishLink>
+                ) : (
+                  <Link key={c.href} prefetch={false} href={c.href} title={c.hook} className={cls}>
+                    {c.title}
+                  </Link>
+                );
+              })}
+            </div>
+          ))}
         </InView>
-        {cards.length > 0 && (
-          <InView className="cascade mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" threshold={0.1}>
-            {cards.map((c, i) => (
-              <Card key={c.href} card={c} locale={locale} index={i} />
-            ))}
-          </InView>
-        )}
-        {lists.length > 0 && (
-          <InView className="cascade mt-8 grid gap-8 md:grid-cols-2" threshold={0.1}>
-            {lists.map((l, li) => (
-              <div key={l.label} style={{ ["--i" as string]: li }}>
-                <div className="mb-3 flex items-center gap-3">
-                  <span className="text-[0.62rem] font-bold uppercase tracking-[0.18em] text-brass">{t(l.label)}</span>
-                  <span aria-hidden="true" className="h-px flex-1 bg-line" />
-                </div>
-                <ul className="divide-y divide-line">
-                  {l.items.map((c) => (
-                    <li key={c.href}>
-                      <EnglishLink href={c.href} className="group flex items-baseline justify-between gap-4 py-2.5 text-[0.97rem] text-ink hover:text-brand-indigo">
-                        <span className="font-medium">{c.title}</span>
-                        <span aria-hidden="true" className="text-brand-blue transition-transform group-hover:translate-x-1">→</span>
-                      </EnglishLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </InView>
-        )}
       </div>
     </section>
   );

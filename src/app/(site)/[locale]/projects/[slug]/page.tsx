@@ -180,7 +180,7 @@ export default async function ProjectPage({
         )}
         <div className="wrap relative z-10 py-20 md:py-28">
           <div className="max-w-3xl">
-            <Link href="/projects" className="text-sm text-paper/60 hover:text-white">
+            <Link prefetch={false} href="/projects" className="text-sm text-paper/60 hover:text-white">
               {t("backLink")}
             </Link>
             <h1 className="mt-5 max-w-[20ch] text-4xl text-white md:text-6xl">{project.name}</h1>

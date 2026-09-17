@@ -400,7 +400,7 @@ export default async function PostPage({
                     ? urlFor(r.mainImage).width(760).height(490).url()
                     : rv.image;
                   return (
-                    <Link
+                    <Link prefetch={false}
                       key={r.slug}
                       href={`/blog/${r.slug}`}
                       className="group block overflow-hidden rounded-2xl border border-brand-indigo/10 bg-white transition hover:-translate-y-1 hover:shadow-xl"

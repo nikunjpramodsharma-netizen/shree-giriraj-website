@@ -294,7 +294,7 @@ export function MarkdownPost({
           <ul className="mt-6 grid gap-6 md:grid-cols-3">
             {related.map((r) => (
               <li key={r.slug}>
-                <Link
+                <Link prefetch={false}
                   href={`/blog/${r.slug}`}
                   className="group block h-full rounded-xl border border-line bg-paper p-5 transition-colors hover:bg-paper-alt"
                 >

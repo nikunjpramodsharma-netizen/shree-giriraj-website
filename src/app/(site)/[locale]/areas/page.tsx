@@ -90,7 +90,7 @@ export default function AreasIndex({
             const panel = getAreaPanel(a.slug);
             return (
               <li key={a.slug}>
-                <Link
+                <Link prefetch={false}
                   href={`/areas/${a.slug}`}
                   className="group block overflow-hidden rounded-xl border border-line bg-paper transition-colors hover:bg-paper-alt"
                 >

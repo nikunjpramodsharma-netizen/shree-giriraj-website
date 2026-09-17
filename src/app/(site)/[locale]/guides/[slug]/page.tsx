@@ -273,7 +273,7 @@ function SpokeCard({
   return (
     <li className="bg-paper">
       {published ? (
-        <Link
+        <Link prefetch={false}
           href={`/blog/${spoke.slug}`}
           className="group block h-full p-5 transition-colors hover:bg-paper-alt"
         >

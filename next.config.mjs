@@ -74,6 +74,14 @@ const nextConfig = {
     ];
   },
   images: {
+    // Optimised photographs were expiring after the default sixty seconds, so
+    // Vercel kept rebuilding them and pages stalled waiting. File names change
+    // when a picture changes, so a month is safe.
+    minimumCacheTTL: 60 * 60 * 24 * 31,
+    formats: ["image/webp"],
+    // Fewer widths means fewer variants to build the first time each is seen.
+    deviceSizes: [640, 828, 1200, 1920],
+    imageSizes: [96, 256, 384],
     remotePatterns: [
       {
         protocol: "https",

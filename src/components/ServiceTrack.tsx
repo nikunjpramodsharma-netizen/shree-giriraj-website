@@ -110,7 +110,7 @@ export function ServiceTrack({ panels, locale = "en" }: { panels: ServicePanel[]
                 <div className="overflow-hidden">
                   <b className="mb-1.5 block font-semibold text-brass-bright">{p.lead}</b>
                   <p className="text-[0.95rem] text-paper/80">{p.body}</p>
-                  <Link
+                  <Link prefetch={false}
                     href={`/services/${p.slug}`}
                     tabIndex={isOpen ? 0 : -1}
                     className="pointer-events-auto mt-3.5 inline-block text-sm font-semibold text-brass-bright underline decoration-brass/40 underline-offset-4"

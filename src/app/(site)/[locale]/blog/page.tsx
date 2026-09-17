@@ -131,7 +131,7 @@ export default async function BlogPage({
           {nothingAtAll && (
             <p className="text-muted">
               {t("englishOnly")}{" "}
-              <EnglishLink href="/blog" className="text-brand-blue underline">
+              <EnglishLink prefetch={false} href="/blog" className="text-brand-blue underline">
                 {t("readInEnglish")}
               </EnglishLink>
               .
@@ -150,7 +150,7 @@ export default async function BlogPage({
           {posts && posts.length > 0 && (
             <div className={`grid gap-8 md:grid-cols-2 lg:grid-cols-3 ${ready.length > 0 ? "mt-12" : ""}`}>
               {posts.map((post) => (
-                <Link
+                <Link prefetch={false}
                   key={post._id}
                   href={`/blog/${post.slug.current}`}
                   className="group flex flex-col overflow-hidden rounded-2xl border border-brand-indigo/10 bg-white transition hover:-translate-y-1 hover:shadow-xl"
@@ -202,7 +202,7 @@ export default async function BlogPage({
               <ul className="mt-6 grid gap-px overflow-hidden rounded-xl border border-line bg-line md:grid-cols-2">
                 {drafts.map((p) => (
                   <li key={p.slug} className="bg-paper">
-                    <Link
+                    <Link prefetch={false}
                       href={`/blog/${p.slug}`}
                       className="group flex h-full flex-col p-5 transition-colors hover:bg-paper-alt"
                     >

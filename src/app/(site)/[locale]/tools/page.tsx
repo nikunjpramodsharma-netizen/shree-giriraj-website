@@ -97,7 +97,7 @@ export default function ToolsIndex({
         <ul className="grid gap-6 md:grid-cols-2">
           {TOOLS.map((t) => (
             <li key={t.slug}>
-              <Link
+              <Link prefetch={false}
                 href={`/tools/${t.slug}`}
                 className="group block h-full rounded-xl border border-line bg-paper p-6 transition-colors hover:bg-paper-alt"
               >

@@ -102,7 +102,7 @@ export default async function ServicesIndexPage({
         <div className="wrap">
           <div className="grid gap-5 md:grid-cols-3">
             {SERVICES.map((s) => (
-              <Link
+              <Link prefetch={false}
                 key={s.slug}
                 href={`/services/${s.slug}`}
                 className="block rounded-2xl border border-brand-indigo/10 bg-white p-8 transition hover:-translate-y-1 hover:shadow-xl"

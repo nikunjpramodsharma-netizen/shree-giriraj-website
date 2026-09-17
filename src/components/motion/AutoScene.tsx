@@ -67,13 +67,16 @@ export function AutoScene({
       <div className={stacked ? "grid h-full" : "grid h-full md:grid-cols-[1.1fr_.9fr]"}>
         <div className={stacked ? "relative aspect-[16/9]" : `relative ${aspect} md:aspect-auto md:min-h-[260px]`}>
           {scenes.map((sc, k) =>
-            sc.image ? (
+            // Only the picture on show, the one before it (still fading out) and
+            // the one after it (ready for its turn) are in the page. The rest are
+            // fetched as the card turns, not all at once when it scrolls into view.
+            sc.image && (k === i || k === (i + 1) % scenes.length || k === (i - 1 + scenes.length) % scenes.length) ? (
               <Image
                 key={sc.title}
                 src={sc.image.src}
                 alt={k === i ? sc.image.alt : ""}
                 fill
-                sizes="(min-width: 768px) 45vw, 100vw"
+                sizes="(min-width: 1024px) 420px, (min-width: 768px) 45vw, 100vw"
                 className="object-cover transition-opacity duration-700"
                 style={{ opacity: k === i ? 1 : 0 }}
               />

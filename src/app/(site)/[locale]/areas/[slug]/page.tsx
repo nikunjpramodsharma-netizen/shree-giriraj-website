@@ -276,11 +276,11 @@ export default async function AreaPage({
           )}
         </div>
 
-        <section className="mt-16 max-w-[68ch]">
+        <section className="mt-14">
           <h2 className="text-2xl text-ink md:text-3xl">Common questions</h2>
-          <InView className="cascade mt-6 space-y-3" threshold={0.1}>
+          <InView className="cascade mt-6 grid items-start gap-3 md:grid-cols-2" threshold={0.1}>
             {area.faqs.map((f, i) => (
-              <details key={f.q} style={{ ["--i" as string]: i }} open={i === 0} className="group rounded-2xl border border-line bg-white p-5 open:shadow-sm">
+              <details key={f.q} style={{ ["--i" as string]: i }} className="group rounded-xl border border-line bg-white px-5 py-3.5 open:shadow-sm">
                 <summary className="cursor-pointer list-none font-medium text-brand-indigo marker:content-none">
                   <span className="flex items-center justify-between gap-4">
                     {f.q}

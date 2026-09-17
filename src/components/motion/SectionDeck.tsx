@@ -100,17 +100,19 @@ export function SectionDeck({ sections, interval = 9000 }: { sections: DeckSecti
           ))}
         </div>
         <div className="relative min-h-[220px] overflow-hidden rounded-2xl md:min-h-[320px]">
-          {sections.map((s, k) => (
+          {sections.map((s, k) =>
+            k === i || k === (i + 1) % sections.length || k === (i - 1 + sections.length) % sections.length ? (
             <Image
               key={s.id}
               src={s.image.src}
               alt={k === i ? s.image.alt : ""}
               fill
-              sizes="(min-width: 768px) 40vw, 100vw"
+              sizes="(min-width: 1024px) 480px, (min-width: 768px) 40vw, 100vw"
               className="object-cover transition-opacity duration-700"
               style={{ opacity: k === i ? 1 : 0 }}
             />
-          ))}
+            ) : null,
+          )}
         </div>
       </div>
     </div>

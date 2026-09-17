@@ -1,33 +1,19 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 /**
  * A short, silent, looping clip behind a page hero, with a still as the
  * fallback.
  *
- * WHY VIDEO
- *
- * The owner asked on 16 September 2026 for video on the service pages
- * because it reads as premium in a way a photograph does not. Each clip is
- * ten to twelve seconds of Pexels footage, transcoded to 720p at a low bit
- * rate with no audio track, so the largest is under three megabytes and most
- * are near one.
- *
- * WHY THE STILL MATTERS AS MUCH AS THE CLIP
- *
- * The poster is the first frame the visitor sees, it is what a slow
- * connection shows for the first second or two, and it is what stays when
- * the browser refuses autoplay or the visitor has asked for reduced motion.
- * So the poster is extracted from the clip itself and rendered through
- * next/image as a real element rather than only as the video's poster
- * attribute, which means it is sized, lazy loaded and cached like every
- * other image on the site. The video sits on top and fades in only once it
- * can actually play.
- *
- * REDUCED MOTION
- *
- * Under prefers-reduced-motion the video element is not rendered at all
- * (globals.css hides .hv-video), leaving the still. Motion on a hero is
- * decoration; nobody loses information when it is off.
+ * The still is the page. It renders at once through next/image, sized and
+ * cached like every other picture. The clip is decoration and is treated as
+ * such: it is not in the page at all until the page has finished loading and
+ * the browser is idle, and it never loads on a small screen, on a connection
+ * that reports itself slow or metered, or under reduced motion. That keeps
+ * one to three megabytes of video out of the way of everything the reader
+ * came for.
  */
 export function HeroVideo({
   src,
@@ -40,29 +26,51 @@ export function HeroVideo({
   alt: string;
   priority?: boolean;
 }) {
+  const [play, setPlay] = useState(false);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (window.innerWidth < 768) return;
+    const c = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
+    if (c?.saveData || (c?.effectiveType && /(^|-)2g|3g/.test(c.effectiveType))) return;
+
+    let idle = 0;
+    let timer = 0;
+    const start = () => {
+      const ric = (window as Window & { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number }).requestIdleCallback;
+      if (ric) idle = ric(() => setPlay(true), { timeout: 2500 });
+      else timer = window.setTimeout(() => setPlay(true), 1200);
+    };
+    if (document.readyState === "complete") start();
+    else window.addEventListener("load", start, { once: true });
+    return () => {
+      window.removeEventListener("load", start);
+      if (timer) window.clearTimeout(timer);
+      const cic = (window as Window & { cancelIdleCallback?: (id: number) => void }).cancelIdleCallback;
+      if (idle && cic) cic(idle);
+    };
+  }, []);
+
   return (
     <>
-      <Image
-        src={poster}
-        alt={alt}
-        fill
-        priority={priority}
-        sizes="100vw"
-        className="object-cover"
-      />
-      <video
-        className="hv-video absolute inset-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        poster={poster}
-        aria-hidden="true"
-        tabIndex={-1}
-      >
-        <source src={src} type="video/mp4" />
-      </video>
+      <Image src={poster} alt={alt} fill priority={priority} sizes="100vw" className="object-cover" />
+      {play && (
+        <video
+          className="hv-video absolute inset-0 h-full w-full object-cover transition-opacity duration-700"
+          style={{ opacity: ready ? 1 : 0 }}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          onCanPlay={() => setReady(true)}
+          aria-hidden="true"
+          tabIndex={-1}
+        >
+          <source src={src} type="video/mp4" />
+        </video>
+      )}
     </>
   );
 }

@@ -36,7 +36,7 @@ export function Breadcrumbs({
                 </span>
               ) : (
                 <>
-                  <Link href={c.path} className="hover:underline">
+                  <Link prefetch={false} href={c.path} className="hover:underline">
                     {c.name}
                   </Link>
                   <span aria-hidden="true" className="opacity-50">

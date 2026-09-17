@@ -69,7 +69,7 @@ export function AreaSwitcher({
           </p>
 
           {AREA_PAGES_READY && (
-            <EnglishLink
+            <EnglishLink prefetch={false}
               href={`/areas/${panel.slug}`}
               className="btn btn-outline mt-6 border-paper/40 text-paper"
             >

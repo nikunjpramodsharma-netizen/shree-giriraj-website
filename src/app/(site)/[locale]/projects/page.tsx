@@ -109,7 +109,7 @@ export default async function ProjectsPage({
           {(!projects || projects.length === 0) && (
             <p className="text-muted">
               {t("emptyState")}
-              <Link href="/studio" className="text-brand-blue underline">
+              <Link prefetch={false} href="/studio" className="text-brand-blue underline">
                 {t("studioLink")}
               </Link>
               .
@@ -118,7 +118,7 @@ export default async function ProjectsPage({
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {projects?.map((project) => (
-              <Link
+              <Link prefetch={false}
                 key={project._id}
                 href={`/projects/${project.slug.current}`}
                 className="group flex flex-col overflow-hidden rounded-2xl border border-brand-indigo/10 bg-white transition hover:-translate-y-1 hover:shadow-xl"

@@ -630,13 +630,13 @@ export default async function HomePage({
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3.5">
-                <Link
+                <Link prefetch={false}
                   href={`/projects/${featured.slug.current}`}
                   className="btn btn-brass"
                 >
                   {t("See the project")}
                 </Link>
-                <Link href="/projects" className="btn btn-outline border-paper/40 text-paper">
+                <Link prefetch={false} href="/projects" className="btn btn-outline border-paper/40 text-paper">
                   {tProjectsGrid("viewAll")}
                 </Link>
               </div>
@@ -677,7 +677,7 @@ export default async function HomePage({
                   <p className="mt-3.5 text-[1.04rem] text-muted">{tBlog("englishOnly")}</p>
                 )}
               </div>
-              <EnglishLink href="/blog" className="text-sm font-semibold text-brand-blue">
+              <EnglishLink prefetch={false} href="/blog" className="text-sm font-semibold text-brand-blue">
                 {t("All articles")}
               </EnglishLink>
             </Reveal>
@@ -686,7 +686,7 @@ export default async function HomePage({
                 const visual = postVisual(p);
                 return (
                   <Reveal key={p.slug} className={revealDelays[i % 3]}>
-                    <EnglishLink
+                    <EnglishLink prefetch={false}
                       href={"/blog/" + p.slug}
                       className="block h-full overflow-hidden rounded-2xl border border-brand-indigo/10 bg-white transition hover:-translate-y-1 hover:shadow-xl"
                     >

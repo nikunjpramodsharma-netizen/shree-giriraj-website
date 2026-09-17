@@ -402,23 +402,25 @@ export default async function ServicePage({
           service, answered from the same sourced figures the blog carries.
           See service-faqs.ts for where each answer comes from. */}
       {faqs.length > 0 && (
-        <section className="py-16 md:py-20">
-          <div className="mx-auto max-w-3xl px-6">
+        <section className="py-12 md:py-14">
+          <div className="wrap">
             <InView className="cascade">
               <div style={{ ["--i" as string]: 0 }} className="eyebrow">Common questions</div>
               <h2 style={{ ["--i" as string]: 1 }} className="mt-3 text-2xl text-brand-indigo md:text-3xl">
                 The questions people ask before they call
               </h2>
             </InView>
-            <InView className="cascade mt-8 space-y-3" threshold={0.1}>
+            {/* Two columns, every answer closed: the questions read as a list
+                and the block is a third of its old height. The answers stay in
+                the page for search either way. */}
+            <InView className="cascade mt-6 grid items-start gap-3 md:grid-cols-2" threshold={0.1}>
               {faqs.map((f, i) => (
                 <details
                   key={f.q}
                   style={{ ["--i" as string]: i }}
-                  open={i === 0}
-                  className="group rounded-2xl border border-line bg-white p-6 open:shadow-sm"
+                  className="group rounded-xl border border-line bg-white px-5 py-3.5 open:shadow-sm"
                 >
-                  <summary className="cursor-pointer list-none text-lg font-medium text-brand-indigo marker:content-none">
+                  <summary className="cursor-pointer list-none text-[0.98rem] font-medium text-brand-indigo marker:content-none">
                     <span className="flex items-center justify-between gap-4">
                       {f.q}
                       <span className="shrink-0 text-brass transition group-open:rotate-45">+</span>
@@ -429,7 +431,7 @@ export default async function ServicePage({
                     {f.href && f.hrefLabel && (
                       <>
                         {" "}
-                        <Link href={f.href} className="text-brand-indigo underline underline-offset-4">
+                        <Link prefetch={false} href={f.href} className="text-brand-indigo underline underline-offset-4">
                           {f.hrefLabel}
                         </Link>
                         .
@@ -454,7 +456,7 @@ export default async function ServicePage({
                   {tProjectsGrid("heading")}
                 </h2>
               </div>
-              <Link href="/projects" className="text-sm font-semibold text-brand-blue">
+              <Link prefetch={false} href="/projects" className="text-sm font-semibold text-brand-blue">
                 {tProjectsGrid("viewAll")}
               </Link>
             </Reveal>
@@ -463,7 +465,7 @@ export default async function ServicePage({
                 const lowest = getLowestPriceConfig(project.configurations);
                 return (
                   <Reveal key={project._id} className={revealDelays[i % 3]}>
-                    <Link
+                    <Link prefetch={false}
                       href={`/projects/${project.slug.current}`}
                       className="group flex h-full flex-col overflow-hidden rounded-2xl border border-brand-indigo/10 bg-white transition hover:-translate-y-1 hover:shadow-xl"
                     >

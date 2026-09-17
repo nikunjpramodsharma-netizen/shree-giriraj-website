@@ -148,7 +148,7 @@ export default function ToolPage({
               <ul className="mt-3 space-y-2 text-sm">
                 {tool.readNext.map((r) => (
                   <li key={r.href}>
-                    <Link
+                    <Link prefetch={false}
                       href={r.href}
                       className="text-brand-indigo underline underline-offset-4"
                     >

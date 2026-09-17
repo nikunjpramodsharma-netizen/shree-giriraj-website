@@ -53,7 +53,7 @@ export function BlogFilter({ cards }: { cards: BlogCard[] }) {
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3" key={active}>
         {shown.map((c, i) => (
-          <Link
+          <Link prefetch={false}
             key={c.slug}
             href={`/blog/${c.slug}`}
             style={{ animationDelay: `${Math.min(i, 8) * 60}ms` }}

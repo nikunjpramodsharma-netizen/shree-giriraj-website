@@ -90,7 +90,7 @@ export default function GuidesIndex({
             );
             return (
               <li key={p.slug}>
-                <Link
+                <Link prefetch={false}
                   href={`/guides/${p.slug}`}
                   className="group block overflow-hidden rounded-xl border border-line bg-paper transition-colors hover:bg-paper-alt"
                 >
