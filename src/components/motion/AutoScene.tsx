@@ -99,6 +99,7 @@ export function AutoScene({
                 onClick={() => {
                   setI(k);
                   setPaused(true);
+                  window.setTimeout(() => setPaused(false), 5000);
                 }}
                 className={`h-1.5 rounded-full transition-all ${
                   k === i ? "w-7 bg-brass" : `w-2.5 ${dark ? "bg-white/25" : "bg-brand-indigo/15"}`
