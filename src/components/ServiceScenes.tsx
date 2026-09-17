@@ -8,6 +8,7 @@ import { waLink } from "@/lib/config";
 import { tr } from "@/lib/copy-i18n";
 import type { Block, Inline } from "@/lib/markdown";
 import type { ServiceScene } from "@/lib/service-scenes";
+import { creditsForSources } from "@/lib/area-photo-credits";
 
 /**
  * The body of a service page, staged as scenes instead of a column.
@@ -208,6 +209,11 @@ export function ServiceScenes({
               <Parallax strength={50}>
                 <div className="relative aspect-[5/4] overflow-hidden rounded-2xl shadow-2xl shadow-brand-indigo/20">
                   <Image src={image.src} alt={image.alt} fill sizes="(min-width: 768px) 45vw, 100vw" className="object-cover" />
+                  {image.credit && (
+                    <span className="absolute bottom-0 left-0 max-w-full truncate bg-black/45 px-2 py-1 text-[0.6rem] text-white/85">
+                      Photo: {image.credit}
+                    </span>
+                  )}
                 </div>
               </Parallax>
             </div>
@@ -274,6 +280,30 @@ export function ServiceScenes({
           </div>
         </section>
       )}
+
+      {/* PHOTO CREDITS. The free licences ask for the photographer to be named. */}
+      {(() => {
+        const photos = creditsForSources(scene.images.map((im) => im.src));
+        if (photos.length === 0) return null;
+        return (
+          <section className="wrap pt-8">
+            <details className="mx-auto max-w-[62ch] rounded-xl border border-line p-4">
+              <summary className="cursor-pointer list-none text-[0.62rem] font-bold uppercase tracking-[0.18em] text-muted marker:content-none">
+                Photo credits. Photographs from Wikimedia Commons, resized, under the licences shown.
+              </summary>
+              <ul className="mt-3 space-y-1.5 text-sm">
+                {photos.map((ph) => (
+                  <li key={ph.src}>
+                    <a href={ph.page} target="_blank" rel="noopener noreferrer" className="text-brand-indigo underline underline-offset-4">{ph.artist}</a>
+                    {", "}
+                    <a href={ph.licenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{ph.license}</a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          </section>
+        );
+      })()}
 
       {/* SMALL PRINT */}
       {note.length > 0 && (

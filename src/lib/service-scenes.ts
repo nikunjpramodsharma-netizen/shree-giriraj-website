@@ -30,7 +30,7 @@ export type ServiceScene = {
   facts: Fact[];
   numbers: NumberTile[];
   example?: WorkedExample;
-  images: { src: string; alt: string }[];
+  images: { src: string; alt: string; credit?: string }[];
   /** Pre written WhatsApp message for the sticky bar and the closing scene. */
   message: string;
 };
@@ -60,10 +60,10 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
       tool: { href: "/tools/stamp-duty-calculator-mumbai", label: "Run your own number" },
     },
     images: [
-      { src: "/sections/svc-resale.jpg", alt: "A tall residential tower at golden hour" },
-      { src: "/areas/borivali-aerial.jpg", alt: "Mumbai's suburban rooftops among trees, from above" },
-      { src: "/blog/sale-deed.jpg", alt: "A property agreement being signed" },
-      { src: "/areas/kandivali-green.jpg", alt: "Residential buildings among mature trees" },
+      { src: "/areas/real/bor-east.jpg", alt: "Borivali East from above, with societies, towers and the national park hills behind", credit: "Rakesh from Bangalore, CC BY-SA 2.0, Wikimedia Commons" },
+      { src: "/areas/real/mal-palm-court.jpg", alt: "A residential complex with gardens and a pool on the Link Road in Malad West", credit: "Rakesh Krishna Kumar, CC BY-SA 2.0, Wikimedia Commons" },
+      { src: "/areas/real/kan-lokhandwala.jpg", alt: "The towers of Lokhandwala Township in Kandivali East across open ground", credit: "Ask27, CC BY-SA 4.0, Wikimedia Commons" },
+      { src: "/areas/real/bor-west-skyline.jpg", alt: "Borivali West's towers at sunset, seen across the water", credit: "Aziz, CC0, Wikimedia Commons" },
     ],
     message: "Hi Shree Giriraj, I am looking at resale flats in Borivali, Kandivali or Malad. Can you help?",
   },
@@ -90,10 +90,10 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
       caption: "Illustrative. The deposit is a term of the agreement and negotiable; we tell you the going rate for the building before you offer.",
     },
     images: [
-      { src: "/sections/svc-rentals.jpg", alt: "A set of keys" },
-      { src: "/services/hero-rentals.jpg", alt: "An empty flat with the balcony door open to the light" },
-      { src: "/blog/deposit-keys.jpg", alt: "Keys on a rental agreement" },
-      { src: "/areas/train.jpg", alt: "A Mumbai suburban train at a busy platform" },
+      { src: "/areas/real/mal-palm-court.jpg", alt: "A residential complex with gardens and a pool on the Link Road in Malad West", credit: "Rakesh Krishna Kumar, CC BY-SA 2.0, Wikimedia Commons" },
+      { src: "/areas/real/kan-metro-west.jpg", alt: "The Kandivali West metro station on New Link Road", credit: "Rupturestriker, CC BY-SA 4.0, Wikimedia Commons" },
+      { src: "/areas/real/mal-inorbit.jpg", alt: "Inorbit Mall on the Link Road at Mindspace, Malad West", credit: "Rakesh Krishna Kumar, CC BY-SA 2.0, Wikimedia Commons" },
+      { src: "/areas/real/bor-station.jpg", alt: "A local train at the platform of Borivali station", credit: "Gannu03, CC BY-SA 4.0, Wikimedia Commons" },
     ],
     message: "Hi Shree Giriraj, I am looking to rent in Borivali, Kandivali or Malad. Can you help?",
   },
@@ -121,10 +121,10 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
       tool: { href: "/tools/home-loan-emi-calculator", label: "Work out the EMI" },
     },
     images: [
-      { src: "/sections/svc-new-projects.jpg", alt: "New residential towers" },
-      { src: "/blog/under-construction.jpg", alt: "A tower under construction with a crane" },
-      { src: "/areas/kandivali-towers.jpg", alt: "Mumbai's towers and residential blocks from above" },
-      { src: "/sections/project-jaswanti.jpg", alt: "A residential project" },
+      { src: "/areas/real/kan-lokhandwala.jpg", alt: "The towers of Lokhandwala Township in Kandivali East across open ground", credit: "Ask27, CC BY-SA 4.0, Wikimedia Commons" },
+      { src: "/areas/real/svc-weh-metro.jpg", alt: "The metro line running beside the Western Express Highway, with new towers behind", credit: "Pratishkhedekar, CC BY-SA 3.0, Wikimedia Commons" },
+      { src: "/areas/real/kan-akurli.jpg", alt: "The Akurli metro station in Kandivali East with a residential tower beside it", credit: "Rupturestriker, CC BY-SA 4.0, Wikimedia Commons" },
+      { src: "/areas/real/svc-eksar-metro.jpg", alt: "A metro station on New Link Road in Borivali West among residential buildings", credit: "Bramhesh Patil, CC BY-SA 4.0, Wikimedia Commons" },
     ],
     message: "Hi Shree Giriraj, I am interested in a new launch in Borivali, Kandivali or Malad. Can you help?",
   },
@@ -152,10 +152,10 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
       tool: { href: "/tools/rental-yield-calculator", label: "Try the yield calculator" },
     },
     images: [
-      { src: "/sections/svc-investment.jpg", alt: "A tall tower by day" },
-      { src: "/blog/invest-area.jpg", alt: "Mumbai residential towers" },
-      { src: "/areas/malad-towers.jpg", alt: "Modern towers seen across greenery" },
-      { src: "/blog/rental-yield.jpg", alt: "A calculator and keys beside an agreement" },
+      { src: "/areas/real/mal-inorbit.jpg", alt: "Inorbit Mall on the Link Road at Mindspace, Malad West", credit: "Rakesh Krishna Kumar, CC BY-SA 2.0, Wikimedia Commons" },
+      { src: "/areas/real/svc-weh-metro.jpg", alt: "The metro line running beside the Western Express Highway, with new towers behind", credit: "Pratishkhedekar, CC BY-SA 3.0, Wikimedia Commons" },
+      { src: "/areas/real/mal-dindoshi.jpg", alt: "The Dindoshi metro station on the Western Express Highway in Malad East", credit: "Raghav Sethupathy (brother), CC BY-SA 4.0, Wikimedia Commons" },
+      { src: "/areas/real/bor-west-skyline.jpg", alt: "Borivali West's towers at sunset, seen across the water", credit: "Aziz, CC0, Wikimedia Commons" },
     ],
     message: "Hi Shree Giriraj, I am looking to invest in property in Borivali, Kandivali or Malad. Can you help?",
   },
@@ -182,10 +182,10 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
       caption: "Illustrative. Ask whether a quoted rent is inclusive of GST and whether the tenant is registered before comparing two units.",
     },
     images: [
-      { src: "/sections/svc-commercial.jpg", alt: "Retail units on a plaza" },
-      { src: "/services/hero-commercial.jpg", alt: "Shoppers in a covered arcade of glass shopfronts" },
-      { src: "/blog/commercial-investment.jpg", alt: "A commercial street" },
-      { src: "/blog/reit-office.jpg", alt: "A glass office facade" },
+      { src: "/areas/real/mal-inorbit.jpg", alt: "Inorbit Mall on the Link Road at Mindspace, Malad West", credit: "Rakesh Krishna Kumar, CC BY-SA 2.0, Wikimedia Commons" },
+      { src: "/areas/real/svc-bor-station-entrance.jpg", alt: "The entrance of Borivali station, with autos and taxis outside", credit: "Superfast1111, CC BY-SA 3.0, Wikimedia Commons" },
+      { src: "/areas/real/mal-dindoshi.jpg", alt: "The Dindoshi metro station on the Western Express Highway in Malad East", credit: "Raghav Sethupathy (brother), CC BY-SA 4.0, Wikimedia Commons" },
+      { src: "/areas/real/kan-mahindra.jpg", alt: "The gate of the Mahindra and Mahindra plant on Akurli Road, Kandivali East", credit: "Ask27, CC BY-SA 4.0, Wikimedia Commons" },
     ],
     message: "Hi Shree Giriraj, I am looking for commercial space in Borivali, Kandivali or Malad. Can you help?",
   },

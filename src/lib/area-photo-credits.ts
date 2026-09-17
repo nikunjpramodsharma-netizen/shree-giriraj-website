@@ -30,8 +30,17 @@ export const AREA_PHOTO_CREDITS: Record<string, PhotoCredit> = {
   "mal-aksa": { src: "/areas/real/mal-aksa.jpg", artist: "E Siva Subramaniam Iyer", license: "CC BY 3.0", licenseUrl: "https://creativecommons.org/licenses/by/3.0/", page: "https://commons.wikimedia.org/wiki/File:Sunset_at_the_Aksa_Beach.JPG" },
   "mal-madh-fort": { src: "/areas/real/mal-madh-fort.jpg", artist: "KartikMistry", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/", page: "https://commons.wikimedia.org/wiki/File:Madh_Fort_from_Versova_side.jpg" },
   "mal-manori": { src: "/areas/real/mal-manori.jpg", artist: "Sanjaybhagwat", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/", page: "https://commons.wikimedia.org/wiki/File:MANORI-3.jpg" },
+  "svc-weh-metro": { src: "/areas/real/svc-weh-metro.jpg", artist: "Pratishkhedekar", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/", page: "https://commons.wikimedia.org/wiki/File:Dahisar_Metro_station_and_Western_Expressway.jpeg" },
+  "svc-eksar-metro": { src: "/areas/real/svc-eksar-metro.jpg", artist: "Bramhesh Patil", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/", page: "https://commons.wikimedia.org/wiki/File:An_under-construction_Pahadi_Eksar_metro_station_in_Borivali,_as_of_February_2022.jpg" },
+  "svc-bor-station-entrance": { src: "/areas/real/svc-bor-station-entrance.jpg", artist: "Superfast1111", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/", page: "https://commons.wikimedia.org/wiki/File:Borivali_Station_entrance_-_east.jpg" },
 };
 
 export function creditsFor(prefix: string): PhotoCredit[] {
   return Object.entries(AREA_PHOTO_CREDITS).filter(([k]) => k.startsWith(prefix)).map(([, v]) => v);
+}
+
+/** The credits for a given list of image paths, in order, without repeats. */
+export function creditsForSources(srcs: string[]): PhotoCredit[] {
+  const all = Object.values(AREA_PHOTO_CREDITS);
+  return srcs.filter((x, i) => srcs.indexOf(x) === i).map((src) => all.find((c) => c.src === src)).filter((c): c is PhotoCredit => !!c);
 }
