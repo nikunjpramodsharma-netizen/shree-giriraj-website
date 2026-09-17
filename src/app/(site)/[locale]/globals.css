@@ -606,3 +606,8 @@
   .lm .lm-pulse, .sm-map .lm-pulse, .lm .lm-ring, .sm-map .sm-pin-halo, .open-dot, .lm.in .lm-here circle:first-child { animation: none !important; }
   .reading-progress { display: none; }
 }
+
+/* The navigation bar is fixed. Pages make room for it here; a page that opens
+   on a dark banner hands that room to the banner instead (see Nav.tsx). */
+main { padding-top: 72px; }
+html[data-nav-over] main { padding-top: 0; }
