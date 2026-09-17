@@ -30,14 +30,6 @@ export const FILLS = [
     why: "Not needed for enquiries, which go by email. It is needed to edit the five service pages, the homepage FAQs and the projects that live in Sanity, and to move finished posts into the Studio. Three service pages and all the posts were built in the repo instead, which works but is not editable in the Studio. The resale page still says 'for nearly 30 years', which cannot be changed without it.",
     where: ["src/lib/service-content.ts", ".env.local"],
   },
-  {
-    id: "author-photo",
-    area: "Blog",
-    status: "cosmetic",
-    ask: "A photograph of Nikunj Sharma for the byline and the author box.",
-    why: "Nikunj Sharma, Senior Associate, is the named author on every article since 16 September 2026 (src/lib/author.ts). The byline shows his initials until the photo arrives.",
-    where: ["src/lib/author.ts", "public/team/"],
-  },
 
   // ---------------------------------------------------------------- wrong
   {
@@ -75,7 +67,7 @@ export const FILLS = [
     id: "photography",
     area: "Imagery",
     status: "wrong",
-    ask: "Real photographs: the shop, the team, buildings and streets in Borivali, Kandivali and Malad, and any completed interiors work.",
+    ask: "Real photographs: the office, the team, buildings and streets in Borivali, Kandivali and Malad, and any completed interiors work.",
     why: "Every image on the site is stock at the moment, including the homepage and all six blog category images. Stock is the fastest way to look like every other property site.",
     where: ["src/lib/blog.ts", "src/app/(site)/[locale]/page.tsx", "public/blog/"],
   },
