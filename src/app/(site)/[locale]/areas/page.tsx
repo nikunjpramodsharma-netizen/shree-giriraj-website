@@ -57,8 +57,8 @@ export default function AreasIndex({
         {/* The Borivali panel image: the home suburb, and the one this firm
             has worked in since 1996 (and out of the Borivali office since 2005). */}
         <Image
-          src="/sections/area-borivali.jpg"
-          alt="Residential buildings in Borivali, Mumbai"
+          src="/areas/real/bor-west-skyline.jpg"
+          alt="Borivali West at sunset, its towers reflected in the water"
           fill
           priority
           sizes="100vw"
