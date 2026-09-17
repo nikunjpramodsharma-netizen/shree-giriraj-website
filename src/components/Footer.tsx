@@ -64,11 +64,7 @@ export function Footer() {
           </div>
         </div>
         <div className="flex flex-col gap-2.5 pt-6 text-xs text-paper/50 sm:flex-row sm:items-center sm:justify-between">
-          <span>
-            {t("copyright", { year, name: site.name })}
-            {" · "}
-            <EnglishLink href="/photo-credits" className="hover:text-white">Photo credits</EnglishLink>
-          </span>
+          <span>{t("copyright", { year, name: site.name })}</span>
           <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
             {t("rera", { number: site.rera })}
           </span>

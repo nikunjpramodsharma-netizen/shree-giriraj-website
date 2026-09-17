@@ -91,7 +91,7 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
     },
     images: [
       { src: "/services/hero-rentals.jpg", alt: "A bright, freshly finished flat with the balcony door open" },
-      { src: "/areas/real/mal-palm-court.jpg", alt: "A residential complex with landscaped gardens and a pool in Malad West" },
+      { src: "/premium/apartments-palms.jpg", alt: "An elegant residential building with balconies and palm trees" },
       { src: "/sections/svc-rentals.jpg", alt: "A set of keys being handed over" },
       { src: "/premium/skyline-trees.jpg", alt: "Residential towers rising beyond a belt of trees" },
     ],
@@ -122,7 +122,7 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
     },
     images: [
       { src: "/sections/svc-new-projects.jpg", alt: "New residential towers against a clear evening sky" },
-      { src: "/areas/real/kan-lokhandwala.jpg", alt: "The towers of Lokhandwala Township in Kandivali East across open ground" },
+      { src: "/premium/skyline-trees.jpg", alt: "Residential towers rising beyond a belt of trees" },
       { src: "/premium/mumbai-aerial-green.jpg", alt: "Towers of Mumbai's western suburbs among trees, with the creek beyond" },
       { src: "/sections/project-jaswanti.jpg", alt: "Towers on the skyline in golden light" },
     ],

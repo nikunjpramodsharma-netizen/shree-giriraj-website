@@ -102,7 +102,7 @@ export const AREA_PANELS: AreaPanel[] = [
   {
     slug: "kandivali",
     name: "Kandivali",
-    image: "/areas/real/kan-lokhandwala.jpg",
+    image: "/sections/svc-investment.jpg",
     body: "Premium new launches and family homes off M.G. Road and Link Road, including Jaswanti Jewel. The strongest new build activity of the three, which means the widest choice for a first buyer.",
     stats: [
       { value: "₹25,400", label: "Resale asking, per sq ft carpet, West" },
@@ -115,7 +115,7 @@ export const AREA_PANELS: AreaPanel[] = [
   {
     slug: "malad",
     name: "Malad",
-    image: "/areas/real/mal-palm-court.jpg",
+    image: "/premium/apartments-palms.jpg",
     body: "Growing residential and commercial options near Mindspace and the Link Road corridor. More investor money here than in the other two, which moves the price differently.",
     stats: [
       { value: "₹27,000", label: "Resale asking, per sq ft carpet, West" },
