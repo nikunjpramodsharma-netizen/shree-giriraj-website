@@ -7,6 +7,8 @@ import { ContactCTA } from "@/components/ContactCTA";
 import { graph, breadcrumbNode, organizationNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
 import { site } from "@/lib/config";
+import { OpenNow } from "@/components/OpenNow";
+import { ShopMap } from "@/components/motion/ShopMap";
 
 export const revalidate = 300;
 
@@ -151,12 +153,17 @@ export default function ContactPage({
             </dl>
 
             <div className="mt-8 rounded-xl border border-line bg-paper-alt p-5">
-              <div className="text-sm font-semibold text-ink">Opening hours</div>
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <div className="text-sm font-semibold text-ink">Opening hours</div>
+                <OpenNow opens={site.hours.opens} closes={site.hours.closes} />
+              </div>
               <p className="mt-2 text-ink">
                 {site.hours.label}. Walk in, call, or WhatsApp; a message sent
                 after hours is answered first thing the next morning.
               </p>
             </div>
+
+            <ShopMap mapsUrl={site.social.google} />
           </div>
 
           <ContactCTA locale={locale} formLocation="contact-page" defaultOpen />

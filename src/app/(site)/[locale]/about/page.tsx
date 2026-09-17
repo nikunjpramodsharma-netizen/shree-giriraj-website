@@ -6,6 +6,7 @@ import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Reveal } from "@/components/Reveal";
 import { JourneyRail } from "@/components/JourneyRail";
+import { CountUp } from "@/components/motion/CountUp";
 import { graph, breadcrumbNode, organizationNode, faqNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
 import { site } from "@/lib/config";
@@ -263,6 +264,14 @@ export default function AboutPage({
                 Everything on this rail is a matter of record. When there is
                 more to tell, it goes here in order.
               </p>
+              <div className="mt-8 flex flex-wrap items-baseline gap-x-4 gap-y-1">
+                <div className="font-display text-5xl font-semibold text-brand-indigo md:text-6xl">
+                  <CountUp value={new Date().getFullYear() - Number(site.established)} suffix=" years" duration={2200} />
+                </div>
+                <div className="text-sm text-muted">
+                  in these suburbs, counted from {site.established}. {new Date().getFullYear() - Number(site.officeSince)} of them from the shop in Chikoowadi.
+                </div>
+              </div>
             </div>
           </Reveal>
           <div className="mt-14 md:mt-20">

@@ -1,4 +1,5 @@
 import { AREA_PANELS, type AreaPanel } from "@/lib/homepage-content";
+import type { AreaMapSpec } from "@/components/motion/LitMap";
 
 /**
  * Area pages: /areas/[slug].
@@ -63,7 +64,7 @@ export type ProseSection = {
   image?: AreaImage;
   invite?: AreaInvite;
   /** A motion scene rendered after this section. */
-  scene?: "pockets" | "commute" | "landmarks" | "rents";
+  scene?: "map" | "pockets" | "commute" | "landmarks" | "rents" | "redevelopment";
 };
 
 export type AreaSection = ProseSection | InputBlock;
@@ -80,6 +81,8 @@ export function isInputBlock(s: AreaSection): s is InputBlock {
  */
 export type AreaMotion = {
   video: { src: string; poster: string };
+  /** The schematic that lights up under "The lie of the land". */
+  map: AreaMapSpec;
   commute: { value?: number; text?: string; prefix?: string; suffix?: string; label: string }[];
   metro: { label: string; stops: { name: string; here?: boolean }[] }[];
   pockets: { label: string; value: number; note?: string }[];
@@ -120,6 +123,25 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
     },
     motion: {
       video: { src: "/areas/video/borivali.mp4", poster: "/areas/video/borivali-poster.jpg" },
+      map: {
+        station: { label: "Borivali station", y: 330 },
+        edges: { west: "creek", east: "forest" },
+        metroWest: { label: "Metro Line 2A", stops: [{ label: "Mandapeshwar", y: 120 }, { label: "Eksar", y: 210 }, { label: "Borivali West", y: 330 }, { label: "Shimpoli", y: 470 }, { label: "Kandivali West", y: 585 }] },
+        metroEast: { label: "Metro Line 7", stops: [{ label: "Ovaripada", y: 120 }, { label: "Rashtriya Udyan", y: 230 }, { label: "Devipada", y: 330 }, { label: "Magathane", y: 470 }, { label: "Poisar", y: 585 }] },
+        pockets: [
+          { label: "Chikoowadi", x: 300, y: 520, here: true },
+          { label: "Shimpoli", x: 400, y: 470 },
+          { label: "I.C. Colony", x: 320, y: 130 },
+          { label: "Yogi Nagar", x: 300, y: 400 },
+          { label: "Eksar", x: 330, y: 240 },
+          { label: "Babhai Naka", x: 310, y: 330, muted: true },
+          { label: "L.T. Road belt", x: 430, y: 235, muted: true },
+          { label: "Gorai stretch", x: 125, y: 390, muted: true },
+          { label: "Kulupwadi", x: 690, y: 170 },
+          { label: "Rajendra Nagar", x: 640, y: 330 },
+          { label: "Magathane", x: 700, y: 480 },
+        ],
+      },
       commute: [
         { value: 23, suffix: " min", label: "to Andheri by local" },
         { value: 12, suffix: " km", label: "to the airport by road" },
@@ -168,6 +190,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
     sections: [
       {
         heading: "The lie of the land",
+        scene: "map",
         body: [
           "Borivali grew out of a ring of villages: Eksar, Poisar, Vazira, Shimpoli, Mandpeshwar, Dattapada, Kanheri, Tulsi, Magathane and Gorai. The British spelt it Berewlee, and the name itself comes from the bor, the Indian jujube, that once grew here. Much of that village geography survives as the names of today's pockets, and a few of the old village goddess temples still stand in Eksar, Shimpoli and Babhai.",
           "The Western Railway line splits the suburb into West and East, and the two sides have grown into different places. The West runs from the station down to Gorai Creek along S.V. Road and Link Road, and holds the shopping, the older cooperative societies and most of the new towers. The East runs from the station up to the Western Express Highway and the gates of Sanjay Gandhi National Park, with more room, more new large projects and a quieter feel.",
@@ -232,6 +255,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       },
       {
         heading: "The buildings, and where redevelopment really stands",
+        scene: "redevelopment",
         body: [
           "Much of Borivali's housing is the cooperative society stock of the 1960s to the 1990s, three to seven storeys, built well and now reaching the age where redevelopment is the natural next chapter. Madhumilan Society on S.V. Road, built around 1967 with some 218 families, spent 2025 choosing between developers. Industry estimates in early 2026 put more than 200 redevelopment projects underway across Borivali, and one report counted 176 redevelopment agreements signed here between 2020 and May 2025, the most of any Mumbai suburb.",
           "The larger schemes are cluster redevelopments: Arkade Developers' 865 crore rupee project for four Shreepal Nagar societies in Borivali West, announced in April 2025, is one. New towers of fifty and sixty storeys are appearing where five storey buildings stood.",
@@ -314,6 +338,23 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
     },
     motion: {
       video: { src: "/areas/video/kandivali.mp4", poster: "/areas/video/kandivali-poster.jpg" },
+      map: {
+        station: { label: "Kandivali station", y: 330 },
+        edges: { west: "creek", east: "forest" },
+        metroWest: { label: "Metro Line 2A", stops: [{ label: "Shimpoli", y: 120 }, { label: "Kandivali West", y: 330 }, { label: "Dahanukarwadi", y: 470 }, { label: "Valnai", y: 585 }] },
+        metroEast: { label: "Metro Line 7", stops: [{ label: "Magathane", y: 120 }, { label: "Poisar", y: 230 }, { label: "Akurli", y: 330 }, { label: "Kurar", y: 470 }, { label: "Dindoshi", y: 585 }] },
+        pockets: [
+          { label: "Charkop sectors", x: 150, y: 230 },
+          { label: "Dahanukarwadi", x: 320, y: 250 },
+          { label: "Mahavir Nagar", x: 300, y: 420 },
+          { label: "Link Road towers", x: 310, y: 545, muted: true },
+          { label: "Poisar", x: 440, y: 470, muted: true },
+          { label: "Thakur Village", x: 740, y: 170 },
+          { label: "Samata Nagar", x: 640, y: 300 },
+          { label: "Akurli Road", x: 620, y: 420, muted: true },
+          { label: "Lokhandwala, East", x: 700, y: 520 },
+        ],
+      },
       commute: [
         { value: 12, suffix: " min", label: "to Andheri by slow local" },
         { value: 16, suffix: " km", label: "to the airport by road" },
@@ -362,6 +403,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
     sections: [
       {
         heading: "The lie of the land",
+        scene: "map",
         body: [
           "Kandivali sits between Malad to the south and Borivali to the north, in the BMC's R South ward. The Western Railway divides it. The West runs from the station past S.V. Road to New Link Road and on to the Charkop sectors and the creek. The East runs from the station to the Western Express Highway and beyond it to the edge of Sanjay Gandhi National Park, where Thakur Village and Lokhandwala Township sit against the forest.",
           "It began as Khandolee, a group of settlements including Kandol village, the four hundred year old Bunder Pakhadi Koliwada and Charkop, home to East Indians, Bhandaris and Kolis. Today it is Maharashtrian and Gujarati in the main, with every other community Mumbai has, and it has the reputation of a suburb where families settle and stay.",
@@ -490,6 +532,23 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
     },
     motion: {
       video: { src: "/areas/video/malad.mp4", poster: "/areas/video/malad-poster.jpg" },
+      map: {
+        station: { label: "Malad station", y: 330 },
+        edges: { west: "sea", east: "hills" },
+        metroWest: { label: "Metro Line 2A", stops: [{ label: "Dahanukarwadi", y: 120 }, { label: "Valnai", y: 230 }, { label: "Malad West", y: 330 }, { label: "Lower Malad", y: 450 }, { label: "Bangur Nagar", y: 580 }] },
+        metroEast: { label: "Metro Line 7", stops: [{ label: "Akurli", y: 120 }, { label: "Kurar", y: 230 }, { label: "Dindoshi", y: 400 }, { label: "Aarey", y: 560 }] },
+        pockets: [
+          { label: "Mindspace", x: 215, y: 250 },
+          { label: "Link Road belt", x: 260, y: 340 },
+          { label: "Evershine Nagar", x: 320, y: 460 },
+          { label: "Orlem", x: 300, y: 140 },
+          { label: "Marve Road", x: 130, y: 385, muted: true },
+          { label: "Jankalyan Nagar", x: 135, y: 500, muted: true },
+          { label: "Malad East", x: 630, y: 330 },
+          { label: "Kurar", x: 700, y: 200, muted: true },
+          { label: "Dindoshi", x: 720, y: 470 },
+        ],
+      },
       commute: [
         { value: 14, suffix: " min", label: "to Andheri by local" },
         { value: 15, suffix: " km", label: "from Mindspace to the airport" },
@@ -537,6 +596,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
     sections: [
       {
         heading: "The lie of the land",
+        scene: "map",
         body: [
           "Malad sits in the BMC's P North ward, between Goregaon to the south and Kandivali to the north. The railway divides it into Malad West, PIN 400064, which stretches from the station past S.V. Road and Link Road to Mindspace and on down Marve Road to the creek, the beaches and Madh Island, and Malad East, PIN 400097, which climbs from the station to the Western Express Highway and Dindoshi at the park's edge.",
           "Marathi and Marwadi families are the largest communities, with a deep East Indian and Koli presence in Orlem, Marve and the coastal villages, and a large young professional population brought by the offices. Malad Creek to the west, fed by the Oshiwara river, still carries about 400 acres of mangroves.",

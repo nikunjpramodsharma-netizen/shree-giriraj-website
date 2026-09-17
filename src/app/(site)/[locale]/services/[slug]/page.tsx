@@ -25,6 +25,8 @@ import { HeroVideo } from "@/components/HeroVideo";
 import { ServiceScenes } from "@/components/ServiceScenes";
 import { FactChips } from "@/components/motion/FactChips";
 import { StickyBar } from "@/components/motion/StickyBar";
+import { RelatedLinks } from "@/components/RelatedLinks";
+import { interlinksForService } from "@/lib/interlinks";
 import { InView } from "@/components/motion/InView";
 import { SERVICE_SCENES } from "@/lib/service-scenes";
 
@@ -391,6 +393,10 @@ export default async function ServicePage({
           </Reveal>
         </section>
       )}
+
+      {/* KEEP GOING. The tools that do this service's arithmetic, the three
+          suburbs, the sibling services and the long articles. */}
+      <RelatedLinks links={interlinksForService(slug, locale)} locale={locale} tone="alt" />
 
       {/* COMMON QUESTIONS. The questions people actually type for this
           service, answered from the same sourced figures the blog carries.

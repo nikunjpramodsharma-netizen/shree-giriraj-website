@@ -12,6 +12,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { type Crumb } from "@/components/Breadcrumbs";
 import { graph, breadcrumbNode, itemListNode } from "@/lib/schema";
 import { postVisual } from "@/lib/blog";
+import { BlogFilter } from "@/components/BlogFilter";
 import { getAllPosts, type Post as MdPost } from "@/lib/posts";
 
 export const revalidate = 60;
@@ -137,12 +138,18 @@ export default async function BlogPage({
             </p>
           )}
 
-          {(ready.length > 0 || (posts && posts.length > 0)) && (
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {ready.map((p) => (
-                <MarkdownCard key={p.slug} post={p} />
-              ))}
-              {posts?.map((post) => (
+          {ready.length > 0 && (
+            <BlogFilter
+              cards={ready.map((p) => {
+                const v = postVisual(p);
+                return { slug: p.slug, title: p.title, category: p.category, answer: p.answer, readingMinutes: p.readingMinutes, image: v.image, alt: v.alt };
+              })}
+            />
+          )}
+
+          {posts && posts.length > 0 && (
+            <div className={`grid gap-8 md:grid-cols-2 lg:grid-cols-3 ${ready.length > 0 ? "mt-12" : ""}`}>
+              {posts.map((post) => (
                 <Link
                   key={post._id}
                   href={`/blog/${post.slug.current}`}
@@ -221,39 +228,5 @@ export default async function BlogPage({
         </div>
       </section>
     </>
-  );
-}
-
-function MarkdownCard({ post }: { post: MdPost }) {
-  const visual = postVisual(post);
-  return (
-    <Link
-      href={`/blog/${post.slug}`}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-brand-indigo/10 bg-white transition hover:-translate-y-1 hover:shadow-xl"
-    >
-      <div className="relative aspect-[16/10] overflow-hidden">
-        <Image
-          src={visual.image}
-          alt={visual.alt}
-          width={700}
-          height={440}
-          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-        />
-      </div>
-      <div className="flex flex-1 flex-col p-6">
-        {post.category && (
-          <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-brass">
-            {post.category}
-          </div>
-        )}
-        <h2 className="text-xl text-brand-indigo">{post.title}</h2>
-        {post.answer && (
-          <p className="mt-2 flex-1 text-sm text-muted">{post.answer}</p>
-        )}
-        <div className="mt-4 text-xs text-muted">
-          {post.readingMinutes} min read
-        </div>
-      </div>
-    </Link>
   );
 }

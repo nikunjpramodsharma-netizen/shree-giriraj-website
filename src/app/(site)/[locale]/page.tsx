@@ -38,6 +38,7 @@ import { postVisual } from "@/lib/blog";
 import { graph, organizationNode, websiteNode, faqNode } from "@/lib/schema";
 import { tr, localizeDeep } from "@/lib/copy-i18n";
 import { CountUp } from "@/components/motion/CountUp";
+import { KineticLine } from "@/components/motion/KineticLine";
 import { InView } from "@/components/motion/InView";
 
 /**
@@ -348,6 +349,20 @@ export default async function HomePage({
               <em className="italic text-brass-bright">{tHero("headingEm")}</em>
             </h1>
             <p className="mt-6 max-w-[30em] text-lg text-paper/80">{tHero("body")}</p>
+            <p className="mt-4 text-base text-paper/70">
+              {t("Start with one line:")}{" "}
+              <KineticLine
+                className="font-semibold text-brass-bright"
+                phrases={[
+                  t("a 2 BHK near Chikoowadi"),
+                  t("a shop on L.T. Road"),
+                  t("a 1 BHK to rent in Charkop"),
+                  t("a flat in Malad West that earns rent"),
+                  t("a MHADA flat that needs its transfer done"),
+                  t("a booking in a new launch, checked first"),
+                ]}
+              />
+            </p>
             <div className="mt-8">
               <a
                 href={waLink(tHero("whatsappMessage"))}

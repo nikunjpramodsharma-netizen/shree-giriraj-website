@@ -14,6 +14,10 @@ import { InView } from "@/components/motion/InView";
 import { Parallax } from "@/components/motion/Parallax";
 import { CountUp } from "@/components/motion/CountUp";
 import { StickyBar } from "@/components/motion/StickyBar";
+import { RelatedLinks } from "@/components/RelatedLinks";
+import { LitMap } from "@/components/motion/LitMap";
+import { RisingTower } from "@/components/motion/RisingTower";
+import { interlinksForArea } from "@/lib/interlinks";
 import { ContactCTA } from "@/components/ContactCTA";
 import { graph, breadcrumbNode, faqNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
@@ -213,6 +217,16 @@ export default async function AreaPage({
                     )}
                   </figure>
                 )}
+                {s.scene === "map" && (
+                  <LitMap
+                    spec={area.motion.map}
+                    name={area.longName}
+                    caption="The railway splits the suburb; the metro lines run beside Link Road on the west and the highway on the east. Pockets are placed roughly where a local would point."
+                  />
+                )}
+                {s.scene === "redevelopment" && (
+                  <RisingTower caption="A society of four floors becomes a tower on the same plot. The extra floors are what pays for the new flats; how they are shared is what the agreement is for." />
+                )}
                 {s.scene === "pockets" && (
                   <div className="mt-10 grid gap-8 lg:grid-cols-[.9fr_1.1fr] lg:items-start">
                     <div className="rounded-2xl border border-line bg-white p-6">
@@ -310,6 +324,14 @@ export default async function AreaPage({
           {site.extendedAreas.join(" and ")}.
         </p>
       </div>
+
+      <RelatedLinks
+        links={interlinksForArea(area.slug, locale)}
+        locale={locale}
+        tone="alt"
+        heading={`What we do in ${area.longName}, and the sums behind it`}
+        intro="The services we run in this suburb, the calculators that use its rates, the other two suburbs, and the articles that go deeper."
+      />
 
       <ConsultCTA locale={locale} formLocation={`area-${area.slug}`} />
       <div id="enquire">

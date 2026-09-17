@@ -15,6 +15,8 @@ import { PropertyTaxCalculator } from "@/components/PropertyTaxCalculator";
 import { graph, breadcrumbNode, faqNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
 import { TOOLS, getTool } from "@/lib/tools";
+import { RelatedLinks } from "@/components/RelatedLinks";
+import { interlinksForTool } from "@/lib/interlinks";
 
 export const revalidate = 300;
 
@@ -159,6 +161,14 @@ export default function ToolPage({
           </aside>
         </div>
       </div>
+
+      <RelatedLinks
+        links={interlinksForTool(tool.slug, locale)}
+        locale={locale}
+        tone="alt"
+        heading="Where these numbers get used"
+        intro="The services this tool does the sums for, the suburbs the rates come from, and the articles that explain the rules behind it."
+      />
 
       <ContactCTA locale={locale} formLocation={`tool-${tool.slug}`} />
     </article>

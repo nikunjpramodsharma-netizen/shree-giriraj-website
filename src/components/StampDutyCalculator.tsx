@@ -1,5 +1,7 @@
 "use client";
 
+import { RollNumber } from "@/components/motion/RollNumber";
+
 import { useMemo, useState } from "react";
 import {
   calculateStampDuty,
@@ -139,12 +141,12 @@ export function StampDutyCalculator() {
           <div className="mt-2 text-3xl tabular-nums text-ink md:text-4xl">
             {r.isRange ? (
               <>
-                {inr(r.dutyLow)}{" "}
+                <RollNumber value={r.dutyLow} format={inr} />{" "}
                 <span className="text-xl text-ink/50">to</span>{" "}
-                {inr(r.dutyHigh)}
+                <RollNumber value={r.dutyHigh} format={inr} />
               </>
             ) : (
-              inr(r.dutyLow)
+              <RollNumber value={r.dutyLow} format={inr} />
             )}
           </div>
           <p className="mt-2 text-sm text-ink/60">
@@ -161,12 +163,12 @@ export function StampDutyCalculator() {
           <div className="mt-2 text-3xl tabular-nums text-ink md:text-4xl">
             {r.isRange ? (
               <>
-                {inr(r.totalLow)}{" "}
+                <RollNumber value={r.totalLow} format={inr} />{" "}
                 <span className="text-xl text-ink/50">to</span>{" "}
-                {inr(r.totalHigh)}
+                <RollNumber value={r.totalHigh} format={inr} />
               </>
             ) : (
-              inr(r.totalLow)
+              <RollNumber value={r.totalLow} format={inr} />
             )}
           </div>
           <p className="mt-2 text-sm text-ink/60">

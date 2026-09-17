@@ -6,6 +6,9 @@ import { ContactCTA } from "@/components/ContactCTA";
 import { MarkdownBody, Spans } from "@/components/MarkdownBody";
 import { graph, breadcrumbNode, blogPostingNode, faqNode } from "@/lib/schema";
 import { AUTHOR, authorInitials } from "@/lib/author";
+import { RelatedLinks } from "@/components/RelatedLinks";
+import { ReadingProgress } from "@/components/motion/ReadingProgress";
+import { interlinksForArticle } from "@/lib/interlinks";
 import { postVisual, formatDate } from "@/lib/blog";
 import { displayDate, getRelated, type Post } from "@/lib/posts";
 import { plainText } from "@/lib/markdown";
@@ -58,6 +61,7 @@ export function MarkdownPost({
 
   return (
     <article>
+      <ReadingProgress />
       <JsonLd
         data={graph(
           breadcrumbNode(locale, trail),
@@ -318,6 +322,14 @@ export function MarkdownPost({
           </ul>
         </div>
       )}
+
+      <RelatedLinks
+        links={interlinksForArticle(post, locale)}
+        locale={locale}
+        tone="alt"
+        heading="Put this article to work"
+        intro="The calculator that does these sums, the service where we do this for you, and the suburbs where the figures come from."
+      />
 
       <ContactCTA locale={locale} formLocation={`post-${post.slug}`} />
     </article>

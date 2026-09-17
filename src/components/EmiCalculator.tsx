@@ -1,5 +1,7 @@
 "use client";
 
+import { RollNumber } from "@/components/motion/RollNumber";
+
 import { useMemo, useState } from "react";
 import {
   emi,
@@ -152,13 +154,13 @@ export function EmiCalculator() {
       <div className="grid gap-px bg-line sm:grid-cols-2">
         <Headline
           label="Monthly EMI"
-          value={inr(instalment)}
+          value={<RollNumber value={instalment} format={inr} />}
           note={`On a ${inrShort(cost.loanAmount)} loan over ${years} years`}
         />
         {/* The differentiator. Deliberately given equal weight to the EMI. */}
         <Headline
           label="Cash you need before the keys"
-          value={inr(cost.cashNeeded)}
+          value={<RollNumber value={cost.cashNeeded} format={inr} />}
           note={`${inrShort(cost.beyondDownPayment)} of this is on top of your down payment, and a home loan will not cover it`}
           accent
         />
@@ -398,7 +400,7 @@ function Headline({
   accent,
 }: {
   label: string;
-  value: string;
+  value: React.ReactNode;
   note?: string;
   accent?: boolean;
 }) {
