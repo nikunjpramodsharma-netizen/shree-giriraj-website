@@ -121,9 +121,9 @@ export function MarkdownPost({
                 <Image
                   src={AUTHOR.photo}
                   alt=""
-                  width={32}
-                  height={32}
-                  className="rounded-full object-cover"
+                  width={36}
+                  height={36}
+                  className="h-9 w-9 rounded-full object-cover ring-1 ring-white/40"
                 />
               ) : (
                 <span
@@ -218,9 +218,9 @@ export function MarkdownPost({
               <Image
                 src={AUTHOR.photo}
                 alt=""
-                width={56}
-                height={56}
-                className="shrink-0 rounded-full object-cover"
+                width={72}
+                height={72}
+                className="h-[72px] w-[72px] shrink-0 rounded-full object-cover ring-2 ring-brass/40"
               />
             ) : (
               <span
