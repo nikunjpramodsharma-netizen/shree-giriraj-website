@@ -337,9 +337,9 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
         { kicker: "East · the new Kandivali", title: "Akurli Road", text: "Mahindra's plant since 1948, and beside it Mahindra Vista, Godrej Reserve on 18.5 acres, Kalpataru and Lodha, with Growel's 101 at the highway end.", image: { src: "/premium/mumbai-towers-blue.jpg", alt: "New residential towers against a clear evening sky" } },
       ],
       landmarks: [
-        { kicker: "Kandivali East", title: "Growel's 101", text: "The East's mall on Akurli Road off the highway, with a PVR and more than a hundred brands.", image: { src: "/premium/metro-elevated.jpg", alt: "A modern train arriving on elevated tracks" } },
+        { kicker: "Kandivali East", title: "Growel's 101", text: "The East's mall on Akurli Road off the highway, with a PVR and more than a hundred brands.", image: { src: "/premium/towers-night-aerial.jpg", alt: "Residential towers lit at night beside the glowing line of the highway" } },
         { kicker: "Kandivali West", title: "Raghuleela Mega Mall", text: "Behind Poisar depot since 2009: 800 shops and an INOX, the West's mall.", image: { src: "/services/hero-commercial.jpg", alt: "A covered shopping arcade lined with glass shopfronts" } },
-        { kicker: "Kandivali East", title: "The national park's edge", text: "Sanjay Gandhi National Park forms the East's boundary, and Thakur Village and Lokhandwala back straight onto it.", image: { src: "/premium/forest-mist.jpg", alt: "Dense green forest with mist over the hills" } },
+        { kicker: "Kandivali East", title: "The national park's edge", text: "Sanjay Gandhi National Park forms the East's boundary, and Thakur Village and Lokhandwala back straight onto it.", image: { src: "/premium/towers-dusk-aerial.jpg", alt: "Towers and societies rising out of dense green cover at dusk" } },
       ],
       rents: [
         { label: "1 BHK", value: 26500, note: "18,000 to 35,000 a month, West" },
@@ -497,13 +497,13 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       pocketScenes: [
         { kicker: "West · the office district", title: "Mindspace and the Link Road belt", text: "Paradigm Mindspace since 2004: 0.8 million square feet leased to JP Morgan, Tech Mahindra and Concentrix at 98.6 percent occupancy, with Inorbit and Infiniti beside it. The workforce is Malad's largest source of tenants.", image: { src: "/blog/commercial-investment.jpg", alt: "Glass office buildings against a clear sky" } },
         { kicker: "West · the premium pocket", title: "Evershine Nagar", text: "Lodha Raj Infinia, Narang Vivenda and Arkade Eden near New Link Road and the Malad West metro, asking around 32,000 rupees per square foot.", image: { src: "/premium/apartments-palms.jpg", alt: "An elegant residential building with balconies and palm trees" } },
-        { kicker: "West · the village heart", title: "Orlem and Marve Road", text: "Once Valnai, the village on the curving path. The largest parish in the archdiocese by a 2004 census, St. Anne's since 1916, hockey and football, and 15,000 at the Christmas midnight mass.", image: { src: "/premium/balconies-sunset.jpg", alt: "Apartment balconies catching the evening light" } },
-        { kicker: "East · at the park's edge", title: "Rani Sati Marg and Dindoshi", text: "The arterial from the station to the highway, now a metro hotspot, and Dindoshi's Infinity IT Park, civil court and one of BEST's largest depots.", image: { src: "/premium/metro-entrance.jpg", alt: "The concourse of a modern metro station" } },
+        { kicker: "West · the village heart", title: "Orlem and Marve Road", text: "Once Valnai, the village on the curving path. The largest parish in the archdiocese by a 2004 census, St. Anne's since 1916, hockey and football, and 15,000 at the Christmas midnight mass.", image: { src: "/premium/highrise-clear.jpg", alt: "High rise towers on the skyline under a clear sky" } },
+        { kicker: "East · at the park's edge", title: "Rani Sati Marg and Dindoshi", text: "The arterial from the station to the highway, now a metro hotspot, and Dindoshi's Infinity IT Park, civil court and one of BEST's largest depots.", image: { src: "/blog/reit-office.jpg", alt: "The curved facade of a modern office building" } },
       ],
       landmarks: [
         { kicker: "Marve Road", title: "Aksa Beach", text: "One of Mumbai's cleanest, about 15,000 visitors on a weekend, INS Hamla at one end. For sunsets, not swimming.", image: { src: "/areas/malad-beach.jpg", alt: "A purple sunset over a quiet Mumbai beach" } },
-        { kicker: "Madh Island", title: "Madh Fort and the Versova ferry", text: "A seventeenth century Portuguese watchtower under Air Force control, a five minute ferry to Versova, and a bridge cleared in September 2026 for 2029.", image: { src: "/premium/sea-sunset.jpg", alt: "The sun setting over the Arabian Sea" } },
-        { kicker: "Marve Road", title: "Marve and Manori", text: "Marve is the quieter beach, with the ferry across the creek to Manori.", image: { src: "/areas/malad-beach-people.jpg", alt: "People on the wet sand of a Mumbai beach at sunset" } },
+        { kicker: "Madh Island", title: "Madh Fort and the Versova ferry", text: "A seventeenth century Portuguese watchtower under Air Force control, a five minute ferry to Versova, and a bridge cleared in September 2026 for 2029.", image: { src: "/premium/boats-harbour.jpg", alt: "Brightly painted fishing boats moored in a harbour under a blue sky" } },
+        { kicker: "Marve Road", title: "Marve and Manori", text: "Marve is the quieter beach, with the ferry across the creek to Manori.", image: { src: "/premium/palms-shore.jpg", alt: "Surf running up a quiet beach lined with coconut palms" } },
       ],
       rents: [
         { label: "1 BHK", value: 37500, note: "25,000 to 50,000 a month, East" },
