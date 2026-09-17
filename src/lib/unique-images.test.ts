@@ -27,7 +27,7 @@ function walk(dir: string, out: string[] = []): string[] {
 const refs: { path: string; file: string }[] = [];
 for (const file of [...walk(join(ROOT, "src")), ...walk(join(ROOT, "content"))]) {
   const text = readFileSync(file, "utf8");
-  for (const m of text.matchAll(/["'(:\s](\/(?:premium|areas|sections|services|blog|hero|projects)\/[^"'\s)`]+\.(?:jpg|jpeg|png|webp))/g)) {
+  for (const m of Array.from(text.matchAll(/["'(:\s](\/(?:premium|areas|sections|services|blog|hero|projects)\/[^"'\s)`]+\.(?:jpg|jpeg|png|webp))/g))) {
     refs.push({ path: m[1], file: file.slice(ROOT.length + 1).split("\\").join("/") });
   }
 }

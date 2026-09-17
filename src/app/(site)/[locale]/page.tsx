@@ -559,7 +559,20 @@ export default async function HomePage({
           <AreaSwitcher
             panels={areaPanels}
             locale={locale}
-            scenes={locale === "en" ? Object.fromEntries(AREAS.map((a) => [a.slug, a.motion.pocketScenes])) : undefined}
+            scenes={
+              locale === "en"
+                ? Object.fromEntries(
+                    AREAS.map((a) => {
+                      // The pocket text rotates here as it does on the suburb's own
+                      // page, but over this panel's own photograph, so no picture
+                      // appears on two pages.
+                      const panel = areaPanels.find((p) => p.slug === a.slug);
+                      const image = panel ? { src: panel.image, alt: `Homes in ${panel.name}` } : undefined;
+                      return [a.slug, a.motion.pocketScenes.map((sc) => ({ ...sc, image }))];
+                    }),
+                  )
+                : undefined
+            }
           />
         </div>
       </section>
