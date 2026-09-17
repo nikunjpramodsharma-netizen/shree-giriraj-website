@@ -181,20 +181,20 @@ export const JOURNEY: JourneyEntry[] = [
     title: "Started in real estate, in the western suburbs",
     body: "Pramod Kishanlal Sharma began working the property market of Borivali, Kandivali and Malad. Resale, rentals and the paperwork that goes with both, in the same three suburbs the firm still works today.",
     chips: ["Borivali", "Kandivali", "Malad"],
-    image: { src: "/services/hero-resale.jpg", alt: "The Hiranandani towers in Mumbai above a belt of trees and Powai lake" },
+    image: { src: "/premium/u/interior-05.jpg", alt: "A large white kitchen with an island and a marble floor" },
   },
   {
     when: "2005",
     title: "The shop in Chikoowadi",
     body: "The firm took the office it still occupies: Shop No 11, Clover Grove CHS, Chikoowadi, Borivali West. Long enough at one address to have sold flats in the same building twice.",
     chips: ["Clover Grove CHS", "Borivali West"],
-    image: { src: "/sections/about-suburbs.jpg", alt: "Residential towers in Mumbai above a line of trees" },
+    image: { src: "/premium/u/interior-06.jpg", alt: "A modular kitchen with dark glass upper cabinets and under cabinet lighting" },
   },
   {
     when: "Today",
     title: "Seven services, three suburbs, one address",
     body: "Resale, rentals, new project bookings, property investment advisory, commercial and plots, MHADA paperwork, and interior and civil work. MahaRERA registered agent A51800005726. Still run by the founder, still from the same shop.",
     chips: ["MahaRERA A51800005726", "Family run"],
-    image: { src: "/services/hero-commercial.jpg", alt: "Shoppers walking a covered shopping arcade lined with glass shopfronts" },
+    image: { src: "/premium/u/handover-05.jpg", alt: "A handshake across a desk" },
   },
 ];

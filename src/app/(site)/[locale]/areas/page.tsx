@@ -57,8 +57,8 @@ export default function AreasIndex({
         {/* The Borivali panel image: the home suburb, and the one this firm
             has worked in since 1996 (and out of the Borivali office since 2005). */}
         <Image
-          src="/premium/mumbai-aerial-green.jpg"
-          alt="Towers and societies of Mumbai's western suburbs among trees"
+          src="/premium/u/coast-green-02.jpg"
+          alt="A quiet beach backed by coconut palms"
           fill
           priority
           sizes="100vw"

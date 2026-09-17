@@ -83,7 +83,7 @@ export default async function ProjectsPage({
       />
       <section className="relative overflow-hidden bg-brand-indigo-deep text-paper">
         <Image
-          src="/hero-mumbai-towers.jpg"
+          src="/premium/u/tower-05.jpg"
           alt="A modern residential high rise in Mumbai on a clear day"
           fill
           priority

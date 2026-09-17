@@ -572,7 +572,7 @@ export default async function HomePage({
               src={
                 featured.coverImage
                   ? urlFor(featured.coverImage).width(1600).height(1120).url()
-                  : "/sections/project-jaswanti.jpg"
+                  : "/premium/u/complex-05.jpg"
               }
               alt=""
               fill

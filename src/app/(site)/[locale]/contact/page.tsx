@@ -59,8 +59,8 @@ export default function ContactPage({
       {/* Borivali, because this page is about a specific shop in a specific place. A photograph of the shopfront would be better and is on the list. */}
       <header className="relative overflow-hidden bg-brand-indigo-deep text-paper">
         <Image
-          src="/premium/mumbai-aerial-green.jpg"
-          alt="Towers and societies of Mumbai's western suburbs among trees"
+          src="/premium/u/complex-06.jpg"
+          alt="A quiet lift lobby finished in stone and brass"
           fill
           priority
           sizes="100vw"

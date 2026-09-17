@@ -75,8 +75,8 @@ const propertyPaperwork: Pillar = {
     "This page puts them in the order you will actually meet them, from the checks that happen before any money moves to the ones that come months after you have the keys. Each section links to a fuller explanation.",
     "We work in Borivali, Kandivali and Malad, so where a local specific matters more than the general rule, that is what you will find.",
   ],
-  image: "/blog/paperwork.jpg",
-  imageAlt: "Hands stamping an official property document",
+  image: "/premium/u/paperwork-04.jpg",
+  imageAlt: "Hands smoothing out a floor plan",
   sections: [
     {
       heading: "Before you pay anything",
