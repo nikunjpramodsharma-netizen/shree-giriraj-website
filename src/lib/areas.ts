@@ -134,7 +134,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
           { label: "I.C. Colony", x: 320, y: 130 },
           { label: "Yogi Nagar", x: 300, y: 400 },
           { label: "Eksar", x: 330, y: 240 },
-          { label: "Babhai Naka", x: 310, y: 330, muted: true },
+          { label: "Babhai Naka", x: 310, y: 268, muted: true },
           { label: "L.T. Road belt", x: 430, y: 235, muted: true },
           { label: "Gorai stretch", x: 125, y: 390, muted: true },
           { label: "Kulupwadi", x: 690, y: 170 },

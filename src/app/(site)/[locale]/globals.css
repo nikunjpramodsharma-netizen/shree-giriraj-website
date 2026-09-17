@@ -617,3 +617,33 @@ html[data-nav-over] main { padding-top: 0; }
 @keyframes deck-bar { to { width: 100%; } }
 .deck-draw path { animation: li-draw 1s ease 0.1s forwards; }
 @media (prefers-reduced-motion: reduce) { .deck-bar { display: none; } .deck-draw path { animation: none; stroke-dashoffset: 0; } }
+
+/* The transit diagram on the area pages. */
+.lm-t-edge { font: 700 12px/1 var(--font-sans, ui-sans-serif, system-ui); letter-spacing: .18em; }
+.lm-t-dir { font: 700 10.5px/1 var(--font-sans, ui-sans-serif, system-ui); letter-spacing: .16em; }
+.lm-t-road { font: 500 12px/1 var(--font-sans, ui-sans-serif, system-ui); }
+.lm-t-line { font: 700 12.5px/1 var(--font-sans, ui-sans-serif, system-ui); }
+.lm-t-stop { font: 600 12px/1 var(--font-sans, ui-sans-serif, system-ui); }
+.lm-t-station { font: 700 12.5px/1 var(--font-sans, ui-sans-serif, system-ui); }
+.lm-t-pocket { font: 600 11.5px/1 var(--font-sans, ui-sans-serif, system-ui); }
+.lm-t-here { font: 800 10px/1 var(--font-sans, ui-sans-serif, system-ui); letter-spacing: .18em; }
+.lm .lm-halo { transform-box: fill-box; transform-origin: center; }
+.lm.in .lm-halo { animation: lm-breathe 3.4s ease-in-out infinite; animation-delay: calc(var(--i, 0) * 300ms + 2.6s); }
+.lm .lm-wave { stroke-dasharray: 14 10; }
+.lm.in .lm-wave { animation: lm-wave 6s linear infinite; }
+@keyframes lm-wave { to { stroke-dashoffset: -96; } }
+.lm .lm-train { opacity: 0; transform: translate(150px, var(--y)); }
+.lm.in .lm-train { animation: lm-run 9s cubic-bezier(.45, 0, .55, 1) infinite; }
+.lm.in .lm-train-rail { animation-duration: 7s; animation-delay: 2.4s; }
+.lm.in .lm-train-w { animation-delay: 2.8s; }
+.lm.in .lm-train-e { animation-delay: 4.6s; animation-direction: reverse; }
+@keyframes lm-run {
+  0% { opacity: 0; transform: translate(150px, var(--y)); }
+  6% { opacity: 1; }
+  94% { opacity: 1; }
+  100% { opacity: 0; transform: translate(1132px, var(--y)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lm .lm-train { display: none; }
+  .lm .lm-halo, .lm .lm-wave { animation: none !important; }
+}

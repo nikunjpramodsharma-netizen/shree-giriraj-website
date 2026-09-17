@@ -218,11 +218,7 @@ export default async function AreaPage({
                   </figure>
                 )}
                 {s.scene === "map" && (
-                  <LitMap
-                    spec={area.motion.map}
-                    name={area.longName}
-                    caption="The railway splits the suburb; the metro lines run beside Link Road on the west and the highway on the east. Pockets are placed roughly where a local would point."
-                  />
+                  <LitMap spec={area.motion.map} name={area.longName} rates={area.motion.pockets} />
                 )}
                 {s.scene === "redevelopment" && (
                   <RisingTower caption="A society of four floors becomes a tower on the same plot. The extra floors are what pays for the new flats; how they are shared is what the agreement is for." />
