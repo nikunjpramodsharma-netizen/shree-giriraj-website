@@ -194,9 +194,14 @@
     gap: 4rem;
     align-items: start;
   }
+  /* The column is as tall as the story, so the portrait can stay in view
+     while the reader scrolls instead of leaving a blank under itself. */
+  .fw > :first-child {
+    align-self: stretch;
+  }
   .fw-side {
     position: sticky;
-    top: 108px;
+    top: 96px;
   }
 }
 .fw-por {

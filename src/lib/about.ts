@@ -35,38 +35,21 @@ export const STORY: StorySection[] = [
     heading: "How it started",
     paragraphs: [
       "Pramod Kishanlal Sharma started in real estate in 1996, in the western suburbs of Mumbai, and has worked here ever since. The three places he worked then are the three the firm works now: Borivali, Kandivali and Malad, on both sides of the railway line.",
-      "The Borivali of 1996 was a different market. Lower buildings, a Link Road that had not yet become the address it is today, and no regulator between a buyer and a builder. What a careful agent brought to it then is what a careful agent brings now: knowing the building, the society and the lane, and being straight about all three.",
-      "Those first years set how the firm still works. Resale flats and rentals, done properly, for people who wanted somebody local beside them. It remains the main business today.",
+      "Those first years set how the firm still works. Resale flats and rentals, done properly, for people who wanted somebody local beside them. In 2005 the firm moved into the office it still occupies in Chikoowadi, Borivali West, and families who bought through it then come back to sell, to rent and to buy the next home.",
     ],
   },
   {
-    heading: "Twenty years at one address",
+    heading: "How the firm works",
     paragraphs: [
-      "In 2005 the firm moved into the office it still occupies, in Clover Grove CHS, Chikoowadi, Borivali West. Twenty years at one address shapes the work. Families who bought through the firm in its early years come back to sell, to rent, to buy the next home, and to ask about their children's first one.",
-      "Shree Giriraj is family run. The person who takes your call is the person who walks the building with you, reads the file and sits beside you at registration. Nothing is handed to a stranger along the way, which is why a first enquiry so often becomes a relationship of years.",
+      "Shree Giriraj is family run. The person who takes your call is the person who walks the building with you, reads the file and sits beside you at registration. What the firm adds to any listing is what a listing cannot hold: the water timing on the upper floors, the parking a society will actually allot, the stage a redevelopment has really reached, the deposit a street really pays.",
+      "The method has not changed. Verify the owner and the title before a viewing. Arrange the society's no objection before a price is agreed. Say so plainly when a flat is not the right one, and help find one that is.",
     ],
   },
   {
-    heading: "How the firm works, and why",
+    heading: "Since 1996, and ahead",
     paragraphs: [
-      "Property portals are a good place to begin a search, because they show you everything that is listed. What the firm adds is what a listing cannot hold: the water timing on the upper floors, the parking a society will actually allot, the stage a redevelopment has really reached, the deposit a street really pays. It knows these because it has worked in many of these buildings before, some of them more than once.",
-      "The method is simple and has not changed. Verify the owner and the title before a viewing. Arrange the society's no objection before a price is agreed. Say so plainly when a flat is not the right one, and help find one that is. It takes a little longer than sending a list, and it means a purchase that begins here is far more likely to reach registration smoothly.",
-      "The firm suits people who want a clear answer and a job seen through: families buying a first or next home, owners selling a flat with its paperwork in order, tenants and landlords who want a registered agreement, and investors who like to see the numbers first.",
-    ],
-  },
-  {
-    heading: "What has changed since 1996",
-    paragraphs: [
-      "The biggest change is the law. Maharashtra's real estate regulator came into force on 1 May 2017, and with it a registered number for every project, carpet area as the one measure that counts, and registration for the agents in between. Shree Giriraj is MahaRERA registered agent A51800005726. The number is on every page of this site so that anyone can check it, which takes about a minute.",
-      "The other change is information. A buyer today arrives with more listings than any agent could show in 1996, and often less certainty about which of them suit. The work has moved from finding a flat to helping choose the right one, which is the work this firm has always enjoyed most.",
-      "What has not changed is how the firm measures itself: by whether the people it has helped come back, and whether they send the people they care about. Many do, and the firm is grateful for it.",
-    ],
-  },
-  {
-    heading: "The years ahead",
-    paragraphs: [
-      "The firm now offers seven services under one roof, from resale, rentals and new project bookings to investment advisory, commercial property, MHADA paperwork and interior work, so that everything a move needs can be handled by people who already know the building. It is still led by its founder, still at the same office, and still focused on three suburbs it knows well.",
-      "If you are buying, selling, renting or investing in Borivali, Kandivali or Malad, the first conversation is free and usually happens the same day. Tell us the building and we will tell you what to check.",
+      "The biggest change in those years is the law. Maharashtra's real estate regulator came into force on 1 May 2017, and Shree Giriraj is MahaRERA registered agent A51800005726. The number is on every page of this site so that anyone can check it in a minute.",
+      "The firm now offers seven services under one roof, from resale, rentals and new project bookings to investment advisory, commercial property, MHADA paperwork and interior work. It is still led by its founder, still at the same office, and still measures itself by whether the people it has helped come back. If you are buying, selling, renting or investing in Borivali, Kandivali or Malad, the first conversation is free and usually happens the same day.",
     ],
   },
 ];

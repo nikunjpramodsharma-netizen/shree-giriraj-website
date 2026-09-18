@@ -212,6 +212,16 @@ export default function AboutPage({
                     {FOUNDER.role}, {site.name}
                   </div>
                 </div>
+                {/* The confirmed facts sit under the portrait, so the column
+                    carries something on every screen instead of a blank. */}
+                <dl className="mt-6 divide-y divide-line border-y border-line">
+                  {facts.map((f) => (
+                    <div key={f.label} className="flex items-baseline justify-between gap-4 py-2.5">
+                      <dt className="text-[0.62rem] font-bold uppercase tracking-[0.16em] text-muted">{f.label}</dt>
+                      <dd className="text-right text-sm font-medium text-ink">{f.value}</dd>
+                    </div>
+                  ))}
+                </dl>
               </div>
             </Reveal>
 
@@ -220,13 +230,12 @@ export default function AboutPage({
                 <p className="fw-open">
                   {FOUNDER.name} has worked these suburbs since{" "}
                   {site.established}, and from the same office in Chikoowadi
-                  since {site.officeSince}. That is long enough to have helped
-                  many of the same families more than once, and to know these
-                  buildings from the inside.
+                  since {site.officeSince}. Long enough to know these buildings
+                  from the inside.
                 </p>
               </Reveal>
 
-              <div className="mt-10 space-y-10">
+              <div className="mt-8 space-y-8">
                 {STORY.map((s) => (
                   <Reveal key={s.heading}>
                     <section>
@@ -280,19 +289,6 @@ export default function AboutPage({
       </section>
 
       <div className="wrap pb-12">
-        {/* Verified facts. Every one of these is confirmed, not inferred. */}
-        <Reveal>
-          <dl className="grid gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
-            {facts.map((f) => (
-              <div key={f.label} className="bg-paper p-5">
-                <dt className="text-xs uppercase tracking-wider text-muted">
-                  {f.label}
-                </dt>
-                <dd className="mt-1 text-lg text-ink">{f.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </Reveal>
 
         {/* Gated the same way as the homepage: placeholder names never ship. */}
         {TEAM_IS_REAL && (
