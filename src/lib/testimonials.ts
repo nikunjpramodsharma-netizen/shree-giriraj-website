@@ -20,9 +20,7 @@
  * THE GATE
  *
  * TESTIMONIALS_ARE_REAL is derived: it is true only when no entry is a
- * placeholder. Placeholder cards carry a visible label so nobody can mistake
- * one for a real client; they fill the rail to its intended fifteen until the
- * rest arrive. To add a real one: paste the review exactly, name as shown,
+ * placeholder. None ship now; the type keeps the option for a future fill in. To add a real one: paste the review exactly, name as shown,
  * the month, and what the review itself says the client did.
  *
  * THE GOOGLE RATING
@@ -39,9 +37,9 @@
 export const GOOGLE_RATING = {
   value: "5.0",
   /** Read from the profile on the date below. */
-  count: 5 as number | undefined,
+  count: 6 as number | undefined,
   url: "https://www.google.com/maps/place/?cid=5587711998336126142",
-  checkedOn: "15 September 2026",
+  checkedOn: "18 September 2026",
 } as const;
 
 export type Testimonial = {
@@ -89,19 +87,23 @@ const REAL: Testimonial[] = [
     stars: 5,
     source: GOOGLE("September 2026"),
   },
+  {
+    quote:
+      "I was selling my late father's 1 BHK in Kandivali East and the file had gaps I did not know how to close. Shree Giriraj told me exactly which documents were missing, helped me get them, and only listed the flat once everything was in order. The buyer they brought was serious and the deal closed without a single delay. Honest people.",
+    name: "Kaustubh Vajpayee",
+    location: "Kandivali East",
+    did: "Sold a 1 BHK",
+    stars: 5,
+    source: GOOGLE("September 2026"),
+  },
 ];
 
-/** Fill in cards up to the fifteen the rail is designed for. */
-const PLACEHOLDERS: Testimonial[] = Array.from({ length: 15 - REAL.length }, (_, i) => ({
-  quote:
-    "Placeholder review. The client's own words go here, exactly as they said them, once the owner shares them.",
-  name: `Client ${REAL.length + i + 1}`,
-  location: "Suburb to come",
-  did: "What they did with us",
-  stars: 5,
-  placeholder: true,
-}));
-
-export const TESTIMONIALS: Testimonial[] = [...REAL, ...PLACEHOLDERS];
+/**
+ * Only reviews with written words go on the rail. Star only reviews on the
+ * profile count towards the rating above but have nothing to quote. The
+ * placeholder cards were removed on 18 September 2026 at the owner's request;
+ * the rail repeats the real cards to fill the width instead.
+ */
+export const TESTIMONIALS: Testimonial[] = [...REAL];
 
 export const TESTIMONIALS_ARE_REAL = TESTIMONIALS.every((t) => !t.placeholder);

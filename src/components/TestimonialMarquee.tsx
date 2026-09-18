@@ -39,6 +39,14 @@ export function TestimonialMarquee({
   };
 }) {
   const rating = GOOGLE_RATING;
+  // With only a few reviews one copy of the list is narrower than a wide
+  // screen, and the loop would show a blank gap. Repeat the cards until a
+  // row holds at least eight; repeats are hidden from screen readers.
+  const MIN_CARDS = 8;
+  const reps = Math.max(1, Math.ceil(MIN_CARDS / Math.max(1, items.length)));
+  const row = Array.from({ length: reps }, (_, r) => items.map((t) => ({ t, repeat: r > 0 }))).flat();
+  // Keep the speed per card the same as the original fifteen card rail.
+  const duration = `${Math.round((row.length / 15) * 75)}s`;
   return (
     <div>
       <a
@@ -60,15 +68,19 @@ export function TestimonialMarquee({
       </a>
 
       <div className="tm mt-10" aria-label="Client reviews">
-        <div className="tm-track">
+        <div className="tm-track" style={{ animationDuration: duration }}>
           {[0, 1].map((copy) => (
             <ul
               key={copy}
               className="tm-row"
               aria-hidden={copy === 1 ? "true" : undefined}
             >
-              {items.map((t, i) => (
-                <li key={`${copy}-${i}`} className="tm-card">
+              {row.map(({ t, repeat }, i) => (
+                <li
+                  key={`${copy}-${i}`}
+                  className="tm-card"
+                  aria-hidden={copy === 0 && repeat ? "true" : undefined}
+                >
                   <figure>
                     <div className="flex items-center justify-between gap-2">
                       <Stars className="text-brass" />

@@ -520,7 +520,7 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* TESTIMONIALS. Fifteen five star reviews on a continuous rail, with
+      {/* TESTIMONIALS. The written Google reviews on a continuous rail, with
           the Google rating linked above them. Placeholder cards until the
           owner supplies the real ones; see testimonials.ts for the gate and
           for why the rating reads 5.0. Sits between the checks and the areas
