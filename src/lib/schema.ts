@@ -15,8 +15,7 @@ import { SITE_URL, absoluteUrl } from "@/lib/seo";
  *    surfaces in the local pack; duplicating it here gains nothing and risks a
  *    manual action.
  * 3. OMIT RATHER THAN INVENT. A missing property is always safer than a
- *    plausible wrong one. geo, openingHours and priceRange are absent below
- *    for exactly that reason, each flagged with what would unblock it.
+ *    plausible wrong one. priceRange is absent below for exactly that reason.
  */
 
 const ORG_ID = `${SITE_URL}/#organization`;
@@ -53,6 +52,14 @@ export function organizationNode(opts: { founder?: string } = {}): Json {
       postalCode: "400092",
       addressCountry: "IN",
     },
+    // The pin of the Google Business Profile listing, read from Google Maps
+    // on 18 September 2026 at the owner's request.
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 19.2199038,
+      longitude: 72.8366379,
+    },
+    hasMap: "https://www.google.com/maps/place/?cid=5587711998336126142",
     areaServed: site.areas.map((name) => ({
       "@type": "Place",
       name: `${name}, Mumbai`,
@@ -87,7 +94,6 @@ export function organizationNode(opts: { founder?: string } = {}): Json {
     // address or one of the phone numbers; see SAME_AS in config.ts.
     ...(site.sameAs.length > 0 ? { sameAs: site.sameAs } : {}),
     // DELIBERATELY ABSENT until the Google Business Profile supplies real values:
-    //   geo                       needs verified latitude and longitude
     //   priceRange                would be invented; there is no published one
     //   aggregateRating           see rule 2 above. Never add this.
   };
