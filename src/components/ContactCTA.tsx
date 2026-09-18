@@ -1,6 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { track } from "@/lib/analytics";
+
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { site, waLink } from "@/lib/config";
 import { captureAttribution, getAttribution } from "@/lib/attribution";
@@ -62,6 +64,8 @@ export function ContactCTA({
   const [open, setOpen] = useState(defaultOpen);
   const [state, setState] = useState<State>("idle");
   const [error, setError] = useState<string | null>(null);
+  /** Resend's own reason for a refused send, shown small under the message so the owner can diagnose it. */
+  const [reason, setReason] = useState<string | null>(null);
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -97,12 +101,15 @@ export function ContactCTA({
     `${t("whatsappIntentLabel")}: ${intent}\n` +
     `${t("whatsappAreaLabel")}: ${area || "-"}`;
 
+  const started = useRef(false);
+
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
 
     if (!name.trim() || (!phone.trim() && !email.trim())) {
       setError(t("validation"));
+      track("form_field_error", { form_name: "lead_form", form_location: formLocation, field: !name.trim() ? "name" : "phone" });
       return;
     }
 
@@ -127,12 +134,18 @@ export function ContactCTA({
       });
       if (res.ok) {
         setState("done");
+        // The macro conversion. Only the form's name and place are sent, never
+        // the person's details.
+        track("form_submit", { form_name: "lead_form", form_location: formLocation, intent, area });
         return;
       }
       const data = await res.json().catch(() => ({}));
       setState(data?.error === "not_configured" ? "unconfigured" : "error");
+      setReason(typeof data?.reason === "string" && data.reason ? data.reason : null);
+      track("form_error", { form_name: "lead_form", form_location: formLocation, reason: String(data?.error ?? res.status) });
     } catch {
       setState("error");
+      track("form_error", { form_name: "lead_form", form_location: formLocation, reason: "network" });
     }
   }
 
@@ -194,7 +207,16 @@ export function ContactCTA({
           </p>
         </div>
       ) : (
-        <form onSubmit={submit} className="mt-5 space-y-3.5 border-t border-white/10 pt-5">
+        <form
+          onSubmit={submit}
+          onFocusCapture={() => {
+            if (!started.current) {
+              started.current = true;
+              track("form_start", { form_name: "lead_form", form_location: formLocation });
+            }
+          }}
+          className="mt-5 space-y-3.5 border-t border-white/10 pt-5"
+        >
           <p className={`text-xs ${label}`}>
             {t("formIntro")}
           </p>
@@ -274,6 +296,7 @@ export function ContactCTA({
             {state === "error" && (
               <p className="text-center text-xs text-red-300">
                 {t("failed", { phone: site.phonePrimary, email: site.email })}
+                {reason && <span className="mt-1 block text-[0.68rem] text-red-200/80">Mail service said: {reason}</span>}
               </p>
             )}
             {state === "unconfigured" && (

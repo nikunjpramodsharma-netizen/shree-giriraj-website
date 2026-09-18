@@ -8,6 +8,8 @@ import { routing } from "@/i18n/routing";
 import { SITE_URL, OG_IMAGE } from "@/lib/seo";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
+import { Gtm } from "@/components/Gtm";
+import { Suspense } from "react";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
@@ -96,6 +98,9 @@ export default function LocaleLayout({
           <Footer />
           <WhatsAppFloat />
           <StickyMobileCTA locale={locale} />
+          <Suspense fallback={null}>
+            <Gtm />
+          </Suspense>
         </NextIntlClientProvider>
       </body>
     </html>

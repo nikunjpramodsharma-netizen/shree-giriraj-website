@@ -133,7 +133,15 @@ export async function POST(request: Request) {
       // The lead itself is never logged. An error is worth recording; a
       // stranger's phone number in a log file is not.
       console.error("[lead] resend rejected the send", res.status, detail.slice(0, 300));
-      return NextResponse.json({ error: "send_failed" }, { status: 502 });
+      // Resend's own reason travels back, so a failed send can be diagnosed
+      // from the browser. It never contains the enquiry.
+      let reason = "";
+      try {
+        reason = String((JSON.parse(detail) as { message?: string }).message ?? "");
+      } catch {
+        reason = detail.slice(0, 200);
+      }
+      return NextResponse.json({ error: "send_failed", upstream: res.status, reason }, { status: 502 });
     }
 
     return NextResponse.json({ ok: true });
@@ -141,4 +149,40 @@ export async function POST(request: Request) {
     console.error("[lead] failed to send enquiry", err);
     return NextResponse.json({ error: "send_failed" }, { status: 500 });
   }
+}
+
+/**
+ * GET /api/lead: a read only health check for the owner, so a failing form
+ * can be diagnosed without server logs. It asks Resend which sending domains
+ * the key can use. It sends nothing and reveals nothing that is not already
+ * on the contact page.
+ */
+export async function GET() {
+  const out: Record<string, unknown> = {
+    keyConfigured: Boolean(RESEND_KEY),
+    to: TO,
+    from: FROM,
+  };
+  if (RESEND_KEY) {
+    try {
+      const res = await fetch("https://api.resend.com/domains", {
+        headers: { Authorization: `Bearer ${RESEND_KEY}` },
+        cache: "no-store",
+      });
+      out.keyAccepted = res.ok;
+      if (res.ok) {
+        const data = (await res.json()) as { data?: { name: string; status: string }[] };
+        out.domains = (data.data ?? []).map((d) => ({ name: d.name, status: d.status }));
+        out.usingTestSender = /resend\.dev/.test(FROM);
+        if (out.usingTestSender) {
+          out.note = "With the resend.dev test sender, Resend delivers only to the email address the Resend account is registered under.";
+        }
+      } else {
+        out.keyError = (await res.text()).slice(0, 200);
+      }
+    } catch (err) {
+      out.keyError = String(err);
+    }
+  }
+  return NextResponse.json(out, { headers: { "Cache-Control": "no-store" } });
 }

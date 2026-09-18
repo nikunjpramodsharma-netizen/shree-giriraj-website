@@ -8,7 +8,7 @@ export async function StickyMobileCTA({ locale }: { locale: string }) {
   ]);
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 flex border-t border-brand-indigo/10 bg-white shadow-[0_-4px_16px_rgba(0,0,0,0.06)] md:hidden">
+    <div data-sticky-bar className="fixed inset-x-0 bottom-0 z-40 flex border-t border-brand-indigo/10 bg-white shadow-[0_-4px_16px_rgba(0,0,0,0.06)] md:hidden">
       <a
         href={`tel:${site.phonePrimary}`}
         className="flex flex-1 items-center justify-center gap-2 py-3.5 text-sm font-semibold text-brand-indigo"
