@@ -31,8 +31,7 @@ import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 /**
  * metadataBase MUST use the same origin resolver as canonicals and JSON-LD.
  *
- * This previously had its own fallback to shreegiriraj.in, which is not a
- * registered domain, so on a Vercel deployment with no explicit site URL it
+ * This previously had its own fallback to a domain the firm did not own, so on a Vercel deployment with no explicit site URL it
  * resolved every relative metadata URL against a host that does not exist.
  * Nothing leaked yet only because no relative OG image is emitted. It would
  * have broken silently the moment one was added.

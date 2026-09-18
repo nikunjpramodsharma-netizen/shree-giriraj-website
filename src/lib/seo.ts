@@ -21,14 +21,15 @@ function resolveSiteUrl(): string {
     process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL;
   if (vercel) return `https://${vercel}`;
 
-  return "https://www.shreegiriraj.in";
+  return "https://www.shreegiriraj.com";
 }
 
 /**
- * NOTE ON THE FALLBACK: shreegiriraj.in is not registered yet, so the last
- * resort here is a domain that does not resolve. That is deliberate. It is the
- * agreed name, and the Vercel branches above mean a real deployment never has
- * to rely on it.
+ * NOTE ON THE FALLBACK: the firm's domain is shreegiriraj.com, registered at
+ * GoDaddy on 18 September 2026, with www as the primary host and the bare
+ * domain redirecting to it. On Vercel the branch above already resolves to
+ * that domain once it is the project's production domain, so the fallback is
+ * only reached outside Vercel.
  */
 export const SITE_URL = resolveSiteUrl().replace(/\/$/, "");
 
