@@ -28,6 +28,7 @@ export async function generateMetadata({
   return {
     ...pageUrls(params.locale, "/services"),
     title: t("heading"),
+    description: t("metaDescription"),
   };
 }
 

@@ -19,12 +19,10 @@ sources:
     url: https://portal.mcgm.gov.in
   - label: Department of Registration and Stamps, ready reckoner (e-ASR)
     url: https://igrmaharashtra.gov.in/
-  - label: ClearTax, property tax in Mumbai
-    url: https://cleartax.in/s/property-tax-mumbai
   - label: HomeFirst India, BMC Mumbai property tax
     url: https://homefirstindia.com/blog/article/bmc-mumbai-property-tax
   - label: Bombay High Court, Nagri Niwara Parishad v. Municipal Corporation of Greater Mumbai, 2024, on section 212 and notice to a transferee
-    url: https://www.lawtext.in/judgement.php?bid=1192
+    url: https://www.casemine.com/judgement/in/6734ff2ec1d5a07b0e7a5ad0
   - label: Deccan Herald, exemption for residential flats up to 500 square feet
     url: https://www.deccanherald.com/india/mumbai-no-property-tax-on-residential-properties-up-to-500-sq-ft-says-uddhav-thackeray-1066898.html
 sourcesCheckedOn: "8 September 2026"

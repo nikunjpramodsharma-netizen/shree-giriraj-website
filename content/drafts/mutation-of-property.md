@@ -15,8 +15,8 @@ answer: >
   prove ownership. The courts have repeatedly held that revenue records are not
   documents of title: ownership comes from your registered deed.
 sources:
-  - label: "Cyril Amarchand Mangaldas, mutation follows ownership, not the other way around"
-    url: https://privateclient.cyrilamarchandblogs.com/2025/11/mutation-follows-ownership-not-the-other-way-around-supreme-court/
+  - label: "Supreme Court of India, Jitendra Singh v. State of Madhya Pradesh, 6 September 2021: a mutation entry confers no right, title or interest"
+    url: https://indiankanoon.org/doc/104309066/
   - label: "A.K. Legal and Associates, revenue record entries do not transfer ownership"
     url: https://aklegal.in/revenue-record-entries-do-not-transfer-ownership/
   - label: Basic Home Loan, changing the name on MCGM property tax records

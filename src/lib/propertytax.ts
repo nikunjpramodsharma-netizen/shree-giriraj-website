@@ -39,10 +39,6 @@ export const PT_SOURCES: { label: string; url: string }[] = [
     url: "https://igrmaharashtra.gov.in/",
   },
   {
-    label: "ClearTax, property tax in Mumbai",
-    url: "https://cleartax.in/s/property-tax-mumbai",
-  },
-  {
     label: "HomeFirst India, BMC Mumbai property tax",
     url: "https://homefirstindia.com/blog/article/bmc-mumbai-property-tax",
   },

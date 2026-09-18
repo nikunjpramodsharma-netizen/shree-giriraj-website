@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { client } from "@/sanity/client";
 import { urlFor } from "@/sanity/image";
 import { projectBySlugQuery, projectLocaleIndexQuery } from "@/sanity/queries";
+import { repairProjectLocales } from "@/lib/project-locale-fixes";
 import { PortableTextBody } from "@/components/PortableTextBody";
 import { waLink } from "@/lib/config";
 import {
@@ -62,9 +63,10 @@ export async function generateMetadata({
 }: {
   params: { locale: string; slug: string };
 }): Promise<Metadata> {
-  const project = await client.fetch<Project>(projectBySlugQuery, {
-    slug: params.slug,
-  });
+  const project = repairProjectLocales(
+    params.slug,
+    await client.fetch<Project>(projectBySlugQuery, { slug: params.slug }),
+  );
   if (!project) return {};
   const locales = availableLocales(project.summary);
   if (!locales.includes(params.locale as Locale)) return { robots: { index: false } };
@@ -91,10 +93,11 @@ export default async function ProjectPage({
   params: { locale: string; slug: string };
 }) {
   const locale = params.locale as Locale;
-  const [project, t] = await Promise.all([
+  const [fetched, t] = await Promise.all([
     client.fetch<Project>(projectBySlugQuery, { slug: params.slug }),
     getTranslations({ locale, namespace: "projectDetail" }),
   ]);
+  const project = repairProjectLocales(params.slug, fetched);
   if (!project) notFound();
 
   // No summary in this locale means no genuinely localized page. 404 rather
