@@ -188,7 +188,20 @@ export async function GET() {
           out.note = "With the resend.dev test sender, Resend delivers only to the email address the Resend account is registered under.";
         }
       } else {
-        out.keyError = (await res.text()).slice(0, 200);
+        const text = (await res.text()).slice(0, 200);
+        // A key created with "sending access" only cannot list domains, and
+        // that is the right kind of key for this route. Resend answers 401
+        // restricted_api_key for it, which means the key itself is valid.
+        if (res.status === 401 && /restricted_api_key/.test(text)) {
+          out.keyAccepted = true;
+          out.keyScope = "sending only";
+          out.usingTestSender = /resend\.dev/.test(FROM);
+          if (out.usingTestSender) {
+            out.note = "With the resend.dev test sender, Resend delivers only to the email address the Resend account is registered under.";
+          }
+        } else {
+          out.keyError = text;
+        }
       }
     } catch (err) {
       out.keyError = String(err);
