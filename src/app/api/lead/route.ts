@@ -3,6 +3,8 @@ import { site } from "@/lib/config";
 import { subjectFor, textFor, htmlFor, type Lead } from "@/lib/lead-email";
 
 export const runtime = "nodejs";
+// The health check must read the live environment, never a value frozen at build time.
+export const dynamic = "force-dynamic";
 
 /**
  * Receives an enquiry and emails it.
@@ -159,9 +161,17 @@ export async function POST(request: Request) {
  */
 export async function GET() {
   const out: Record<string, unknown> = {
-    keyConfigured: Boolean(RESEND_KEY),
+    keyConfigured: Boolean(process.env.RESEND_API_KEY),
     to: TO,
     from: FROM,
+    deployment: {
+      env: process.env.VERCEL_ENV ?? null,
+      commit: (process.env.VERCEL_GIT_COMMIT_SHA ?? "").slice(0, 7) || null,
+      branch: process.env.VERCEL_GIT_COMMIT_REF ?? null,
+      productionUrl: process.env.VERCEL_PROJECT_PRODUCTION_URL ?? null,
+    },
+    // Names only, never values: shows a misspelt or mis-scoped variable at a glance.
+    mailVariablesSeen: Object.keys(process.env).filter((k) => /RESEND|LEAD_/i.test(k)).sort(),
   };
   if (RESEND_KEY) {
     try {
