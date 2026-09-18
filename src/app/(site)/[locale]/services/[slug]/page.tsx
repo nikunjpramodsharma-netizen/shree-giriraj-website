@@ -119,11 +119,11 @@ const STEPS_KEY: Record<(typeof SERVICE_SLUGS)[number], string> = {
  * stock, and the stamp on paper says more.
  *
  * Clips, all Pexels, downloaded and transcoded 16 September 2026:
- *   resale       35213736  aerial of Mumbai housing in daylight, Rajkumarrr
+ *   resale       30988855  glass residential towers against a blue sky, Logan Voss
  *   rentals       8293504  a couple holding the keys to a flat, RDNE
  *   new projects 15985460  towers under construction in Mumbai, Manav
- *   investment   30295540  aerial of Mumbai buildings, aksinfo7 universe
- *   commercial   35213737  aerial of Mumbai's urban landscape, Rajkumarrr
+ *   investment   36718867  drone over Mumbai's towers with the hills behind, Rajkumarrr
+ *   commercial   5762612   a shopping mall interior with glass shopfronts, Salman Ahmad
  *   interiors     7314522  a kitchen and living room, Yan Krukau
  */
 const HERO_VIDEO: Partial<Record<(typeof SERVICE_SLUGS)[number], { src: string; poster: string }>> = {

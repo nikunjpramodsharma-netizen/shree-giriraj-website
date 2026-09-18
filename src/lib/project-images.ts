@@ -13,5 +13,5 @@ export const PROJECT_FALLBACK: Record<string, string> = {
 };
 
 export function projectFallback(slug: string): string {
-  return PROJECT_FALLBACK[slug] ?? "/premium/p/p6.jpg";
+  return PROJECT_FALLBACK[slug] ?? "/premium/u/tower-07.jpg";
 }

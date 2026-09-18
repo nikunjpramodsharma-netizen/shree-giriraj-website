@@ -89,7 +89,7 @@ export const AREA_PANELS: AreaPanel[] = [
   {
     slug: "borivali-west",
     name: "Borivali",
-    image: "/premium/u/tower-08.jpg",
+    image: "/premium/u/mumbai-aerial-cloudy.jpg",
     body: "Our home turf. Resale, rentals and investment advice across Borivali West and East, from Chikoowadi to the station belt. The pocket you choose matters more here than the building does.",
     stats: [
       { value: "₹31,200", label: "Resale asking, per sq ft carpet, West" },
@@ -102,7 +102,7 @@ export const AREA_PANELS: AreaPanel[] = [
   {
     slug: "kandivali",
     name: "Kandivali",
-    image: "/premium/u/tower-04.jpg",
+    image: "/premium/u/mumbai-aerial-day.jpg",
     body: "Premium new launches and family homes off M.G. Road and Link Road, including Jaswanti Jewel. The strongest new build activity of the three, which means the widest choice for a first buyer.",
     stats: [
       { value: "₹25,400", label: "Resale asking, per sq ft carpet, West" },
@@ -115,7 +115,7 @@ export const AREA_PANELS: AreaPanel[] = [
   {
     slug: "malad",
     name: "Malad",
-    image: "/premium/u/tower-06.jpg",
+    image: "/premium/p/p6.jpg",
     body: "Growing residential and commercial options near Mindspace and the Link Road corridor. More investor money here than in the other two, which moves the price differently.",
     stats: [
       { value: "₹27,000", label: "Resale asking, per sq ft carpet, West" },
@@ -183,7 +183,7 @@ export const SERVICE_PANELS: ServicePanel[] = [
     n: "03",
     slug: "new-project-bookings",
     title: "New project bookings",
-    image: "/premium/u/tower-07.jpg",
+    image: "/premium/u/tower-rising.jpg",
     lead: "Early access, and the floor that is worth it.",
     body: "Launch access through developers we deal with directly, with the current price sheet and a straight answer on which floor and view are worth the money.",
   },
