@@ -40,7 +40,10 @@ export const dynamic = "force-dynamic";
 
 const RESEND_KEY = process.env.RESEND_API_KEY;
 const TO = process.env.LEAD_TO_EMAIL || site.email;
-const FROM = process.env.LEAD_FROM_EMAIL || "Enquiries <onboarding@resend.dev>";
+// shreegiriraj.com was verified in Resend on 18 September 2026 (DKIM on
+// resend._domainkey, SPF and bounce MX on send.), so enquiries now come from
+// the firm's own domain rather than Resend's shared test sender.
+const FROM = process.env.LEAD_FROM_EMAIL || "Shree Giriraj Enquiries <enquiries@shreegiriraj.com>";
 
 /** Trim, cap length, and drop anything that is not a string. */
 function clean(v: unknown, max = 500): string | undefined {
