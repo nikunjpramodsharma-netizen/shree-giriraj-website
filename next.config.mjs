@@ -17,6 +17,16 @@ const nextConfig = {
   async redirects() {
     const group = SERVICE_SLUGS.join("|");
     return [
+      // The site moved to its own domain on 18 September 2026. The old Vercel
+      // address permanently redirects there, path kept, so Google only ever
+      // sees one copy of each page. Preview deployments use other hostnames
+      // and are unaffected.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "shree-giriraj-website-chi.vercel.app" }],
+        destination: "https://www.shreegiriraj.com/:path*",
+        permanent: true,
+      },
       // The service pages live at /services/[slug]. Bare slugs used to resolve
       // too, giving every service two self canonicalising URLs per locale.
       // 301 rather than 404 so any link that already exists keeps its value.
