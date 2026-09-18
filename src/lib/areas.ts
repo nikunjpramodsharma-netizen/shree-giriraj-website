@@ -64,7 +64,7 @@ export type ProseSection = {
   image?: AreaImage;
   invite?: AreaInvite;
   /** A motion scene rendered after this section. */
-  scene?: "map" | "pockets" | "commute" | "landmarks" | "rents" | "redevelopment";
+  scene?: "map" | "pockets" | "landmarks" | "rents" | "redevelopment";
 };
 
 export type AreaSection = ProseSection | InputBlock;
@@ -74,8 +74,7 @@ export function isInputBlock(s: AreaSection): s is InputBlock {
 }
 
 /**
- * The motion data for an area page: the hero clip, the commute counters,
- * the metro line that draws itself, the pocket bars, the pocket scenes that
+ * The motion data for an area page: the hero clip, the pocket bars, the pocket scenes that
  * change on their own, the landmark strip and the rent bars. All figures are
  * the ones in the prose and sources below; the scenes show them moving.
  */
@@ -83,8 +82,6 @@ export type AreaMotion = {
   video: { src: string; poster: string };
   /** The schematic that lights up under "The lie of the land". */
   map: AreaMapSpec;
-  commute: { value?: number; text?: string; prefix?: string; suffix?: string; label: string }[];
-  metro: { label: string; stops: { name: string; here?: boolean }[] }[];
   pockets: { label: string; value: number; note?: string }[];
   pocketsNote: string;
   pocketScenes: { kicker?: string; title: string; text: string; image?: { src: string; alt: string; credit?: string } }[];
@@ -142,16 +139,6 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
           { label: "Magathane", x: 700, y: 480 },
         ],
       },
-      commute: [
-        { value: 23, suffix: " min", label: "to Andheri by local" },
-        { value: 12, suffix: " km", label: "to the airport by road" },
-        { value: 2.87, decimals: 2, suffix: " lakh", label: "passengers a day at the station" } as never,
-        { value: 10, label: "platforms at Borivali" },
-      ],
-      metro: [
-        { label: "Metro Line 2A, west side", stops: [{ name: "Dahisar East" }, { name: "Mandapeshwar" }, { name: "Eksar" }, { name: "Borivali West", here: true }, { name: "Shimpoli" }, { name: "Kandivali West" }, { name: "Andheri West" }] },
-        { label: "Metro Line 7, east side", stops: [{ name: "Dahisar East" }, { name: "Ovaripada" }, { name: "Rashtriya Udyan", here: true }, { name: "Devipada" }, { name: "Magathane" }, { name: "Poisar" }, { name: "Gundavali" }] },
-      ],
       pockets: [
         { label: "Yogi Nagar", value: 30400, note: "27,000 to 33,800" },
         { label: "Shimpoli", value: 29000, note: "27,500 to 30,500" },
@@ -205,13 +192,6 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
           button: "Ask which pocket fits",
           message: "Hi Shree Giriraj, I am looking at Borivali. My budget is about ___ and I want to know which pocket fits us. Can you help?",
         },
-      },
-      {
-        heading: "Getting around",
-        scene: "commute",
-        body: [
-          "Borivali station is a terminus for slow and fast locals and the last city stop for long distance trains. Metro Line 2A serves the West along New Link Road and Line 7 serves the East along the highway, both every eight minutes at peak, with the airport extension of Line 7 due in December 2026.",
-        ],
       },
       {
         heading: "Green, and why it matters to the price",
@@ -315,16 +295,6 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
           { label: "Lokhandwala, East", x: 700, y: 520 },
         ],
       },
-      commute: [
-        { value: 12, suffix: " min", label: "to Andheri by slow local" },
-        { value: 16, suffix: " km", label: "to the airport by road" },
-        { value: 2, label: "metro lines, one each side" },
-        { value: 1907, label: "the year the station opened" },
-      ],
-      metro: [
-        { label: "Metro Line 2A, west side", stops: [{ name: "Borivali West" }, { name: "Shimpoli" }, { name: "Kandivali West", here: true }, { name: "Dahanukarwadi", here: true }, { name: "Valnai" }, { name: "Malad West" }, { name: "Andheri West" }] },
-        { label: "Metro Line 7, east side", stops: [{ name: "Magathane" }, { name: "Poisar", here: true }, { name: "Akurli", here: true }, { name: "Kurar" }, { name: "Dindoshi" }, { name: "Aarey" }, { name: "Gundavali" }] },
-      ],
       pockets: [
         { label: "Lokhandwala, East", value: 43700, note: "HomeBazaar, May 2026" },
         { label: "Mahavir Nagar, West", value: 36450, note: "Square Yards, 2026" },
@@ -377,13 +347,6 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
           button: "Talk through the pockets",
           message: "Hi Shree Giriraj, I am looking at Kandivali with a budget of about ___. Which pockets should I be seeing?",
         },
-      },
-      {
-        heading: "Getting around",
-        scene: "commute",
-        body: [
-          "Kandivali is a slow train stop, so fast locals do not halt here; Borivali's terminus is one stop north. The metro is what changed the suburb: Line 2A along New Link Road in the West, Line 7 along the highway in the East, both at eight minute peak frequency.",
-        ],
       },
       {
         heading: "Green, shopping and daily life",
@@ -484,16 +447,6 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
           { label: "Dindoshi", x: 720, y: 470 },
         ],
       },
-      commute: [
-        { value: 14, suffix: " min", label: "to Andheri by local" },
-        { value: 15, suffix: " km", label: "from Mindspace to the airport" },
-        { value: 12, suffix: " km", label: "from Malad West to BKC" },
-        { value: 0.8, decimals: 1, suffix: " mn sq ft", label: "leased at Paradigm Mindspace" } as never,
-      ],
-      metro: [
-        { label: "Metro Line 2A, west side", stops: [{ name: "Kandivali West" }, { name: "Dahanukarwadi" }, { name: "Valnai" , here: true }, { name: "Malad West", here: true }, { name: "Lower Malad", here: true }, { name: "Bangur Nagar" }, { name: "Andheri West" }] },
-        { label: "Metro Line 7, east side", stops: [{ name: "Poisar" }, { name: "Akurli" }, { name: "Kurar", here: true }, { name: "Dindoshi", here: true }, { name: "Aarey" }, { name: "Goregaon East" }, { name: "Gundavali" }] },
-      ],
       pockets: [
         { label: "Evershine Nagar, West", value: 32000, note: "Dwello, 2026" },
         { label: "Malad West average", value: 30800, note: "Square Yards, September 2026" },
@@ -551,13 +504,6 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
         scene: "landmarks",
         body: [
           "Orlem is Malad's East Indian heart, and Marve Road runs on past it to Aksa, Marve and Madh Island. The Madh to Versova bridge, cleared by the Bombay High Court in September 2026 and targeted for 2029, would turn a 21 kilometre drive into a few minutes.",
-        ],
-      },
-      {
-        heading: "Getting around",
-        scene: "commute",
-        body: [
-          "Malad station is about fourteen minutes from Andheri. Metro Line 2A serves the West and Line 7 the East. The Coastal Road North, targeted for December 2028, and the Madh to Versova bridge both run through or beside Malad West, which is why investors are watching the Link Road belt.",
         ],
       },
       {

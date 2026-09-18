@@ -8,7 +8,6 @@ import { ConsultCTA } from "@/components/ConsultCTA";
 import { HeroVideo } from "@/components/HeroVideo";
 import { FactChips } from "@/components/motion/FactChips";
 import { GrowBars } from "@/components/motion/GrowBars";
-import { DrawLine } from "@/components/motion/DrawLine";
 import { AutoScene } from "@/components/motion/AutoScene";
 import { InView } from "@/components/motion/InView";
 import { Parallax } from "@/components/motion/Parallax";
@@ -232,29 +231,6 @@ export default async function AreaPage({
                       </div>
                     </div>
                     <AutoScene scenes={area.motion.pocketScenes} />
-                  </div>
-                )}
-                {s.scene === "commute" && (
-                  <div className="mt-10 rounded-3xl bg-brand-indigo-deep p-6 text-paper md:p-9">
-                    <InView className="cascade grid gap-6 sm:grid-cols-2 lg:grid-cols-4" threshold={0.2}>
-                      {area.motion.commute.map((c, i) => (
-                        <div key={c.label} style={{ ["--i" as string]: i }} className="border-l-2 border-brass/60 pl-4">
-                          <div className="font-display text-3xl font-semibold text-white">
-                            {c.value !== undefined ? (
-                              <CountUp value={c.value} prefix={c.prefix} suffix={c.suffix} decimals={(c as { decimals?: number }).decimals} />
-                            ) : (
-                              c.text
-                            )}
-                          </div>
-                          <div className="mt-1 text-sm text-paper/75">{c.label}</div>
-                        </div>
-                      ))}
-                    </InView>
-                    <div className="mt-10 space-y-8">
-                      {area.motion.metro.map((m) => (
-                        <DrawLine key={m.label} label={m.label} stops={m.stops} tone="dark" />
-                      ))}
-                    </div>
                   </div>
                 )}
                 {s.scene === "landmarks" && (
