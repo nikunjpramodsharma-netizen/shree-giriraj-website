@@ -31,6 +31,15 @@ function resolveSiteUrl(): string {
  * that domain once it is the project's production domain, so the fallback is
  * only reached outside Vercel.
  */
+/**
+ * Google Search Console ownership token, the content of the
+ * google-site-verification meta tag. It is public by design (it sits in the
+ * page head), so it lives in code; the env var can override it. Empty means
+ * no tag is emitted.
+ */
+export const GOOGLE_SITE_VERIFICATION =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "";
+
 export const SITE_URL = resolveSiteUrl().replace(/\/$/, "");
 
 /**

@@ -5,7 +5,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { routing } from "@/i18n/routing";
-import { SITE_URL, OG_IMAGE } from "@/lib/seo";
+import { SITE_URL, OG_IMAGE, GOOGLE_SITE_VERIFICATION } from "@/lib/seo";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Gtm } from "@/components/Gtm";
@@ -48,6 +48,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale: params.locale, namespace: "metadata" });
   return {
     metadataBase: new URL(siteUrl),
+    ...(GOOGLE_SITE_VERIFICATION ? { verification: { google: GOOGLE_SITE_VERIFICATION } } : {}),
     title: {
       default: t("siteTitle"),
       template: t("titleTemplate"),
