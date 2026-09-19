@@ -133,7 +133,7 @@ export default async function ProjectsPage({
                       className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                     />
                     {project.status && (
-                      <span className="absolute left-3 top-3 rounded-full bg-brass px-3 py-1 text-[0.66rem] font-bold uppercase tracking-wider text-brand-indigo-deep">
+                      <span className="absolute left-3 top-3 rounded-full bg-bronze px-3 py-1 text-[0.66rem] font-bold uppercase tracking-wider text-brand-indigo-deep">
                         {statusLabel[project.status] || project.status}
                       </span>
                     )}

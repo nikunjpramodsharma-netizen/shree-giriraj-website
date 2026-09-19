@@ -267,7 +267,7 @@ export function EmiCalculator() {
                 className="bg-brand-indigo"
                 style={{ width: `${100 - interestShare}%` }}
               />
-              <div className="bg-brass" style={{ width: `${interestShare}%` }} />
+              <div className="bg-bronze" style={{ width: `${interestShare}%` }} />
             </div>
 
             <div className="max-h-96 overflow-auto rounded-xl border border-line">
@@ -287,7 +287,7 @@ export function EmiCalculator() {
                       <td className="p-3 text-right tabular-nums">
                         {inr(y.principalPaid)}
                       </td>
-                      <td className="p-3 text-right tabular-nums text-brass">
+                      <td className="p-3 text-right tabular-nums text-bronze-deep">
                         {inr(y.interestPaid)}
                       </td>
                       <td className="p-3 text-right tabular-nums">
@@ -479,7 +479,7 @@ function NumberField({
           step={step}
           value={value}
           onChange={(e) => onChange(Math.max(0, Number(e.target.value) || 0))}
-          className="w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-brass"
+          className="w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-bronze"
         />
         {suffix && <span className="text-sm text-muted">{suffix}</span>}
       </span>

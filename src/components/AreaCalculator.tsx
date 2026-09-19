@@ -161,7 +161,7 @@ export function AreaCalculator() {
                   {Math.round(carpetShare)}%
                 </div>
                 <div
-                  className="flex items-center justify-center bg-brass/40 text-xs font-semibold text-ink"
+                  className="flex items-center justify-center bg-bronze/40 text-xs font-semibold text-ink"
                   style={{ width: `${100 - carpetShare}%` }}
                 >
                   {Math.round(100 - carpetShare)}%
@@ -176,7 +176,7 @@ export function AreaCalculator() {
             <div
               className={
                 verdict === "high" || verdict === "very high"
-                  ? "rounded-xl border border-brass/40 bg-brass/10 px-5 py-4 text-sm text-ink"
+                  ? "rounded-xl border border-bronze/40 bg-bronze/10 px-5 py-4 text-sm text-ink"
                   : "rounded-xl border border-line bg-paper-alt px-5 py-4 text-sm text-ink"
               }
             >
@@ -209,7 +209,7 @@ export function AreaCalculator() {
           <div className="p-6">
             {/* The finding worth paying for. */}
             {cmp.headlineMisleads && winner && (
-              <div className="mb-5 rounded-xl border border-brass/40 bg-brass/10 px-5 py-4 text-sm text-ink">
+              <div className="mb-5 rounded-xl border border-bronze/40 bg-bronze/10 px-5 py-4 text-sm text-ink">
                 <b>The cheaper looking flat is the worse buy.</b> Once loading
                 is taken out, {winner.label} costs {inr(cmp.carpetRateGap)} less
                 for every square foot you can actually use, even though its
@@ -299,7 +299,7 @@ function FlatInputs({
         value={flat.label}
         onChange={(e) => set({ label: e.target.value })}
         aria-label="Name this flat"
-        className="w-full rounded-xl border border-line bg-paper-alt px-4 py-2 text-sm font-semibold text-ink outline-none focus:border-brass"
+        className="w-full rounded-xl border border-line bg-paper-alt px-4 py-2 text-sm font-semibold text-ink outline-none focus:border-bronze"
       />
       <Field
         label="Price"
@@ -344,7 +344,7 @@ function Field({
         step={step}
         value={value}
         onChange={(e) => onChange(Math.max(0, Number(e.target.value) || 0))}
-        className="mt-1 w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-brass"
+        className="mt-1 w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-bronze"
       />
     </label>
   );

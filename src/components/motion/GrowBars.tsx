@@ -43,7 +43,7 @@ export function GrowBars({
           </div>
           <div className={`mt-1.5 h-2 overflow-hidden rounded-full ${dark ? "bg-white/10" : "bg-brand-indigo/10"}`}>
             <div
-              className="bar-fill h-full rounded-full bg-gradient-to-r from-brass to-brass-bright"
+              className="bar-fill h-full rounded-full bg-gradient-to-r from-bronze to-bronze"
               style={{ ["--w" as string]: `${Math.max(4, (b.value / top) * 100)}%` }}
             />
           </div>

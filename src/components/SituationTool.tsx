@@ -158,7 +158,7 @@ export function SituationTool({
                   </p>
                 )}
 
-                <p className="border-l-2 border-brass pl-3.5 text-[0.94rem] text-muted">
+                <p className="border-l-2 border-bronze pl-3.5 text-[0.94rem] text-muted">
                   <b className="text-ink">{tr(locale, "Where we come in:")}</b>{" "}
                   {chosen.help}
                 </p>

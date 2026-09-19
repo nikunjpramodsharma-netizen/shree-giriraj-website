@@ -44,7 +44,7 @@ export function ConsultCTA({
             <ol className="mt-6 grid gap-2.5 text-sm text-paper/80 sm:grid-cols-2">
               {CONSULT.howItRuns.map((step, i) => (
                 <li key={step} className="flex gap-3">
-                  <span className="font-display text-base text-brass-bright">{i + 1}</span>
+                  <span className="font-display text-base text-bronze">{i + 1}</span>
                   <span>{step}</span>
                 </li>
               ))}
@@ -58,7 +58,7 @@ export function ConsultCTA({
                 <ul className="mt-3 space-y-2 text-sm text-paper/75">
                   {CONSULT.what.map((x) => (
                     <li key={x} className="flex gap-2.5">
-                      <span aria-hidden="true" className="text-brass-bright">
+                      <span aria-hidden="true" className="text-bronze">
                         ·
                       </span>
                       <span>{x}</span>

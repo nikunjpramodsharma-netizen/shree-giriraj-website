@@ -68,7 +68,7 @@ export function CapitalGainsCalculator() {
 
   return (
     <div className="rounded-2xl border border-line bg-paper">
-      <div className="border-b border-line bg-brass/10 px-6 py-4 text-sm text-ink">
+      <div className="border-b border-line bg-bronze/10 px-6 py-4 text-sm text-ink">
         <b>This is tax, and tax is not our trade.</b> It follows the rules as
         published and is here to help you plan a sale. Confirm the figure with a
         chartered accountant before you file anything on it.
@@ -198,7 +198,7 @@ export function CapitalGainsCalculator() {
           <ul className="mt-3 space-y-2 text-sm text-ink/75">
             {CG_RELIEFS.map((x) => (
               <li key={x.section} className="flex gap-2.5">
-                <span aria-hidden="true" className="text-brass">
+                <span aria-hidden="true" className="text-bronze-deep">
                   ·
                 </span>
                 <span>
@@ -282,7 +282,7 @@ function Callout({
     <div
       className={
         tone === "warn"
-          ? "rounded-xl border border-brass/40 bg-brass/10 px-5 py-4 text-sm text-ink"
+          ? "rounded-xl border border-bronze/40 bg-bronze/10 px-5 py-4 text-sm text-ink"
           : "rounded-xl border border-line bg-paper-alt px-5 py-4 text-sm text-ink"
       }
     >
@@ -338,7 +338,7 @@ function Num({
         step={step}
         value={value}
         onChange={(e) => onChange(Math.max(0, Number(e.target.value) || 0))}
-        className="mt-1.5 w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-brass"
+        className="mt-1.5 w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-bronze"
       />
       {hint && <span className="mt-1.5 block text-xs text-muted">{hint}</span>}
     </label>
@@ -366,7 +366,7 @@ function DateField({
         type="date"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="mt-1.5 w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-brass"
+        className="mt-1.5 w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-bronze"
       />
     </label>
   );

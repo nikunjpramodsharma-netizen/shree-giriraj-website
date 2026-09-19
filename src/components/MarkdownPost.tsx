@@ -128,7 +128,7 @@ export function MarkdownPost({
               ) : (
                 <span
                   aria-hidden="true"
-                  className="flex h-8 w-8 items-center justify-center rounded-full bg-brass/20 font-display text-xs font-semibold text-brass-bright"
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-bronze/20 font-display text-xs font-semibold text-bronze"
                 >
                   {authorInitials()}
                 </span>
@@ -146,7 +146,7 @@ export function MarkdownPost({
       <div className="wrap grid gap-10 py-12 lg:grid-cols-[minmax(0,1fr)_210px] lg:gap-14">
         <div className="min-w-0">
           {!post.isReady && (
-            <div className="mb-8 rounded-xl border border-brass/40 bg-brass/10 px-5 py-4 text-sm text-ink">
+            <div className="mb-8 rounded-xl border border-bronze/40 bg-bronze/10 px-5 py-4 text-sm text-ink">
               <b>Draft.</b> {post.openMarkers.length} item
               {post.openMarkers.length === 1 ? "" : "s"} still need attention,
               marked through the article. This page is served noindex until they
@@ -157,7 +157,7 @@ export function MarkdownPost({
           {/* The most extracted element on the page, so it sits first and is
               complete on its own. */}
           {post.answer && (
-            <div className="mb-9 rounded-r-xl border-l-[3px] border-brass bg-paper-alt px-6 py-5">
+            <div className="mb-9 rounded-r-xl border-l-[3px] border-bronze bg-paper-alt px-6 py-5">
               <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
                 The short answer
               </div>
@@ -220,12 +220,12 @@ export function MarkdownPost({
                 alt=""
                 width={72}
                 height={72}
-                className="h-[72px] w-[72px] shrink-0 rounded-full object-cover ring-2 ring-brass/40"
+                className="h-[72px] w-[72px] shrink-0 rounded-full object-cover ring-2 ring-bronze/40"
               />
             ) : (
               <span
                 aria-hidden="true"
-                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-brand-indigo font-display text-lg font-semibold text-brass-bright"
+                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-brand-indigo font-display text-lg font-semibold text-bronze"
               >
                 {authorInitials()}
               </span>

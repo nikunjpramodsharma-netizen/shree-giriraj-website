@@ -16,7 +16,7 @@ import { parseInline, type Block, type Inline, type MarkerKind } from "@/lib/mar
 const MARKER_STYLE: Record<MarkerKind, { label: string; cls: string }> = {
   VERIFY: {
     label: "Needs checking",
-    cls: "border-brass/40 bg-brass/10",
+    cls: "border-bronze/40 bg-bronze/10",
   },
   "YOUR WORDS": {
     label: "Needs your words",
@@ -66,7 +66,7 @@ function BlockView({ b }: { b: Block }) {
         <ul className="mt-4 space-y-2">
           {b.items.map((it, i) => (
             <li key={i} className="flex gap-2.5 text-ink/85">
-              <span aria-hidden="true" className="text-brass">
+              <span aria-hidden="true" className="text-bronze-deep">
                 ·
               </span>
               <span>
@@ -83,7 +83,7 @@ function BlockView({ b }: { b: Block }) {
             <li key={i} className="flex gap-3 text-ink/85">
               <span
                 aria-hidden="true"
-                className="mt-0.5 text-sm font-bold tabular-nums text-brass"
+                className="mt-0.5 text-sm font-bold tabular-nums text-bronze-deep"
               >
                 {i + 1}
               </span>
@@ -96,7 +96,7 @@ function BlockView({ b }: { b: Block }) {
       );
     case "quote":
       return (
-        <blockquote className="mt-6 border-l-[3px] border-brass bg-paper-alt px-5 py-4 text-ink/85">
+        <blockquote className="mt-6 border-l-[3px] border-bronze bg-paper-alt px-5 py-4 text-ink/85">
           <Spans spans={b.spans} />
         </blockquote>
       );
@@ -156,7 +156,7 @@ export function Spans({ spans }: { spans: Inline[] }) {
             <span
               key={i}
               title={s.v}
-              className="inline-block rounded-full border border-dashed border-brass/60 bg-brass/10 px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wider text-bronze-deep"
+              className="inline-block rounded-full border border-dashed border-bronze/60 bg-bronze/10 px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wider text-bronze-deep"
             >
               {MARKER_STYLE[s.kind].label}
             </span>

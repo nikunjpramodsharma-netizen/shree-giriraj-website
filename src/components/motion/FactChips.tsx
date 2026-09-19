@@ -26,10 +26,10 @@ export function FactChips({ facts, tone = "dark" }: { facts: Fact[]; tone?: "dar
           key={f.label}
           style={{ ["--i" as string]: i }}
           className={`rounded-full border px-4 py-2 ${
-            dark ? "border-brass/40 bg-white/5 text-white" : "border-line bg-white text-ink"
+            dark ? "border-bronze/40 bg-white/5 text-white" : "border-line bg-white text-ink"
           }`}
         >
-          <span className="font-display text-lg font-semibold text-brass-bright">
+          <span className="font-display text-lg font-semibold text-bronze">
             {f.value !== undefined ? (
               <CountUp value={f.value} prefix={f.prefix} suffix={f.suffix} decimals={f.decimals} />
             ) : (

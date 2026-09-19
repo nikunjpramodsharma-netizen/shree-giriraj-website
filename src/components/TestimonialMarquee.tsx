@@ -53,11 +53,11 @@ export function TestimonialMarquee({
         href={rating.url}
         target="_blank"
         rel="noopener"
-        className="tm-google group inline-flex items-center gap-3 rounded-full border border-line bg-white px-4 py-2.5 shadow-sm transition hover:border-brass hover:shadow-md"
+        className="tm-google group inline-flex items-center gap-3 rounded-full border border-line bg-white px-4 py-2.5 shadow-sm transition hover:border-bronze hover:shadow-md"
       >
         <GoogleMark />
         <span className="font-display text-xl font-semibold text-brand-indigo">{rating.value}</span>
-        <Stars className="text-brass" />
+        <Stars className="text-bronze-deep" />
         <span className="text-sm text-muted">
           {labels.onGoogle}
           {rating.count && labels.reviewCount ? ` · ${labels.reviewCount}` : ""}
@@ -83,9 +83,9 @@ export function TestimonialMarquee({
                 >
                   <figure>
                     <div className="flex items-center justify-between gap-2">
-                      <Stars className="text-brass" />
+                      <Stars className="text-bronze-deep" />
                       {t.placeholder ? (
-                        <span className="rounded-full border border-brass/40 px-2 py-0.5 text-[0.58rem] font-semibold uppercase tracking-wider text-bronze-deep">
+                        <span className="rounded-full border border-bronze/40 px-2 py-0.5 text-[0.58rem] font-semibold uppercase tracking-wider text-bronze-deep">
                           {labels.placeholder}
                         </span>
                       ) : t.source?.kind === "google" ? (
@@ -108,7 +108,7 @@ export function TestimonialMarquee({
                     <figcaption className="mt-5 flex items-center gap-3 border-t border-line pt-4">
                       <span
                         aria-hidden="true"
-                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-indigo font-display text-sm font-semibold text-brass-bright"
+                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-indigo font-display text-sm font-semibold text-bronze"
                       >
                         {initials(t.name)}
                       </span>

@@ -97,7 +97,7 @@ export function StampDutyCalculator() {
             onChange={(e) =>
               setReckonerValue(Math.max(0, Number(e.target.value) || 0))
             }
-            className="mt-1.5 w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-brass"
+            className="mt-1.5 w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-bronze"
           />
           <span className="mt-1.5 block text-xs text-muted">
             Duty is charged on this or the price, whichever is higher. Look it
@@ -270,7 +270,7 @@ function Callout({
     <div
       className={
         tone === "warn"
-          ? "rounded-xl border border-brass/40 bg-brass/10 px-5 py-4 text-sm text-ink"
+          ? "rounded-xl border border-bronze/40 bg-bronze/10 px-5 py-4 text-sm text-ink"
           : "rounded-xl border border-line bg-paper-alt px-5 py-4 text-sm text-ink"
       }
     >

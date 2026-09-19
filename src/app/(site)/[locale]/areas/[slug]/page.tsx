@@ -139,14 +139,14 @@ export default async function AreaPage({
           // Visible on the page on purpose. This page is unfinished, it is
           // noindexed, and anyone reviewing it should be able to see that at a
           // glance rather than mistake a prompt for copy.
-          <div className="mb-10 rounded-xl border border-brass/40 bg-brass/10 px-5 py-4 text-sm text-ink">
+          <div className="mb-10 rounded-xl border border-bronze/40 bg-bronze/10 px-5 py-4 text-sm text-ink">
             <b>Draft.</b> The flagged blocks below need your local knowledge.
             This page is set to noindex until they are written, so it will not
             appear in search while it is in this state.
           </div>
         )}
 
-        <div className="mb-10 max-w-[68ch] rounded-r-xl border-l-[3px] border-brass bg-paper-alt px-6 py-5">
+        <div className="mb-10 max-w-[68ch] rounded-r-xl border-l-[3px] border-bronze bg-paper-alt px-6 py-5">
           <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
             The short answer
           </div>
@@ -191,7 +191,7 @@ export default async function AreaPage({
               <a
                 key={l.intent}
                 href={listingPath(l)}
-                className="group rounded-xl border border-line bg-white p-5 transition hover:border-brass hover:shadow-md"
+                className="group rounded-xl border border-line bg-white p-5 transition hover:border-bronze hover:shadow-md"
               >
                 <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
                   {l.intent === "sale" ? "Buying" : "Renting"}
@@ -285,7 +285,7 @@ export default async function AreaPage({
                 <summary className="cursor-pointer list-none font-medium text-brand-indigo marker:content-none">
                   <span className="flex items-center justify-between gap-4">
                     {f.q}
-                    <span className="shrink-0 text-brass transition group-open:rotate-45">+</span>
+                    <span className="shrink-0 text-bronze-deep transition group-open:rotate-45">+</span>
                   </span>
                 </summary>
                 <p className="mt-3 text-[0.97rem] text-ink/75">{f.a}</p>
@@ -355,7 +355,7 @@ export default async function AreaPage({
  */
 function Invite({ invite }: { invite: AreaInvite }) {
   return (
-    <aside className="mt-8 max-w-[68ch] rounded-2xl border border-brass/30 bg-brand-indigo-deep p-6 text-paper md:p-7">
+    <aside className="mt-8 max-w-[68ch] rounded-2xl border border-bronze/30 bg-brand-indigo-deep p-6 text-paper md:p-7">
       <p className="font-display text-lg leading-snug text-white md:text-xl">{invite.hook}</p>
       <div className="mt-5 flex flex-wrap items-center gap-3">
         <a
@@ -366,7 +366,7 @@ function Invite({ invite }: { invite: AreaInvite }) {
         >
           {invite.button}
         </a>
-        <a href="#enquire" className="text-sm font-semibold text-brass-bright underline decoration-brass/40 underline-offset-4">
+        <a href="#enquire" className="text-sm font-semibold text-bronze underline decoration-bronze/40 underline-offset-4">
           Or leave your details below
         </a>
       </div>
@@ -378,17 +378,17 @@ function Invite({ invite }: { invite: AreaInvite }) {
 /** An unwritten section, shown as the questions it is waiting on. */
 function PendingSection({ block }: { block: InputBlock }) {
   return (
-    <section className="max-w-[68ch] rounded-xl border border-dashed border-brass/50 p-6">
+    <section className="max-w-[68ch] rounded-xl border border-dashed border-bronze/50 p-6">
       <div className="flex items-baseline gap-3">
         <h2 className="text-2xl text-ink/70 md:text-3xl">{block.heading}</h2>
-        <span className="shrink-0 rounded-full border border-brass/40 px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wider text-bronze-deep">
+        <span className="shrink-0 rounded-full border border-bronze/40 px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wider text-bronze-deep">
           Needs you
         </span>
       </div>
       <ul className="mt-4 space-y-2 text-sm text-ink/60">
         {block.prompts.map((p) => (
           <li key={p} className="flex gap-2.5">
-            <span aria-hidden="true" className="text-brass">
+            <span aria-hidden="true" className="text-bronze-deep">
               ·
             </span>
             <span>{p}</span>

@@ -275,7 +275,7 @@ export default async function PostPage({
           {/* ANSWER BLOCK. The most extracted element on the page, so it sits
               first and is complete on its own. */}
           {answer && (
-            <div className="mb-9 rounded-r-xl border-l-[3px] border-brass bg-paper-alt px-6 py-5">
+            <div className="mb-9 rounded-r-xl border-l-[3px] border-bronze bg-paper-alt px-6 py-5">
               <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
                 The short answer
               </div>

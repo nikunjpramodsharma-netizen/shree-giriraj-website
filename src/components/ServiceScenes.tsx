@@ -149,7 +149,7 @@ export function ServiceScenes({
           <div className="wrap">
             <InView className="cascade grid gap-8 sm:grid-cols-2 lg:grid-cols-4" threshold={0.2}>
               {scene.numbers.map((n, i) => (
-                <div key={n.label} style={{ ["--i" as string]: i }} className="border-l-2 border-brass/60 pl-5">
+                <div key={n.label} style={{ ["--i" as string]: i }} className="border-l-2 border-bronze/60 pl-5">
                   <div className="font-display text-3xl font-semibold text-white md:text-4xl">
                     {n.value !== undefined ? (
                       <CountUp value={n.value} prefix={n.prefix} suffix={n.suffix} decimals={n.decimals} />
@@ -189,7 +189,7 @@ export function ServiceScenes({
                           <ul key={bi} className="mt-4 space-y-2">
                             {b.items.map((it, k) => (
                               <li key={k} className="flex gap-2.5 text-ink/85">
-                                <span aria-hidden="true" className="text-brass">·</span>
+                                <span aria-hidden="true" className="text-bronze-deep">·</span>
                                 <span><Spans spans={it} /></span>
                               </li>
                             ))}
@@ -200,7 +200,7 @@ export function ServiceScenes({
                           <ol key={bi} className="mt-4 space-y-2">
                             {b.items.map((it, k) => (
                               <li key={k} className="flex gap-3 text-ink/85">
-                                <span aria-hidden="true" className="mt-0.5 text-sm font-bold tabular-nums text-brass">{k + 1}</span>
+                                <span aria-hidden="true" className="mt-0.5 text-sm font-bold tabular-nums text-bronze-deep">{k + 1}</span>
                                 <span><Spans spans={it} /></span>
                               </li>
                             ))}
@@ -279,7 +279,7 @@ export function ServiceScenes({
       {/* SMALL PRINT */}
       {note.length > 0 && (
         <section className="wrap py-10">
-          <div className="mx-auto max-w-[62ch] border-l-[3px] border-brass bg-paper-alt px-5 py-4 text-sm text-ink/75">
+          <div className="mx-auto max-w-[62ch] border-l-[3px] border-bronze bg-paper-alt px-5 py-4 text-sm text-ink/75">
             {note.map((b, i) =>
               b.t === "p" ? (
                 <p key={i} className={i > 0 ? "mt-3" : ""}>

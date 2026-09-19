@@ -52,7 +52,7 @@ const components: PortableTextComponents = {
       <h4 className="mt-6 mb-2 text-lg text-brand-indigo">{children}</h4>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="my-6 border-l-4 border-brass pl-5 font-display text-lg italic text-brand-indigo">
+      <blockquote className="my-6 border-l-4 border-bronze pl-5 font-display text-lg italic text-brand-indigo">
         {children}
       </blockquote>
     ),

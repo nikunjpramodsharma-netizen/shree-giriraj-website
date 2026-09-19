@@ -91,8 +91,8 @@ export function ContactCTA({
 
   const dark = tone === "dark";
   const field = dark
-    ? "w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-paper/40 outline-none focus:border-brass"
-    : "w-full rounded-xl border border-line bg-paper-alt px-4 py-3 text-sm text-ink placeholder:text-muted/70 outline-none focus:border-brass";
+    ? "w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-paper/40 outline-none focus:border-bronze"
+    : "w-full rounded-xl border border-line bg-paper-alt px-4 py-3 text-sm text-ink placeholder:text-muted/70 outline-none focus:border-bronze";
   const label = dark ? "text-paper/60" : "text-muted";
 
   const waMessage =

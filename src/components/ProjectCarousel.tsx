@@ -90,7 +90,7 @@ export function ProjectCarousel({
         <div className="grid">
           {slides.map((s, k) => (
             <div key={s.slug} aria-hidden={k !== i} className={`col-start-1 row-start-1 max-w-3xl ${k === i ? "scene-in" : "invisible"}`}>
-              <span className="inline-block rounded-sm bg-brass px-3 py-1.5 text-[0.6rem] font-bold uppercase tracking-[0.14em] text-brand-indigo-deep">
+              <span className="inline-block rounded-sm bg-bronze px-3 py-1.5 text-[0.6rem] font-bold uppercase tracking-[0.14em] text-brand-indigo-deep">
                 {labels.eyebrow}
               </span>
               <h2 className="mt-4 text-3xl text-white md:text-5xl">{s.name}</h2>
@@ -99,7 +99,7 @@ export function ProjectCarousel({
               {s.configs.length > 0 && (
                 <div className="mt-7 grid max-w-2xl grid-cols-2 gap-2.5 md:grid-cols-4">
                   {s.configs.slice(0, 4).map((c, ci) => (
-                    <div key={`${c.type}-${ci}`} className="rounded-lg border border-brass/25 bg-white/5 p-3.5">
+                    <div key={`${c.type}-${ci}`} className="rounded-lg border border-bronze/25 bg-white/5 p-3.5">
                       <div className="text-[0.62rem] uppercase tracking-[0.12em] text-bronze">{c.type}</div>
                       {c.price && <div className="mt-1 font-display text-base text-white">{c.price}</div>}
                     </div>
@@ -135,9 +135,9 @@ export function ProjectCarousel({
                   className={`relative h-1.5 overflow-hidden rounded-full bg-white/25 transition-all ${k === i ? "w-10" : "w-3 hover:bg-white/50"}`}
                 >
                   {k === i && running && (
-                    <span key={`bar-${i}`} aria-hidden="true" className="deck-bar absolute inset-y-0 left-0 bg-brass-bright" style={{ animationDuration: `${interval}ms` }} />
+                    <span key={`bar-${i}`} aria-hidden="true" className="deck-bar absolute inset-y-0 left-0 bg-bronze" style={{ animationDuration: `${interval}ms` }} />
                   )}
-                  {k === i && !running && <span aria-hidden="true" className="absolute inset-0 bg-brass-bright" />}
+                  {k === i && !running && <span aria-hidden="true" className="absolute inset-0 bg-bronze" />}
                 </button>
               ))}
             </div>

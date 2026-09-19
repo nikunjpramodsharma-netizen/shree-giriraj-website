@@ -38,7 +38,7 @@
     @apply border-bronze bg-bronze text-brand-indigo-deep hover:-translate-y-0.5 hover:border-black hover:bg-white hover:text-black;
   }
   .btn-brass {
-    @apply border-brass bg-brass text-brand-indigo-deep hover:-translate-y-0.5 hover:border-black hover:bg-white hover:text-black;
+    @apply border-bronze bg-bronze text-brand-indigo-deep hover:-translate-y-0.5 hover:border-black hover:bg-white hover:text-black;
   }
   .btn-outline {
     @apply border-brand-indigo text-brand-indigo hover:border-black hover:bg-white hover:text-black;
@@ -124,7 +124,7 @@
   height: 48vw;
   right: -12vw;
   bottom: -20vw;
-  background: radial-gradient(circle, rgba(201, 162, 75, 0.55) 0%, rgba(201, 162, 75, 0) 66%);
+  background: radial-gradient(circle, rgba(184, 135, 90, 0.55) 0%, rgba(184, 135, 90, 0) 66%);
   animation: about-lobe-b 32s ease-in-out infinite alternate;
 }
 .about-mesh i:nth-child(3) {
@@ -176,13 +176,13 @@
 }
 .about-legend b {
   font-weight: 600;
-  color: #e0bd6a;
+  color: #b8875a;
 }
 .about-legend i {
   display: block;
   width: 34px;
   height: 1px;
-  background: linear-gradient(90deg, rgba(224, 189, 106, 0.9), rgba(224, 189, 106, 0.15));
+  background: linear-gradient(90deg, rgba(184, 135, 90, 0.9), rgba(184, 135, 90, 0.15));
 }
 
 /* ---- 4. the foreword. Portrait pinned beside the letter on wide screens,
@@ -258,7 +258,7 @@
   inset: 0;
   transform-origin: 50% 0;
   transform: scaleY(var(--jp, 0));
-  background: linear-gradient(180deg, #1c2450 0%, #2f418a 45%, #c9a24b 100%);
+  background: linear-gradient(180deg, #1c2450 0%, #2f418a 45%, #b8875a 100%);
 }
 /* The head rides the tip of the fill. A percentage of the same containing
    block the rail uses, never a measured px offset, which drifts the moment
@@ -272,8 +272,8 @@
   margin-left: -4.5px;
   margin-top: -4.5px;
   border-radius: 50%;
-  background: #e0bd6a;
-  box-shadow: 0 0 0 4px rgba(224, 189, 106, 0.18);
+  background: #b8875a;
+  box-shadow: 0 0 0 4px rgba(184, 135, 90, 0.18);
   opacity: 0;
   transition: opacity 0.4s var(--ease);
 }
@@ -317,8 +317,8 @@
 .jr-row.on .jr-dot {
   border-color: transparent;
   transform: scale(1.15);
-  background: linear-gradient(140deg, #2f418a, #c9a24b);
-  box-shadow: 0 0 0 5px rgba(201, 162, 75, 0.14);
+  background: linear-gradient(140deg, #2f418a, #b8875a);
+  box-shadow: 0 0 0 5px rgba(184, 135, 90, 0.14);
 }
 /* the year. Painted as a background clipped to the glyphs in both states, so
    lighting it swaps one gradient for another rather than a colour for a
@@ -336,7 +336,7 @@
   color: transparent;
 }
 .jr-row.on .jr-yr {
-  background: linear-gradient(90deg, #1c2450 0%, #2f418a 55%, #c9a24b 100%);
+  background: linear-gradient(90deg, #1c2450 0%, #2f418a 55%, #b8875a 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }

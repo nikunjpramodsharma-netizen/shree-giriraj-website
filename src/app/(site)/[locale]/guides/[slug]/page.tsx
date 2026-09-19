@@ -151,7 +151,7 @@ export default async function GuidePage({
         {/* ANSWER BLOCK. First on the page and complete on its own, because it
             is the element most likely to be lifted whole by a search or AI
             result. Same treatment as the blog template. */}
-        <div className="mb-10 max-w-[68ch] rounded-r-xl border-l-[3px] border-brass bg-paper-alt px-6 py-5">
+        <div className="mb-10 max-w-[68ch] rounded-r-xl border-l-[3px] border-bronze bg-paper-alt px-6 py-5">
           <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
             The short answer
           </div>
@@ -168,7 +168,7 @@ export default async function GuidePage({
           {pillar.sections.map((section, i) => (
             <section key={section.heading}>
               <div className="flex items-baseline gap-4">
-                <span className="text-[0.7rem] font-bold tabular-nums text-brass">
+                <span className="text-[0.7rem] font-bold tabular-nums text-bronze-deep">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h2 className="text-2xl text-ink md:text-3xl">

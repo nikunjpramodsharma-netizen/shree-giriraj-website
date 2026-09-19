@@ -57,7 +57,7 @@ export function TestimonialCarousel({
         aria-live="polite"
         className="mx-auto max-w-2xl rounded-2xl bg-white p-8 text-center shadow-sm"
       >
-        <div className="mb-3 text-brass">{"★".repeat(current.rating || 5)}</div>
+        <div className="mb-3 text-bronze-deep">{"★".repeat(current.rating || 5)}</div>
         <blockquote className="font-display text-lg text-brand-indigo">
           “{getLocalizedField(current.quote, locale)}”
         </blockquote>

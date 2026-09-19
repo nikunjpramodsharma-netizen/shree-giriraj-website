@@ -134,7 +134,7 @@ export default function AboutPage({
           <div className="eyebrow mt-8 text-bronze">About</div>
           <h1 className="mt-4 max-w-[17ch] text-4xl leading-[1.05] text-white md:text-6xl">
             In real estate since {site.established}.{" "}
-            <span className="text-brass-bright">
+            <span className="text-bronze">
               At the same office since {site.officeSince}.
             </span>
           </h1>
@@ -154,7 +154,7 @@ export default function AboutPage({
 
       {!STORY_IS_WRITTEN && (
         <div className="wrap pt-8">
-          <div className="rounded-xl border border-brass/40 bg-brass/10 px-5 py-4 text-sm text-ink">
+          <div className="rounded-xl border border-bronze/40 bg-bronze/10 px-5 py-4 text-sm text-ink">
             <b>Draft.</b> The facts on this page are real. The story is not
             written yet, so the page is noindexed until it is.
           </div>
@@ -200,7 +200,7 @@ export default function AboutPage({
                   ) : (
                     <span
                       aria-hidden="true"
-                      className="flex h-full w-full items-center justify-center text-6xl font-semibold tracking-wide text-brass-bright"
+                      className="flex h-full w-full items-center justify-center text-6xl font-semibold tracking-wide text-bronze"
                     >
                       {founderInitials()}
                     </span>

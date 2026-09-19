@@ -98,7 +98,7 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
             <a href={waLink(l.waMessage)} target="_blank" rel="noopener" className="btn btn-wa">
               Tell us the size and budget
             </a>
-            <a href="#enquire" className="text-sm font-semibold text-brass-bright underline decoration-brass/40 underline-offset-4">
+            <a href="#enquire" className="text-sm font-semibold text-bronze underline decoration-bronze/40 underline-offset-4">
               Or leave your details
             </a>
           </div>
@@ -106,7 +106,7 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
       </header>
 
       <div className="wrap py-12">
-        <div className="max-w-[68ch] rounded-r-xl border-l-[3px] border-brass bg-paper-alt px-6 py-5">
+        <div className="max-w-[68ch] rounded-r-xl border-l-[3px] border-bronze bg-paper-alt px-6 py-5">
           <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">The short answer</div>
           <p className="mt-2.5 text-lg text-ink">{l.answer}</p>
         </div>
@@ -164,12 +164,12 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
           <ul className="mt-5 space-y-2.5">
             {l.checks.map((c) => (
               <li key={c} className="flex gap-3 text-ink/85">
-                <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brass" />
+                <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze" />
                 <span>{c}</span>
               </li>
             ))}
           </ul>
-          <aside className="mt-8 rounded-2xl border border-brass/30 bg-brand-indigo-deep p-6 text-paper md:p-7">
+          <aside className="mt-8 rounded-2xl border border-bronze/30 bg-brand-indigo-deep p-6 text-paper md:p-7">
             <p className="font-display text-lg leading-snug text-white md:text-xl">
               Send us the size, the budget and the pocket, and we will send the flats that fit this week.
             </p>
@@ -177,7 +177,7 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
               <a href={waLink(l.waMessage)} target="_blank" rel="noopener" className="btn btn-wa">
                 WhatsApp us
               </a>
-              <a href="#enquire" className="text-sm font-semibold text-brass-bright underline decoration-brass/40 underline-offset-4">
+              <a href="#enquire" className="text-sm font-semibold text-bronze underline decoration-bronze/40 underline-offset-4">
                 Or leave your details below
               </a>
             </div>
@@ -193,7 +193,7 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
                 <summary className="cursor-pointer list-none font-medium text-brand-indigo marker:content-none">
                   <span className="flex items-center justify-between gap-4">
                     {f.q}
-                    <span className="shrink-0 text-brass transition group-open:rotate-45">+</span>
+                    <span className="shrink-0 text-bronze-deep transition group-open:rotate-45">+</span>
                   </span>
                 </summary>
                 <p className="mt-3 text-[0.97rem] text-ink/75">{f.a}</p>

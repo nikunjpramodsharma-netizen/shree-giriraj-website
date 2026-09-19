@@ -202,7 +202,7 @@ export function RentalYieldCalculator() {
                 >
                   net
                 </div>
-                <div className="flex flex-1 items-center justify-center bg-brass/40 text-xs font-semibold text-ink">
+                <div className="flex flex-1 items-center justify-center bg-bronze/40 text-xs font-semibold text-ink">
                   lost to costs
                 </div>
               </div>
@@ -244,7 +244,7 @@ export function RentalYieldCalculator() {
               />
             </dl>
 
-            <div className="rounded-xl border border-brass/40 bg-brass/10 px-5 py-4 text-sm text-ink">
+            <div className="rounded-xl border border-bronze/40 bg-bronze/10 px-5 py-4 text-sm text-ink">
               <b>The gap is {fmtPct(Math.max(0, r.yieldGapPct))}.</b> That is
               how much the gross figure overstates what the flat pays you.
               Listings and brochures quote the gross number.

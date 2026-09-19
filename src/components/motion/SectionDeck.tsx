@@ -82,7 +82,7 @@ export function SectionDeck({ sections, interval = 9000 }: { sections: DeckSecti
               >
                 {s.heading}
                 {on && running && (
-                  <span key={`${i}-bar`} aria-hidden="true" className="deck-bar absolute bottom-0 left-0 h-[3px] bg-brass-bright" style={{ animationDuration: `${interval}ms` }} />
+                  <span key={`${i}-bar`} aria-hidden="true" className="deck-bar absolute bottom-0 left-0 h-[3px] bg-bronze" style={{ animationDuration: `${interval}ms` }} />
                 )}
               </button>
             );

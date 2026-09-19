@@ -38,7 +38,7 @@ export function AreaSwitcher({
             onClick={() => setActive(i)}
             className={`rounded-full border px-5 py-2 text-sm font-semibold transition ${
               i === active
-                ? "border-brass bg-brass text-brand-indigo-deep"
+                ? "border-bronze bg-bronze text-brand-indigo-deep"
                 : "border-paper/30 text-paper/80 hover:border-paper/60"
             }`}
           >
@@ -64,7 +64,7 @@ export function AreaSwitcher({
             ))}
           </dl>
 
-          <p className="mt-5 border-l-2 border-brass pl-3.5 text-[0.94rem] text-paper/70">
+          <p className="mt-5 border-l-2 border-bronze pl-3.5 text-[0.94rem] text-paper/70">
             <b className="text-white">{tr(locale, "What to watch:")}</b> {panel.watch}
           </p>
 

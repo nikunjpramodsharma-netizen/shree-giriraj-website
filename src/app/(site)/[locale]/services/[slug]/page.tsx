@@ -423,7 +423,7 @@ export default async function ServicePage({
                   <summary className="cursor-pointer list-none text-[0.98rem] font-medium text-brand-indigo marker:content-none">
                     <span className="flex items-center justify-between gap-4">
                       {f.q}
-                      <span className="shrink-0 text-brass transition group-open:rotate-45">+</span>
+                      <span className="shrink-0 text-bronze-deep transition group-open:rotate-45">+</span>
                     </span>
                   </summary>
                   <p className="mt-3 text-[0.97rem] text-ink/75">

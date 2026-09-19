@@ -68,13 +68,13 @@ export function BenefitDeck({ items, interval = 4500 }: { items: Benefit[]; inte
                   on ? "border-brand-indigo bg-brand-indigo text-white shadow-lg shadow-brand-indigo/20" : "border-line bg-white text-ink hover:border-brand-indigo/40"
                 }`}
               >
-                <span className={`text-xs font-bold tabular-nums ${on ? "text-brass-bright" : "text-brass"}`}>{String(k + 1).padStart(2, "0")}</span>
+                <span className={`text-xs font-bold tabular-nums ${on ? "text-bronze" : "text-bronze-deep"}`}>{String(k + 1).padStart(2, "0")}</span>
                 <span className="text-[0.92rem] font-semibold leading-snug">{it.title}</span>
                 {on && running && (
                   <span
                     key={`${i}-bar`}
                     aria-hidden="true"
-                    className="deck-bar absolute bottom-0 left-0 h-[3px] bg-brass-bright"
+                    className="deck-bar absolute bottom-0 left-0 h-[3px] bg-bronze"
                     style={{ animationDuration: `${interval}ms` }}
                   />
                 )}
@@ -94,7 +94,7 @@ export function BenefitDeck({ items, interval = 4500 }: { items: Benefit[]; inte
             className={`col-start-1 row-start-1 flex flex-col ${k === i ? "scene-in" : "invisible"}`}
           >
             <div className="flex items-center justify-between">
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-indigo text-brass-bright">
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-indigo text-bronze">
                 <LineIcon key={k === i ? `on-${i}` : "off"} name={it.icon} className={k === i ? "deck-draw" : ""} />
               </span>
               <span className="text-xs font-semibold tabular-nums text-muted">

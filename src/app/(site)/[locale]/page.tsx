@@ -104,9 +104,9 @@ const AREA_SKYLINES: SkylineRect[][] = [
     { x: 220, y: 80, w: 40, h: 70, fill: "#1c2450" },
     { x: 270, y: 55, w: 35, h: 95, fill: "#151b3d" },
     { x: 315, y: 75, w: 45, h: 75, fill: "#1c2450" },
-    { x: 90, y: 45, w: 4, h: 4, fill: "#e0bd6a" },
-    { x: 185, y: 65, w: 4, h: 4, fill: "#e0bd6a" },
-    { x: 285, y: 75, w: 4, h: 4, fill: "#e0bd6a" },
+    { x: 90, y: 45, w: 4, h: 4, fill: "#b8875a" },
+    { x: 185, y: 65, w: 4, h: 4, fill: "#b8875a" },
+    { x: 285, y: 75, w: 4, h: 4, fill: "#b8875a" },
   ],
   [
     { x: 30, y: 50, w: 42, h: 100, fill: "#151b3d" },
@@ -115,9 +115,9 @@ const AREA_SKYLINES: SkylineRect[][] = [
     { x: 188, y: 65, w: 35, h: 85, fill: "#1c2450" },
     { x: 235, y: 50, w: 42, h: 100, fill: "#151b3d" },
     { x: 290, y: 80, w: 36, h: 70, fill: "#1c2450" },
-    { x: 48, y: 70, w: 4, h: 4, fill: "#e0bd6a" },
-    { x: 150, y: 55, w: 4, h: 4, fill: "#e0bd6a" },
-    { x: 250, y: 70, w: 4, h: 4, fill: "#e0bd6a" },
+    { x: 48, y: 70, w: 4, h: 4, fill: "#b8875a" },
+    { x: 150, y: 55, w: 4, h: 4, fill: "#b8875a" },
+    { x: 250, y: 70, w: 4, h: 4, fill: "#b8875a" },
   ],
   [
     { x: 25, y: 70, w: 40, h: 80, fill: "#1c2450" },
@@ -126,9 +126,9 @@ const AREA_SKYLINES: SkylineRect[][] = [
     { x: 182, y: 30, w: 38, h: 120, fill: "#151b3d" },
     { x: 232, y: 65, w: 40, h: 85, fill: "#1c2450" },
     { x: 285, y: 50, w: 42, h: 100, fill: "#151b3d" },
-    { x: 95, y: 55, w: 4, h: 4, fill: "#e0bd6a" },
-    { x: 195, y: 45, w: 4, h: 4, fill: "#e0bd6a" },
-    { x: 300, y: 65, w: 4, h: 4, fill: "#e0bd6a" },
+    { x: 95, y: 55, w: 4, h: 4, fill: "#b8875a" },
+    { x: 195, y: 45, w: 4, h: 4, fill: "#b8875a" },
+    { x: 300, y: 65, w: 4, h: 4, fill: "#b8875a" },
   ],
   [
     { x: 18, y: 55, w: 38, h: 95, fill: "#151b3d" },
@@ -138,9 +138,9 @@ const AREA_SKYLINES: SkylineRect[][] = [
     { x: 218, y: 45, w: 38, h: 105, fill: "#151b3d" },
     { x: 268, y: 70, w: 40, h: 80, fill: "#1c2450" },
     { x: 320, y: 55, w: 36, h: 95, fill: "#151b3d" },
-    { x: 85, y: 60, w: 4, h: 4, fill: "#e0bd6a" },
-    { x: 235, y: 50, w: 4, h: 4, fill: "#e0bd6a" },
-    { x: 335, y: 60, w: 4, h: 4, fill: "#e0bd6a" },
+    { x: 85, y: 60, w: 4, h: 4, fill: "#b8875a" },
+    { x: 235, y: 50, w: 4, h: 4, fill: "#b8875a" },
+    { x: 335, y: 60, w: 4, h: 4, fill: "#b8875a" },
   ],
   [
     { x: 22, y: 65, w: 42, h: 85, fill: "#1c2450" },
@@ -149,9 +149,9 @@ const AREA_SKYLINES: SkylineRect[][] = [
     { x: 178, y: 70, w: 36, h: 80, fill: "#151b3d" },
     { x: 225, y: 40, w: 42, h: 110, fill: "#1c2450" },
     { x: 278, y: 60, w: 38, h: 90, fill: "#151b3d" },
-    { x: 105, y: 50, w: 4, h: 4, fill: "#e0bd6a" },
-    { x: 205, y: 65, w: 4, h: 4, fill: "#e0bd6a" },
-    { x: 295, y: 55, w: 4, h: 4, fill: "#e0bd6a" },
+    { x: 105, y: 50, w: 4, h: 4, fill: "#b8875a" },
+    { x: 205, y: 65, w: 4, h: 4, fill: "#b8875a" },
+    { x: 295, y: 55, w: 4, h: 4, fill: "#b8875a" },
   ],
 ];
 
@@ -189,7 +189,7 @@ function CompareMark({
           highlight ? "text-brand-indigo" : "text-muted"
         }`}
       >
-        <svg viewBox="0 0 20 20" className="h-5 w-5 shrink-0 fill-brass">
+        <svg viewBox="0 0 20 20" className="h-5 w-5 shrink-0 fill-bronze">
           <circle cx="10" cy="10" r="10" opacity="0.15" />
           <path
             d="M6 10.2l2.4 2.4L14.5 6.5"
@@ -684,7 +684,7 @@ export default async function HomePage({
             <div className="eyebrow text-bronze">{tLeadForm("eyebrow")}</div>
             <h2 className="mt-3.5 text-3xl md:text-4xl">
               {tLeadForm("headingPart1")}
-              <em className="italic text-brass-bright">{tLeadForm("headingEm")}</em>
+              <em className="italic text-bronze">{tLeadForm("headingEm")}</em>
             </h2>
             <p className="mt-4 text-paper/75">{tLeadForm("body")}</p>
             <div className="mt-6 space-y-3 text-sm">

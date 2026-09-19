@@ -34,7 +34,7 @@ export function ChecksAccordion({ checks }: { checks: Check[] }) {
                 aria-expanded={isOpen}
                 className="flex w-full items-baseline gap-3.5 py-5 text-left"
               >
-                <span className="pt-1 font-mono text-xs font-medium text-brass">
+                <span className="pt-1 font-mono text-xs font-medium text-bronze-deep">
                   {c.n}
                 </span>
                 <span className="flex-1 font-display text-lg text-brand-indigo">

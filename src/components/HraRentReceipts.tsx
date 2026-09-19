@@ -66,7 +66,7 @@ export function HraRentReceipts() {
   return (
     <div className="rounded-2xl border border-line bg-paper">
       {/* The thing to say before anything else. */}
-      <div className="border-b border-line bg-brass/10 px-6 py-4 text-sm text-ink print:hidden">
+      <div className="border-b border-line bg-bronze/10 px-6 py-4 text-sm text-ink print:hidden">
         <b>HRA exemption exists only under the old tax regime.</b> If you are on
         the new regime you cannot claim it, whatever the numbers below say.
       </div>
@@ -145,7 +145,7 @@ export function HraRentReceipts() {
         </div>
 
         {hra.panRequired && (
-          <div className="rounded-xl border border-brass/40 bg-brass/10 px-5 py-4 text-sm text-ink">
+          <div className="rounded-xl border border-bronze/40 bg-bronze/10 px-5 py-4 text-sm text-ink">
             <b>Your landlord&apos;s PAN is required.</b> Annual rent of{" "}
             {inr(hra.annualRent)} is above the {inr(LANDLORD_PAN_THRESHOLD)}{" "}
             threshold, so your employer will ask for it. If the landlord has no
@@ -370,7 +370,7 @@ function Field({
         step={step}
         value={value}
         onChange={(e) => onChange(Math.max(0, Number(e.target.value) || 0))}
-        className="mt-1.5 w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-brass"
+        className="mt-1.5 w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-bronze"
       />
       {hint && <span className="mt-1.5 block text-xs text-muted">{hint}</span>}
     </label>
@@ -396,7 +396,7 @@ function Text({
         value={value}
         placeholder={placeholder}
         onChange={(e) => onChange(e.target.value)}
-        className="mt-1.5 w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-brass"
+        className="mt-1.5 w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-bronze"
       />
     </label>
   );

@@ -31,7 +31,7 @@ export function LeadForm() {
   }
 
   const field =
-    "w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-paper/40 outline-none focus:border-brass";
+    "w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-paper/40 outline-none focus:border-bronze";
 
   return (
     <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur sm:p-8">

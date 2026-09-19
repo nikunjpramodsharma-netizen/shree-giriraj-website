@@ -117,7 +117,7 @@ export function PropertyTaxCalculator() {
       {/* The relief leads, because it is the useful part and needs no rate. */}
       <div className="p-6">
         {r.exemption === "exempt" && (
-          <div className="rounded-xl border border-brass/40 bg-brass/10 px-5 py-4 text-ink">
+          <div className="rounded-xl border border-bronze/40 bg-bronze/10 px-5 py-4 text-ink">
             <div className="text-lg font-semibold">
               This flat looks fully exempt.
             </div>
@@ -270,7 +270,7 @@ function Num({
         step={step}
         value={value}
         onChange={(e) => onChange(Math.max(0, Number(e.target.value) || 0))}
-        className="mt-1.5 w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-brass"
+        className="mt-1.5 w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-bronze"
       />
       {hint && <span className="mt-1.5 block text-xs text-muted">{hint}</span>}
     </label>

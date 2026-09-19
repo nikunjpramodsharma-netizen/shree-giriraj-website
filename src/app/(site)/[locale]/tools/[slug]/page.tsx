@@ -156,7 +156,7 @@ export default function ToolPage({
               <ul className="mt-3 space-y-2.5 text-sm text-ink/70">
                 {tool.limits.map((l) => (
                   <li key={l} className="flex gap-2.5">
-                    <span aria-hidden="true" className="text-brass">
+                    <span aria-hidden="true" className="text-bronze-deep">
                       ·
                     </span>
                     <span>{l}</span>

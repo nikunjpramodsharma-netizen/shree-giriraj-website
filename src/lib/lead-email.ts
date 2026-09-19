@@ -145,7 +145,7 @@ export function htmlFor(lead: Lead): string {
   return [
     '<div style="background:#f6f3ec;padding:24px;font-family:system-ui,sans-serif">',
     '<div style="max-width:620px;margin:0 auto;background:#fff;border:1px solid #e3ddcd;border-radius:14px;padding:26px">',
-    `<div style="font:700 11px system-ui;letter-spacing:.18em;text-transform:uppercase;color:#c9a24b">New enquiry</div>`,
+    `<div style="font:700 11px system-ui;letter-spacing:.18em;text-transform:uppercase;color:#8c5f36">New enquiry</div>`,
     `<h1 style="margin:8px 0 18px;font:600 24px system-ui;color:#1c2450">${esc(subjectFor(lead))}</h1>`,
     `<table cellpadding="0" cellspacing="0">${main}</table>`,
     actions ? `<div style="margin-top:22px">${actions}</div>` : "",

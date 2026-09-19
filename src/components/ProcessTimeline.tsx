@@ -27,12 +27,12 @@ export function ProcessTimeline({ steps }: { steps: string[] }) {
     <div ref={ref} className="relative">
       <div className="absolute bottom-6 left-6 top-6 w-0.5 bg-brand-indigo/10 md:hidden" />
       <div
-        className="absolute left-6 top-6 w-0.5 bg-brass transition-[height] duration-1000 ease-out motion-reduce:transition-none md:hidden"
+        className="absolute left-6 top-6 w-0.5 bg-bronze transition-[height] duration-1000 ease-out motion-reduce:transition-none md:hidden"
         style={{ height: visible ? "calc(100% - 3rem)" : "0%" }}
       />
       <div className="absolute left-0 right-0 top-6 hidden h-0.5 bg-brand-indigo/10 md:block" />
       <div
-        className="absolute left-0 top-6 hidden h-0.5 bg-brass transition-[width] duration-1000 ease-out motion-reduce:transition-none md:block"
+        className="absolute left-0 top-6 hidden h-0.5 bg-bronze transition-[width] duration-1000 ease-out motion-reduce:transition-none md:block"
         style={{ width: visible ? "100%" : "0%" }}
       />
       <div className="grid gap-8 md:grid-cols-3 md:gap-10">
@@ -44,7 +44,7 @@ export function ProcessTimeline({ steps }: { steps: string[] }) {
             <div
               className={`relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 font-display text-lg font-semibold transition-all duration-500 motion-reduce:transition-none ${
                 visible
-                  ? "border-brass bg-brass text-brand-indigo-deep"
+                  ? "border-bronze bg-bronze text-brand-indigo-deep"
                   : "border-brand-indigo/15 bg-white text-muted"
               }`}
               style={{ transitionDelay: visible ? `${i * 200}ms` : "0ms" }}

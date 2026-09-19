@@ -64,7 +64,7 @@ export function InteriorsScope() {
               step={item.unit === "nos" ? 1 : item.unit === "rft" ? 1 : 10}
               value={sel[item.id] ?? 0}
               onChange={(e) => set(item.id, Number(e.target.value) || 0)}
-              className="mt-1.5 w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-brass"
+              className="mt-1.5 w-full rounded-xl border border-line bg-paper-alt px-4 py-2.5 text-sm text-ink outline-none focus:border-bronze"
             />
             <span className="mt-1.5 block text-xs text-muted">
               Specify: {item.specPrompt}
@@ -140,7 +140,7 @@ export function InteriorsScope() {
               </div>
             ) : (
               // No invented bands. Saying why is more useful than a fake range.
-              <div className="rounded-xl border border-brass/40 bg-brass/10 px-5 py-4 text-sm text-ink print:hidden">
+              <div className="rounded-xl border border-bronze/40 bg-bronze/10 px-5 py-4 text-sm text-ink print:hidden">
                 <b>No prices here on purpose.</b> We have not published cost
                 bands we can stand behind, and a made up range would be worse
                 than none: you would anchor on it and then be surprised. Ask us
@@ -160,7 +160,7 @@ export function InteriorsScope() {
             <ul className="mt-3 space-y-2 text-sm text-ink/75">
               {COMMON_EXCLUSIONS.map((x) => (
                 <li key={x} className="flex gap-2.5">
-                  <span aria-hidden="true" className="text-brass">
+                  <span aria-hidden="true" className="text-bronze-deep">
                     ·
                   </span>
                   <span>{x}</span>
@@ -176,7 +176,7 @@ export function InteriorsScope() {
             <ul className="mt-3 space-y-2 text-sm text-ink/75">
               {QUOTE_QUESTIONS.map((x) => (
                 <li key={x} className="flex gap-2.5">
-                  <span aria-hidden="true" className="text-brass">
+                  <span aria-hidden="true" className="text-bronze-deep">
                     ·
                   </span>
                   <span>{x}</span>
