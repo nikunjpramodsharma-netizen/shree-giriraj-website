@@ -34,6 +34,9 @@
   .btn-wa {
     @apply border-whatsapp bg-whatsapp text-white hover:-translate-y-0.5 hover:border-black hover:bg-white hover:text-black;
   }
+  .btn-bronze {
+    @apply border-bronze bg-bronze text-brand-indigo-deep hover:-translate-y-0.5 hover:border-black hover:bg-white hover:text-black;
+  }
   .btn-brass {
     @apply border-brass bg-brass text-brand-indigo-deep hover:-translate-y-0.5 hover:border-black hover:bg-white hover:text-black;
   }

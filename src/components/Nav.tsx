@@ -134,7 +134,7 @@ export function Nav() {
             href={waLink(t("whatsappGenericMessage"))}
             target="_blank"
             rel="noopener"
-            className="btn btn-wa whitespace-nowrap"
+            className="btn btn-bronze whitespace-nowrap"
           >
             {t("enquireNow")}
           </a>
@@ -170,7 +170,7 @@ export function Nav() {
             href={waLink(t("whatsappEnquireMessage"))}
             target="_blank"
             rel="noopener"
-            className="btn btn-wa w-fit"
+            className="btn btn-bronze w-fit"
           >
             {t("enquireNow")}
           </a>

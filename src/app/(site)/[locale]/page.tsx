@@ -348,22 +348,23 @@ export default async function HomePage({
         />
         <div className="wrap relative z-[6] py-24">
           <div className="max-w-3xl">
-            <div className="eyebrow text-brass-bright">
+            <div className="eyebrow text-bronze">
               {[...site.areas.map(t), t("Since {year}").replace("{year}", String(site.established))].join(" · ")}
             </div>
             {/* Two lines on purpose (owner, 20 September 2026): the offer, then
                 the promise. Each part is its own block so it never wraps into
                 three; the sizes step down on narrow screens to keep it so. The
-                promise is in brushed bronze, the owner's choice of the same day. */}
+                hero's accents (the line above, the promise, the rotating phrase
+                and the button) are brushed bronze, the owner's choice that day. */}
             <h1 className="mt-6 text-[min(7.3vw,1.85rem)] font-semibold leading-[1.12] sm:text-5xl md:text-6xl">
               <span className="block">{tHero("headingPart1")}</span>
-              <em className="block italic text-[#B8875A]">{tHero("headingEm")}</em>
+              <em className="block italic text-bronze">{tHero("headingEm")}</em>
             </h1>
             <p className="mt-6 max-w-[30em] text-lg text-paper/80">{tHero("body")}</p>
             <p className="mt-4 text-base text-paper/70">
               {t("Start with one line:")}{" "}
               <KineticLine
-                className="font-semibold text-brass-bright"
+                className="font-semibold text-bronze"
                 phrases={[
                   t("a 2 BHK near Chikoowadi"),
                   t("a shop on L.T. Road"),
@@ -379,7 +380,7 @@ export default async function HomePage({
                 href={waLink(tHero("whatsappMessage"))}
                 target="_blank"
                 rel="noopener"
-                className="btn btn-wa"
+                className="btn btn-bronze"
               >
                 {tHero("ctaWhatsapp")}
               </a>

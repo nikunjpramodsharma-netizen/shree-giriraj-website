@@ -19,6 +19,10 @@ const config: Config = {
           DEFAULT: "#c9a24b",
           bright: "#e0bd6a",
         },
+        // Brushed bronze, the hero accent chosen by the owner on 20 September
+        // 2026. Text on a bronze fill is brand indigo, not white: white on
+        // bronze is 3.2 to 1, indigo is 5.3 to 1.
+        bronze: "#b8875a",
         paper: {
           DEFAULT: "#f6f3ec",
           alt: "#efe9dc",
