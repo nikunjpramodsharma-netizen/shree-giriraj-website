@@ -17,6 +17,7 @@ import { RelatedLinks } from "@/components/RelatedLinks";
 import { LitMap } from "@/components/motion/LitMap";
 import { RisingTower } from "@/components/motion/RisingTower";
 import { interlinksForArea } from "@/lib/interlinks";
+import { FLAT_LISTINGS, listingPath } from "@/lib/flats";
 import { ContactCTA } from "@/components/ContactCTA";
 import { graph, breadcrumbNode, faqNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
@@ -84,6 +85,7 @@ export default async function AreaPage({
   ];
 
   const complete = areaIsComplete(area);
+  const listings = FLAT_LISTINGS.filter((l) => l.area === area.slug);
 
   return (
     <article>
@@ -181,6 +183,29 @@ export default async function AreaPage({
           </div>
           <p className="mt-2 text-ink">{panel.watch}</p>
         </div>
+
+        {/* Straight to the flats, for readers who came here to buy or rent. */}
+        {listings.length > 0 && (
+          <div className="mt-10 grid max-w-[68ch] gap-3 sm:grid-cols-2">
+            {listings.map((l) => (
+              <a
+                key={l.intent}
+                href={listingPath(l)}
+                className="group rounded-xl border border-line bg-white p-5 transition hover:border-brass hover:shadow-md"
+              >
+                <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass">
+                  {l.intent === "sale" ? "Buying" : "Renting"}
+                </div>
+                <div className="mt-1.5 font-display text-lg text-brand-indigo">
+                  1, 2 and 3 BHK flats for {l.intent} in {l.place}
+                </div>
+                <div className="mt-1 text-sm text-ink/70 group-hover:text-ink">
+                  {l.intent === "sale" ? "Asking rates by pocket, and what a flat asks" : "Rents by size, deposits and the agreement"}
+                </div>
+              </a>
+            ))}
+          </div>
+        )}
 
         <div className="mt-14 space-y-14">
           {area.sections.map((s) =>

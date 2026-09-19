@@ -10,6 +10,7 @@ import { absoluteUrl, sitemapAlternates, SERVICE_SLUGS, RETIRED_SERVICE_SLUGS } 
 import { LOCALES, type Locale } from "@/lib/i18n-content";
 import { PILLAR_SLUGS } from "@/lib/pillars";
 import { AREA_SLUGS, getArea, areaIsComplete } from "@/lib/areas";
+import { FLAT_LISTINGS, listingPath } from "@/lib/flats";
 import { STORY_IS_WRITTEN } from "@/lib/about";
 import { getRepoService, repoServiceLocales } from "@/lib/service-content";
 import { TOOL_SLUGS } from "@/lib/tools";
@@ -98,6 +99,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const area = getArea(slug);
     if (!area || !areaIsComplete(area)) continue;
     out.push(...entriesFor(`/areas/${slug}`, ["en"], undefined, 0.8));
+  }
+  // Flats for sale and for rent by suburb, 1, 2 and 3 BHK. See flats.ts.
+  for (const l of FLAT_LISTINGS) {
+    out.push(...entriesFor(listingPath(l), ["en"], undefined, 0.8));
   }
   out.push(...entriesFor("/contact", ["en"], undefined, 0.7));
   if (STORY_IS_WRITTEN) {

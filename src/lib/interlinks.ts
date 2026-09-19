@@ -1,4 +1,5 @@
 import { AREAS } from "@/lib/areas";
+import { FLAT_LISTINGS, listingPath, type ListingIntent } from "@/lib/flats";
 import { getAllPosts } from "@/lib/posts";
 import { getRepoService } from "@/lib/service-content";
 import { getTool } from "@/lib/tools";
@@ -193,6 +194,46 @@ function areaCards(except?: string): LinkCard[] {
   }));
 }
 
+const LISTING_HOOKS: Record<ListingIntent, string> = {
+  sale: "1, 2 and 3 BHK for sale, with the asking rate in each pocket.",
+  rent: "1, 2 and 3 BHK for rent, with the asking rents by size and the deposit.",
+};
+
+/** The flats for sale or for rent pages, as cards. */
+function listingCards(intent: ListingIntent, except?: string): LinkCard[] {
+  return FLAT_LISTINGS.filter((l) => l.intent === intent && l.area !== except).map((l) => ({
+    kind: "area" as const,
+    href: listingPath(l),
+    title: `Flats for ${intent} in ${l.place}`,
+    hook: LISTING_HOOKS[intent],
+    englishOnly: true,
+  }));
+}
+
+const LISTING_RECIPE: Record<ListingIntent, { services: string[]; tools: string[]; articles: string[] }> = {
+  sale: {
+    services: ["resale-flats", "new-project-bookings", "investment-advisory"],
+    tools: ["stamp-duty-calculator-mumbai", "carpet-area-calculator", "home-loan-emi-calculator"],
+    articles: ["stamp-duty-and-registration-charges-mumbai", "index-2-property-document", "carpet-area-vs-built-up-area"],
+  },
+  rent: {
+    services: ["rentals", "interiors"],
+    tools: ["hra-calculator-rent-receipts", "rental-yield-calculator"],
+    articles: ["rent-deposit-months-western-suburbs", "rental-yield-mumbai"],
+  },
+};
+
+export function interlinksForListing(area: string, intent: ListingIntent, locale: string): Interlinks {
+  const r = LISTING_RECIPE[intent];
+  const guide = areaCards().filter((c) => c.href === `/areas/${area}`);
+  return {
+    services: serviceCards(r.services, locale),
+    tools: toolCards(r.tools),
+    articles: articleCards(r.articles),
+    areas: [...listingCards(intent, area), ...guide],
+  };
+}
+
 function serviceCards(slugs: string[], locale: string): LinkCard[] {
   return uniq(slugs)
     .map((s) => ({ slug: s, svc: getRepoService(s, locale) }))
@@ -222,9 +263,12 @@ function articleCards(slugs: string[]): LinkCard[] {
 
 export function interlinksForService(slug: string, locale: string): Interlinks {
   const r = SERVICE_MAP[slug] ?? { tools: [], articles: [], services: [] };
+  // Resale and rentals point straight at the flats pages for each suburb,
+  // which is what someone on those pages is looking for next.
+  const listing: ListingIntent | null = slug === "resale-flats" ? "sale" : slug === "rentals" ? "rent" : null;
   return {
     tools: toolCards(r.tools),
-    areas: areaCards(),
+    areas: listing ? listingCards(listing) : areaCards(),
     articles: articleCards(r.articles),
     services: serviceCards(r.services, locale),
   };

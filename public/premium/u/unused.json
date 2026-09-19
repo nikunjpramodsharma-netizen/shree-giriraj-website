@@ -1,32 +1,27 @@
 [
- {
-  "file": "/premium/u/interior-07.jpg",
-  "theme": "interior",
-  "alt": "Stone, fabric and paint samples laid out on a marble surface"
- },
- {
-  "file": "/premium/u/handover-06.jpg",
-  "theme": "handover",
-  "alt": "Two people at a window looking out at the city at dusk"
- },
- {
-  "file": "/premium/u/paperwork-05.jpg",
-  "theme": "paperwork",
-  "alt": "A calculator, papers and a laptop during a review of figures"
- },
- {
-  "file": "/premium/u/paperwork-06.jpg",
-  "theme": "paperwork",
-  "alt": "Architectural drawings with a ruler and pens"
- },
- {
-  "file": "/premium/u/coast-green-03.jpg",
-  "theme": "coast-green",
-  "alt": "A broad avenue under an arch of mature trees"
- },
- {
-  "file": "/premium/u/coast-green-01.jpg",
-  "theme": "coast-green",
-  "alt": "A palm silhouetted against the sun over the sea"
- }
+  {
+    "file": "/premium/u/interior-07.jpg",
+    "theme": "interior",
+    "alt": "Stone, fabric and paint samples laid out on a marble surface"
+  },
+  {
+    "file": "/premium/u/paperwork-05.jpg",
+    "theme": "paperwork",
+    "alt": "A calculator, papers and a laptop during a review of figures"
+  },
+  {
+    "file": "/premium/u/paperwork-06.jpg",
+    "theme": "paperwork",
+    "alt": "Architectural drawings with a ruler and pens"
+  },
+  {
+    "file": "/premium/u/coast-green-03.jpg",
+    "theme": "coast-green",
+    "alt": "A broad avenue under an arch of mature trees"
+  },
+  {
+    "file": "/premium/u/coast-green-01.jpg",
+    "theme": "coast-green",
+    "alt": "A palm silhouetted against the sun over the sea"
+  }
 ]
