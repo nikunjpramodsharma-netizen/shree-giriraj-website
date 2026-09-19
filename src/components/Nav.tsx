@@ -73,6 +73,10 @@ export function Nav() {
    * The 2026 pages (areas, guides, about, contact) are English only routes and
    * return notFound in hi, mr and gu. So they are only linked in English,
    * rather than translating four labels into a link that would 404.
+   *
+   * Contact is deliberately not in the bar (owner's call, 20 September 2026):
+   * the Enquire Now button does that job, and the page stays linked from the
+   * footer and the sitemap.
    */
   const links = [
     { href: "/#services", label: t("services") },
@@ -84,7 +88,6 @@ export function Nav() {
           { href: "/guides", label: "Guides" },
           { href: "/tools", label: "Tools" },
           { href: "/about", label: t("about") },
-          { href: "/contact", label: "Contact" },
         ]
       : []),
   ];
