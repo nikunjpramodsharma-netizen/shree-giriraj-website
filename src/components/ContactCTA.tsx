@@ -286,7 +286,7 @@ export function ContactCTA({
           <button
             type="submit"
             disabled={state === "sending"}
-            className="btn btn-brass w-full justify-center disabled:opacity-60"
+            className="btn btn-bronze w-full justify-center disabled:opacity-60"
           >
             {state === "sending" ? t("sending") : t("sendDetails")}
           </button>

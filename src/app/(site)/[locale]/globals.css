@@ -37,9 +37,6 @@
   .btn-bronze {
     @apply border-bronze bg-bronze text-brand-indigo-deep hover:-translate-y-0.5 hover:border-black hover:bg-white hover:text-black;
   }
-  .btn-brass {
-    @apply border-bronze bg-bronze text-brand-indigo-deep hover:-translate-y-0.5 hover:border-black hover:bg-white hover:text-black;
-  }
   .btn-outline {
     @apply border-brand-indigo text-brand-indigo hover:border-black hover:bg-white hover:text-black;
   }

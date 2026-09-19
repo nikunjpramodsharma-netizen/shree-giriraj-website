@@ -353,7 +353,7 @@ export default async function ServicePage({
                 />
               )}
               <div className="rise-3 mt-8 flex flex-wrap gap-3.5">
-                <a href="#enquire" className="btn btn-brass">
+                <a href="#enquire" className="btn btn-bronze">
                   {tHero("ctaBook")}
                 </a>
                 <a

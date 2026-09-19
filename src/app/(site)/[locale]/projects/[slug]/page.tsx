@@ -193,7 +193,7 @@ export default async function ProjectPage({
                 href={waLink(t("whatsappSiteVisit", { name: project.name }))}
                 target="_blank"
                 rel="noopener"
-                className="btn btn-brass"
+                className="btn btn-bronze"
               >
                 {t("ctaPrice")}
               </a>

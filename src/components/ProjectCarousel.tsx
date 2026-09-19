@@ -110,7 +110,7 @@ export function ProjectCarousel({
               <p className="mt-6 max-w-[52ch] text-[0.84rem] text-paper/50">{labels.note}</p>
 
               <div className="mt-6 flex flex-wrap gap-3.5">
-                <Link prefetch={false} href={`/projects/${s.slug}`} tabIndex={k === i ? 0 : -1} className="btn btn-brass">
+                <Link prefetch={false} href={`/projects/${s.slug}`} tabIndex={k === i ? 0 : -1} className="btn btn-bronze">
                   {labels.see}
                 </Link>
                 <Link prefetch={false} href="/projects" tabIndex={k === i ? 0 : -1} className="btn btn-outline border-paper/40 text-paper">

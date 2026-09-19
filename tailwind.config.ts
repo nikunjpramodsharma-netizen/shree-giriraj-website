@@ -15,10 +15,6 @@ const config: Config = {
           indigo: "#1c2450",
           "indigo-deep": "#151b3d",
         },
-        brass: {
-          DEFAULT: "#c9a24b",
-          bright: "#e0bd6a",
-        },
         // Brushed bronze, the hero accent chosen by the owner on 20 September
         // 2026, for the site's labels as well as the hero. Text on a bronze
         // fill is brand indigo, not white: white on bronze is 3.2 to 1,

@@ -29,7 +29,7 @@ export function StickyBar({ message, callLabel, waLabel }: { message: string; ca
         <a href={waLink(message)} target="_blank" rel="noopener" className="btn btn-wa flex-1 justify-center py-2.5 text-sm">
           {waLabel}
         </a>
-        <a href={`tel:${site.phonePrimary}`} className="btn btn-brass flex-1 justify-center py-2.5 text-sm">
+        <a href={`tel:${site.phonePrimary}`} className="btn btn-bronze flex-1 justify-center py-2.5 text-sm">
           {callLabel}
         </a>
       </div>

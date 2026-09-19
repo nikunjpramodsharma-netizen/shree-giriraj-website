@@ -66,7 +66,7 @@ export function LeadForm() {
           value={area}
           onChange={(e) => setArea(e.target.value)}
         />
-        <button onClick={handleSubmit} className="btn btn-brass w-full justify-center">
+        <button onClick={handleSubmit} className="btn btn-bronze w-full justify-center">
           {t("submit")}
         </button>
         <p className="text-center text-xs text-paper/50">{t("disclaimer")}</p>
