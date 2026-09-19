@@ -34,6 +34,7 @@ export function Footer() {
                   Link it became /hi/about, /mr/about and /gu/about, all of which
                   404, on every page of those three languages. */}
               <li><EnglishLink prefetch={false} href="/about" className="hover:text-white">{nav("about")}</EnglishLink></li>
+              <li><EnglishLink prefetch={false} href="/contact" className="hover:text-white">Contact us</EnglishLink></li>
             </ul>
           </div>
           <div>
