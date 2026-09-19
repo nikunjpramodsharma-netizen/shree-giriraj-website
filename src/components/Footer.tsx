@@ -23,7 +23,7 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-brass-bright">
+            <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-bronze">
               {t("exploreHeading")}
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -38,7 +38,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-brass-bright">
+            <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-bronze">
               {t("contactHeading")}
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -53,7 +53,7 @@ export function Footer() {
             </ul>
             {/* The profiles the owner confirmed on 16 September 2026. The same
                 four URLs feed sameAs in the business markup (config.ts). */}
-            <h4 className="mb-3 mt-8 text-xs font-semibold uppercase tracking-[0.16em] text-brass-bright">
+            <h4 className="mb-3 mt-8 text-xs font-semibold uppercase tracking-[0.16em] text-bronze">
               {t("followHeading")}
             </h4>
             <ul className="flex flex-wrap gap-x-4 gap-y-2 text-sm">

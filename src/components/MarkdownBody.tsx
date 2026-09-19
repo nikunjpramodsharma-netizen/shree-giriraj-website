@@ -134,7 +134,7 @@ function BlockView({ b }: { b: Block }) {
       const s = MARKER_STYLE[b.kind];
       return (
         <div className={`mt-6 rounded-xl border border-dashed ${s.cls} p-5`}>
-          <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass">
+          <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
             {s.label}
           </div>
           <p className="mt-2 text-sm text-ink/70">{b.text || "See the draft."}</p>
@@ -156,7 +156,7 @@ export function Spans({ spans }: { spans: Inline[] }) {
             <span
               key={i}
               title={s.v}
-              className="inline-block rounded-full border border-dashed border-brass/60 bg-brass/10 px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wider text-brass"
+              className="inline-block rounded-full border border-dashed border-brass/60 bg-brass/10 px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wider text-bronze-deep"
             >
               {MARKER_STYLE[s.kind].label}
             </span>

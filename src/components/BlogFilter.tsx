@@ -63,7 +63,7 @@ export function BlogFilter({ cards }: { cards: BlogCard[] }) {
               <Image src={c.image} alt={c.alt} width={700} height={440} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
             </div>
             <div className="flex flex-1 flex-col p-6">
-              {c.category && <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-brass">{c.category}</div>}
+              {c.category && <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-bronze-deep">{c.category}</div>}
               <h2 className="text-xl text-brand-indigo">{c.title}</h2>
               {c.answer && <p className="mt-2 flex-1 text-sm text-muted">{c.answer}</p>}
               <div className="mt-4 text-xs text-muted">{c.readingMinutes} min read</div>

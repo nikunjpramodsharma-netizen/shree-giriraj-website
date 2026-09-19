@@ -135,7 +135,7 @@ export function StampDutyCalculator() {
       {/* --------------------------------------------------------- results */}
       <div className="grid gap-px bg-line sm:grid-cols-2">
         <div className="bg-paper p-6">
-          <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass">
+          <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
             Stamp duty
           </div>
           <div className="mt-2 text-3xl tabular-nums text-ink md:text-4xl">
@@ -157,7 +157,7 @@ export function StampDutyCalculator() {
         </div>
 
         <div className="bg-paper-alt p-6">
-          <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass">
+          <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
             Duty plus registration
           </div>
           <div className="mt-2 text-3xl tabular-nums text-ink md:text-4xl">

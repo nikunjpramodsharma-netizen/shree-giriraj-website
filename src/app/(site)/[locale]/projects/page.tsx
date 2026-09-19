@@ -96,7 +96,7 @@ export default async function ProjectsPage({
           style={{ background: "linear-gradient(100deg, rgba(21,27,61,.92) 0%, rgba(21,27,61,.74) 45%, rgba(21,27,61,.34) 78%, rgba(21,27,61,.55) 100%), linear-gradient(180deg, rgba(21,27,61,.5) 0%, rgba(21,27,61,0) 32%, rgba(21,27,61,.85) 100%)" }}
         />
         <div className="wrap relative z-10 py-20 md:py-28">
-          <div className="eyebrow text-brass-bright">{t("eyebrow")}</div>
+          <div className="eyebrow text-bronze">{t("eyebrow")}</div>
           <h1 className="mt-3.5 max-w-[20ch] text-4xl text-white md:text-6xl">
             {t("heading")}
           </h1>

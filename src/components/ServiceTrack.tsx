@@ -79,7 +79,7 @@ export function ServiceTrack({ panels, locale = "en" }: { panels: ServicePanel[]
             </button>
 
             <div className="pointer-events-none relative z-20 flex h-full flex-col justify-end gap-1.5 p-6">
-              <span className="font-mono text-[0.64rem] tracking-[0.1em] text-brass-bright">
+              <span className="font-mono text-[0.64rem] tracking-[0.1em] text-bronze">
                 {p.n}
               </span>
               {/*

@@ -135,7 +135,7 @@ export default async function GuidePage({
         />
         <div className="wrap relative py-14 md:py-20">
           <Breadcrumbs trail={trail} tone="dark" />
-          <div className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-brass-bright">
+          <div className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-bronze">
             Guide
           </div>
           <h1 className="mt-3 max-w-[20ch] text-3xl text-white md:text-5xl">
@@ -152,7 +152,7 @@ export default async function GuidePage({
             is the element most likely to be lifted whole by a search or AI
             result. Same treatment as the blog template. */}
         <div className="mb-10 max-w-[68ch] rounded-r-xl border-l-[3px] border-brass bg-paper-alt px-6 py-5">
-          <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass">
+          <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
             The short answer
           </div>
           <p className="mt-2.5 text-lg text-ink">{pillar.answer}</p>

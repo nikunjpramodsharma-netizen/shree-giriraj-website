@@ -89,7 +89,7 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
         />
         <div className="wrap relative py-14 md:py-20">
           <Breadcrumbs trail={trail} tone="dark" />
-          <div className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-brass-bright">
+          <div className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-bronze">
             {l.intent === "sale" ? "Flats for sale" : "Flats for rent"} · {l.place}
           </div>
           <h1 className="rise mt-3 max-w-[22ch] text-3xl text-white md:text-5xl">{l.h1}</h1>
@@ -107,7 +107,7 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
 
       <div className="wrap py-12">
         <div className="max-w-[68ch] rounded-r-xl border-l-[3px] border-brass bg-paper-alt px-6 py-5">
-          <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass">The short answer</div>
+          <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">The short answer</div>
           <p className="mt-2.5 text-lg text-ink">{l.answer}</p>
         </div>
 

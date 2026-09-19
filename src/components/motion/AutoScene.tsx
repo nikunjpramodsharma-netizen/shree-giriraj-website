@@ -94,7 +94,7 @@ export function AutoScene({
                 className={`col-start-1 row-start-1 ${k === i ? "scene-in" : "invisible"}`}
               >
                 {sc.kicker && (
-                  <div className={`text-[0.62rem] font-bold uppercase tracking-[0.16em] ${dark ? "text-brass-bright" : "text-brass"}`}>
+                  <div className={`text-[0.62rem] font-bold uppercase tracking-[0.16em] ${dark ? "text-bronze" : "text-bronze-deep"}`}>
                     {sc.kicker}
                   </div>
                 )}

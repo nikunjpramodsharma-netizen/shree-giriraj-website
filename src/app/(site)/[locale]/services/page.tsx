@@ -94,7 +94,7 @@ export default async function ServicesIndexPage({
           <Breadcrumbs trail={trail} tone="dark" />
         </div>
         <div className="wrap relative z-10 mt-6 pb-20 md:pb-28">
-          <div className="eyebrow text-brass-bright">{t("eyebrow")}</div>
+          <div className="eyebrow text-bronze">{t("eyebrow")}</div>
           <h1 className="mt-3.5 text-4xl md:text-5xl">{t("heading")}</h1>
         </div>
       </section>

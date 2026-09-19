@@ -28,7 +28,7 @@ export function ConsultCTA({
       <div className="wrap py-14 md:py-16">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:gap-16">
           <div>
-            <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass-bright">
+            <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze">
               Paid consultation
             </div>
             <h2 className="mt-3 max-w-[20ch] text-2xl text-white md:text-4xl">

@@ -98,7 +98,7 @@ export default function ToolPage({
         )}
         <div className="wrap relative py-12 md:py-16">
           <Breadcrumbs trail={trail} tone="dark" />
-          <div className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-brass-bright">
+          <div className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-bronze">
             Free tool
           </div>
           <h1 className="mt-3 max-w-[22ch] text-3xl text-white md:text-5xl">

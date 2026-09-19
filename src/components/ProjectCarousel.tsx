@@ -100,7 +100,7 @@ export function ProjectCarousel({
                 <div className="mt-7 grid max-w-2xl grid-cols-2 gap-2.5 md:grid-cols-4">
                   {s.configs.slice(0, 4).map((c, ci) => (
                     <div key={`${c.type}-${ci}`} className="rounded-lg border border-brass/25 bg-white/5 p-3.5">
-                      <div className="text-[0.62rem] uppercase tracking-[0.12em] text-brass-bright">{c.type}</div>
+                      <div className="text-[0.62rem] uppercase tracking-[0.12em] text-bronze">{c.type}</div>
                       {c.price && <div className="mt-1 font-display text-base text-white">{c.price}</div>}
                     </div>
                   ))}

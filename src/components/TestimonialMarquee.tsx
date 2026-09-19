@@ -85,7 +85,7 @@ export function TestimonialMarquee({
                     <div className="flex items-center justify-between gap-2">
                       <Stars className="text-brass" />
                       {t.placeholder ? (
-                        <span className="rounded-full border border-brass/40 px-2 py-0.5 text-[0.58rem] font-semibold uppercase tracking-wider text-brass">
+                        <span className="rounded-full border border-brass/40 px-2 py-0.5 text-[0.58rem] font-semibold uppercase tracking-wider text-bronze-deep">
                           {labels.placeholder}
                         </span>
                       ) : t.source?.kind === "google" ? (

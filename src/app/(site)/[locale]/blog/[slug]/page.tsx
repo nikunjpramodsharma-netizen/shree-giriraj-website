@@ -234,7 +234,7 @@ export default async function PostPage({
         <div className="wrap relative py-14 md:py-20">
           <Breadcrumbs trail={trail} tone="dark" />
           {post.categories && post.categories.length > 0 && (
-            <div className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-brass-bright">
+            <div className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-bronze">
               {post.categories.join(" · ")}
             </div>
           )}
@@ -276,7 +276,7 @@ export default async function PostPage({
               first and is complete on its own. */}
           {answer && (
             <div className="mb-9 rounded-r-xl border-l-[3px] border-brass bg-paper-alt px-6 py-5">
-              <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass">
+              <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
                 The short answer
               </div>
               <p className="mt-2.5 max-w-[62ch] text-lg text-ink">{answer}</p>
@@ -416,7 +416,7 @@ export default async function PostPage({
                       </div>
                       <div className="p-5">
                         {r.categories?.[0] && (
-                          <div className="text-[0.6rem] font-semibold uppercase tracking-[0.08em] text-brass">
+                          <div className="text-[0.6rem] font-semibold uppercase tracking-[0.08em] text-bronze-deep">
                             {r.categories[0]}
                           </div>
                         )}

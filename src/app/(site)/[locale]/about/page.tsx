@@ -131,7 +131,7 @@ export default function AboutPage({
         />
         <div className="wrap relative z-10 flex min-h-[78vh] flex-col justify-center py-24 md:py-32">
           <Breadcrumbs trail={trail} tone="dark" />
-          <div className="eyebrow mt-8 text-brass-bright">About</div>
+          <div className="eyebrow mt-8 text-bronze">About</div>
           <h1 className="mt-4 max-w-[17ch] text-4xl leading-[1.05] text-white md:text-6xl">
             In real estate since {site.established}.{" "}
             <span className="text-brass-bright">

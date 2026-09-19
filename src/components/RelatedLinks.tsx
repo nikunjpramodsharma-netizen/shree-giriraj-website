@@ -54,7 +54,7 @@ export function RelatedLinks({
         <InView className="cascade mt-5 grid gap-x-10 gap-y-4 md:grid-cols-2" threshold={0.1}>
           {rows.map((r, ri) => (
             <div key={r.label} style={{ ["--i" as string]: ri }} className="flex flex-wrap items-center gap-2">
-              <span className="flex w-full items-center gap-2 text-[0.62rem] font-bold uppercase tracking-[0.16em] text-brass">
+              <span className="flex w-full items-center gap-2 text-[0.62rem] font-bold uppercase tracking-[0.16em] text-bronze-deep">
                 <LineIcon name={KIND_ICON[r.kind]} className="h-4 w-4" />
                 {t(r.label)}
               </span>

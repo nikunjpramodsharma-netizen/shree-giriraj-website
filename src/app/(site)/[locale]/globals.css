@@ -44,7 +44,7 @@
     @apply border-brand-indigo text-brand-indigo hover:border-black hover:bg-white hover:text-black;
   }
   .eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.22em] text-brass;
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-bronze-deep;
   }
   .hero-kenburns {
     animation: kenburns 20s ease-out forwards;

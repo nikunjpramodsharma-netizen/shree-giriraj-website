@@ -219,7 +219,7 @@ export default async function ProjectPage({
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {project.configurations.map((c, i) => (
                 <div key={i} className="rounded-2xl border border-brand-indigo/10 bg-white p-6">
-                  <div className="text-xs font-semibold uppercase tracking-wider text-brass">
+                  <div className="text-xs font-semibold uppercase tracking-wider text-bronze-deep">
                     {c.type?.replace(/\s*[–—]\s*/g, " to ")}
                   </div>
                   <div className="my-2 font-display text-2xl text-brand-indigo">

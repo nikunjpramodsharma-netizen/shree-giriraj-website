@@ -80,7 +80,7 @@ export default function ToolsIndex({
         />
         <div className="wrap relative z-10 py-20 md:py-28">
           <Breadcrumbs trail={trail} tone="dark" />
-          <div className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-brass-bright">
+          <div className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-bronze">
             Tools
           </div>
           <h1 className="mt-3 max-w-[18ch] text-3xl text-white md:text-5xl">

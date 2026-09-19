@@ -336,7 +336,7 @@ export default async function ServicePage({
           <Breadcrumbs trail={trail} tone="dark" />
           <Reveal>
             <div className="mt-6 max-w-3xl">
-              <div className="eyebrow text-brass-bright">
+              <div className="eyebrow text-bronze">
                 {site.areas.map((a) => tr(locale, a)).join(" \u00b7 ")}
               </div>
               <h1 className="rise mt-3.5 max-w-[20ch] text-4xl text-white md:text-6xl">

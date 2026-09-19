@@ -559,7 +559,7 @@ export default async function HomePage({
       <section className="bg-brand-indigo-deep py-24 text-paper">
         <div className="wrap">
           <Reveal className="mb-11 max-w-2xl">
-            <div className="eyebrow text-brass-bright">{tAreas("eyebrow")}</div>
+            <div className="eyebrow text-bronze">{tAreas("eyebrow")}</div>
             <h2 className="mt-3.5 text-3xl text-white md:text-4xl">
               {t("In these three suburbs since 1996, at this office since 2005")}
             </h2>
@@ -656,7 +656,7 @@ export default async function HomePage({
                       </div>
                       <div className="p-5">
                         {p.category && (
-                          <div className="font-mono text-[0.62rem] uppercase tracking-[0.06em] text-brass">
+                          <div className="font-mono text-[0.62rem] uppercase tracking-[0.06em] text-bronze-deep">
                             {p.category}
                           </div>
                         )}
@@ -681,7 +681,7 @@ export default async function HomePage({
         <Reveal>
         <div className="wrap grid items-center gap-14 py-24 md:grid-cols-2">
           <div>
-            <div className="eyebrow text-brass-bright">{tLeadForm("eyebrow")}</div>
+            <div className="eyebrow text-bronze">{tLeadForm("eyebrow")}</div>
             <h2 className="mt-3.5 text-3xl md:text-4xl">
               {tLeadForm("headingPart1")}
               <em className="italic text-brass-bright">{tLeadForm("headingEm")}</em>

@@ -406,7 +406,7 @@ function Headline({
 }) {
   return (
     <div className={accent ? "bg-paper-alt p-6" : "bg-paper p-6"}>
-      <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass">
+      <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
         {label}
       </div>
       <div className="mt-2 text-3xl text-ink tabular-nums md:text-4xl">

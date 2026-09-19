@@ -114,7 +114,7 @@ export default async function AreaPage({
         />
         <div className="wrap relative py-14 md:py-20">
           <Breadcrumbs trail={trail} tone="dark" />
-          <div className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-brass-bright">
+          <div className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-bronze">
             Area guide
           </div>
           <h1 className="rise mt-3 max-w-[20ch] text-3xl text-white md:text-5xl">
@@ -147,7 +147,7 @@ export default async function AreaPage({
         )}
 
         <div className="mb-10 max-w-[68ch] rounded-r-xl border-l-[3px] border-brass bg-paper-alt px-6 py-5">
-          <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass">
+          <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
             The short answer
           </div>
           <p className="mt-2.5 text-lg text-ink">{area.answer}</p>
@@ -178,7 +178,7 @@ export default async function AreaPage({
         </dl>
 
         <div className="mt-10 max-w-[68ch] rounded-xl border border-line bg-paper-alt p-5">
-          <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass">
+          <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
             What we would watch
           </div>
           <p className="mt-2 text-ink">{panel.watch}</p>
@@ -193,7 +193,7 @@ export default async function AreaPage({
                 href={listingPath(l)}
                 className="group rounded-xl border border-line bg-white p-5 transition hover:border-brass hover:shadow-md"
               >
-                <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass">
+                <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
                   {l.intent === "sale" ? "Buying" : "Renting"}
                 </div>
                 <div className="mt-1.5 font-display text-lg text-brand-indigo">
@@ -381,7 +381,7 @@ function PendingSection({ block }: { block: InputBlock }) {
     <section className="max-w-[68ch] rounded-xl border border-dashed border-brass/50 p-6">
       <div className="flex items-baseline gap-3">
         <h2 className="text-2xl text-ink/70 md:text-3xl">{block.heading}</h2>
-        <span className="shrink-0 rounded-full border border-brass/40 px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wider text-brass">
+        <span className="shrink-0 rounded-full border border-brass/40 px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wider text-bronze-deep">
           Needs you
         </span>
       </div>

@@ -106,7 +106,7 @@ export function MarkdownPost({
         <div className="wrap relative py-14 md:py-20">
           <Breadcrumbs trail={trail} tone="dark" />
           {post.category && (
-            <div className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-brass-bright">
+            <div className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-bronze">
               {post.category}
             </div>
           )}
@@ -158,7 +158,7 @@ export function MarkdownPost({
               complete on its own. */}
           {post.answer && (
             <div className="mb-9 rounded-r-xl border-l-[3px] border-brass bg-paper-alt px-6 py-5">
-              <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass">
+              <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
                 The short answer
               </div>
               <p className="mt-2.5 max-w-[62ch] text-lg text-ink">
@@ -299,7 +299,7 @@ export function MarkdownPost({
                   className="group block h-full rounded-xl border border-line bg-paper p-5 transition-colors hover:bg-paper-alt"
                 >
                   {r.category && (
-                    <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass">
+                    <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
                       {r.category}
                     </div>
                   )}

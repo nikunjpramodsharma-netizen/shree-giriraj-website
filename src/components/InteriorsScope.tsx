@@ -95,7 +95,7 @@ export function InteriorsScope() {
           <div className="mt-5 space-y-6">
             {groups.map((g) => (
               <div key={g}>
-                <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass">
+                <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
                   {g}
                 </div>
                 <table className="mt-2 w-full text-sm">
@@ -131,7 +131,7 @@ export function InteriorsScope() {
 
             {totals.priced ? (
               <div className="rounded-xl border border-line bg-paper-alt p-5">
-                <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-brass">
+                <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
                   Indicative range
                 </div>
                 <div className="mt-1 text-2xl tabular-nums text-ink">

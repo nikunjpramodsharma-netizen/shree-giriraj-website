@@ -255,7 +255,7 @@ export function ServiceScenes({
         <section id={closing.id} className="scroll-mt-24 bg-brand-indigo py-16 text-paper md:py-20">
           <div className="wrap grid items-center gap-8 md:grid-cols-[1.2fr_.8fr]">
             <InView className="cascade">
-              <div style={{ ["--i" as string]: 0 }} className="eyebrow text-brass-bright">{closing.heading}</div>
+              <div style={{ ["--i" as string]: 0 }} className="eyebrow text-bronze">{closing.heading}</div>
               {closing.blocks.map((b, bi) =>
                 b.t === "p" ? (
                   <p key={bi} style={{ ["--i" as string]: bi + 1 }} className="mt-4 max-w-[58ch] text-lg text-paper/90">

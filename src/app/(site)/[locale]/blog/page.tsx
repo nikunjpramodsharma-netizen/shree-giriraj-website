@@ -112,7 +112,7 @@ export default async function BlogPage({
           style={{ background: "linear-gradient(100deg, rgba(21,27,61,.92) 0%, rgba(21,27,61,.74) 45%, rgba(21,27,61,.34) 78%, rgba(21,27,61,.55) 100%), linear-gradient(180deg, rgba(21,27,61,.5) 0%, rgba(21,27,61,0) 32%, rgba(21,27,61,.85) 100%)" }}
         />
         <div className="wrap relative z-10 py-20 md:py-28">
-          <div className="eyebrow text-brass-bright">{t("eyebrow")}</div>
+          <div className="eyebrow text-bronze">{t("eyebrow")}</div>
           <h1 className="mt-3.5 text-4xl md:text-5xl">{t("heading")}</h1>
           <p className="mt-4 max-w-[40em] text-paper/75">{t("body")}</p>
         </div>
@@ -168,7 +168,7 @@ export default async function BlogPage({
                   )}
                   <div className="flex flex-1 flex-col p-6">
                     {post.categories && post.categories.length > 0 && (
-                      <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-brass">
+                      <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-bronze-deep">
                         {post.categories[0]}
                       </div>
                     )}

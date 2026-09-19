@@ -94,7 +94,7 @@ export function LitMap({
     <InView className="lm mt-10 overflow-hidden rounded-3xl bg-brand-indigo-deep text-paper shadow-2xl shadow-brand-indigo/30" threshold={0.25}>
       <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-2 px-6 pt-6 md:px-8">
         <div>
-          <div className="eyebrow text-brass-bright">{name} on one line</div>
+          <div className="eyebrow text-bronze">{name} on one line</div>
           <p className="mt-1.5 max-w-[60ch] text-sm text-paper/70">
             North on the left, the city on the right. Two metro lines, the railway between them, and where each pocket sits.
           </p>
