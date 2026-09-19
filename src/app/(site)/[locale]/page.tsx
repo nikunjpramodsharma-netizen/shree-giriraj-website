@@ -353,10 +353,11 @@ export default async function HomePage({
             </div>
             {/* Two lines on purpose (owner, 20 September 2026): the offer, then
                 the promise. Each part is its own block so it never wraps into
-                three; the sizes step down on narrow screens to keep it so. */}
+                three; the sizes step down on narrow screens to keep it so. The
+                promise is in brushed bronze, the owner's choice of the same day. */}
             <h1 className="mt-6 text-[min(7.3vw,1.85rem)] font-semibold leading-[1.12] sm:text-5xl md:text-6xl">
               <span className="block">{tHero("headingPart1")}</span>
-              <em className="block italic text-brass-bright">{tHero("headingEm")}</em>
+              <em className="block italic text-[#B8875A]">{tHero("headingEm")}</em>
             </h1>
             <p className="mt-6 max-w-[30em] text-lg text-paper/80">{tHero("body")}</p>
             <p className="mt-4 text-base text-paper/70">
