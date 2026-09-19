@@ -1,11 +1,11 @@
 ---
-title: "Conveyance and deemed conveyance for a Mumbai society"
+title: "Deemed conveyance in Maharashtra: how a Mumbai society gets its land, with or without the builder"
 slug: conveyance-and-deemed-conveyance
 category: Paperwork
 heroImage: /blog/conveyance.jpg
 heroAlt: "The facade of an older Mumbai society building"
-targetKeyword: conveyance deed
-searchVolume: 8100
+targetKeyword: deemed conveyance
+searchVolume: 1900
 competition: LOW
 funnelStage: consideration
 wordTarget: 2200

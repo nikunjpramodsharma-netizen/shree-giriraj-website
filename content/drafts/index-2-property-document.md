@@ -1,11 +1,11 @@
 ---
-title: "Index 2: the one page your buyer will ask for"
+title: "Index 2 online: how to download it, and why your buyer will ask for it"
 slug: index-2-property-document
 category: Paperwork
 heroImage: /blog/index-2.jpg
 heroAlt: "An old property register open at a page of handwritten entries"
-targetKeyword: index 2 property
-searchVolume: 590
+targetKeyword: index 2 online
+searchVolume: 8100
 competition: LOW
 funnelStage: consideration
 wordTarget: 1400
@@ -13,8 +13,8 @@ answer: >
   Index 2 is the one page summary the sub registrar generates when a document
   is registered. It records the document type, the parties, the property, the
   consideration and the registration details. It is proof that a transaction
-  was registered, not proof of ownership, and it can be searched free through
-  e-Search on the IGR Maharashtra portal.
+  was registered, not proof of ownership, and you can get Index 2 online, free,
+  through e-Search on the IGR Maharashtra portal.
 sources:
   - label: Department of Registration and Stamps, e-Search
     url: https://igrmaharashtra.gov.in/
@@ -37,7 +37,7 @@ readNext:
 
 ## The short answer
 
-Index 2 is the one page summary the sub registrar generates when a document is registered. It records the document type, the parties, the property, the consideration and the registration details. **It is proof that a transaction was registered, not proof of ownership**, and it can be searched free through e-Search on the IGR Maharashtra portal.
+Index 2 is the one page summary the sub registrar generates when a document is registered. It records the document type, the parties, the property, the consideration and the registration details. **It is proof that a transaction was registered, not proof of ownership**, and you can get Index 2 online, free, through e-Search on the IGR Maharashtra portal.
 
 ---
 
@@ -61,7 +61,7 @@ It is generated for every registered document, not just a sale: gift, mortgage, 
 
 ---
 
-## Getting a copy
+## Getting Index 2 online, and when you need a certified copy
 
 The free route is **e-Search** on the IGR Maharashtra portal. Choose your region, enter the document number or the survey number with the year and the sub registrar office, and download the PDF.
 

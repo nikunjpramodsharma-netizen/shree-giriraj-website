@@ -1,5 +1,5 @@
 ---
-title: "Mutation of property: what it is, and what it is not"
+title: "Mutation of property in Mumbai: the tax record, the property card, and what neither proves"
 slug: mutation-of-property
 category: Paperwork
 heroImage: /blog/mutation.jpg
@@ -15,6 +15,8 @@ answer: >
   prove ownership. The courts have repeatedly held that revenue records are not
   documents of title: ownership comes from your registered deed.
 sources:
+  - label: "Aaple Sarkar, Government of Maharashtra, Land Records services: certified copy of a property card, Mumbai Suburban District"
+    url: https://aaplesarkar.mahaonline.gov.in/en
   - label: "Supreme Court of India, Jitendra Singh v. State of Madhya Pradesh, 6 September 2021: a mutation entry confers no right, title or interest"
     url: https://indiankanoon.org/doc/104309066/
   - label: "A.K. Legal and Associates, revenue record entries do not transfer ownership"
@@ -55,6 +57,16 @@ This matters because people occasionally try to argue the reverse.
 The position is settled and has been restated repeatedly: **mutation entries do not confer ownership.** Mutation is an administrative act for revenue and taxation purposes. It follows ownership rather than creating it, and revenue records are not documents of title.
 
 So mutation in your name does not make you the owner if the deed says otherwise, and equally, an absent mutation does not take your ownership away. What it does is keep the municipal record consistent with reality, which matters for everything practical.
+
+---
+
+## The property card is a different record
+
+In Mumbai there is a second record people search for alongside mutation: the **property card**. It is kept by the City Survey office of the state's Land Records department, not by the BMC, and it records the land: its city survey (CTS) number, its area and who holds it.
+
+For a flat in a society building, the card is about the plot rather than your individual flat. That is why it matters most when a society completes conveyance or goes for redevelopment, because that is when the name on the land has to be right. Certified copies of a property card, including for the Mumbai Suburban District, are a notified service on the state's Aaple Sarkar portal.
+
+Like mutation, **the property card is a record, not a title document.** Ownership of your flat still rests on your registered deed.
 
 ---
 

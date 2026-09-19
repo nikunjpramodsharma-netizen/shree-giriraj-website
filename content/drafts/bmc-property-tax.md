@@ -1,5 +1,5 @@
 ---
-title: "BMC property tax: how it is calculated, and whether you are exempt"
+title: "BMC property tax: online payment, how it is calculated, and whether you are exempt"
 slug: bmc-property-tax
 category: Paperwork
 heroImage: /blog/bmc-property-tax.jpg
@@ -84,7 +84,7 @@ The percentage applied to capital value varies by ward and by user category. We 
 
 ---
 
-## Paying it
+## Paying BMC property tax online
 
 1. Go to the MCGM portal and open property tax under the citizens section
 2. Enter your property account number, or search by ward, building name and address

@@ -1,5 +1,5 @@
 ---
-title: "Occupancy certificate: why taking possession without one is a mistake"
+title: "Occupancy certificate (OC): why taking possession without one is a mistake"
 slug: occupancy-certificate
 category: Paperwork
 heroImage: /blog/occupancy-certificate.jpg
@@ -10,8 +10,8 @@ competition: LOW
 funnelStage: awareness
 wordTarget: 2000
 answer: >
-  An occupancy certificate is issued by the local authority confirming a
-  building is complete and fit to live in. Without one a building is not
+  An occupancy certificate, or OC certificate, is issued by the local authority
+  confirming a building is complete and fit to live in. Without one a building is not
   legally cleared for occupation, permanent water and electricity connections
   are usually withheld, lenders can hold back the final loan tranche, and a
   future buyer will struggle to finance the purchase.
@@ -39,7 +39,7 @@ readNext:
 
 ## The short answer
 
-An occupancy certificate is issued by the local authority confirming a building is complete and fit to live in. Without one a building is not legally cleared for occupation, **permanent water and electricity connections are usually withheld**, lenders can hold back the final loan tranche, and a future buyer will struggle to finance the purchase.
+An occupancy certificate, or OC certificate, is issued by the local authority confirming a building is complete and fit to live in. Without one a building is not legally cleared for occupation, **permanent water and electricity connections are usually withheld**, lenders can hold back the final loan tranche, and a future buyer will struggle to finance the purchase.
 
 ---
 
