@@ -14,6 +14,18 @@ const SERVICE_SLUGS = [
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // The blog articles are markdown files under content/drafts, read at request
+  // time. Vercel only ships files a route is traced to use, and the sitemap's
+  // hourly regeneration was not traced to them, so the first rebuild after a
+  // deploy dropped every article from the sitemap (found 19 September 2026).
+  // Name them explicitly for every route that reads them.
+  experimental: {
+    outputFileTracingIncludes: {
+      "/sitemap.xml": ["./content/drafts/**/*"],
+      blog: ["./content/drafts/**/*"],
+      guides: ["./content/drafts/**/*"],
+    },
+  },
   async redirects() {
     const group = SERVICE_SLUGS.join("|");
     return [
