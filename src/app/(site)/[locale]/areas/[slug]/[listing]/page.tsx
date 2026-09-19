@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
@@ -20,9 +21,17 @@ export const revalidate = 300;
 
 const LOCALE = "en";
 
-export function generateStaticParams({ params }: { params: { locale: string; slug: string } }) {
-  if (params.locale !== LOCALE) return [];
-  return FLAT_LISTINGS.filter((l) => l.area === params.slug).map((l) => ({ listing: LISTING_SEGMENT[l.intent] }));
+/**
+ * All six pages are built ahead of time. The parent segments' params are not
+ * always passed down here, so the list is derived from the data on its own,
+ * narrowed by whatever parent params do arrive.
+ */
+export function generateStaticParams({ params }: { params: { locale?: string; slug?: string } }) {
+  if (params?.locale && params.locale !== LOCALE) return [];
+  return FLAT_LISTINGS.filter((l) => !params?.slug || l.area === params.slug).map((l) => ({
+    ...(params?.slug ? {} : { slug: l.area }),
+    listing: LISTING_SEGMENT[l.intent],
+  }));
 }
 
 export async function generateMetadata({
@@ -41,6 +50,9 @@ export async function generateMetadata({
 
 export default function FlatsPage({ params }: { params: { locale: string; slug: string; listing: string } }) {
   const { locale } = params;
+  // Pages rendered on demand must set the locale themselves, or next-intl
+  // falls back to reading request headers, which a static render forbids.
+  setRequestLocale(locale);
   const l = getListing(params.slug, params.listing);
   const area = getArea(params.slug);
   if (!l || !area || locale !== LOCALE) notFound();
