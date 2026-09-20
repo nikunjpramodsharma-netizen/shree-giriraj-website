@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { CARD, buildVCard, cardWhatsAppLink, showPhone } from "./card";
 import { site } from "./config";
+import { shouldOfferContact } from "@/components/card/AutoSave";
 
 describe("the digital card", () => {
   const vcf = buildVCard("QUJD");
@@ -44,5 +45,16 @@ describe("the digital card", () => {
 
   it("uses no dashes in anything a visitor reads", () => {
     expect(JSON.stringify(CARD)).not.toMatch(/[—–]/);
+  });
+
+  it("offers the contact file on arrival to a phone, once, and never to a desktop", () => {
+    const android = "Mozilla/5.0 (Linux; Android 14; Pixel 8) Mobile Safari/537.36";
+    const iphone = "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) Safari/604.1";
+    const windows = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/126.0";
+    expect(shouldOfferContact(android, 5, false)).toBe(true);
+    expect(shouldOfferContact(iphone, 5, false)).toBe(true);
+    expect(shouldOfferContact(android, 5, true)).toBe(false);
+    expect(shouldOfferContact(windows, 0, false)).toBe(false);
+    expect(shouldOfferContact(windows, 10, false)).toBe(false);
   });
 });

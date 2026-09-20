@@ -15,7 +15,13 @@ export const CARD = {
   givenName: "Pramod",
   familyName: "Sharma",
   role: "Founder",
-  photo: "/team/pramod-sharma-card.jpg",
+  /**
+   * The card's own line under the firm's name. Not site.tagline: the owner does
+   * not want interiors and civil work put forward here, because buying, selling,
+   * renting and investing are the core of the business (21 September 2026).
+   */
+  tagline: "Buy · Sell · Rent · Invest",
+  photo: "/team/pramod-sharma-portrait.jpg",
   whatsappMessage: "Hello, I have your card and would like to ask about a property.",
 } as const;
 

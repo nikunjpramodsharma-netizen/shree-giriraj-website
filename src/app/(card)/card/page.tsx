@@ -4,8 +4,9 @@ import QRCode from "qrcode";
 import { site } from "@/lib/config";
 import { SITE_URL } from "@/lib/seo";
 import { CARD, cardWhatsAppLink, showPhone } from "@/lib/card";
-import { LogoMark, Blades } from "@/components/card/LogoMark";
+import { LogoMark } from "@/components/card/LogoMark";
 import { ShareButton } from "@/components/card/ShareButton";
+import { AutoSave } from "@/components/card/AutoSave";
 import {
   PhoneIcon,
   WhatsAppIcon,
@@ -17,7 +18,6 @@ import {
   FacebookIcon,
   StarIcon,
   SaveContactIcon,
-  ShieldIcon,
 } from "@/components/card/icons";
 
 const CARD_URL = `${SITE_URL}${CARD.path}`;
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: "profile",
     url: CARD_URL,
     title: TITLE,
-    description: `${site.tagline}. Tap to call, WhatsApp or save the contact.`,
+    description: `${CARD.tagline}. Tap to call, WhatsApp or save the contact.`,
     siteName: site.name,
     images: [{ url: "/card-og.png", width: 1200, height: 686, alt: site.name }],
   },
@@ -58,123 +58,156 @@ function qrPath(text: string): { size: number; d: string } {
 
 export default function CardPage() {
   const qr = qrPath(CARD_URL);
-  const hours = site.hours.label.charAt(0).toUpperCase() + site.hours.label.slice(1);
+  const hours =
+    site.hours.label.charAt(0).toUpperCase() + site.hours.label.slice(1);
 
   return (
-    <article className="vc">
-      <header className="vc-top">
-        <Blades className="vc-blades" />
-        <div className="vc-brand">
-          <div className="vc-logo">
-            <LogoMark className="mark" />
+    <>
+      <AutoSave href={CARD.vcfPath} name={CARD.person} />
+      <article className="vc">
+        {/* One photograph, the name over it, nothing behind it. */}
+        <header className="vc-hero">
+          <Image
+            className="vc-hero-img"
+            src={CARD.photo}
+            alt={CARD.person}
+            width={760}
+            height={760}
+            sizes="(max-width: 420px) 100vw, 420px"
+            priority
+          />
+          <div className="vc-bar">
+            <LogoMark className="mark" mono />
+            <div>
+              <b>{site.name}</b>
+              <span>{CARD.tagline}</span>
+            </div>
           </div>
-          <div>
-            <b>{site.name}</b>
-            <span>{site.tagline}</span>
+          <div className="vc-id">
+            <h1 className="vc-name">{CARD.person}</h1>
+            <p className="vc-role">{CARD.role}</p>
+            <p className="vc-since">
+              Since {site.established} · {site.areas.join(" · ")}
+            </p>
           </div>
-        </div>
-        <div className="vc-photo">
-          <Image src={CARD.photo} alt={CARD.person} width={260} height={260} priority />
-        </div>
-        <h1 className="vc-name">{CARD.person}</h1>
-        <p className="vc-role">{CARD.role}</p>
-        <div className="vc-meta">
-          <span>Since {site.established}</span>
-          <span>
-            <ShieldIcon /> MahaRERA {site.rera}
-          </span>
-        </div>
-        <nav className="vc-actions" aria-label="Get in touch">
-          <a href={`tel:${site.phonePrimary}`}>
-            <i>
+        </header>
+
+        <div className="vc-back">
+          <nav className="vc-actions" aria-label="Get in touch">
+            <a href={`tel:${site.phonePrimary}`}>
+              <i>
+                <PhoneIcon />
+              </i>
+              Call
+            </a>
+            <a href={cardWhatsAppLink()} target="_blank" rel="noopener">
+              <i>
+                <WhatsAppIcon />
+              </i>
+              WhatsApp
+            </a>
+            <a href={`mailto:${site.email}`}>
+              <i>
+                <MailIcon />
+              </i>
+              Email
+            </a>
+            <a href={site.social.google} target="_blank" rel="noopener">
+              <i>
+                <PinIcon />
+              </i>
+              Directions
+            </a>
+          </nav>
+
+          <a className="vc-save" href={CARD.vcfPath}>
+            <SaveContactIcon /> Save Contact
+          </a>
+
+          <div className="vc-rows">
+            <div className="vc-row">
               <PhoneIcon />
-            </i>
-            Call
-          </a>
-          <a href={cardWhatsAppLink()} target="_blank" rel="noopener">
-            <i>
-              <WhatsAppIcon />
-            </i>
-            WhatsApp
-          </a>
-          <a href={`mailto:${site.email}`}>
-            <i>
+              <p>
+                <a href={`tel:${site.phonePrimary}`}>
+                  {showPhone(site.phonePrimary)}
+                </a>
+                <span className="sep">·</span>
+                <a href={`tel:${site.phoneSecondary}`}>
+                  {showPhone(site.phoneSecondary)}
+                </a>
+              </p>
+            </div>
+            <div className="vc-row">
               <MailIcon />
-            </i>
-            Email
-          </a>
-          <a href={site.social.google} target="_blank" rel="noopener">
-            <i>
+              <p>
+                <a href={`mailto:${site.email}`}>{site.email}</a>
+              </p>
+            </div>
+            <div className="vc-row">
               <PinIcon />
-            </i>
-            Directions
-          </a>
-        </nav>
-      </header>
+              <p>
+                <a href={site.social.google} target="_blank" rel="noopener">
+                  {site.address}
+                </a>
+              </p>
+            </div>
+            <div className="vc-row">
+              <ClockIcon />
+              <p>{hours}</p>
+            </div>
+          </div>
 
-      <div className="vc-body">
-        <a className="vc-save" href={CARD.vcfPath} data-event="save_contact">
-          <SaveContactIcon /> Save Contact
-        </a>
-        <div className="vc-rows">
-          <div className="vc-row">
-            <PhoneIcon />
-            <p>
-              <a href={`tel:${site.phonePrimary}`}>{showPhone(site.phonePrimary)}</a>
-              <a href={`tel:${site.phoneSecondary}`}>{showPhone(site.phoneSecondary)}</a>
-            </p>
-          </div>
-          <div className="vc-row">
-            <MailIcon />
-            <p>
-              <a href={`mailto:${site.email}`}>{site.email}</a>
-            </p>
-          </div>
-          <div className="vc-row">
-            <PinIcon />
-            <p>
-              <a href={site.social.google} target="_blank" rel="noopener">
-                {site.address}
-              </a>
-            </p>
-          </div>
-          <div className="vc-row">
-            <ClockIcon />
-            <p>{hours}</p>
-          </div>
-        </div>
-      </div>
+          <nav className="vc-social" aria-label="Find us online">
+            <a href="/" aria-label="Website">
+              <GlobeIcon />
+            </a>
+            <a
+              href={site.social.instagram}
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <InstagramIcon />
+            </a>
+            <a
+              href={site.social.facebook}
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook"
+            >
+              <FacebookIcon />
+            </a>
+            <a
+              href={site.social.google}
+              target="_blank"
+              rel="noopener"
+              aria-label="Google reviews"
+            >
+              <StarIcon />
+            </a>
+            <ShareButton title={TITLE} url={CARD_URL} />
+          </nav>
 
-      <nav className="vc-social" aria-label="Find us online">
-        <a href="/" aria-label="Website">
-          <GlobeIcon />
-        </a>
-        <a href={site.social.instagram} target="_blank" rel="noopener" aria-label="Instagram">
-          <InstagramIcon />
-        </a>
-        <a href={site.social.facebook} target="_blank" rel="noopener" aria-label="Facebook">
-          <FacebookIcon />
-        </a>
-        <a href={site.social.google} target="_blank" rel="noopener" aria-label="Google reviews">
-          <StarIcon />
-        </a>
-        <ShareButton title={TITLE} url={CARD_URL} />
-      </nav>
-
-      {/* Folded away so the card fits one phone screen; opened when someone
+          {/* Folded away so the card fits one phone screen; opened when someone
           wants to scan it from this phone. */}
-      <details className="vc-qr">
-        <summary>Show QR code</summary>
-        <div className="tile">
-          <svg className="qr" viewBox={`0 0 ${qr.size} ${qr.size}`} role="img" aria-label="QR code for this card" shapeRendering="crispEdges">
-            <path fill="#151b3d" d={qr.d} />
-          </svg>
-        </div>
-      </details>
+          <details className="vc-qr">
+            <summary>Show QR code</summary>
+            <div className="tile">
+              <svg
+                className="qr"
+                viewBox={`0 0 ${qr.size} ${qr.size}`}
+                role="img"
+                aria-label="QR code for this card"
+                shapeRendering="crispEdges"
+              >
+                <path fill="#151b3d" d={qr.d} />
+              </svg>
+            </div>
+          </details>
 
-      <p className="vc-foot">
-        {site.name} · {site.areas.join(" · ")}
-      </p>
-    </article>
+          <p className="vc-foot">MahaRERA {site.rera}</p>
+        </div>
+      </article>
+    </>
   );
 }
