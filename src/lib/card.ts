@@ -17,15 +17,6 @@ export const CARD = {
   role: "Founder",
   photo: "/team/pramod-sharma-card.jpg",
   whatsappMessage: "Hello, I have your card and would like to ask about a property.",
-  services: [
-    "Buy a home",
-    "Sell a flat",
-    "Rent",
-    "New projects",
-    "Commercial and plots",
-    "Interiors and civil work",
-    "Investment advice",
-  ],
 } as const;
 
 export function cardWhatsAppLink() {

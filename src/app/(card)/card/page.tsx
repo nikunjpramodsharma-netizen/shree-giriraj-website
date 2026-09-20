@@ -80,7 +80,6 @@ export default function CardPage() {
         <p className="vc-role">{CARD.role}</p>
         <div className="vc-meta">
           <span>Since {site.established}</span>
-          <span>{site.areas.join(" · ")}</span>
           <span>
             <ShieldIcon /> MahaRERA {site.rera}
           </span>
@@ -120,61 +119,31 @@ export default function CardPage() {
         <div className="vc-rows">
           <div className="vc-row">
             <PhoneIcon />
-            <div>
-              <small>Phone</small>
-              <p>
-                <a href={`tel:${site.phonePrimary}`}>{showPhone(site.phonePrimary)}</a>
-                <a href={`tel:${site.phoneSecondary}`}>{showPhone(site.phoneSecondary)}</a>
-              </p>
-            </div>
+            <p>
+              <a href={`tel:${site.phonePrimary}`}>{showPhone(site.phonePrimary)}</a>
+              <a href={`tel:${site.phoneSecondary}`}>{showPhone(site.phoneSecondary)}</a>
+            </p>
           </div>
           <div className="vc-row">
             <MailIcon />
-            <div>
-              <small>Email</small>
-              <p>
-                <a href={`mailto:${site.email}`}>{site.email}</a>
-              </p>
-            </div>
-          </div>
-          <div className="vc-row">
-            <GlobeIcon />
-            <div>
-              <small>Website</small>
-              <p>
-                <a href="/">{SITE_URL.replace(/^https?:\/\//, "")}</a>
-              </p>
-            </div>
+            <p>
+              <a href={`mailto:${site.email}`}>{site.email}</a>
+            </p>
           </div>
           <div className="vc-row">
             <PinIcon />
-            <div>
-              <small>Office</small>
-              <p>
-                <a href={site.social.google} target="_blank" rel="noopener">
-                  {site.address}
-                </a>
-              </p>
-            </div>
+            <p>
+              <a href={site.social.google} target="_blank" rel="noopener">
+                {site.address}
+              </a>
+            </p>
           </div>
           <div className="vc-row">
             <ClockIcon />
-            <div>
-              <small>Open</small>
-              <p>{hours}</p>
-            </div>
+            <p>{hours}</p>
           </div>
         </div>
       </div>
-
-      <section className="vc-services">
-        <small>How we can help</small>
-        <ul>
-          {CARD.services.map((s) => (
-            <li key={s}>{s}</li>
-          ))}
-        </ul>
-      </section>
 
       <nav className="vc-social" aria-label="Find us online">
         <a href="/" aria-label="Website">
@@ -189,23 +158,22 @@ export default function CardPage() {
         <a href={site.social.google} target="_blank" rel="noopener" aria-label="Google reviews">
           <StarIcon />
         </a>
+        <ShareButton title={TITLE} url={CARD_URL} />
       </nav>
 
-      <section className="vc-qr">
+      {/* Folded away so the card fits one phone screen; opened when someone
+          wants to scan it from this phone. */}
+      <details className="vc-qr">
+        <summary>Show QR code</summary>
         <div className="tile">
           <svg className="qr" viewBox={`0 0 ${qr.size} ${qr.size}`} role="img" aria-label="QR code for this card" shapeRendering="crispEdges">
             <path fill="#151b3d" d={qr.d} />
           </svg>
         </div>
-        <div>
-          <b>Share this card</b>
-          <p>Scan with any phone camera to open it.</p>
-          <ShareButton title={TITLE} url={CARD_URL} />
-        </div>
-      </section>
+      </details>
 
       <p className="vc-foot">
-        {site.name} · MahaRERA {site.rera}
+        {site.name} · {site.areas.join(" · ")}
       </p>
     </article>
   );
