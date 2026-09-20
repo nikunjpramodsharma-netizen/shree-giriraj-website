@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { NextRequest } from "next/server";
-import middleware from "./middleware";
+import middleware, { config } from "./middleware";
 
 describe("locale detection middleware", () => {
   it("redirects a first-time Hindi-preferring visitor to /hi", () => {
@@ -42,5 +42,13 @@ describe("locale detection middleware", () => {
     });
     const res = middleware(req);
     expect(res.headers.get("location")).toContain("/mr");
+  });
+
+  it("leaves the digital card alone and still handles ordinary pages", () => {
+    const matcher = new RegExp(`^${config.matcher[0]}$`);
+    expect(matcher.test("/card")).toBe(false);
+    expect(matcher.test("/card/pramod-sharma.vcf")).toBe(false);
+    expect(matcher.test("/projects")).toBe(true);
+    expect(matcher.test("/cardamom")).toBe(true);
   });
 });
