@@ -71,7 +71,7 @@ export function buildVCard(photoBase64?: string): string {
     `EMAIL;TYPE=INTERNET,WORK:${site.email}`,
     `ADR;TYPE=WORK:;;${esc(`${shop}, ${society}, ${locality}`)};${esc(`${suburb}, ${city}`)};Maharashtra;${pin};India`,
     `URL:${SITE_URL}/`,
-    `NOTE:${esc(`MahaRERA ${site.rera}. Real estate, interiors and civil work in ${site.areas.slice(0, -1).join(", ")} and ${site.areas.at(-1)}. Open ${site.hours.label}.`)}`,
+    `NOTE:${esc(`MahaRERA ${site.rera}. Buying, selling, renting and investing in ${site.areas.slice(0, -1).join(", ")} and ${site.areas.at(-1)}. Open ${site.hours.label}.`)}`,
     ...(photoBase64 ? [`PHOTO;ENCODING=b;TYPE=JPEG:${photoBase64}`] : []),
     "END:VCARD",
   ];
