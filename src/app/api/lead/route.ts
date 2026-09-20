@@ -38,6 +38,38 @@ export const dynamic = "force-dynamic";
  * verifying a domain is worth doing when there is one to verify.
  */
 
+/**
+ * The lead tracker.
+ *
+ * Every enquiry is also appended to a Google Sheet, so the owner has one list
+ * to work rather than an inbox: status, next action and outcome are his own
+ * columns beside the ones the site fills.
+ *
+ * LEAD_SHEET_URL is the address of a Google Apps Script web app on the
+ * owner's own account, which appends the row. It is a URL, not a credential:
+ * the sheet stays inside his Google account and nothing here can read it.
+ *
+ * The append never fails the enquiry: the email is still the record of truth.
+ * If the sheet is unreachable, the lead is in the inbox as before and the
+ * failure is logged without the person's details.
+ */
+const SHEET_URL = process.env.LEAD_SHEET_URL;
+
+async function appendToSheet(lead: Lead): Promise<void> {
+  if (!SHEET_URL) return;
+  try {
+    const res = await fetch(SHEET_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ receivedAt: new Date().toISOString(), ...lead }),
+      signal: AbortSignal.timeout(8000),
+    });
+    if (!res.ok) console.error("[lead] sheet rejected the row", res.status);
+  } catch (err) {
+    console.error("[lead] could not reach the sheet", String(err).slice(0, 120));
+  }
+}
+
 const RESEND_KEY = process.env.RESEND_API_KEY;
 const TO = process.env.LEAD_TO_EMAIL || site.email;
 // shreegiriraj.com was verified in Resend on 18 September 2026 (DKIM on
@@ -149,6 +181,10 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "send_failed", upstream: res.status, reason }, { status: 502 });
     }
 
+    // The row goes in once the email is away, so the email is never held up
+    // by the sheet, and a sheet outage never costs a lead.
+    await appendToSheet(lead);
+
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("[lead] failed to send enquiry", err);
@@ -165,6 +201,7 @@ export async function POST(request: Request) {
 export async function GET() {
   const out: Record<string, unknown> = {
     keyConfigured: Boolean(process.env.RESEND_API_KEY),
+    sheetConfigured: Boolean(process.env.LEAD_SHEET_URL),
     to: TO,
     from: FROM,
     deployment: {
