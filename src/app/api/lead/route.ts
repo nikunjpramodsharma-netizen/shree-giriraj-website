@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { NextResponse } from "next/server";
 import { site } from "@/lib/config";
 import { subjectFor, textFor, htmlFor, type Lead } from "@/lib/lead-email";
@@ -70,8 +71,18 @@ async function appendToSheet(lead: Lead): Promise<void> {
       redirect: "manual",
       signal: AbortSignal.timeout(8000),
     });
-    const accepted = res.ok || res.status === 302 || res.status === 0;
-    if (!accepted) console.error("[lead] sheet rejected the row", res.status);
+    // Not every 302 is success. A script that has stopped accepting anonymous
+    // requests redirects to the Google sign in page instead, which would
+    // otherwise be read as a row safely stored. Only the redirect to the
+    // script's own content host means the script ran.
+    const location = res.headers.get("location") ?? "";
+    const ranTheScript = res.status === 302 && location.includes("script.googleusercontent.com");
+    if (!res.ok && !ranTheScript) {
+      const reason = location.includes("accounts.google.com")
+        ? "the deployment is not open to anyone"
+        : `status ${res.status}`;
+      console.error("[lead] the sheet did not take the row:", reason);
+    }
   } catch (err) {
     console.error("[lead] could not reach the sheet", String(err).slice(0, 120));
   }
@@ -199,6 +210,14 @@ export async function POST(request: Request) {
   }
 }
 
+/** Length and a short hash of the configured sheet URL, or null when unset. */
+function sheetFingerprint(): { length: number; sha256: string } | null {
+  const url = process.env.LEAD_SHEET_URL;
+  if (!url) return null;
+  const sha256 = createHash("sha256").update(url).digest("hex").slice(0, 12);
+  return { length: url.length, sha256 };
+}
+
 /**
  * GET /api/lead: a read only health check for the owner, so a failing form
  * can be diagnosed without server logs. It asks Resend which sending domains
@@ -209,6 +228,12 @@ export async function GET() {
   const out: Record<string, unknown> = {
     keyConfigured: Boolean(process.env.RESEND_API_KEY),
     sheetConfigured: Boolean(process.env.LEAD_SHEET_URL),
+    // A fingerprint of the sheet URL, never the URL. The deployment id inside
+    // it is a write capability, so it stays secret, but a hash can be compared
+    // against the address the owner believes he pasted. A single wrong
+    // character changes the hash completely, which is the whole point: it took
+    // a long evening to prove the stored value was the suspect.
+    sheetUrl: sheetFingerprint(),
     to: TO,
     from: FROM,
     deployment: {
