@@ -62,9 +62,16 @@ async function appendToSheet(lead: Lead): Promise<void> {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ receivedAt: new Date().toISOString(), ...lead }),
+      // Apps Script runs the script, then answers 302 pointing at a one time
+      // content URL. Following that redirect is what fails: fetch reissues the
+      // request as a GET the key does not authorise, and a 401 comes back for
+      // a row that was in fact written. The 302 IS the success, so it is read
+      // here rather than followed.
+      redirect: "manual",
       signal: AbortSignal.timeout(8000),
     });
-    if (!res.ok) console.error("[lead] sheet rejected the row", res.status);
+    const accepted = res.ok || res.status === 302 || res.status === 0;
+    if (!accepted) console.error("[lead] sheet rejected the row", res.status);
   } catch (err) {
     console.error("[lead] could not reach the sheet", String(err).slice(0, 120));
   }
