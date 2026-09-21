@@ -7,16 +7,17 @@
     "enquireNow": "Enquire Now",
     "menuLabel": "Menu",
     "brandTagline": "Real Estate · Est. {year}",
-    "whatsappGenericMessage": "Hi Shree Giriraj, I'd like to know more about properties in the western suburbs.",
-    "whatsappEnquireMessage": "Hi Shree Giriraj, I'd like to enquire."
+    "whatsappGenericMessage": "Hi Shree Giriraj, I am looking for ___ in ___. My budget is about ___.",
+    "whatsappEnquireMessage": "Hi Shree Giriraj, I am looking for ___ in ___. My budget is about ___."
   },
   "hero": {
     "headingPart1": "Buy, rent or invest",
     "headingEm": "with advice you can trust.",
     "body": "We know which societies have parking, and which have water at six in the morning.",
     "ctaBook": "Book a consultation",
-    "ctaWhatsapp": "Ask us on WhatsApp",
-    "whatsappMessage": "Hi Shree Giriraj, I'd like to enquire.",
+    "ctaWhatsapp": "Get options on WhatsApp",
+    "whatsappPromise": "Tell us what you need and we reply with options that fit, usually the same day. Free, no obligation.",
+    "whatsappMessage": "Hi Shree Giriraj, I am looking for ___ in ___. My budget is about ___.",
     "statYears": "In these suburbs",
     "statSuburbs": "Borivali, Kandivali, Malad",
     "statRating": "Client rating",
@@ -190,7 +191,7 @@
   },
   "whatsappFloat": {
     "ariaLabel": "Chat on WhatsApp",
-    "message": "Hi Shree Giriraj, I'd like to enquire about a property."
+    "message": "Hi Shree Giriraj, I am looking for ___ in ___. My budget is about ___."
   },
   "stickyCta": {
     "callLabel": "Call",

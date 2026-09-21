@@ -384,6 +384,10 @@ export default async function HomePage({
               >
                 {tHero("ctaWhatsapp")}
               </a>
+              {/* The promise that stands in for a listings page (owner, 21
+                  September 2026): WhatsApp is the main route, and the reply
+                  with matching options is what the visitor is signing up for. */}
+              <p className="mt-3 max-w-[32em] text-sm text-paper/70">{tHero("whatsappPromise")}</p>
             </div>
             <div className="mt-12 flex flex-wrap gap-8">
               {[

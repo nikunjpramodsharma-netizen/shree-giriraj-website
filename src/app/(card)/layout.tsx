@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Suspense } from "react";
 import { GeistSans } from "geist/font/sans";
 import { Gtm } from "@/components/Gtm";
+import { WhatsAppRef } from "@/components/WhatsAppRef";
 import { SITE_URL } from "@/lib/seo";
 import "./card.css";
 
@@ -25,6 +26,7 @@ export default function CardLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={GeistSans.variable}>
       <body>
         {children}
+        <WhatsAppRef />
         <Suspense fallback={null}>
           <Gtm />
         </Suspense>

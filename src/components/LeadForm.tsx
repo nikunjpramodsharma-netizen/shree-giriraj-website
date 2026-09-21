@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { waLink } from "@/lib/config";
+import { getAttribution } from "@/lib/attribution";
+import { refLine, withRef } from "@/lib/whatsapp-ref";
 
 export function LeadForm() {
   const t = useTranslations("leadForm");
@@ -27,7 +29,10 @@ export function LeadForm() {
       `${t("whatsappIntentLabel")}: ${intent}\n` +
       `${t("whatsappAreaLabel")}: ${area || "-"}\n` +
       `${t("whatsappPhoneLabel")}: ${phone || "-"}`;
-    window.open(waLink(message), "_blank", "noopener");
+    // Opened from code, not a link, so the site wide WhatsAppRef handler never
+    // sees it: the reference is added here instead.
+    const ref = refLine(window.location.pathname, getAttribution());
+    window.open(withRef(waLink(message), ref), "_blank", "noopener");
   }
 
   const field =

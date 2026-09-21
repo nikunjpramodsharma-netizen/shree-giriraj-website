@@ -13,6 +13,7 @@ import { Suspense } from "react";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { WhatsAppRef } from "@/components/WhatsAppRef";
 
 /**
  * Geist, Vercel's typeface, across the whole site.
@@ -98,6 +99,7 @@ export default function LocaleLayout({
           <Footer />
           <WhatsAppFloat />
           <StickyMobileCTA locale={locale} />
+          <WhatsAppRef />
           <Suspense fallback={null}>
             <Gtm />
           </Suspense>

@@ -20,6 +20,7 @@ export function StickyBar({ message, callLabel, waLabel }: { message: string; ca
   return (
     <div
       data-sticky-bar
+      data-page-sticky
       className={`fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-brand-indigo-deep/95 p-3 backdrop-blur transition-transform duration-500 md:hidden ${
         show ? "translate-y-0" : "translate-y-full"
       }`}

@@ -370,7 +370,7 @@ function Invite({ invite }: { invite: AreaInvite }) {
           Or leave your details below
         </a>
       </div>
-      <p className="mt-3 text-xs text-paper/60">Free, no obligation, usually answered the same day.</p>
+      <p className="mt-3 text-xs text-paper/60">We reply on WhatsApp with options that fit, usually the same day. Free, no obligation.</p>
     </aside>
   );
 }

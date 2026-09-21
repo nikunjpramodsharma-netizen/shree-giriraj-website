@@ -12,7 +12,8 @@ import { StickyBar } from "@/components/motion/StickyBar";
 import { FlatPriceEstimator } from "@/components/FlatPriceEstimator";
 import { graph, breadcrumbNode, faqNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
-import { waLink } from "@/lib/config";
+import { site, waLink } from "@/lib/config";
+import { showPhone } from "@/lib/card";
 import { getArea } from "@/lib/areas";
 import { FLAT_LISTINGS, LISTING_SEGMENT, getListing, listingPath } from "@/lib/flats";
 import { interlinksForListing } from "@/lib/interlinks";
@@ -20,6 +21,56 @@ import { interlinksForListing } from "@/lib/interlinks";
 export const revalidate = 300;
 
 const LOCALE = "en";
+
+/**
+ * The promise that stands in for a listings grid (owner, 21 September 2026).
+ * These pages are where the ads land, and a visitor who searched for flats
+ * expects to scroll flats. There is no grid, so the page offers the better
+ * thing instead: say what you want once, on WhatsApp, and get back only the
+ * flats that fit. WhatsApp is the main route; the form stays below for anyone
+ * who prefers it.
+ *
+ * "Usually the same day" is a promise the office has to keep. If it ever
+ * cannot, change it here and in the ads together, never one without the other.
+ */
+const PROMISE = {
+  sale: "Tell us the size, budget and pocket on WhatsApp. We send you the flats that fit, usually the same day.",
+  rent: "Tell us the size, budget and where you work on WhatsApp. We send you the flats that fit, usually the same day.",
+};
+
+// Buyers choose by pocket; renters by the commute, which is what the rent
+// pages' intros are about. The three things asked for follow the same split.
+const ASK = {
+  sale: "The size, your budget and the pocket you like.",
+  rent: "The size, your budget and where you work.",
+};
+
+const HOW_INTRO = {
+  sale: "Portals show you every flat that is listed. We send you only the ones that match your size, budget and pocket, so your weekend goes on flats worth seeing.",
+  rent: "Portals show you every flat that is listed. We send you only the ones that match your size, budget and commute, so your weekend goes on flats worth seeing.",
+};
+
+function howSteps(intent: "sale" | "rent") {
+  return [
+    {
+      title: "Send us three things",
+      body: `${ASK[intent]} One WhatsApp message is enough.`,
+    },
+    {
+      title: "Get your shortlist, usually the same day",
+      body: "Flats that fit, each with its asking price and what we know about the building and the society.",
+    },
+    intent === "sale"
+      ? {
+          title: "Visit only what fits",
+          body: "We arrange the visits, then check the title, society NOC and OC before you pay a token.",
+        }
+      : {
+          title: "Move in without the running around",
+          body: "We arrange the visits, verify the owner, and register the leave and licence with police verification.",
+        },
+  ];
+}
 
 /**
  * All six pages are built ahead of time. The parent segments' params are not
@@ -94,14 +145,19 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
           </div>
           <h1 className="rise mt-3 max-w-[22ch] text-3xl text-white md:text-5xl">{l.h1}</h1>
           <p className="rise-2 mt-5 max-w-[58ch] text-paper/80">{l.intro}</p>
-          <div className="rise-3 mt-7 flex flex-wrap items-center gap-3">
+          <p className="rise-3 mt-7 max-w-[34em] text-lg font-medium leading-snug text-white">{PROMISE[l.intent]}</p>
+          <div className="rise-3 mt-5 flex flex-wrap items-center gap-x-4 gap-y-3">
             <a href={waLink(l.waMessage)} target="_blank" rel="noopener" className="btn btn-wa">
-              Tell us the size and budget
+              Get matching flats on WhatsApp
             </a>
-            <a href="#enquire" className="text-sm font-semibold text-bronze underline decoration-bronze/40 underline-offset-4">
-              Or leave your details
+            <a
+              href={`tel:${site.phonePrimary}`}
+              className="text-sm font-semibold text-bronze underline decoration-bronze/40 underline-offset-4"
+            >
+              Or call {showPhone(site.phonePrimary)}
             </a>
           </div>
+          <p className="rise-3 mt-3 text-xs text-paper/60">Free, no obligation. Open {site.hours.label}.</p>
         </div>
       </header>
 
@@ -110,6 +166,35 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
           <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">The short answer</div>
           <p className="mt-2.5 text-lg text-ink">{l.answer}</p>
         </div>
+
+        <section className="mt-12" aria-labelledby="how-it-works">
+          <div className="eyebrow">How it works</div>
+          <h2 id="how-it-works" className="mt-3 text-2xl text-ink md:text-3xl">
+            Tell us once. We do the searching.
+          </h2>
+          <p className="mt-3 max-w-[62ch] text-ink/80">{HOW_INTRO[l.intent]}</p>
+          <InView as="ol" className="cascade mt-6 grid gap-4 md:grid-cols-3" threshold={0.15}>
+            {howSteps(l.intent).map((step, i) => (
+              <li
+                key={step.title}
+                style={{ ["--i" as string]: i }}
+                className="rounded-2xl border border-line bg-white p-6"
+              >
+                <div className="font-display text-3xl font-semibold text-bronze-deep" aria-hidden="true">
+                  {i + 1}
+                </div>
+                <div className="mt-2 font-semibold text-brand-indigo">{step.title}</div>
+                <p className="mt-2 text-[0.97rem] text-ink/80">{step.body}</p>
+              </li>
+            ))}
+          </InView>
+          <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3">
+            <a href={waLink(l.waMessage)} target="_blank" rel="noopener" className="btn btn-wa">
+              Send your requirement on WhatsApp
+            </a>
+            <span className="text-sm text-muted">Free, no obligation. Usually answered the same day.</span>
+          </div>
+        </section>
 
         <section className="mt-12">
           <h2 className="text-2xl text-ink md:text-3xl">
@@ -171,11 +256,11 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
           </ul>
           <aside className="mt-8 rounded-2xl border border-bronze/30 bg-brand-indigo-deep p-6 text-paper md:p-7">
             <p className="font-display text-lg leading-snug text-white md:text-xl">
-              Send us the size, the budget and the pocket, and we will send the flats that fit this week.
+              Still scrolling? {l.intent === "sale" ? "Send us the size, budget and pocket" : "Send us the size, budget and where you work"}, and we will send the flats that fit, usually the same day.
             </p>
             <div className="mt-5 flex flex-wrap items-center gap-3">
               <a href={waLink(l.waMessage)} target="_blank" rel="noopener" className="btn btn-wa">
-                WhatsApp us
+                Get matching flats on WhatsApp
               </a>
               <a href="#enquire" className="text-sm font-semibold text-bronze underline decoration-bronze/40 underline-offset-4">
                 Or leave your details below
@@ -244,7 +329,7 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
       <div id="enquire">
         <ContactCTA locale={locale} formLocation={`flats-${l.intent}-${l.area}-footer`} presetArea={area.longName} />
       </div>
-      <StickyBar message={l.waMessage} waLabel="WhatsApp" callLabel="Call" />
+      <StickyBar message={l.waMessage} waLabel="Flats on WhatsApp" callLabel="Call" />
     </article>
   );
 }

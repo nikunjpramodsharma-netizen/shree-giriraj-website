@@ -644,3 +644,13 @@ html[data-nav-over] main { padding-top: 0; }
   .lm .lm-train { display: none; }
   .lm .lm-halo, .lm .lm-wave { animation: none !important; }
 }
+
+/* One sticky bar on phones, never two (fixed 21 September 2026). The site wide
+   Call and WhatsApp bar sits on every page; area, flats and service pages add
+   their own, whose WhatsApp message is written for that page. Both are fixed
+   to the bottom on the same layer and the site wide one is drawn last, so it
+   was covering the page's bar and sending the generic message instead. Where a
+   page brings its own bar, the site wide one steps aside. */
+body:has([data-page-sticky]) [data-global-sticky] {
+  display: none;
+}
