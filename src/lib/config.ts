@@ -44,6 +44,10 @@ export const site = {
     // Sulekha, created for the firm on 28 September 2026 and live as "Sulekha
     // Verified" under the firm's name, Borivali West 400092. Checked 1 October 2026.
     "https://www.sulekha.com/shree-giriraj-real-estate-borivali-west-mumbai-contact-address",
+    // RealEstateIndia agent profile, created 28 September 2026: firm name,
+    // Clover Grove CHS, Chikoowadi and the RERA number. Checked 1 October 2026.
+    // Not "Shree Giriraj Real Estate Consultant", which is an unrelated firm.
+    "https://www.realestateindia.com/profile/shree-giriraj-real-estate-in-borivali-west-mumbai-4314295/",
     // Instagram and Facebook, supplied by the owner on 16 September 2026.
     // Neither was findable by search that day; both open and carry the name.
     "https://www.instagram.com/shree_giriraj_real_estate/",
