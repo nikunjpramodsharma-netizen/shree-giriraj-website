@@ -1,5 +1,7 @@
 ---
 title: "Ready reckoner rates in Mumbai, and what they mean for your stamp duty"
+metaTitle: "Ready reckoner rate Mumbai and stamp duty"
+metaDescription: "The ready reckoner rate is the government's minimum value for a property. Stamp duty is charged on it or on the agreement value, whichever is higher."
 slug: ready-reckoner-rate-mumbai
 category: Paperwork
 heroImage: /blog/ready-reckoner.jpg

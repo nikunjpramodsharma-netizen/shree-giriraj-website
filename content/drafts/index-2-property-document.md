@@ -1,5 +1,7 @@
 ---
 title: "Index 2 online: how to download it, and why your buyer will ask for it"
+metaTitle: "What is Index 2 of property? Get it online"
+metaDescription: "Index 2 is the one page summary of a registered property document. What it shows, why buyers ask for it, and how to get it online free from IGR Maharashtra."
 slug: index-2-property-document
 category: Paperwork
 heroImage: /blog/index-2.jpg

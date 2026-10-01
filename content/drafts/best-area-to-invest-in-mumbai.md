@@ -1,5 +1,7 @@
 ---
 title: "How to judge whether an area is worth investing in, using the western suburbs as the example"
+metaTitle: "Best area to invest in Mumbai? How to judge"
+metaDescription: "The six things to check before investing in any Mumbai pocket, from rent and tenants to supply, using Borivali, Kandivali and Malad as examples."
 slug: best-area-to-invest-in-mumbai
 category: Investing
 heroImage: /blog/invest-area.jpg

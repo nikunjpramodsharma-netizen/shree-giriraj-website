@@ -255,30 +255,30 @@ export const REPO_SERVICES: Record<string, RepoService> = {
   // Sanity on 16 September 2026; see service-content-core.ts for why.
   ...CORE_SERVICES,
   "investment-advisory": {
-    title: "Property Investment Advisory in Borivali, Kandivali & Malad",
+    title: "Property investment advice in Borivali",
     heroHeading: "Property investment advisory in the western suburbs",
     heroSubheading:
       "For investors buying in Borivali, Kandivali and Malad to hold rather than to live in. We read the micro market, do the arithmetic on the actual flat, and tell you when the numbers do not work.",
     seoDescription:
-      "Property investment advisory in Borivali, Kandivali and Malad by Shree Giriraj Real Estate, MahaRERA agent A51800005726. Micro market assessment, rental yield arithmetic and title checks for investors in the Mumbai western suburbs.",
+      "Property investment advice in Borivali, Kandivali and Malad: each pocket assessed, the rental yield worked out and the title checked before you buy.",
     body: INVESTMENT_ADVISORY_BODY,
   },
   "commercial-plots": {
-    title: "Commercial Property in Borivali, Kandivali & Malad",
+    title: "Commercial property and plots in Borivali",
     heroHeading: "Commercial property in Borivali, Kandivali and Malad",
     heroSubheading:
       "Shops, showrooms, office space and the occasional genuine plot, for sale or rent across the western suburbs. For businesses that need premises here and investors buying a unit to let.",
     seoDescription:
-      "Commercial property in Borivali, Kandivali and Malad: shops for rent and sale, office space and plots, through Shree Giriraj Real Estate, MahaRERA agent A51800005726. Approved use, society rules and frontage checked before you commit.",
+      "Shops, offices and plots in Borivali, Kandivali and Malad, for rent or sale. Approved use, society rules and frontage checked before you commit.",
     body: COMMERCIAL_PLOTS_BODY,
   },
   "mhada-paperwork": {
-    title: "MHADA Paperwork in Borivali, Kandivali & Malad",
+    title: "MHADA transfer, NOC and sale paperwork",
     heroHeading: "MHADA paperwork, handled end to end",
     heroSubheading:
       "Transfer of tenement, no objection certificates for sale, rent and mortgage, transfer to heirs, and regularisation, for MHADA flats across Borivali, Kandivali and Malad. A complete file to the right desk, followed up until it is decided.",
     seoDescription:
-      "MHADA transfer, NOC for sale, rent and mortgage, transfer on death and regularisation for MHADA flats in Borivali, Kandivali and Malad, through Shree Giriraj Real Estate, MahaRERA agent A51800005726. Rules and charges from MHADA's own documents.",
+      "MHADA transfer, NOC for sale or rent, transfer on death and regularisation for flats in Borivali, Kandivali and Malad, done by MHADA's own rules.",
     body: MHADA_PAPERWORK_BODY,
   },
 };

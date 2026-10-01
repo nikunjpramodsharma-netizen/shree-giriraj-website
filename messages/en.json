@@ -28,7 +28,7 @@
   "services": {
     "eyebrow": "What we do",
     "heading": "One team for every kind of move",
-    "metaDescription": "Seven services from one Borivali office: resale flats, rentals, new project bookings, investment advice, commercial space, MHADA paperwork and interiors, across Borivali, Kandivali and Malad.",
+    "metaDescription": "Resale, rentals, new launches, investment advice, commercial space, MHADA paperwork and interiors across Borivali, Kandivali and Malad, from one office.",
     "resaleTitle": "Resale flats",
     "resaleBody": "Buy or sell resale flats in Borivali, Kandivali and Malad with fair pricing, verified carpet area and no hidden charges at registration.",
     "rentalsTitle": "Rentals",
@@ -42,7 +42,8 @@
     "mhadaTitle": "MHADA paperwork",
     "mhadaBody": "Transfer of tenement, no objection certificates for sale, rent and mortgage, transfer to heirs and regularisation for MHADA flats in Borivali, Kandivali and Malad.",
     "interiorsTitle": "Interior design & civil work",
-    "interiorsBody": "Local interior designers and a civil work team in Borivali, Kandivali and Malad, fit outs, renovation and civil work to get your home move in ready."
+    "interiorsBody": "Local interior designers and a civil work team in Borivali, Kandivali and Malad, fit outs, renovation and civil work to get your home move in ready.",
+    "metaTitle": "Property services: buy, rent, invest, MHADA"
   },
   "serviceCta": {
     "heading": "Ready to take the next step?",
@@ -206,7 +207,8 @@
     "statusBooking": "Now Booking",
     "statusUpcoming": "Upcoming",
     "statusSold": "Sold Out",
-    "viewDetails": "View details →"
+    "viewDetails": "View details →",
+    "metaTitle": "New projects in Borivali, Kandivali, Malad"
   },
   "projectDetail": {
     "backLink": "← All projects",
@@ -231,14 +233,15 @@
     "emptyState": "No posts published yet. Add your first article in the ",
     "studioLink": "Studio",
     "englishOnly": "Our articles are published in English.",
-    "readInEnglish": "Read the articles"
+    "readInEnglish": "Read the articles",
+    "metaTitle": "Property blog: Borivali, Kandivali, Malad"
   },
   "blogPost": {
     "backLink": "← Back to blog"
   },
   "metadata": {
-    "siteTitle": "Shree Giriraj Real Estate: Homes in Borivali, Kandivali & Malad",
-    "titleTemplate": "%s | Shree Giriraj Real Estate",
-    "siteDescription": "Trusted property advice for Borivali, Kandivali and Malad since 1996. Resale, rentals & new project bookings across Borivali, Kandivali and Malad. MahaRERA A51800005726."
+    "siteTitle": "Real Estate Agent in Borivali West | Shree Giriraj Real Estate",
+    "titleTemplate": "%s | Shree Giriraj",
+    "siteDescription": "Buy, sell or rent a flat in Borivali, Kandivali or Malad West. In real estate since 1996, MahaRERA agent A51800005726. WhatsApp us for flats that fit."
   }
 }

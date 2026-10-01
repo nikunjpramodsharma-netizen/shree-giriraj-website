@@ -1,5 +1,7 @@
 ---
 title: "How many months of deposit is normal in the western suburbs, and when it is negotiable"
+metaTitle: "Rent deposit in Mumbai: how many months?"
+metaDescription: "In Borivali, Kandivali and Malad, two to three months' rent is the normal deposit in newer societies. When it is negotiable, and how to get it back."
 slug: rent-deposit-months-western-suburbs
 category: Renting
 heroImage: /blog/deposit-keys.jpg

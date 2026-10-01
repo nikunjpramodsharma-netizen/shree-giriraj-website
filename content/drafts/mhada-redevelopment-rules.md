@@ -1,5 +1,7 @@
 ---
 title: "MHADA redevelopment rules: what a society in a MHADA layout has to get right before a builder is chosen"
+metaTitle: "MHADA redevelopment rules for societies"
+metaDescription: "How a society in a MHADA layout redevelops under Regulation 33(5): the Board's NOC, conveyance and member consent, in the order that matters."
 slug: mhada-redevelopment-rules
 category: MHADA
 heroImage: /blog/mhada-redevelopment.jpg

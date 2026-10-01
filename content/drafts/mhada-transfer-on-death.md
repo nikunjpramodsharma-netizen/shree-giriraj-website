@@ -1,5 +1,7 @@
 ---
 title: "MHADA transfer procedure in case of death: who inherits the tenement and what the Board asks for"
+metaTitle: "MHADA transfer procedure in case of death"
+metaDescription: "When a MHADA allottee dies, the flat passes to a legal heir under section 24. Who can inherit, the file the Estate Manager wants, and the charges."
 slug: mhada-transfer-on-death
 category: MHADA
 heroImage: /blog/mhada-heir.jpg

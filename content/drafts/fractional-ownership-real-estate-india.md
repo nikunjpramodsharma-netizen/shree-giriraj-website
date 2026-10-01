@@ -1,5 +1,7 @@
 ---
 title: "Fractional ownership of real estate in India: what SM REITs changed, and what a ten lakh share actually buys"
+metaTitle: "Fractional ownership real estate in India"
+metaDescription: "Fractional ownership lets several investors share one rented building. What SEBI's SM REIT rules changed in 2024, and what your share actually buys."
 slug: fractional-ownership-real-estate-india
 category: Investing
 heroImage: /blog/sm-reit.jpg

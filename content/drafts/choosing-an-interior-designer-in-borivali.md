@@ -1,5 +1,7 @@
 ---
 title: "Choosing an interior designer in Borivali: what to ask before you pay an advance"
+metaTitle: "Interior designer in Borivali: what to ask"
+metaDescription: "The questions to ask an interior designer in Borivali before you pay an advance: a written scope, exclusions, site supervision and the timeline."
 slug: choosing-an-interior-designer-in-borivali
 category: Interiors
 heroImage: /blog/interior-designer.jpg

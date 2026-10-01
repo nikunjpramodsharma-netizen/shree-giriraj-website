@@ -1,5 +1,7 @@
 ---
 title: "Under construction or ready to move: which to buy in Mumbai, and how to decide it on paper"
+metaTitle: "Under construction vs ready to move flat"
+metaDescription: "Under construction or ready to move in Mumbai? Compare GST, price, rent and timing, and the checks that decide which flat suits you."
 slug: under-construction-vs-ready-to-move-flat
 category: Investing
 heroImage: /blog/under-construction.jpg

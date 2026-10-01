@@ -1,5 +1,7 @@
 ---
 title: "BMC property tax: online payment, how it is calculated, and whether you are exempt"
+metaTitle: "BMC property tax: online payment, exemption"
+metaDescription: "BMC property tax is charged on capital value, and flats up to 500 sq ft carpet are fully exempt. How the tax is calculated and how to pay it online."
 slug: bmc-property-tax
 category: Paperwork
 heroImage: /blog/bmc-property-tax.jpg

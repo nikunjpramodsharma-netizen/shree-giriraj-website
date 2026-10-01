@@ -1,5 +1,7 @@
 ---
 title: "Deemed conveyance in Maharashtra: how a Mumbai society gets its land, with or without the builder"
+metaTitle: "Deemed conveyance in Maharashtra, explained"
+metaDescription: "Conveyance moves the land from the builder to your society. How a Mumbai society gets deemed conveyance when the builder has not signed, step by step."
 slug: conveyance-and-deemed-conveyance
 category: Paperwork
 heroImage: /blog/conveyance.jpg

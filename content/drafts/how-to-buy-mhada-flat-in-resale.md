@@ -1,5 +1,7 @@
 ---
 title: "How to buy a MHADA flat in resale: the checks that protect the buyer"
+metaTitle: "How to buy a MHADA flat in resale safely"
+metaDescription: "Buying a MHADA flat in resale? The checks to complete before money moves: the allottee, five years, income group, permissions and transfer charges."
 slug: how-to-buy-mhada-flat-in-resale
 category: MHADA
 heroImage: /blog/mhada-resale.jpg

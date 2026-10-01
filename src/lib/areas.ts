@@ -98,6 +98,8 @@ export type AreaPage = {
   longName: string;
   metaTitle: string;
   metaDescription: string;
+  /** The search result snippet, kept near 155 characters. The longer metaDescription is shown on the page. */
+  seoDescription?: string;
   hero?: AreaImage;
   answer: string;
   intro: string[];
@@ -111,7 +113,9 @@ export type AreaPage = {
 const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
   "borivali-west": {
     longName: "Borivali",
-    metaTitle: "Borivali property guide: pockets, prices, metro and what to check",
+    metaTitle: "Borivali property guide: pockets and prices",
+    seoDescription:
+      "Borivali West and East, pocket by pocket: Chikoowadi, Shimpoli, I.C. Colony, Yogi Nagar and Eksar, with mid 2026 asking rates and the metro lines.",
     metaDescription:
       "Borivali West and East, pocket by pocket: Chikoowadi, Shimpoli, I.C. Colony, Yogi Nagar, Eksar, Magathane and Kulupwadi, with mid 2026 asking rates, the metro lines, the national park and what an agent here since 1996 checks before you buy or rent.",
     hero: {
@@ -269,7 +273,9 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
 
   kandivali: {
     longName: "Kandivali",
-    metaTitle: "Kandivali property guide: Mahavir Nagar, Charkop, Thakur Village and the new launches",
+    metaTitle: "Kandivali property guide: pockets and prices",
+    seoDescription:
+      "Kandivali West and East, pocket by pocket: Mahavir Nagar, Charkop, Dahanukarwadi and Thakur Village, with 2026 asking rates and the metro lines.",
     metaDescription:
       "Kandivali West and East, pocket by pocket: Mahavir Nagar, Charkop's sectors, Dahanukarwadi, Thakur Village, Lokhandwala and Akurli Road, with 2026 asking rates, the two metro lines, and how to buy a new launch here well.",
     hero: {
@@ -421,7 +427,9 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
 
   malad: {
     longName: "Malad",
-    metaTitle: "Malad property guide: Mindspace, Orlem, Evershine Nagar, Malad East and the beaches",
+    metaTitle: "Malad property guide: pockets and prices",
+    seoDescription:
+      "Malad West and East, pocket by pocket: Mindspace, Evershine Nagar, Orlem and Marve Road, with 2026 asking rates, rents and the metro lines.",
     metaDescription:
       "Malad West and East, pocket by pocket: Mindspace, Evershine Nagar, Orlem, Marve Road, Rani Sati Marg, Kurar and Dindoshi, with 2026 asking rates and rents, the metro, the coastal road plans, and who really rents here.",
     hero: {

@@ -1,5 +1,7 @@
 ---
 title: "Rental yield in Mumbai: what the number means and why gross flatters it"
+metaTitle: "Rental yield in Mumbai: gross vs net"
+metaDescription: "Rental yield is a year's rent as a percentage of what the flat cost. How to work out gross and net yield on a Mumbai flat, with a free calculator."
 slug: rental-yield-mumbai
 category: Investing
 heroImage: /blog/rental-yield.jpg

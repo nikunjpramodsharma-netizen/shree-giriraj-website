@@ -52,7 +52,7 @@ export async function generateMetadata({
     // reads as the shop having stood in Borivali since 1996, which is the
     // exact implication the owner corrected: the trade dates from 1996, this
     // address from 2005. The tenure claim is the safe half of it.
-    title: `About ${site.name}: in real estate since ${site.established}`,
+    title: `About us: Borivali estate agents since ${site.established}`,
     description: `A family run estate agency working across ${site.areas.join(", ")}. Founded by ${FOUNDER.name}. MahaRERA registered agent, ${site.rera}.`,
     ...pageUrls(params.locale, "/about", [ABOUT_LOCALE]),
     ...(STORY_IS_WRITTEN ? {} : { robots: { index: false, follow: true } }),

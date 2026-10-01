@@ -103,8 +103,8 @@ export async function generateMetadata({
   if (md) {
     const urls = pageUrls(params.locale, `/blog/${md.slug}`, ["en"]);
     return {
-      title: md.title,
-      description: md.answer,
+      title: md.metaTitle ?? md.title,
+      description: md.metaDescription ?? md.answer,
       ...urls,
       // Its own hero rather than the site card. openGraph is replaced whole
       // when a page sets it, so url has to be carried across by hand or the

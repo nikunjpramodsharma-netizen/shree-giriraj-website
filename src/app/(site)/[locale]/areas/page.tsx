@@ -21,7 +21,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   if (params.locale !== AREA_LOCALE) return {};
   return {
-    title: "The areas we work in: Borivali, Kandivali and Malad",
+    title: "Areas: Borivali, Kandivali and Malad West",
     description:
       "Local guides to the three western suburbs we have worked in since 1996, including what changes between pockets and what to check before you commit.",
     ...pageUrls(params.locale, "/areas", [AREA_LOCALE]),

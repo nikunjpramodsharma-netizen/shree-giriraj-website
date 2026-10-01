@@ -1,5 +1,7 @@
 ---
 title: "Buying a rental income property in Mumbai's western suburbs: the tenant comes first"
+metaTitle: "Rental income property in Mumbai suburbs"
+metaDescription: "Buying a flat to let in Borivali, Kandivali or Malad? Start with the tenant. What the three suburbs let for, and gross versus net yield."
 slug: rental-income-property-mumbai
 category: Investing
 heroImage: /blog/rental-income.jpg

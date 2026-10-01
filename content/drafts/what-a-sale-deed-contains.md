@@ -1,5 +1,7 @@
 ---
 title: "What a sale deed actually contains, clause by clause"
+metaTitle: "Sale deed: what it contains, clause by clause"
+metaDescription: "A sale deed transfers ownership of a property. The clauses that matter, how it differs from an agreement to sale, and what to check before you sign."
 slug: what-a-sale-deed-contains
 category: Paperwork
 heroImage: /blog/sale-deed.jpg

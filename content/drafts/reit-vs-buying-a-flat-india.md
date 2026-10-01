@@ -1,5 +1,7 @@
 ---
 title: "REIT or a flat: how to invest in REITs in India, and when a flat in Borivali still makes more sense"
+metaTitle: "How to invest in REITs in India, vs a flat"
+metaDescription: "How to invest in REITs in India, and how they compare with buying a flat on income, liquidity and control. Written by property advisers in Borivali."
 slug: reit-vs-buying-a-flat-india
 category: Investing
 heroImage: /blog/reit-office.jpg

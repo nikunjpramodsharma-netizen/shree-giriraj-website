@@ -65,7 +65,7 @@ export type Pillar = {
 const propertyPaperwork: Pillar = {
   slug: "property-paperwork-maharashtra",
   title: "Property paperwork in Maharashtra",
-  metaTitle: "Property paperwork in Maharashtra: the complete guide",
+  metaTitle: "Property paperwork in Maharashtra: full guide",
   metaDescription:
     "Every document in a Maharashtra property transaction, in the order you will meet it. The checks before you pay, stamp duty and registration, and what to do after.",
   answer:

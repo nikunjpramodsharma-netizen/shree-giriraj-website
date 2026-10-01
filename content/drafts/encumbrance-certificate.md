@@ -1,5 +1,7 @@
 ---
 title: "Encumbrance certificate: what it proves, and what it does not"
+metaTitle: "Encumbrance certificate: what it proves"
+metaDescription: "An encumbrance certificate lists the transactions registered against a property. What it proves, how far back to search and what to pull alongside it."
 slug: encumbrance-certificate
 category: Paperwork
 heroImage: /blog/encumbrance.jpg

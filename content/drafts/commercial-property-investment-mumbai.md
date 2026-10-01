@@ -1,5 +1,7 @@
 ---
 title: "Commercial property investment: what changes when you buy a shop instead of a flat"
+metaTitle: "Commercial property investment in Mumbai"
+metaDescription: "Buying a shop or office instead of a flat changes the lease, the deposit, GST and the loan. What to check before you invest in commercial property."
 slug: commercial-property-investment-mumbai
 category: Investing
 heroImage: /blog/commercial-investment.jpg

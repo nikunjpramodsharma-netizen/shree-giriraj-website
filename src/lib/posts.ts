@@ -36,6 +36,9 @@ const DIR = join(process.cwd(), "content", "drafts");
 export type PostMeta = {
   slug: string;
   title: string;
+  /** Search result title and snippet. The page keeps the full title as its H1. */
+  metaTitle?: string;
+  metaDescription?: string;
   category?: string;
   targetKeyword?: string;
   searchVolume?: number;
@@ -127,6 +130,8 @@ export function getPost(slug: string): Post | null {
   return {
     slug: asString(data.slug) ?? slug,
     title: asString(data.title) ?? slug,
+    metaTitle: asString(data.metaTitle),
+    metaDescription: asString(data.metaDescription),
     category: asString(data.category),
     targetKeyword: asString(data.targetKeyword),
     searchVolume:

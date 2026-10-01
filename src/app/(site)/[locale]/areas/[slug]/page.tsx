@@ -57,7 +57,7 @@ export async function generateMetadata({
   const complete = areaIsComplete(area);
   return {
     title: area.metaTitle,
-    description: area.metaDescription,
+    description: area.seoDescription ?? area.metaDescription,
     ...pageUrls(params.locale, `/areas/${area.slug}`, [
       AREA_LOCALE,
     ]),

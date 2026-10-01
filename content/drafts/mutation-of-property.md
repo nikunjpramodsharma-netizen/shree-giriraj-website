@@ -1,5 +1,7 @@
 ---
 title: "Mutation of property in Mumbai: the tax record, the property card, and what neither proves"
+metaTitle: "Mutation of property in Mumbai, explained"
+metaDescription: "Mutation puts the property tax bill in your name, while ownership comes from your registered deed. How mutation and the property card work in Mumbai."
 slug: mutation-of-property
 category: Paperwork
 heroImage: /blog/mutation.jpg

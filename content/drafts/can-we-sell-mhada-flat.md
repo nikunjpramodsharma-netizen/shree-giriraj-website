@@ -1,5 +1,7 @@
 ---
 title: "Can we sell a MHADA flat? The five year rule, the permissions, and what voids a sale"
+metaTitle: "Can we sell a MHADA flat? The 5 year rule"
+metaDescription: "Yes, a MHADA flat can be sold after five years with the Board's and the society's written permission. The rules, the file and the charges, explained."
 slug: can-we-sell-mhada-flat
 category: MHADA
 heroImage: /blog/mhada-sell.jpg

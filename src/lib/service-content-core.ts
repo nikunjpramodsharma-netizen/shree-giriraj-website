@@ -262,39 +262,39 @@ writing.
 
 export const CORE_SERVICES: Record<string, RepoService> = {
   "resale-flats": {
-    title: "Resale Flats in Borivali, Kandivali & Malad",
+    title: "Resale flats in Borivali, Kandivali, Malad",
     heroHeading: "Resale flats in Borivali, Kandivali and Malad",
     heroSubheading:
       "Ready to move homes across the western suburbs, with the building and the file checked before you agree a price. Our main business since 1996.",
     seoDescription:
-      "Buy or sell a resale flat in Borivali, Kandivali or Malad with Shree Giriraj Real Estate, MahaRERA agent A51800005726. Title, society and carpet area checked before a price is agreed; stamp duty and registration explained in rupees.",
+      "Buy or sell a resale flat in Borivali, Kandivali or Malad. Title, society and carpet area checked before a price is agreed. MahaRERA agent A51800005726.",
     body: RESALE_BODY,
   },
   rentals: {
-    title: "Flats for Rent in Borivali, Kandivali & Malad",
+    title: "Rentals in Borivali, Kandivali and Malad",
     heroHeading: "Flats for rent in Borivali, Kandivali and Malad",
     heroSubheading:
       "Verified owners, societies that will register you, the right deposit and a registered leave and licence agreement, for tenants and landlords across the western suburbs.",
     seoDescription:
-      "Flats for rent in Borivali, Kandivali and Malad through Shree Giriraj Real Estate, MahaRERA agent A51800005726. Owner verified before the first visit, two to three months' deposit in newer societies, registered leave and licence agreement handled for you.",
+      "Rent a flat in Borivali, Kandivali or Malad with the owner verified first and the registered leave and licence agreement handled for you.",
     body: RENTALS_BODY,
   },
   "new-project-bookings": {
-    title: "New Project Bookings in Borivali, Kandivali & Malad",
+    title: "New project bookings: Borivali to Malad",
     heroHeading: "New project bookings, with the launch price sheet in hand",
     heroSubheading:
       "Early access to new launches from developers we deal with directly, the MahaRERA registration read with you, and a straight answer on which floor is worth the money.",
     seoDescription:
-      "Book a new launch in Borivali, Kandivali or Malad with Shree Giriraj Real Estate, MahaRERA agent A51800005726. Early access through direct developer relationships, MahaRERA checks, carpet area and payment plan explained before you book.",
+      "Book a new launch in Borivali, Kandivali or Malad with early access through builders we deal with directly, and the MahaRERA details read with you.",
     body: NEW_PROJECTS_BODY,
   },
   interiors: {
-    title: "Interior Design & Civil Work in Borivali, Kandivali & Malad",
+    title: "Interior design and civil work, Borivali",
     heroHeading: "Interiors and civil work, from people who know your building",
     heroSubheading:
       "Design and execution under one roof for flats in Borivali, Kandivali and Malad, with an itemised estimate before work starts and the society's permission handled for you.",
     seoDescription:
-      "Interior design and civil work for flats in Borivali, Kandivali and Malad by Shree Giriraj Real Estate. Itemised estimate before work starts, society permission and BMC approvals handled, design and execution together.",
+      "Interior design and civil work for flats in Borivali, Kandivali and Malad. An itemised estimate before work starts, and society permissions handled.",
     body: INTERIORS_BODY,
   },
 };

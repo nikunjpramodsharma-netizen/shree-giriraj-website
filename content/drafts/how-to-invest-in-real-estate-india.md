@@ -1,5 +1,7 @@
 ---
 title: "How to invest in real estate in India: a first investor's guide, written from Borivali"
+metaTitle: "How to invest in real estate in India"
+metaDescription: "A first investor's guide to real estate in India: the four ways to own property, what a flat returns, and what it costs to get started in Mumbai."
 slug: how-to-invest-in-real-estate-india
 category: Investing
 heroImage: /blog/invest-first.jpg

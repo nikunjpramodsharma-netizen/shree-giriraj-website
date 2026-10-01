@@ -1,5 +1,7 @@
 ---
 title: "Stamp duty and registration charges in Mumbai"
+metaTitle: "Stamp duty and registration charges Mumbai"
+metaDescription: "Stamp duty in Mumbai is 6% for a male buyer and 5% for a woman buying alone, metro cess included. Registration is 1%, capped at 30,000 rupees."
 slug: stamp-duty-and-registration-charges-mumbai
 category: Paperwork
 heroImage: /blog/stamp-duty.jpg

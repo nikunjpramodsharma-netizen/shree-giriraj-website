@@ -1,5 +1,7 @@
 ---
 title: "Carpet area, built up and super built up: what you are actually paying for"
+metaTitle: "Carpet area vs built up vs super built up"
+metaDescription: "Carpet area is what you live on; built up and super built up add walls and common areas. How loading works and what RERA asks builders to quote."
 slug: carpet-area-vs-built-up-area
 category: Buying
 heroImage: /blog/carpet-area.jpg

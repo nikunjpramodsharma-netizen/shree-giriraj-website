@@ -20,7 +20,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   if (params.locale !== GUIDE_LOCALE) return {};
   return {
-    title: "Guides: property paperwork, buying and renting in Mumbai",
+    title: "Property guides for Mumbai buyers, tenants",
     description:
       "Long form guides to the parts of a Mumbai property transaction that decide how smoothly it goes, each one hubbing the detailed articles underneath it.",
     ...pageUrls(params.locale, "/guides", [GUIDE_LOCALE]),

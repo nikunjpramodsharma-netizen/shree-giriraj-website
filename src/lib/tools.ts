@@ -46,7 +46,7 @@ const emiTool: Tool = {
   slug: "home-loan-emi-calculator",
   component: "emi",
   title: "Home loan EMI and cost of buying calculator",
-  metaTitle: "Home loan EMI calculator, plus the cash you actually need",
+  metaTitle: "Home loan EMI calculator with upfront costs",
   metaDescription:
     "Work out your EMI, then the part no bank calculator shows: the cash you need before you get the keys, including the costs a home loan will not cover.",
   answer:
@@ -100,7 +100,7 @@ const stampDutyTool: Tool = {
   slug: "stamp-duty-calculator-mumbai",
   component: "stampDuty",
   title: "Stamp duty and registration calculator, Mumbai",
-  metaTitle: "Stamp duty calculator Mumbai: duty, metro cess and registration",
+  metaTitle: "Stamp duty and registration calculator Mumbai",
   metaDescription:
     "Work out stamp duty and registration on a Mumbai flat, on the ready reckoner value where that is higher, with the metro cess shown separately.",
   answer:
@@ -149,7 +149,7 @@ const areaTool: Tool = {
   slug: "carpet-area-calculator",
   component: "area",
   title: "Carpet area and loading calculator",
-  metaTitle: "Carpet area calculator: what you actually get for the price",
+  metaTitle: "Carpet area to built up area calculator",
   metaDescription:
     "Turn a super built up listing into the carpet area you can stand on, see the real rate per usable square foot, and compare two flats properly.",
   answer:
@@ -197,7 +197,7 @@ const hraTool: Tool = {
   slug: "hra-calculator-rent-receipts",
   component: "hra",
   title: "HRA exemption calculator and rent receipt generator",
-  metaTitle: "HRA calculator and free rent receipt generator",
+  metaTitle: "HRA calculator and rent receipt generator",
   metaDescription:
     "Work out your HRA exemption on the least of three rule, then generate and print rent receipts for the financial year. Nothing is stored or sent anywhere.",
   answer:
@@ -245,7 +245,7 @@ const interiorsTool: Tool = {
   slug: "interior-scope-builder",
   component: "interiors",
   title: "Interior scope builder",
-  metaTitle: "Interior design scope builder: get quotes you can compare",
+  metaTitle: "Interior scope builder: compare quotes",
   metaDescription:
     "Build a scope in quantities for your flat, then take it to three designers and get back quotes that can actually be compared against each other.",
   answer:
@@ -292,7 +292,7 @@ const capitalGainsTool: Tool = {
   slug: "capital-gains-calculator-property",
   component: "capitalGains",
   title: "Capital gains calculator for a property sale",
-  metaTitle: "Capital gains on property: 12.5% or 20% with indexation",
+  metaTitle: "Capital gains calculator for property sale",
   metaDescription:
     "Work out long term capital gains on a property sale, and compare 12.5 percent without indexation against 20 percent with it where you still have the choice.",
   answer:
@@ -343,7 +343,7 @@ const propertyTaxTool: Tool = {
   slug: "bmc-property-tax-calculator",
   component: "propertyTax",
   title: "BMC property tax calculator, Mumbai",
-  metaTitle: "BMC property tax calculator: is your flat exempt?",
+  metaTitle: "BMC property tax calculator: are you exempt?",
   metaDescription:
     "Work out the capital value of a Mumbai flat and check whether the 500 sq ft carpet area exemption applies to you.",
   answer:
@@ -395,9 +395,9 @@ const rentalYieldTool: Tool = {
   slug: "rental-yield-calculator",
   component: "rentalYield",
   title: "Rental yield calculator",
-  metaTitle: "Rental yield calculator: gross and net yield on an Indian flat",
+  metaTitle: "Rental yield calculator: gross and net",
   metaDescription:
-    "Work out the gross and net rental yield on a flat, after society maintenance, property tax, vacancy and the stamp duty and brokerage that are capital too. No benchmarks, just your own arithmetic.",
+    "Work out the gross and net rental yield on a flat, after maintenance, property tax and vacancy, counting the stamp duty and brokerage you paid to buy it.",
   answer:
     "Gross rental yield is annual rent divided by the purchase price. Net yield divides income after society maintenance, property tax, repairs and vacancy by the price plus stamp duty, registration, brokerage and fit out. Net is the figure that matters, and on an Indian flat it is usually well below gross.",
   intro: [

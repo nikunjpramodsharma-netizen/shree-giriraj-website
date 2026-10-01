@@ -32,7 +32,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   if (params.locale !== TOOL_LOCALE) return {};
   return {
-    title: "Free property calculators for Mumbai buyers and tenants",
+    title: "Free property calculators for Mumbai",
     description:
       "Straightforward calculators for the numbers that decide a property purchase. No signup, no email, nothing gated.",
     ...pageUrls(params.locale, "/tools", [TOOL_LOCALE]),

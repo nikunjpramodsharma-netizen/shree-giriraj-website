@@ -1,5 +1,7 @@
 ---
 title: "Occupancy certificate (OC): why taking possession without one is a mistake"
+metaTitle: "Occupancy certificate (OC): why it matters"
+metaDescription: "An occupancy certificate confirms a building is complete and fit to live in. Why it matters for water, power and your loan, and what to ask before possession."
 slug: occupancy-certificate
 category: Paperwork
 heroImage: /blog/occupancy-certificate.jpg

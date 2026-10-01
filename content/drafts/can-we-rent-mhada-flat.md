@@ -1,5 +1,7 @@
 ---
 title: "Can we rent out a MHADA flat? The NOC for rent, and what it takes to get one"
+metaTitle: "Can we rent out a MHADA flat? NOC for rent"
+metaDescription: "Yes, a MHADA flat can be rented out with the Mumbai Board's NOC for rent, a notified service with an eight day time limit. What the application needs."
 slug: can-we-rent-mhada-flat
 category: MHADA
 heroImage: /blog/mhada-rent.jpg
