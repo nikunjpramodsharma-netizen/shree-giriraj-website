@@ -41,6 +41,9 @@ export const site = {
     // Square Yards agent page for Pramod Sharma, Shree Giriraj Real Estate,
     // same RERA number. Dormant but genuine. Checked 16 September 2026.
     "https://www.squareyards.com/agent/pramod-sharma/490321",
+    // Sulekha, created for the firm on 28 September 2026 and live as "Sulekha
+    // Verified" under the firm's name, Borivali West 400092. Checked 1 October 2026.
+    "https://www.sulekha.com/shree-giriraj-real-estate-borivali-west-mumbai-contact-address",
     // Instagram and Facebook, supplied by the owner on 16 September 2026.
     // Neither was findable by search that day; both open and carry the name.
     "https://www.instagram.com/shree_giriraj_real_estate/",
