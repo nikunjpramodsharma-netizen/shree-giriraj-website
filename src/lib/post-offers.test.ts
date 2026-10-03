@@ -8,6 +8,11 @@ describe("post offers", () => {
     for (const slug of Object.keys(POST_OFFERS)) expect(slugs.has(slug)).toBe(true);
   });
 
+  it("gives every published post an offer", () => {
+    const missing = getPostSlugs().filter((s) => !POST_OFFERS[s]);
+    expect(missing).toEqual([]);
+  });
+
   it("uses no dashes anywhere in the copy", () => {
     for (const o of Object.values(POST_OFFERS)) {
       for (const text of [o.heading, o.body, o.whatsapp, o.button]) {
