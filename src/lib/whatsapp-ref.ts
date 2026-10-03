@@ -78,7 +78,28 @@ export function withRef(href: string, ref: string): string {
   const text = url.searchParams.get("text") ?? "";
   if (text.includes(REF_MARK)) return href;
   const next = text ? `${text}\n\n${ref}` : ref;
+  return rebuild(url, next);
+}
+
+/**
+ * The same WhatsApp link carrying a different message. Used when a page has a
+ * message of its own (a seller's article, the interiors service) and the
+ * visitor taps one of the site wide buttons, whose default message is a
+ * buyer's. Not a WhatsApp link, or no message: unchanged.
+ */
+export function withMessage(href: string, message: string): string {
+  if (!message || !WA_HOST.test(href)) return href;
+  let url: URL;
+  try {
+    url = new URL(href);
+  } catch {
+    return href;
+  }
+  return rebuild(url, message);
+}
+
+function rebuild(url: URL, text: string): string {
   // Rebuilt by hand rather than with searchParams.set, which writes spaces as
   // "+". WhatsApp reads %20 reliably and "+" not always.
-  return `${url.origin}${url.pathname}?text=${encodeURIComponent(next)}`;
+  return `${url.origin}${url.pathname}?text=${encodeURIComponent(text)}`;
 }

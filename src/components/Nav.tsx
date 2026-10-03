@@ -131,6 +131,7 @@ export function Nav() {
             <LanguageToggle />
           </span>
           <a
+            data-wa-generic
             href={waLink(t("whatsappGenericMessage"))}
             target="_blank"
             rel="noopener"
@@ -167,6 +168,7 @@ export function Nav() {
           ))}
           <LanguageToggle />
           <a
+            data-wa-generic
             href={waLink(t("whatsappEnquireMessage"))}
             target="_blank"
             rel="noopener"

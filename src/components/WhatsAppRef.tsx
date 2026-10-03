@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { captureAttribution, getAttribution } from "@/lib/attribution";
-import { refLine, withRef } from "@/lib/whatsapp-ref";
+import { refLine, withMessage, withRef } from "@/lib/whatsapp-ref";
 
 /**
  * Adds the "(Ref: page, source)" line to every WhatsApp link on the site at
@@ -24,9 +24,15 @@ export function WhatsAppRef() {
     const tag = (e: Event) => {
       const a = (e.target as Element | null)?.closest?.("a[href]") as HTMLAnchorElement | null;
       if (!a) return;
-      const href = a.getAttribute("href") || "";
+      let href = a.getAttribute("href") || "";
+      // A site wide button (floating, menu, bottom bar) carries a buyer's
+      // message. On a page that declares its own, the visitor gets that one.
+      if (a.hasAttribute("data-wa-generic")) {
+        const own = document.querySelector("[data-wa-message]")?.getAttribute("data-wa-message");
+        if (own) href = withMessage(href, own);
+      }
       const next = withRef(href, refLine(window.location.pathname, getAttribution()));
-      if (next !== href) a.setAttribute("href", next);
+      if (next !== a.getAttribute("href")) a.setAttribute("href", next);
     };
 
     document.addEventListener("pointerdown", tag, { capture: true });

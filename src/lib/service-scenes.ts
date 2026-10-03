@@ -64,7 +64,7 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
       { src: "/premium/u/complex-01.jpg", alt: "A residential complex with a pool deck and loungers between the towers" },
       { src: "/premium/u/handover-01.jpg", alt: "A hand holding out a set of keys with a small house keyring" },
     ],
-    message: "Hi Shree Giriraj, I am looking at resale flats in Borivali, Kandivali or Malad. Can you help?",
+    message: "Hi Shree Giriraj, I am looking for a ___ BHK resale flat in ___. My budget is about ___.",
   },
   rentals: {
     facts: [
@@ -93,7 +93,7 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
       { src: "/premium/u/handover-02.jpg", alt: "A folder of documents held with a house key on top" },
       { src: "/premium/u/complex-02.jpg", alt: "A swimming pool beside modern apartment buildings on a clear day" },
     ],
-    message: "Hi Shree Giriraj, I am looking to rent in Borivali, Kandivali or Malad. Can you help?",
+    message: "Hi Shree Giriraj, I am looking for a ___ BHK to rent in ___. My budget is about ___ a month.",
   },
   "new-project-bookings": {
     facts: [
@@ -123,7 +123,7 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
       { src: "/premium/u/complex-03.jpg", alt: "A rooftop infinity pool looking out over the city" },
       { src: "/premium/u/tower-12.jpg", alt: "Modern residential towers under a bright sky" },
     ],
-    message: "Hi Shree Giriraj, I am interested in a new launch in Borivali, Kandivali or Malad. Can you help?",
+    message: "Hi Shree Giriraj, I am interested in a new launch in ___. My budget is about ___.",
   },
   "investment-advisory": {
     facts: [
@@ -153,7 +153,7 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
       { src: "/premium/u/paperwork-01.jpg", alt: "A hand signing an agreement" },
       { src: "/premium/u/tower-10.jpg", alt: "The glass and steel corner of a luxury apartment tower" },
     ],
-    message: "Hi Shree Giriraj, I am looking to invest in property in Borivali, Kandivali or Malad. Can you help?",
+    message: "Hi Shree Giriraj, I want to invest in a flat in ___. My budget is about ___.",
   },
   "commercial-plots": {
     facts: [
@@ -182,7 +182,7 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
       { src: "/premium/u/commercial-02.jpg", alt: "Office floors lit behind a glass and steel facade at dusk" },
       { src: "/premium/u/commercial-03.jpg", alt: "Glass office towers framed by trees" },
     ],
-    message: "Hi Shree Giriraj, I am looking for commercial space in Borivali, Kandivali or Malad. Can you help?",
+    message: "Hi Shree Giriraj, I am looking for a shop, office or plot in ___, to buy or rent. My budget is about ___.",
   },
   "mhada-paperwork": {
     facts: [
@@ -210,7 +210,7 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
       { src: "/premium/u/paperwork-03.jpg", alt: "A laptop beside a printed floor plan on a marble desk" },
       { src: "/premium/u/handover-03.jpg", alt: "Keys being passed from one hand to another" },
     ],
-    message: "Hi Shree Giriraj, I need help with MHADA paperwork for a flat in Borivali, Kandivali or Malad.",
+    message: "Hi Shree Giriraj, I need help with a MHADA transfer or NOC for my flat in ___.",
   },
   interiors: {
     facts: [
@@ -229,6 +229,6 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
       { src: "/premium/u/interior-03.jpg", alt: "An open kitchen and dining area with marble floors" },
       { src: "/premium/u/interior-04.jpg", alt: "A bedroom with a fitted open wardrobe and soft lighting" },
     ],
-    message: "Hi Shree Giriraj, I am planning interiors for a flat in Borivali, Kandivali or Malad. Can you help?",
+    message: "Hi Shree Giriraj, I am planning interiors for my flat in ___. Can you share an estimate?",
   },
 };

@@ -9,6 +9,7 @@ export function WhatsAppFloat() {
   return (
     <a
       data-float
+      data-wa-generic
       href={waLink(t("message"))}
       target="_blank"
       rel="noopener"

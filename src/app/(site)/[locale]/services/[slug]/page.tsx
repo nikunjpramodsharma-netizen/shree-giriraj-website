@@ -29,6 +29,9 @@ import { RelatedLinks } from "@/components/RelatedLinks";
 import { interlinksForService } from "@/lib/interlinks";
 import { InView } from "@/components/motion/InView";
 import { SERVICE_SCENES } from "@/lib/service-scenes";
+import { SERVICE_OTHER_SIDE } from "@/lib/post-offers";
+import { PostOffer } from "@/components/PostOffer";
+import { PageWhatsApp } from "@/components/PageWhatsApp";
 
 export const revalidate = 60;
 
@@ -240,6 +243,9 @@ export default async function ServicePage({
 
   const repo = getRepoService(slug, locale);
   const sceneData = SERVICE_SCENES[slug];
+  // English only: these messages and boxes are not translated yet, and an
+  // English message on a Hindi page reads as a mistake.
+  const otherSide = locale === "en" ? SERVICE_OTHER_SIDE[slug] : undefined;
 
   const [page, projects, tHero, tServiceCta, tServiceSteps, tProjectsGrid] = await Promise.all([
     repo
@@ -276,6 +282,7 @@ export default async function ServicePage({
 
   return (
     <>
+      {locale === "en" && sceneData && <PageWhatsApp message={sceneData.message} />}
       <JsonLd
         data={graph(
           // The business itself, on every service page. An answer engine
@@ -392,6 +399,14 @@ export default async function ServicePage({
             </div>
           </Reveal>
         </section>
+      )}
+
+      {/* THE OTHER SIDE. The seller on the resale page, the landlord on the
+          rentals page: the people who bring the listings. */}
+      {otherSide && (
+        <div className="wrap pb-4">
+          <PostOffer offer={otherSide} />
+        </div>
       )}
 
       {/* KEEP GOING. The tools that do this service's arithmetic, the three

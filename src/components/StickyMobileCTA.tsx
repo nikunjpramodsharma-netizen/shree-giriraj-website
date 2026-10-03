@@ -16,6 +16,7 @@ export async function StickyMobileCTA({ locale }: { locale: string }) {
         {t("callLabel")}
       </a>
       <a
+        data-wa-generic
         href={waLink(tNav("whatsappEnquireMessage"))}
         target="_blank"
         rel="noopener"

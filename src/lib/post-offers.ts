@@ -252,6 +252,28 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   },
 };
 
+/**
+ * The other side of a two sided service. The resale page is written for the
+ * buyer and the rentals page for the tenant, which left the seller and the
+ * landlord, the people who bring the listings, with no route of their own.
+ */
+export const SERVICE_OTHER_SIDE: Record<string, PostOffer> = {
+  "resale-flats": {
+    heading: "Selling a flat instead?",
+    body: "We advise on the asking price for your pocket, prepare the papers buyers ask for and bring you serious buyers, through to registration.",
+    whatsapp: "Hi Shree Giriraj, I want to sell my ___ BHK flat in ___.",
+    button: "Ask about selling",
+    intentKey: "intentSell",
+  },
+  rentals: {
+    heading: "Letting out your flat?",
+    body: "We find a verified tenant, register the leave and licence agreement and file the police verification for you.",
+    whatsapp: "Hi Shree Giriraj, I want to rent out my ___ BHK flat in ___.",
+    button: "Ask about letting it",
+    intentKey: "intentRent",
+  },
+};
+
 export function offerFor(slug: string): PostOffer | undefined {
   return POST_OFFERS[slug];
 }

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { pageLabel, sourceLabel, refLine, withRef } from "./whatsapp-ref";
+import { pageLabel, sourceLabel, refLine, withRef, withMessage } from "./whatsapp-ref";
 import { waLink } from "./config";
 
 describe("pageLabel", () => {
@@ -59,5 +59,19 @@ describe("withRef", () => {
   it("works when the link has no message yet", () => {
     const text = new URL(withRef("https://wa.me/919324974133", ref)).searchParams.get("text");
     expect(text).toBe("(Ref: Borivali West sale page, Google ad)");
+  });
+});
+
+describe("withMessage", () => {
+  it("swaps the message and keeps the number", () => {
+    const href = "https://wa.me/919324974133?text=Hi%20I%20am%20looking%20for%20___";
+    expect(withMessage(href, "I want to sell my flat")).toBe(
+      "https://wa.me/919324974133?text=I%20want%20to%20sell%20my%20flat",
+    );
+  });
+  it("leaves other links and empty messages alone", () => {
+    expect(withMessage("tel:+919324974133", "x")).toBe("tel:+919324974133");
+    const href = "https://wa.me/919324974133?text=Hi";
+    expect(withMessage(href, "")).toBe(href);
   });
 });

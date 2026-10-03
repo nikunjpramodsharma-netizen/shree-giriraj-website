@@ -15,6 +15,7 @@ import { plainText } from "@/lib/markdown";
 import { termsIn } from "@/lib/glossary";
 import { offerFor } from "@/lib/post-offers";
 import { PostOffer } from "@/components/PostOffer";
+import { PageWhatsApp } from "@/components/PageWhatsApp";
 
 /**
  * A blog post rendered from markdown in the repo.
@@ -65,6 +66,7 @@ export function MarkdownPost({
   return (
     <article>
       <ReadingProgress />
+      {offer && <PageWhatsApp message={offer.whatsapp} />}
       <JsonLd
         data={graph(
           breadcrumbNode(locale, trail),
