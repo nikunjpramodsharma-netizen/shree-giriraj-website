@@ -174,7 +174,7 @@ is available on them now, and a viewing. No obligation, usually the same day.
 `.trim();
 
 const MHADA_PAPERWORK_BODY = `
-## MHADA paperwork in Borivali, Kandivali and Malad
+## MHADA paperwork anywhere in Mumbai
 
 Shree Giriraj Real Estate is a MahaRERA registered estate agent, registration
 number A51800005726, working from Shop No 11, Clover Grove CHS, Chikoowadi,
@@ -182,13 +182,15 @@ Borivali West, Mumbai 400092. We have worked in real estate since 1996 and
 from this office since 2005.
 
 MHADA is the Maharashtra Housing and Area Development Authority, and a great
-many flats in the western suburbs were allotted through it. Each one carries
+many flats across Mumbai were allotted through it, from Goregaon and Vikhroli
+to Kurla and Bandra. Each one carries
 a set of permissions a privately built flat does not need: before a sale,
 before a tenant, before a mortgage, and when an allottee dies. Done properly,
 none of it is difficult. We prepare the complete file against the Board's own
 document list, submit it to the right desk, and follow it through until it is
-decided, for owners, heirs, buyers and landlords across Borivali, Kandivali
-and Malad.
+decided, for owners, heirs, buyers and landlords anywhere in Mumbai. Every
+Mumbai Board file goes to the same office at Bandra East, so we take on flats
+in every suburb and in the island city alike.
 
 ## What you get
 
@@ -236,7 +238,7 @@ the Rent Control Act as for any flat, so you let with a clear record.
 
 ## How to start
 
-Tell us which flat, which scheme and what you need: a sale, a tenant, a
+Tell us which flat, wherever in Mumbai it is, which scheme and what you need: a sale, a tenant, a
 loan, a transfer to an heir, or a transfer that needs regularising. Bring the
 allotment letter and the latest receipt if you have them. We will tell you
 what the file needs, what the official charges are, and how long the Board
@@ -273,12 +275,12 @@ export const REPO_SERVICES: Record<string, RepoService> = {
     body: COMMERCIAL_PLOTS_BODY,
   },
   "mhada-paperwork": {
-    title: "MHADA transfer, NOC and sale paperwork",
+    title: "MHADA NOC and transfer, anywhere in Mumbai",
     heroHeading: "MHADA paperwork, handled end to end",
     heroSubheading:
-      "Transfer of tenement, no objection certificates for sale, rent and mortgage, transfer to heirs, and regularisation, for MHADA flats across Borivali, Kandivali and Malad. A complete file to the right desk, followed up until it is decided.",
+      "Transfer of tenement, no objection certificates for sale, rent and mortgage, transfer to heirs, and regularisation, for MHADA flats anywhere in Mumbai. A complete file to the right desk, followed up until it is decided.",
     seoDescription:
-      "MHADA transfer, NOC for sale or rent, transfer on death and regularisation for flats in Borivali, Kandivali and Malad, done by MHADA's own rules.",
+      "MHADA NOC for sale or rent, transfer of tenement, transfer on death and regularisation for flats anywhere in Mumbai, filed with the Mumbai Board.",
     body: MHADA_PAPERWORK_BODY,
   },
 };

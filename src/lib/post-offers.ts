@@ -35,7 +35,7 @@ export type PostOffer = {
 export const POST_OFFERS: Record<string, PostOffer> = {
   "can-we-rent-mhada-flat": {
     heading: "Renting out your MHADA flat?",
-    body: "We apply for the Board's NOC for rent, find a verified tenant and register the leave and licence agreement, so you hand over the keys with every paper in place.",
+    body: "We get the Board's NOC for rent for MHADA flats anywhere in Mumbai, and in Borivali, Kandivali and Malad we also find the tenant and register the agreement.",
     whatsapp:
       "Hi Shree Giriraj, I want to rent out my MHADA flat in ___. Can you help with the NOC and finding a tenant?",
     button: "Ask about renting it out",
@@ -43,7 +43,7 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   },
   "can-we-sell-mhada-flat": {
     heading: "Planning to sell your MHADA flat?",
-    body: "We prepare the permission file for the Board and the society, find a buyer who qualifies for the scheme and see the sale through to registration.",
+    body: "We prepare the permission file for the Board and the society for MHADA flats anywhere in Mumbai, and in Borivali, Kandivali and Malad we also find the buyer.",
     whatsapp:
       "Hi Shree Giriraj, I want to sell my MHADA flat in ___. Can you help with the permissions and finding a buyer?",
     button: "Ask about selling it",
@@ -51,7 +51,7 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   },
   "mhada-transfer-on-death": {
     heading: "Need the flat transferred into your name?",
-    body: "We put together the file the Estate Manager asks for and follow it through with the Board until the tenement is recorded in your name.",
+    body: "We put together the file the Estate Manager asks for and follow it through with the Board until the tenement is in your name, for flats anywhere in Mumbai.",
     whatsapp:
       "Hi Shree Giriraj, I need help transferring a MHADA flat into my name after a death in the family. The flat is in ___.",
     button: "Ask about the transfer",
@@ -67,7 +67,7 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   },
   "mhada-redevelopment-rules": {
     heading: "Paperwork for your MHADA flat?",
-    body: "We handle NOCs, transfers and permissions with the Mumbai Board for flats in Borivali, Kandivali and Malad, and keep you posted at every step.",
+    body: "We handle NOCs, transfers and permissions with the Mumbai Board for MHADA flats anywhere in Mumbai, and keep you posted at every step.",
     whatsapp:
       "Hi Shree Giriraj, I need help with paperwork for my MHADA flat in ___.",
     button: "Ask about MHADA paperwork",

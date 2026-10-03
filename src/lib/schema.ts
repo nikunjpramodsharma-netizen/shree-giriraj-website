@@ -155,7 +155,12 @@ export function serviceNode(opts: {
     ...(opts.description ? { description: opts.description } : {}),
     serviceType: opts.name,
     provider: { "@id": ORG_ID },
-    areaServed: site.areas.map((n) => ({ "@type": "Place", name: `${n}, Mumbai` })),
+    // MHADA paperwork is filed with the one Mumbai Board whatever the
+    // suburb, so that service is offered city wide (owner, 3 October 2026).
+    areaServed:
+      opts.slug === "mhada-paperwork"
+        ? [{ "@type": "City", name: "Mumbai" }]
+        : site.areas.map((n) => ({ "@type": "Place", name: `${n}, Mumbai` })),
     url: absoluteUrl(opts.locale, `/services/${opts.slug}`),
   };
 }
