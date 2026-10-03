@@ -71,7 +71,7 @@ Ask for the allotment letter and the latest rent or maintenance receipt from the
 
 ### 2. Five years have passed from allotment
 
-The Regulations allow the society to permit a transfer once five years have elapsed from the date of allotment. Count from the allotment letter, not from when the seller moved in.
+The Regulations allow the society to permit a transfer once five years have elapsed from the date of allotment. Count from the allotment letter, not from when the seller moved in, and read the letter's own conditions too: some schemes set a longer period than the Regulations' five years.
 
 ### 3. You fall in the scheme's income group
 

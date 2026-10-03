@@ -73,6 +73,22 @@ export const POST_OFFERS: Record<string, PostOffer> = {
     button: "Ask about MHADA paperwork",
     intentKey: "intentMhada",
   },
+  "mhada-office-bandra": {
+    heading: "Rather not spend a day at Bandra?",
+    body: "We prepare the file against the Board's own list, take it to the right Estate Manager and follow it through, for MHADA flats anywhere in Mumbai.",
+    whatsapp:
+      "Hi Shree Giriraj, I need help with MHADA paperwork for my flat in ___. It is for a ___ (transfer, NOC for rent or NOC for sale).",
+    button: "Ask us to handle it",
+    intentKey: "intentMhada",
+  },
+  "mhada-noc-online": {
+    heading: "Want the NOC handled for you?",
+    body: "We prepare the application and the file, apply through the right route and follow it until the certificate is issued, for MHADA flats anywhere in Mumbai.",
+    whatsapp:
+      "Hi Shree Giriraj, I need a MHADA NOC for ___ for my flat in ___.",
+    button: "Ask about your NOC",
+    intentKey: "intentMhada",
+  },
 
   // Paperwork. These readers are usually in the middle of a purchase or a
   // sale, so the offer is the check or the step the post explains, done for

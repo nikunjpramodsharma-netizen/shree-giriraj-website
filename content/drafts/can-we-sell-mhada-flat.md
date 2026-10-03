@@ -56,7 +56,7 @@ MHADA flats are not governed by the ordinary law of sale alone. They sit under t
 
 First, no allottee may transfer a tenement during the currency of the tenancy except with the previous permission in writing of the Board, and also of the housing society or company where one has been formed and registered. Both, not either.
 
-Second, the Regulations set out when the society may give that permission: a period of five years has elapsed from the date of allotment; the transferee falls in the same income group as the scheme, so an Economically Weaker Section, Low Income Group or Middle Income Group flat goes to somebody in one of those groups and a High Income Group flat to somebody in that group; and the transferee has paid all dues to the Board.
+Second, the Regulations set out when the society may give that permission: a period of five years has elapsed from the date of allotment; the transferee falls in the same income group as the scheme, so an Economically Weaker Section, Low Income Group or Middle Income Group flat goes to somebody in one of those groups and a High Income Group flat to somebody in that group; and the transferee has paid all dues to the Board. Five years is the period in the Regulations; some schemes set a longer one in their own allotment terms, which is why the allotment letter is the first document we read.
 
 That is the whole of the "five year rule" people search for. It is not a lock in that lifts automatically. It is the earliest point at which the society may consent, and the Board's permission is still needed on top.
 
