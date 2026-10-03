@@ -15,6 +15,7 @@ import {
   HeroMedia,
   ImgNote,
   PhotoGrid,
+  SectionNav,
   StoryScroll,
   TowerClimb,
   TravelRings,
@@ -61,7 +62,7 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
     <article className="bg-paper">
       <PageWhatsApp message={WA_PRICE} />
 
-      <div className="fixed left-3 top-[4.4rem] z-50 rounded-full bg-brand-red px-3 py-1 text-[0.65rem] font-semibold text-white shadow-lg md:bottom-auto md:left-1/2 md:top-20 md:-translate-x-1/2 md:px-4 md:py-1.5 md:text-xs">
+      <div className="fixed left-3 top-[4.4rem] z-50 rounded-full bg-brand-red px-3 py-1 text-[0.65rem] font-semibold text-white shadow-lg md:bottom-6 md:left-6 md:top-auto md:px-4 md:py-1.5 md:text-xs">
         Draft for review, not published
       </div>
 
@@ -78,13 +79,13 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
             <span className="rounded-full bg-bronze px-3 py-1 text-brand-indigo-deep">Possession from {JJ.possession.developer}</span>
             <span className="rounded-full border border-white/30 px-3 py-1 text-white/85">MahaRERA possession {JJ.possession.rera}</span>
           </div>
-          <h1 className="mt-3 max-w-3xl font-display text-[2.6rem] leading-[1.02] text-white md:mt-5 md:text-7xl">{JJ.name}</h1>
-          <p className="mt-2 text-base text-paper/85 md:mt-3 md:text-lg">{JJ.locality}<span className="hidden md:inline"> · by {JJ.developer}</span></p>
-          <p className="mt-4 hidden max-w-xl text-lg text-paper/75 md:block">{JJ.heroLine}</p>
+          <h1 className="mt-3 max-w-3xl font-display text-[2.6rem] leading-[1.02] text-white md:mt-5 md:text-7xl xl:text-[5.5rem]">{JJ.name}</h1>
+          <p className="mt-2 text-base text-paper/85 md:mt-3 md:text-lg">{JJ.locality}</p>
+          <p className="mt-4 hidden max-w-xl text-lg text-paper/75 md:block xl:text-xl">{JJ.heroLine}</p>
           <div className="mt-4 flex flex-wrap items-end gap-x-8 gap-y-3 md:mt-6">
             <div>
               <div className="text-xs uppercase tracking-wider text-paper/60">2, 3, 4 and 5 BHK from</div>
-              <div className="font-display text-[2.4rem] leading-none text-bronze md:text-5xl">{JJ.startingPrice}</div>
+              <div className="font-display text-[2.4rem] leading-none text-bronze md:text-5xl xl:text-6xl">{JJ.startingPrice}</div>
               <div className="text-xs text-paper/60">All inclusive, prices as of {JJ.priceAsOf}</div>
             </div>
           </div>
@@ -110,6 +111,20 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
         </div>
       </section>
 
+      <SectionNav
+        cta={{ href: waLink(WA_PRICE), label: "Price sheet on WhatsApp" }}
+        items={[
+          { id: "overview", label: "Overview" },
+          { id: "amenities", label: "Amenities" },
+          { id: "sample-flat", label: "Sample flat" },
+          { id: "prices", label: "Prices" },
+          { id: "floor-plans", label: "Floor plans" },
+          { id: "location", label: "Location" },
+          { id: "paperwork", label: "Possession and RERA" },
+          { id: "questions", label: "Questions" },
+        ]}
+      />
+
       {/* 2. AT A GLANCE */}
       <section className="border-t border-white/10 bg-brand-indigo-deep text-paper">
         <div className="wrap grid grid-cols-2 gap-y-8 py-10 md:grid-cols-5">
@@ -125,7 +140,7 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
       </section>
 
       {/* 3. OUR VIEW */}
-      <section className="py-20">
+      <section id="overview" className="scroll-mt-32 py-20">
         <div className="wrap grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl lg:aspect-[4/5]">
             <Image src="/projects/jaswanti-jewel/balcony-living.webp" alt="Living room opening onto a wide balcony with city views" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
@@ -159,7 +174,7 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
       </section>
 
       {/* 5. AMENITIES, with the tower climbing beside them */}
-      <section className="relative bg-[#10142e] py-20 text-paper">
+      <section id="amenities" className="relative scroll-mt-32 bg-[#10142e] py-20 text-paper">
         <div className="wrap flex gap-10">
           <TowerClimb markers={[{ floor: 1, label: "Lobby" }, { floor: 37, label: "Club, 37th" }, { floor: 38, label: "Rooftop" }]} />
           <div className="min-w-0 flex-1">
@@ -175,7 +190,7 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
       </section>
 
       {/* 6. SAMPLE FLAT */}
-      <section className="py-20">
+      <section id="sample-flat" className="scroll-mt-32 py-20">
         <div className="wrap">
           <SectionHead eyebrow="The sample flat" title="Walk through it before you visit" intro="Filmed in the furnished sample flat. Tap play for the full walkthrough, then come and see it in person." />
           <div className="grid gap-10 md:grid-cols-[auto_1fr] md:items-center">
@@ -201,7 +216,7 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
       </section>
 
       {/* 7. PRICES */}
-      <section className="bg-white py-20">
+      <section id="prices" className="scroll-mt-32 bg-white py-20">
         <div className="wrap">
           <SectionHead eyebrow="Prices and availability" title={`From ${JJ.startingPrice}, all inclusive`} intro={`Prices as of ${JJ.priceAsOf}, on RERA carpet area. Ask us for today's floor wise availability.`} />
           <div className="space-y-3 md:hidden">
@@ -268,7 +283,7 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
       </section>
 
       {/* 8. FLOOR PLANS */}
-      <section className="bg-paper-alt py-20">
+      <section id="floor-plans" className="scroll-mt-32 bg-paper-alt py-20">
         <div className="wrap">
           <SectionHead eyebrow="Floor plans" title="Six foot balconies, three lifts, every floor" intro="RERA carpet areas from the developer's floor plans. Jodi homes combine two adjoining flats into one." />
           <FloorPlanTabs plans={JJ.floorPlans} />
@@ -276,15 +291,15 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
       </section>
 
       {/* 9. LOCATION */}
-      <section className="relative overflow-hidden bg-brand-indigo-deep py-20 text-paper">
+      <section id="location" className="relative scroll-mt-32 overflow-hidden bg-brand-indigo-deep py-20 text-paper">
         <Image src="/projects/jaswanti-jewel/kandivali-aerial.webp" alt="Aerial view of Mumbai's western suburbs" fill sizes="100vw" className="object-cover opacity-15" />
         <div className="wrap relative">
-          <SectionHead dark eyebrow="Location" title="Off M. G. Road, minutes from the metro" intro={JJ.address} />
+          <SectionHead dark eyebrow="Location" title="Off M. G. Road, minutes from the metro" intro="A few minutes from Dahanukarwadi Metro and Link Road. Message us and we will take you to the site." />
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <TravelRings times={JJ.location.times} />
             <div>
               <div className="overflow-hidden rounded-xl border border-white/10">
-                <iframe title="Jaswanti Jewel on the map" src={JJ.mapEmbed} className="h-72 w-full" loading="lazy" />
+                <iframe title="Kandivali West around Dahanukarwadi Metro" src={JJ.mapEmbed} className="h-72 w-full" loading="lazy" />
               </div>
               <div className="mt-6 grid gap-5 sm:grid-cols-3">
                 {JJ.location.nearby.map((g) => (
@@ -296,14 +311,13 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
                   </div>
                 ))}
               </div>
-              <a href={JJ.mapsUrl} target="_blank" rel="noopener" className="mt-6 inline-block text-sm text-bronze underline underline-offset-4">Open in Google Maps</a>
             </div>
           </div>
         </div>
       </section>
 
       {/* 10 and 11. PROGRESS, MAHARERA AND PAPERWORK */}
-      <section className="py-20">
+      <section id="paperwork" className="scroll-mt-32 py-20">
         <div className="wrap grid gap-14 lg:grid-cols-2">
           <div>
             <SectionHead eyebrow="Construction" title="Built to the 37th floor, handover next" />
@@ -345,7 +359,7 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
       <section className="bg-paper-alt py-20">
         <div className="wrap grid gap-14 lg:grid-cols-2">
           <div>
-            <SectionHead eyebrow="The developer" title="Ashray Group" intro="The developer behind Jaswanti Jewel, building in Mumbai's western suburbs. A project by Paradise Construction Company." />
+            <SectionHead eyebrow="The developer" title="An established Mumbai developer" intro="Built by a developer with more than 30 years in Mumbai real estate. Ask us anything about their track record and we will answer it." />
             <div className="grid grid-cols-3 gap-4">
               {JJ.developerFacts.map((f) => (
                 <div key={f.label} className="rounded-xl bg-white p-5 text-center shadow-sm">
@@ -376,7 +390,7 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
       </section>
 
       {/* 14. QUESTIONS */}
-      <section className="py-20">
+      <section id="questions" className="scroll-mt-32 py-20">
         <div className="wrap max-w-3xl">
           <SectionHead eyebrow="Questions" title="Jaswanti Jewel, answered" />
           <div className="divide-y divide-line rounded-xl border border-line bg-white">
@@ -409,7 +423,7 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
       <ContactCTA locale={params.locale} formLocation="project-jaswanti-jewel-draft" presetIntentKey="intentNewProject" presetArea="Kandivali West" />
 
       <p className="wrap py-6 text-[0.7rem] leading-relaxed text-muted">
-        Renders are artist&apos;s impressions and floor plans are indicative, from the developer. Prices, availability and possession dates are as shared by the developer in {JJ.priceAsOf} and may change; please confirm before booking. MahaRERA Reg. No. {JJ.rera}, {JJ.reraUrl.replace("https://", "")}. A project by {JJ.company}.
+        Renders are artist&apos;s impressions and floor plans are indicative, from the developer. Prices, availability and possession dates are as shared by the developer in {JJ.priceAsOf} and may change; please confirm before booking. MahaRERA Reg. No. {JJ.rera}, {JJ.reraUrl.replace("https://", "")}.
       </p>
 
       <StickyBar message={WA_PRICE} waLabel="Price sheet" callLabel="Call" />

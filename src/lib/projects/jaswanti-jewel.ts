@@ -24,15 +24,14 @@ export type Img = { src: string; alt: string; note?: string };
 export const JJ = {
   slug: "jaswanti-jewel",
   name: "Jaswanti Jewel",
-  developer: "Ashray Group",
-  company: "Paradise Construction Company", // BROCHURE, SITE footer
+  // No developer name, company, address, map pin or contact anywhere on the
+  // page (owner, 3 Oct 2026): every enquiry has to come to Shree Giriraj.
+  // The MahaRERA number stays because the law requires it on project ads.
   locality: "Off M. G. Road, Kandivali West",
-  address: "CTS No. 1327A, Chhatrapati Shivaji Road, Off M. G. Road, Kandivali West, Mumbai 400067", // BROCHURE
   rera: "P51800048817", // BROCHURE, SITE
   reraUrl: "https://maharera.maharashtra.gov.in",
-  mapsUrl: "https://goo.gl/maps/jnffrdGxLR6qzGxPA", // NOTES
-  mapEmbed:
-    "https://www.google.com/maps?q=19.20522388701387,72.83609831490323&z=16&output=embed", // SITE map pin
+  /** The neighbourhood, centred on the metro station: no pin on the plot. */
+  mapEmbed: "https://www.google.com/maps?q=Dahanukarwadi+Metro+Station,+Kandivali+West,+Mumbai&z=15&output=embed",
 
   possession: {
     developer: "March 2027", // OWNER: handover within about six months
@@ -71,7 +70,7 @@ export const JJ = {
     { img: { src: `${IMG}/tower-night.webp`, alt: "Jaswanti Jewel tower lit up at dusk", note: "Artist's impression" }, title: "Arrive home", text: "A single 37 storey tower off M. G. Road, reached along a landscaped pathway." },
     { img: { src: `${IMG}/project-hallmark.webp`, alt: "Double height arrival lobby with a grand piano", note: "Artist's impression" }, title: "A double height welcome", text: "A magnificent arrival lobby before the lifts take you up." },
     { img: { src: `${IMG}/jewel-gallery-6.webp`, alt: "Sample flat living room with a long sofa and full height curtains", note: "Sample flat, shot on location" }, title: "Your living room", text: "Well planned layouts with natural light, opening onto a six foot balcony." },
-    { img: { src: `${IMG}/club-terrace.webp`, alt: "Club terrace bar with pergola and city views at dusk", note: "Artist's impression" }, title: "The club on the 37th floor", text: "ARC, the Ashray Recreation Club: gym, yoga, spa, steam and a games arena." },
+    { img: { src: `${IMG}/club-terrace.webp`, alt: "Club terrace bar with pergola and city views at dusk", note: "Artist's impression" }, title: "The club on the 37th floor", text: "A private club with a gym, yoga studio, spa, steam room and games arena." },
     { img: { src: `${IMG}/infinity-pool.webp`, alt: "Rooftop infinity pool looking over the Mumbai skyline", note: "Artist's impression" }, title: "Sunset from the rooftop", text: "An infinity pool and jacuzzi above the city, ready from March 2027." },
   ],
 

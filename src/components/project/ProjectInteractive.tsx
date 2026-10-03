@@ -265,6 +265,19 @@ function Lightbox({ images, index, onClose, onMove }: { images: Img[]; index: nu
  * eases in on hover, a tap opens the full screen viewer, and on phones the
  * row swipes sideways.
  */
+/**
+ * Laptop layout on a four column grid so every group fills its rows with no
+ * holes: five or more is one large card and the rest in pairs, three is one
+ * large and two wide, two is two halves, one is the full width.
+ */
+function bento(k: number, n: number) {
+  if (n === 1) return "md:col-span-4 md:row-span-2";
+  if (n === 2) return "md:col-span-2 md:row-span-2";
+  if (n === 3) return k === 0 ? "md:col-span-2 md:row-span-2" : "md:col-span-2";
+  if (n === 4) return "md:col-span-2";
+  return k === 0 ? "md:col-span-2 md:row-span-2" : "";
+}
+
 export function AmenityCards({ groups }: { groups: { title: string; items: { name: string; img: Img }[] }[] }) {
   const all = groups.flatMap((g) => g.items.map((it) => ({ ...it.img, alt: `${it.name}: ${it.img.alt}` })));
   const [open, setOpen] = useState<number | null>(null);
@@ -275,7 +288,7 @@ export function AmenityCards({ groups }: { groups: { title: string; items: { nam
       {groups.map((g) => (
         <div key={g.title} className="mt-12 first:mt-0">
           <h3 className="mb-5 font-display text-xl text-white md:text-2xl">{g.title}</h3>
-          <div className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-3 [scrollbar-width:none] md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0 [&::-webkit-scrollbar]:hidden">
+          <div className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-3 [scrollbar-width:none] md:mx-0 md:grid md:auto-rows-[200px] md:grid-cols-4 md:overflow-visible md:px-0 lg:auto-rows-[230px] [&::-webkit-scrollbar]:hidden">
             {g.items.map((it, k) => {
               n += 1;
               const idx = n;
@@ -285,7 +298,7 @@ export function AmenityCards({ groups }: { groups: { title: string; items: { nam
                   onClick={() => setOpen(idx)}
                   className={`group relative aspect-[4/3] w-[82vw] shrink-0 snap-center overflow-hidden rounded-xl text-left shadow-xl transition-all duration-700 ease-out md:w-auto ${
                     inView ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-                  } ${k === 0 && g.items.length > 2 ? "md:col-span-2 md:row-span-2 md:aspect-auto" : ""}`}
+                  } md:aspect-auto ${bento(k, g.items.length)}`}
                   style={{ transitionDelay: `${(idx % 6) * 90}ms` }}
                 >
                   <Image src={it.img.src} alt={it.img.alt} fill sizes="(min-width: 768px) 40vw, 82vw" className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110" />
@@ -424,7 +437,7 @@ export function TravelRings({ times }: { times: { place: string; min: number }[]
               className="absolute -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-brand-indigo-deep px-2.5 py-1 text-[0.7rem] text-paper ring-1 ring-bronze/50"
               style={(() => {
                 // Spread the labels round their rings so near equal times never collide.
-                const deg = [-20, 50, 160, 230, 300][i % 5];
+                const deg = [-55, 30, 150, 225, 300][i % 5];
                 const r = (deg * Math.PI) / 180;
                 return { left: `${50 + 50 * Math.sin(r)}%`, top: `${50 - 50 * Math.cos(r)}%` };
               })()}
@@ -440,5 +453,62 @@ export function TravelRings({ times }: { times: { place: string; min: number }[]
       </div>
     </div>
     </div>
+  );
+}
+
+/**
+ * Laptops only: a slim menu that sticks under the site header once the hero
+ * has passed, highlighting the section in view. Phones have the sticky
+ * WhatsApp bar instead and need the screen for pictures.
+ */
+export function SectionNav({ items, cta }: { items: { id: string; label: string }[]; cta: { href: string; label: string } }) {
+  const [active, setActive] = useState(items[0]?.id);
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setShow(window.scrollY > window.innerHeight * 0.75);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) if (e.isIntersecting) setActive(e.target.id);
+      },
+      { rootMargin: "-30% 0px -60% 0px" },
+    );
+    items.forEach((it) => {
+      const el = document.getElementById(it.id);
+      if (el) io.observe(el);
+    });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      io.disconnect();
+    };
+  }, [items]);
+  return (
+    <nav
+      aria-label="On this page"
+      className={`fixed inset-x-0 top-[72px] z-30 hidden border-b border-white/10 bg-brand-indigo-deep/90 backdrop-blur transition-all duration-500 md:block ${
+        show ? "translate-y-0 opacity-100" : "pointer-events-none -translate-y-3 opacity-0"
+      }`}
+    >
+      <div className="wrap flex items-center justify-between gap-6">
+        <ul className="flex gap-1 overflow-x-auto py-2 text-sm [scrollbar-width:none]">
+          {items.map((it) => (
+            <li key={it.id}>
+              <a
+                href={`#${it.id}`}
+                className={`block whitespace-nowrap rounded-full px-3.5 py-1.5 transition ${
+                  active === it.id ? "bg-bronze font-semibold text-brand-indigo-deep" : "text-paper/75 hover:text-white"
+                }`}
+              >
+                {it.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <a href={cta.href} target="_blank" rel="noopener" className="btn btn-wa shrink-0 py-1.5 text-xs">
+          {cta.label}
+        </a>
+      </div>
+    </nav>
   );
 }

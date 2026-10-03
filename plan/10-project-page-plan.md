@@ -143,7 +143,7 @@ If any amenity has no render, the card shows the amenity with a clean illustrate
 ## Rules for every project page
 
 1. **Never publish the channel partner brokerage sheet** (the "Ladder of Progress" image). It is a developer's offer to agents, not to buyers.
-2. **Never show the developer's own sales contacts** (Ashray's hotline, the sales manager's mobile). Every enquiry comes to Shree Giriraj.
+2. **Nothing on the page leads a buyer to anyone but Shree Giriraj** (owner, 3 October 2026). No developer name or group name, no company name, no developer phone, email, website or sales contact, no exact plot address (CTS number, street), no map pin on the site and no Google Maps link to it, no developer logos in images, and no spoken contact details (project videos play without sound unless checked). Location is described by the neighbourhood and travel times; the map is centred on the nearest metro station. The developer is described without a name ("an established Mumbai developer"). The one exception is the **MahaRERA project number and QR code**, which the law requires on every project advertisement; our own MahaRERA agent number sits beside it.
 3. **MahaRERA number and QR code on the page**, as required for project advertising in Maharashtra.
 4. **Prices on RERA carpet area only, with a date**, and the words that define them ("all inclusive", "plus taxes"). If a price cannot be confirmed, the page says "price on request" rather than guessing.
 5. **Renders labelled "Artist's impression"**, real photographs labelled with the date.
