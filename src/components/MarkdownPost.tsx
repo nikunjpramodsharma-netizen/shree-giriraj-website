@@ -13,6 +13,8 @@ import { postVisual, formatDate } from "@/lib/blog";
 import { displayDate, getRelated, type Post } from "@/lib/posts";
 import { plainText } from "@/lib/markdown";
 import { termsIn } from "@/lib/glossary";
+import { offerFor } from "@/lib/post-offers";
+import { PostOffer } from "@/components/PostOffer";
 
 /**
  * A blog post rendered from markdown in the repo.
@@ -48,6 +50,7 @@ export function MarkdownPost({
   const showToc = headings.length >= 3;
   const related = getRelated(post, 3);
   const checked = displayDate(post.sourcesCheckedOn);
+  const offer = offerFor(post.slug);
   const terms = termsIn(
     [plainText(post.blocks), ...post.faqs.map((f) => `${f.question} ${f.answer}`)].join(" "),
     { notAbout: post.title },
@@ -167,6 +170,8 @@ export function MarkdownPost({
             </div>
           )}
 
+          {offer && <PostOffer offer={offer} compact />}
+
           <MarkdownBody blocks={post.blocks} />
 
           {/* The questions, lifted out of the body so they can be a visible
@@ -187,6 +192,8 @@ export function MarkdownPost({
               </dl>
             </section>
           )}
+
+          {offer && <PostOffer offer={offer} />}
 
           {/* Plain words for the jargon this particular post uses. Property
               writing carries a few words that stop a first time buyer dead,
@@ -331,7 +338,11 @@ export function MarkdownPost({
         intro="The calculator that does these sums, the service where we do this for you, and the suburbs where the figures come from."
       />
 
-      <ContactCTA locale={locale} formLocation={`post-${post.slug}`} />
+      <ContactCTA
+        locale={locale}
+        formLocation={`post-${post.slug}`}
+        presetIntentKey={offer?.intentKey}
+      />
     </article>
   );
 }
