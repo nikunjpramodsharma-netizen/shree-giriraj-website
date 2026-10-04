@@ -1,6 +1,4 @@
-import type { Metadata } from "next";
 import Image from "next/image";
-import { notFound } from "next/navigation";
 import QRCode from "qrcode";
 import { JJ } from "@/lib/projects/jaswanti-jewel";
 import { site, waLink } from "@/lib/config";
@@ -22,18 +20,17 @@ import {
 } from "@/components/project/ProjectInteractive";
 
 /**
- * DRAFT of the new project page template (plan/10-project-page-plan.md),
- * built for Jaswanti Jewel so the owner can judge the look before the
- * developer's high resolution files arrive. Noindexed, linked from nowhere,
- * English only. When approved it replaces /projects/jaswanti-jewel.
+ * Jaswanti Jewel, the first page built to the project page template
+ * (plan/10-project-page-plan.md). Phone first, then laptop. Rendered by the
+ * project route for this slug in place of the old Sanity page. English only:
+ * the other locales show this page with a canonical to English.
+ *
+ * Owner rule: nothing on it names the developer or leads past Shree Giriraj
+ * (no developer contacts, exact address, map pin or maps link). The
+ * MahaRERA number and QR stay, as the law requires.
  */
 
-export const metadata: Metadata = {
-  title: { absolute: "DRAFT Jaswanti Jewel Kandivali West | Shree Giriraj" },
-  robots: { index: false, follow: false },
-};
-
-const WA_PRICE = `Hi Shree Giriraj, I am interested in Jaswanti Jewel. Please send today's price sheet and available floors for a ___ BHK.`;
+export const JJ_WA_PRICE = `Hi Shree Giriraj, I am interested in Jaswanti Jewel. Please send today's price sheet and available floors for a ___ BHK.`;
 const WA_VISIT = `Hi Shree Giriraj, I would like to visit the Jaswanti Jewel sample flat. I am free on ___.`;
 
 function WaIcon() {
@@ -54,17 +51,12 @@ function SectionHead({ eyebrow, title, intro, dark = false }: { eyebrow: string;
   );
 }
 
-export default async function ProjectDraft({ params }: { params: { locale: string; slug: string } }) {
-  if (params.slug !== JJ.slug || params.locale !== "en") notFound();
+export async function JaswantiJewelPage({ locale }: { locale: string }) {
   const qr = await QRCode.toString(JJ.reraUrl, { type: "svg", margin: 1, color: { dark: "#151b3d", light: "#ffffff" } });
 
   return (
     <article className="bg-paper">
-      <PageWhatsApp message={WA_PRICE} />
-
-      <div className="fixed left-3 top-[4.4rem] z-50 rounded-full bg-brand-red px-3 py-1 text-[0.65rem] font-semibold text-white shadow-lg md:bottom-6 md:left-6 md:top-auto md:px-4 md:py-1.5 md:text-xs">
-        Draft for review, not published
-      </div>
+      <PageWhatsApp message={JJ_WA_PRICE} />
 
       {/* 1. HERO */}
       <section className="relative flex min-h-[100svh] items-end overflow-hidden bg-brand-indigo-deep text-paper md:min-h-[94vh]">
@@ -90,7 +82,7 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
             </div>
           </div>
           <div className="mt-5 grid grid-cols-2 gap-2.5 md:mt-7 md:flex md:flex-wrap md:gap-3">
-            <a href={waLink(WA_PRICE)} target="_blank" rel="noopener" className="btn btn-wa col-span-2 justify-center md:col-span-1">
+            <a href={waLink(JJ_WA_PRICE)} target="_blank" rel="noopener" className="btn btn-wa col-span-2 justify-center md:col-span-1">
               <WaIcon /> Get the price sheet on WhatsApp
             </a>
             <a href={waLink(WA_VISIT)} target="_blank" rel="noopener" className="btn btn-bronze justify-center px-3">
@@ -112,7 +104,7 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
       </section>
 
       <SectionNav
-        cta={{ href: waLink(WA_PRICE), label: "Price sheet on WhatsApp" }}
+        cta={{ href: waLink(JJ_WA_PRICE), label: "Price sheet on WhatsApp" }}
         items={[
           { id: "overview", label: "Overview" },
           { id: "amenities", label: "Amenities" },
@@ -148,7 +140,6 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
           </div>
           <div>
             <SectionHead eyebrow="Our view" title="A new tower, ready in months, not years" />
-            <span className="mb-4 inline-block rounded bg-brand-red/10 px-2 py-0.5 text-[0.7rem] font-semibold text-brand-red">Draft: for the owner to correct</span>
             <p className="text-lg text-ink/80"><b className="text-brand-indigo">Who it suits.</b> {JJ.view.suits}</p>
             <ul className="mt-6 space-y-3">
               {JJ.view.standsOut.map((s) => (
@@ -226,7 +217,6 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
                   <div className="font-semibold text-brand-indigo">{p.config}</div>
                   <div className="mt-0.5 text-sm text-ink/70">
                     {p.carpet ? `${p.carpet.toLocaleString("en-IN")} sq ft` : "Size on request"} · {p.floor}
-                    {"confirm" in p && p.confirm && <span className="ml-1.5 rounded bg-brand-red/10 px-1 py-0.5 text-[0.6rem] font-semibold text-brand-red">confirm</span>}
                   </div>
                 </div>
                 <div className="text-right">
@@ -253,7 +243,6 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
                     <td className="px-5 py-4 font-semibold text-brand-indigo">{p.config}</td>
                     <td className="px-5 py-4">
                       {p.carpet ? `${p.carpet.toLocaleString("en-IN")} sq ft` : "On request"}
-                      {"confirm" in p && p.confirm && <span className="ml-2 rounded bg-brand-red/10 px-1.5 py-0.5 text-[0.65rem] font-semibold text-brand-red">confirm</span>}
                     </td>
                     <td className="px-5 py-4 text-ink/75">{p.floor}</td>
                     <td className="px-5 py-4 font-display text-lg text-bronze-deep">{p.price}</td>
@@ -275,7 +264,7 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
               <div className="font-display text-xl text-white">Flexible payment plans available</div>
               <p className="mt-1 text-sm text-paper/75">The developer offers flexible plans. Tell us what suits you and we will share the options.</p>
             </div>
-            <a href={waLink(WA_PRICE)} target="_blank" rel="noopener" className="btn btn-wa shrink-0">
+            <a href={waLink(JJ_WA_PRICE)} target="_blank" rel="noopener" className="btn btn-wa shrink-0">
               <WaIcon /> Get today&apos;s price sheet
             </a>
           </div>
@@ -348,7 +337,6 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
               ))}
             </ul>
             <p className="mt-6 rounded-lg bg-white/5 p-4 text-sm text-paper/75">
-              <span className="mb-1 block text-[0.7rem] font-semibold uppercase tracking-wider text-brand-red">Draft line, owner to approve</span>
               {JJ.view.worthKnowing}
             </p>
           </div>
@@ -414,19 +402,19 @@ export default async function ProjectDraft({ params }: { params: { locale: strin
           <h2 className="mx-auto max-w-2xl font-display text-3xl text-white md:text-5xl">Tell us the size and floor you want</h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-paper/80">We will send today&apos;s availability and prices on WhatsApp, usually the same day. No obligation.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <a href={waLink(WA_PRICE)} target="_blank" rel="noopener" className="btn btn-wa"><WaIcon /> WhatsApp us</a>
+            <a href={waLink(JJ_WA_PRICE)} target="_blank" rel="noopener" className="btn btn-wa"><WaIcon /> WhatsApp us</a>
             <a href={waLink(WA_VISIT)} target="_blank" rel="noopener" className="btn btn-bronze">Book a site visit</a>
           </div>
         </div>
       </section>
 
-      <ContactCTA locale={params.locale} formLocation="project-jaswanti-jewel-draft" presetIntentKey="intentNewProject" presetArea="Kandivali West" />
+      <ContactCTA locale={locale} formLocation="project-jaswanti-jewel" presetIntentKey="intentNewProject" presetArea="Kandivali West" />
 
       <p className="wrap py-6 text-[0.7rem] leading-relaxed text-muted">
         Renders are artist&apos;s impressions and floor plans are indicative, from the developer. Prices, availability and possession dates are as shared by the developer in {JJ.priceAsOf} and may change; please confirm before booking. MahaRERA Reg. No. {JJ.rera}, {JJ.reraUrl.replace("https://", "")}.
       </p>
 
-      <StickyBar message={WA_PRICE} waLabel="Price sheet" callLabel="Call" />
+      <StickyBar message={JJ_WA_PRICE} waLabel="Price sheet" callLabel="Call" />
     </article>
   );
 }

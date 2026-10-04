@@ -94,10 +94,14 @@ export function Nav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color,box-shadow] duration-300 ${
+      // No border in either state (owner, 4 October 2026: seamless, no lines).
+      // Over a hero a transparent border still took a hairline and the
+      // gradient repeated into it as a dark seam; on cream a soft shadow
+      // separates the header instead of a rule.
+      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,box-shadow] duration-300 ${
         clear
-          ? "border-transparent bg-gradient-to-b from-black/55 via-black/25 to-transparent"
-          : "border-brand-indigo/10 bg-paper/90 shadow-sm backdrop-blur"
+          ? "border-b-0 bg-gradient-to-b from-black/55 via-black/25 to-transparent bg-no-repeat"
+          : "bg-paper/90 shadow-[0_6px_18px_-12px_rgba(21,27,61,0.35)] backdrop-blur"
       }`}
     >
       <div className="wrap flex h-[72px] items-center justify-between">

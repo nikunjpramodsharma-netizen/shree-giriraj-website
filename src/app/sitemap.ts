@@ -162,7 +162,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     out.push(...entriesFor(`/blog/${p.slug}`, ["en"], checked ?? undefined, 0.5));
   }
   for (const p of projects) {
-    out.push(...entriesFor(`/projects/${p.slug}`, p.locales ?? [], p.updatedAt, 0.5));
+    // Template projects are English only until translated (see the project route).
+    const locales: typeof p.locales = p.slug === "jaswanti-jewel" ? ["en"] : p.locales ?? [];
+    out.push(...entriesFor(`/projects/${p.slug}`, locales, p.updatedAt, 0.5));
   }
   for (const p of pages) {
     // The flexible [slug] route does not own the reserved section prefixes.

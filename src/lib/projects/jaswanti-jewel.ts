@@ -1,8 +1,8 @@
 /**
  * Jaswanti Jewel, the first project built to the project page plan
- * (plan/10-project-page-plan.md). DRAFT: it renders at
- * /projects/jaswanti-jewel/draft, noindexed, until the owner approves it and
- * the developer's high resolution files and written permission arrive.
+ * (plan/10-project-page-plan.md). Live at /projects/jaswanti-jewel since
+ * 4 October 2026, approved by the owner, with the developer's permission to
+ * use its images. Sizes 788, 795 and 1,055 sq ft kept at the owner's word.
  *
  * Every fact carries its source in a comment. Sources:
  *   BROCHURE  Ashray's printed brochure, scanned, shared by the owner 3 Oct 2026

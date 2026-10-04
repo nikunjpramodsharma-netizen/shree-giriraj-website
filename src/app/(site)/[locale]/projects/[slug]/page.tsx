@@ -19,8 +19,18 @@ import {
 import { pageUrls } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
-import { graph, residenceNode, breadcrumbNode } from "@/lib/schema";
+import { graph, residenceNode, breadcrumbNode, faqNode } from "@/lib/schema";
 import { projectFallback } from "@/lib/project-images";
+import { JaswantiJewelPage } from "@/components/project/JaswantiJewelPage";
+import { JJ } from "@/lib/projects/jaswanti-jewel";
+
+/**
+ * Projects rebuilt on the new template (plan/10-project-page-plan.md) are
+ * served from code, not Sanity. English only for now: a translated route
+ * renders the English page with a canonical to English and stays out of the
+ * index, so it is never offered as a translation it is not.
+ */
+const TEMPLATE_PROJECTS = new Set([JJ.slug]);
 
 export const revalidate = 60;
 
@@ -63,6 +73,17 @@ export async function generateMetadata({
 }: {
   params: { locale: string; slug: string };
 }): Promise<Metadata> {
+  if (TEMPLATE_PROJECTS.has(params.slug)) {
+    const urls = pageUrls("en", `/projects/${params.slug}`, ["en"]);
+    return {
+      ...urls,
+      title: "Jaswanti Jewel Kandivali West: prices, plans",
+      description:
+        "2, 3, 4 and 5 BHK off M. G. Road, Kandivali West, from ₹2.92 Cr all inclusive. Possession from March 2027 with every amenity ready. Floor plans and prices.",
+      ...(params.locale === "en" ? {} : { robots: { index: false, follow: true } }),
+      openGraph: { ...urls.openGraph, images: [{ url: JJ.story[0].img.src, alt: "Jaswanti Jewel at dusk, artist's impression" }] },
+    };
+  }
   const project = repairProjectLocales(
     params.slug,
     await client.fetch<Project>(projectBySlugQuery, { slug: params.slug }),
@@ -93,6 +114,33 @@ export default async function ProjectPage({
   params: { locale: string; slug: string };
 }) {
   const locale = params.locale as Locale;
+  if (TEMPLATE_PROJECTS.has(params.slug)) {
+    const trail: Crumb[] = [
+      { name: "Home", path: "/" },
+      { name: "Projects", path: "/projects" },
+      { name: JJ.name, path: `/projects/${JJ.slug}` },
+    ];
+    return (
+      <>
+        <JsonLd
+          data={graph(
+            residenceNode({
+              locale: "en",
+              name: JJ.name,
+              slug: JJ.slug,
+              description: JJ.heroLine,
+              image: `https://www.shreegiriraj.com${JJ.story[0].img.src}`,
+              location: "Kandivali West, Mumbai",
+              rera: JJ.rera,
+            }),
+            breadcrumbNode("en", trail),
+            faqNode(JJ.faqs.map((f) => ({ question: f.q, answer: f.a }))),
+          )}
+        />
+        <JaswantiJewelPage locale={locale} />
+      </>
+    );
+  }
   const [fetched, t] = await Promise.all([
     client.fetch<Project>(projectBySlugQuery, { slug: params.slug }),
     getTranslations({ locale, namespace: "projectDetail" }),

@@ -110,7 +110,7 @@ export default function ToolPage({
 
       {/* The calculator sits directly under the heading. No wall, no scroll
           hunt, and nothing to fill in before it works. */}
-      <div className="wrap -mt-6 pb-12">
+      <div className="wrap relative z-10 -mt-6 pb-12">
         {tool.component === "emi" && <EmiCalculator />}
         {tool.component === "stampDuty" && <StampDutyCalculator />}
         {tool.component === "area" && <AreaCalculator />}
