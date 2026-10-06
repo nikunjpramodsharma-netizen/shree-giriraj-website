@@ -113,12 +113,18 @@ export function ServiceTrack({ panels, locale = "en" }: { panels: ServicePanel[]
                   <Link prefetch={false}
                     href={`/services/${p.slug}`}
                     tabIndex={isOpen ? 0 : -1}
-                    className="pointer-events-auto mt-3.5 inline-block text-sm font-semibold text-bronze underline decoration-bronze/40 underline-offset-4"
+                    className="group/cta pointer-events-auto mt-4 inline-flex items-center gap-2 rounded-full bg-bronze px-5 py-2.5 text-sm font-semibold text-brand-indigo-deep transition-colors hover:bg-paper focus-visible:bg-paper focus-visible:outline-none"
                   >
                     {tr(locale, "More on {title}").replace(
                       "{title}",
                       locale === "en" ? p.title.toLowerCase() : p.title,
                     )}
+                    <span
+                      aria-hidden="true"
+                      className="transition-transform group-hover/cta:translate-x-1"
+                    >
+                      →
+                    </span>
                   </Link>
                 </div>
               </div>
