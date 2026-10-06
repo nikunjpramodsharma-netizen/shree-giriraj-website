@@ -48,6 +48,10 @@ export const site = {
     // Clover Grove CHS, Chikoowadi and the RERA number. Checked 1 October 2026.
     // Not "Shree Giriraj Real Estate Consultant", which is an unrelated firm.
     "https://www.realestateindia.com/profile/shree-giriraj-real-estate-in-borivali-west-mumbai-4314295/",
+    // Bing Places, claimed 28 September 2026 and published on Bing Maps by 6
+    // October 2026: firm name, website and 93249 74133. Bing still showed the
+    // old Tower C 1204, 400091 address that day; the 400092 fix was pending.
+    "https://www.bing.com/maps?ss=ypid.YN1D8BF1757E3AB6C0",
     // Instagram and Facebook, supplied by the owner on 16 September 2026.
     // Neither was findable by search that day; both open and carry the name.
     "https://www.instagram.com/shree_giriraj_real_estate/",
