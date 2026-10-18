@@ -1,7 +1,7 @@
 ---
 title: "MHADA office in Bandra East: which desk handles your flat, and what to take"
-metaTitle: "MHADA office Bandra: which desk, what to take"
-metaDescription: "The MHADA office is Griha Nirman Bhavan, Kalanagar, Bandra East. Which Estate Manager handles your area, what to take for a transfer or NOC, and how long."
+metaTitle: "MHADA office Bandra: timings and which desk"
+metaDescription: "Griha Nirman Bhavan, Kalanagar, Bandra East, open 9:45 am to 6:15 pm on working days. Which Estate Manager handles your area and what to take for one visit."
 slug: mhada-office-bandra
 category: MHADA
 heroImage: /premium/u/tower-06.jpg

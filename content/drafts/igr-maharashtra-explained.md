@@ -1,7 +1,7 @@
 ---
 title: "IGR Maharashtra: what it is and how to actually use it"
-metaTitle: "IGR Maharashtra: what it is and how to use it"
-metaDescription: "IGR Maharashtra is the state's registration and stamps department. What it does, and how to use it to search documents, value a flat and get certified copies."
+metaTitle: "IGR Maharashtra: how to use it, step by step"
+metaDescription: "How to use IGR Maharashtra step by step: search registered documents, check a flat's ready reckoner value and get certified copies, with the official links."
 slug: igr-maharashtra-explained
 category: Paperwork
 heroImage: /blog/igr-maharashtra.jpg
