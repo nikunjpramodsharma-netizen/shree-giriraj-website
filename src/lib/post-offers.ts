@@ -81,6 +81,14 @@ export const POST_OFFERS: Record<string, PostOffer> = {
     button: "Ask us to handle it",
     intentKey: "intentMhada",
   },
+  "mhada-allotment-letter": {
+    heading: "Allotment letter or other papers missing?",
+    body: "We prepare the Form 9 application for certified copies from the Board's file and work out what your sale, loan or transfer needs, anywhere in Mumbai.",
+    whatsapp:
+      "Hi Shree Giriraj, my MHADA allotment letter is missing for my flat in ___.",
+    button: "Ask about missing papers",
+    intentKey: "intentMhada",
+  },
   "home-loan-on-mhada-flat": {
     heading: "Need the MHADA NOC for your loan?",
     body: "We prepare the Form 4 file, clear the dues paperwork and follow the NOC until it reaches your lender, for MHADA flats anywhere in Mumbai.",

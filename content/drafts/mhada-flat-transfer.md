@@ -126,7 +126,7 @@ The documents required for a MHADA transfer are the nine items on the Mumbai Boa
 4. **An indemnity bond** on 200 rupee stamp paper, in the format MHADA prescribes. This is the applicant's written promise to make good any loss to the Mumbai Board from the transfer.
 5. **The society's NOC** in MHADA's prescribed format.
 6. **Certified copies of the receipts** showing all arrears paid, and the current month's receipt, including ground rent and non agricultural assessment.
-7. **The allotment letter**, and where the flat has changed hands before, the receipts for stamp duty paid on every earlier change.
+7. **The allotment letter**, and where the flat has changed hands before, the receipts for stamp duty paid on every earlier change. If it is lost, our guide to the [MHADA allotment letter](/blog/mhada-allotment-letter) shows how to get a certified copy.
 8. **Two attested passport size photographs.**
 9. **A self declaration** in the prescribed format covering unauthorised construction and whether a society has been registered.
 

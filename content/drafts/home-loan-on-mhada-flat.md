@@ -110,7 +110,7 @@ Form 4's own checklist asks for four things:
 1. **A self declaration** in the format MHADA prescribes.
 2. **A no dues certificate from any earlier lender**, where a loan was taken on the flat before.
 3. **Certified copies of the receipts** for all arrears and the current month, including ground rent and non agricultural assessment.
-4. **The allotment letter**, and where the flat has changed hands, the receipts for stamp duty paid on every change.
+4. **The allotment letter**, and where the flat has changed hands, the receipts for stamp duty paid on every change. Our guide to the [MHADA allotment letter](/blog/mhada-allotment-letter) covers a lost one.
 
 Form 4 also lets the competent officer ask for further papers where a case needs them.
 

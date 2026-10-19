@@ -63,7 +63,7 @@ MHADA's head office is Griha Nirman Bhavan, Kalanagar, Bandra East, Mumbai 40005
 
 Griha Nirman Bhavan is the head office of MHADA, the Authority and its boards, including the Mumbai Board. For a flat allotted by the Mumbai Board, the work that matters to an owner sits with the Board's **Estate Managers**. Each one looks after the MHADA flats in a part of the city, and each is the officer who receives your transfer or NOC application.
 
-So before you travel, find your flat's Estate Manager. Your allotment letter and your latest rent receipt usually name the division. If they do not, the society office will know.
+So before you travel, find your flat's Estate Manager. Your allotment letter and your latest rent receipt usually name the division. If they do not, the society office will know, and if the allotment letter itself is missing, our guide to the [MHADA allotment letter](/blog/mhada-allotment-letter) shows how to get a certified copy.
 
 ---
 

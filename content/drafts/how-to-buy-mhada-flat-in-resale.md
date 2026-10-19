@@ -67,7 +67,7 @@ It is safe when the transfer is done the way the Regulations require, and unsafe
 
 ### 1. The seller is the Board's allottee
 
-Ask for the allotment letter and the latest rent or maintenance receipt from the Board. The name on both should be the seller's. If the seller inherited the flat, the transfer to them should already have been granted by the Board; if it has not, the seller is not yet in a position to sell, whatever the family says. The [transfer on death](/blog/mhada-transfer-on-death) comes first.
+Ask for the [allotment letter](/blog/mhada-allotment-letter) and the latest rent or maintenance receipt from the Board. The name on both should be the seller's. If the seller inherited the flat, the transfer to them should already have been granted by the Board; if it has not, the seller is not yet in a position to sell, whatever the family says. The [transfer on death](/blog/mhada-transfer-on-death) comes first.
 
 ### 2. Five years have passed from allotment
 
