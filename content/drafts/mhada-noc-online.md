@@ -101,7 +101,7 @@ The Mumbai Board's paper forms are still published on its E-MITRA page, and they
 
 If you have just won a flat in the lottery, the NOC your bank needs comes from MHADA's IHLMS 2.0 app, not Aaple Sarkar. MHADA's own FAQ gives the steps: open the MHADA Lottery app, log in to IHLMS 2.0, go to the menu, select Application List, choose the winning application, tap Apply for NOC, fill in the details, submit, and then download the NOC.
 
-Switching banks is allowed too. MHADA says you can apply again once you cancel the NOC you applied for earlier.
+Switching banks is allowed too. MHADA says you can apply again once you cancel the NOC you applied for earlier. Our guide to a [home loan on a MHADA flat](/blog/home-loan-on-mhada-flat) covers the bank side, the owners' Form 4 and the PMAY subsidy.
 
 ---
 

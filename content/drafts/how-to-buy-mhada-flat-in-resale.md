@@ -99,9 +99,9 @@ A MHADA flat is still a flat. Get the [encumbrance certificate](/blog/encumbranc
 
 ## Can I get a home loan on a MHADA resale flat?
 
-Lenders do finance MHADA flats, and they will ask for the Board's no objection certificate for mortgage before sanction. That NOC is its own application to the Estate Manager, separate from the transfer permission, and it goes in the seller's name until the transfer is granted and in yours after. Build the time it takes into the timetable, because a sanction that is waiting on a Board NOC is a sanction the seller may not wait for.
+Lenders do finance MHADA flats, and they will ask for the Board's no objection certificate for mortgage before sanction. That NOC is its own application to the Estate Manager on the Mumbai Board's Form 4, separate from the transfer, and the form is made by the person on the Board's record, so the Board's forms point to the transfer coming first. Build the time it takes into the timetable, because a sanction that is waiting on a Board NOC is a sanction the seller may not wait for.
 
-Individual lenders' policies on MHADA flats, and whether they insist on the transfer being completed before disbursement, differ. Ask the specific lender in writing before relying on a loan to fund the purchase.
+Individual lenders' policies on MHADA flats, and whether they insist on the transfer being completed before disbursement, differ. Ask the specific lender in writing before relying on a loan to fund the purchase. Our guide to a [home loan on a MHADA flat](/blog/home-loan-on-mhada-flat) has the Mumbai Board's Form 4 checklist and the 12 working day limit.
 
 ---
 

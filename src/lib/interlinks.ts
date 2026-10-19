@@ -96,7 +96,7 @@ const SERVICE_MAP: Record<string, { tools: string[]; articles: string[]; service
   },
   "mhada-paperwork": {
     tools: ["stamp-duty-calculator-mumbai", "capital-gains-calculator-property"],
-    articles: ["mhada-flat-transfer", "how-to-buy-mhada-flat-in-resale", "can-we-sell-mhada-flat"],
+    articles: ["mhada-flat-transfer", "home-loan-on-mhada-flat", "how-to-buy-mhada-flat-in-resale", "can-we-sell-mhada-flat"],
     services: ["resale-flats", "rentals"],
   },
 };
@@ -110,7 +110,7 @@ const AREA_RECIPE = {
 const TOOL_MAP: Record<string, { services: string[]; articles: string[] }> = {
   "home-loan-emi-calculator": {
     services: ["new-project-bookings", "resale-flats"],
-    articles: ["under-construction-vs-ready-to-move-flat", "stamp-duty-and-registration-charges-mumbai"],
+    articles: ["under-construction-vs-ready-to-move-flat", "home-loan-on-mhada-flat", "stamp-duty-and-registration-charges-mumbai"],
   },
   "stamp-duty-calculator-mumbai": {
     services: ["resale-flats", "mhada-paperwork"],
@@ -162,6 +162,7 @@ const ARTICLE_TOOL: Record<string, string> = {
   "rent-deposit-months-western-suburbs": "hra-calculator-rent-receipts",
   "choosing-an-interior-designer-in-borivali": "interior-scope-builder",
   "under-construction-vs-ready-to-move-flat": "home-loan-emi-calculator",
+  "home-loan-on-mhada-flat": "home-loan-emi-calculator",
   "how-to-invest-in-real-estate-india": "rental-yield-calculator",
   "reit-vs-buying-a-flat-india": "rental-yield-calculator",
   "what-a-sale-deed-contains": "capital-gains-calculator-property",
