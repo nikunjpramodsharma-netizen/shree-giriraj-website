@@ -42,6 +42,45 @@ function mentions(hay: string, needle: string): boolean {
 }
 
 export const GLOSSARY: Term[] = [
+  // MHADA words first: they only ever appear in the MHADA guides, where they
+  // are the terms a reader is least likely to know, and the six slot limit
+  // would otherwise spend itself on stamp duty and society.
+  {
+    term: "Allottee",
+    plain:
+      "The person MHADA allotted the flat to, in whose name the Board's record stands until a transfer.",
+    match: ["allottee", "allottees"],
+  },
+  {
+    term: "Estate Manager",
+    plain:
+      "The Mumbai Board officer who handles transfers, NOCs and dues for the flats in a division, at Griha Nirman Bhavan in Bandra East.",
+    match: ["estate manager"],
+  },
+  {
+    term: "Heirship certificate",
+    plain:
+      "A court document naming the legal heirs of someone who has died, used when there is no registered will.",
+    match: ["heirship certificate"],
+  },
+  {
+    term: "Release deed",
+    plain:
+      "A registered document by which an heir gives up their share in a property in favour of another heir.",
+    match: ["release deed", "release deeds"],
+  },
+  {
+    term: "Indemnity bond",
+    plain:
+      "A written promise on stamp paper to make good any loss the other side suffers because of the transaction.",
+    match: ["indemnity bond"],
+  },
+  {
+    term: "Unearned increase",
+    plain:
+      "The rise in a flat's value that the owner did not create, which MHADA may take a share of when it permits a sale.",
+    match: ["unearned increase"],
+  },
   {
     term: "Consideration",
     plain:

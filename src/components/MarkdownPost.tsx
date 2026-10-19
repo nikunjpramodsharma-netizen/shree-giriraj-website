@@ -85,7 +85,14 @@ export function MarkdownPost({
                 description: post.answer,
                 image: visual.image,
                 published: checked ?? new Date().toISOString(),
+                modified: checked ?? undefined,
                 authorName: AUTHOR.name,
+                authorRole: AUTHOR.role,
+                // The same list the reader sees under Sources. The keyword
+                // tool is how the topic was chosen, not a source on it.
+                citations: post.sources
+                  .map((s) => s.url)
+                  .filter((u): u is string => !!u && !u.includes("dataforseo")),
               })
             : null,
         )}

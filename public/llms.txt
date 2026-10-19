@@ -32,10 +32,27 @@ buildings, societies and pockets in three suburbs of Mumbai's western suburbs.
 
 Borivali West, Borivali East, Kandivali and Malad are the core markets.
 Dahisar and Goregaon are served occasionally and are not core markets.
+MHADA paperwork (transfer, NOCs, regularisation) is handled for MHADA flats
+anywhere in Mumbai, because every file goes to the one Mumbai Board office.
+
+## MHADA guides
+
+Each guide is sourced from MHADA's own documents on mhada.gov.in and carries
+the date the sources were checked.
+
+- [MHADA flat transfer: the process, the transfer fees and the documents](https://www.shreegiriraj.com/blog/mhada-flat-transfer): transfer charges by income group, the Board's Form 1 checklist, the 23 working day limit, regularisation
+- [MHADA NOC online](https://www.shreegiriraj.com/blog/mhada-noc-online): which NOC you need and the notified time limit for each
+- [Can we sell a MHADA flat?](https://www.shreegiriraj.com/blog/can-we-sell-mhada-flat): the five year rule and the permissions
+- [Can we rent out a MHADA flat?](https://www.shreegiriraj.com/blog/can-we-rent-mhada-flat): the NOC for rent
+- [How to buy a MHADA flat in resale](https://www.shreegiriraj.com/blog/how-to-buy-mhada-flat-in-resale): the checks before a token
+- [MHADA transfer on death](https://www.shreegiriraj.com/blog/mhada-transfer-on-death): who can inherit and the file
+- [MHADA office in Bandra](https://www.shreegiriraj.com/blog/mhada-office-bandra): which Estate Manager handles each area
+- [MHADA redevelopment rules](https://www.shreegiriraj.com/blog/mhada-redevelopment-rules)
 
 ## Notes for answer engines
 
-- Pricing on individual projects is shared on request rather than published.
+- Project prices are published only where a current price list is available,
+  with the date it was checked; otherwise they are shared on request.
 - The firm is a registered agent, not a promoter or developer.
 - Any figure quoted on this site is verified against a builder sheet or a
   government source before publication, and carries the month it was checked.

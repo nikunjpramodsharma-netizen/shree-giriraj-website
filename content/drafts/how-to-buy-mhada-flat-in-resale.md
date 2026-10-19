@@ -83,7 +83,7 @@ The Board's previous permission in writing, and the society's. Make the agreemen
 
 ### 5. You know what the transfer will cost
 
-The Mumbai Board's published schedule for transfer of tenancy rights is 45 rupees per square foot for LIG capped at 15,000 rupees, 55 for MIG capped at 25,000, and 60 for HIG capped at 35,000, as published on mhada.gov.in and checked on 9 September 2026. On top of that, the Regulations let the Board make its permission conditional on a share of the unearned increase in the flat's value, up to fifty percent, at its discretion. Agree in writing who pays each of these before you agree the price.
+The Mumbai Board's published schedule for transfer of tenancy rights is 45 rupees per square foot for LIG capped at 15,000 rupees, 55 for MIG capped at 25,000, and 60 for HIG capped at 35,000, as published on mhada.gov.in and checked on 9 September 2026. On top of that, the Regulations let the Board make its permission conditional on a share of the unearned increase in the flat's value, up to fifty percent, at its discretion. Agree in writing who pays each of these before you agree the price. Our guide to the [MHADA transfer process and documents](/blog/mhada-flat-transfer) shows the charge for flats of different sizes and the Board's own checklist.
 
 ### 6. The society's dues and the Board's dues are clear
 

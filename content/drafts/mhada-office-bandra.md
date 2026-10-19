@@ -112,7 +112,7 @@ MHADA's citizen services are notified under the Maharashtra Right to Public Serv
 | Transfer of a residential tenement or plot | 23 working days |
 | Regularisation of a residential tenement or plot | 23 working days |
 
-The clock runs from a complete application, which is why the file matters more than the visit. If a service runs past its time limit, the Act gives you a first appeal to the Executive Engineer and a second to the Chief Officer.
+The clock runs from a complete application, which is why the file matters more than the visit. If a service is refused or runs past its time limit, the Act gives you a first appeal to the Executive Engineer and, for Mumbai Board residential services, a second to the Joint Chief Officer.
 
 ---
 

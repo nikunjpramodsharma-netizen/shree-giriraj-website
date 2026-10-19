@@ -81,6 +81,14 @@ export const POST_OFFERS: Record<string, PostOffer> = {
     button: "Ask us to handle it",
     intentKey: "intentMhada",
   },
+  "mhada-flat-transfer": {
+    heading: "Want the transfer done for you?",
+    body: "We build the file against the Board's own checklist, work out the charge for your flat and follow the application until the flat stands in the new name, anywhere in Mumbai.",
+    whatsapp:
+      "Hi Shree Giriraj, I need a MHADA transfer after a ___ (sale, gift or death) for my flat in ___.",
+    button: "Ask about your transfer",
+    intentKey: "intentMhada",
+  },
   "mhada-noc-online": {
     heading: "Want the NOC handled for you?",
     body: "We prepare the application and the file, apply through the right route and follow it until the certificate is issued, for MHADA flats anywhere in Mumbai.",

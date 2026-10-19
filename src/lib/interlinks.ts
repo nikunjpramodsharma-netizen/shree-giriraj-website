@@ -96,7 +96,7 @@ const SERVICE_MAP: Record<string, { tools: string[]; articles: string[]; service
   },
   "mhada-paperwork": {
     tools: ["stamp-duty-calculator-mumbai", "capital-gains-calculator-property"],
-    articles: ["how-to-buy-mhada-flat-in-resale", "can-we-sell-mhada-flat"],
+    articles: ["mhada-flat-transfer", "how-to-buy-mhada-flat-in-resale", "can-we-sell-mhada-flat"],
     services: ["resale-flats", "rentals"],
   },
 };

@@ -227,6 +227,18 @@ export function residenceNode(opts: {
   };
 }
 
+/**
+ * Schema.org dates must be ISO 8601. The posts carry human dates such as
+ * "19 October 2026", which Google's validator rejects, so they are converted
+ * here; anything that does not parse is dropped rather than emitted wrong.
+ */
+export function isoDate(v?: string): string | undefined {
+  if (!v) return undefined;
+  if (/^\d{4}-\d{2}-\d{2}/.test(v)) return v;
+  const d = new Date(`${v} 12:00 UTC`);
+  return Number.isNaN(d.getTime()) ? undefined : d.toISOString().slice(0, 10);
+}
+
 export function blogPostingNode(opts: {
   locale: string;
   title: string;
@@ -236,20 +248,35 @@ export function blogPostingNode(opts: {
   published?: string;
   modified?: string;
   authorName?: string;
+  /** The author's role at the firm, as shown in the author box. */
+  authorRole?: string;
+  /** The sources listed visibly on the page, so the markup matches it. */
+  citations?: string[];
 }): Json {
+  const published = isoDate(opts.published);
+  const modified = isoDate(opts.modified) ?? published;
+  const image = opts.image
+    ? opts.image.startsWith("http") ? opts.image : `${SITE_URL}${opts.image}`
+    : undefined;
   return {
     "@type": "BlogPosting",
     headline: opts.title,
     url: absoluteUrl(opts.locale, `/blog/${opts.slug}`),
     mainEntityOfPage: absoluteUrl(opts.locale, `/blog/${opts.slug}`),
     ...(opts.description ? { description: opts.description } : {}),
-    ...(opts.image ? { image: opts.image } : {}),
-    ...(opts.published ? { datePublished: opts.published } : {}),
-    ...(opts.modified ? { dateModified: opts.modified } : {}),
+    ...(image ? { image } : {}),
+    ...(published ? { datePublished: published } : {}),
+    ...(modified ? { dateModified: modified } : {}),
+    ...(opts.citations && opts.citations.length > 0 ? { citation: opts.citations } : {}),
     // Named authorship is an E-E-A-T signal and worth real weight in a YMYL
     // adjacent category. Falls back to the firm rather than inventing a person.
     author: opts.authorName
-      ? { "@type": "Person", name: opts.authorName }
+      ? {
+          "@type": "Person",
+          name: opts.authorName,
+          ...(opts.authorRole ? { jobTitle: opts.authorRole } : {}),
+          worksFor: { "@id": ORG_ID },
+        }
       : { "@id": ORG_ID },
     publisher: { "@id": ORG_ID },
     inLanguage: opts.locale,

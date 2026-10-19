@@ -76,7 +76,7 @@ Each job has its own service, its own form and its own time limit:
 | Take a loan against the flat | NOC for a mortgage | 12 working days |
 | Sell the flat or a commercial unit | Sale permission | 15 working days |
 | Prove nothing is owed to the Board | No dues certificate | 19 working days |
-| Move the tenancy to a buyer or an heir | Transfer of tenement | 23 working days |
+| Move the tenancy to a buyer or an heir | [Transfer of tenement](/blog/mhada-flat-transfer) | 23 working days |
 | Put an earlier, unpermitted transfer on record | Regularisation | 23 working days |
 
 The time limits are the ones MHADA notified under the Right to Public Services Act. The clock starts from a complete application, so a full file is what gets you the time limit in practice.
@@ -107,7 +107,7 @@ Switching banks is allowed too. MHADA says you can apply again once you cancel t
 
 ## When the Board takes longer
 
-The Right to Public Services Act gives every notified service a designated officer, usually the Estate Manager for your area, and two levels of appeal. If a service runs past its time limit, the first appeal goes to the Executive Engineer and the second to the Chief Officer. A complete file is the surest way to stay inside the limit, which is why the file is where we spend our time.
+The Right to Public Services Act gives every notified service a designated officer, usually the Estate Manager for your area, and two levels of appeal. If a service is refused or runs past its time limit, the first appeal goes to the Executive Engineer and, for Mumbai Board residential services, the second to the Joint Chief Officer, as MHADA's notification of 13 July 2015 sets out. A complete file is the surest way to stay inside the limit, which is why the file is where we spend our time.
 
 ---
 
@@ -123,7 +123,7 @@ MHADA's notified limits are 8 days for the NOC for rent, 12 working days for an 
 No. Sale permission is the Board's consent to the sale; the transfer of tenement then moves the tenancy into the buyer's name. Most sales need both, and the society's NOC as well.
 
 **What if MHADA does not decide in time?**
-The Right to Public Services Act gives you a first appeal to the Executive Engineer and a second to the Chief Officer, against the designated officer who missed the time limit.
+The Right to Public Services Act gives you a first appeal to the Executive Engineer and, for Mumbai Board residential services, a second to the Joint Chief Officer, against the designated officer who missed the time limit.
 
 **Do I still need to visit the Bandra office?**
 Often not to apply. If the Board needs anything more, the Estate Manager's office will tell you. Our guide to the [MHADA office in Bandra](/blog/mhada-office-bandra) lists which Estate Manager handles each area.

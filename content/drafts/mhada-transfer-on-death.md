@@ -91,7 +91,7 @@ The list says the application with documents is to be submitted to the Estate Ma
 
 ## Are transfer charges payable on a transfer to an heir?
 
-The Board's document list sets the transfer charges as a general item for transfer of tenancy rights and does not carve out an exemption for heirs: 45 rupees per square foot for Low Income Group capped at 15,000 rupees, 55 for Middle Income Group capped at 25,000, and 60 for High Income Group capped at 35,000, as published on mhada.gov.in and checked on 9 September 2026.
+The Board's document list sets the transfer charges as a general item for transfer of tenancy rights and does not carve out an exemption for heirs: 45 rupees per square foot for Low Income Group capped at 15,000 rupees, 55 for Middle Income Group capped at 25,000, and 60 for High Income Group capped at 35,000, as published on mhada.gov.in and checked on 9 September 2026. Our guide to the [MHADA flat transfer process](/blog/mhada-flat-transfer) has the Board's Form 1 checklist, including the papers for a transfer after a death.
 
 Whether the Mumbai Board applies the full schedule, a reduced charge or no charge to a transfer to a legal heir in practice should be confirmed at the Estate Manager's office for the specific scheme. The published list does not distinguish, and practice has varied.
 

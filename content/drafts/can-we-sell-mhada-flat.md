@@ -68,7 +68,7 @@ The Regulations allow the Board to refuse permission, or to grant it subject to 
 
 Whether the Board asks for it, and how much, depends on the scheme and the flat. It is not a fixed levy and it is not always applied, but a seller who has not asked about it before agreeing a price can find the arithmetic of the deal changed after the fact. Ask first.
 
-On top of that sits the transfer charge. The Mumbai Board's document list publishes a schedule for transfer of tenancy rights: 45 rupees per square foot for Low Income Group flats capped at 15,000 rupees, 55 rupees per square foot for Middle Income Group capped at 25,000 rupees, and 60 rupees per square foot for High Income Group capped at 35,000 rupees, payable by demand draft or pay order. Those figures are as published on mhada.gov.in and were checked on 9 September 2026. The Board revises them, so confirm the current schedule before paying.
+On top of that sits the transfer charge. The Mumbai Board's document list publishes a schedule for transfer of tenancy rights: 45 rupees per square foot for Low Income Group flats capped at 15,000 rupees, 55 rupees per square foot for Middle Income Group capped at 25,000 rupees, and 60 rupees per square foot for High Income Group capped at 35,000 rupees, payable by demand draft or pay order. Those figures are as published on mhada.gov.in and were checked on 9 September 2026. The Board revises them, so confirm the current schedule before paying. Our guide to [MHADA transfer fees and the transfer process](/blog/mhada-flat-transfer) works the charge out for flats of different sizes.
 
 ---
 
