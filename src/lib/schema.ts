@@ -66,8 +66,9 @@ export function organizationNode(opts: { founder?: string } = {}): Json {
     })),
     identifier: {
       "@type": "PropertyValue",
-      // Labelled precisely: this is the AGENT registration, not a project one.
-      name: "MahaRERA Agent Registration",
+      // The firm's own MahaRERA registration, not a project one. Public
+      // wording always presents the firm as an agency (owner's rule, 20 Oct 2026).
+      name: "MahaRERA Registration",
       value: site.rera,
     },
     // Confirmed by the owner on 16 September 2026: 9 am to 9 pm, all seven

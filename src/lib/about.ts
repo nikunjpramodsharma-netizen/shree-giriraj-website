@@ -48,7 +48,7 @@ export const STORY: StorySection[] = [
   {
     heading: "Since 1996, and ahead",
     paragraphs: [
-      "The biggest change in those years is the law. Maharashtra's real estate regulator came into force on 1 May 2017, and Shree Giriraj is MahaRERA registered agent A51800005726. The number is on every page of this site so that anyone can check it in a minute.",
+      "The biggest change in those years is the law. Maharashtra's real estate regulator came into force on 1 May 2017, and Shree Giriraj holds MahaRERA registration A51800005726. The number is on every page of this site so that anyone can check it in a minute.",
       "The firm now offers seven services under one roof, from resale, rentals and new project bookings to investment advisory, commercial property, MHADA paperwork and interior work. It is still led by its founder, still at the same office, and still measures itself by whether the people it has helped come back. If you are buying, selling, renting or investing in Borivali, Kandivali or Malad, the first conversation is free and usually happens the same day.",
     ],
   },
@@ -118,8 +118,8 @@ export const ABOUT_FAQS: AboutFaq[] = [
     a: "The firm has worked in real estate since 1996 and has operated from its current Borivali West office since 2005. Those are two different dates and the site keeps them apart: nearly thirty years in the trade, and twenty years at this particular address in Chikoowadi.",
   },
   {
-    q: "Is Shree Giriraj a MahaRERA registered agent?",
-    a: "Yes. The MahaRERA agent registration number is A51800005726. Maharashtra requires any agent facilitating the sale of a registered project to hold one, and the number can be checked for free on the MahaRERA portal against the firm's name before you deal with anybody.",
+    q: "Is Shree Giriraj registered with MahaRERA?",
+    a: "Yes. The MahaRERA registration number is A51800005726. Maharashtra requires anyone facilitating the sale of a registered project to hold one, and the number can be checked for free on the MahaRERA portal against the firm's name before you deal with anybody.",
   },
   {
     q: "Which areas does Shree Giriraj cover?",
@@ -176,7 +176,7 @@ export const JOURNEY: JourneyEntry[] = [
   {
     when: "Today",
     title: "Seven services, three suburbs, one address",
-    body: "Resale, rentals, new project bookings, property investment advisory, commercial and plots, MHADA paperwork, and interior and civil work. MahaRERA registered agent A51800005726. Still led by its founder, still at the same office.",
+    body: "Resale, rentals, new project bookings, property investment advisory, commercial and plots, MHADA paperwork, and interior and civil work. MahaRERA registration A51800005726. Still led by its founder, still at the same office.",
     chips: ["MahaRERA A51800005726", "Family run"],
     image: { src: "/premium/u/paperwork-05.jpg", alt: "Papers, a calculator and a laptop during a review of figures" },
   },

@@ -117,7 +117,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
     seoDescription:
       "Borivali West and East, pocket by pocket: Chikoowadi, Shimpoli, I.C. Colony, Yogi Nagar and Eksar, with mid 2026 asking rates and the metro lines.",
     metaDescription:
-      "Borivali West and East, pocket by pocket: Chikoowadi, Shimpoli, I.C. Colony, Yogi Nagar, Eksar, Magathane and Kulupwadi, with mid 2026 asking rates, the metro lines, the national park and what an agent here since 1996 checks before you buy or rent.",
+      "Borivali West and East, pocket by pocket: Chikoowadi, Shimpoli, I.C. Colony, Yogi Nagar, Eksar, Magathane and Kulupwadi, with mid 2026 asking rates, the metro lines, the national park and what a local agency in real estate since 1996 checks before you buy or rent.",
     hero: {
       src: "/areas/borivali-aerial.jpg",
       alt: "Mumbai's suburban rooftops and towers with trees between them, seen from above at sunset",

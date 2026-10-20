@@ -33,7 +33,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   if (params.locale !== CONTACT_LOCALE) return {};
   return {
-    title: "Contact us: estate agent in Borivali West",
+    title: "Contact us: estate agency in Borivali West",
     description: `Talk to us about buying, selling, renting or investing across ${site.areas.join(", ")}. WhatsApp, phone or send your details.`,
     ...pageUrls(params.locale, "/contact", [CONTACT_LOCALE]),
   };
@@ -135,7 +135,7 @@ export default function ContactPage({
               </div>
               <div>
                 <dt className="text-xs uppercase tracking-wider text-muted">
-                  MahaRERA agent registration
+                  MahaRERA registration
                 </dt>
                 <dd className="mt-1 text-ink">{site.rera}</dd>
               </div>

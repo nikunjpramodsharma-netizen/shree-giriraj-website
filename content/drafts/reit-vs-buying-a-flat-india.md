@@ -15,7 +15,7 @@ note: >
   "REIT india" measured at 12,100 a month in India and "how to invest in
   reit in india" at 1,900, both low competition, on 16 September 2026 via
   DataForSEO. That is the largest cluster in the investment space by a wide
-  margin, and an estate agent writing about it honestly is unusual enough to
+  margin, and an estate agency writing about it honestly is unusual enough to
   be worth reading. The article explains REITs from the regulations and the
   trusts' own disclosures, quotes no distribution yield as a promise, and
   says plainly where a REIT beats a flat and where it does not.
@@ -67,7 +67,7 @@ A REIT is a listed trust that owns rent producing offices or malls and pays most
 
 ---
 
-## Why an estate agent is writing about REITs
+## Why an estate agency is writing about REITs
 
 Because you asked. More people in India search for REITs every month than for any other property investment term, by a wide margin, and a good number of them are our own clients, wondering whether the second flat they were planning should be a REIT instead. We sell flats. We would rather you made that decision with the facts than without them, and came back to us for the flat when a flat is the right answer.
 

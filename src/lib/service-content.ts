@@ -41,7 +41,7 @@ export type RepoService = {
 const INVESTMENT_ADVISORY_BODY = `
 ## Property investment advisory in Borivali, Kandivali and Malad
 
-Shree Giriraj Real Estate is a MahaRERA registered estate agent, registration
+Shree Giriraj Real Estate is a MahaRERA registered estate agency, registration
 number A51800005726, working from Shop No 11, Clover Grove CHS, Chikoowadi,
 Borivali West, Mumbai 400092. We have worked in real estate since 1996 and
 from this office since 2005.
@@ -110,7 +110,7 @@ a guarantee of return or a substitute for independent financial advice.
 const COMMERCIAL_PLOTS_BODY = `
 ## Commercial property in Borivali, Kandivali and Malad
 
-Shree Giriraj Real Estate is a MahaRERA registered estate agent, registration
+Shree Giriraj Real Estate is a MahaRERA registered estate agency, registration
 number A51800005726, working from Shop No 11, Clover Grove CHS, Chikoowadi,
 Borivali West, Mumbai 400092. We have worked in real estate since 1996 and
 from this office since 2005.
@@ -176,7 +176,7 @@ is available on them now, and a viewing. No obligation, usually the same day.
 const MHADA_PAPERWORK_BODY = `
 ## MHADA paperwork anywhere in Mumbai
 
-Shree Giriraj Real Estate is a MahaRERA registered estate agent, registration
+Shree Giriraj Real Estate is a MahaRERA registered estate agency, registration
 number A51800005726, working from Shop No 11, Clover Grove CHS, Chikoowadi,
 Borivali West, Mumbai 400092. We have worked in real estate since 1996 and
 from this office since 2005.

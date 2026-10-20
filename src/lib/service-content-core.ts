@@ -34,7 +34,7 @@ import type { RepoService } from "@/lib/service-content";
 const RESALE_BODY = `
 ## Resale flats in Borivali, Kandivali and Malad
 
-Shree Giriraj Real Estate is a MahaRERA registered estate agent, registration
+Shree Giriraj Real Estate is a MahaRERA registered estate agency, registration
 number A51800005726, working from Shop No 11, Clover Grove CHS, Chikoowadi,
 Borivali West, Mumbai 400092. We have worked in real estate since 1996 and
 from this office since 2005, and resale flats have been the heart of it the
@@ -94,7 +94,7 @@ usually the same day.
 const RENTALS_BODY = `
 ## Flats for rent in Borivali, Kandivali and Malad
 
-Shree Giriraj Real Estate is a MahaRERA registered estate agent, registration
+Shree Giriraj Real Estate is a MahaRERA registered estate agency, registration
 number A51800005726, working from Shop No 11, Clover Grove CHS, Chikoowadi,
 Borivali West, Mumbai 400092. Rentals are the busiest thing we do, and the
 way most people meet us for the first time.
@@ -152,7 +152,7 @@ and arrange the first visit around your hours. No obligation.
 const NEW_PROJECTS_BODY = `
 ## New project bookings in Borivali, Kandivali and Malad
 
-Shree Giriraj Real Estate is a MahaRERA registered estate agent, registration
+Shree Giriraj Real Estate is a MahaRERA registered estate agency, registration
 number A51800005726, working from Shop No 11, Clover Grove CHS, Chikoowadi,
 Borivali West, Mumbai 400092. We deal with a small number of developers
 directly, which is what gets our clients into a launch early, with the
@@ -212,7 +212,7 @@ developer. No obligation, usually the same day.
 const INTERIORS_BODY = `
 ## Interior design and civil work in Borivali, Kandivali and Malad
 
-Shree Giriraj Real Estate is a MahaRERA registered estate agent, registration
+Shree Giriraj Real Estate is a MahaRERA registered estate agency, registration
 number A51800005726, working from Shop No 11, Clover Grove CHS, Chikoowadi,
 Borivali West, Mumbai 400092. Interiors began because our resale clients kept
 asking who they could trust with the flat once the keys were theirs. It is
@@ -267,7 +267,7 @@ export const CORE_SERVICES: Record<string, RepoService> = {
     heroSubheading:
       "Ready to move homes across the western suburbs, with the building and the file checked before you agree a price. Our main business since 1996.",
     seoDescription:
-      "Buy or sell a resale flat in Borivali, Kandivali or Malad. Title, society and carpet area checked before a price is agreed. MahaRERA agent A51800005726.",
+      "Buy or sell a resale flat in Borivali, Kandivali or Malad. Title, society and carpet area checked before a price is agreed. MahaRERA registration A51800005726.",
     body: RESALE_BODY,
   },
   rentals: {

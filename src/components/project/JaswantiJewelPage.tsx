@@ -372,7 +372,7 @@ export async function JaswantiJewelPage({ locale }: { locale: string }) {
                 </div>
               ))}
             </div>
-            <p className="mt-4 text-xs text-muted">MahaRERA registered agent {site.rera}.</p>
+            <p className="mt-4 text-xs text-muted">MahaRERA registration {site.rera}.</p>
           </div>
         </div>
       </section>

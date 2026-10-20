@@ -111,7 +111,7 @@ export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How does early access actually work?",
-      a: "Developers open floor plans and launch pricing to agents they know before the public launch, and we pass that on to clients who have told us their budget and suburb. It means choosing from the full inventory rather than what is left. It does not mean pressure: the RERA checks above apply to a launch just as much as to a resale.",
+      a: "Developers open floor plans and launch pricing to agencies they know before the public launch, and we pass that on to clients who have told us their budget and suburb. It means choosing from the full inventory rather than what is left. It does not mean pressure: the RERA checks above apply to a launch just as much as to a resale.",
     },
     {
       q: "Is the sample flat a fair guide to the flat I will get?",

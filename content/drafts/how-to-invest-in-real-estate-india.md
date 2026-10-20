@@ -84,7 +84,7 @@ Answer that honestly and the rest of this article becomes short.
 
 **A fractional share through an SM REIT.** Since 2024 SEBI has regulated small and medium REITs, which hold a single completed commercial property or a few, with a minimum investment of ten lakh rupees. They sit between owning a shop yourself and owning a REIT unit: a specific building, a specific tenant, but professionally run and with a regulator over it.
 
-We have written separately on [REITs against buying a flat](/blog/reit-vs-buying-a-flat-india) and on [fractional ownership and SM REITs](/blog/fractional-ownership-real-estate-india). The rest of this guide is about the direct route, because that is where a local agent earns the fee.
+We have written separately on [REITs against buying a flat](/blog/reit-vs-buying-a-flat-india) and on [fractional ownership and SM REITs](/blog/fractional-ownership-real-estate-india). The rest of this guide is about the direct route, because that is where a local agency earns the fee.
 
 ---
 
@@ -144,8 +144,8 @@ The 1 BHK usually lets faster and shows a higher gross yield; the 2 BHK attracts
 **Is it better to invest in Mumbai or a smaller city?**
 Smaller cities show higher gross yields on paper; Mumbai shows deeper demand and an easier exit. We only advise on the three suburbs we know, so we would rather tell you exactly what a flat here earns than guess at Pune.
 
-**Do I need an agent to invest?**
-You need somebody who has been inside the building. The portals show you everything and know nothing about any of it; the value of a local agent is the water timing, the society's attitude to tenants and the real achieved rent, none of which is on a listing.
+**Do I need a property agency to invest?**
+You need somebody who has been inside the building. The portals show you everything and know nothing about any of it; the value of a local agency is the water timing, the society's attitude to tenants and the real achieved rent, none of which is on a listing.
 
 ---
 

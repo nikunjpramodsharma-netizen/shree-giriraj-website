@@ -52,8 +52,8 @@ export async function generateMetadata({
     // reads as the shop having stood in Borivali since 1996, which is the
     // exact implication the owner corrected: the trade dates from 1996, this
     // address from 2005. The tenure claim is the safe half of it.
-    title: `About us: Borivali estate agents since ${site.established}`,
-    description: `A family run estate agency working across ${site.areas.join(", ")}. Founded by ${FOUNDER.name}. MahaRERA registered agent, ${site.rera}.`,
+    title: `About us: a Borivali estate agency since ${site.established}`,
+    description: `A family run estate agency working across ${site.areas.join(", ")}. Founded by ${FOUNDER.name}. MahaRERA registration ${site.rera}.`,
     ...pageUrls(params.locale, "/about", [ABOUT_LOCALE]),
     ...(STORY_IS_WRITTEN ? {} : { robots: { index: false, follow: true } }),
   };
@@ -75,7 +75,7 @@ export default function AboutPage({
   const facts = [
     { label: "In real estate since", value: site.established },
     { label: "At this office since", value: site.officeSince },
-    { label: "MahaRERA agent", value: site.rera },
+    { label: "MahaRERA registration", value: site.rera },
     { label: "Core areas", value: site.areas.join(", ") },
   ];
 
