@@ -6,17 +6,18 @@ type Config = {
   note?: LocalizedValue<string>;
 };
 
-/** What stands in for a masked price. The owner keeps real prices off the site. */
-export const PRICE_SHEET_TEXT = "Price sheet on WhatsApp";
-
 /**
- * A price as the public should see it. A masked entry such as "From ₹2.** Cr"
- * says nothing and reads as a mistake, so it becomes a pointer to the price
- * sheet. A real base rate such as "₹41,000++ per sq.ft" passes through.
+ * A price as the public should see it. The owner keeps exact prices off the
+ * site, so a masked entry such as "From ₹2.** Cr" becomes a rough
+ * "From about ₹2 Cr", built only from the digits the mask leaves visible.
+ * Exact sheets stay on WhatsApp. A real base rate such as
+ * "₹41,000++ per sq.ft" passes through, and so does an exact figure.
  */
 export function publicPrice(price: string | undefined): string | undefined {
   if (!price) return price;
-  return price.includes("*") ? PRICE_SHEET_TEXT : price;
+  if (!price.includes("*")) return price;
+  const m = price.match(/₹\s*(\d+)/);
+  return m ? `From about ₹${m[1]} Cr` : price.replace(/\.?\*+/g, "").trim();
 }
 
 /**

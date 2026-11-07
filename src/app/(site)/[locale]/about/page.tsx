@@ -17,6 +17,7 @@ import {
   FOUNDER,
   founderInitials,
   ABOUT_FAQS,
+  ABOUT_ANSWER,
   JOURNEY,
 } from "@/lib/about";
 
@@ -151,6 +152,17 @@ export default function AboutPage({
           </div>
         </div>
       </header>
+
+      {/* THE SHORT ANSWER. Who, since when, where and the registration, in
+          one paragraph before the story. */}
+      <section className="border-b border-line bg-white py-8 md:py-10">
+        <div className="wrap">
+          <div className="max-w-3xl border-l-4 border-bronze pl-5">
+            <div className="eyebrow">The short answer</div>
+            <p className="mt-2 text-lg leading-relaxed text-ink md:text-xl">{ABOUT_ANSWER}</p>
+          </div>
+        </div>
+      </section>
 
       {!STORY_IS_WRITTEN && (
         <div className="wrap pt-8">

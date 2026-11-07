@@ -8,6 +8,8 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ConsultCTA } from "@/components/ConsultCTA";
 import { ContactCTA } from "@/components/ContactCTA";
+import { PostOffer } from "@/components/PostOffer";
+import type { PostOffer as Offer } from "@/lib/post-offers";
 import { graph, breadcrumbNode, faqNode, itemListNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
 import { formatDate } from "@/lib/blog";
@@ -18,6 +20,14 @@ export const revalidate = 300;
 
 /** Guides are English only, so this is the only locale that gets routes. */
 const GUIDE_LOCALE = "en";
+
+/** Early, warm offer for a reader working through the paperwork. */
+const GUIDE_OFFER: Offer = {
+  heading: "Buying, selling or renting in Borivali, Kandivali or Malad?",
+  body: "We check the papers on the flat before you pay a token and see them through to registration with you. MHADA paperwork we handle anywhere in Mumbai.",
+  whatsapp: "Hi Shree Giriraj, I need help with the paperwork for a flat in ___.",
+  button: "Ask about your flat",
+};
 
 export function generateStaticParams({
   params,
@@ -86,8 +96,15 @@ export default async function GuidePage({
   if (!pillar || locale !== GUIDE_LOCALE) notFound();
 
   const live = await publishedSpokes();
+  // A spoke with its own href is a service or tool page, which always exists.
+  const isLive = (s: Spoke) => Boolean(s.href) || live.has(s.slug);
   const allSpokes = pillar.sections.flatMap((s) => s.spokes);
-  const liveSpokes = allSpokes.filter((s) => live.has(s.slug));
+  const liveSpokes = allSpokes.filter(isLive);
+  // Unpublished spokes are left off the page entirely, so a reader never meets
+  // a "Soon" card, and a section with nothing live is not shown.
+  const sections = pillar.sections
+    .map((s) => ({ ...s, spokes: s.spokes.filter(isLive) }))
+    .filter((s) => s.spokes.length > 0);
 
   const trail: Crumb[] = [
     { name: "Home", path: "/" },
@@ -107,7 +124,7 @@ export default async function GuidePage({
                 locale,
                 liveSpokes.map((s) => ({
                   name: s.title,
-                  path: `/blog/${s.slug}`,
+                  path: s.href ?? `/blog/${s.slug}`,
                 })),
               )
             : null,
@@ -164,8 +181,12 @@ export default async function GuidePage({
           ))}
         </div>
 
+        <div className="mt-8">
+          <PostOffer offer={GUIDE_OFFER} compact />
+        </div>
+
         <div className="mt-14 space-y-14">
-          {pillar.sections.map((section, i) => (
+          {sections.map((section, i) => (
             <section key={section.heading}>
               <div className="flex items-baseline gap-4">
                 <span className="text-[0.7rem] font-bold tabular-nums text-bronze-deep">
@@ -179,11 +200,7 @@ export default async function GuidePage({
 
               <ul className="mt-6 grid gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-2">
                 {section.spokes.map((spoke) => (
-                  <SpokeCard
-                    key={spoke.slug}
-                    spoke={spoke}
-                    published={live.has(spoke.slug)}
-                  />
+                  <SpokeCard key={spoke.slug} spoke={spoke} />
                 ))}
               </ul>
             </section>
@@ -230,58 +247,19 @@ export default async function GuidePage({
   );
 }
 
-/**
- * A spoke is a link once its post exists and plain text before that. Both
- * states are rendered so the reader can see the full map of the subject, which
- * is most of the value of a hub page.
- */
-function SpokeCard({
-  spoke,
-  published,
-}: {
-  spoke: Spoke;
-  published: boolean;
-}) {
-  const inner = (
-    <>
-      <div className="flex items-start justify-between gap-3">
-        <span
-          className={
-            published
-              ? "font-semibold text-ink group-hover:text-brand-indigo"
-              : "font-semibold text-ink/55"
-          }
-        >
-          {spoke.title}
-        </span>
-        {!published && (
-          <span className="mt-0.5 shrink-0 rounded-full border border-line px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wider text-muted">
-            Soon
-          </span>
-        )}
-      </div>
-      <p
-        className={
-          published ? "mt-2 text-sm text-ink/70" : "mt-2 text-sm text-ink/45"
-        }
-      >
-        {spoke.blurb}
-      </p>
-    </>
-  );
-
+/** Every spoke rendered here is live, so every card is a link. */
+function SpokeCard({ spoke }: { spoke: Spoke }) {
   return (
     <li className="bg-paper">
-      {published ? (
-        <Link prefetch={false}
-          href={`/blog/${spoke.slug}`}
-          className="group block h-full p-5 transition-colors hover:bg-paper-alt"
-        >
-          {inner}
-        </Link>
-      ) : (
-        <div className="h-full p-5">{inner}</div>
-      )}
+      <Link prefetch={false}
+        href={spoke.href ?? `/blog/${spoke.slug}`}
+        className="group block h-full p-5 transition-colors hover:bg-paper-alt"
+      >
+        <span className="font-semibold text-ink group-hover:text-brand-indigo">
+          {spoke.title}
+        </span>
+        <p className="mt-2 text-sm text-ink/70">{spoke.blurb}</p>
+      </Link>
     </li>
   );
 }

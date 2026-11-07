@@ -41,6 +41,33 @@ type Post = {
   categories?: string[];
 };
 
+/**
+ * A card excerpt of at most 24 words. Whole sentences are kept where they fit,
+ * otherwise the first sentence is cut at a word boundary. Cards used to print
+ * the full 40 to 60 word answer, which made every card a wall of text.
+ */
+function excerpt(text: string | undefined, max = 24): string | undefined {
+  if (!text) return undefined;
+  const clean = text.replace(/s+/g, " ").trim();
+  const sentences = clean.match(/[^.!?]+[.!?]+(?:s|$)/g) ?? [clean];
+  let out = "";
+  for (const raw of sentences) {
+    const next = (out + raw).trim();
+    if (next.split(" ").length > max) break;
+    out = next;
+  }
+  if (out) return out;
+  const words = sentences[0].trim().split(" ");
+  return words.slice(0, max).join(" ").replace(/[,;:]$/, "") + "…";
+}
+
+/** The three reading paths at the top of the index, by existing post slug. */
+const START_HERE: { topic: string; slug: string; lead: string }[] = [
+  { topic: "Buying", slug: "stamp-duty-and-registration-charges-mumbai", lead: "What buying costs before you start" },
+  { topic: "Renting", slug: "rent-deposit-months-western-suburbs", lead: "What deposit is normal" },
+  { topic: "MHADA", slug: "mhada-flat-transfer", lead: "How a MHADA flat changes hands" },
+];
+
 function formatDate(d: string, locale: string) {
   return new Date(d).toLocaleDateString(locale === "en" ? "en-IN" : locale, {
     day: "numeric",
@@ -139,10 +166,35 @@ export default async function BlogPage({
           )}
 
           {ready.length > 0 && (
+            <div className="mb-14">
+              <h2 className="text-2xl text-ink">Start here</h2>
+              <div className="mt-5 grid gap-5 md:grid-cols-3">
+                {START_HERE.map((c) => {
+                  const post = ready.find((p) => p.slug === c.slug);
+                  if (!post) return null;
+                  return (
+                    <EnglishLink
+                      prefetch={false}
+                      key={c.slug}
+                      href={`/blog/${c.slug}`}
+                      className="group flex flex-col rounded-2xl border border-brand-indigo/10 bg-white p-6 transition hover:-translate-y-1 hover:shadow-xl"
+                    >
+                      <div className="text-xs font-semibold uppercase tracking-wider text-bronze-deep">{c.topic}</div>
+                      <div className="mt-2 text-lg text-brand-indigo">{c.lead}</div>
+                      <p className="mt-2 flex-1 text-sm text-muted">{excerpt(post.answer)}</p>
+                      <div className="mt-4 text-sm font-semibold text-brand-indigo group-hover:underline">Read the article</div>
+                    </EnglishLink>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {ready.length > 0 && (
             <BlogFilter
               cards={ready.map((p) => {
                 const v = postVisual(p);
-                return { slug: p.slug, title: p.title, category: p.category, answer: p.answer, readingMinutes: p.readingMinutes, image: v.image, alt: v.alt };
+                return { slug: p.slug, title: p.title, category: p.category, answer: excerpt(p.answer), readingMinutes: p.readingMinutes, image: v.image, alt: v.alt };
               })}
             />
           )}

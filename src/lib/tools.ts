@@ -367,39 +367,44 @@ const propertyTaxTool: Tool = {
   title: "BMC property tax calculator, Mumbai",
   metaTitle: "BMC property tax calculator, Mumbai",
   metaDescription:
-    "Work out the capital value of a Mumbai flat and check whether the 500 sq ft carpet area exemption applies to you.",
+    "BMC property tax on MCGM's own formula: capital value, age and floor weights, 0.775 percent for a home, and the 500 sq ft exemption check.",
   answer:
-    "BMC property tax is charged on capital value, which is the ready reckoner rate times the carpet area times weights for construction type, age and use. Residential flats with a carpet area of 500 sq ft or less have been fully exempt from BMC property tax since 1 January 2022.",
+    "BMC property tax on a home is 0.775 percent a year of its capital value. Capital value is the ready reckoner rate times 0.50 for a home, times the carpet area. Weights for building type, age and floor then adjust it. Homes of 500 sq ft carpet or less have been exempt since 1 January 2022.",
   introHeading: "Do I have to pay BMC property tax on my flat?",
   intro: [
-    "A residential flat with a carpet area of 500 sq ft or less pays no BMC property tax. In Borivali, Kandivali and Malad many flats sit under that line.",
-    "So the exemption check comes first here and the capital value calculation comes second.",
+    "A home with a carpet area of 500 sq ft or less pays no BMC property tax. In Borivali, Kandivali and Malad many flats sit under that line.",
+    "So the exemption check comes first here. The calculation comes second, on the weights and rates in MCGM's own rules.",
   ],
   limits: [
-    "The tax rate varies by ward and category. Enter the rate from your own bill for a rupee figure, or leave it blank for capital value only.",
-    "It is an estimate, and the bill issued by the BMC is the authority.",
-    "The size relief is for residential use only.",
-    "Some reports describe a concession between 500 and 700 sq ft. It is flagged but never applied to the figures.",
+    "Capital value is fixed for five years at a time, so your bill may use an older, lower reckoner rate than this year's.",
+    "The water lines depend on whether your connection is metered, so your bill's split can differ a little.",
+    "The 500 sq ft exemption is for homes only. A shop or office pays the commercial rate of 1.90 percent.",
+    "It is an estimate. The bill issued by the BMC is the authority.",
   ],
   faqs: [
     {
       q: "Is my flat exempt from BMC property tax?",
-      a: "Residential flats with a carpet area of 500 sq ft or less have been fully exempt since 1 January 2022. It is measured on carpet area, not super built up, so check the carpet figure in your agreement rather than the area in the listing.",
+      a: "Yes, if it is a home with a carpet area of 500 sq ft or less. That has been the rule since 1 January 2022. It is measured on carpet area, not super built up, so check the carpet figure in your agreement rather than the area in the listing.",
+    },
+    {
+      q: "What is the BMC property tax rate for a residential flat?",
+      a: "0.775 percent of capital value a year, from MCGM's rate table in force since 1 April 2015. It has ten parts. The largest are water tax at 0.253 percent, sewerage tax at 0.163 percent and general tax at 0.110 percent. For a shop or office the total is 1.90 percent.",
     },
     {
       q: "How is BMC property tax calculated?",
-      a: "On capital value, not rateable value. Capital value is the ready reckoner rate for the locality times the carpet area, times weights for construction type, age of the building and how it is used. The tax is a percentage of that.",
+      a: "MCGM takes the ready reckoner rate per square metre and multiplies it by 0.50 for a home. Then it applies weights for building type, age and floor, and multiplies by the carpet area in square metres. That gives the capital value. The tax is 0.775 percent of it each year.",
+    },
+    {
+      q: "How much does the age of the building reduce the tax?",
+      a: "The age weight starts at 1.00 for a building up to 5 years old. It falls by 0.05 every five years, to 0.55 at 45 to 49 years and 0.50 after that. So a 30 year old building carries a quarter less capital value than a new one.",
     },
     {
       q: "Does unpaid property tax affect a sale?",
-      a: "Yes. Arrears attach to the property rather than the person, so a buyer who does not check inherits them. Ask for the last paid receipt before you pay a token.",
-    },
-    {
-      q: "How do I calculate property tax in Mumbai?",
-      a: "The BMC charges on capital value: the ready reckoner rate for the building multiplied by the carpet area and by weights for the type of construction and the age of the building, with the tax rate applied to that value. A residential flat of up to 500 square feet carpet has paid nothing since 1 January 2022. The calculator applies the published weights and shows each step.",
+      a: "Yes. The dues stay with the flat rather than the person, so a buyer will want them cleared before registration. Ask for the last paid receipt before you pay a token.",
     },
   ],
   readNext: [
+    { label: "BMC property tax explained", href: "/blog/bmc-property-tax" },
     { label: "Carpet area and loading", href: "/tools/carpet-area-calculator" },
     { label: "Property paperwork in Maharashtra", href: "/guides/property-paperwork-maharashtra" },
   ],

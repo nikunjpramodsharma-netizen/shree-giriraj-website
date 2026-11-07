@@ -36,9 +36,9 @@ export function ConsultCTA({
             </h2>
             <p className="mt-5 max-w-[60ch] text-paper/80">
               Everything above is free to read and always will be. If your own
-              situation needs someone to actually look at it, we start with a
-              conversation, understand exactly what you need, and then connect
-              you to the right person for an hour on your papers.
+              situation needs a closer look, we start with a short conversation.
+              Then we connect you to the right person for an hour on your
+              papers.
             </p>
 
             <ol className="mt-6 grid gap-2.5 text-sm text-paper/80 sm:grid-cols-2">
@@ -94,14 +94,14 @@ export function ConsultCTA({
                   {CONSULT.freeIfWeTransact
                     ? "Free if we are involved in your deal. "
                     : ""}
-                  If you only need the advice, a session of{" "}
-                  {CONSULT.slotMinutes} minutes is ₹{fee.toLocaleString("en-IN")} as the
-                  basic rate; it can differ with what the matter needs, and it is
-                  agreed before anything is booked.
+                  If you only need the advice, a {CONSULT.slotMinutes} minute
+                  session starts at ₹{fee.toLocaleString("en-IN")}. The fee can
+                  vary with the matter, and it is agreed before anything is
+                  booked.
                 </>
               )}{" "}
-              If what you need turns out to be a lawyer or an accountant, we
-              will tell you in that first conversation and point you at one.
+              If you need a lawyer or an accountant instead, we will say so in
+              that first conversation and point you to one.
             </p>
           </div>
 

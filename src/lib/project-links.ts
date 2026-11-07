@@ -9,7 +9,8 @@
  * CMS only gives a page its bare name as a title.
  *
  * Every line of meta text restates what the project page already says. Prices
- * stay masked: only the owner's published base rates appear.
+ * are rough "from about" figures; exact sheets stay on WhatsApp. Blissful Living
+ * and Luxury Living are not on MahaRERA, so their text never sells a booking.
  */
 
 export type ProjectLink = {
@@ -31,7 +32,7 @@ export const PROJECT_LINKS: ProjectLink[] = [
     area: "kandivali",
     metaTitle: "Blissful Living, Kandivali West",
     metaDescription:
-      "Upcoming project on Ext. Mathuradas Road, Kandivali West, open for Expression of Interest. Base rate ₹26,000++ per sq ft. Price sheet on WhatsApp.",
+      "Upcoming project on Ext. Mathuradas Road, Kandivali West. MahaRERA registration awaited. Register your interest for updates.",
   },
   {
     slug: "the-landmark-borivali-west",
@@ -39,7 +40,7 @@ export const PROJECT_LINKS: ProjectLink[] = [
     area: "borivali-west",
     metaTitle: "The Landmark Borivali West: 2, 2.5, 3 BHK",
     metaDescription:
-      "A 40 storey tower on S.V. Road, Borivali West, with 2, 2.5 and 3 BHK homes from the 10th to 40th floor. Price sheet and site visit on WhatsApp.",
+      "Three 40 storey towers on S.V. Road, Borivali West: 2, 2.5 and 3 BHK homes from about ₹2 Cr. Ask for the price sheet on WhatsApp.",
   },
   {
     slug: "veena-celestia",
@@ -55,7 +56,7 @@ export const PROJECT_LINKS: ProjectLink[] = [
     area: "borivali-west",
     metaTitle: "Luxury Living, Punit Nagar, Borivali",
     metaDescription:
-      "Upcoming project in Punit Nagar, Borivali West, open for Expression of Interest. Base rate ₹35,000++ per sq ft. Price sheet on WhatsApp.",
+      "Upcoming project in Punit Nagar, Borivali West. MahaRERA registration awaited. Register your interest for updates.",
   },
 ];
 
@@ -65,4 +66,14 @@ export function getProjectLink(slug: string): ProjectLink | undefined {
 
 export function projectsInArea(area: string): ProjectLink[] {
   return PROJECT_LINKS.filter((p) => p.area === area);
+}
+
+/**
+ * Projects with no MahaRERA number yet (owner, 7 November 2026). No booking,
+ * price or base rate language for these anywhere on the site.
+ */
+export const REGISTRATION_AWAITED = new Set(["blissful-living", "luxury-living-punit-nagar"]);
+
+export function registrationAwaited(slug: string): boolean {
+  return REGISTRATION_AWAITED.has(slug);
 }

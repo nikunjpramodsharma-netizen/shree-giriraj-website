@@ -1,7 +1,7 @@
 ---
 title: "Index 2 online: how to download it, and why your buyer will ask for it"
 metaTitle: "Index 2 property document: download free"
-metaDescription: "Index 2 is the one page summary of a registered property document. What it shows, why buyers ask for it, and how to get it free on IGR Maharashtra."
+metaDescription: "Index 2 is the one page summary of a registered property document. Download it free on IGR Maharashtra in six steps, and what to do if nothing shows."
 slug: index-2-property-document
 category: Paperwork
 heroImage: /blog/index-2.jpg
@@ -12,12 +12,18 @@ competition: LOW
 funnelStage: consideration
 wordTarget: 1400
 answer: >
-  Index 2 is the one page summary the sub registrar generates when a document
-  is registered. It records the document type, the parties, the property, the
-  consideration and the registration details. It is proof that a transaction
-  was registered, not proof of ownership, and you can get Index 2 online, free,
-  through e-Search on the IGR Maharashtra portal.
+  Index 2 is the one page summary the sub registrar makes when a document is
+  registered. It shows the document type, the parties, the property, the price
+  and the registration details. It proves a transaction was registered, not who
+  owns the flat. You can download Index 2 free through e-Search on the IGR
+  Maharashtra portal.
 sources:
+  - label: "Department of Registration and Stamps, e-Search user manual: search by property details and by document number (read 7 November 2026)"
+    url: https://igrmaharashtra.gov.in/pdf/onlineservices/eSearchUserManual.pdf
+  - label: "Department of Registration and Stamps, e-Search: documents registered on computer since 2002 (read 7 November 2026)"
+    url: https://igrmaharashtra.gov.in/Marathi/esearch_about
+  - label: "Department of Registration and Stamps, citizen charter 1.2: certified copies of the index from the sub registrar office (read 7 November 2026)"
+    url: https://igrmaharashtra.gov.in/Marathi/copy_and_search
   - label: Department of Registration and Stamps, e-Search
     url: https://igrmaharashtra.gov.in/
   - label: "99acres, what is the Index II document"
@@ -40,76 +46,115 @@ readNext:
 
 ## The short answer
 
-Index 2 is the one page summary the sub registrar generates when a document is registered. It records the document type, the parties, the property, the consideration and the registration details. **It is proof that a transaction was registered, not proof of ownership**, and you can get Index 2 online, free, through e-Search on the IGR Maharashtra portal.
+Index 2 is the one page summary the sub registrar makes when a document is registered. It shows the document type, the parties, the property, the price and the registration details. **It proves a transaction was registered, not who owns the flat.** You can download Index 2 free through e-Search on the IGR Maharashtra portal.
 
 ---
 
-## Why it gets asked for so often
+## How to download Index 2 online, free, in 6 steps
 
-It is short. A sale deed runs to many pages and takes a lawyer to read. Index 2 is one page confirming the essentials and the fact that registration happened, so lenders, societies and buyers ask for it because it can be checked in a minute.
+These steps follow the department's own e-Search user manual, which we read on 7 November 2026.
 
-It is generated for every registered document, not just a sale: gift, mortgage, lease and partition all produce one.
+1. **Open the free search.** On igrmaharashtra.gov.in it is listed as the free service (विनाशुल्क सेवा). Version 1.9 opens at freesearchigrservice.maharashtra.gov.in.
+2. **Choose search by property details, and select the district.** For Borivali, Kandivali or Malad, that is Mumbai Suburban.
+3. **Type the first three letters of the area in English** and click Submit. Then pick the area or village from the list that appears.
+4. **Enter the property number.** This is the CTS, survey, plot or flat number, in digits only.
+5. **Click Search.** The results can take a few minutes to load.
+6. **Click Index2 next to the document you want.** It opens in a new window, so allow pop ups in your browser. Save it or print it.
+
+**Know the document number already?** Choose search by document number instead. Select the registration type, district, sub registrar office and year, then enter the number.
 
 ---
 
-## What is on it
+## What to do if nothing is found
 
-- The **type of document**: sale, gift, mortgage, lease, partition
-- The **parties**, buyer and seller
-- The **document number and year of registration**
-- The **property identifiers**: survey number, CTS number or plot number
-- The **property address and boundaries**
-- The **consideration** and the value used for stamp duty
+An empty result usually has a simple cause. Work through these in order:
+
+- **Try another spelling of the area.** The manual's own example is "Daadar" instead of "Dadar". Village names follow the old revenue spellings.
+- **Check the year.** e-Search covers documents registered on computer **since 2002**. An older sale will not appear online.
+- **Check the document type.** Powers of attorney and wills are not shown in e-Search results.
+- **Search by document number** if you have it from the deed or a receipt. It is the most precise route.
+- **Ask the sub registrar office for a certified copy.** This works for any year. The department's citizen charter sets 3 days for a document registered on computer, and 15 days for an older one.
+
+---
+
+## Why Index 2 gets asked for so often
+
+It is short. A sale deed runs to many pages and takes a lawyer to read. Index 2 is one page that confirms the essentials, and confirms that registration happened.
+
+So lenders, societies and buyers ask for it, because they can check it in a minute. Every registered document gets one, not just a sale: a gift, mortgage, lease or partition does too.
+
+---
+
+## What is on an Index 2?
+
+- The **type of document**: sale, gift, mortgage, lease or partition
+- The **parties**: buyer and seller
+- The **document number and year** of registration
+- The **property number**: survey, CTS or plot number
+- The **address and boundaries** of the property
+- The **consideration**, meaning the price paid, and the value used for stamp duty
 - The **sub registrar office** where it was registered
 
 ---
 
-## Getting Index 2 online, and when you need a certified copy
+## Is the free download a certified copy?
 
-The free route is **e-Search** on the IGR Maharashtra portal. Choose your region, enter the document number or the survey number with the year and the sub registrar office, and download the PDF.
+No. The copy from e-Search is **for information only**. When a bank or a court asks for a certified copy, you get it from the sub registrar office.
 
-**One important caveat.** The copy you download through the free e-Search service is for information only. **It is not a certified copy**, and where a certified copy is required, that means a request through the sub registrar office.
-
-Knowing the difference early helps when a bank asks, because a downloaded printout is not accepted where a certified copy is required.
+Knowing this early saves a second trip when a lender asks.
 
 ---
 
 ## Index 2 and the sale deed do different jobs
 
-The **sale deed** transfers ownership and is the document your rights come from. **Index 2** is the registrar's summary confirming that the deed was registered.
+The **sale deed** transfers ownership. It is the document your rights come from.
 
-You need both. The deed for the rights, the Index 2 for the proof of registration.
+**Index 2** is the registrar's summary confirming that the deed was registered.
+
+You need both: the deed for your rights, the Index 2 as proof of registration.
 
 ---
 
 ## When we pull it
 
-Twice. Once at the start, before a token is paid, and once more just before registration.
+Twice: once before a token is paid, and once just before registration.
 
-The first pull is part of the title check. Every registered document on the flat produces its own Index 2, so pulling all of them on the property gives its registered history in one stack: each sale, any mortgage, any lease over twelve months, any gift or release. Read against the seller's story, it answers questions the agreement cannot. Whether the person selling is the person who bought. What they paid, and the government value at the time, which sits on the same page. Whether a lender registered a charge that nobody has mentioned. Whether a document in the chain was registered at all.
+**The first pull is part of the title check.** Every registered document on the flat has its own Index 2. Pulled together, they show the flat's registered history: each sale, any mortgage, any lease over twelve months, any gift or release.
 
-The second pull, a day or two before registration, is for anything new. A mortgage or a fresh agreement registered after the first search shows up as a later entry, and it is a cheap check against an expensive problem.
+Read against the seller's account, the stack confirms:
 
-Neither pull replaces a lawyer's search report, and the free e-Search download is not a certified copy. It is the fastest way to see whether the paper matches the person.
+- The person selling is the person who bought
+- What they paid, and the government value at the time
+- Any lender's charge registered on the flat
+- That every document in the chain was registered
+
+**The second pull, a day or two before registration, shows anything new.** A fresh mortgage or agreement would appear as a later entry. It is a quick check that keeps the purchase clean.
+
+Neither pull replaces a lawyer's search report. It is the fastest way to see that the paper matches the person.
 
 ---
 
 ## Common questions
 
 **How do I get a copy of Index 2?**
-Through e-Search on the IGR Maharashtra portal, free, using the document number or the survey number with the year and sub registrar office.
+Free, through e-Search on the IGR Maharashtra portal. Search by property details or by document number, then click Index2 on the result.
+
+**Why is my Index 2 not showing in e-Search?**
+The most common reasons are a different spelling of the village, a sale registered before 2002, or the wrong sub registrar office or year. Powers of attorney and wills are not shown at all. For any of these, the sub registrar office can give a certified copy.
 
 **Is Index 2 proof of ownership?**
-No. It is proof that a transaction was registered. Ownership rests on the registered deed and the chain of title behind it.
+No. It proves a transaction was registered. Ownership rests on the registered deed and the chain of deeds behind it.
 
 **Is the free download a certified copy?**
-No. The e-Search copy is for information only. A certified copy has to be obtained from the sub registrar office, and that is what an institution will usually want.
+No. The e-Search copy is for information only. A certified copy comes from the sub registrar office, and that is what an institution will usually want.
 
-**Does every registered document have one?**
-Yes. Sale, gift, mortgage, lease and partition all generate an Index 2.
+**Does every registered document have an Index 2?**
+Yes. A sale, gift, mortgage, lease or partition each gets one.
 
 ---
 
 ## If you are selling
 
-Have it ready before you list. A seller who can produce the Index 2 on the day it is asked for is a seller a buyer trusts, and trust is what shortens a sale. If you are selling in Borivali, Kandivali or Malad and want the file in order before the first viewing, that is exactly the work we do.
+Have your Index 2 ready before you list. A seller who can show it on the day it is asked for wins a buyer's trust, and trust shortens a sale.
+
+Selling in Borivali, Kandivali or Malad? [Send us a WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20want%20to%20sell%20my%20flat%20in%20___%20and%20need%20help%20with%20the%20Index%202%20and%20documents.) and we will pull the record and get the file in order before the first viewing.

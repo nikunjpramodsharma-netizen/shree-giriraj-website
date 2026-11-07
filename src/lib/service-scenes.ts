@@ -33,6 +33,18 @@ export type ServiceScene = {
   images: { src: string; alt: string }[];
   /** Pre written WhatsApp message for the sticky bar and the closing scene. */
   message: string;
+  /**
+   * A captioned set of illustrations, shown after the tabbed sections on the
+   * English page. Each photo is credited to its photographer, and the note
+   * says plainly that they are not the firm's own projects.
+   */
+  gallery?: {
+    eyebrow: string;
+    heading: string;
+    intro: string;
+    note: string;
+    photos: { src: string; alt: string; caption: string; credit: string }[];
+  };
 };
 
 export const SERVICE_SCENES: Record<string, ServiceScene> = {
@@ -203,7 +215,7 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
         { label: "600 square feet at 45 rupees", value: 27000, prefix: "₹" },
         { label: "Capped for LIG at", value: 15000, prefix: "₹" },
       ],
-      caption: "Illustrative. The Board may also ask for a share of the unearned increase on a sale; we confirm both for your scheme before you agree a price.",
+      caption: "Illustrative. On a sale the Board may also ask for a share of the profit. We confirm both for your scheme before you agree a price.",
     },
     images: [
       { src: "/premium/u/paperwork-02.jpg", alt: "Forms being filled in at a desk" },
@@ -229,6 +241,31 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
       { src: "/premium/u/interior-03.jpg", alt: "An open kitchen and dining area with marble floors" },
       { src: "/premium/u/interior-04.jpg", alt: "A bedroom with a fitted open wardrobe and soft lighting" },
     ],
-    message: "Hi Shree Giriraj, I am planning interiors for my flat in ___. Can you share an estimate?",
+    message: "Hi Shree Giriraj, I am planning interiors for my flat in ___. I will send 3 photos of the flat. Can you share an itemised estimate?",
+    /*
+     * Pexels, downloaded 7 November 2026, cropped to 1200 by 800 and
+     * compressed to about 100 KB each. Illustrations only: none of these is a
+     * Shree Giriraj project, and the caption block says so.
+     *   living-sheesham      33559373  The Funiture Studio
+     *   kitchen-white         7535073  Max Vakhtbovych
+     *   bedroom-wardrobe      7060824  Max Vakhtbovych
+     *   tv-unit-sofa          6636304  Max Vakhtbovych
+     *   living-open-kitchen   8089172  Max Vakhtbovych
+     *   living-art            7148779  Souranshi Fashion and Lifestyle Magazine
+     */
+    gallery: {
+      eyebrow: "Ideas for a 2 BHK",
+      heading: "What each part of the estimate looks like",
+      intro: "Point at the look you like when you send us your 3 photos. We price that look for your rooms, line by line.",
+      note: "Illustrative photographs from Pexels, credited above. They are not Shree Giriraj projects.",
+      photos: [
+        { src: "/services/interiors/kitchen-white.jpg", alt: "A white modular kitchen with wall cabinets, a chimney and a built in oven", caption: "Modular kitchen", credit: "Max Vakhtbovych" },
+        { src: "/services/interiors/bedroom-wardrobe.jpg", alt: "A bedroom with floor to ceiling white wardrobes built around the bed", caption: "Wardrobes built around the bed", credit: "Max Vakhtbovych" },
+        { src: "/services/interiors/tv-unit-sofa.jpg", alt: "A compact living and dining room with a false ceiling, a TV wall and a kitchen counter", caption: "False ceiling and TV wall", credit: "Max Vakhtbovych" },
+        { src: "/services/interiors/living-sheesham.jpg", alt: "A living room with wooden slat panelling, a white sofa and a balcony beyond", caption: "Wood panelling in the living room", credit: "The Funiture Studio" },
+        { src: "/services/interiors/living-open-kitchen.jpg", alt: "A living room with a grey sofa, ceiling spotlights and an open kitchen behind", caption: "Living room open to the kitchen", credit: "Max Vakhtbovych" },
+        { src: "/services/interiors/living-art.jpg", alt: "A large living room with a layered false ceiling, two fans and a long sofa", caption: "A layered false ceiling", credit: "Souranshi Fashion and Lifestyle Magazine" },
+      ],
+    },
   },
 };

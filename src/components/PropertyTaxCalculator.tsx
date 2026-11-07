@@ -4,17 +4,12 @@ import { useMemo, useState } from "react";
 import { ToolResultCTA } from "@/components/ToolResultCTA";
 import {
   calculatePropertyTax,
-  CONSTRUCTION_LABEL,
-  CONSTRUCTION_WEIGHT,
-  AGE_LABEL,
-  AGE_WEIGHT,
+  BUILDING_LABEL,
+  USER_LABEL,
   EXEMPT_UPTO_SQFT,
-  CONCESSION_UPTO_SQFT,
-  CONCESSION_PCT,
   PT_SOURCES,
   PT_VERIFIED_ON,
-  type ConstructionType,
-  type AgeBand,
+  type BuildingType,
   type UserCategory,
 } from "@/lib/propertytax";
 import { inr } from "@/lib/emi";
@@ -22,14 +17,15 @@ import { inr } from "@/lib/emi";
 /**
  * BMC property tax.
  *
- * The tool leads with the size relief rather than with the arithmetic. A
- * residential flat of 500 sq ft carpet or less has been fully exempt since
- * January 2022, and a great many flats in Borivali, Kandivali and Malad are
- * under that line while their owners have no idea. That check needs no tax
- * rate at all, which is why it comes first and the calculation comes second.
+ * The tool leads with the 500 sq ft exemption, because a residential flat of
+ * 500 sq ft carpet or less has paid nothing since January 2022 and many flats
+ * in Borivali, Kandivali and Malad sit under that line. The calculation that
+ * follows uses MCGM's own formula, weights and rate tables, the same ones the
+ * blog post cites. See lib/propertytax.ts.
  *
- * The 500 to 700 band is surfaced but never discounted, because we could not
- * verify it. See lib/propertytax.ts.
+ * The defaults reproduce the worked example in the blog post: 650 sq ft, 3rd
+ * floor, 18 year old RCC building with a lift, Borivali West zone 83/361 at
+ * 1,03,630 rupees per square metre (ready reckoner 2026 to 2027).
  */
 
 const fmtDate = (iso: string) =>
@@ -39,25 +35,29 @@ const fmtDate = (iso: string) =>
     year: "numeric",
   });
 
+const w = (n: number) => n.toFixed(2);
+
 export function PropertyTaxCalculator() {
   const [carpetSqft, setCarpetSqft] = useState(650);
-  const [reckonerRatePerSqft, setRate] = useState(20_000);
-  const [construction, setConstruction] = useState<ConstructionType>("rcc");
-  const [age, setAge] = useState<AgeBand>("post1985");
+  const [reckonerRatePerSqm, setRate] = useState(103_630);
+  const [building, setBuilding] = useState<BuildingType>("rcc");
+  const [ageYears, setAgeYears] = useState(18);
+  const [floor, setFloor] = useState(3);
+  const [hasLift, setHasLift] = useState(true);
   const [user, setUser] = useState<UserCategory>("residential");
-  const [taxRatePct, setTaxRatePct] = useState(0);
 
   const r = useMemo(
     () =>
       calculatePropertyTax({
         carpetSqft,
-        reckonerRatePerSqft,
-        construction,
-        age,
+        reckonerRatePerSqm,
+        building,
+        ageYears,
+        floor,
+        hasLift,
         user,
-        taxRatePct,
       }),
-    [carpetSqft, reckonerRatePerSqft, construction, age, user, taxRatePct],
+    [carpetSqft, reckonerRatePerSqm, building, ageYears, floor, hasLift, user],
   );
 
   return (
@@ -68,128 +68,131 @@ export function PropertyTaxCalculator() {
           value={carpetSqft}
           onChange={setCarpetSqft}
           step={10}
-          hint="Carpet, not super built up. This is what the relief is measured on."
+          hint="Carpet, not super built up. The exemption is measured on this."
         />
         <Num
-          label="Ready reckoner rate, per sq ft"
-          value={reckonerRatePerSqft}
+          label="Ready reckoner rate, per sq m"
+          value={reckonerRatePerSqm}
           onChange={setRate}
           step={1_000}
-          hint="Look it up under e-ASR on the IGR portal"
-        />
-        <Choice
-          label="Construction"
-          value={construction}
-          onChange={setConstruction}
-          options={
-            Object.keys(CONSTRUCTION_LABEL).map((k) => ({
-              id: k as ConstructionType,
-              label: CONSTRUCTION_LABEL[k as ConstructionType],
-            }))
-          }
-        />
-        <Choice
-          label="Age of the building"
-          value={age}
-          onChange={setAge}
-          options={Object.keys(AGE_LABEL).map((k) => ({
-            id: k as AgeBand,
-            label: AGE_LABEL[k as AgeBand],
-          }))}
+          hint="The rate for your zone under e-ASR on the IGR site. It is quoted per square metre."
         />
         <Choice
           label="Used as"
           value={user}
           onChange={setUser}
-          options={[
-            { id: "residential" as UserCategory, label: "Residential" },
-            { id: "commercial" as UserCategory, label: "Commercial" },
-          ]}
+          options={(Object.keys(USER_LABEL) as UserCategory[]).map((k) => ({
+            id: k,
+            label: USER_LABEL[k],
+          }))}
+        />
+        <Choice
+          label="Type of building"
+          value={building}
+          onChange={setBuilding}
+          options={(Object.keys(BUILDING_LABEL) as BuildingType[]).map((k) => ({
+            id: k,
+            label: BUILDING_LABEL[k],
+          }))}
         />
         <Num
-          label="Tax rate from your bill, %"
-          value={taxRatePct}
-          onChange={setTaxRatePct}
-          step={0.05}
-          hint="Optional. Varies by ward and category, so we do not publish one. Leave blank for capital value only."
+          label="Age of the building, years"
+          value={ageYears}
+          onChange={setAgeYears}
+          step={1}
+          hint="From the occupancy certificate or the society's records."
+        />
+        <Num
+          label="Floor"
+          value={floor}
+          onChange={setFloor}
+          step={1}
+          hint="0 for the ground floor."
+        />
+        <Choice
+          label="Lift in the building"
+          value={hasLift ? "yes" : "no"}
+          onChange={(v) => setHasLift(v === "yes")}
+          options={[
+            { id: "yes", label: "Yes" },
+            { id: "no", label: "No" },
+          ]}
         />
       </div>
 
-      {/* The relief leads, because it is the useful part and needs no rate. */}
+      {/* The exemption leads, because it needs no rate at all. */}
       <div className="p-6">
-        {r.exemption === "exempt" && (
+        {r.exempt ? (
           <div className="rounded-xl border border-bronze/40 bg-bronze/10 px-5 py-4 text-ink">
             <div className="text-lg font-semibold">
               This flat looks fully exempt.
             </div>
             <p className="mt-1 text-sm">
-              Residential flats of {EXEMPT_UPTO_SQFT} sq ft carpet or less have
-              been exempt from BMC property tax since January 2022. If you are
-              being billed, that is worth taking up with the ward office.
+              Homes of {EXEMPT_UPTO_SQFT} sq ft carpet or less have been exempt
+              from BMC property tax since 1 January 2022. If a bill still
+              arrives, the ward office can correct it.
             </p>
           </div>
-        )}
-        {r.exemption === "possibleConcession" && (
-          <div className="rounded-xl border border-line bg-paper-alt px-5 py-4 text-ink">
-            <div className="text-lg font-semibold">
-              Worth asking about, but we could not confirm it.
-            </div>
-            <p className="mt-1 text-sm">
-              Some reports describe a concession of around {CONCESSION_PCT}%
-              for residential flats between {EXEMPT_UPTO_SQFT} and{" "}
-              {CONCESSION_UPTO_SQFT} sq ft carpet. We could not verify it, so it
-              is <b>not</b> applied to the figures below and your bill may be
-              correct as issued. Ask your ward office whether anything applies
-              in this band.
-            </p>
-          </div>
-        )}
-        {r.exemption === "none" && user === "residential" && (
+        ) : user === "residential" ? (
           <div className="rounded-xl border border-line bg-paper-alt px-5 py-4 text-sm text-ink">
-            Above {CONCESSION_UPTO_SQFT} sq ft carpet, so no size relief.
-            Residential flats at or under {EXEMPT_UPTO_SQFT} sq ft carpet are
-            exempt from BMC property tax entirely.
+            Above {EXEMPT_UPTO_SQFT} sq ft carpet, so the tax applies. Homes at
+            or under {EXEMPT_UPTO_SQFT} sq ft carpet pay none.
+          </div>
+        ) : (
+          <div className="rounded-xl border border-line bg-paper-alt px-5 py-4 text-sm text-ink">
+            The {EXEMPT_UPTO_SQFT} sq ft exemption is for homes only, so a shop
+            or office pays the commercial rate.
           </div>
         )}
 
         <dl className="mt-6 divide-y divide-line rounded-xl border border-line">
-          <Row label="Construction weight" value={String(r.constructionWeight)} />
-          <Row label="Age weight" value={String(r.ageWeight)} />
+          <Row label="Carpet area in sq m" value={String(r.carpetSqm)} />
+          <Row label="User weight" value={w(r.userWeight)} />
+          <Row label="Building type weight" value={w(r.buildingWeight)} />
+          <Row label="Age weight" value={w(r.ageWeight)} />
+          <Row
+            label={
+              building === "rcc" && hasLift
+                ? "Floor weight"
+                : "Floor weight (RCC with a lift only)"
+            }
+            value={w(r.floorWeight)}
+          />
           <Row label="Capital value" value={inr(r.capitalValue)} strong />
-          {r.hasTaxRate ? (
-            <>
-              <Row
-                label="Tax before relief"
-                value={inr(r.taxBeforeRelief ?? 0)}
-              />
-              <Row label="Tax payable" value={inr(r.taxPayable ?? 0)} strong />
-            </>
-          ) : (
-            <div className="p-3.5 text-sm text-ink/70">
-              Add the tax rate from your own bill to see a rupee figure. We do
-              not publish a rate because it varies by ward and category, and a
-              guess would be worse than nothing.
-            </div>
-          )}
+          <Row
+            label={`Tax at ${r.taxRatePct} percent a year`}
+            value={inr(r.taxBeforeExemption)}
+          />
+          <Row label="Tax payable a year" value={inr(r.taxPayable)} strong />
         </dl>
 
         <div className="mt-6">
           <ToolResultCTA
             slug="bmc-property-tax-calculator"
             offer={
-              r.exemption === "exempt"
+              r.exempt
                 ? "Want us to confirm it from your bill? Free, on WhatsApp."
-                : "Thinking of selling or letting this flat? Ask what it would fetch this month."
+                : "Want us to check this against your last bill? Free, on WhatsApp."
             }
             message={
-              r.exemption === "exempt"
-                ? `Hi Shree Giriraj, I used your BMC property tax calculator. Carpet area ${carpetSqft} sq ft, ${user}, which looks exempt. Please confirm it from my bill.`
-                : `Hi Shree Giriraj, I used your BMC property tax calculator. Carpet area ${carpetSqft} sq ft, ${user}, capital value ${inr(r.capitalValue)}${
-                    r.hasTaxRate ? `, tax payable ${inr(r.taxPayable ?? 0)}` : ""
-                  }. I am thinking of selling or letting this flat. What would it fetch this month?`
+              r.exempt
+                ? `Hi Shree Giriraj, I used your BMC property tax calculator. Carpet area ${carpetSqft} sq ft, ${USER_LABEL[user].toLowerCase()}, which looks exempt. Please confirm it from my bill.`
+                : `Hi Shree Giriraj, I used your BMC property tax calculator. Carpet area ${carpetSqft} sq ft, ${USER_LABEL[user].toLowerCase()}, capital value ${inr(r.capitalValue)}, tax about ${inr(r.taxPayable)} a year. Can you check it against my bill?`
             }
-            inputsKey={`${carpetSqft}|${reckonerRatePerSqft}|${construction}|${age}|${user}|${taxRatePct}`}
+            inputsKey={`${carpetSqft}|${reckonerRatePerSqm}|${building}|${ageYears}|${floor}|${hasLift}|${user}`}
           />
+        </div>
+
+        <div className="mt-6 rounded-xl border border-line p-5">
+          <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-muted">
+            Why your bill can differ
+          </div>
+          <p className="mt-2 text-sm text-ink/75">
+            The law fixes capital value for five years at a time, so your bill
+            may use an older, lower reckoner rate. The water lines also depend
+            on whether your connection is metered. Your bill shows the exact
+            split.
+          </p>
         </div>
 
         <div className="mt-6 rounded-xl border border-line p-5">
@@ -197,9 +200,9 @@ export function PropertyTaxCalculator() {
             If you are buying, not owning
           </div>
           <p className="mt-2 text-sm text-ink/75">
-            Unpaid property tax follows the property, not the person. Ask for
-            the last paid receipt before you pay a token. It takes a minute and
-            it tells you whether there is a problem waiting.
+            Unpaid property tax stays with the flat, not the person. Ask for the
+            last paid receipt before you pay a token. It takes a minute and
+            keeps the sale clean.
           </p>
         </div>
 
@@ -222,7 +225,8 @@ export function PropertyTaxCalculator() {
             ))}
           </ul>
           <p className="mt-2 text-xs text-muted">
-            An estimate. Your bill is issued by the BMC and is the authority.
+            An estimate on MCGM&apos;s published formula. Your bill is issued by
+            the BMC and is the authority.
           </p>
         </div>
       </div>

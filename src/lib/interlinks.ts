@@ -142,7 +142,7 @@ const TOOL_MAP: Record<string, { services: string[]; articles: string[] }> = {
   },
   "rental-yield-calculator": {
     services: ["rentals", "investment-advisory"],
-    articles: ["rental-yield-mumbai", "rental-income-property-mumbai"],
+    articles: ["rental-yield-mumbai", "how-to-invest-in-real-estate-india"],
   },
   "rent-agreement-stamp-duty-calculator-mumbai": {
     services: ["rentals"],
@@ -166,13 +166,12 @@ const ARTICLE_TOOL: Record<string, string> = {
   "carpet-area-vs-built-up-area": "carpet-area-calculator",
   "bmc-property-tax": "bmc-property-tax-calculator",
   "rental-yield-mumbai": "rental-yield-calculator",
-  "rental-income-property-mumbai": "rental-yield-calculator",
   "rent-deposit-months-western-suburbs": "hra-calculator-rent-receipts",
   "choosing-an-interior-designer-in-borivali": "interior-scope-builder",
   "under-construction-vs-ready-to-move-flat": "home-loan-emi-calculator",
   "home-loan-on-mhada-flat": "home-loan-emi-calculator",
   "how-to-invest-in-real-estate-india": "rental-yield-calculator",
-  "reit-vs-buying-a-flat-india": "rental-yield-calculator",
+  "fractional-ownership-real-estate-india": "rental-yield-calculator",
   "what-a-sale-deed-contains": "capital-gains-calculator-property",
 };
 

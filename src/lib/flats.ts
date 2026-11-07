@@ -48,6 +48,10 @@ export type FlatListing = {
   h1: string;
   answer: string;
   intro: string;
+  /** The figure for each size, shown in the first lines of the page. */
+  quick: { size: string; figure: string; basis?: string }[];
+  /** What the quick figures are, with the source and date. */
+  quickNote: string;
   image: { src: string; alt: string };
   sizes: FlatSize[];
   figuresNote: string;
@@ -61,7 +65,7 @@ export type FlatListing = {
 
 const RENT_FAQ_DEPOSIT = {
   q: "How much deposit will I pay on a flat here?",
-  a: "Two to three months' rent in most newer societies, and that is what we negotiate towards. The amount, the refund date and what can be deducted are written into the registered agreement, so both sides know exactly where they stand at the end of the licence.",
+  a: "Two to three months' rent in most newer societies, and that is what we negotiate towards. The amount, the refund date and what can be deducted are written into the registered agreement. Both sides then know where they stand at the end of the licence.",
 };
 const RENT_FAQ_AGREEMENT = {
   q: "Does the rent agreement have to be registered?",
@@ -73,7 +77,7 @@ const RENT_FAQ_POLICE = {
 };
 const SALE_FAQ_DUTY = {
   q: "What will stamp duty and registration add to the price?",
-  a: "In Mumbai, stamp duty is 6 percent for a man buying alone or a couple buying jointly, including the 1 percent metro cess, and 5 percent where the only buyers are women. Registration is 1 percent, capped at 30,000 rupees. Duty is charged on the agreement value or the ready reckoner value, whichever is higher. The stamp duty calculator on this site works out the exact figure.",
+  a: "In Mumbai, stamp duty is 6 percent for a man buying alone or a couple buying jointly. That includes the 1 percent metro cess. It is 5 percent where the only buyers are women. Registration is 1 percent, capped at 30,000 rupees. Duty is charged on the agreement value or the ready reckoner value, whichever is higher. The ready reckoner is the government's rate list for property. The stamp duty calculator on this site works out the exact figure.",
 };
 const SALE_FAQ_ASKING = {
   q: "Are the rates on this page what flats actually sell for?",
@@ -104,9 +108,15 @@ export const FLAT_LISTINGS: FlatListing[] = [
       "1, 2 and 3 BHK flats for sale in Borivali West, with asking rates by pocket. WhatsApp your size and budget for flats that fit, usually the same day.",
     h1: "1, 2 and 3 BHK flats for sale in Borivali West",
     answer:
-      "Borivali West asks around 30,000 to 31,300 rupees per square foot on average, but the pocket moves the price more than the flat size does: from about 13,000 on parts of Eksar Road to over 33,000 in Yogi Nagar. Decide the pocket first, then the size, and the right building usually follows.",
+      "A 2 BHK of about 700 sq ft in Borivali West asks about ₹2.10 to ₹2.19 crore. A 3 BHK of about 950 sq ft asks about ₹2.85 to ₹2.97 crore. Both use the mid 2026 average of 30,000 to 31,300 rupees per square foot. The pocket moves the price more than the size does, so decide the pocket first.",
     intro:
       "We have sold flats in Borivali West since 1996, from our office in Chikoowadi since 2005. Every flat we send comes with what the society is like to live in.",
+    quick: [
+      { size: "2 BHK", figure: "₹2.10 to ₹2.19 crore", basis: "about 700 sq ft" },
+      { size: "3 BHK", figure: "₹2.85 to ₹2.97 crore", basis: "about 950 sq ft" },
+      { size: "1 BHK", figure: "Ask us", basis: "send the size you want" },
+    ],
+    quickNote: "Asking figures, mid 2026, not prices paid. The rate is the 30,000 to 31,300 rupees per sq ft average (NoBroker, May 2026, and Square Yards, June 2026). It is multiplied by about 700 and 950 sq ft, the sizes of 2 and 3 BHK homes in new projects on this site.",
     image: {
       src: "/premium/flats/borivali-west-towers.jpg",
       alt: "A residential tower rising above tree covered Borivali West, with the creek and the pagoda on the horizon",
@@ -116,7 +126,7 @@ export const FLAT_LISTINGS: FlatListing[] = [
         size: "1 BHK",
         figure: null,
         suits: "First homes, single buyers, and buyers who may let the flat out later.",
-        check: "The society's no objection for a sale, and whether the building is heading for redevelopment, because that changes what the flat is worth.",
+        check: "The society's no objection for a sale. And whether the building is heading for redevelopment, because that changes what the flat is worth.",
       },
       {
         size: "2 BHK",
@@ -156,15 +166,27 @@ export const FLAT_LISTINGS: FlatListing[] = [
       },
       {
         q: "Can I buy a resale flat in an older society safely?",
-        a: "Yes, and many of the best value flats in Borivali West are exactly that. What makes it safe is reading the title chain, the society's records and the redevelopment position before any money moves, which is the work we do before a token is paid.",
+        a: "Yes, and many of the best value flats in Borivali West are exactly that. What makes it safe is reading the title chain, the society's records and the redevelopment position before any money moves. That is the work we do before a token is paid.",
       },
       {
         q: "Do you also help me sell my flat here?",
-        a: "Yes. We price it against what similar flats have really registered for, prepare the papers a careful buyer will ask for, and show it only to buyers who can complete.",
+        a: "Yes. We price it against what similar flats have really registered for. We prepare the papers a careful buyer will ask for. We show it only to buyers who can complete.",
       },
       {
         q: "How quickly can I see flats?",
-        a: "Usually within a day or two. Send the size, the budget and the pocket on WhatsApp and we will line up the viewings together, so you can see several flats in one visit.",
+        a: "Usually within a day or two. Send the size, the budget and the pocket on WhatsApp. We will line up the viewings together, so you can see several flats in one visit.",
+      },
+      {
+        q: "How much does a 2 BHK cost in Borivali West?",
+        a: "A 2 BHK of about 700 sq ft asks about ₹2.10 to ₹2.19 crore. That uses the mid 2026 average asking rate of 30,000 to 31,300 rupees per square foot. It is an asking figure, not a price paid. The pocket changes it. Chikoowadi asks 25,000 to 26,000 per square foot and Yogi Nagar 27,000 to 33,800.",
+      },
+      {
+        q: "How much does a 3 BHK cost in Borivali West?",
+        a: "At the same average, a 3 BHK of about 950 sq ft asks about ₹2.85 to ₹2.97 crore. Stamp duty and registration come on top. Send us the pocket and the size and we will give you the figure for the building.",
+      },
+      {
+        q: "Which pocket of Borivali West asks the least, and which the most?",
+        a: "On NoBroker's May 2026 figures, Yogi Nagar asks the most of the main pockets, at 27,000 to 33,800 rupees per square foot. Chikoowadi asks 25,000 to 26,000. Eksar Road (13,000 to 26,000) and the Gorai stretch (10,900 to 23,200) ask less.",
       },
     ],
     waMessage: "Hi Shree Giriraj, I am looking to buy a ___ BHK in Borivali West. My budget is about ___. Can you send me what fits?",
@@ -179,9 +201,15 @@ export const FLAT_LISTINGS: FlatListing[] = [
       "1, 2 and 3 BHK flats for rent in Borivali West, with 2026 rents and deposits. WhatsApp your size and budget for flats that fit, usually the same day.",
     h1: "1, 2 and 3 BHK flats for rent in Borivali West",
     answer:
-      "A 1 BHK in Borivali asks about 22,000 to 40,000 rupees a month, a 2 BHK 35,000 to 65,000 and a 3 BHK 55,000 to 1 lakh, on NoBroker's 2026 figures. The deposit in newer societies runs two to three months. The spread inside each size comes down to the pocket, the building's age and the floor.",
+      "A 1 BHK in Borivali asks about ₹22,000 to ₹40,000 a month. A 2 BHK asks ₹35,000 to ₹65,000 and a 3 BHK ₹55,000 to ₹1 lakh. These are NoBroker's 2026 asking figures. The deposit in newer societies runs two to three months. The pocket, the building's age and the floor explain the spread inside each size.",
     intro:
-      "We have let flats in Borivali West since 1996 and know which societies welcome tenants, what their rules are, and which owners keep their flats well. We shortlist around your commute, so you only visit flats that work for your day.",
+      "We have let flats in Borivali West since 1996. We know which societies welcome tenants, what their rules are, and which owners keep their flats well. We shortlist around your commute, so you only visit flats that work for your day.",
+    quick: [
+      { size: "1 BHK", figure: "₹22,000 to ₹40,000 a month" },
+      { size: "2 BHK", figure: "₹35,000 to ₹65,000 a month" },
+      { size: "3 BHK", figure: "₹55,000 to ₹1 lakh a month" },
+    ],
+    quickNote: "Asking rents for Borivali as a whole, NoBroker, 2026. Deposit: two to three months' rent in newer societies.",
     image: {
       src: "/premium/u/interior-05.jpg",
       alt: "A large white kitchen with an island and a marble floor",
@@ -223,15 +251,27 @@ export const FLAT_LISTINGS: FlatListing[] = [
       RENT_FAQ_POLICE,
       {
         q: "Which part of Borivali West is best for renting?",
-        a: "Near the station and Chandavarkar Road if you commute by train, Shimpoli and the Link Road side if you use the metro or drive, and Chikoowadi or I.C. Colony if you want a quieter lane. Tell us where you work and we will narrow it down.",
+        a: "Choose near the station and Chandavarkar Road if you commute by train. Choose Shimpoli and the Link Road side if you use the metro or drive. Choose Chikoowadi or I.C. Colony for a quieter lane. Tell us where you work and we will narrow it down.",
       },
       {
         q: "Do you help owners let their flats too?",
-        a: "Yes. We find the tenant, check them, handle the agreement and the police verification, and keep the owner updated on WhatsApp throughout, which is how many of our owners who live abroad work with us.",
+        a: "Yes. We find the tenant, check them, and handle the agreement and the police verification. We keep the owner updated on WhatsApp throughout, which is how many of our owners who live abroad work with us.",
       },
       {
         q: "How soon can I move in?",
         a: "Often within a week of choosing the flat, once the agreement is registered and the society has the paperwork it needs. We line these up in parallel so nothing waits on anything else.",
+      },
+      {
+        q: "What is the rent of a 1 BHK in Borivali West?",
+        a: "A 1 BHK in Borivali asks about ₹22,000 to ₹40,000 a month on NoBroker's 2026 asking figures. The deposit in newer societies is two to three months' rent. Near the station or the metro costs more.",
+      },
+      {
+        q: "What is the rent of a 2 BHK in Borivali West?",
+        a: "A 2 BHK in Borivali asks about ₹35,000 to ₹65,000 a month on NoBroker's 2026 asking figures. The deposit in newer societies is two to three months' rent. Newer towers sit at the top of the range.",
+      },
+      {
+        q: "What is the rent of a 3 BHK in Borivali West?",
+        a: "A 3 BHK in Borivali asks about ₹55,000 to ₹1 lakh a month on NoBroker's 2026 asking figures. The deposit in newer societies is two to three months' rent. What is included in the rent is written into the agreement.",
       },
     ],
     waMessage: "Hi Shree Giriraj, I am looking to rent a ___ BHK in Borivali West. My budget is about ___ a month and I work near ___. Can you help?",
@@ -246,9 +286,15 @@ export const FLAT_LISTINGS: FlatListing[] = [
       "1, 2 and 3 BHK flats for sale in Kandivali West, with asking rates by pocket. WhatsApp your size and budget for flats that fit, usually the same day.",
     h1: "1, 2 and 3 BHK flats for sale in Kandivali West",
     answer:
-      "Kandivali West asks around 25,000 to 27,000 rupees per square foot in mid 2026, with Mahavir Nagar at the top near 36,450 and the Charkop sectors around 23,350 to 26,150. It offers some of the widest choice in the western suburbs, from settled cooperative societies to new towers on Link Road.",
+      "A 2 BHK of about 700 sq ft in Kandivali West asks about ₹1.75 to ₹1.89 crore. A 3 BHK of about 950 sq ft asks about ₹2.38 to ₹2.57 crore. Both use the mid 2026 average of 25,000 to 27,000 rupees per square foot. Mahavir Nagar asks more, near 36,450. The Charkop sectors ask less.",
     intro:
       "Kandivali West is a market we have worked since 1996, from the Gujarati heart of Mahavir Nagar to Charkop's MHADA sectors. Every building we send comes with an honest word on its society.",
+    quick: [
+      { size: "2 BHK", figure: "₹1.75 to ₹1.89 crore", basis: "about 700 sq ft" },
+      { size: "3 BHK", figure: "₹2.38 to ₹2.57 crore", basis: "about 950 sq ft" },
+      { size: "1 BHK", figure: "Ask us", basis: "send the size you want" },
+    ],
+    quickNote: "Asking figures, mid 2026, not prices paid. The rate is the 25,000 to 27,000 rupees per sq ft average (Square Yards, 2026). It is multiplied by about 700 and 950 sq ft, the sizes of 2 and 3 BHK homes in new projects on this site.",
     image: {
       src: "/premium/towers-night-water.jpg",
       alt: "Residential towers lit at night, reflected in still water",
@@ -299,11 +345,23 @@ export const FLAT_LISTINGS: FlatListing[] = [
       },
       {
         q: "Do you also help me sell my flat here?",
-        a: "Yes. We price it against what similar flats have really registered for, prepare the papers a careful buyer will ask for, and show it only to buyers who can complete.",
+        a: "Yes. We price it against what similar flats have really registered for. We prepare the papers a careful buyer will ask for. We show it only to buyers who can complete.",
       },
       {
         q: "How quickly can I see flats?",
         a: "Usually within a day or two. Send the size, the budget and the pocket on WhatsApp and we will line up several viewings for one visit.",
+      },
+      {
+        q: "How much does a 2 BHK cost in Kandivali West?",
+        a: "A 2 BHK of about 700 sq ft asks about ₹1.75 to ₹1.89 crore. That uses the mid 2026 average asking rate of 25,000 to 27,000 rupees per square foot. It is an asking figure, not a price paid. Mahavir Nagar asks near 36,450 per square foot, so the same flat there asks more.",
+      },
+      {
+        q: "How much does a 3 BHK cost in Kandivali West?",
+        a: "At the same average, a 3 BHK of about 950 sq ft asks about ₹2.38 to ₹2.57 crore. Stamp duty and registration come on top. Send us the pocket and the size and we will give you the figure for the building.",
+      },
+      {
+        q: "Which pocket of Kandivali West asks the least, and which the most?",
+        a: "On Square Yards' 2026 figures, Mahavir Nagar asks the most, near 36,450 rupees per square foot. Dahanukarwadi asks about 27,750. The Charkop sectors ask the least, at 23,350 to 26,150.",
       },
     ],
     waMessage: "Hi Shree Giriraj, I am looking to buy a ___ BHK in Kandivali West. My budget is about ___. Can you send me what fits?",
@@ -318,9 +376,15 @@ export const FLAT_LISTINGS: FlatListing[] = [
       "1, 2 and 3 BHK flats for rent in Kandivali West, with 2026 rents and deposits. WhatsApp your size and budget for flats that fit, usually the same day.",
     h1: "1, 2 and 3 BHK flats for rent in Kandivali West",
     answer:
-      "A 1 BHK in Kandivali West asks about 18,000 to 35,000 rupees a month, a 2 BHK in Kandivali 35,000 to 65,000 and a 3 BHK 60,000 to 95,000, on NoBroker's 2026 figures. Kandivali gives more space for the rent than Borivali, with the metro on both sides of the tracks.",
+      "A 1 BHK in Kandivali West asks about ₹18,000 to ₹35,000 a month. A 2 BHK in Kandivali asks ₹35,000 to ₹65,000 and a 3 BHK ₹60,000 to ₹95,000. These are NoBroker's 2026 asking figures. Deposits in newer societies run two to three months. Kandivali gives more space for the rent than Borivali.",
     intro:
       "We have let flats across Kandivali since 1996, from Mahavir Nagar's family societies to the Link Road towers and Charkop's quieter sectors. We shortlist around your commute, so every visit is worth the trip.",
+    quick: [
+      { size: "1 BHK", figure: "₹18,000 to ₹35,000 a month", basis: "Kandivali West" },
+      { size: "2 BHK", figure: "₹35,000 to ₹65,000 a month", basis: "Kandivali" },
+      { size: "3 BHK", figure: "₹60,000 to ₹95,000 a month", basis: "Kandivali" },
+    ],
+    quickNote: "Asking rents, NoBroker, 2026. The 1 BHK figure is for the West; the 2 and 3 BHK figures are for Kandivali as a whole. Deposit: two to three months' rent in newer societies.",
     image: {
       src: "/premium/u/interior-06.jpg",
       alt: "A modular kitchen with dark glass upper cabinets and under cabinet lighting",
@@ -362,7 +426,7 @@ export const FLAT_LISTINGS: FlatListing[] = [
       RENT_FAQ_POLICE,
       {
         q: "Which part of Kandivali West is best for renting?",
-        a: "Mahavir Nagar for schools and food within a walk, the Link Road towers for newer buildings and parking, and Charkop for quieter lanes and more space for the rent. Tell us where you work and we will narrow it down.",
+        a: "Choose Mahavir Nagar for schools and food within a walk. Choose the Link Road towers for newer buildings and parking. Choose Charkop for quieter lanes and more space for the rent. Tell us where you work and we will narrow it down.",
       },
       {
         q: "Do you help owners let their flats too?",
@@ -371,6 +435,18 @@ export const FLAT_LISTINGS: FlatListing[] = [
       {
         q: "How soon can I move in?",
         a: "Often within a week of choosing the flat, once the agreement is registered and the society has its paperwork. We run these in parallel so nothing waits.",
+      },
+      {
+        q: "What is the rent of a 1 BHK in Kandivali West?",
+        a: "A 1 BHK in Kandivali West asks about ₹18,000 to ₹35,000 a month on NoBroker's 2026 asking figures. The deposit in newer societies is two to three months' rent. Flats near the Kandivali West and Dahanukarwadi metro stations ask more.",
+      },
+      {
+        q: "What is the rent of a 2 BHK in Kandivali West?",
+        a: "A 2 BHK in Kandivali asks about ₹35,000 to ₹65,000 a month on NoBroker's 2026 asking figures. The deposit in newer societies is two to three months' rent. Move in charges and parking are worth asking about.",
+      },
+      {
+        q: "What is the rent of a 3 BHK in Kandivali West?",
+        a: "A 3 BHK in Kandivali asks about ₹60,000 to ₹95,000 a month on NoBroker's 2026 asking figures. The deposit in newer societies is two to three months' rent. What is included in the rent is written into the agreement.",
       },
     ],
     waMessage: "Hi Shree Giriraj, I am looking to rent a ___ BHK in Kandivali West. My budget is about ___ a month and I work near ___. Can you help?",
@@ -385,9 +461,15 @@ export const FLAT_LISTINGS: FlatListing[] = [
       "1, 2 and 3 BHK flats for sale in Malad West, with 2026 asking rates by pocket. WhatsApp your size and budget for flats that fit, usually the same day.",
     h1: "1, 2 and 3 BHK flats for sale in Malad West",
     answer:
-      "Malad West averaged about 30,800 rupees per square foot in September 2026 on Square Yards' figures, with Evershine Nagar near 32,000. Broker Network's July 2026 guide puts new flats at 18,000 to 30,000 and resale at 14,000 to 24,000. The Mindspace office district keeps demand for rentals steady, which is why many buyers here are investors.",
+      "A 2 BHK of about 700 sq ft in Malad West asks about ₹2.03 to ₹2.16 crore. A 3 BHK of about 950 sq ft asks about ₹2.76 to ₹2.93 crore. Both use the 2026 average of 29,000 to 30,800 rupees per square foot. Evershine Nagar asks more, near 32,000. Many buyers here are investors.",
     intro:
       "Malad West is the most investor driven of the three suburbs we work in, and we have sold here since 1996. Whether you are buying to live in or to let, every building we send comes with the rent it realistically earns.",
+    quick: [
+      { size: "2 BHK", figure: "₹2.03 to ₹2.16 crore", basis: "about 700 sq ft" },
+      { size: "3 BHK", figure: "₹2.76 to ₹2.93 crore", basis: "about 950 sq ft" },
+      { size: "1 BHK", figure: "Ask us", basis: "send the size you want" },
+    ],
+    quickNote: "Asking figures, 2026, not prices paid. The rate is the 29,000 to 30,800 rupees per sq ft average (Square Yards, September 2026). It is multiplied by about 700 and 950 sq ft, the sizes of 2 and 3 BHK homes in new projects on this site.",
     image: {
       src: "/premium/u/complex-05.jpg",
       alt: "A polished lobby with artwork and warm lighting",
@@ -432,7 +514,7 @@ export const FLAT_LISTINGS: FlatListing[] = [
       SALE_FAQ_DUTY,
       {
         q: "Is Malad West a good place to buy a flat to rent out?",
-        a: "It is one of the strongest in the western suburbs for it, because the Mindspace office district keeps a large, steady population of renters close by. Yields are reported at 3 to 4 percent gross. We work out the net figure on the actual flat before you commit.",
+        a: "It is one of the strongest in the western suburbs for it. The Mindspace office district keeps a large, steady population of renters close by. Yields are reported at 3 to 4 percent gross. We work out the net figure on the actual flat before you commit.",
       },
       {
         q: "Evershine Nagar or Orlem?",
@@ -440,11 +522,23 @@ export const FLAT_LISTINGS: FlatListing[] = [
       },
       {
         q: "Do you also help me sell my flat here?",
-        a: "Yes. We price it against what similar flats have really registered for, and for a flat with a tenant in it, we show it to investors who value the rent.",
+        a: "Yes. We price it against what similar flats have really registered for. For a flat with a tenant in it, we show it to investors who value the rent.",
       },
       {
         q: "How quickly can I see flats?",
         a: "Usually within a day or two. Send the size, the budget and whether it is to live in or to let, and we will line up several viewings for one visit.",
+      },
+      {
+        q: "How much does a 2 BHK cost in Malad West?",
+        a: "A 2 BHK of about 700 sq ft asks about ₹2.03 to ₹2.16 crore. That uses the 2026 average asking rate of 29,000 to 30,800 rupees per square foot. It is an asking figure, not a price paid. Evershine Nagar asks near 32,000 per square foot.",
+      },
+      {
+        q: "How much does a 3 BHK cost in Malad West?",
+        a: "At the same average, a 3 BHK of about 950 sq ft asks about ₹2.76 to ₹2.93 crore. Stamp duty and registration come on top. Send us the pocket and the size and we will give you the figure for the building.",
+      },
+      {
+        q: "Are new or resale flats cheaper in Malad West?",
+        a: "Resale. Broker Network's July 2026 guide puts resale flats at 14,000 to 24,000 rupees per square foot and new flats at 18,000 to 30,000. Resale buying needs the usual title and society checks, which we do for you.",
       },
     ],
     waMessage: "Hi Shree Giriraj, I am looking to buy a ___ BHK in Malad West, to live in / to let. My budget is about ___. Can you send me what fits?",
@@ -459,9 +553,15 @@ export const FLAT_LISTINGS: FlatListing[] = [
       "1, 2 and 3 BHK flats for rent in Malad West near Mindspace, with 2026 rents and deposits. WhatsApp us your size and budget for flats that fit.",
     h1: "1, 2 and 3 BHK flats for rent in Malad West",
     answer:
-      "A 2 BHK in Malad West asks about 42,000 to 65,000 rupees a month and a 3 BHK 60,000 to 1 lakh, on Broker Network's July 2026 figures. Most tenants here work at Mindspace or along Link Road, so flats within a short ride of the office district let fastest.",
+      "A 2 BHK in Malad West asks about ₹42,000 to ₹65,000 a month. A 3 BHK asks ₹60,000 to ₹1 lakh. These are Broker Network's July 2026 asking figures. For a 1 BHK we quote from the flats available this week. Deposits in newer societies run two to three months. Flats near Mindspace let fastest.",
     intro:
       "Malad West's tenants are the part of this market we know best. We have let flats here since 1996, to Mindspace professionals, families and company leases. We shortlist around where you work, so the commute is settled before you visit.",
+    quick: [
+      { size: "1 BHK", figure: "Ask us", basis: "no West side figure is published; Malad East asks ₹25,000 to ₹50,000" },
+      { size: "2 BHK", figure: "₹42,000 to ₹65,000 a month" },
+      { size: "3 BHK", figure: "₹60,000 to ₹1 lakh a month" },
+    ],
+    quickNote: "Asking rents for Malad West, Broker Network, July 2026. The Malad East 1 BHK figure is NoBroker, April 2026. Deposit: two to three months' rent in newer societies.",
     image: {
       src: "/premium/u/handover-06.jpg",
       alt: "Two people at a window looking out at the city at dusk",
@@ -507,11 +607,23 @@ export const FLAT_LISTINGS: FlatListing[] = [
       },
       {
         q: "Do you arrange company leases?",
-        a: "Yes. We work with the company's requirements on the agreement, the deposit and the documents, and with the owner on the terms, so the lease is registered in the right name.",
+        a: "Yes. We work with the company's requirements on the agreement, the deposit and the documents. We work with the owner on the terms. The lease is then registered in the right name.",
       },
       {
         q: "How soon can I move in?",
         a: "Often within a week of choosing the flat, once the agreement is registered and the society has its paperwork. We run these in parallel so nothing waits.",
+      },
+      {
+        q: "What is the rent of a 1 BHK in Malad West?",
+        a: "No West side figure is published. Malad East asks about ₹25,000 to ₹50,000 a month on NoBroker's April 2026 figures. We quote a 1 BHK in the West from the flats available this week. The deposit in newer societies is two to three months' rent.",
+      },
+      {
+        q: "What is the rent of a 2 BHK in Malad West?",
+        a: "A 2 BHK in Malad West asks about ₹42,000 to ₹65,000 a month on Broker Network's July 2026 figures. The deposit in newer societies is two to three months' rent. Flats within a short ride of Mindspace let fastest.",
+      },
+      {
+        q: "What is the rent of a 3 BHK in Malad West?",
+        a: "A 3 BHK in Malad West asks about ₹60,000 to ₹1 lakh a month on Broker Network's July 2026 figures. The deposit in newer societies is two to three months' rent. What is included in the rent is written into the agreement.",
       },
     ],
     waMessage: "Hi Shree Giriraj, I am looking to rent a ___ BHK in Malad West. My budget is about ___ a month and I work near ___. Can you help?",

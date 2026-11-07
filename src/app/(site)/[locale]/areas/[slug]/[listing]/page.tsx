@@ -144,6 +144,27 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
             {l.intent === "sale" ? "Flats for sale" : "Flats for rent"} · {l.place}
           </div>
           <h1 className="rise mt-3 max-w-[22ch] text-3xl text-white md:text-5xl">{l.h1}</h1>
+          <div className="rise-2 mt-5 max-w-[58ch]">
+            <table className="w-full border-collapse text-left">
+              <caption className="sr-only">
+                {l.intent === "sale" ? "Asking price by size" : "Asking rent by size"} in {l.place}
+              </caption>
+              <tbody className="divide-y divide-white/15">
+                {l.quick.map((q) => (
+                  <tr key={q.size}>
+                    <th scope="row" className="py-2.5 pr-4 align-top font-display text-lg font-semibold text-bronze">
+                      {q.size}
+                    </th>
+                    <td className="py-2.5 text-white">
+                      <span className="text-lg font-medium">{q.figure}</span>
+                      {q.basis && <span className="block text-xs text-paper/60">{q.basis}</span>}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p className="mt-2 text-xs text-paper/65">{l.quickNote}</p>
+          </div>
           <p className="rise-2 mt-5 max-w-[58ch] text-paper/80">{l.intro}</p>
           <p className="rise-3 mt-7 max-w-[34em] text-lg font-medium leading-snug text-white">{PROMISE[l.intent]}</p>
           <div className="rise-3 mt-5 flex flex-wrap items-center gap-x-4 gap-y-3">

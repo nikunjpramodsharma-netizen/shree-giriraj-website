@@ -28,6 +28,14 @@
 
 export const STORY_IS_WRITTEN = true;
 
+/**
+ * The 40 to 60 word answer shown first on the page, under the hero. Built
+ * only from the confirmed facts above: founder, the two dates, the address,
+ * the three suburbs, the MahaRERA number.
+ */
+export const ABOUT_ANSWER =
+  "Shree Giriraj Real Estate is a family run agency in Chikoowadi, Borivali West, founded by Pramod Kishanlal Sharma. It has worked in real estate since 1996, and from this office since 2005. It helps people buy, sell, rent and invest in Borivali, Kandivali and Malad. MahaRERA registration A51800005726.";
+
 export type StorySection = { heading: string; paragraphs: string[] };
 
 export const STORY: StorySection[] = [
@@ -35,13 +43,13 @@ export const STORY: StorySection[] = [
     heading: "How it started",
     paragraphs: [
       "Pramod Kishanlal Sharma started in real estate in 1996, in the western suburbs of Mumbai, and has worked here ever since. The three places he worked then are the three the firm works now: Borivali, Kandivali and Malad, on both sides of the railway line.",
-      "Those first years set how the firm still works. Resale flats and rentals, done properly, for people who wanted somebody local beside them. In 2005 the firm moved into the office it still occupies in Chikoowadi, Borivali West, and families who bought through it then come back to sell, to rent and to buy the next home.",
+      "Those first years set how the firm still works. Resale flats and rentals, done properly, for people who wanted somebody local beside them. In 2005 the firm moved into the office it still occupies, in Chikoowadi, Borivali West. Families who bought through it then come back to sell, to rent and to buy the next home.",
     ],
   },
   {
     heading: "How the firm works",
     paragraphs: [
-      "Shree Giriraj is family run. The person who takes your call is the person who walks the building with you, reads the file and sits beside you at registration. What the firm adds to any listing is what a listing cannot hold: the water timing on the upper floors, the parking a society will actually allot, the stage a redevelopment has really reached, the deposit a street really pays.",
+      "Shree Giriraj is family run. The person who takes your call walks the building with you, reads the file and sits beside you at registration. The firm adds what a listing cannot hold. The water timing on the upper floors. The parking a society will actually allot. The stage a redevelopment has really reached. The deposit a street really pays.",
       "The method has not changed. Verify the owner and the title before a viewing. Arrange the society's no objection before a price is agreed. Say so plainly when a flat is not the right one, and help find one that is.",
     ],
   },
@@ -49,7 +57,7 @@ export const STORY: StorySection[] = [
     heading: "Since 1996, and ahead",
     paragraphs: [
       "The biggest change in those years is the law. Maharashtra's real estate regulator came into force on 1 May 2017, and Shree Giriraj holds MahaRERA registration A51800005726. The number is on every page of this site so that anyone can check it in a minute.",
-      "The firm now offers seven services under one roof, from resale, rentals and new project bookings to investment advisory, commercial property, MHADA paperwork and interior work. It is still led by its founder, still at the same office, and still measures itself by whether the people it has helped come back. If you are buying, selling, renting or investing in Borivali, Kandivali or Malad, the first conversation is free and usually happens the same day.",
+      "The firm now offers seven services under one roof. Resale, rentals and new project bookings. Investment advisory, commercial property, MHADA paperwork and interior work. It is still led by its founder and still at the same office. It measures itself by whether the people it has helped come back. Buying, selling, renting or investing in Borivali, Kandivali or Malad? The first conversation is free, and usually happens the same day.",
     ],
   },
 ];
@@ -111,19 +119,19 @@ export type AboutFaq = { q: string; a: string };
 export const ABOUT_FAQS: AboutFaq[] = [
   {
     q: "Who runs Shree Giriraj Real Estate?",
-    a: "Shree Giriraj Real Estate was founded by Pramod Kishanlal Sharma, who still runs it from the firm's office in Chikoowadi, Borivali West. It is a family run agency rather than a franchise or a branch of a larger network, so the person who answers the phone is the person handling the file.",
+    a: "Shree Giriraj Real Estate was founded by Pramod Kishanlal Sharma, who still runs it from the firm's office in Chikoowadi, Borivali West. It is a family run agency, not a franchise or a branch of a larger network. So the person who answers the phone is the person handling the file.",
   },
   {
     q: "How long has Shree Giriraj been in property?",
-    a: "The firm has worked in real estate since 1996 and has operated from its current Borivali West office since 2005. Those are two different dates and the site keeps them apart: nearly thirty years in the trade, and twenty years at this particular address in Chikoowadi.",
+    a: "The firm has worked in real estate since 1996 and has operated from its current Borivali West office since 2005. Those are two different dates, and the site keeps them apart. That is nearly thirty years in the trade, and twenty years at this address in Chikoowadi.",
   },
   {
     q: "Is Shree Giriraj registered with MahaRERA?",
-    a: "Yes. The MahaRERA registration number is A51800005726. Maharashtra requires anyone facilitating the sale of a registered project to hold one, and the number can be checked for free on the MahaRERA portal against the firm's name before you deal with anybody.",
+    a: "Yes. The MahaRERA registration number is A51800005726. Maharashtra requires anyone helping sell a registered project to hold one. You can check the number free on the MahaRERA portal, against the firm's name, before you deal with anybody.",
   },
   {
     q: "Which areas does Shree Giriraj cover?",
-    a: "Borivali, Kandivali and Malad, covering both the west and east sides of each. Dahisar and Goregaon are handled occasionally rather than as core markets. The firm works three suburbs properly instead of claiming to cover the whole city, because pocket level knowledge is what actually changes a price here.",
+    a: "Borivali, Kandivali and Malad, covering both the west and east sides of each. Dahisar and Goregaon are handled occasionally rather than as core markets. The firm works three suburbs properly instead of claiming the whole city. Knowing each pocket closely is what actually changes a price here.",
   },
   {
     q: "What does Shree Giriraj do?",
@@ -131,7 +139,7 @@ export const ABOUT_FAQS: AboutFaq[] = [
   },
   {
     q: "Where is the office?",
-    a: "Shop No 11, Clover Grove CHS, Chikoowadi, Borivali West, Mumbai 400092. The commercial complex is known locally as Garden Groove Shopping Centre, which is the same place, so either name will get you to the door.",
+    a: "Shop No 11, Clover Grove CHS, Chikoowadi, Borivali West, Mumbai 400092. The commercial complex is known locally as Garden Groove Shopping Centre. It is the same place, so either name will get you to the door.",
   },
 ];
 

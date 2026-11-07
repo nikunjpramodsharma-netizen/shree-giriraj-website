@@ -32,11 +32,11 @@ note: >
   page says so rather than describing one. The society's own transfer fee
   is set by its bye laws and is deliberately not given a figure.
 answer: >
-  In the Mumbai Board, the Estate Manager transfers a residential MHADA
-  flat within 23 office working days. MHADA transfer fees are 45 rupees a
-  sq ft for LIG flats (maximum 15,000 rupees), 55 for MIG (maximum 25,000)
-  and 60 for HIG (maximum 35,000). A sale needs sale permission first;
-  every transfer needs the society's NOC.
+  In the Mumbai Board, the Estate Manager transfers a residential MHADA flat
+  within 23 office working days. Transfer fees are 45 rupees a sq ft for LIG
+  flats, up to 15,000 rupees. MIG pays 55, up to 25,000, and HIG pays 60, up
+  to 35,000. A sale needs sale permission first. Every transfer needs the
+  society's NOC.
 sources:
   - label: "MHADA Mumbai Board, documents to be submitted for transfer of tenancy rights, with the transfer charges"
     url: https://www.mhada.gov.in/sites/default/files/documents-req.-for-tot.pdf
@@ -67,17 +67,19 @@ readNext:
 
 ## The short answer
 
-In the Mumbai Board, the Estate Manager transfers a residential MHADA flat within 23 office working days. MHADA transfer fees are 45 rupees a sq ft for LIG flats (maximum 15,000 rupees), 55 for MIG (maximum 25,000) and 60 for HIG (maximum 35,000). **A sale needs sale permission first; every transfer needs the society's NOC.**
+In the Mumbai Board, the Estate Manager transfers a residential MHADA flat within 23 office working days. Transfer fees are 45 rupees a sq ft for LIG flats, up to 15,000 rupees. MIG pays 55, up to 25,000, and HIG pays 60, up to 35,000. **A sale needs sale permission first. Every transfer needs the society's NOC.**
 
 ---
 
 ## When a MHADA flat needs a transfer
 
-Many flats in Mumbai were allotted by MHADA, the Maharashtra Housing and Area Development Authority, through its Mumbai Housing and Area Development Board (the Mumbai Board). Such a flat needs a transfer whenever it moves into a new name: after a sale, as a gift to a family member, or after the allottee's death. People also call it a MHADA name transfer or room transfer; it is the same service. The allottee is the person the Mumbai Board allotted the flat to, and the Board keeps a record of whose name each flat stands in.
+Many flats in Mumbai were allotted by MHADA, the Maharashtra Housing and Area Development Authority. The allotting body is its Mumbai Housing and Area Development Board (the Mumbai Board). Such a flat needs a transfer whenever it moves into a new name. That happens after a sale, as a gift to a family member, or after the allottee's death. People also call it a MHADA name transfer or room transfer; it is the same service. The allottee is the person the Mumbai Board allotted the flat to, and the Board keeps a record of whose name each flat stands in.
 
-The MHADA rules and regulations for transfer of a flat are the Estate Management, Sale, Transfer and Exchange of Tenements Regulations, 1981, and they say:
+The rules for transfer of a MHADA flat are the Estate Management, Sale, Transfer and Exchange of Tenements Regulations, 1981. A tenement is the flat or unit the Board has let to the allottee. The key rule says:
 
 > No allottee shall, during the currency of the tenancy under Regulation 20, transfer any tenement allotted to him except with the previous permission in writing of the Board and also of the housing society or the company, if such a society or company has already been formed and registered.
+
+In plain words: before any transfer, get written permission from the Board, and from the society if there is one.
 
 Each route has its own form, papers and time limit:
 
@@ -87,9 +89,17 @@ Each route has its own form, papers and time limit:
 | Gift to a family member | Form 1, under Regulation 24 | Registered gift deed | 23 working days |
 | After a death | Form 1, under Regulation 24 | Registered will or court heirship certificate | 23 working days |
 
-**After a sale.** The society may give its permission once five years have passed from allotment and the buyer has paid the Mumbai Board's dues. In Economically Weaker Section, Low and Middle Income Group schemes, the buyer may belong to any of those three groups. In High Income Group schemes, the buyer must be in that group too. The seller applies for sale permission on the form the Board's E-MITRA page lists as Form 5 (numbered 6A on the form itself). Once permission is granted, we confirm with the Estate Manager's office which application and charge put the flat in the buyer's name, and prepare that file. Our guide on [whether you can sell a MHADA flat](/blog/can-we-sell-mhada-flat) covers the five year rule in full.
+**After a sale.** The society may give its permission once five years have passed from allotment and the buyer has paid the Mumbai Board's dues. In Economically Weaker Section, Low and Middle Income Group schemes, the buyer may belong to any of those three groups. In High Income Group schemes, the buyer must be in that group too. The seller applies for sale permission on the form the Board's E-MITRA page lists as Form 5 (numbered 6A on the form itself). Once permission is granted, we confirm with the Estate Manager's office which application and charge put the flat in the buyer's name. Then we prepare that file. Our guide on [whether you can sell a MHADA flat](/blog/can-we-sell-mhada-flat) covers the five year rule in full.
 
-**To a family member, during the allottee's lifetime.** The Regulations let the Mumbai Board's Chief Officer permit a transfer to another member of the allottee's family. That covers an allottee who is moving for work, has found other accommodation, or wishes to pass the flat on, provided the family member undertakes to abide by the Regulations. The Mumbai Board's document list names the family members this covers: the husband or wife, an unmarried son or daughter, a married son and his family, a widowed daughter and her unmarried children, and the father and mother.
+**To a family member, during the allottee's lifetime.** The Regulations let the Mumbai Board's Chief Officer permit a transfer to another member of the allottee's family. That covers an allottee who is moving for work, has found other accommodation, or wishes to pass the flat on. The family member must undertake to abide by the Regulations.
+
+The Mumbai Board's document list names the family members this covers:
+
+- The husband or wife
+- An unmarried son or daughter
+- A married son and his family
+- A widowed daughter and her unmarried children
+- The father and mother
 
 **After a death.** The heir applies on the same Form 1. Our guide to [MHADA transfer on death](/blog/mhada-transfer-on-death) walks through who qualifies and the papers in detail.
 
@@ -97,7 +107,7 @@ Each route has its own form, papers and time limit:
 
 ## How much are MHADA transfer fees and charges?
 
-MHADA transfer fees, which the Mumbai Board's schedule calls transfer charges, are 45 rupees a square foot for LIG flats, 55 for MIG and 60 for HIG, each with a ceiling:
+MHADA transfer fees are called transfer charges in the Mumbai Board's schedule. They are 45 rupees a square foot for LIG flats, 55 for MIG and 60 for HIG. Each has a ceiling:
 
 | Income group | Rate | Maximum charge | The maximum applies from |
 | --- | --- | --- | --- |
@@ -112,19 +122,21 @@ In rupees, that works out like this:
 - A 420 sq ft MIG flat: 420 × 55 = **23,100 rupees**.
 - A 650 sq ft HIG flat: 650 × 60 = 39,000, so the charge is **35,000 rupees**.
 
-The schedule does not say whether the area is carpet or built up, and gives no separate rate for EWS flats, so we confirm with the Estate Manager's office which area and rate apply to your flat before you pay. The Mumbai Board's document list allows payment in cash or by demand draft or pay order of a nationalised bank. The receipt goes in with the application, and the Regulation 24 form also asks for a deposit to be paid with the charge. If the flat is being let rather than transferred, the Board's [NOC for rent](/blog/can-we-rent-mhada-flat) is a separate service. A society planning to rebuild should read our [MHADA redevelopment rules](/blog/mhada-redevelopment-rules).
+The schedule does not say whether the area is carpet or built up. It also gives no separate rate for EWS flats. So we confirm with the Estate Manager's office which area and rate apply to your flat before you pay.
 
-For a sale, the Regulations allow the Mumbai Board to make its permission conditional on a share, up to fifty percent, of the unearned increase, meaning the rise in the flat's value. The society's own transfer fee is separate and is set by its bye laws.
+The Mumbai Board's document list allows payment in cash or by demand draft or pay order of a nationalised bank. The receipt goes in with the application. The Regulation 24 form also asks for a deposit to be paid with the charge. If the flat is being let rather than transferred, the Board's [NOC for rent](/blog/can-we-rent-mhada-flat) is a separate service. A society planning to rebuild should read our [MHADA redevelopment rules](/blog/mhada-redevelopment-rules).
+
+For a sale, the Regulations allow the Mumbai Board to make its permission conditional on a share of the unearned increase. That is the rise in the flat's value, and the share can be up to fifty percent. The society's own transfer fee is separate and is set by its bye laws.
 
 ---
 
 ## Documents required for a MHADA transfer
 
-The documents required for a MHADA transfer are the nine items on the Mumbai Board's Form 1 checklist, which the office ticks off as the file is received. For a residential flat it asks for:
+The documents required for a MHADA transfer are the nine items on the Mumbai Board's Form 1 checklist. The office ticks them off as the file is received. For a residential flat it asks for:
 
 1. **The application** in the Mumbai Board's prescribed format.
 2. **A registered gift deed** from the original holder to the applicant, for a transfer during the holder's lifetime.
-3. **Where the original holder has died:** a certified copy of the death certificate with the registered will, or, where there is no registered will, the heirship certificate issued by the court. Where the flat is to go to one or some of the heirs, registered release deeds from all the others in their favour.
+3. **Where the original holder has died:** a certified copy of the death certificate with the registered will. If there is no registered will, the court's heirship certificate takes its place. If the flat goes to one or some of the heirs, add registered release deeds (the other heirs giving up their claim) in their favour.
 4. **An indemnity bond** on 200 rupee stamp paper, in the format MHADA prescribes. This is the applicant's written promise to make good any loss to the Mumbai Board from the transfer.
 5. **The society's NOC** in MHADA's prescribed format.
 6. **Certified copies of the receipts** showing all arrears paid, and the current month's receipt, including ground rent and non agricultural assessment.
@@ -134,9 +146,19 @@ The documents required for a MHADA transfer are the nine items on the Mumbai Boa
 
 A shop, other commercial unit or non residential plot adds a certified copy of the Gumasta licence, the Shops and Establishments certificate.
 
-The Regulation 24 application that comes with Form 1 asks for three more things. These are a gazetted officer's certificate of the applicant's relationship to the original holder, the NOC of the original holder or the other family members, and the transfer charge receipt. The Mumbai Board's separate document list adds affidavits of the applicant's annual income and that the applicant, their spouse and unmarried children hold no other land or tenement in Mumbai. The form notes that the competent officer may ask for further papers where a case needs them.
+The Regulation 24 application that comes with Form 1 asks for three more things:
 
-For a sale, the seller's sale permission form has a shorter checklist. It asks for the dues receipts, the allotment letter with the stamp duty receipts for any earlier changes, and a declaration on 100 rupee stamp paper that the flat is not mortgaged to any lender and no case about it is pending in any court.
+- A gazetted officer's certificate of the applicant's relationship to the original holder
+- The NOC of the original holder or the other family members
+- The transfer charge receipt
+
+The Mumbai Board's separate document list adds two affidavits. One covers the applicant's annual income. The other says the applicant, their spouse and unmarried children hold no other land or tenement in Mumbai. The form notes that the competent officer may ask for further papers where a case needs them.
+
+For a sale, the seller's sale permission form has a shorter checklist. It asks for:
+
+- The dues receipts
+- The allotment letter, with the stamp duty receipts for any earlier changes
+- A declaration on 100 rupee stamp paper: the flat is not mortgaged to any lender, and no court case about it is pending
 
 We build this file against the Mumbai Board's own checklist. [Send us the flat on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20need%20a%20MHADA%20transfer%20after%20a%20___%20%28sale%2C%20gift%20or%20death%29%20for%20my%20flat%20in%20___.) and we will tell you what is missing, free.
 
@@ -148,17 +170,17 @@ The MHADA transfer procedure has five steps, from the society's NOC to the Mumba
 
 1. **Line up the society's NOC.** Every route needs it, in MHADA's format, or an affidavit where no society exists.
 2. **For a sale, the seller applies for sale permission.** The notified limit is 15 working days.
-3. **Clear the Mumbai Board's dues and keep the receipts.** Both checklists ask for them. A no dues certificate is a separate service, with a limit of 19 working days, if you want one on paper; our guide to [MHADA NOCs online](/blog/mhada-noc-online) lists it with the others.
-4. **Collect the form and file it within 15 days.** The Mumbai Board's application forms say the completed file must reach the Estate Manager within 15 days of the form being issued, so gather the papers first. Pay the transfer charge and any deposit, and attach the receipt.
+3. **Clear the Mumbai Board's dues and keep the receipts.** Both checklists ask for them. A no dues certificate is a separate service, with a limit of 19 working days, if you want one on paper. Our guide to [MHADA NOCs online](/blog/mhada-noc-online) lists it with the others.
+4. **Collect the form and file it within 15 days.** The Mumbai Board's forms say the completed file must reach the Estate Manager within 15 days of the form being issued. So gather the papers first. Pay the transfer charge and any deposit, and attach the receipt.
 5. **The Mumbai Board decides** under a notified limit of 23 office working days. Once approved, the flat is recorded in the new name.
 
-The designated officer is the Estate Manager for your division, with divisions that include Borivali, Malad, Goregaon, Bandra, Kurla, Ghatkopar and Mulund. If the service is refused or not delivered in time, the Right to Public Services law gives you two appeals. Under the Mumbai Board's table in MHADA's notification of 13 July 2015, the first goes to the Executive Engineer and the second to the Joint Chief Officer. Our guide to the [MHADA office in Bandra](/blog/mhada-office-bandra) lists which Estate Manager handles each area.
+The designated officer is the Estate Manager for your division, with divisions that include Borivali, Malad, Goregaon, Bandra, Kurla, Ghatkopar and Mulund. If the service is refused or not delivered in time, the Right to Public Services law gives you two appeals. Under MHADA's notification of 13 July 2015, the first goes to the Executive Engineer and the second to the Joint Chief Officer. Our guide to the [MHADA office in Bandra](/blog/mhada-office-bandra) lists which Estate Manager handles each area.
 
-MHADA's citizen portal says that from 1 April 2019 new E-MITRA registrations and services moved to the state's Aaple Sarkar portal, so check there whether your service can be applied for online. The Mumbai Board's paper forms remain on its E-MITRA page, and their checklists show what the office looks for.
+MHADA's citizen portal says that from 1 April 2019, new E-MITRA registrations and services moved to the state's Aaple Sarkar portal. Check there whether your service can be applied for online. The Mumbai Board's paper forms remain on its E-MITRA page, and their checklists show what the office looks for.
 
 ### The MHADA transfer letter or transfer order
 
-The MHADA transfer letter, also called the transfer order, is the Mumbai Board's decision recording the flat in the new name. None of the Board's published forms show its format, so keep whatever the Estate Manager's office issues on approval with your allotment letter. The Board's own sale and transfer checklists ask for the allotment letter and the papers of every earlier change, so the next buyer, bank or heir will ask for it too.
+The MHADA transfer letter, also called the transfer order, is the Mumbai Board's decision recording the flat in the new name. None of the Board's published forms show its format. Keep whatever the Estate Manager's office issues on approval with your allotment letter. The Board's sale and transfer checklists ask for the allotment letter and the papers of every earlier change. So the next buyer, bank or heir will ask for it too.
 
 ---
 
@@ -166,43 +188,45 @@ The MHADA transfer letter, also called the transfer order, is the Mumbai Board's
 
 A MHADA flat bought earlier without the Mumbai Board's permission can be brought onto the Board's record through its regularisation service. It is meant for flats that changed hands years ago by a registered purchase deed without the record being updated. Regularisation is a separate notified service with the same limit of 23 office working days. It is applied for under Regulation 25, on the regularisation form numbered 2, which the Mumbai Board publishes together with Form 1.
 
-The regularisation checklist follows Form 1, with the **registered purchase deed** in place of the gift deed or will, and an **income certificate for High Income Group flats only**. The Regulation 25 application also asks for the original holder's NOC. **A premium is charged, with 10 percent of it paid as a deposit along with the application.** The form leaves the premium figure to be filled in, so we ask the Estate Manager's office for it before you plan the cost.
+The regularisation checklist follows Form 1, with the **registered purchase deed** in place of the gift deed or will. It also asks for an **income certificate, for High Income Group flats only**. The Regulation 25 application also asks for the original holder's NOC. **A premium is charged, with 10 percent of it paid as a deposit along with the application.** The form leaves the premium figure to be filled in, so we ask the Estate Manager's office for it before you plan the cost.
 
-If your building is an old cessed building under the Mumbai Building Repair and Reconstruction Board, the flat is a repair board tenement with its own forms, so check which Board your building belongs to before you start.
+Some old cessed buildings come under the Mumbai Building Repair and Reconstruction Board. Their flats are repair board tenements with their own forms. Check which Board your building belongs to before you start.
 
 ---
 
 ## Common questions
 
 **How much are MHADA transfer fees?**
-The Mumbai Board's schedule sets MHADA transfer fees at 45 rupees a square foot for LIG flats up to 15,000 rupees, 55 for MIG up to 25,000, and 60 for HIG up to 35,000. A 400 sq ft LIG flat therefore pays the 15,000 rupee maximum. The society's own transfer fee is separate and set by its bye laws.
+The Mumbai Board's schedule sets 45 rupees a square foot for LIG flats, up to 15,000 rupees. It is 55 for MIG, up to 25,000, and 60 for HIG, up to 35,000. A 400 sq ft LIG flat therefore pays the 15,000 rupee maximum. The society's own transfer fee is separate and set by its bye laws.
 
 **What documents are required for a MHADA transfer?**
-The Mumbai Board's Form 1 checklist asks for the application and a registered gift deed or, after a death, the registered will or court heirship certificate with release deeds from the other heirs. It also needs a 200 rupee indemnity bond, the society's NOC, dues receipts, the allotment letter with earlier stamp duty receipts, two photographs and a self declaration.
+The Mumbai Board's Form 1 checklist asks for the application and a registered gift deed. After a death, it asks for the registered will or court heirship certificate, with release deeds from the other heirs. It also needs a 200 rupee indemnity bond, the society's NOC and dues receipts. The allotment letter, earlier stamp duty receipts, two photographs and a self declaration complete the list.
 
 **What are the MHADA name transfer fees and procedure?**
-A MHADA name transfer is the same service as a transfer: the Mumbai Board recording the flat in a new name. The fees are the same transfer charges, 45, 55 or 60 rupees a square foot by income group with caps of 15,000, 25,000 and 35,000 rupees. The file goes to the Estate Manager, who has 23 office working days to decide.
+A MHADA name transfer is the same service as a transfer: the Mumbai Board recording the flat in a new name. The fees are the same transfer charges. They are 45, 55 or 60 rupees a square foot by income group, with caps of 15,000, 25,000 and 35,000 rupees. The file goes to the Estate Manager, who has 23 office working days to decide.
 
 **How long does a MHADA transfer take?**
 The notified limit is 23 office working days under MHADA's notification of 13 July 2015. A sale adds the Mumbai Board's sale permission, with a limit of 15 working days, before the transfer. The completed file must also reach the Estate Manager within 15 days of the form being issued.
 
 **Can I apply for a MHADA transfer online?**
-MHADA's citizen portal says new E-MITRA registrations and services have moved to the state's Aaple Sarkar portal since 1 April 2019, so check there whether the transfer service is offered online. Read the Mumbai Board's Form 1 on its E-MITRA page first, because its checklist shows what the office looks for.
+MHADA's citizen portal says new E-MITRA registrations and services have moved to the state's Aaple Sarkar portal since 1 April 2019. Check there whether the transfer service is offered online. Read the Mumbai Board's Form 1 on its E-MITRA page first, because its checklist shows what the office looks for.
 
 **Will I get a MHADA transfer letter?**
-Yes. On approval, the Estate Manager's office records the flat in the new name, and that decision is what people call the transfer letter or transfer order. The Mumbai Board's published forms do not show its format. Keep whatever the office issues with your allotment letter, because later sales, loans and transfers ask for the papers of every earlier change.
+Yes. On approval, the Estate Manager's office records the flat in the new name. That decision is what people call the transfer letter or transfer order. The Mumbai Board's published forms do not show its format. Keep whatever the office issues with your allotment letter. Later sales, loans and transfers ask for the papers of every earlier change.
 
 **Who pays the MHADA transfer charges?**
-The Mumbai Board's forms have the applicant pay the charge and attach the receipt to the application. Buyer and seller can settle the cost between them in the agreement, so name the party for the transfer charge, and for any unearned increase on a sale, before the price is fixed.
+The Mumbai Board's forms have the applicant pay the charge and attach the receipt to the application. Buyer and seller can settle the cost between them in the agreement. Name the paying party for the transfer charge, and for any unearned increase on a sale, before the price is fixed.
 
 **What is MHADA regularisation?**
-Regularisation is the Mumbai Board's service for putting a flat bought earlier by a registered purchase deed, without the Board's permission, on its record in the occupier's name. It is applied for under Regulation 25 on the Board's regularisation form, and a premium is charged, with 10 percent paid as a deposit with the application.
+Regularisation is the Mumbai Board's service for putting a flat on its record in the occupier's name. It is for flats bought earlier by a registered purchase deed, without the Board's permission. You apply under Regulation 25 on the Board's regularisation form. A premium is charged, with 10 percent paid as a deposit with the application.
 
 **Can a MHADA flat be transferred to a family member?**
-Yes, to the family members the Mumbai Board's list names: the husband or wife, an unmarried son or daughter, a married son and his family, a widowed daughter and her unmarried children, and the parents. The application is on Form 1, under Regulation 24, supported by a registered gift deed from the original holder.
+Yes, to the family members the Mumbai Board's list names. They are the husband or wife, an unmarried son or daughter, and a married son and his family. A widowed daughter and her unmarried children, and the parents, are also on it. The application is on Form 1, under Regulation 24, with a registered gift deed from the original holder.
 
 ---
 
 ## We will handle the transfer for you
 
-Shree Giriraj Real Estate has worked in Mumbai property since 1996, from its Borivali West office since 2005, as a MahaRERA registered agency (A51800005726). As the agency handling your MHADA transfer, our [MHADA paperwork service](/services/mhada-paperwork) finds the right form for your case and builds the file against the Mumbai Board's own checklist. We work out the charge for your flat, line up the society's NOC and follow the application until the flat stands in the new name, for MHADA flats anywhere in Mumbai. Tell us the flat and how it is changing hands on WhatsApp, and we will tell you what the file needs and what it will cost, free, usually the same day.
+Shree Giriraj Real Estate has worked in Mumbai property since 1996, from its Borivali West office since 2005, as a MahaRERA registered agency (A51800005726). As the agency handling your MHADA transfer, our [MHADA paperwork service](/services/mhada-paperwork) finds the right form for your case. We build the file against the Mumbai Board's own checklist. We work out the charge for your flat and line up the society's NOC. Then we follow the application until the flat stands in the new name, for MHADA flats anywhere in Mumbai.
+
+Tell us the flat and how it is changing hands on WhatsApp. We will tell you what the file needs and what it will cost, free, usually the same day.

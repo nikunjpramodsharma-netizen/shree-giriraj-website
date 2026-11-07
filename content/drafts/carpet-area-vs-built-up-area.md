@@ -12,11 +12,11 @@ competition: LOW
 funnelStage: awareness
 wordTarget: 1800
 answer: >
-  Carpet area is the net usable floor space inside a flat, including internal
-  partition walls but excluding external walls, service shafts, balconies and
-  open terraces. Built up adds the walls and balcony. Super built up adds your
-  share of the lobby, lift and staircase. You pay on super built up, you live
-  on carpet, and the gap is called loading.
+  Carpet area is the net usable floor space inside a flat. It counts internal partition
+  walls, but not external walls, service shafts, balconies or open terraces.
+  Built up adds the walls and balcony. Super built up adds your share of the
+  lobby, lift and staircase. You pay on super built up and live on carpet. The
+  gap is called loading.
 sources:
   - label: "Real Estate (Regulation and Development) Act 2016, section 2(k), carpet area"
     url: https://maharera.maharashtra.gov.in
@@ -46,35 +46,50 @@ readNext:
 
 ## The short answer
 
-Carpet area is the net usable floor space inside a flat, including internal partition walls but excluding external walls, service shafts, balconies and open terraces. Built up adds the walls and balcony. Super built up adds your share of the lobby, lift and staircase. **You pay on super built up, you live on carpet**, and the gap is called loading.
+Carpet area is the net usable floor space inside a flat. It counts internal partition walls, but not external walls, service shafts, balconies or open terraces. Built up adds the walls and balcony. Super built up adds your share of the lobby, lift and staircase. **You pay on super built up and live on carpet.** The gap is called loading.
 
 ---
 
-## Three numbers for the same flat
+## Why does one flat have three areas?
 
 Every flat has three areas, and a brochure will lead with the largest one. Work out your own flat with our [carpet area calculator](/tools/carpet-area-calculator).
 
+Sending us a listing in Borivali, Kandivali or Malad? [Share it on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20can%20you%20check%20the%20carpet%20area%20on%20this%20listing%3F%20___) and we will tell you which area the price is quoted on.
+
 ### Carpet area, as the law defines it
 
-RERA settled this, and the definition is worth knowing precisely because it is the one people argue about. Under **section 2(k)** of the Real Estate (Regulation and Development) Act 2016, carpet area is the **net usable floor area of an apartment**, and it:
+RERA settled this definition. **RERA** is the Real Estate (Regulation and Development) Act 2016, the national law for new projects.
 
-**Includes** the area covered by internal partition walls, so bedrooms, living room, kitchen and bathrooms together with the walls between them.
+Under **section 2(k)** of the Act, carpet area is the **net usable floor area of an apartment**.
 
-**Excludes** the external walls, areas under service shafts, the **exclusive balcony or verandah area**, and the **exclusive open terrace area**.
+**It includes** the area under internal partition walls. So bedrooms, living room, kitchen and bathrooms count, together with the walls between them.
 
-So your balcony does not count towards carpet area, and neither does the outer wall. That surprises people, and it is the source of most disputes about a flat being "smaller than promised".
+**It excludes:**
+
+- the external walls
+- areas under service shafts
+- the **exclusive balcony or verandah area**
+- the **exclusive open terrace area**
+
+So your balcony does not count towards carpet area, and neither does the outer wall. Knowing this settles most debates about a flat being "smaller than promised".
 
 ### Built up area
 
-Carpet area plus the thickness of the external walls, and usually the balcony. It is typically around 10 to 15 percent above carpet, though that is a rule of thumb rather than a defined term: it depends on how thick the walls are and how much balcony there is. Unlike carpet area, built up has no statutory definition, so treat any figure with mild suspicion.
+Built up area is carpet area plus the thickness of the external walls, and usually the balcony.
+
+It is typically around 10 to 15 percent above carpet. That is a rule of thumb, not a defined term. It depends on how thick the walls are and how much balcony there is.
+
+Built up has no statutory definition, unlike carpet area. So it is worth confirming how any built up figure was measured.
 
 ### Super built up area
 
-Built up area plus your proportional share of everything the building holds in common: the lobby, the lift shaft, the staircase, the club house, sometimes the generator room. **This is the number most quoted prices are based on.**
+Super built up area is built up area plus your share of everything the building holds in common. That can include the lobby, lift shaft, staircase, club house and sometimes the generator room.
+
+**This is the number most quoted prices are based on.**
 
 ---
 
-## What the difference looks like
+## What does the difference look like on a real flat?
 
 | Measure | What it includes | Illustrative 1,000 sq ft flat |
 |---|---|---|
@@ -85,51 +100,81 @@ Built up area plus your proportional share of everything the building holds in c
 
 *Illustrative, using a loading of 40 percent, which is ordinary for Mumbai. Run your own numbers with the [carpet area calculator](/tools/carpet-area-calculator).*
 
-Listings rarely give you both figures. On the resale portals this month almost every Borivali West flat was advertised with one area or the other, a carpet figure or a built up figure, and not the pair that would let you work out the loading yourself. That is not an accident, and it is why the arithmetic below is worth doing before you ask to see the flat.
+Listings rarely give you both figures. On the resale portals this month, almost every Borivali West flat showed one area only. It was either a carpet figure or a built up figure, never the pair you need to work out the loading.
+
+That is why the arithmetic below is worth doing before you visit.
 
 ---
 
-## What loading actually means for your money
+## What does loading mean for your money?
 
-Loading is the percentage by which super built up exceeds carpet, **taken on the carpet figure**. So carpet equals super built up divided by one plus the loading. A 1,000 sq ft flat at 40 percent loading gives 714 sq ft of carpet, not 600.
+**Loading** is the percentage by which super built up exceeds carpet, **taken on the carpet figure**.
 
-That matters in one specific way people miss. **The rate per square foot is quoted on super built up, so two flats at similar rates can give you very different homes.** A flat at 25,000 per square foot with 25 percent loading is better value than one at 24,000 with 40 percent loading, even though the second looks cheaper: 31,250 per usable foot against 33,613.
+So carpet equals super built up divided by one plus the loading. A 1,000 sq ft flat at 40 percent loading gives 714 sq ft of carpet, not 600.
 
-The arithmetic is worth doing before you get attached to a flat:
+**The rate per square foot is quoted on super built up, so two flats at similar rates can give you very different homes.**
 
-1. Take the total price and divide by the **carpet** area, not the quoted area
-2. Do the same for the flat you are comparing it against
+| Measure | Flat A | Flat B |
+|---|---|---|
+| Quoted rate per sq ft | 25,000 | 24,000 |
+| Loading | 25% | 40% |
+| Rate per carpet sq ft | **31,250** | **33,600** |
+
+Flat B looks cheaper on the headline rate. Flat A is the better value per usable foot.
+
+Do this arithmetic before you get attached to a flat:
+
+1. Take the total price and divide it by the **carpet** area, not the quoted area
+2. Do the same for the flat you are comparing it with
 3. Compare those two numbers, not the headline rate
 
 ---
 
-## What is normal, and what Mumbai actually runs
+## What loading is normal in Mumbai?
 
-Nationally, **25 to 35 percent is described as normal** and anything above 40 percent as high.
+Nationally, **25 to 35 percent is described as normal**, and anything above 40 percent as high.
 
-**Mumbai runs the highest loading in India, commonly 40 to 50 percent.** So a figure that looks alarming by national standards can be entirely ordinary here, and a Mumbai buyer comparing against a national article will worry about the wrong thing.
-
----
-
-## What the law requires now
-
-Since RERA came into force, a promoter must declare **carpet area** for a registered project, and it has to be stated in the agreement for sale. Prices are still commonly advertised against super built up, which is why the two numbers keep appearing side by side, but the carpet figure exists in writing and you are entitled to it before you commit.
-
-For a **resale** flat the position is looser, because you are buying from an individual rather than a promoter. The carpet area will be in the original agreement, which is worth asking to see.
+**Mumbai runs the highest loading in India, commonly 40 to 50 percent.** A figure that looks high by national standards can be entirely ordinary here. So judge a Mumbai flat against Mumbai, not against a national article.
 
 ---
 
-## Old building or new tower: where the loading question actually bites
+## What does the law require builders to quote?
 
-On a new launch the loading question is mostly answered for you. The carpet area has to be in the agreement, the portals now list on it, and Mumbai's common areas, commonly 40 to 50 percent on top of carpet, are the developer's to price into the rate rather than yours to discover later.
+Since RERA came into force, a promoter must declare the **carpet area** for a registered project. A promoter is the developer selling the flats. The carpet area has to be stated in the agreement for sale.
 
-On a resale flat in an older building it is the opposite. The listing gives you a built up or super built up figure because that is how the flat was sold the first time, the original agreement may or may not state carpet, and the owner often does not know the difference. So the first thing we check when a client sends a listing is not the price. It is which area the price is on. The second is the carpet figure in the original agreement, and if there is none, a measurement. Only then does a price per carpet foot exist to compare against the table below.
+Prices are still often advertised on super built up, so the two numbers keep appearing side by side. The carpet figure exists in writing, and you are entitled to see it before you commit.
+
+A **resale** flat is bought from an individual rather than a promoter, so the rule is looser. The carpet area will be in the original agreement, which is worth asking to see.
 
 ---
 
-## What flats actually cost per carpet foot in these suburbs right now
+## Old building or new tower: where does loading matter more?
 
-Below is where new launches in each of the six sub localities stood in September 2026, from the two portals that list projects with their carpet areas. These are developers' asking rates, not registered prices, and the median hides a wide spread, so the band is the honest number. The last column is the median resale asking rate over the eighteen months to July 2026, from the same source as the ready reckoner comparison.
+**On a new launch**, the loading question is mostly answered for you:
+
+- The carpet area has to be in the agreement.
+- The portals now list on carpet area.
+- Mumbai's common areas, commonly 40 to 50 percent on top of carpet, are priced into the rate by the developer.
+
+**On a resale flat in an older building**, it works the other way:
+
+- The listing usually gives a built up or super built up figure, because that is how the flat was first sold.
+- The original agreement may or may not state carpet.
+- The owner often does not know the difference.
+
+So when a client sends us a listing, we first check which area the price is quoted on. Next we find the carpet figure in the original agreement. If there is none, we measure.
+
+Only then do you have a price per carpet foot to compare with the table below.
+
+---
+
+## What do flats cost per carpet foot in these suburbs?
+
+The table shows where new launches in six sub localities stood in September 2026. The figures come from the two portals that list projects with their carpet areas.
+
+These are developers' asking rates, not registered prices. The median hides a wide spread, so the band is the more useful number.
+
+The last column is the median resale asking rate over the eighteen months to July 2026. It comes from the same source as our ready reckoner comparison.
 
 | Sub locality | New launches, asking, per sq ft carpet | Typical | Resale asking |
 |---|---|---|---|
@@ -140,36 +185,69 @@ Below is where new launches in each of the six sub localities stood in September
 | Malad West | 24,000 to 33,000 | about 28,000 | 27,000 |
 | Malad East | 22,000 to 32,000 | about 29,000 | 24,000 |
 
-A few of the projects behind those numbers, so the bands are not abstract. In Borivali West, Rishabraj Agnel at about 25,600, Royal Eksar at 27,500 and Kamla Prasanna Jeevan at 37,000. In Kandivali East, Godrej Bliss at 26,400, Shapoorji Sarova at 29,200 and Kalpataru Vienta at 40,800. In Malad West, Ahuja Linkpark at 27,300, Mahindra Marina 64 at 30,000 and Geetanjali Paradise at 36,900. In Kandivali West, Jadeite Nandanvan at 21,400, Zen Gardens at 33,400 and Ruparel Palacio at 40,700. All per square foot of carpet, all asking, all as listed in September 2026.
+A few of the projects behind those bands, all per square foot of carpet, all asking, as listed in September 2026:
 
-Two things the table shows. In Borivali the resale ask sits level with a new launch, because the older stock is well located and the new stock is small. In Kandivali East the new launch premium over resale is wide, because that is where the large branded towers are. And the spread inside any one locality is bigger than the gap between localities, which is why the first question is never which suburb but which building.
+| Sub locality | Project | Asking per sq ft carpet |
+|---|---|---|
+| Borivali West | Rishabraj Agnel | about 25,600 |
+| Borivali West | Royal Eksar | 27,500 |
+| Borivali West | Kamla Prasanna Jeevan | 37,000 |
+| Kandivali East | Godrej Bliss | 26,400 |
+| Kandivali East | Shapoorji Sarova | 29,200 |
+| Kandivali East | Kalpataru Vienta | 40,800 |
+| Malad West | Ahuja Linkpark | 27,300 |
+| Malad West | Mahindra Marina 64 | 30,000 |
+| Malad West | Geetanjali Paradise | 36,900 |
+| Kandivali West | Jadeite Nandanvan | 21,400 |
+| Kandivali West | Zen Gardens | 33,400 |
+| Kandivali West | Ruparel Palacio | 40,700 |
 
-**What this means for your budget.** At these rates a 2 BHK of 650 sq ft carpet is roughly 1.7 crore rupees in Kandivali West, 1.8 to 2 crore in Malad, Borivali East and Kandivali East, and about 2.1 crore in Borivali West, before stamp duty and registration add another 7 percent. Tell us the number you can actually spend and we will tell you which of these belts it opens, which buildings inside it are worth the money, and where the same carpet can be had for less. Getting you into the right band, and then onto the right side of it, is the job.
+What the tables show:
+
+- **In Borivali**, the resale ask sits level with a new launch. The older stock is well located and the new stock is small.
+- **In Kandivali East**, new launches carry a wide premium over resale. That is where the large branded towers are.
+- **Inside any one locality**, the spread is bigger than the gap between localities. So the first question is never which suburb, but which building.
+
+### What this means for your budget
+
+At these rates, a 2 BHK of 650 sq ft carpet costs roughly:
+
+| Area | Approximate price, 650 sq ft carpet |
+|---|---|
+| Kandivali West | 1.7 crore rupees |
+| Malad, Borivali East and Kandivali East | 1.8 to 2 crore rupees |
+| Borivali West | about 2.1 crore rupees |
+
+Stamp duty and registration add about another 7 percent on top.
+
+Tell us the number you can actually spend. We will tell you which of these belts it opens and which buildings inside it are worth the money. We will also show you where the same carpet can be had for less. Getting you into the right band, and onto the right side of it, is our job.
 
 ---
 
 ## Common questions
 
 **Is carpet area the same as usable area?**
-Close, but not identical. Carpet area under RERA includes internal partition walls, so it is slightly larger than the floor you could actually put furniture on. "Usable area" has no legal definition, so ask what somebody means when they use it.
+Close, but not identical. Carpet area under RERA includes internal partition walls, so it is slightly larger than the floor you could put furniture on. "Usable area" has no legal definition, so ask what somebody means by it.
 
 **Are balconies included in carpet area?**
-No. Under section 2(k) an exclusive balcony, verandah or open terrace is specifically excluded, along with external walls and service shafts.
+No. Under section 2(k), an exclusive balcony, verandah or open terrace is specifically excluded. So are external walls and service shafts.
 
 **What is a good loading percentage?**
-Nationally 25 to 35 percent is normal and above 40 percent is high, but Mumbai runs the highest in India at roughly 40 to 50 percent. Judge a Mumbai flat against Mumbai.
+Nationally, 25 to 35 percent is normal and above 40 percent is high. Mumbai runs the highest in India, at roughly 40 to 50 percent. Judge a Mumbai flat against Mumbai.
 
 **Do builders have to quote carpet area?**
-They have to declare it for a registered project and state it in the agreement. Nothing stops a price being advertised against super built up.
+They have to declare it for a registered project and state it in the agreement. A price can still be advertised against super built up.
 
 **What is the difference between carpet area and built up area?**
-Carpet area is the floor inside the flat, measured wall to wall, including internal partition walls but not the external walls, balconies or shafts. Built up area adds the external walls and usually the balcony, so it is typically 10 to 15 percent larger. Super built up adds your share of the lobby, lifts and stairs on top of that.
+Carpet area is the floor inside the flat, including internal partition walls but not external walls, balconies or shafts. Built up area adds the external walls and usually the balcony, so it is typically 10 to 15 percent larger. Super built up then adds your share of the lobby, lifts and stairs.
 
 **How big is a typical 2 BHK here in carpet area?**
-On the new launches listed across Borivali, Kandivali and Malad in September 2026, 2 BHK carpet areas mostly ran from about 560 to 900 square feet, with the compact end near 550 and the larger end past 1,000 in the premium towers. A 2 BHK advertised at 1,000 square feet is almost always a super built up figure.
+On new launches across Borivali, Kandivali and Malad in September 2026, 2 BHK carpet areas mostly ran from about 560 to 900 square feet. The compact end was near 550, and the larger end passed 1,000 in the premium towers. A 2 BHK advertised at 1,000 square feet is almost always a super built up figure.
 
 ---
 
 ## Before you sign
 
-Ask for the carpet area in writing, work out the price per carpet foot, and compare flats on that basis. It is the single habit that makes you a sharper buyer than most. The [carpet area calculator](/tools/carpet-area-calculator) does the arithmetic, and if you want a second pair of eyes on a flat in Borivali, Kandivali or Malad, send us the listing and we will read it with you.
+Ask for the carpet area in writing, work out the price per carpet foot, and compare flats on that basis. It is the single habit that makes you a sharper buyer.
+
+The [carpet area calculator](/tools/carpet-area-calculator) does the arithmetic. Want a second pair of eyes on a flat in Borivali, Kandivali or Malad? [Send us the listing](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20can%20you%20check%20the%20carpet%20area%20on%20this%20listing%3F%20___) and we will read it with you.

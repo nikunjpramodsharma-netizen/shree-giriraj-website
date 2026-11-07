@@ -28,6 +28,15 @@ import { interlinksForProject } from "@/lib/interlinks";
 import { getProjectLink } from "@/lib/project-links";
 import { publicPrice } from "@/lib/project-helpers";
 import { tr } from "@/lib/copy-i18n";
+import { getProjectFacts, registrationAwaited, INTEREST_NOTE, INTEREST_WA } from "@/lib/project-facts";
+
+/** The button on a project that is waiting for its MahaRERA number. */
+const INTEREST_LABEL: Record<Locale, string> = {
+  en: "Register your interest",
+  hi: "अपनी रुचि दर्ज करें",
+  mr: "तुमची आवड नोंदवा",
+  gu: "તમારો રસ નોંધાવો",
+};
 
 /**
  * Projects rebuilt on the new template (plan/10-project-page-plan.md) are
@@ -173,6 +182,11 @@ export default async function ProjectPage({
     { name: project.name, path: `/projects/${params.slug}` },
   ];
 
+  // Plain facts, an answer first block and FAQs, all restating what this
+  // page already says. English only, like the rest of the 2026 content.
+  const facts = locale === "en" ? getProjectFacts(params.slug) : undefined;
+  const awaited = registrationAwaited(params.slug);
+
   return (
     <>
       <JsonLd
@@ -191,6 +205,9 @@ export default async function ProjectPage({
             rera: project.rera,
           }),
           breadcrumbNode(locale, trail),
+          ...(facts && facts.faqs.length > 0
+            ? [faqNode(facts.faqs.map((f) => ({ question: f.q, answer: f.a })))]
+            : []),
         )}
       />
       {/*
@@ -241,11 +258,7 @@ export default async function ProjectPage({
             {project.location && (
               <p className="mt-2 text-paper/70">{project.location}</p>
             )}
-            {project.developer && (
-              <p className="mt-1 text-sm text-paper/60">
-                {t("developerLabel")}{project.developer}
-              </p>
-            )}
+            {/* No developer name anywhere on a project page (owner rule). */}
             {project.summary && (
               <p className="mt-5 max-w-[40em] text-paper/80">
                 {getLocalizedField(project.summary, locale)}
@@ -253,12 +266,14 @@ export default async function ProjectPage({
             )}
             <div className="mt-7 flex flex-wrap gap-3.5">
               <a
-                href={waLink(t("whatsappSiteVisit", { name: project.name }))}
+                href={waLink(
+                  awaited ? INTEREST_WA(project.name) : t("whatsappSiteVisit", { name: project.name }),
+                )}
                 target="_blank"
                 rel="noopener"
                 className="btn btn-bronze"
               >
-                {t("ctaPrice")}
+                {awaited ? INTEREST_LABEL[locale] : t("ctaPrice")}
               </a>
             </div>
             {project.rera && (
@@ -266,13 +281,35 @@ export default async function ProjectPage({
                 {t("reraLabel")}{project.rera}
               </p>
             )}
+            {awaited && locale === "en" && <p className="mt-6 text-sm text-paper/70">{INTEREST_NOTE}</p>}
           </div>
 
         </div>
       </section>
 
+      {/* Answer first, then the facts at a glance. */}
+      {facts && (
+        <section className="py-12">
+          <div className="wrap">
+            <div className="max-w-[68ch] rounded-r-xl border-l-[3px] border-bronze bg-paper-alt px-6 py-5">
+              <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">The short answer</div>
+              <p className="mt-2.5 text-lg text-ink">{facts.answer}</p>
+            </div>
+            <h2 className="mt-10 text-2xl text-brand-indigo md:text-3xl">{project.name} at a glance</h2>
+            <dl className="mt-5 grid max-w-[68ch] gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-2">
+              {facts.glance.map((g) => (
+                <div key={g.label} className="bg-paper p-4">
+                  <dt className="text-xs uppercase tracking-wider text-muted">{g.label}</dt>
+                  <dd className="mt-1 text-ink">{g.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
+      )}
+
       {/* Configurations */}
-      {project.configurations && project.configurations.length > 0 && (
+      {!awaited && project.configurations && project.configurations.length > 0 && (
         <section className="py-16">
           <div className="wrap">
             <div className="eyebrow">{t("configEyebrow")}</div>
@@ -372,6 +409,27 @@ export default async function ProjectPage({
                   height={450}
                   className="aspect-[4/3] w-full rounded-xl object-cover"
                 />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {facts && facts.faqs.length > 0 && (
+        <section className="py-16">
+          <div className="wrap">
+            <h2 className="text-2xl text-brand-indigo md:text-3xl">Questions about {project.name}</h2>
+            <div className="mt-6 grid items-start gap-3 md:grid-cols-2">
+              {facts.faqs.map((f) => (
+                <details key={f.q} className="group rounded-xl border border-line bg-white px-5 py-3.5 open:shadow-sm">
+                  <summary className="cursor-pointer list-none font-medium text-brand-indigo marker:content-none">
+                    <span className="flex items-center justify-between gap-4">
+                      {f.q}
+                      <span className="shrink-0 text-bronze-deep transition group-open:rotate-45">+</span>
+                    </span>
+                  </summary>
+                  <p className="mt-3 text-[0.97rem] text-ink/75">{f.a}</p>
+                </details>
               ))}
             </div>
           </div>

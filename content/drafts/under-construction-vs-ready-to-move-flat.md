@@ -1,7 +1,7 @@
 ---
-title: "Under construction or ready to move: which to buy in Mumbai, and how to decide it on paper"
+title: "Under construction or ready to move in Borivali, Kandivali and Malad: how to decide"
 metaTitle: "Under construction vs ready to move flat"
-metaDescription: "Under construction or ready to move in Mumbai? Compare GST, price, rent and timing, and the checks that decide which flat suits you."
+metaDescription: "Under construction or ready to move in Borivali, Kandivali or Malad? Compare GST, price, rent and timing, and the RERA checks that decide."
 slug: under-construction-vs-ready-to-move-flat
 category: Investing
 heroImage: /blog/under-construction.jpg
@@ -10,29 +10,24 @@ targetKeyword: under construction property
 searchVolume: 210
 competition: LOW
 funnelStage: consideration
-wordTarget: 1500
+wordTarget: 1600
 note: >
   "Under construction property" and "ready to move flats" each measured at
   210 a month in India on 16 September 2026 via DataForSEO, with "under
   construction vs ready to move" at 30. The comparison phrasing is what people
-  actually ask us, so the title carries it and the two larger terms sit in the
-  body. The common belief that under construction is always cheaper is not
-  what the data shows for Mumbai: Magicbricks' PropIndex for the first
-  quarter of 2025 put under construction homes at about 32,400 rupees per
-  square foot against 28,900 for ready ones, because new launches are the
-  premium stock. The article says so and explains the gap rather than
-  asserting a discount.
+  actually ask us, so the title carries it. The common belief that under
+  construction is always cheaper is not what the data shows for Mumbai:
+  Magicbricks' PropIndex for the first quarter of 2025 put under construction
+  homes at about 32,400 rupees per square foot against 28,900 for ready ones,
+  because new launches are the premium stock. The article says so and explains
+  the gap rather than asserting a discount. Rewritten on 7 November 2026 around
+  the three suburbs, with a side by side table.
 answer: >
-  A ready to move flat earns rent or shelters you from the first month,
-  carries no GST and can be inspected before you pay; an under construction
-  flat is paid for in stages, carries 5 percent GST, earns nothing until
-  possession and carries delivery risk, in exchange for a new building and
-  the pick of floors. In Mumbai it is not reliably cheaper: in early 2025
-  Magicbricks found new launches priced above ready homes. Since 2017 that risk can be read on paper: the MahaRERA registration
-  carries the declared possession date, seventy percent of buyers' money must
-  stay in the project's construction account, and structural defects are the
-  developer's to fix for five years. Decide on the project's file, not the
-  brochure, and on whether you can carry two housing costs until the keys.
+  A ready flat shelters or earns rent from month one, carries no GST and can
+  be inspected. An under construction flat is paid in stages, carries 5 percent
+  GST and earns nothing until possession. You get a new building and the pick
+  of floors. Neither is reliably cheaper in Mumbai. Decide on the project's
+  MahaRERA file, not the brochure.
 sources:
   - label: "Ministry of Housing and Urban Affairs, the Real Estate (Regulation and Development) Act 2016: sections 2(k), 4(2)(l)(D), 14(3) and 18"
     url: https://mohua.gov.in/cms/rera-act.php
@@ -51,6 +46,7 @@ sources:
   - label: "DataForSEO, Google search volume for under construction and ready to move terms in India, measured 16 September 2026"
     url: https://dataforseo.com
 sourcesCheckedOn: "16 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - Is it better to buy under construction or ready to move?
   - Is GST charged on a ready to move flat?
@@ -58,96 +54,139 @@ relatedFaqs:
 readNext:
   - occupancy-certificate
   - carpet-area-vs-built-up-area
+  - how-to-invest-in-real-estate-india
   - services/new-project-bookings
 ---
 
-## The short answer
+## Ready and under construction, side by side
 
-A ready to move flat earns rent or shelters you from the first month, carries no GST and can be inspected before you pay. An under construction flat is paid for in stages, carries 5 percent GST, earns nothing until possession and carries delivery risk, in exchange for a new building and the pick of floors. In Mumbai it is not reliably cheaper: in early 2025 Magicbricks found new launches priced above ready homes. Since 2017 that risk can be read on paper: the MahaRERA registration carries the declared possession date, seventy percent of buyers' money must stay in the project's construction account, and structural defects are the developer's to fix for five years. **Decide on the project's file, not the brochure, and on whether you can carry two housing costs until the keys.**
-
----
-
-## Why the two are priced differently, and which way
-
-The old rule was that under construction is cheaper, because a developer selling flats in a building that does not exist yet is asking you to lend it money for two or three years, and the discount is the interest on that loan. Like for like, in the same project, that is still true: the launch price is below the price at possession.
-
-Across a suburb it is no longer true, because the two are different products. New launches are the premium stock, with the newest specification, and ready stock is mostly older buildings. Magicbricks' PropIndex for the first quarter of 2025 put under construction homes in Mumbai at about 32,400 rupees per square foot against about 28,900 for ready ones. Square Yards' September 2026 figures for Kandivali East showed the same shape: ready to move around 25,600, under construction around 29,100. So the question is not "which is cheaper" but "which product, at which price, for which risk".
-
----
-
-## What you get with ready possession
-
-You see what you are buying. The light at four in the afternoon, the water pressure on your floor, the neighbours, the society's temperament. Rent, or your own occupation, begins the month you register. There is no GST on a flat that has its completion or occupancy certificate. And the file is complete: title chain, share certificate, society dues, conveyance position, all readable before a price is agreed.
-
-You pay for that certainty, and you pay for it all at once: the full price at registration, plus stamp duty at 6 percent for a male buyer or 5 percent for a woman in her sole name, plus registration at 1 percent capped at 30,000 rupees.
+| | Ready to move | Under construction |
+| --- | --- | --- |
+| Mumbai average price per sq ft, early 2025 (Magicbricks) | About 28,900 rupees | About 32,400 rupees |
+| Kandivali East average, September 2026 (Square Yards) | About 25,600 rupees | About 29,100 rupees |
+| GST | None, once the flat has its completion or occupancy certificate | 5 percent, or 1 percent for affordable housing, with no input tax credit |
+| Stamp duty and registration | Yes | Yes |
+| How you pay | The full price at registration | In stages as the building rises |
+| Rent or your own use | From the first month | After possession |
+| What you can inspect | The actual flat, light, water pressure and neighbours | A sample flat and plans |
+| Delivery risk | None | Yes, and RERA makes it readable |
+| Home loan | Released at purchase | Released in stages against construction |
 
 ---
 
-## What you get with under construction
+## Which one is cheaper
 
-The launch price of a project, which is below what the same flat will ask at possession. A payment plan spread across the construction stages, which suits a buyer whose money arrives over time. The pick of floors and configurations if you book early, which is what our developer relationships are for. And a new building with a new society, a new lift and no redevelopment question for thirty years.
+The old rule was that under construction is cheaper. A developer selling flats in a building that does not exist yet is asking you to lend it money for two or three years. The discount pays you interest on that loan. Like for like, in the same project, that still holds: the launch price is below the price at possession.
 
-You also take on three things. Time: no rent and no home until possession, while you may be paying rent elsewhere. Delivery: the risk that possession slips. And GST: 5 percent on the agreement value for a flat that is not affordable housing, and 1 percent where it is, with no input tax credit, under the rates that have applied since 1 April 2019.
+Across a suburb it no longer holds, because the two are different products. New launches are the premium stock, with the newest specification. Ready stock is mostly older buildings. The table shows the same gap in Mumbai as a whole and in Kandivali East.
 
----
-
-## How RERA changed the arithmetic
-
-Before May 2017, buying under construction in Maharashtra was an act of faith. The Real Estate (Regulation and Development) Act turned most of that faith into paperwork you can read.
-
-**The registration is public.** Every project of this size must be registered with MahaRERA before a single flat is sold, and the register at maharera.maharashtra.gov.in shows the sanctioned plan, the declared possession date, the developer's other projects and any complaints. Ten minutes on that page tells you more than an afternoon at the sample flat.
-
-**Seventy percent of your money is ring fenced.** Section 4(2)(l)(D) requires the developer to deposit seventy percent of the amounts realised from buyers into a separate account, to be used only for that project's land and construction. It is the rule that stops your instalment building somebody else's tower.
-
-**Carpet area has one meaning.** Section 2(k) defines it as the net usable floor area, excluding external walls, service shafts and exclusive balconies. The rate per square foot you are quoted should be on that number.
-
-**Delay has a price for the developer.** Under section 18, if possession is not given by the date in the agreement, you can withdraw with your money and interest, or stay and receive interest for every month of delay.
-
-**Defects are theirs for five years.** Section 14(3) makes structural and workmanship defects the developer's to fix, at no cost, for five years from possession.
-
-None of this removes delivery risk. It makes it measurable, and it gives you remedies. That is a very different position from 2016.
+So the question is not "which is cheaper". It is "which product, at which price, for which risk".
 
 ---
 
-## Who should buy which
+## What you get with a ready flat
 
-**Buy ready if** you need to move in or let out this year, you are paying rent that would run alongside a new instalment, you want to see the water pressure and the neighbours before you commit, or the flat you want is in an established society whose file you can read today.
+- You see what you are buying: the light at four in the afternoon, the water pressure on your floor, the neighbours, the society
+- Rent, or your own move in, starts the month you register
+- No GST, because the flat has its completion or occupancy certificate
+- A complete file you can read before agreeing a price: title chain, share certificate, society dues and conveyance position
 
-**Buy under construction if** you want a new building and the pick of floors, your money arrives over time and the payment plan fits it, you have a home to live in meanwhile, you want a particular floor or configuration that only an early booking gets, and the project's RERA page, the developer's completion record and the payment schedule all stand up. In this belt that most often means Kandivali, where the new launch activity is, and it is what our [new project bookings](/services/new-project-bookings) service is for.
+You pay the full price at registration. Stamp duty is 6 percent for a male buyer and 5 percent for a woman in sole name. Registration is 1 percent, capped at 30,000 rupees. Our [stamp duty calculator](/tools/stamp-duty-calculator-mumbai) works it out for your price.
 
-**Buy neither yet if** you cannot say which of the two you would be, because the question usually resolves the moment you answer it.
+---
+
+## What you get with an under construction flat
+
+- The launch price, which is below what the same flat will ask at possession
+- A payment plan spread across construction stages, which suits money that arrives over time
+- The pick of floors and layouts if you book early
+- A new building with a new lift and no redevelopment question for thirty years
+
+You also take on three things:
+
+- **Time.** No rent and no home until possession, while you may pay rent elsewhere.
+- **Delivery.** Possession can slip.
+- **GST.** 5 percent on the agreement value, or 1 percent for affordable housing, with no input tax credit. These rates have applied since 1 April 2019.
+
+---
+
+## How RERA changed the sums
+
+Before May 2017, buying under construction in Maharashtra was an act of faith. The Real Estate (Regulation and Development) Act, known as RERA, turned most of that faith into paperwork you can read.
+
+1. **The registration is public.** Every project of this size must be registered with MahaRERA before a flat is sold. The register at maharera.maharashtra.gov.in shows the sanctioned plan, the declared possession date, the developer's other projects and any complaints. Ten minutes there tells you more than an afternoon at the sample flat.
+2. **Seventy percent of your money is ring fenced.** Section 4(2)(l)(D) makes the developer deposit seventy percent of buyers' payments in a separate account. It may be used only for that project's land and construction.
+3. **Carpet area has one meaning.** Section 2(k) defines it as the net usable floor area, excluding external walls, service shafts and exclusive balconies. Your rate per square foot should be on that number. Our [carpet area guide](/blog/carpet-area-vs-built-up-area) explains it.
+4. **Delay has a price for the developer.** Under section 18, if possession is late, you can withdraw with your money and interest. You can also stay and receive interest for every month of delay.
+5. **Defects are theirs for five years.** Section 14(3) makes structural and workmanship defects the developer's to fix, at no cost, for five years from possession.
+
+None of this removes delivery risk. It makes the risk measurable and gives you remedies.
+
+---
+
+## Which one suits you
+
+**Buy ready if:**
+
+- You need to move in or let out this year
+- You would pay rent alongside a new instalment otherwise
+- You want to see the water pressure and the neighbours first
+- The flat you want is in an established society whose file you can read today
+
+**Buy under construction if:**
+
+- You want a new building and the pick of floors
+- Your money arrives over time and the payment plan fits it
+- You have a home to live in meanwhile
+- The project's RERA page, the developer's record of finishing and the payment schedule all stand up
+
+In this belt, new launch activity is strongest in Kandivali. Our [new project bookings](/services/new-project-bookings) service covers it, and the [projects we are showing](/projects) list what is open now.
+
+**Not sure yet?** Tell us whether you want the flat to live in, to let, or to hold. That answer usually settles the choice.
 
 ---
 
 ## The checks that decide it
 
-For an under construction flat: the MahaRERA number and everything on its page, the possession date in the agreement for sale and the delay clause beside it, the payment plan against construction stages, the floor and what it actually looks onto, and the developer's record of finishing.
+**Under construction:**
 
-For a ready flat: the occupancy certificate, the title chain and share certificate, the society's no objection and dues, the conveyance position, the redevelopment stage of the building, and carpet area measured rather than accepted.
+- The MahaRERA number and everything on its page
+- The possession date in the agreement for sale, and the delay clause beside it
+- The payment plan against construction stages
+- The floor, and what it actually looks onto
+- The developer's record of finishing
 
-Both: stamp duty and registration in rupees before you commit, and a straight answer from somebody who has been inside the building.
+**Ready:**
+
+- The occupancy certificate, which is the municipal proof that the building is fit to live in
+- The title chain and share certificate
+- The society's no objection and dues
+- The conveyance position and the redevelopment stage
+- Carpet area measured rather than accepted
+
+**Both:** stamp duty and registration in rupees before you commit, and a straight answer from someone who has been inside the building.
 
 ---
 
 ## Common questions
 
 **Is it better to buy under construction or ready to move?**
-Ready if you need the flat this year, want no GST and certainty you can see; under construction if you want a new building at its launch price, your money arrives in stages, you have somewhere to live meanwhile, and the project's RERA file and the developer's record stand up. Neither is cheaper in the abstract: in Mumbai in 2025 new launches were priced above ready homes on Magicbricks' index.
+Ready if you need the flat this year, want no GST and want to see what you buy. Under construction if you want a new building at its launch price and your money arrives in stages. You also need somewhere to live meanwhile, and the project's RERA file must stand up. Neither is cheaper in the abstract: in 2025 Magicbricks found new launches priced above ready homes in Mumbai.
 
 **Is GST charged on a ready to move flat?**
-No. GST applies to under construction property at 5 percent, or 1 percent for affordable housing, with no input tax credit, under the rates in force since 1 April 2019. A flat with its completion or occupancy certificate is outside GST. Stamp duty and registration apply to both.
+No. GST applies to under construction property at 5 percent, or 1 percent for affordable housing, with no input tax credit. A flat with its completion or occupancy certificate is outside GST. Stamp duty and registration apply to both.
 
 **What happens if a builder delays possession?**
-Under section 18 of RERA you may withdraw and recover what you paid with interest, or stay in the project and receive interest for each month of delay. The possession date that counts is the one in your registered agreement for sale, so read that clause before you sign.
+Under section 18 of RERA you may withdraw and recover what you paid with interest, or stay and receive interest for each month of delay. The date that counts is the one in your registered agreement for sale, so read that clause before you sign.
 
 **Can I get a home loan on an under construction flat?**
-Yes. Lenders release the loan in tranches against construction stages and the developer's demand letters, and most want the project on their approved list, which is itself a useful signal. Interest during construction is payable from the first disbursement.
+Yes. Lenders release the loan in stages against construction and the developer's demand letters. Most want the project on their approved list, which is itself a useful signal. Interest is payable from the first release. Our [home loan EMI calculator](/tools/home-loan-emi-calculator) shows the monthly figure.
 
 **Does the floor matter more in a new tower?**
-In a tall tower the floor band moves the price more than a small difference in carpet area does, and the view from the sample flat is rarely the view from yours. We show you what your specific floor looks onto before you book.
+In a tall tower the floor band moves the price more than a small difference in carpet area does. The view from the sample flat is rarely the view from yours. We show you what your floor looks onto before you book.
 
 ---
 
 ## Before you book either
 
-Tell us which project or building you are looking at and whether you are buying to live in or to hold. We will read the RERA page or the society's file with you, put stamp duty, registration and any GST in rupees, and tell you plainly which of the two you are. Free, no obligation, usually the same day.
+Tell us which project or building you are looking at, and whether you are buying to live in or to hold. We will read the RERA page or the society's file with you. We will put stamp duty, registration and any GST in rupees, and help you see which of the two fits. It is free, with no obligation, and usually the same day. Start with our [new project bookings](/services/new-project-bookings) page.

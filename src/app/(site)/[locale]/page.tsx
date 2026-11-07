@@ -321,20 +321,44 @@ export default async function HomePage({
   };
 
 
-  // Project cards no longer show masked prices like "₹2.** Cr" (they say
-  // "Price sheet on WhatsApp" since 7 Nov 2026), so the CMS question that
-  // quoted the mask is reworded here. The CMS write token is retired.
+  // Project cards no longer show masked prices like "₹2.** Cr" (they show a
+  // rough "From about ₹2 Cr" since 7 Nov 2026), so the CMS question that
+  // quoted the mask, and its answer about masking, are reworded here. The
+  // CMS write token is retired.
   const MASK_QUESTION: Record<"en" | "hi" | "mr" | "gu", string> = {
     en: "Why don't you show exact project prices online?",
     hi: "आप प्रोजेक्ट की सटीक कीमतें ऑनलाइन क्यों नहीं दिखाते?",
     mr: "तुम्ही प्रकल्पांच्या अचूक किमती ऑनलाइन का दाखवत नाही?",
     gu: "તમે પ્રોજેક્ટની ચોક્કસ કિંમતો ઓનલાઇન કેમ નથી બતાવતા?",
   };
+  const MASK_ANSWER: Record<"en" | "hi" | "mr" | "gu", string> = {
+    en: "We show a rough \"from about\" price online because the exact figure changes with the floor, the view and what is still available. Message us on WhatsApp and we will send the current price sheet for the unit you like.",
+    hi: "हम ऑनलाइन एक मोटा \"लगभग से शुरू\" भाव दिखाते हैं, क्योंकि सटीक कीमत मंज़िल, व्यू और उपलब्धता के साथ बदलती है। WhatsApp पर मैसेज करें, हम आपकी पसंद के यूनिट की ताज़ा प्राइस शीट भेज देंगे।",
+    mr: "आम्ही ऑनलाइन एक अंदाजे \"सुमारे पासून\" दर दाखवतो, कारण अचूक किंमत मजला, व्ह्यू आणि उपलब्धतेनुसार बदलते. WhatsApp वर मेसेज करा, आम्ही तुम्हाला आवडलेल्या युनिटची ताजी प्राइस शीट पाठवू.",
+    gu: "અમે ઓનલાઇન એક અંદાજિત \"લગભગ થી શરૂ\" ભાવ બતાવીએ છીએ, કારણ કે ચોક્કસ કિંમત માળ, વ્યૂ અને ઉપલબ્ધતા સાથે બદલાય છે. WhatsApp પર મેસેજ કરો, અમે તમને ગમતા યુનિટની તાજી પ્રાઇસ શીટ મોકલીશું.",
+  };
+  // English answers saved in the CMS as one 40 plus word sentence, split for
+  // reading on a phone (owner's rule: no sentence over 25 words). Keyed by the
+  // start of the CMS text; the other languages keep their own text.
+  const EN_ANSWER_SPLIT: [string, string][] = [
+    [
+      "You'll need the seller's original title deed",
+      "You need the seller's original title deed and the chain of past sale agreements. You also need the society's share certificate and its No Objection Certificate (NOC), and the latest property tax and maintenance receipts. Last, an encumbrance certificate shows the flat is free of loans or legal disputes. We verify all of this before you pay any token amount.",
+    ],
+  ];
   const shownFaqs = (faqs ?? []).map((f) => {
     const q = getLocalizedField(f.question, "en") ?? "";
-    return q.includes("₹2.**")
-      ? { ...f, question: { ...(f.question as object), ...MASK_QUESTION } as Faq["question"] }
-      : f;
+    const a = getLocalizedField(f.answer, "en") ?? "";
+    const split = EN_ANSWER_SPLIT.find(([start]) => a.startsWith(start));
+    if (split) f = { ...f, answer: { ...(f.answer as object), en: split[1] } as Faq["answer"] };
+    const fixQ = q.includes("₹2.**");
+    const fixA = fixQ || /mask exact pricing/i.test(a);
+    if (!fixQ && !fixA) return f;
+    return {
+      ...f,
+      ...(fixQ ? { question: { ...(f.question as object), ...MASK_QUESTION } as Faq["question"] } : {}),
+      ...(fixA ? { answer: { ...(f.answer as object), ...MASK_ANSWER } as Faq["answer"] } : {}),
+    };
   });
 
   // Only the FAQs actually rendered on this page go into the markup. The

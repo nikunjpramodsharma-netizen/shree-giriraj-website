@@ -1,7 +1,7 @@
 ---
 title: "MHADA office in Bandra East: which desk handles your flat, and what to take"
-metaTitle: "MHADA office Bandra East: address, timings"
-metaDescription: "Griha Nirman Bhavan, Kalanagar, Bandra East, open 9:45 am to 6:15 pm on working days. Which Estate Manager handles your area and what to carry."
+metaTitle: "MHADA office Bandra: address, hours, phone"
+metaDescription: "Griha Nirman Bhavan, Kalanagar, Bandra East, open 9:45 am to 6:15 pm. Phone 022 6640 5000. Which Estate Manager handles your area."
 slug: mhada-office-bandra
 category: MHADA
 heroImage: /premium/u/tower-06.jpg
@@ -21,10 +21,9 @@ note: >
   of 13 July 2015 and, for the NOC for rent, the Aaple Sarkar portal.
 answer: >
   MHADA's head office is Griha Nirman Bhavan, Kalanagar, Bandra East,
-  Mumbai 400051, main number 022 6640 5000. Transfers and NOCs for Mumbai
-  Board flats are handled there by the Estate Manager for your area, from
-  Borivali, Malad and Goregaon in the west to Kurla, Ghatkopar and Mulund in
-  the east, so the first step is to know which desk your flat belongs to.
+  Mumbai 400051, open 9:45 am to 6:15 pm. The main number is 022 6640 5000.
+  The Estate Manager for your area handles transfers and NOCs for Mumbai
+  Board flats. The first step is knowing which desk your flat belongs to.
 sources:
   - label: "MHADA, Contacts, head office working hours and public meeting times"
     url: https://www.mhada.gov.in/en/contacts
@@ -56,21 +55,34 @@ readNext:
 
 ## The short answer
 
-MHADA's head office is Griha Nirman Bhavan, Kalanagar, Bandra East, Mumbai 400051, main number 022 6640 5000. Transfers and NOCs for Mumbai Board flats are handled there by the Estate Manager for your area, from Borivali, Malad and Goregaon in the west to Kurla, Ghatkopar and Mulund in the east. **The first step is knowing which desk your flat belongs to.**
+MHADA's head office is Griha Nirman Bhavan, Kalanagar, Bandra East, Mumbai 400051, open 9:45 am to 6:15 pm. The main number is 022 6640 5000. The Estate Manager for your area handles transfers and NOCs for Mumbai Board flats. **The first step is knowing which desk your flat belongs to.**
+
+| MHADA head office, Bandra East | Details |
+| --- | --- |
+| Address | Griha Nirman Bhavan, Kalanagar, Bandra East, Mumbai 400051 |
+| Working hours | 9:45 am to 6:15 pm on working days |
+| Main phone | 022 6640 5000 |
+| Who you meet | The Mumbai Board's Estate Manager for your area |
+| Public meeting times | Set by each officer, for example 3 pm to 5 pm every working day for the Mumbai Board's Chairman |
+| Source | [MHADA contacts page](https://www.mhada.gov.in/en/contacts), read 3 October 2026 |
+
+Meeting times change when an officer is on tour. Check the contacts page on the day you go.
 
 ---
 
-## One building, many desks
+## Which desk handles your flat?
 
-Griha Nirman Bhavan is the head office of MHADA, the Authority and its boards, including the Mumbai Board. For a flat allotted by the Mumbai Board, the work that matters to an owner sits with the Board's **Estate Managers**. Each one looks after the MHADA flats in a part of the city, and each is the officer who receives your transfer or NOC application.
+Griha Nirman Bhavan is the head office of MHADA, the Authority, and its boards, including the Mumbai Board. For a flat allotted by the Mumbai Board, the work that matters to an owner sits with the Board's **Estate Managers**. Each looks after the MHADA flats in one part of the city. Each is the officer who receives your transfer or NOC application.
 
-So before you travel, find your flat's Estate Manager. Your allotment letter and your latest rent receipt usually name the division. If they do not, the society office will know, and if the allotment letter itself is missing, our guide to the [MHADA allotment letter](/blog/mhada-allotment-letter) shows how to get a certified copy.
+Find your flat's Estate Manager before you travel. Your allotment letter and your latest rent receipt usually name the division. If they do not, the society office will know.
+
+If the allotment letter itself is missing, our guide to the [MHADA allotment letter](/blog/mhada-allotment-letter) shows how to get a certified copy.
 
 ---
 
-## Which Estate Manager handles your area
+## Which Estate Manager handles your area?
 
-The Mumbai Board's contacts page lists an Estate Manager for each of these divisions, each with a direct phone line and email:
+The Mumbai Board's contacts page lists an Estate Manager for each of these divisions. Each has a direct phone line and email:
 
 - Borivali
 - Malad
@@ -84,25 +96,49 @@ The Mumbai Board's contacts page lists an Estate Manager for each of these divis
 - Ghatkopar
 - Mulund
 
-There are also separate Estate Managers for the World Bank project colonies, for marketing (new allotments from the lottery) and for the BDD chawl redevelopment at Worli, N. M. Joshi Marg and Naigaon. Names and numbers change with postings, so check the [Mumbai Board contacts page](https://www.mhada.gov.in/en/contacts/mumbai-board) on the day you go.
+There are also separate Estate Managers for three other areas:
+
+- The World Bank project colonies
+- Marketing, which covers new allotments from the lottery
+- The BDD chawl redevelopment at Worli, N. M. Joshi Marg and Naigaon
+
+Names and numbers change with postings. Check the [Mumbai Board contacts page](https://www.mhada.gov.in/en/contacts/mumbai-board) on the day you go.
 
 ---
 
-## What to take for the common jobs
+## What should you take for the common jobs?
 
-The Board's forms are published on its E-MITRA page: Form 1 for transfer of a tenement or plot, Form 2 for a commercial unit, Form 3 for a no dues certificate, Form 4 for an NOC for a mortgage and Form 5 for sale permission. Download the one you need and fill it in before you go.
+The Board's forms are published on its E-MITRA page. Download the one you need and fill it in before you go.
 
-**For a transfer of tenancy**, whether on a sale or to a legal heir, the Board's own list asks for the application, the reason for the transfer, the society's NOC (or an affidavit that no society exists), an affidavit that the applicant's family holds no other tenement in Mumbai, proof of income, attested photographs, the latest rent receipt showing no arrears, and the receipted transfer charges. For a transfer on death, add the death certificate and a heirship certificate.
+| Job | Form |
+| --- | --- |
+| Transfer of a tenement or plot | Form 1 |
+| Commercial unit | Form 2 |
+| No dues certificate | Form 3 |
+| NOC for a mortgage | Form 4 |
+| Sale permission | Form 5 |
 
-**For an NOC for rent or for a mortgage**, the form itself lists what to attach. Read it the day before, and gather everything it names.
+**For a transfer of tenancy,** whether on a sale or to a legal heir, the Board's own list asks for:
+
+- The application and the reason for the transfer
+- The society's NOC, or an affidavit that no society exists
+- An affidavit that the applicant's family holds no other tenement in Mumbai
+- Proof of income
+- Attested photographs
+- The latest rent receipt showing no arrears
+- The receipted transfer charges
+
+For a transfer on death, add the death certificate and a heirship certificate.
+
+**For an NOC for rent or for a mortgage,** the form itself lists what to attach. Read it the day before, and gather everything it names.
 
 Carry the originals and a set of self attested copies of everything. That one habit saves a second trip more often than anything else.
 
 ---
 
-## How long the Board has to decide
+## How long does the Board have to decide?
 
-MHADA's citizen services are notified under the Maharashtra Right to Public Services Act, which fixes the working days the Board has to deliver each one:
+MHADA's citizen services are notified under the Maharashtra Right to Public Services Act. It fixes the time the Board has to deliver each one:
 
 | Service | Time limit |
 | --- | --- |
@@ -113,28 +149,30 @@ MHADA's citizen services are notified under the Maharashtra Right to Public Serv
 | Transfer of a residential tenement or plot | 23 working days |
 | Regularisation of a residential tenement or plot | 23 working days |
 
-The clock runs from a complete application, which is why the file matters more than the visit. If a service is refused or runs past its time limit, the Act gives you a first appeal to the Executive Engineer and, for Mumbai Board residential services, a second to the Joint Chief Officer.
+The clock runs from a complete application. So the file matters more than the visit.
+
+If a service is refused or runs past its time limit, the Act gives you a first appeal to the Executive Engineer. For Mumbai Board residential services, the second appeal goes to the Joint Chief Officer.
 
 ---
 
-## Before you make the trip
+## Can you start before you make the trip?
 
-Since 1 April 2019, new applications for MHADA's notified services have gone through the state's Aaple Sarkar portal, so much of the work can start from home. Our guide to [MHADA NOC online](/blog/mhada-noc-online) walks through which services are there.
+Yes. Since 1 April 2019, new applications for MHADA's notified services have gone through the state's Aaple Sarkar portal. Much of the work can start from home. Our guide to [MHADA NOC online](/blog/mhada-noc-online) walks through which services are there.
 
-For the visit itself, MHADA's contacts page lists working hours of 9:45 am to 6:15 pm at the head office, and the officers' own times for meeting the public, such as 3 pm to 5 pm every working day for the Mumbai Board's Chairman. A complete file is what makes one visit enough.
+For the visit itself, a complete file is what makes one visit enough.
 
 ---
 
 ## Common questions
 
 **What are the MHADA office timings in Bandra?**
-MHADA's contacts page lists working hours of 9:45 am to 6:15 pm at Griha Nirman Bhavan, with separate afternoon slots when senior officers meet the public. Check the page on the day, as meeting times change when an officer is on tour.
+MHADA's contacts page lists working hours of 9:45 am to 6:15 pm at Griha Nirman Bhavan. Senior officers meet the public in separate afternoon slots. Check the page on the day, as meeting times change when an officer is on tour.
 
 **What is the MHADA Bandra phone number?**
 The main number for MHADA's head office is 022 6640 5000. Each Mumbai Board Estate Manager has a direct line and an email address, listed on the Board's contacts page.
 
 **Which office handles a MHADA flat transfer?**
-The Estate Manager of the Mumbai Board for the area your flat is in, at Griha Nirman Bhavan, Kalanagar, Bandra East. The application goes to that Estate Manager with the Board's document list.
+The Mumbai Board's Estate Manager for the area your flat is in, at Griha Nirman Bhavan, Kalanagar, Bandra East. The application goes to that Estate Manager with the Board's document list.
 
 **Can I apply without visiting the office?**
 Many notified services, including the NOC for rent, are applied for online through Aaple Sarkar. Keep your originals ready in case the Estate Manager's office asks to see them.
@@ -146,4 +184,6 @@ New allotments from the lottery sit with the Mumbai Board's marketing Estate Man
 
 ## Let us make the trip
 
-If you would rather not spend a working day in Kalanagar, our [MHADA paperwork service](/services/mhada-paperwork) prepares the complete file against the Board's own list, takes it to the right Estate Manager and follows it until it is decided, for MHADA flats anywhere in Mumbai. Tell us the flat and the job on WhatsApp, and we will tell you what the file needs, free, usually the same day.
+If you would rather not spend a working day in Kalanagar, our [MHADA paperwork service](/services/mhada-paperwork) prepares the complete file against the Board's own list. We take it to the right Estate Manager and follow it until it is decided, for MHADA flats anywhere in Mumbai.
+
+Tell us the flat and the job on WhatsApp, and we will tell you what the file needs, free, usually the same day.

@@ -13,7 +13,7 @@
   "hero": {
     "headingPart1": "Buy, rent or invest",
     "headingEm": "with advice you can trust.",
-    "body": "We know which societies have parking, and which have water at six in the morning.",
+    "body": "A MahaRERA registered agency in Borivali West, in real estate since 1996. We find flats to buy or rent in Borivali, Kandivali and Malad. We know which societies have parking, and which have water at six in the morning.",
     "ctaBook": "Book a consultation",
     "ctaWhatsapp": "Get options on WhatsApp",
     "whatsappPromise": "Tell us what you need and we reply with options that fit, usually the same day. Free, no obligation.",
@@ -27,22 +27,22 @@
   },
   "services": {
     "eyebrow": "What we do",
-    "heading": "One team for every kind of move",
+    "heading": "Property services in Borivali, Kandivali and Malad",
     "metaDescription": "Resale, rentals, new launches, investment advice, shops, MHADA paperwork and interiors in Borivali, Kandivali and Malad, from one office.",
     "resaleTitle": "Resale flats",
-    "resaleBody": "Buy or sell resale flats in Borivali, Kandivali and Malad with fair pricing, verified carpet area and no hidden charges at registration.",
+    "resaleBody": "Buy or sell a resale flat in Borivali, Kandivali or Malad. Fair pricing, carpet area measured, and no surprise charges at registration.",
     "rentalsTitle": "Rentals",
-    "rentalsBody": "1 BHK to 3 BHK flats for rent across Borivali, Kandivali and Malad, tenants and owners matched quickly, with registered rent agreements sorted.",
+    "rentalsBody": "1 BHK to 3 BHK flats for rent across Borivali, Kandivali and Malad. Owners verified first, and a registered rent agreement handled for you.",
     "newProjectTitle": "New project bookings",
-    "newProjectBody": "Early access to new and upcoming residential projects across Borivali, Kandivali and Malad through our direct builder network, often before they reach the open market.",
+    "newProjectBody": "Early access to new launches in Borivali, Kandivali and Malad through developers we deal with directly, often before the open market.",
     "investmentAdvisoryTitle": "Property investment advisory",
-    "investmentAdvisoryBody": "Guidance for investors buying in Borivali, Kandivali and Malad to hold rather than to live in: micro market assessment, rental yield arithmetic on the actual flat, title checks and negotiation.",
+    "investmentAdvisoryBody": "For investors buying in Borivali, Kandivali and Malad to hold. We assess the pocket and the building, work out the rent, check the title and negotiate.",
     "commercialTitle": "Commercial & plots",
-    "commercialBody": "Shops, showrooms, office space and plots for sale or rent in Borivali, Kandivali and Malad, for businesses that need premises here and investors buying a unit to let.",
+    "commercialBody": "Shops, showrooms, offices and plots to buy or rent in Borivali, Kandivali and Malad. For businesses that need premises and investors buying to let.",
     "mhadaTitle": "MHADA paperwork",
     "mhadaBody": "Transfer of tenement, no objection certificates for sale, rent and mortgage, transfer to heirs and regularisation for MHADA flats anywhere in Mumbai.",
     "interiorsTitle": "Interior design & civil work",
-    "interiorsBody": "Local interior designers and a civil work team in Borivali, Kandivali and Malad, fit outs, renovation and civil work to get your home move in ready.",
+    "interiorsBody": "Interior design, fit outs and civil work for flats in Borivali, Kandivali and Malad. An itemised estimate first, and the society's permission handled.",
     "metaTitle": "Property services in Borivali and Kandivali"
   },
   "serviceCta": {
@@ -107,14 +107,14 @@
     "legendYes": "Yes",
     "legendPartial": "Sometimes",
     "legendNo": "No",
-    "footnote": "Portals list what owners and agents upload and charge for visibility; NoBroker connects you to owners directly and charges for its plans and services up front. Both are useful for seeing what exists. Neither has stood in the flat."
+    "footnote": "Portals list what owners and brokers upload, and charge for visibility. NoBroker connects you to owners directly, and charges for its plans and services up front. Both are useful for seeing what exists. Neither has stood in the flat."
   },
   "handover": {
     "eyebrow": "Where it ends",
     "heading": "Every enquiry ends with someone holding their own keys"
   },
   "projectsGrid": {
-    "eyebrow": "Now Booking",
+    "eyebrow": "New Projects",
     "heading": "Featured launches across the western suburbs",
     "viewAll": "View all projects →",
     "viewDetails": "View details →"
@@ -136,8 +136,8 @@
     "borivaliBody": "Our home turf for property in Borivali West and East: resale flats, rentals and investment advice, all handled locally.",
     "kandivaliBody": "Real estate in Kandivali off M.G. Road and Link Road: premium new launches, resale flats and family homes.",
     "maladBody": "Flats in Malad near Mindspace and the Link Road corridor, growing residential and commercial options.",
-    "dahisarBody": "Homes in Dahisar along the Western Express Highway, a fast growing suburb just north of Borivali with good connectivity and family friendly pricing.",
-    "goregaonBody": "Flats in Goregaon near Oberoi Mall and Film City, a well connected suburb with strong resale demand and easy access to the Aarey corridor."
+    "dahisarBody": "Homes in Dahisar along the Western Express Highway. A fast growing suburb just north of Borivali, well connected and family friendly on price.",
+    "goregaonBody": "Flats in Goregaon near Oberoi Mall and Film City. A well connected suburb with strong resale demand and easy access to the Aarey corridor."
   },
   "faq": {
     "eyebrow": "Common questions",
@@ -147,7 +147,7 @@
     "eyebrow": "Let's talk",
     "headingPart1": "Tell us what you're ",
     "headingEm": "looking for.",
-    "body": "Share a few details and we'll get back with matching options, honest pricing and the next available site visit, usually the same day.",
+    "body": "Share a few details. We get back with matching options, honest pricing and the next available site visit, usually the same day.",
     "namePlaceholder": "Your name",
     "phonePlaceholder": "Phone number",
     "areaPlaceholder": "Preferred area (e.g. Borivali West)",
@@ -229,7 +229,7 @@
   "blogPage": {
     "eyebrow": "Blog",
     "heading": "Property insights for Borivali, Kandivali & Malad",
-    "body": "Practical home buying tips and local market notes for Borivali, Kandivali and Malad, written by people who work here every day.",
+    "body": "Plain answers on buying, renting, MHADA paperwork and investing in Borivali, Kandivali and Malad. Each article opens with the short answer.",
     "emptyState": "No posts published yet. Add your first article in the ",
     "studioLink": "Studio",
     "englishOnly": "Our articles are published in English.",

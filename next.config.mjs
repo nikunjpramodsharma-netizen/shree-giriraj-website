@@ -89,6 +89,13 @@ const nextConfig = {
         destination: "/:locale/services/investment-advisory",
         permanent: true,
       },
+      // Two investing articles were merged into their neighbours on
+      // 7 November 2026. The rental income post became part of the rental
+      // yield post, and the REIT post became part of the fractional ownership
+      // post, now titled "REIT, SM REIT or a flat". The old drafts are kept in
+      // content/drafts/_parked. Permanent, so any link or ranking carries over.
+      { source: "/blog/rental-income-property-mumbai", destination: "/blog/rental-yield-mumbai", permanent: true },
+      { source: "/blog/reit-vs-buying-a-flat-india", destination: "/blog/fractional-ownership-real-estate-india", permanent: true },
       // English is unprefixed under localePrefix "as-needed", so /en/* would
       // otherwise become a complete duplicate of the English site.
       { source: "/en", destination: "/", permanent: true },

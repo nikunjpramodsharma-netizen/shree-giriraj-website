@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Link } from "@/i18n/navigation";
 import EnglishLink from "next/link";
-import { AREA_PAGES_READY, type AreaPanel } from "@/lib/homepage-content";
+import { AREA_PAGES_READY, AREA_STATS_SOURCE, type AreaPanel } from "@/lib/homepage-content";
 import { tr } from "@/lib/copy-i18n";
 import { AutoScene, type Scene } from "@/components/motion/AutoScene";
 
@@ -63,6 +63,7 @@ export function AreaSwitcher({
               </div>
             ))}
           </dl>
+          <p className="mt-3 text-[0.7rem] text-paper/45">{tr(locale, AREA_STATS_SOURCE)}</p>
 
           <p className="mt-5 border-l-2 border-bronze pl-3.5 text-[0.94rem] text-paper/70">
             <b className="text-white">{tr(locale, "What to watch:")}</b> {panel.watch}

@@ -74,7 +74,8 @@ export function AutoScene({
               <Image
                 key={sc.title}
                 src={sc.image.src}
-                alt={k === i ? sc.image.alt : ""}
+                alt={sc.image.alt}
+                aria-hidden={k !== i}
                 fill
                 sizes="(min-width: 1024px) 420px, (min-width: 768px) 45vw, 100vw"
                 className="object-cover transition-opacity duration-700"

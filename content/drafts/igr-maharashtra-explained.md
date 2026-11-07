@@ -1,7 +1,7 @@
 ---
 title: "IGR Maharashtra: what it is and how to actually use it"
 metaTitle: "IGR Maharashtra: eSearch, token, full form"
-metaDescription: "IGR Maharashtra, the Inspector General of Registration: free eSearch of registered flats, ready reckoner value, token booking and official links."
+metaDescription: "IGR Maharashtra, the Inspector General of Registration: free eSearch of a flat in 6 steps, ready reckoner value, token booking and official links."
 slug: igr-maharashtra-explained
 category: Paperwork
 heroImage: /blog/igr-maharashtra.jpg
@@ -14,13 +14,16 @@ wordTarget: 2400
 answer: >
   IGR Maharashtra is the Department of Registration and Stamps, the state body
   that registers property documents and collects stamp duty. IGR stands for
-  Inspector General of Registration, the officer who heads it. Its website is
-  where you value a property for stamp duty, search registered documents, book
-  a registration appointment, register a rent agreement and download certified
-  copies. Almost every property transaction in the state passes through it.
+  Inspector General of Registration, the officer who heads it. Its website,
+  igrmaharashtra.gov.in, is where you check the ready reckoner rate, search
+  registered documents, book a registration slot and register a rent agreement.
 sources:
-  - label: Department of Registration and Stamps, Government of Maharashtra
+  - label: "Department of Registration and Stamps, Government of Maharashtra: online services listed on the home page (read 7 November 2026)"
     url: https://igrmaharashtra.gov.in/
+  - label: "Department of Registration and Stamps, e-Search user manual (read 7 November 2026)"
+    url: https://igrmaharashtra.gov.in/pdf/onlineservices/eSearchUserManual.pdf
+  - label: "Department of Registration and Stamps, e-Search: documents registered on computer since 2002 (read 7 November 2026)"
+    url: https://igrmaharashtra.gov.in/Marathi/esearch_about
   - label: Landeed, searching Index 2 records on the IGR Maharashtra portal
     url: https://web.landeed.com/maharashtra/index-2-search-by-name
 sourcesCheckedOn: "8 September 2026"
@@ -37,80 +40,95 @@ readNext:
 
 ## The short answer
 
-IGR Maharashtra is the Department of Registration and Stamps, the state body that registers property documents and collects stamp duty. IGR stands for Inspector General of Registration, the officer who heads it. Its website is where you value a property for stamp duty, search registered documents, book a registration appointment, register a rent agreement and download certified copies. **Almost every property transaction in the state passes through it.**
+IGR Maharashtra is the Department of Registration and Stamps, the state body that registers property documents and collects stamp duty. IGR stands for Inspector General of Registration, the officer who heads it. **Its website, igrmaharashtra.gov.in, is where you check the ready reckoner rate, search registered documents, book a registration slot and register a rent agreement.**
 
 ---
 
-## What the department actually does
-
-Two jobs, and people mix them up. It **collects stamp duty**, which is a tax on the transfer of property. And it **registers documents**, which is the act of putting your transaction on the public record. You pay the first to be allowed to do the second, and a sale is not legally complete until both have happened.
-
-The sub registrar office is where registration physically takes place. IGR is the department that sub registrar offices belong to.
+**The official site is igrmaharashtra.gov.in.** Every service below opens from its home page, so start there rather than from a search result.
 
 ---
 
-## The services worth knowing about
+## What does the department do?
 
-These are the modules on the portal, using the names they actually appear under, checked against the site on 1 September 2026. Government portals do rename things, so if a name below has moved, the service itself will still be there.
+It has two jobs:
 
-**e-ASR** is the Annual Statement of Rates. This is the ready reckoner: the government's own valuation for every area, used to work out stamp duty. If the agreement value is lower than this, duty is charged on this instead.
+1. **It collects stamp duty**, a state tax on the transfer of property.
+2. **It registers documents**, which puts your transaction on the public record.
 
-**e-Search** lets you search registered documents. This is how you find out what has previously been registered against a property, which matters more than most buyers realise.
+You pay the first so that the second can happen. A sale is complete only when both are done.
 
-**e-Registration 2.0** is online registration for certain document types.
-
-**e-Leave and License** registers a rent agreement online, without going to the office. Worth knowing if you are letting a flat, because a great many people still do this on paper unnecessarily.
-
-**e-Step In** books your token, so you are not waiting at the sub registrar office without an appointment.
-
-**e-Praman** issues digitally certified copies of registered documents.
-
-**Stamp duty refund** handles claims where duty was paid and the transaction did not complete.
+The **sub registrar office** is the local office where registration takes place. Every sub registrar office belongs to this department.
 
 ---
 
-## When you will actually use it
+## Which IGR Maharashtra services will you use?
 
-| Situation | What you use |
-|---|---|
-| Working out stamp duty before agreeing a price | e-ASR |
-| Checking what is registered against a flat | e-Search |
-| Registering a rent agreement | e-Leave and License |
-| Booking your registration slot | e-Step In |
-| Getting a copy of an old agreement | e-Praman |
+| Service on the portal | What it does | When you use it |
+|---|---|---|
+| **e-ASR** | Shows the ready reckoner rate, the government's value for each zone | Before you agree a price |
+| **e-Search** and the free search service | Finds documents registered against a flat, with their Index 2 | Before you pay a token |
+| **e-Registration 2.0** | Registers certain document types online | For the documents it covers |
+| **e-Leave and License 2.0** | Registers a rent agreement online, with no office visit | When you let or rent a flat |
+| **e-Step In** | Books your slot, called a token, at the sub registrar office | Before registration day |
+| **e-Praman** | Issues digitally certified copies of registered documents | When a bank or court needs a certified copy |
+| **Stamp duty refund** | Handles claims where duty was paid but the sale did not complete | If a deal falls through |
+
+These are the names the services carry on the portal, checked on 7 November 2026. Government portals do rename things, but the service itself stays.
+
+---
+
+## How to search a property on IGR Maharashtra (e-Search)
+
+These steps follow the department's own e-Search user manual.
+
+1. **Open the free search.** On the IGR home page it is listed as the free service (विनाशुल्क सेवा).
+2. **Choose search by property details, and select the district.** Borivali, Kandivali and Malad are in Mumbai Suburban.
+3. **Type the first three letters of the area in English** and click Submit. Pick the village from the list.
+4. **Enter the property number**: the CTS, survey, plot or flat number, in digits only.
+5. **Click Search.** Results can take a few minutes to load.
+6. **Click Index2 on any result** to open its one page summary. Allow pop ups in your browser.
+
+e-Search covers documents registered on computer since 2002. Powers of attorney and wills do not appear. The [Index 2 guide](/blog/index-2-property-document) covers what to do if nothing shows.
 
 ---
 
 ## What we use it for before a client commits
 
-Three things, every time.
+Three checks, every time:
 
-The first is e-Search, for the flat's registered history. Every registered document produces an Index 2, and searching the property rather than the seller's name shows every one of them: each sale, mortgage, long lease, gift or release. It takes minutes and it is the first place a mismatch between the paper and the person shows up.
+1. **e-Search, for the flat's registered history.** Every registered document has an Index 2. Searching by the property, not the seller's name, shows each sale, mortgage, long lease, gift or release.
+2. **e-ASR, for the reckoner value of the building.** Stamp duty is paid on the higher of the agreed price and this value. We check it before a price is agreed, and again if a deal runs past 1 April, when the rates change.
+3. **The [stamp duty calculator for Mumbai](/tools/stamp-duty-calculator-mumbai)**, so the buyer knows the full outlay, duty plus registration, before committing.
 
-The second is the annual statement of rates, for the reckoner value of the specific building. Stamp duty is paid on the higher of the agreed price and this figure, so it is checked before a price is agreed, not after, and checked again if a deal runs past 1 April, when the rates change.
+Three habits make your own searches more reliable:
 
-The third is the [stamp duty calculator for Mumbai](/tools/stamp-duty-calculator-mumbai), so the buyer knows the whole outlay, duty plus registration, before committing to anything.
-
-Where people go wrong using the portal themselves is predictable. Searching by name and missing a document because the spelling on the deed differs from the spelling they typed. Picking the wrong sub registrar office or the wrong year and concluding there is nothing to find. And treating the free e-Search download as a certified copy, which it is not: a bank or a court will want the certified copy from the sub registrar office.
+- **Search by property number, not by name.** The spelling on a deed often differs from the one you type.
+- **Check the sub registrar office and the year** before deciding there is nothing to find.
+- **Use the free download for reading only.** A bank or a court will want a certified copy, from the sub registrar office or e-Praman.
 
 ---
 
 ## Common questions
 
+**What is the full form of IGR?**
+Inspector General of Registration. In Maharashtra the head of the department is the Inspector General of Registration and Controller of Stamps. That is why the department and its website are known as IGR.
+
+**What is the official IGR Maharashtra website?**
+igrmaharashtra.gov.in. The ready reckoner, e-Search, e-Step In, e-Praman and the online rent agreement service all open from its home page.
+
 **Is IGR Maharashtra the same as the sub registrar office?**
-No. IGR is the department. The sub registrar office is the local office where registration actually happens, and every sub registrar office belongs to it.
+No. IGR is the department. The sub registrar office is the local office where registration happens, and every one of them belongs to the department.
 
 **Can I register a property entirely online?**
-Partly. The department runs e-Registration for certain document types, and a leave and licence agreement can be registered online end to end. A sale of immovable property generally still requires attendance at the sub registrar office, with the token booked in advance through e-Step In.
+Partly. e-Registration covers certain document types, and a leave and licence agreement can be registered online from start to finish. A flat sale generally still needs a visit to the sub registrar office, with the token booked through e-Step In.
 
 **What does e-ASR do?**
-It gives the government's own valuation for an area, which is one half of the stamp duty calculation.
-
-**What is the full form of IGR?**
-Inspector General of Registration. In Maharashtra the head of the department is the Inspector General of Registration and Controller of Stamps, which is why the department and its website are known as IGR.
+It gives the government's own value for each zone, the ready reckoner rate. Stamp duty is charged on that value or the agreed price, whichever is higher.
 
 ---
 
 ## Before you transact
 
-Check the reckoner rate before you agree a price, and run an e-Search before you pay a token. Both are free and both put you in a stronger position at the table. If you would rather we did it for a flat you are considering in Borivali, Kandivali or Malad, send us the building and we will come back with what we find.
+Check the reckoner rate before you agree a price, and run an e-Search before you pay a token. Both are free, and both put you in a stronger position at the table.
+
+Considering a flat in Borivali, Kandivali or Malad? [Send us the building on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20can%20you%20check%20the%20IGR%20record%20for%20a%20flat%20in%20___%3F) and we will come back with what we find.

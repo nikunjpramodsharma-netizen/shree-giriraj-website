@@ -34,12 +34,14 @@ describe("getLowestPriceConfig", () => {
 });
 
 describe("publicPrice", () => {
-  it("replaces a masked price with a pointer to the price sheet", () => {
-    expect(publicPrice("₹2.** Cr")).toBe("Price sheet on WhatsApp");
-    expect(publicPrice("From ₹3.** Cr")).toBe("Price sheet on WhatsApp");
+  it("turns a masked price into a rough from about figure", () => {
+    expect(publicPrice("₹2.** Cr")).toBe("From about ₹2 Cr");
+    expect(publicPrice("From ₹3.** Cr")).toBe("From about ₹3 Cr");
+    expect(publicPrice("₹4.** Cr")).toBe("From about ₹4 Cr");
   });
-  it("keeps a real base rate", () => {
+  it("keeps a real base rate and an exact figure", () => {
     expect(publicPrice("₹41,000++ per sq.ft")).toBe("₹41,000++ per sq.ft");
+    expect(publicPrice("₹2.92 Cr")).toBe("₹2.92 Cr");
     expect(publicPrice(undefined)).toBeUndefined();
   });
 });

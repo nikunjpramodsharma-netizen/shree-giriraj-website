@@ -1,7 +1,7 @@
 ---
 title: "Encumbrance certificate: what it proves, and what it does not"
 metaTitle: "Encumbrance certificate in Maharashtra"
-metaDescription: "An encumbrance certificate lists the transactions registered against a property. What it proves, how far back to search and what to pull alongside it."
+metaDescription: "An encumbrance certificate lists what is registered against a property. How to get one in Maharashtra in six steps, and how far back to search."
 slug: encumbrance-certificate
 category: Paperwork
 heroImage: /blog/encumbrance.jpg
@@ -13,11 +13,15 @@ funnelStage: awareness
 wordTarget: 2200
 answer: >
   An encumbrance certificate lists the transactions registered against a
-  property over a stated period, so it is used to show there is no registered
-  mortgage or charge on it. It shows only what was registered. An unregistered
-  claim, an oral tenancy or a family dispute will not appear, so a clear
-  certificate is necessary but never sufficient.
+  property over a stated period. It shows whether a mortgage or other charge is
+  registered on it. In Maharashtra you get it by searching the sub registrar's
+  records, online for documents since 2002 and at the office for older years.
+  Pair it with the title papers for the full picture.
 sources:
+  - label: "Department of Registration and Stamps, citizen charter 1.4: search of registered records at the sub registrar office (read 7 November 2026)"
+    url: https://igrmaharashtra.gov.in/Marathi/copy_and_search
+  - label: "Department of Registration and Stamps, e-Search: documents registered on computer since 2002 (read 7 November 2026)"
+    url: https://igrmaharashtra.gov.in/Marathi/esearch_about
   - label: Department of Registration and Stamps, e-Search
     url: https://igrmaharashtra.gov.in/
   - label: HomeFirst India, encumbrance certificate Maharashtra
@@ -42,84 +46,111 @@ readNext:
 
 ## The short answer
 
-An encumbrance certificate lists the transactions registered against a property over a stated period, so it is used to show there is no registered mortgage or charge on it. **It shows only what was registered.** An unregistered claim, an oral tenancy or a family dispute will not appear, so a clear certificate is necessary but never sufficient.
+An encumbrance certificate lists the transactions registered against a property over a stated period. It shows whether a mortgage or other charge is registered on it. **In Maharashtra you get it by searching the sub registrar's records**, online for documents since 2002 and at the office for older years. Pair it with the title papers for the full picture.
 
 ---
 
-## What it is actually telling you
-
-It is a search of the register for one property over a date range, run by the sub registrar office. What comes back is a list of what was registered against it: sales, mortgages, gifts, court attachments.
-
-The word doing the work is **registered**. That is where people get a false sense of safety.
+**Buying a resale flat in Borivali, Kandivali or Malad?** [Send us the building name on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20am%20looking%20at%20a%20resale%20flat%20in%20___%20and%20would%20like%20the%20paperwork%20checked%20before%20I%20pay%20a%20token.) and we will run the search with you before you pay a token.
 
 ---
 
-## How far back to search
+## What is an encumbrance certificate?
 
-The standard search in Maharashtra runs **30 years**, and most lenders will insist on either a 13 year or a 30 year search before they sanction.
+An **encumbrance** is any claim on a property that comes with it when it is sold, such as a mortgage or a court attachment.
 
-Take the 30 year search. The extra cost is small and the shorter one can miss exactly the transaction that matters, because a problem in a title chain is usually old rather than recent.
+The certificate is a search of the register for one property over a range of years. It comes back as a list of everything registered against the property in that time: sales, mortgages, gifts and court attachments.
+
+**The key word is registered.** The search shows what was registered, which is why it is read alongside the title papers.
 
 ---
 
-## What it will not show you, which is the part worth reading twice
+## How to get an encumbrance certificate in Maharashtra
 
-A clean certificate is not proof of a clean title. It reflects what is in the registration records for the period you asked about, and no more.
+These steps follow the Department of Registration and Stamps' own e-Search pages and its citizen charter for searches, read on 7 November 2026.
 
-These do not appear on it:
+1. **Collect the property details.** You need the village name, the CTS or survey number, and the sub registrar office for the area. All of these are on the sale deed or its Index 2.
+2. **Run the free e-Search online.** It covers documents registered on computer since 2002, and shows the Index 2 for each one. Our [Index 2 guide](/blog/index-2-property-document) walks through it in six steps.
+3. **Apply to the sub registrar office for the older years.** Write an application naming the village and the property number. To search by owner instead, name the person. State the years you want searched.
+4. **Pay the search fee and keep the receipt.** The fee is charged for each year searched.
+5. **Inspect the records.** The office makes the index registers for those years available to you. Many buyers have their lawyer do this and write a search report.
+6. **Read the result alongside the title chain.** The list of registered documents should match the story of who owned the flat and when.
+
+---
+
+## How far back should the search go?
+
+The standard search in Maharashtra runs **30 years**. Most lenders ask for either a 13 year or a 30 year search before they sanction a loan.
+
+Take the 30 year search. The extra cost is small, and title questions are usually old rather than recent. A longer search finds them early.
+
+---
+
+## What an encumbrance certificate does not show
+
+A clear certificate covers the registration records for the years you searched. These sit outside it:
 
 - An **unregistered** agreement, will or family arrangement
-- An **equitable mortgage**, where title deeds were deposited with a lender without a registered charge
-- An **oral tenancy**, which in Mumbai is not a small risk
-- A claim by adverse possession
-- Society dues, property tax arrears or maintenance arrears, which sit elsewhere entirely
-- Anything about the physical condition of the flat or who is actually living in it
+- An **equitable mortgage**. This is a loan where the owner handed the title deeds to a lender without registering a charge.
+- An **oral tenancy**, meaning a tenant let in on a spoken agreement, which in Mumbai is worth checking for
+- A claim by **adverse possession**. This is a claim to own land by having occupied it openly for many years.
+- Society dues, property tax arrears or maintenance arrears, which are kept elsewhere
+- The physical state of the flat, or who is living in it
 
-So the certificate answers one question well and stays silent on several others. Pair it with the title chain, the society records and the last paid tax receipt, and you have covered most of the ground.
+So the certificate answers one question well. The papers below answer the rest.
+
+---
+
+## What we pull alongside it
+
+We read the encumbrance search as one paper in a set:
+
+- **A search report** on the title going back thirty years, which a bank asks for on an older building anyway
+- **The Index 2 for every document** in the chain, so each link is seen rather than assumed
+- **The society share certificate and no objection letter**, which show that the society recognises the seller and whether dues are outstanding
+- **The latest property tax bill**: whose name is on it, and whether it is paid
+- **The occupancy certificate** for the building
+- **The lender's closure letter** and the returned original documents, where the seller had a loan
+
+When the search and all of these line up, the flat is clean, and you can pay the token with confidence.
 
 ---
 
 ## Where it fits in a purchase
 
 1. Shortlist a flat
-2. **Encumbrance certificate and the title chain**
+2. **Encumbrance search and the title chain**
 3. Society NOC, dues position and the last property tax receipt
 4. Agree a price
-5. Agreement, stamp duty, registration
+5. Agreement, stamp duty and registration
 
-Most people do step two after step four. Doing it first is what keeps a good deal on schedule.
-
----
-
-## What we pull alongside it
-
-An encumbrance search only shows charges that were registered. It will not show society dues, an unregistered agreement, a family claim that has not reached a court, or a dispute that has. So it goes in a stack, never alone.
-
-The stack is: a search report on the title going back thirty years, which is what a bank asks for on an older building anyway; the Index 2 for every document in that chain, so each link is seen rather than taken on trust; the society share certificate and the society's no objection letter, which say whether the society recognises this seller and whether dues are outstanding; the latest property tax bill, in whose name it stands and whether it is paid; the occupancy certificate for the building; and, where the seller had a loan, the lender's closure letter and the return of the original documents.
-
-If the encumbrance search is clean and any one of those is not, the flat is not clean.
+Doing step two before step four is what keeps a good deal on schedule.
 
 ---
 
 ## Common questions
 
+**How do I get an encumbrance certificate in Maharashtra?**
+Search the sub registrar's records for the property. Use the free e-Search online for documents since 2002. For older years, apply to the sub registrar office with the village, property number and years. Pay the search fee, then inspect the records or have a lawyer do it.
+
 **How many years should it cover?**
 Thirty is the standard search in Maharashtra. Lenders commonly accept 13 or 30. Take 30.
 
 **Does a clear certificate mean the title is clear?**
-No. It means nothing adverse was registered in that window. Unregistered claims, equitable mortgages and oral tenancies do not show up on it, so it has to be read alongside the title chain rather than instead of it.
+It means nothing adverse was registered in that window. Unregistered claims, equitable mortgages and oral tenancies sit outside it, so it is read alongside the title chain.
 
 **Who applies for it, buyer or seller?**
-Either can, and you want your own rather than one handed to you. It can be searched through e-Search on the IGR Maharashtra portal.
+Either can. As a buyer, run your own search rather than relying on one handed to you.
 
 **Is it the same as a title search?**
-No. An encumbrance certificate lists registered transactions. A title search is a lawyer reading the chain of documents and forming a view. The first is an input to the second.
+No. An encumbrance certificate lists registered transactions. A title search is a lawyer reading the chain of documents and forming a view. The first feeds the second.
 
 **Is an encumbrance certificate mandatory in Maharashtra?**
-No law makes it a condition of buying. In practice it is close to mandatory, because a lender will ask for it before sanctioning a loan and a careful buyer asks for it before paying a token. Treat it as a required step even though nobody will stop the sale without it.
+No law makes it a condition of buying. In practice a lender asks for it before sanctioning a loan, and a careful buyer asks for it before paying a token. So treat it as a required step.
 
 ---
 
 ## Before you pay a token
 
-Get the certificate before money moves. It is one of the cheapest steps in the purchase and one of the most reassuring, because it tells you the flat is yours to buy with nothing hanging over it. If you would like us to run the search on a flat in Borivali, Kandivali or Malad, send us the details and we will do it with you.
+Get the search done before money moves. It is one of the cheapest steps in the purchase, and it tells you the flat is yours to buy with nothing registered against it.
+
+[Send us the details on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20am%20looking%20at%20a%20resale%20flat%20in%20___%20and%20would%20like%20the%20paperwork%20checked%20before%20I%20pay%20a%20token.) for a flat in Borivali, Kandivali or Malad, and we will run the search with you.

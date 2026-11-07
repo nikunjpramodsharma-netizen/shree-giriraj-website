@@ -1,7 +1,7 @@
 ---
 title: "MHADA NOC online: which services you can apply for, and how long the Board has to decide"
 metaTitle: "MHADA NOC online: apply on Aaple Sarkar"
-metaDescription: "MHADA NOCs and transfers are applied for online through Aaple Sarkar. Which NOC you need, the time limit for each, and the loan NOC for new allottees."
+metaDescription: "Apply for MHADA NOCs and transfers online on Aaple Sarkar. Which NOC you need, the time limit for each, and the loan NOC for new allottees."
 slug: mhada-noc-online
 category: MHADA
 heroImage: /premium/u/handover-05.jpg
@@ -21,13 +21,11 @@ note: >
   Board's E-MITRA page, and the home loan NOC steps from MHADA's lottery
   FAQ, all read on 3 October 2026.
 answer: >
-  MHADA's citizen services are notified under the Maharashtra Right to
-  Public Services Act, and since 1 April 2019 new applications for them go
-  through the state's Aaple Sarkar portal. The ones owners use most are the
-  NOC for rent, with an eight day limit, the NOC for a mortgage, twelve
-  working days, sale permission, fifteen, and transfer of a tenement,
-  twenty three. New allottees from the lottery apply for a home loan NOC in
-  MHADA's own IHLMS 2.0 app.
+  MHADA's citizen services follow the Maharashtra Right to Public Services
+  Act. Since 1 April 2019, new applications go through the state's Aaple
+  Sarkar portal. The NOC for rent has an 8 day limit. A mortgage NOC takes
+  12 working days, sale permission 15 and a transfer 23. New lottery
+  allottees get a home loan NOC in the IHLMS 2.0 app.
 sources:
   - label: "MHADA citizen services portal (MITRA), notice that new registration and services moved to Aaple Sarkar from 1 April 2019"
     url: https://emitrapranali.mhada.gov.in/
@@ -57,13 +55,15 @@ readNext:
 
 ## The short answer
 
-MHADA's citizen services are notified under the Maharashtra Right to Public Services Act, and since 1 April 2019 new applications for them go through the state's Aaple Sarkar portal. The ones owners use most are the NOC for rent, with an eight day limit, the NOC for a mortgage, twelve working days, sale permission, fifteen, and transfer of a tenement, twenty three. **New allottees from the lottery apply for a home loan NOC in MHADA's own IHLMS 2.0 app.**
+MHADA's citizen services follow the Maharashtra Right to Public Services Act. Since 1 April 2019, new applications go through the state's Aaple Sarkar portal. The NOC for rent has an 8 day limit. A mortgage NOC takes 12 working days, sale permission 15 and a transfer of tenement 23. **New lottery allottees get a home loan NOC in MHADA's IHLMS 2.0 app.**
 
 ---
 
 ## Why a MHADA flat needs an NOC at all
 
-A MHADA flat is held under an allotment, and the Estate Management, Sale, Transfer and Exchange of Tenements Regulations, 1981 keep the Board involved for as long as the tenancy runs. Selling, letting or mortgaging the flat each needs the Board's written say so. The NOC is that say so, on paper, and with it in hand the sale, the tenancy or the loan goes ahead on a clear record.
+A MHADA flat is held under an allotment. The Estate Management, Sale, Transfer and Exchange of Tenements Regulations, 1981 keep the Board involved for as long as the tenancy runs. A tenement is the flat or unit the Board has let to the allottee.
+
+Selling, letting or mortgaging the flat each needs the Board's written consent. The NOC is that consent, on paper. With it in hand, the sale, the tenancy or the loan goes ahead on a clear record.
 
 ---
 
@@ -80,7 +80,11 @@ Each job has its own service, its own form and its own time limit:
 | Move the tenancy to a buyer or an heir | [Transfer of tenement](/blog/mhada-flat-transfer) | 23 working days |
 | Put an earlier, unpermitted transfer on record | [Regularisation](/blog/mhada-flat-transfer) | 23 working days |
 
-The time limits are the ones MHADA notified under the Right to Public Services Act. The clock starts from a complete application, so a full file is what gets you the time limit in practice. Taking a bank loan? Our guide to a [home loan on a MHADA flat](/blog/home-loan-on-mhada-flat) walks through the mortgage NOC. Buying a flat in resale? Read [how to buy a MHADA flat in resale](/blog/how-to-buy-mhada-flat-in-resale). A society planning to rebuild needs the Board's NOC too, covered in our [MHADA redevelopment rules](/blog/mhada-redevelopment-rules).
+The time limits are the ones MHADA notified under the Right to Public Services Act. The clock starts from a complete application, so a full file is what gets you the time limit in practice.
+
+- Taking a bank loan? Our guide to a [home loan on a MHADA flat](/blog/home-loan-on-mhada-flat) walks through the mortgage NOC.
+- Buying a flat in resale? Read [how to buy a MHADA flat in resale](/blog/how-to-buy-mhada-flat-in-resale).
+- A society planning to rebuild needs the Board's NOC too. It is covered in our [MHADA redevelopment rules](/blog/mhada-redevelopment-rules).
 
 ---
 
@@ -94,37 +98,60 @@ MHADA's own citizen portal now carries a notice that, from 1 April 2019, new reg
 4. **Pay any fee online**, and note the application number.
 5. **Track the application** with that number until the certificate is issued.
 
-The Mumbai Board's paper forms are still published on its E-MITRA page, and they are worth reading first even if you apply online, because each one lists what it expects: Form 1 for transfer of a tenement or plot, Form 2 for a commercial unit, Form 3 for a no dues certificate, Form 4 for an NOC for a mortgage, and Form 5 for sale permission.
+The Mumbai Board's paper forms are still published on its E-MITRA page. Read them first even if you apply online, because each one lists what it expects:
+
+- Form 1: transfer of a tenement or plot
+- Form 2: a commercial unit
+- Form 3: a no dues certificate
+- Form 4: an NOC for a mortgage
+- Form 5: sale permission
 
 ---
 
 ## New allottees: the home loan NOC
 
-If you have just won a flat in the lottery, the NOC your bank needs comes from MHADA's IHLMS 2.0 app, not Aaple Sarkar. MHADA's own FAQ gives the steps: open the MHADA Lottery app, log in to IHLMS 2.0, go to the menu, select Application List, choose the winning application, tap Apply for NOC, fill in the details, submit, and then download the NOC.
+If you have just won a flat in the lottery, the NOC your bank needs comes from MHADA's IHLMS 2.0 app, not Aaple Sarkar. MHADA's own FAQ gives the steps:
 
-Switching banks is allowed too. MHADA says you can apply again once you cancel the NOC you applied for earlier. Our guide to a [home loan on a MHADA flat](/blog/home-loan-on-mhada-flat) covers the bank side, the owners' Form 4 and the PMAY subsidy.
+1. Open the MHADA Lottery app and log in to IHLMS 2.0.
+2. Go to the menu and select Application List.
+3. Choose the winning application and tap Apply for NOC.
+4. Fill in the details and submit.
+5. Download the NOC.
+
+Switching banks is allowed too. MHADA says you can apply again once you cancel the NOC you applied for earlier.
+
+Owners and resale buyers use Form 4 instead. Our guide to a [home loan on a MHADA flat](/blog/home-loan-on-mhada-flat) covers both routes, the bank side and the PMAY subsidy.
 
 ---
 
 ## When the Board takes longer
 
-The Right to Public Services Act gives every notified service a designated officer, usually the Estate Manager for your area, and two levels of appeal. If a service is refused or runs past its time limit, the first appeal goes to the Executive Engineer and, for Mumbai Board residential services, the second to the Joint Chief Officer, as MHADA's notification of 13 July 2015 sets out. A complete file is the surest way to stay inside the limit, which is why the file is where we spend our time.
+The Right to Public Services Act gives every notified service a designated officer, usually the Estate Manager for your area. An appellate officer is the senior officer who hears an appeal. The Act sets two levels of appeal.
+
+If a service is refused or runs past its time limit, the first appeal goes to the Executive Engineer. For Mumbai Board residential services, the second goes to the Joint Chief Officer, as MHADA's notification of 13 July 2015 sets out.
+
+A complete file is the surest way to stay inside the limit. That is where we spend our time.
 
 ---
 
 ## Common questions
 
 **Can I apply for a MHADA NOC online?**
-Yes. Since 1 April 2019, new applications for MHADA's notified services go through the state's Aaple Sarkar portal, including the NOC for rent for Mumbai Board flats. Lottery winners apply for a home loan NOC in MHADA's IHLMS 2.0 app.
+Yes. Since 1 April 2019, new applications for MHADA's notified services go through the state's Aaple Sarkar portal. That includes the NOC for rent for Mumbai Board flats. Lottery winners apply for a home loan NOC in MHADA's IHLMS 2.0 app.
 
 **How long does a MHADA NOC take?**
-MHADA's notified limits are 8 days for the NOC for rent, 12 working days for an NOC for a mortgage, 15 for sale permission and 23 for a transfer of tenement, counted from a complete application.
+MHADA's notified limits, counted from a complete application, are:
+
+- NOC for rent: 8 days
+- NOC for a mortgage: 12 working days
+- Sale permission: 15 working days
+- Transfer of tenement: 23 working days
 
 **Is the NOC for sale the same as the transfer?**
-No. Sale permission is the Board's consent to the sale; the transfer of tenement then moves the tenancy into the buyer's name. Most sales need both, and the society's NOC as well.
+No. Sale permission is the Board's consent to the sale. The transfer of tenement then moves the tenancy into the buyer's name. Most sales need both, and the society's NOC as well.
 
 **What if MHADA does not decide in time?**
-The Right to Public Services Act gives you a first appeal to the Executive Engineer and, for Mumbai Board residential services, a second to the Joint Chief Officer, against the designated officer who missed the time limit.
+You can appeal against a designated officer who misses the time limit. The first appeal goes to the Executive Engineer. For Mumbai Board residential services, the second goes to the Joint Chief Officer.
 
 **Do I still need to visit the Bandra office?**
 Often not to apply. If the Board needs anything more, the Estate Manager's office will tell you. Our guide to the [MHADA office in Bandra](/blog/mhada-office-bandra) lists which Estate Manager handles each area.
@@ -133,4 +160,4 @@ Often not to apply. If the Board needs anything more, the Estate Manager's offic
 
 ## We will file it for you
 
-Our [MHADA paperwork service](/services/mhada-paperwork) prepares the application and the file against the Board's own list, applies through the right route and follows it until the certificate is in your hands, for MHADA flats anywhere in Mumbai. Tell us the flat and the NOC you need on WhatsApp, and we will tell you what the file needs, free, usually the same day.
+Our [MHADA paperwork service](/services/mhada-paperwork) prepares the application and the file against the Board's own list. We apply through the right route and follow it until the certificate is in your hands, for MHADA flats anywhere in Mumbai. Tell us the flat and the NOC you need on WhatsApp, and we will tell you what the file needs, free, usually the same day.

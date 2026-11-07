@@ -193,8 +193,8 @@ export const JJ = {
   ], // BROCHURE (SITE says 17 lakh sq ft; to confirm)
 
   faqs: [
-    { q: "What is the price of Jaswanti Jewel?", a: "2 BHK homes start from ₹2.92 Cr all inclusive on the 1st floor and 3 BHK homes from ₹3.80 Cr, as of October 2026. Base rates are ₹32,400 per sq ft on lower floors and ₹36,000 above the 20th, plus a floor rise of ₹108 per sq ft per floor from the 2nd." },
-    { q: "When is possession?", a: "The developer is handing over from March 2027. The MahaRERA possession date is December 2027." },
+    { q: "When is possession at Jaswanti Jewel?", a: "Possession is from March 2027, which is the developer's handover target, with every amenity ready at handover. The MahaRERA possession date is December 2027." },
+    { q: "What is the price of Jaswanti Jewel?", a: "2 BHK homes start from ₹2.92 Cr all inclusive on the 1st floor and 3 BHK homes from ₹3.80 Cr, as of October 2026. Base rates are ₹32,400 per sq ft on lower floors and ₹36,000 above the 20th. A floor rise of ₹108 per sq ft per floor applies from the 2nd." },
     { q: "Will the amenities be ready at possession?", a: "Yes. The developer has confirmed that all amenities will be ready by March 2027, at handover." },
     { q: "What is the MahaRERA number?", a: "P51800048817. You can check the record on the MahaRERA website." },
     { q: "What configurations are available?", a: "2, 3, 4 and 5 BHK homes, with Jodi options that combine adjoining flats. 2 BHK carpet areas start at 728 sq ft and 3 BHK homes are 1,006 sq ft." },

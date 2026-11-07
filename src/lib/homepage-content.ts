@@ -23,7 +23,7 @@ export const CHECKS: Check[] = [
   {
     n: "01",
     title: "Who actually owns it",
-    body: "We meet the owner and see the ownership document before you see the flat, so the person you sign with is the person entitled to let it.",
+    body: "We meet the owner and see the ownership papers before you see the flat. So the person you sign with is entitled to let it.",
   },
   {
     n: "02",
@@ -33,22 +33,22 @@ export const CHECKS: Check[] = [
   {
     n: "03",
     title: "Water timing, not water supply",
-    body: "Every building has water. We tell you at what hour and for how long before you visit, because it is the thing you will notice every morning.",
+    body: "Every building has water. Before you visit, we tell you at what hour and for how long. It is the thing you will notice every morning.",
   },
   {
     n: "04",
     title: "What the parking allotment really is",
-    body: "We confirm the parking the society will actually allot you, in writing, so the space in the brochure is the space you park in.",
+    body: "We confirm in writing the parking the society will actually allot you. So the space in the brochure is the space you park in.",
   },
   {
     n: "05",
     title: "Where redevelopment really stands",
-    body: "Every suburb has buildings where redevelopment has been next year for a while. We tell you what stage a building is genuinely at, because it changes what the flat is worth and what you should pay.",
+    body: "Every suburb has buildings where redevelopment has been next year for a while. We tell you what stage a building has really reached. It changes what the flat is worth, and what you should pay.",
   },
   {
     n: "06",
     title: "What the deposit actually means here",
-    body: "Two to three months' rent is the norm in newer societies here, more in some older buildings. We tell you the going rate for the building before you negotiate, so you pay what the street pays and not a rupee more.",
+    body: "Two to three months' rent is the norm in newer societies here, more in some older buildings. We tell you the going rate for the building before you negotiate. So you pay what the street pays, and not a rupee more.",
   },
 ];
 
@@ -85,6 +85,10 @@ export type AreaPanel = {
  * header already says it and it left East uncovered. Refresh when the blog's carpet area
  * table is refreshed; the two must agree.
  */
+/** Shown under the panel figures wherever they appear, so each number carries its source and date. */
+export const AREA_STATS_SOURCE =
+  "Mumbai Property Exchange and PropertyPistol listings, July and September 2026. Asking rates, not prices paid.";
+
 export const AREA_PANELS: AreaPanel[] = [
   {
     slug: "borivali-west",
@@ -123,7 +127,7 @@ export const AREA_PANELS: AreaPanel[] = [
       { value: "₹24k to 33k", label: "New launch asking, per sq ft, West" },
     ],
     watch:
-      "The Mindspace corridor keeps rental demand steady. We tell you who the realistic tenant is and what they pay, so the yield you plan on is the one you get.",
+      "The Mindspace office district keeps rental demand steady. We tell you who the realistic tenant is and what they pay. So the rent you plan on is the rent you get.",
   },
 ];
 
@@ -169,7 +173,7 @@ export const SERVICE_PANELS: ServicePanel[] = [
     title: "Resale flats",
     image: "/sections/svc-resale.jpg",
     lead: "Our main business since 1996.",
-    body: "Buying or selling ready to move homes across Borivali, Kandivali and Malad. Title chain, society NOC and dues checked before a price is agreed, so the deal completes on the date you planned.",
+    body: "Buying or selling ready to move homes across Borivali, Kandivali and Malad. Ownership papers, the society's no objection letter and dues are checked before a price is agreed. So the deal completes on the date you planned.",
   },
   {
     n: "02",
@@ -185,7 +189,7 @@ export const SERVICE_PANELS: ServicePanel[] = [
     title: "New project bookings",
     image: "/premium/u/tower-rising.jpg",
     lead: "Early access, and the floor that is worth it.",
-    body: "Launch access through developers we deal with directly, with the current price sheet and a straight answer on which floor and view are worth the money.",
+    body: "Launch access through developers we deal with directly. You get the current price sheet, and a straight answer on which floor and view are worth the money.",
   },
   {
     n: "04",
@@ -193,7 +197,7 @@ export const SERVICE_PANELS: ServicePanel[] = [
     title: "Interiors and civil work",
     image: "/sections/svc-interiors.jpg",
     lead: "After the keys, the home you actually wanted.",
-    body: "Fit outs and civil work once the flat is yours, with an itemised estimate before you commit and the society's permission handled, so the design that is drawn is the one that gets built.",
+    body: "Fit outs and civil work once the flat is yours. An itemised estimate before you commit, and the society's permission handled. So the design that is drawn is the one that gets built.",
   },
   {
     n: "05",
@@ -217,7 +221,7 @@ export const SERVICE_PANELS: ServicePanel[] = [
     title: "MHADA paperwork",
     image: "/sections/svc-mhada.jpg",
     lead: "Transfer, NOC, heirs, regularisation.",
-    body: "The permissions a MHADA flat needs before it can be sold, let, mortgaged or passed to an heir, taken from the Board's own rules, filed as one complete application and followed through with the Estate Manager until it is done.",
+    body: "The permissions a MHADA flat needs before it is sold, let, mortgaged or passed to an heir. Filed as one complete application against the Board's own rules, and followed through until it is done.",
   },
 ];
 
@@ -236,7 +240,7 @@ export const SITUATIONS: Situation[] = [
     key: "buy",
     label: "Buy",
     heading: "Buying in {area}",
-    body: "A resale flat comes with an established society and immediate possession. We check the title chain and the society position before a price is agreed, so the deal you shake on is the deal that completes.",
+    body: "A resale flat comes with an established society and immediate possession. We check the ownership papers and the society's position before a price is agreed. So the deal you shake on is the deal that completes.",
     help:
       "We line up the society's no objection before you agree a price, which is what keeps a good deal on track.",
   },
@@ -244,9 +248,9 @@ export const SITUATIONS: Situation[] = [
     key: "rent",
     label: "Rent",
     heading: "Renting in {area}",
-    body: "Two to three months' deposit is the norm in newer societies here. We match you with owners we know and buildings that will register you, so the first flat you see is one you can actually take.",
+    body: "Two to three months' deposit is the norm in newer societies here. We match you with owners we know and buildings that will register you. So the first flat you see is one you can take.",
     help:
-      "We verify who owns the flat and who is entitled to let it, so your agreement is with the right person from day one.",
+      "We verify who owns the flat and who may let it. So your agreement is with the right person from day one.",
   },
   {
     key: "sell",
@@ -268,7 +272,7 @@ export const SITUATIONS: Situation[] = [
     key: "interiors",
     label: "Do interiors",
     heading: "Interiors in {area}",
-    body: "You get an itemised estimate before any work starts, and we handle the society permission, so the design that is drawn is the design that gets built.",
+    body: "You get an itemised estimate before any work starts, and we handle the society permission. So the design that is drawn is the design that gets built.",
     help:
       "We check the society's rules first, so nothing is drawn that cannot be built.",
   },

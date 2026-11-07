@@ -7,12 +7,13 @@ import {
 } from "./capitalgains";
 import {
   calculatePropertyTax,
-  CONSTRUCTION_WEIGHT,
-  AGE_WEIGHT,
+  ageWeight,
+  floorWeight,
+  USER_WEIGHT,
+  TAX_RATE_PCT,
+  BUILDING_WEIGHT,
   EXEMPT_UPTO_SQFT,
-  CONCESSION_UPTO_SQFT,
-  CONCESSION_PCT,
-  CONCESSION_VERIFIED,
+  SQM_PER_SQFT,
   PT_SOURCES,
 } from "./propertytax";
 import {
@@ -117,100 +118,115 @@ describe("capital gains: the July 2024 grandfathering", () => {
 /* -------------------------------------------------------- property tax */
 
 const ptBase = {
-  carpetSqft: 800,
-  reckonerRatePerSqft: 20_000,
-  construction: "rcc" as const,
-  age: "post1985" as const,
+  carpetSqft: 650,
+  reckonerRatePerSqm: 103_630,
+  building: "rcc" as const,
+  ageYears: 18,
+  floor: 3,
+  hasLift: true,
   user: "residential" as const,
-  taxRatePct: 0,
 };
 
-describe("BMC property tax: capital value", () => {
-  it("multiplies reckoner rate, carpet area and the weights", () => {
-    const r = calculatePropertyTax(ptBase);
-    expect(r.capitalValue).toBe(800 * 20_000 * 1 * 1);
+describe("BMC property tax: MCGM's official weights and rates", () => {
+  it("uses the Schedule A user weights and the rate table totals", () => {
+    expect(USER_WEIGHT.residential).toBe(0.5);
+    expect(USER_WEIGHT.commercial).toBe(0.8);
+    expect(TAX_RATE_PCT.residential).toBe(0.775);
+    expect(TAX_RATE_PCT.commercial).toBe(1.9);
   });
 
-  it("applies the construction and age weights", () => {
-    const r = calculatePropertyTax({
-      ...ptBase,
-      construction: "nonRcc",
-      age: "pre1945",
-    });
-    expect(r.constructionWeight).toBe(CONSTRUCTION_WEIGHT.nonRcc);
-    expect(r.ageWeight).toBe(AGE_WEIGHT.pre1945);
-    expect(r.capitalValue).toBe(Math.round(800 * 20_000 * 0.6 * 0.8));
+  it("uses the Schedule B building weights", () => {
+    expect(BUILDING_WEIGHT).toEqual({ rcc: 1, pucca: 0.7, chawl: 0.5 });
+  });
+
+  it("uses the Schedule C age bands", () => {
+    expect(ageWeight(0)).toBe(1);
+    expect(ageWeight(5)).toBe(1);
+    expect(ageWeight(6)).toBe(0.95);
+    expect(ageWeight(18)).toBe(0.85);
+    expect(ageWeight(30)).toBe(0.75);
+    expect(ageWeight(49)).toBe(0.55);
+    expect(ageWeight(50)).toBe(0.5);
+  });
+
+  it("applies the Schedule D floor factor only to an RCC building with a lift", () => {
+    expect(floorWeight(0, "rcc", true)).toBe(1);
+    expect(floorWeight(4, "rcc", true)).toBe(1);
+    expect(floorWeight(5, "rcc", true)).toBe(1.05);
+    expect(floorWeight(20, "rcc", true)).toBe(1.1);
+    expect(floorWeight(31, "rcc", true)).toBe(1.2);
+    expect(floorWeight(101, "rcc", true)).toBe(1.35);
+    expect(floorWeight(-1, "rcc", true)).toBe(0.7);
+    expect(floorWeight(12, "rcc", false)).toBe(1);
+    expect(floorWeight(12, "pucca", true)).toBe(1);
+  });
+
+  it("cites MCGM's own documents", () => {
+    expect(PT_SOURCES.some((s) => s.url.includes("ptaxportal.mcgm.gov.in"))).toBe(true);
   });
 });
 
-describe("BMC property tax: the size relief, which is the point", () => {
-  it("exempts a residential flat of 500 sq ft or less", () => {
-    const r = calculatePropertyTax({ ...ptBase, carpetSqft: 500 });
-    expect(r.exemption).toBe("exempt");
-    expect(r.concessionPct).toBe(100);
+describe("BMC property tax: capital value and tax", () => {
+  it("reproduces the worked example in the blog post", () => {
+    // 1,03,630 x 0.50 x 1.00 x 0.85 x 1.00 x 650 sq ft in sq m
+    const r = calculatePropertyTax(ptBase);
+    const cv = Math.round(103_630 * 0.5 * 1 * 0.85 * 1 * 650 * SQM_PER_SQFT);
+    expect(r.capitalValue).toBe(cv);
+    expect(r.capitalValue).toBeGreaterThan(2_650_000);
+    expect(r.capitalValue).toBeLessThan(2_670_000);
+    expect(r.taxPayable).toBe(Math.round((cv * 0.775) / 100));
+    expect(Math.round(r.taxPayable / 100) * 100).toBe(20_600);
   });
 
-  it("flags the 500 to 700 band but does NOT discount it, because it is unverified", () => {
-    // A single hedged source described a concession here and a dedicated
-    // search found nothing. Applying it could have somebody disputing a
-    // correct bill, so the band is surfaced and the tax is left alone.
-    const r = calculatePropertyTax({ ...ptBase, carpetSqft: 650 });
-    expect(r.exemption).toBe("possibleConcession");
-    expect(r.concessionPct).toBe(0);
-    expect(CONCESSION_VERIFIED).toBe(false);
-  });
-
-  it("gives nothing above 700 sq ft", () => {
-    expect(calculatePropertyTax({ ...ptBase, carpetSqft: 701 }).exemption).toBe(
-      "none",
+  it("applies the building, age and floor weights", () => {
+    const r = calculatePropertyTax({
+      ...ptBase,
+      building: "chawl",
+      ageYears: 60,
+      floor: 12,
+    });
+    expect(r.buildingWeight).toBe(0.5);
+    expect(r.ageWeight).toBe(0.5);
+    expect(r.floorWeight).toBe(1);
+    expect(r.capitalValue).toBe(
+      Math.round(103_630 * 0.5 * 0.5 * 0.5 * 650 * SQM_PER_SQFT),
     );
   });
 
-  it("does not apply the relief to commercial property", () => {
+  it("charges a shop or office the commercial weight and rate", () => {
+    const r = calculatePropertyTax({ ...ptBase, user: "commercial" });
+    expect(r.userWeight).toBe(0.8);
+    expect(r.taxRatePct).toBe(1.9);
+    expect(r.taxPayable).toBe(Math.round((r.capitalValue * 1.9) / 100));
+  });
+});
+
+describe("BMC property tax: the 500 sq ft exemption", () => {
+  it("exempts a home of 500 sq ft carpet or less", () => {
+    const r = calculatePropertyTax({ ...ptBase, carpetSqft: 500 });
+    expect(r.exempt).toBe(true);
+    expect(r.taxPayable).toBe(0);
+    expect(r.taxBeforeExemption).toBeGreaterThan(0);
+  });
+
+  it("charges the full tax above 500 sq ft, with no unverified concession", () => {
+    const r = calculatePropertyTax({ ...ptBase, carpetSqft: 501 });
+    expect(r.exempt).toBe(false);
+    expect(r.taxPayable).toBe(r.taxBeforeExemption);
+  });
+
+  it("does not exempt a small shop or office", () => {
     const r = calculatePropertyTax({
       ...ptBase,
       carpetSqft: 400,
       user: "commercial",
     });
-    expect(r.exemption).toBe("none");
+    expect(r.exempt).toBe(false);
+    expect(r.taxPayable).toBeGreaterThan(0);
   });
 
-  it("uses the documented thresholds", () => {
+  it("uses the documented threshold", () => {
     expect(EXEMPT_UPTO_SQFT).toBe(500);
-    expect(CONCESSION_UPTO_SQFT).toBe(700);
-  });
-});
-
-describe("BMC property tax: the unverified rate is an input, not a guess", () => {
-  it("reports capital value only when no tax rate is supplied", () => {
-    const r = calculatePropertyTax(ptBase);
-    expect(r.hasTaxRate).toBe(false);
-    expect(r.taxPayable).toBeNull();
-    expect(r.capitalValue).toBeGreaterThan(0);
-  });
-
-  it("computes the tax once a rate is supplied", () => {
-    const r = calculatePropertyTax({ ...ptBase, taxRatePct: 0.5 });
-    expect(r.taxBeforeRelief).toBe(Math.round(16_000_000 * 0.005));
-    expect(r.taxPayable).toBe(r.taxBeforeRelief);
-  });
-
-  it("charges the full tax in the unverified band rather than a discounted one", () => {
-    const r = calculatePropertyTax({
-      ...ptBase,
-      carpetSqft: 650,
-      taxRatePct: 0.5,
-    });
-    expect(r.taxPayable).toBe(r.taxBeforeRelief);
-  });
-
-  it("charges nothing on an exempt flat", () => {
-    const r = calculatePropertyTax({
-      ...ptBase,
-      carpetSqft: 450,
-      taxRatePct: 0.5,
-    });
-    expect(r.taxPayable).toBe(0);
   });
 });
 

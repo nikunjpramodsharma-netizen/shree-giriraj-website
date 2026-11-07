@@ -1,7 +1,7 @@
 ---
 title: "BMC property tax: online payment, how it is calculated, and whether you are exempt"
-metaTitle: "BMC property tax: online payment, exemption"
-metaDescription: "BMC property tax is charged on capital value, and flats up to 500 sq ft carpet are fully exempt. How the tax is calculated and how to pay it online."
+metaTitle: "BMC property tax: rate, formula, exemption"
+metaDescription: "BMC property tax on a home is 0.775% of capital value, per MCGM's rate table. The formula, a worked example, the 500 sq ft exemption and how to pay."
 slug: bmc-property-tax
 category: Paperwork
 heroImage: /blog/bmc-property-tax.jpg
@@ -12,13 +12,20 @@ competition: LOW
 funnelStage: awareness
 wordTarget: 1800
 answer: >
-  BMC property tax is charged on capital value, not rateable value. Capital
-  value is the ready reckoner rate for the area multiplied by the carpet area
-  and by weights for construction type, age and use. Residential flats with a
-  carpet area of 500 sq ft or less have been fully exempt since 1 January 2022.
+  BMC property tax is a percentage of your flat's capital value. For a home,
+  MCGM's rate table adds up to 0.775 percent a year. Capital value is the ready
+  reckoner rate times the carpet area, adjusted for use, building type, age and
+  floor. Homes of 500 sq ft carpet or less have been exempt since 1 January
+  2022.
 sources:
-  - label: Municipal Corporation of Greater Mumbai, property tax
-    url: https://portal.mcgm.gov.in
+  - label: "MCGM Assessment and Collection Department, Rates of Taxation on Capital Value with effect from 1 April 2015, residential table (read on the property tax portal, 7 November 2026)"
+    url: https://ptaxportal.mcgm.gov.in/CitizenPortal/taxdocument/pdf/english/RulesForFixationOfCapitalValue/Rates%20of%20Taxation%20on%20Capital%20Value%20w.e.f.1.4.2015-English.pdf
+  - label: "MCGM, Rules for Fixation of Capital Value 2015 to 2016 to 2019 to 2020: formula and Schedules A to D (read 7 November 2026)"
+    url: https://ptaxportal.mcgm.gov.in/CitizenPortal/taxdocument/pdf/english/RulesForFixationOfCapitalValue/Rules%20For%20fixation%20of%20Capital%20Value%202015-16%20to%202019-20--English.pdf
+  - label: "Mumbai Municipal Corporation Act 1888, section 154(1A) to (1C): capital value based on the ready reckoner, revised every five years (MCGM portal copy, read 7 November 2026)"
+    url: https://ptaxportal.mcgm.gov.in/CitizenPortal/
+  - label: MCGM property tax portal
+    url: https://ptaxportal.mcgm.gov.in/CitizenPortal/
   - label: Department of Registration and Stamps, ready reckoner (e-ASR)
     url: https://igrmaharashtra.gov.in/
   - label: HomeFirst India, BMC Mumbai property tax
@@ -41,108 +48,164 @@ readNext:
 
 ## The short answer
 
-BMC property tax is charged on **capital value**, not rateable value. Capital value is the ready reckoner rate for the area multiplied by the carpet area and by weights for construction type, age and use. **Residential flats with a carpet area of 500 sq ft or less have been fully exempt since 1 January 2022.**
+BMC property tax is a percentage of your flat's **capital value**. For a home, MCGM's rate table adds up to **0.775 percent a year**. Capital value is the ready reckoner rate times the carpet area, adjusted for use, building type, age and floor. **Homes of 500 sq ft carpet or less have been exempt since 1 January 2022.**
 
 ---
 
-## Start with the exemption, because most people skip it
-
-Check your own figure with our [BMC property tax calculator](/tools/bmc-property-tax-calculator). If your flat has a carpet area of 500 sq ft or less and it is residential, you pay nothing. That has been the position since 1 January 2022 and it still stands.
-
-It is measured on **carpet area**, not the super built up figure in your agreement or the area on the listing. A flat sold as 700 sq ft super built up with 40 percent loading has a carpet area of 500 sq ft, and that flat is exempt while its paperwork says 700.
-
-In Borivali, Kandivali and Malad a great many flats sit under that line. If you are being billed and you think you are under it, take it to your ward office.
-
-You can check your own numbers with the [BMC property tax calculator](/tools/bmc-property-tax-calculator) and the [carpet area calculator](/tools/carpet-area-calculator).
+**Not sure if your flat is under the 500 sq ft line?** [Send us your last bill on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20can%20you%20check%20my%20BMC%20property%20tax%20bill%3F%20My%20flat%20is%20in%20___.) and we will check the area on it against the exemption, free.
 
 ---
 
-## How the calculation works
+## Is my flat exempt from BMC property tax?
 
-Mumbai moved from the rateable value system to the capital value system in 2015. The formula is:
+If your flat is a home and its **carpet area is 500 sq ft or less**, you pay no property tax. That has been the rule since 1 January 2022.
 
-**Capital value = ready reckoner rate x carpet area x construction weight x age weight x user category weight**
+**Carpet area** is the usable floor inside your walls. It is not the "super built up" figure on a listing, which adds a share of lobbies and stairs.
 
-The tax is then a percentage of that capital value.
+So a flat sold as 700 sq ft super built up, with 40 percent loading, has a carpet area of 500 sq ft. That flat is exempt, even though its listing says 700.
 
-### The weights
+Many flats in Borivali, Kandivali and Malad sit under the line. Check yours with the [BMC property tax calculator](/tools/bmc-property-tax-calculator) and the [carpet area calculator](/tools/carpet-area-calculator).
 
-| Construction type | Weight |
-|---|---|
-| RCC building or bungalow | 1.00 |
-| Chawl or semi permanent, other than RCC | 0.60 |
-| Under construction or vacant land | 0.50 |
+---
+
+## How is BMC property tax calculated?
+
+Mumbai moved from rateable value to **capital value** in 2010. Capital value is the official value of your flat for tax.
+
+MCGM's own rules give the formula. We read them on its property tax portal on 7 November 2026.
+
+1. **Start with the base value.** This is the ready reckoner rate for your zone, in rupees per square metre.
+2. **Multiply by the user category weight.** For a home it is **0.50**.
+3. **Multiply by the building type weight.** RCC building **1.00**, pucca building other than a chawl **0.70**, chawl or semi permanent **0.50**.
+4. **Multiply by the age weight.** It falls in five year steps (table below).
+5. **Multiply by the floor weight**, for an RCC building with a lift (table below).
+6. **Multiply by the carpet area** in square metres. One square foot is 0.0929 square metres.
+7. **Apply the tax rate.** For a home, the components add up to **0.775 percent** of the capital value, each year.
+
+**RCC** means reinforced concrete, the frame of almost every modern building.
+
+### Age weight
 
 | Age of the building | Weight |
 |---|---|
-| Built before 1945 | 0.80 |
-| Built 1945 to 1985 | 0.90 |
-| Built after 1985 | 1.00 |
+| Up to 5 years | 1.00 |
+| 5 to 10 years | 0.95 |
+| 10 to 15 years | 0.90 |
+| 15 to 20 years | 0.85 |
+| 20 to 25 years | 0.80 |
+| 25 to 30 years | 0.75 |
+| 30 to 35 years | 0.70 |
+| 35 to 40 years | 0.65 |
+| 40 to 45 years | 0.60 |
+| 45 to 49 years | 0.55 |
+| More than 49 years | 0.50 |
 
-An older, non RCC building therefore carries a much lower capital value than a new tower of the same carpet area in the same locality, which is why two neighbours can pay very different amounts.
+### Floor weight, RCC building with a lift
 
-### The one number we will not publish
+| Floor | Weight |
+|---|---|
+| Ground to 4th | 1.00 |
+| 5th to 10th | 1.05 |
+| 11th to 20th | 1.10 |
+| 21st to 30th | 1.15 |
+| 31st to 50th | 1.20 |
 
-The percentage applied to capital value varies by ward and by user category. We could not confirm a figure we would be willing to print, so we have not printed one. It is on your bill, and our calculator takes it as an input rather than guessing.
-
----
-
-## Paying BMC property tax online
-
-1. Go to the MCGM portal and open property tax under the citizens section
-2. Enter your property account number, or search by ward, building name and address
-3. Check the property details and accept them
-4. Review the outstanding amount, which is broken down by year
-5. Pay by net banking or card, and save the receipt
-
-If you would rather not pay online, ward offices, BMC help centres and assistant revenue offices take payment in person.
-
-**The due date is 30 June, and late payment attracts a penalty of 2 percent a month on the outstanding amount.** That compounds quietly, which is how small arrears become awkward ones.
-
----
-
-## Why it matters when buying, not just when owning
-
-Unpaid property tax follows the property, not the person. **A buyer who does not check arrears inherits them**, and it surfaces at exactly the wrong moment, usually in the week before registration.
-
-Ask for the last paid receipt before you pay a token. It takes a minute.
+So an older building carries a lower capital value than a new tower of the same size. That is why two neighbours can pay very different amounts.
 
 ---
 
-## What we check before a client commits
+## What is the BMC property tax rate for a flat?
 
-Three things on the bill, before a token changes hands.
+For a home, MCGM's rate table, in force since 1 April 2015, has ten parts. They add up to 0.775 percent of capital value a year.
 
-Whose name is on it. If the seller's name is not on the latest bill, somebody in the chain skipped mutation, and that is corrected before the sale or it becomes the buyer's job with one more deed to file.
+| Part of the tax | Rate (% of capital value) |
+|---|---|
+| General tax, including fire tax | 0.110 |
+| Water tax | 0.253 |
+| Water benefit tax | 0.069 |
+| Sewerage tax | 0.163 |
+| Sewerage benefit tax | 0.043 |
+| Municipal education cess | 0.040 |
+| State education cess | 0.035 |
+| Employment guarantee cess | 0.010 |
+| Tree cess | 0.002 |
+| Street tax | 0.050 |
+| **Total** | **0.775** |
 
-Whether it is paid. Property tax under the Mumbai Municipal Corporation Act is a first charge on the property, which means the corporation looks to the flat for its money, not only to the person who owed it. The Bombay High Court has held that the charge cannot be enforced against a buyer who had no notice of it, but that is a defence to argue afterwards, not a reason to buy into arrears. The seller produces a paid up bill before registration, and the dues clause in the deed puts anything outstanding on the seller.
+MCGM's own online tax calculator also asks whether the water connection is metered. So the water lines on your bill can differ from this table. Your bill shows the exact split.
 
-The carpet area on the assessment. Since 1 January 2022 a residential flat of up to 500 square feet carpet area pays no property tax in Mumbai. If the assessment shows a larger area than the flat has, the exemption is being missed, and that is worth correcting at the ward office whether or not a sale is happening. How many owners in Borivali are paying tax on a flat that qualifies is not a number anyone has published, so we do not offer one.
+---
+
+## Worked example: a 650 sq ft flat in Borivali West
+
+Take a 650 sq ft carpet flat on the 3rd floor of an 18 year old RCC building with a lift. Use the 2026 to 2027 [ready reckoner rate](/blog/ready-reckoner-rate-mumbai) for Borivali West zone 83/361: 1,03,630 rupees per square metre.
+
+| Step | Figure |
+|---|---|
+| Carpet area: 650 sq ft x 0.0929 | 60.39 sq m |
+| Base value | 1,03,630 per sq m |
+| x home weight 0.50 x RCC 1.00 x age 0.85 x floor 1.00 | 44,043 per sq m |
+| Capital value: 44,043 x 60.39 sq m | **about 26.6 lakh** |
+| Tax at 0.775 percent | **about 20,600 rupees a year** |
+
+The [BMC property tax calculator](/tools/bmc-property-tax-calculator) runs these same steps, with these figures as its starting values. Change them to match your flat.
+
+**One thing to know about the base value.** Section 154 of the Mumbai Municipal Corporation Act fixes capital value for five years at a time. So your bill may use an older reckoner rate than this year's, and the real figure can be lower. The example shows the method, not your bill.
+
+---
+
+## How to pay BMC property tax online
+
+1. Open the **MCGM property tax portal**, ptaxportal.mcgm.gov.in, and choose **Online Payment**.
+2. Enter your **property account number**. It is printed near the top of any earlier bill.
+3. Check the property details shown and confirm them.
+4. Review the amount due. It is broken down by year.
+5. Pay by net banking or card, and save the receipt.
+
+You can also pay in person at ward offices and BMC help centres.
+
+**The due date is 30 June. Late payment carries a penalty of 2 percent a month on the amount due**, so paying on time keeps the bill small.
+
+---
+
+## Why property tax matters when you buy
+
+Unpaid property tax stays with the flat, not the person. So a buyer checks it before paying a token.
+
+We look at three things on the latest bill:
+
+1. **Whose name is on it.** If it is not the seller's, an earlier owner skipped mutation. We get that fixed before the sale, so the record moves to the buyer cleanly. Our [mutation guide](/blog/mutation-of-property) explains the step.
+2. **Whether it is paid.** Under the Mumbai Municipal Corporation Act, property tax is a first charge on the flat. That means the corporation looks to the flat for its money. The seller produces a paid bill before registration, and the deed puts any dues on the seller.
+3. **The carpet area on the assessment.** If it shows more area than the flat has, the owner may be missing the 500 sq ft exemption. The ward office can correct it, sale or no sale.
+
+The Bombay High Court has held that the charge cannot be enforced against a buyer who had no notice of it. A paid bill before registration means you never need that defence.
 
 ---
 
 ## Common questions
 
 **Is my flat exempt from BMC property tax?**
-Residential flats with a carpet area of 500 sq ft or less have been fully exempt since 1 January 2022. It is measured on carpet area, so check the carpet figure in your agreement rather than the area in the listing.
+Yes, if it is a home with a carpet area of 500 sq ft or less. That has been the rule since 1 January 2022. Check the carpet area in your agreement, not the area on the listing.
+
+**What is the BMC property tax rate for a residential flat?**
+0.775 percent of capital value a year, made up of ten parts. The largest are water tax at 0.253 percent, sewerage tax at 0.163 percent and general tax at 0.110 percent. This is MCGM's rate table in force since 1 April 2015.
+
+**How is BMC property tax calculated?**
+Take the ready reckoner rate and multiply by 0.50 for a home. Then multiply by the weights for building type, age and floor, and by the carpet area in square metres. That gives the capital value. The tax is 0.775 percent of it.
 
 **How do I find my property account number?**
-It is printed on the upper portion of an old property tax receipt. If you do not have one, you can search the MCGM portal by ward, building name and address instead.
-
-**How is it calculated?**
-On capital value: the ready reckoner rate for the locality, times the carpet area, times weights for construction type, age and use. The tax is a percentage of that figure.
+It is printed near the top of any earlier property tax bill or receipt. If you have none, search the MCGM portal by ward, building name and address instead.
 
 **What happens if it is unpaid when I sell?**
-It is a liability attached to the property, so a buyer will want it cleared before completion. Arrears also carry a 2 percent monthly penalty until they are paid.
-
-**Is property tax exempt below 500 square feet in Mumbai?**
-Yes. Since 1 January 2022 a residential flat of up to 500 square feet carpet area in Mumbai pays no property tax. The exemption applies to the carpet area on the assessment, so if that figure is wrong the exemption is being missed and the ward office can correct it.
+The dues stay with the flat, so a buyer will want them cleared before registration. Arrears also carry a 2 percent monthly penalty until they are paid.
 
 **How do I check my property tax in Mumbai online?**
-On the MCGM property tax portal, using the property account number printed on any earlier bill. It shows the current bill, the arrears if any, and the assessed area the bill is calculated on, which is the figure to check against the flat's actual carpet area.
+On the MCGM property tax portal, using the property account number from any earlier bill. It shows the current bill, any arrears, and the area the bill is worked out on.
 
 ---
 
-## Before you buy
+## Before you buy, or if you own
 
-Ask for the last paid receipt and check the carpet area against the 500 sq ft line, and you will know both whether anything is owed on the flat and whether there should be a bill at all. If you would like us to check a specific flat in Borivali, Kandivali or Malad, send us the building's name and we will tell you what we find, free.
+Ask for the last paid receipt, and check the carpet area against the 500 sq ft line. You will know whether anything is owed, and whether there should be a bill at all.
+
+Own a flat in Borivali, Kandivali or Malad? [Send us your last bill](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20can%20you%20check%20my%20BMC%20property%20tax%20bill%3F%20My%20flat%20is%20in%20___.) and we will tell you what we find, free.

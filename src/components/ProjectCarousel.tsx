@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { publicPrice } from "@/lib/project-helpers";
+import { registrationAwaited } from "@/lib/project-links";
 
 /**
  * Every project, one at a time, across the full width of the homepage. It
@@ -97,7 +98,7 @@ export function ProjectCarousel({
               <h2 className="mt-4 text-3xl text-white md:text-5xl">{s.name}</h2>
               {s.location && <p className="mt-2 text-paper/70">{s.location}</p>}
 
-              {s.configs.length > 0 && (
+              {s.configs.length > 0 && !registrationAwaited(s.slug) && (
                 <div className="mt-7 grid max-w-2xl grid-cols-2 gap-2.5 md:grid-cols-4">
                   {s.configs.slice(0, 4).map((c, ci) => (
                     <div key={`${c.type}-${ci}`} className="rounded-lg border border-bronze/25 bg-white/5 p-3.5">
@@ -108,7 +109,13 @@ export function ProjectCarousel({
                 </div>
               )}
 
-              <p className="mt-6 max-w-[52ch] text-[0.84rem] text-paper/50">{labels.note}</p>
+              {registrationAwaited(s.slug) ? (
+                <p className="mt-6 max-w-[52ch] text-[0.84rem] text-paper/70">
+                  MahaRERA registration awaited. Register your interest for updates.
+                </p>
+              ) : (
+                <p className="mt-6 max-w-[52ch] text-[0.84rem] text-paper/50">{labels.note}</p>
+              )}
 
               <div className="mt-6 flex flex-wrap gap-3.5">
                 <Link prefetch={false} href={`/projects/${s.slug}`} tabIndex={k === i ? 0 : -1} className="btn btn-bronze">

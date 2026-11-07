@@ -1,7 +1,7 @@
 ---
-title: "How many months of deposit is normal in the western suburbs, and when it is negotiable"
+title: "Rent deposit in Borivali, Kandivali and Malad: how many months is normal"
 metaTitle: "Rent deposit in Borivali: 2 to 3 months"
-metaDescription: "In Borivali, Kandivali and Malad, two to three months' rent is the normal deposit in newer societies. When it is negotiable, and how to get it back."
+metaDescription: "Two to three months' rent is the usual deposit in newer Borivali, Kandivali and Malad societies. See it by building age, and how to get it back."
 slug: rent-deposit-months-western-suburbs
 category: Renting
 heroImage: /blog/deposit-keys.jpg
@@ -18,11 +18,10 @@ note: >
   place through internal links, AI citation and being the thing people send
   to a friend.
 answer: >
-  In Borivali, Kandivali and Malad a deposit of two to three months' rent is
-  the norm in newer societies, rising to four, five or six in older buildings
-  and premium pockets. No Maharashtra law fixes the number. The two month cap
-  people quote comes from a central model law the state has not enacted, so
-  the deposit is a term of the agreement, and it is negotiable.
+  In newer societies in Borivali, Kandivali and Malad, a deposit of two to
+  three months' rent is normal. Older buildings and premium pockets ask four
+  to six months. No Maharashtra law sets a cap, so the deposit is a term of
+  your agreement, and it is negotiable.
 sources:
   - label: Section 55, Maharashtra Rent Control Act, 1999, registration of leave and licence agreements
     url: https://indiankanoon.org/doc/8402442/
@@ -43,8 +42,8 @@ sources:
 sourcesCheckedOn: "8 September 2026"
 updatedOn: "7 November 2026"
 relatedFaqs:
+  - How many months of deposit is normal in Borivali, Kandivali and Malad?
   - Is the deposit refundable in full?
-  - Can a landlord ask for more than ten months?
   - When is the deposit returned?
 readNext:
   - rent-agreement-mumbai
@@ -52,89 +51,130 @@ readNext:
   - guides/renting-in-the-western-suburbs
 ---
 
-## The short answer
+## Deposit by society age, with a worked example
 
-In Borivali, Kandivali and Malad a deposit of two to three months' rent is the norm in newer societies, rising to four, five or six in older buildings and premium pockets. No Maharashtra law fixes the number. The two month cap people quote comes from a central model law the state has not enacted, so **the deposit is a term of the agreement, and it is negotiable.**
+These are the going figures for this belt, taken from the sources listed below. The last column assumes a rent of 40,000 rupees a month, as an example.
+
+| Where the flat is | Usual deposit | On a 40,000 rupee rent |
+| --- | --- | --- |
+| Newer society in Borivali, Kandivali or Malad | 2 to 3 months | 80,000 to 1,20,000 rupees |
+| Western suburbs as a whole | 3 to 4 months | 1,20,000 to 1,60,000 rupees |
+| Older building or premium address | Up to 5 or 6 months | 2,00,000 to 2,40,000 rupees |
+| Ten months, the Bengaluru norm | Not usual in Mumbai | 4,00,000 rupees |
+
+A landlord in Borivali who asks for ten months is asking about three times the going rate. You can say so politely and ask for the usual figure.
 
 ---
 
 ## Where the number comes from
 
-Nothing in Maharashtra law sets it. The Maharashtra Rent Control Act, 1999 says a great deal about what a leave and licence agreement must be, and nothing about how large the deposit can be. Its one hard rule on the subject is section 55: every leave and licence agreement must be in writing and registered, the duty to register sits with the landlord, and if it is not registered, the tenant's account of the terms is what a court will go by unless the landlord can prove otherwise.
+No Maharashtra law sets the size of a deposit. The Maharashtra Rent Control Act, 1999 explains how a leave and licence agreement must be made. It says nothing about the deposit amount. A leave and licence agreement is the Mumbai form of rent agreement, usually for eleven months.
 
-The two month figure that circulates online is real, but it belongs to the Model Tenancy Act, 2021. That is a template written by the central government for states to adopt. A few states have. We could find no Maharashtra notification adopting it, and the state's only 2025 amendment to the Rent Control Act was about kitchens and structural alterations, not deposits. Until that changes, a Mumbai landlord asking three months is not breaking any law, and a tenant citing the two month cap is citing a law that does not apply here.
+The main rule is section 55. Every such agreement must be in writing and registered, and the landlord must register it. If it is not registered, a court goes by the tenant's account of the terms unless the landlord can prove otherwise.
 
-The ten month figure is real too, but it is Bengaluru's. Mumbai's convention has always been lower, and it has softened further as new supply came in. What the written sources agree on for this belt: **two to three months in newer societies and the suburbs generally, three to four across the western suburbs as a whole, and up to five or six in older buildings and premium addresses.** So a landlord in Borivali asking ten months is asking three times the going rate, and knows it.
+The two month figure you see online comes from the Model Tenancy Act, 2021. That is a template the central government wrote for states to adopt. We found no Maharashtra notification adopting it. The state's 2025 amendment to the Rent Control Act dealt with kitchens and structural alterations, not deposits.
 
-There is one other thing worth knowing. A study published in July 2026 estimated that Mumbai tenants have about 41,000 crore rupees sitting with landlords as deposits, more than any other Indian city. That money earns the tenant nothing. Every month of deposit you negotiate off is a month of rent back in your own account.
+So a landlord who asks for three months is within the law. A tenant who quotes the two month cap is quoting a law that does not apply here. The deposit is simply a term you agree and write down.
 
----
-
-## When it is negotiable, and when it is not
-
-A deposit is the landlord's insurance against three things: rent that stops, society dues that go unpaid, and damage beyond ordinary wear. A tenant who visibly lowers those three risks has room to negotiate. One who does not, has less.
-
-What lowers them in a landlord's eyes: a registered agreement rather than a handshake, a salary slip or employer letter, a willingness to pay society dues directly, and a tenancy that looks like it will last. A flat that has sat empty for a while lowers them further, because a month of vacancy costs the landlord more than a month of deposit protects.
-
-What raises them: a short stay, a first job, an owner who has been burned before, or a building where the society's own rules on tenants are strict. When a landlord in that position says no, pushing past it rarely works, and it is better spent on the next flat.
-
-The trade that is most often available is time, not money. Ask whether the deposit can be paid in two parts, one at signing and one at possession, or whether a slightly higher rent can stand in for a lower lump sum. The second of those is a genuine trade, so do the arithmetic before offering it: an extra 1,000 rupees a month over eleven months is 11,000 rupees you will not see again, against a deposit reduction you will.
+One more number is worth knowing. A study published in July 2026 estimated that landlords hold about 41,000 crore rupees of Mumbai tenants' deposits. That is more than in any other Indian city. That money earns the tenant nothing. Every month of deposit you negotiate off stays in your own account.
 
 ---
 
-## What the deposit is actually covering
+## When the deposit is negotiable
 
-Unpaid rent, unpaid society dues, and damage beyond normal wear and tear. That last phrase is not decoration. Section 108(m) of the Transfer of Property Act allows a landlord to recover for damage caused by the tenant but not for ordinary deterioration, and the courts treat faded paint, minor scuffs and the natural ageing of fittings as ordinary.
+A deposit is the landlord's cover against three things: rent that stops, society dues left unpaid, and damage beyond ordinary wear. A tenant who lowers those three risks has room to negotiate.
 
-That is why painting is where most handover arguments happen. A landlord who deducts the full cost of repainting a flat that shows nothing more than a year of normal living is charging wear and tear dressed up as damage. A hole in the wall, a broken fitting, a burn on the counter: those are damage, and a deduction for them is fair.
+What helps you:
+
+- A registered agreement rather than a handshake
+- A salary slip or an employer letter
+- Paying society dues directly
+- A tenancy that looks likely to last
+- A flat that has sat empty for a while, because a month of vacancy costs the landlord more than a month of deposit protects
+
+What makes a landlord firmer:
+
+- A short stay or a first job
+- An owner who has had a bad experience before
+- A building whose society has strict rules on tenants
+
+If a landlord in that position says no, move on to the next flat. Pushing rarely changes the answer.
+
+The easiest trade to ask for is time rather than money. Ask whether the deposit can be paid in two parts, one at signing and one at possession. You can also ask whether a slightly higher rent can stand in for a lower lump sum. Do the sum first. An extra 1,000 rupees a month over eleven months is 11,000 rupees you will not see again.
 
 ---
 
-## Getting it back
+## What the deposit covers
 
-The mechanics that apply everywhere:
+The deposit covers unpaid rent, unpaid society dues, and damage beyond normal wear and tear. Wear and tear means the ordinary ageing of a home that people have lived in.
 
-1. The amount, the deductions the landlord may make, and the return timeline all go into the written agreement. Not agreed verbally, not left to "as per practice".
-2. Photograph the flat on the day you move in, every room, including anything already damaged, and send the photographs to the landlord that day so they are dated.
-3. Settle the society dues and the electricity bill before you hand over, and keep the receipts.
-4. Ask for an itemised list of any deductions. A single line for "cleaning and painting" without receipts is the classic trigger for a dispute.
-5. Take the return by bank transfer, never cash.
+Section 108(m) of the Transfer of Property Act lets a landlord recover for damage the tenant causes. It does not cover ordinary deterioration. Courts treat faded paint, small scuffs and ageing fittings as ordinary.
 
-On timing: courts and rent authorities generally treat fifteen to thirty days from the day you hand over vacant possession as reasonable. Write that number into the agreement. The commonest reason for delay is a landlord waiting for a new tenant's deposit to fund the return of yours, which is a cash flow problem and not your problem.
-
-If it does not come back, the options in Maharashtra are the Court of Small Causes for a modest sum, a civil suit for recovery, and, where the tenancy was arranged through a platform or broker, the district consumer commission. A registered agreement with the deposit clause in it makes any of those straightforward. An unregistered one, oddly, does not hurt the tenant, because section 55 says the tenant's version of the terms prevails.
+Painting is where most handover arguments start. Say a flat shows only a year of normal living. A landlord who deducts the full cost of repainting it is charging wear and tear as if it were damage. A hole in the wall, a broken fitting or a burn on the counter is damage, and a deduction for it is fair.
 
 ---
 
-## A caution worth writing down
+## Getting the deposit back
 
-The pattern in lost deposits is not a bad landlord. It is a missing document. Money paid in cash with no receipt, an agreement that was never registered, a deposit clause that says "refundable after deductions" without saying which deductions, and no photographs from the first day. Each of those on its own is survivable. Together they leave the tenant with a claim and no way to prove it.
+These steps work in every society:
 
-Check for all four before you pay. If any one is missing, fix it before the money moves, and if the landlord will not fix it, that tells you something about the return.
+1. Put the amount, the permitted deductions and the return date in the written agreement. Do not leave them to a verbal promise or to "as per practice".
+2. Photograph every room on the day you move in, including anything already damaged. Send the photographs to the landlord the same day so they carry a date.
+3. Clear the society dues and the electricity bill before you hand over, and keep the receipts.
+4. Ask for an itemised list of any deductions. One line saying "cleaning and painting" with no receipts is the usual start of a dispute.
+5. Take the refund by bank transfer, never in cash.
+
+Courts and rent authorities generally treat fifteen to thirty days from handing over vacant possession as reasonable. Write that number into the agreement. A late refund is most often a landlord waiting for the next tenant's deposit to fund yours. That is the landlord's cash flow, not your problem.
+
+If the money does not come back, you have these routes in Maharashtra:
+
+- The Court of Small Causes, Mumbai's city court for money claims of modest size
+- A civil suit for recovery
+- The district consumer commission, where the tenancy was arranged through a platform or broker
+
+A registered agreement with a deposit clause makes any of these straightforward. An unregistered agreement does not hurt the tenant, because section 55 says the tenant's version of the terms prevails.
+
+---
+
+## Four papers that keep your deposit safe
+
+Lost deposits are rarely about a bad landlord. They usually come down to a missing document. Check that you have all four before you pay:
+
+- A receipt for the money, or a bank transfer record
+- A registered agreement
+- A deposit clause that lists the deductions
+- Photographs from day one
+
+If one is missing, fix it before the money moves. If the landlord will not fix it, that tells you something about how the refund will go.
 
 ---
 
 ## Common questions
 
+**How many months of deposit is normal in Borivali, Kandivali and Malad?**
+Two to three months in newer societies. Three to four across the western suburbs as a whole. Up to five or six in older buildings and premium addresses.
+
 **Can a landlord ask for more than ten months?**
-Legally, yes, because Maharashtra sets no cap. Practically, ten months is already three to four times the going rate in this belt, and a landlord asking it is either testing you or does not want a tenant. Either way, it is a reason to look elsewhere.
+Legally yes, because Maharashtra sets no cap. In practice ten months is three to four times the going rate in this belt. It is a good reason to look at another flat.
 
 **Is the deposit refundable in full?**
-Yes, less itemised deductions for unpaid rent, unpaid dues, and damage beyond ordinary wear and tear. Painting after normal use is wear and tear. Ask for the list, with receipts.
+Yes, less itemised deductions for unpaid rent, unpaid dues and damage beyond ordinary wear and tear. Painting after normal use is wear and tear. Ask for the list, with receipts.
 
-**When is it returned?**
-On the date the agreement says. If the agreement is silent, fifteen to thirty days from the day you hand back the keys is what courts treat as reasonable, and it is the number to write in.
+**When is the deposit returned?**
+On the date the agreement states. If it is silent, fifteen to thirty days from the day you hand back the keys is what courts treat as reasonable. Write that number in.
 
 **Is there a legal limit on the security deposit in Maharashtra?**
-No. The Maharashtra Rent Control Act, 1999 sets no cap; the two month limit often quoted is the central Model Tenancy Act, 2021, which Maharashtra has not enacted. The deposit is whatever the registered agreement says, which is why the amount, the deductions and the return date all belong in writing.
+No. The Maharashtra Rent Control Act, 1999 sets no cap. The two month limit often quoted is in the central Model Tenancy Act, 2021, which Maharashtra has not enacted. The deposit is whatever the registered agreement says, so the amount, the deductions and the return date all belong in writing.
 
 **What changed in the Maharashtra rent rules in 2025?**
-Less than the headlines suggest. The Maharashtra Rent Control (Amendment) Bill, 2025 dealt with structural alterations and the landlord's duty to keep a kitchen and essential services available. It did not cap deposits, change registration, or adopt the Model Tenancy Act. Section 55, which requires every agreement to be registered, is unchanged.
+Less than the headlines suggest. The Maharashtra Rent Control (Amendment) Bill, 2025 dealt with structural alterations and the landlord's duty to keep a kitchen and essential services available. It did not cap deposits, change registration or adopt the Model Tenancy Act. Section 55, which requires registration, is unchanged.
 
 ---
 
 ## Before you pay a deposit
 
-Get the amount, the permitted deductions and the return date into the written agreement, and get the agreement registered. Photograph everything on day one. Pay by transfer. And if a deposit looks unusually low for the building, ask why, because there is normally a reason.
+Get the amount, the permitted deductions and the return date into the agreement, register it, and photograph the flat on day one. Pay by bank transfer. If a deposit looks unusually low for the building, ask why, because there is normally a reason.
 
-Get the amount, the deductions and the return date into the written agreement, register it, and photograph the flat on day one. Do those and the deposit comes back the way it should. If you are looking at a flat in Borivali, Kandivali or Malad and would like us to read the agreement before you sign, send it over. That is part of what we do, and there is no charge for a look. Paying rent yourself? Our [HRA calculator and rent receipts tool](/tools/hra-calculator-rent-receipts) makes the receipts. Letting a flat in the belt? Our [rentals service](/services/rentals) finds the tenant. If it is a MHADA flat, read [can we rent out a MHADA flat](/blog/can-we-rent-mhada-flat) first.
+Looking at a flat in Borivali, Kandivali or Malad? Send us the agreement and we will read it before you sign. There is no charge for a look. Our [rentals service](/services/rentals) finds owner verified flats and registers the agreement for you.
+
+Paying rent yourself? The [HRA calculator and rent receipts tool](/tools/hra-calculator-rent-receipts) makes the receipts. For a MHADA flat, read [can we rent out a MHADA flat](/blog/can-we-rent-mhada-flat) first.

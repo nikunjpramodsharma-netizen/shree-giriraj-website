@@ -395,6 +395,20 @@ export default async function ServicePage({
         </div>
       </section>
 
+      {/* THE SHORT ANSWER. Forty to sixty words straight under the hero, so
+          a reader (and an answer engine) gets who, what and one hard figure
+          before anything else. English only, like the questions below. */}
+      {locale === "en" && repo?.answer && (
+        <section className="border-b border-line bg-white py-8 md:py-10">
+          <div className="wrap">
+            <div className="max-w-3xl border-l-4 border-bronze pl-5">
+              <div className="eyebrow">The short answer</div>
+              <p className="mt-2 text-lg leading-relaxed text-ink md:text-xl">{repo.answer}</p>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* HOW IT WORKS */}
       <section className="bg-paper-alt py-16 md:py-20">
         <Reveal>

@@ -22,6 +22,7 @@ import { ContactCTA } from "@/components/ContactCTA";
 import { graph, breadcrumbNode, faqNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
 import { site, waLink } from "@/lib/config";
+import { AREA_STATS_SOURCE } from "@/lib/homepage-content";
 import {
   AREAS,
   getArea,
@@ -176,6 +177,10 @@ export default async function AreaPage({
             </div>
           ))}
         </dl>
+        <p className="mt-2 text-xs text-muted">
+          {AREA_STATS_SOURCE} The averages quoted elsewhere on this page come
+          from other portals, measured their own way, so they can differ.
+        </p>
 
         <div className="mt-10 max-w-[68ch] rounded-xl border border-line bg-paper-alt p-5">
           <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">
@@ -187,6 +192,20 @@ export default async function AreaPage({
         {/* Straight to the flats, for readers who came here to buy or rent. */}
         {listings.length > 0 && (
           <div className="mt-10 grid max-w-[68ch] gap-3 sm:grid-cols-2">
+            {area.slug !== "malad" && (
+              <a
+                href="/projects"
+                className="group rounded-xl border border-line bg-white p-5 transition hover:border-bronze hover:shadow-md sm:col-span-2"
+              >
+                <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">New homes</div>
+                <div className="mt-1.5 font-display text-lg text-brand-indigo">
+                  New projects in {area.h1 ?? area.longName}
+                </div>
+                <div className="mt-1 text-sm text-ink/70 group-hover:text-ink">
+                  Compared side by side: BHK, from about price, possession and MahaRERA status
+                </div>
+              </a>
+            )}
             {listings.map((l) => (
               <a
                 key={l.intent}
@@ -218,6 +237,19 @@ export default async function AreaPage({
                   <div className="mt-4 space-y-4 text-[1.02rem] leading-relaxed text-ink/85">
                     {s.body.map((para, pi) => (
                       <p key={para.slice(0, 48)} style={{ ["--i" as string]: pi + 1 }}>{para}</p>
+                    ))}
+                    {s.bullets && (
+                      <ul className="space-y-2">
+                        {s.bullets.map((b) => (
+                          <li key={b} className="flex gap-3">
+                            <span aria-hidden="true" className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze" />
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    {s.after?.map((para) => (
+                      <p key={para.slice(0, 48)}>{para}</p>
                     ))}
                   </div>
                 </InView>
@@ -297,8 +329,11 @@ export default async function AreaPage({
         {area.sources.length > 0 && (
           <details className="mt-12 max-w-[68ch] rounded-xl border border-line p-5">
             <summary className="cursor-pointer list-none text-[0.62rem] font-bold uppercase tracking-[0.18em] text-muted marker:content-none">
-              Where these figures come from. Market figures as of {area.figuresAsOf}; asking rates, not prices paid.
+              Sources
             </summary>
+            <p className="mt-3 text-sm text-muted">
+              Market figures as of {area.figuresAsOf}. Asking rates, not prices paid.
+            </p>
             <ul className="mt-3 space-y-1.5 text-sm">
               {area.sources.map((src) => (
                 <li key={src.url}>

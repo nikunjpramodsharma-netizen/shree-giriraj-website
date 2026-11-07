@@ -1,7 +1,7 @@
 ---
-title: "Commercial property investment: what changes when you buy a shop instead of a flat"
-metaTitle: "Commercial property investment in Mumbai"
-metaDescription: "Buying a shop or office instead of a flat changes the lease, the deposit, GST and the loan. What to check before you invest in commercial property."
+title: "Shops and offices in Borivali, Kandivali and Malad: what changes when you buy commercial instead of a flat"
+metaTitle: "Commercial property investment in Borivali"
+metaDescription: "Buying a shop or office in Borivali, Kandivali or Malad changes the lease, deposit, GST and loan. What to check before you invest."
 slug: commercial-property-investment-mumbai
 category: Investing
 heroImage: /blog/commercial-investment.jpg
@@ -10,19 +10,22 @@ targetKeyword: commercial property investment
 searchVolume: 880
 competition: LOW
 funnelStage: consideration
-wordTarget: 1500
+wordTarget: 1700
 note: >
   Primary keyword measured at 880 a month in India, low competition, CPC around
-  80 paise, on 8 September 2026 via DataForSEO. That is more than three times
-  the volume of any residential investment term measured, and the firm already
-  handles commercial through the commercial and plots service, so this is the
-  strongest commercial angle in the cluster. Publishes no yield figures.
+  80 paise, on 8 September 2026 via DataForSEO. A related local term,
+  "commercial property in borivali", runs about 30 a month. Rewritten on
+  7 November 2026 around shops and offices in the three suburbs. The firm
+  handles commercial through the commercial and plots service. The post
+  publishes no rents and no yield figures, because none have been verified for
+  commercial units here. The places named are the ones already on the area
+  pages.
 answer: >
-  A commercial property is let under different rules from a flat. Leases run
-  longer, deposits are larger, the tenant usually pays the outgoings, rent
-  above the registration threshold attracts GST, and lending is on tighter
-  terms. The trade is a stronger income profile against a smaller pool of
-  buyers and tenants when you want to exit.
+  A shop or office is let under different rules from a flat. Leases run
+  longer and deposits are larger. The tenant usually pays the outgoings, and
+  GST applies once the landlord's turnover passes 20 lakh rupees. Loans are
+  tighter. You get a stronger income in return for fewer buyers and tenants
+  when you want to sell.
 sources:
   - label: "Section 55, Maharashtra Rent Control Act 1999, registration of leave and licence agreements"
     url: https://indiankanoon.org/doc/8402442/
@@ -34,6 +37,8 @@ sources:
     url: https://gstcouncil.gov.in/sites/default/files/2025-01/ctr07-2025.pdf
   - label: "Income Tax Act 1961, section 194-I, tax deducted at source on rent"
     url: https://incometaxindia.gov.in/pages/acts/income-tax-act.aspx
+  - label: "Mindspace Business Parks REIT, Paradigm Mindspace Malad: tenants and occupancy"
+    url: https://www.mindspacereit.com/portfolio/mumbai-paradigm-mindspace-malad
   - label: "DataForSEO, Google search volume for commercial property investment terms in India, measured 8 September 2026"
     url: https://dataforseo.com
 sourcesCheckedOn: "16 September 2026"
@@ -45,89 +50,119 @@ relatedFaqs:
 readNext:
   - rental-yield-mumbai
   - rent-deposit-months-western-suburbs
+  - fractional-ownership-real-estate-india
   - services/commercial-plots
 ---
 
-## The short answer
+## A shop or office compared with a flat
 
-A commercial property is let under different rules from a flat. Leases run longer, deposits are larger, the tenant usually pays the outgoings, rent above the registration threshold attracts GST, and lending is on tighter terms. **The trade is a stronger income profile against a smaller pool of buyers and tenants when you want to exit.**
+| | Flat | Shop or office |
+| --- | --- | --- |
+| Usual agreement | Leave and licence, often eleven months | Longer, because the tenant fits out a business |
+| Who pays society charges and property tax | Usually the owner | Often passed to the tenant |
+| Deposit | Two to three months in newer societies | Negotiated, commonly higher |
+| GST on rent | None on a home let for living | 18 percent, once the landlord must register |
+| Home loan terms | Best available | Lower share of value, higher rate, shorter tenure |
+| Who rents it | Anyone who needs a home | A business that suits the unit |
+| Buyers when you sell | Many | Fewer |
+
+Nothing here makes commercial better. It makes the income behave differently, so compare the two on net figures, not on headline rent.
 
 ---
 
 ## Why the income profile is different
 
-The structural difference is who pays for what. In a residential tenancy the owner generally carries society maintenance and property tax out of the rent. In a commercial letting those outgoings are commonly passed to the tenant, which means more of the headline rent survives to become income.
+**Who pays for what.** In a flat the owner generally carries society maintenance and property tax out of the rent. In a shop or office those outgoings are commonly passed to the tenant. More of the headline rent then becomes income.
 
-Lease length works the same way. A residential leave and licence agreement in Mumbai typically runs eleven months and is re signed. A shop tenant fitting out a business is committing capital of their own and wants a longer term, so the letting is stickier and the gaps between tenants are fewer.
+**Lease length.** A tenant fitting out a business has put in capital of their own and wants a longer term. Lettings are stickier and gaps between tenants are fewer.
 
-Deposits are larger too. There is no statutory cap in Maharashtra on either residential or commercial deposits, and commercial deposits are negotiated on a different scale. Money held is money you can put to work while you hold it.
-
-None of that makes commercial better. It makes the income side of it behave differently, and it is why the two should be compared on net figures rather than on the headline rent.
+**Deposits.** Maharashtra has no cap on residential or commercial deposits. Commercial deposits are negotiated on a different scale. Money you hold is money you can put to work.
 
 ---
 
-## What decides how a commercial unit performs
+## What decides how a shop or office performs
 
-**The tenant is a business, and businesses close.** A residential tenant who loses their job usually still needs somewhere to live. A shop that stops trading vacates. Vacancy in commercial tends to be less frequent but longer, because the next tenant needs the unit to suit their trade.
+**The tenant is a business, and businesses close.** A residential tenant who loses a job still needs a home. A shop that stops trading is vacated. Vacancy in commercial is less frequent but can be longer, because the next tenant needs the unit to suit their trade.
 
-**The unit has to suit somebody.** A flat is a flat. A commercial unit has a frontage, a floor, a location within the parade, a power load and an approved use, and a unit that suits nobody in particular is hard to let at any rent. Ground floor with real frontage is a different asset from a first floor unit in the same building.
+**The unit has to suit somebody.** A commercial unit has a frontage, a floor, a place within the parade, a power load and an approved use. A ground floor unit with real frontage is a different asset from a first floor unit in the same building.
 
-**Footfall is the product.** A shop investor is buying the traffic past the door, not the square feet behind it. That is why an empty new plaza and an established market street can carry similar rates and behave completely differently.
+**Footfall is the product.** A shop investor buys the traffic past the door, not the square feet behind it.
 
-**The exit pool is smaller.** Far more people are looking to buy a two bedroom flat in Borivali than a commercial unit. That is fine while you hold it and it matters on the day you want out.
+**The exit pool is smaller.** Far more people want a two bedroom flat in Borivali than a commercial unit. That is fine while you hold it, and it matters on the day you sell.
+
+---
+
+## Where the footfall is in the three suburbs
+
+These are the commercial and office places already on our area pages. We name them as places to study, not as recommendations.
+
+- **Borivali West:** the L.T. Road and Chandavarkar Road belt, the old commercial heart, with the municipal market and the shopping lanes
+- **Kandivali East:** Growel's 101 mall on Akurli Road, off the highway, with a PVR and more than a hundred brands
+- **Kandivali West:** Raghuleela Mega Mall behind Poisar depot, open since 2009, with about 800 shops and an INOX
+- **Malad West:** the Mindspace office district, where Paradigm Mindspace is 98.6 percent committed on the REIT's own figures, with Inorbit and Infiniti beside it
+- **Malad East:** Rani Sati Marg, now a metro hotspot, and Dindoshi's Infinity IT Park
+
+We publish no rent for a shop or office, because it depends on the unit. Ask what a tenant pays this month in the exact parade.
 
 ---
 
 ## Is GST charged on commercial rent?
 
-Yes, at 18 percent, and who pays it depends on who is registered. Renting a commercial property is a supply of services under GST. A landlord whose aggregate turnover crosses 20 lakh rupees in a financial year must register, charge GST on the rent and remit it; Maharashtra is not a special category state, so the lower 10 lakh threshold does not apply here. Aggregate turnover is counted across everything on the same PAN, exempt residential rent included, so a landlord with several flats and one shop can cross the line sooner than the shop rent alone suggests.
+Yes, at 18 percent, and who pays depends on who is registered.
 
-Where the landlord is not registered but the tenant is, the tenant pays the GST under reverse charge. That rule came in on 10 October 2024 under Notification 09/2024 Central Tax (Rate), which added entry 5AB to the reverse charge list for renting any property other than a residential dwelling, and from 16 January 2025 tenants on the composition scheme were taken out of it by Notification 07/2025. A registered tenant self invoices, pays the 18 percent and claims the credit where the rules allow.
+**The landlord registers.** A landlord whose yearly turnover passes 20 lakh rupees must register for GST, charge it on the rent and pay it over. Maharashtra is not a special category state, so the lower 10 lakh limit does not apply. Turnover is counted across everything on the same PAN, including exempt rent from homes. A landlord with several flats and one shop can cross the line sooner than the shop rent alone suggests.
 
-The practical point for an investor: a rent quoted to you may or may not be inclusive of GST, and the difference is material. Ask which it is, and ask whether the tenant is registered, before you compare two units.
+**The landlord is not registered but the tenant is.** The tenant pays the GST under reverse charge, which means the tenant pays the tax directly instead of the landlord. This rule began on 10 October 2024 under Notification 09/2024 Central Tax (Rate). Since 16 January 2025, tenants on the composition scheme, a simple GST option for small businesses, are outside it under Notification 07/2025. A registered tenant raises the invoice, pays the 18 percent and claims the credit where the rules allow.
 
----
-
-## Can you get a loan on a commercial property?
-
-Yes, and on tighter terms than a home loan. Lenders generally advance a lower share of the value on commercial than on residential, the interest rate is higher, and the tenure is shorter. Some lenders will not fund particular categories at all, and an under construction commercial unit is harder to fund than a completed one.
-
-Work the funding out before you negotiate, not after. A commercial purchase needs more of your own money in it than a comparable flat, and finding that out at the sanction stage costs you the deal.
+**What to do.** A rent quoted to you may or may not include GST. Ask which, and ask whether the tenant is registered, before you compare two units. Your chartered accountant can confirm your own position.
 
 ---
 
-## What to check before you buy a unit here
+## Can you get a loan on a shop or office?
 
-1. **The approved use.** What the unit is permitted to be used for is a matter of record, not of what the current occupant is doing. A unit being used as something it is not approved for is a problem you inherit.
-2. **The society's position on commercial tenants.** Some societies with commercial units on the ground floor are restrictive about trades, hours and signage. That restricts your tenant pool.
-3. **Frontage and access.** Where the shutter faces, how visible it is from the road, and whether deliveries can actually reach it.
-4. **The parade around it.** A unit next to trades that pull traffic is a different asset from the same unit next to three vacant shutters.
+Yes, on tighter terms than a home loan:
+
+- A lower share of the value is lent
+- The interest rate is higher
+- The tenure is shorter
+- An under construction unit is harder to fund than a finished one
+
+Work out the funding before you negotiate. A commercial purchase needs more of your own money than a similar flat. Finding that out at the sanction stage can cost you the deal.
+
+---
+
+## Six checks before you buy a unit
+
+1. **The approved use.** What the unit may be used for is on record. A unit used for something it is not approved for is a problem you inherit.
+2. **The society's position on commercial tenants.** Some societies with ground floor units limit trades, hours and signage. That narrows your tenant pool.
+3. **Frontage and access.** Where the shutter faces, how visible it is, and whether deliveries can reach it.
+4. **The parade around it.** A unit next to trades that pull traffic is a different asset from the same unit beside three empty shutters.
 5. **The title and the outgoings.** The same checks as a flat, plus who has been paying the property tax and on what basis.
-6. **What it lets for today.** Not what the seller says it could let for. What a tenant is paying, or would pay, this month.
+6. **What it lets for today.** Not what the seller says it could let for, but what a tenant pays or would pay this month.
 
 ---
 
 ## Common questions
 
 **Is commercial property a better investment than residential?**
-It is a different one. Commercial typically offers a stronger income profile, with the tenant carrying outgoings and longer leases, against a smaller pool of tenants and buyers, tighter lending and longer vacancies when they happen. Which is better depends on whether you need income or liquidity.
+It is a different one. Commercial usually offers a stronger income profile, with the tenant carrying outgoings and longer leases. It also means a smaller pool of tenants and buyers, tighter lending and sometimes longer vacancies. Which is better depends on whether you need income or the ability to sell easily.
 
 **Is GST charged on commercial rent?**
-Where the landlord is liable to register for GST, yes, commercial letting is a taxable supply of services. Residential letting for use as a residence is treated differently. Confirm your own position with an accountant, because it turns on the registration status of both parties.
+Where the landlord must register for GST, yes. Letting a home for living is treated differently. Confirm your position with an accountant, because it turns on the registration status of both sides.
 
 **Are commercial deposits capped in Maharashtra?**
-No. There is no statutory cap on deposits for either residential or commercial premises in Maharashtra. Commercial deposits are negotiated and commonly run higher than on flats. The agreement still has to be registered under section 55 of the Rent Control Act.
+No. There is no statutory cap on deposits for homes or commercial premises. Commercial deposits are negotiated and commonly run higher than on flats. The agreement still has to be registered under section 55 of the Rent Control Act.
 
 **Do commercial leases have to be registered?**
-A leave and licence agreement must be in writing and registered, and the duty to register sits with the licensor. If it is not registered, the licensee's account of the terms is what a court will go by unless the licensor can prove otherwise.
+A leave and licence agreement must be in writing and registered, and the licensor, the owner, must do it. If it is not registered, a court goes by the licensee's account of the terms unless the licensor can prove otherwise.
 
-**Are there commercial units worth buying in Borivali, Kandivali and Malad?**
-There are, and availability moves constantly, so we will tell you what genuinely exists when you ask rather than maintaining a list that goes stale. What is consistently true is that ground floor units with real frontage on an established trading street behave very differently from upper floor units in the same building.
+**Are there shops and offices worth buying in Borivali, Kandivali and Malad?**
+Yes, and availability moves constantly. We tell you what genuinely exists when you ask instead of keeping a list that goes stale. Ground floor units with real frontage on an established trading street behave very differently from upper floor units in the same building.
 
 ---
 
 ## Before you commit
 
-Commercial is the part of this market where local knowledge changes the answer most, because footfall does not appear in a price per square foot and cannot be checked from a listing. Stand outside the unit at the hours the trade would actually run.
+Commercial is the part of this market where local knowledge changes the answer most. Footfall does not show in a price per square foot, and it cannot be checked from a listing. Stand outside the unit at the hours the trade would run.
 
-Stand outside the unit at the hours the trade would run, and work the income through the [rental yield calculator](/tools/rental-yield-calculator) before you go. If you would like somebody who knows these parades to look at a unit with you, our [commercial and plots](/services/commercial-plots) service and our [property investment advisory](/services/investment-advisory) do exactly that, without obligation.
+Then work the income through the [rental yield calculator](/tools/rental-yield-calculator). Would you like someone who knows these parades to look at a unit with you? Our [commercial and plots](/services/commercial-plots) service and our [property investment advisory](/services/investment-advisory) do exactly that, without obligation. If you are weighing a shop against a listed REIT, read [REIT, SM REIT or a flat](/blog/fractional-ownership-real-estate-india).

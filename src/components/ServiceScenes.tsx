@@ -8,7 +8,7 @@ import { BenefitDeck } from "@/components/motion/BenefitDeck";
 import { SectionDeck } from "@/components/motion/SectionDeck";
 import { waLink } from "@/lib/config";
 import { tr } from "@/lib/copy-i18n";
-import type { Block, Inline } from "@/lib/markdown";
+import { parseInline, type Block, type Inline } from "@/lib/markdown";
 import type { ServiceScene } from "@/lib/service-scenes";
 
 /**
@@ -195,6 +195,33 @@ export function ServiceScenes({
                             ))}
                           </ul>
                         );
+                      // A table (rents, prices, fees, projects) scrolls inside
+                      // its own box on a phone rather than widening the page.
+                      if (b.t === "table")
+                        return (
+                          <div key={bi} className="mt-5 overflow-x-auto rounded-xl border border-line bg-white">
+                            <table className="w-full text-left text-sm">
+                              <thead className="bg-paper-alt">
+                                <tr>
+                                  {b.head.map((h, k) => (
+                                    <th key={k} scope="col" className="whitespace-nowrap p-3 font-semibold text-ink">{h}</th>
+                                  ))}
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {b.rows.map((r, k) => (
+                                  <tr key={k} className="border-t border-line">
+                                    {r.map((c, j) => (
+                                      <td key={j} className={`p-3 align-top ${j === 0 ? "font-medium text-ink" : "text-ink/80"}`}>
+                                        <Spans spans={parseInline(c)} />
+                                      </td>
+                                    ))}
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          </div>
+                        );
                       if (b.t === "ol")
                         return (
                           <ol key={bi} className="mt-4 space-y-2">
@@ -212,6 +239,45 @@ export function ServiceScenes({
                 ),
               }))}
             />
+          </div>
+        </section>
+      )}
+
+      {/* GALLERY. Illustrations for the reader to point at ("this kind of
+          kitchen"), credited, and labelled as not our own work. English only,
+          like the captions. */}
+      {scene.gallery && scene.gallery.photos.length > 0 && locale === "en" && (
+        <section className="bg-paper-alt py-14 md:py-16">
+          <div className="wrap">
+            <InView className="cascade">
+              <div style={{ ["--i" as string]: 0 }} className="eyebrow">{scene.gallery.eyebrow}</div>
+              <h2 style={{ ["--i" as string]: 1 }} className="mt-3 max-w-[28ch] text-2xl text-brand-indigo md:text-3xl">
+                {scene.gallery.heading}
+              </h2>
+              <p style={{ ["--i" as string]: 2 }} className="mt-3 max-w-[60ch] text-ink/75">{scene.gallery.intro}</p>
+            </InView>
+            <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {scene.gallery.photos.map((p) => (
+                <li key={p.src}>
+                  <figure>
+                    <div className="relative aspect-[3/2] overflow-hidden rounded-xl">
+                      <Image
+                        src={p.src}
+                        alt={p.alt}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover"
+                      />
+                    </div>
+                    <figcaption className="mt-2 text-sm text-ink/80">
+                      {p.caption}
+                      <span className="mt-0.5 block text-xs text-muted">Photo: {p.credit}, Pexels</span>
+                    </figcaption>
+                  </figure>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-xs text-muted">{scene.gallery.note}</p>
           </div>
         </section>
       )}
