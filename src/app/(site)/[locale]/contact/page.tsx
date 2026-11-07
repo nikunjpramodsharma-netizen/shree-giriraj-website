@@ -33,7 +33,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   if (params.locale !== CONTACT_LOCALE) return {};
   return {
-    title: "Contact us: estate agency in Borivali West",
+    title: "Contact us: Chikoowadi, Borivali West",
     description: `Talk to us about buying, selling, renting or investing across ${site.areas.join(", ")}. WhatsApp, phone or send your details.`,
     ...pageUrls(params.locale, "/contact", [CONTACT_LOCALE]),
   };

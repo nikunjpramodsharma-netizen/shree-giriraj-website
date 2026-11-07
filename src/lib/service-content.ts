@@ -257,7 +257,7 @@ export const REPO_SERVICES: Record<string, RepoService> = {
   // Sanity on 16 September 2026; see service-content-core.ts for why.
   ...CORE_SERVICES,
   "investment-advisory": {
-    title: "Property investment advice in Borivali",
+    title: "Property investment advice, Borivali",
     heroHeading: "Property investment advisory in the western suburbs",
     heroSubheading:
       "For investors buying in Borivali, Kandivali and Malad to hold rather than to live in. We read the micro market, do the arithmetic on the actual flat, and tell you when the numbers do not work.",
@@ -266,7 +266,7 @@ export const REPO_SERVICES: Record<string, RepoService> = {
     body: INVESTMENT_ADVISORY_BODY,
   },
   "commercial-plots": {
-    title: "Commercial property and plots in Borivali",
+    title: "Shops and offices in Borivali West",
     heroHeading: "Commercial property in Borivali, Kandivali and Malad",
     heroSubheading:
       "Shops, showrooms, office space and the occasional genuine plot, for sale or rent across the western suburbs. For businesses that need premises here and investors buying a unit to let.",
@@ -275,7 +275,7 @@ export const REPO_SERVICES: Record<string, RepoService> = {
     body: COMMERCIAL_PLOTS_BODY,
   },
   "mhada-paperwork": {
-    title: "MHADA NOC and transfer, anywhere in Mumbai",
+    title: "MHADA NOC and transfer, all Mumbai",
     heroHeading: "MHADA paperwork, handled end to end",
     heroSubheading:
       "Transfer of tenement, no objection certificates for sale, rent and mortgage, transfer to heirs, and regularisation, for MHADA flats anywhere in Mumbai. A complete file to the right desk, followed up until it is decided.",

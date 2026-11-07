@@ -3,6 +3,7 @@ import { FLAT_LISTINGS, listingPath, type ListingIntent } from "@/lib/flats";
 import { getAllPosts } from "@/lib/posts";
 import { getRepoService } from "@/lib/service-content";
 import { getTool } from "@/lib/tools";
+import { getProjectLink, projectsInArea } from "@/lib/project-links";
 
 /**
  * The web between the four kinds of page. A service points at the tools
@@ -17,7 +18,7 @@ import { getTool } from "@/lib/tools";
  * would go there, not what the page is called.
  */
 
-export type LinkKind = "service" | "area" | "tool" | "article";
+export type LinkKind = "service" | "area" | "tool" | "article" | "project";
 
 export type LinkCard = {
   kind: LinkKind;
@@ -33,6 +34,8 @@ export type Interlinks = {
   areas: LinkCard[];
   tools: LinkCard[];
   articles: LinkCard[];
+  /** New projects in the suburb a page is about. Absent on most pages. */
+  projects?: LinkCard[];
 };
 
 const TOOL_HOOKS: Record<string, string> = {
@@ -66,7 +69,7 @@ const SERVICE_HOOKS: Record<string, string> = {
 const SERVICE_MAP: Record<string, { tools: string[]; articles: string[]; services: string[] }> = {
   "resale-flats": {
     tools: ["stamp-duty-calculator-mumbai", "carpet-area-calculator"],
-    articles: ["stamp-duty-and-registration-charges-mumbai", "what-a-sale-deed-contains"],
+    articles: ["stamp-duty-and-registration-charges-mumbai", "what-a-sale-deed-contains", "how-to-buy-mhada-flat-in-resale"],
     services: ["new-project-bookings", "investment-advisory"],
   },
   rentals: {
@@ -168,6 +171,38 @@ const ARTICLE_TOOL: Record<string, string> = {
   "what-a-sale-deed-contains": "capital-gains-calculator-property",
 };
 
+/** The new projects in one suburb, as cards. Empty where there are none. */
+function projectCards(area: string): LinkCard[] {
+  return projectsInArea(area).map((p) => ({
+    kind: "project" as const,
+    href: `/projects/${p.slug}`,
+    title: p.name,
+    hook: "A new project here, with the price sheet and a site visit on WhatsApp.",
+    englishOnly: true,
+  }));
+}
+
+/**
+ * Every MHADA guide on the site, for the full list on the MHADA paperwork
+ * page. Pass the slugs the page already links so none is shown twice.
+ */
+export const MHADA_GUIDES = [
+  "mhada-noc-online",
+  "mhada-flat-transfer",
+  "can-we-rent-mhada-flat",
+  "can-we-sell-mhada-flat",
+  "mhada-transfer-on-death",
+  "how-to-buy-mhada-flat-in-resale",
+  "mhada-allotment-letter",
+  "home-loan-on-mhada-flat",
+  "mhada-office-bandra",
+  "mhada-redevelopment-rules",
+];
+
+export function mhadaGuideCards(alreadyLinked: string[] = []): LinkCard[] {
+  return articleCards(MHADA_GUIDES.filter((s) => !alreadyLinked.includes(s)));
+}
+
 function uniq(xs: string[]): string[] {
   return xs.filter((x, i) => xs.indexOf(x) === i);
 }
@@ -232,6 +267,7 @@ export function interlinksForListing(area: string, intent: ListingIntent, locale
     tools: toolCards(r.tools),
     articles: articleCards(r.articles),
     areas: [...listingCards(intent, area), ...guide],
+    projects: intent === "sale" ? projectCards(area) : [],
   };
 }
 
@@ -281,6 +317,23 @@ export function interlinksForArea(slug: string, locale: string): Interlinks {
     tools: toolCards(AREA_RECIPE.tools),
     articles: articleCards(AREA_RECIPE.articles),
     areas: areaCards(slug),
+    projects: projectCards(slug),
+  };
+}
+
+/**
+ * A project page points at its suburb's guide and flats for sale page, the two
+ * calculators a buyer of a new flat needs, and the new project booking service.
+ */
+export function interlinksForProject(slug: string, locale: string): Interlinks {
+  const area = getProjectLink(slug)?.area;
+  const guide = area ? areaCards().filter((c) => c.href === `/areas/${area}`) : [];
+  const forSale = area ? listingCards("sale").filter((c) => c.href.startsWith(`/areas/${area}/`)) : [];
+  return {
+    tools: toolCards(["stamp-duty-calculator-mumbai", "home-loan-emi-calculator"]),
+    areas: [...guide, ...forSale],
+    articles: [],
+    services: serviceCards(["new-project-bookings"], locale),
   };
 }
 

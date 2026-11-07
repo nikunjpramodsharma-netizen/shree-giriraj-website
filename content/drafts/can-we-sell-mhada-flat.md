@@ -1,7 +1,7 @@
 ---
 title: "Can we sell a MHADA flat? The five year rule, the permissions, and what voids a sale"
-metaTitle: "Can we sell a MHADA flat after 5 years? Yes"
-metaDescription: "Yes, after five years, with written permission from the Board and the society. The papers you need, the transfer charges, and how to keep the sale valid."
+metaTitle: "MHADA flat sale rules: sell after 5 years?"
+metaDescription: "Yes, after five years, with written permission from the Board and the society. The papers, the transfer charges and how to keep the sale valid."
 slug: can-we-sell-mhada-flat
 category: MHADA
 heroImage: /blog/mhada-sell.jpg
@@ -34,6 +34,7 @@ sources:
   - label: "DataForSEO, Google search volume for MHADA sale and transfer terms in India, measured 9 September 2026"
     url: https://dataforseo.com
 sourcesCheckedOn: "9 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - Can I sell a MHADA flat after 5 years?
   - What are the MHADA transfer fees?
@@ -72,7 +73,7 @@ On top of that sits the transfer charge. The Mumbai Board's document list publis
 
 ---
 
-## What happens if a MHADA flat is sold without permission?
+## How to keep your sale valid
 
 The Regulations are explicit, and it is the most important paragraph on this page.
 
@@ -86,7 +87,7 @@ Read that from the buyer's side. They paid a market price for a flat, and the re
 
 The Mumbai Board publishes a fourteen item list for transfer of tenancy rights. The application is in a prescribed format from the Estate Manager's office. It is accompanied by a certificate stating the reason for the transfer, the no objection certificate of the original tenement holder, the society's no objection certificate or an affidavit that no society exists, an affidavit that the applicant and immediate family hold no other land or tenement in Mumbai city and suburbs, proof of income, attested photographs, the latest rent receipt showing no arrears, and the receipted transfer charges. The list says the application is to be submitted to the Estate Manager within fifteen days.
 
-The items that trip people up are the income affidavit, because the buyer's income group has to fit the scheme, and the society NOC, because a society with a grievance can sit on it. Assemble the file before the agreement is signed, not after.
+The two items to line up first are the income affidavit, because the buyer's income group has to fit the scheme, and the society NOC, because a society with a grievance can sit on it. Assemble the file before the agreement is signed, not after.
 
 ---
 
@@ -119,4 +120,4 @@ Yes. For EWS, LIG and MIG schemes the transferee must fall in one of those group
 
 Get the [allotment letter](/blog/mhada-allotment-letter), the latest rent receipt and the society's position in front of somebody who knows the Regulations. Find out whether the unearned increase applies to your scheme. Then price the flat, knowing what the transfer will cost and how long the Board has to decide.
 
-Get the allotment letter, the latest receipt and the society's position together, find out whether the unearned increase applies to your scheme, and price the flat knowing what the transfer costs. Done in that order, a MHADA sale is a straightforward one. If the flat is in Borivali, Kandivali or Malad, our [MHADA paperwork service](/services/mhada-paperwork) handles the whole file, and the buyer's side is in [how to buy a MHADA flat in resale](/blog/how-to-buy-mhada-flat-in-resale).
+Get the allotment letter, the latest receipt and the society's position together, find out whether the unearned increase applies to your scheme, and price the flat knowing what the transfer costs. Done in that order, a MHADA sale is a straightforward one. If the flat is in Borivali, Kandivali or Malad, our [MHADA paperwork service](/services/mhada-paperwork) handles the whole file, and the buyer's side is in [how to buy a MHADA flat in resale](/blog/how-to-buy-mhada-flat-in-resale). A society planning to rebuild should also read our [MHADA redevelopment rules](/blog/mhada-redevelopment-rules). If you would rather let the flat than sell it, see [can we rent out a MHADA flat](/blog/can-we-rent-mhada-flat). Selling at a profit? Our [capital gains calculator](/tools/capital-gains-calculator-property) shows the tax on the sale.

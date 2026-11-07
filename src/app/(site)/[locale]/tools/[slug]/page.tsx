@@ -12,10 +12,11 @@ import { InteriorsScope } from "@/components/InteriorsScope";
 import { CapitalGainsCalculator } from "@/components/CapitalGainsCalculator";
 import { RentalYieldCalculator } from "@/components/RentalYieldCalculator";
 import { PropertyTaxCalculator } from "@/components/PropertyTaxCalculator";
-import { graph, breadcrumbNode, faqNode } from "@/lib/schema";
-import { pageUrls } from "@/lib/seo";
+import { graph, breadcrumbNode, faqNode, webApplicationNode } from "@/lib/schema";
 import Image from "next/image";
-import { TOOLS, getTool } from "@/lib/tools";
+import { TOOLS, getTool, TOOL_WHATSAPP } from "@/lib/tools";
+import { PageWhatsApp } from "@/components/PageWhatsApp";
+import { pageUrls, absoluteUrl } from "@/lib/seo";
 import { TOOL_IMAGES } from "@/lib/tool-images";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { interlinksForTool } from "@/lib/interlinks";
@@ -70,8 +71,18 @@ export default function ToolPage({
         data={graph(
           breadcrumbNode(locale, trail),
           faqNode(tool.faqs.map((f) => ({ question: f.q, answer: f.a }))),
+          webApplicationNode({
+            locale,
+            name: tool.title,
+            path: `/tools/${tool.slug}`,
+            category:
+              tool.slug === "carpet-area-calculator" || tool.slug === "interior-scope-builder"
+                ? "UtilitiesApplication"
+                : "FinanceApplication",
+          }),
         )}
       />
+      {TOOL_WHATSAPP[tool.slug] && <PageWhatsApp message={TOOL_WHATSAPP[tool.slug]} />}
 
       <header className="relative overflow-hidden bg-brand-indigo-deep text-paper">
         {/* The tool's own picture, on the right and fading into the navy, so the
@@ -125,7 +136,7 @@ export default function ToolPage({
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)]">
           <div className="max-w-[68ch]">
             <h2 className="text-2xl text-ink md:text-3xl">
-              Why this one is different
+              {tool.introHeading}
             </h2>
             <div className="mt-4 space-y-4 text-ink/85">
               {tool.intro.map((p) => (
@@ -151,7 +162,7 @@ export default function ToolPage({
                 the reason to trust the numbers it does give. */}
             <div className="rounded-xl border border-line p-5">
               <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-muted">
-                What this does not do
+                What this covers
               </div>
               <ul className="mt-3 space-y-2.5 text-sm text-ink/70">
                 {tool.limits.map((l) => (

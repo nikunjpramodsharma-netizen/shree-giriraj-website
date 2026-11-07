@@ -23,6 +23,11 @@ import { graph, residenceNode, breadcrumbNode, faqNode } from "@/lib/schema";
 import { projectFallback } from "@/lib/project-images";
 import { JaswantiJewelPage } from "@/components/project/JaswantiJewelPage";
 import { JJ } from "@/lib/projects/jaswanti-jewel";
+import { RelatedLinks } from "@/components/RelatedLinks";
+import { interlinksForProject } from "@/lib/interlinks";
+import { getProjectLink } from "@/lib/project-links";
+import { publicPrice } from "@/lib/project-helpers";
+import { tr } from "@/lib/copy-i18n";
 
 /**
  * Projects rebuilt on the new template (plan/10-project-page-plan.md) are
@@ -77,9 +82,9 @@ export async function generateMetadata({
     const urls = pageUrls("en", `/projects/${params.slug}`, ["en"]);
     return {
       ...urls,
-      title: "Jaswanti Jewel Kandivali West: prices, plans",
+      title: "Jaswanti Jewel Kandivali: possession, price",
       description:
-        "2, 3, 4 and 5 BHK off M. G. Road, Kandivali West, from ₹2.92 Cr all inclusive. Possession from March 2027 with every amenity ready. Floor plans and prices.",
+        "2, 3, 4 and 5 BHK off M. G. Road, Kandivali West, from ₹2.92 Cr all inclusive. Possession from March 2027 with every amenity ready.",
       ...(params.locale === "en" ? {} : { robots: { index: false, follow: true } }),
       openGraph: { ...urls.openGraph, images: [{ url: JJ.story[0].img.src, alt: "Jaswanti Jewel at dusk, artist's impression" }] },
     };
@@ -94,8 +99,12 @@ export async function generateMetadata({
   const urls = pageUrls(params.locale, `/projects/${params.slug}`, locales);
   return {
     ...urls,
-    title: project.name,
-    description: getLocalizedField(project.summary, params.locale as Locale),
+    // English gets a title and description that name the suburb and what the
+    // project is; the CMS only holds the bare name. Other locales keep the CMS.
+    title: (params.locale === "en" && getProjectLink(params.slug)?.metaTitle) || project.name,
+    description:
+      (params.locale === "en" && getProjectLink(params.slug)?.metaDescription) ||
+      getLocalizedField(project.summary, params.locale as Locale),
     // Falling back to `undefined` here used to wipe og:url as well as the
     // image. Spreading urls.openGraph keeps the URL and lets the layout's
     // default card fill in when a project has no cover of its own.
@@ -138,6 +147,12 @@ export default async function ProjectPage({
           )}
         />
         <JaswantiJewelPage locale={locale} />
+        <RelatedLinks
+          links={interlinksForProject(JJ.slug, locale)}
+          locale={locale}
+          tone="alt"
+          heading="More about Kandivali West and buying here"
+        />
       </>
     );
   }
@@ -271,7 +286,7 @@ export default async function ProjectPage({
                     {c.type?.replace(/\s*[–—]\s*/g, " to ")}
                   </div>
                   <div className="my-2 font-display text-2xl text-brand-indigo">
-                    {c.displayPrice}
+                    {tr(locale, publicPrice(c.displayPrice) ?? "")}
                   </div>
                   <div className="text-sm text-muted">{getLocalizedField(c.note, locale)}</div>
                 </div>
@@ -362,6 +377,13 @@ export default async function ProjectPage({
           </div>
         </section>
       )}
+
+      <RelatedLinks
+        links={interlinksForProject(params.slug, locale)}
+        locale={locale}
+        tone="alt"
+        heading={`More about ${project.name} and buying here`}
+      />
     </>
   );
 }

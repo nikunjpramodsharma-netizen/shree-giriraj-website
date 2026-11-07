@@ -34,6 +34,8 @@ export type Tool = {
   metaDescription: string;
   /** 40 to 60 words. Must answer the question even if the reader never touches the tool. */
   answer: string;
+  /** The H2 above the intro, a question that matches how people search. */
+  introHeading: string;
   intro: string[];
   /** What the tool deliberately does not do. Honesty here builds more trust than features. */
   limits: string[];
@@ -46,20 +48,20 @@ const emiTool: Tool = {
   slug: "home-loan-emi-calculator",
   component: "emi",
   title: "Home loan EMI and cost of buying calculator",
-  metaTitle: "Home loan EMI calculator with upfront costs",
+  metaTitle: "Home loan EMI and total cost calculator",
   metaDescription:
     "Work out your EMI, then the part no bank calculator shows: the cash you need before you get the keys, including the costs a home loan will not cover.",
   answer:
     "Your EMI is only half the question. A home loan funds a share of the flat's price, but stamp duty, registration, brokerage and interiors cannot be added to it, so they come out of your own pocket alongside the down payment. This calculator shows both numbers together.",
+  introHeading: "How much cash do I need to buy a flat with a home loan?",
   intro: [
-    "Every bank runs an EMI calculator and they all do the same thing: three inputs, a monthly figure, and an amortisation table. That figure is genuinely useful and it is not the number that stops a purchase.",
-    "What stops a purchase is the cash needed on the day. A buyer who has saved a twenty percent down payment often has not counted the stamp duty, the registration, the brokerage or the furnishing, and discovers the gap in the week before registration. A lender has no reason to mention it. We do.",
+    "A bank calculator gives you the monthly EMI from three inputs. This one gives you that and the cash needed on the day.",
+    "The cash covers your down payment, stamp duty, registration, brokerage and furnishing. Seeing the total early lets you plan the purchase with confidence.",
   ],
   limits: [
     "It is an estimate for planning, not a quotation and not an offer of credit.",
-    "Your actual rate and eligibility are set by your lender, after checking your credit history, age and the property itself.",
-    "Stamp duty and registration are set by the state and change. Set the rate that applies to you rather than trusting the default.",
-    "It assumes a normal reducing balance loan with a fixed rate. A floating rate will move, and an under construction purchase disburses in stages, which changes the early payments.",
+    "Your lender sets your actual rate and eligibility after checking your credit history, age and the property.",
+    "It assumes a fixed rate reducing balance loan. For a floating rate or an under construction purchase, ask us for a cost sheet.",
   ],
   faqs: [
     {
@@ -100,20 +102,21 @@ const stampDutyTool: Tool = {
   slug: "stamp-duty-calculator-mumbai",
   component: "stampDuty",
   title: "Stamp duty and registration calculator, Mumbai",
-  metaTitle: "Stamp duty and registration calculator Mumbai",
+  metaTitle: "Stamp duty calculator Maharashtra, Mumbai",
   metaDescription:
     "Work out stamp duty and registration on a Mumbai flat, on the ready reckoner value where that is higher, with the metro cess shown separately.",
   answer:
     "Stamp duty in Mumbai is 6 percent of the chargeable value for a male buyer and 5 percent for a female buyer in sole name, both including the 1 percent metro cess. Registration is 1 percent capped at 30,000 rupees. Duty is charged on the agreement value or the ready reckoner value, whichever is higher.",
+  introHeading: "How is stamp duty calculated in Mumbai?",
   intro: [
-    "National calculators handle Maharashtra badly, because they treat stamp duty as one number per state. Mumbai is not one number: the metro cess sits on top of the base rate, a woman buying in her sole name pays a point less, and the value the duty is charged on is often not the price you negotiated.",
-    "That last point catches more buyers than anything else. If the ready reckoner rate for the building is above your agreed price, duty is charged on the reckoner rate. The saving you negotiated does not reduce the tax.",
-    "Where the sources genuinely disagree, which is joint ownership by a man and a woman, this shows a range instead of inventing a figure. Budget for the top of it.",
+    "Mumbai stamp duty has three parts: the base rate, the 1 percent metro cess, and the value the duty is charged on. A woman buying in her sole name pays a point less.",
+    "If the ready reckoner value is above your agreed price, duty is charged on the reckoner value, so check it before you agree a price.",
+    "A man and a woman buying jointly pay 6 percent, the same as a male buyer, because the women's concession applies only where women are the only purchasers.",
   ],
   limits: [
-    "Mumbai only, inside the BMC area. Pune, Thane and Nagpur add a local body tax and rural rates are lower.",
-    "Rates were cross checked against three sources and are dated on the page. They change, so confirm before you budget on them.",
-    "It does not cover gift, lease, mortgage or commercial instruments, which are charged differently.",
+    "This tool covers Mumbai inside the BMC area. For Pune, Thane or Nagpur, ask us.",
+    "Rates were cross checked against four sources and are dated on the page. Confirm them before you budget.",
+    "It does not cover gift, lease, mortgage or commercial instruments.",
     "It is an estimate for planning, not a valuation and not a quotation.",
   ],
   faqs: [
@@ -149,20 +152,21 @@ const areaTool: Tool = {
   slug: "carpet-area-calculator",
   component: "area",
   title: "Carpet area and loading calculator",
-  metaTitle: "Carpet area to built up area calculator",
+  metaTitle: "Carpet area calculator: built up and super",
   metaDescription:
     "Turn a super built up listing into the carpet area you can stand on, see the real rate per usable square foot, and compare two flats properly.",
   answer:
     "Carpet area is the usable floor space inside a flat. Super built up adds your share of lobbies, lifts and amenities, and it is the figure prices are quoted against. Loading is the gap, taken on the carpet area, so carpet equals super built up divided by one plus the loading.",
+  introHeading: "What is the difference between carpet area and super built up area?",
   intro: [
-    "Every flat has three areas and a brochure leads with the largest one. You pay on super built up and you live on carpet, and in Mumbai the gap between them is the widest in India, commonly 40 to 50 percent.",
-    "That matters in one specific way people miss. Because the rate is quoted against super built up, two flats at the same rate can give you very different homes, and the cheaper looking one is often the worse buy. A flat at a higher rate with low loading regularly beats one advertised for less with heavy loading.",
-    "So this does two things. It turns a listing into the area you can actually stand on, and it compares two flats on the rate per carpet foot, which is the only number that is comparable.",
+    "Every flat has three areas: carpet, built up and super built up. You pay on super built up and you live on carpet.",
+    "In Mumbai the gap between them is commonly 40 to 50 percent. Two flats at the same rate can therefore give you very different homes.",
+    "This tool turns a listing into the carpet area you can stand on. It then compares two flats on the rate per carpet foot, which is the figure you can compare fairly.",
   ],
   limits: [
     "It works from the loading figure you enter. If you do not know it, ask for the carpet area in writing: under RERA it has to be stated in the agreement for a registered project.",
-    "Built up area is approximate, because the allowance for walls and balcony varies. It is an input here rather than a fixed assumption.",
-    "It does not tell you whether the loading is fair, only how it compares with what is normal. What the loading buys you, in amenities and common space, is a judgement call.",
+    "Built up area is approximate, because the allowance for walls and balcony varies. It is an input here.",
+    "It shows how your loading compares with what is normal. What the loading buys you in amenities is your call, and we are happy to talk it through.",
   ],
   faqs: [
     {
@@ -199,18 +203,19 @@ const hraTool: Tool = {
   title: "HRA exemption calculator and rent receipt generator",
   metaTitle: "HRA calculator and rent receipt generator",
   metaDescription:
-    "Work out your HRA exemption on the least of three rule, then generate and print rent receipts for the financial year. Nothing is stored or sent anywhere.",
+    "Work out your HRA exemption on the least of three rule, then print rent receipts for the financial year. Nothing is stored or sent anywhere.",
   answer:
     "HRA exemption is the least of three figures: the HRA you actually receive, the rent you pay less 10 percent of basic pay, and 50 percent of basic pay in a metro such as Mumbai. It is available only under the old tax regime.",
+  introHeading: "How is HRA exemption calculated?",
   intro: [
-    "Two jobs on one page, because they are the same errand. You work out what you can claim, then you need the paper to claim it, and most tools do only one of those.",
-    "The receipts are generated in your browser and printed from it. Nothing is stored, nothing is emailed, and no account is required. A rent receipt has your name, your landlord's name and their PAN on it, which is not information anybody should have to hand to a website to get a printable form.",
+    "HRA exemption is the least of three figures, and this tool works it out for you. It then makes the rent receipts you need to claim it.",
+    "The receipts are generated and printed in your browser. Nothing is stored or emailed, and no account is needed. Your name, your landlord's name and their PAN stay with you.",
   ],
   limits: [
-    "HRA exemption applies only under the old tax regime. On the new regime you cannot claim it at all.",
-    "Salary here means basic pay plus dearness allowance forming part of retirement benefits, not gross pay. Using gross is the most common error.",
-    "It is an estimate to help you plan and produce paperwork, not tax advice. Your employer and your chartered accountant have the final say.",
-    "Your landlord's PAN is required once annual rent passes one lakh, and a receipt without it may be rejected.",
+    "HRA exemption applies only under the old tax regime.",
+    "Salary here means basic pay plus dearness allowance forming part of retirement benefits, not gross pay.",
+    "Your landlord's PAN is required once annual rent passes one lakh.",
+    "It is an estimate to help you plan and produce paperwork. For tax advice, ask your employer or chartered accountant.",
   ],
   faqs: [
     {
@@ -245,20 +250,21 @@ const interiorsTool: Tool = {
   slug: "interior-scope-builder",
   component: "interiors",
   title: "Interior scope builder",
-  metaTitle: "Interior scope builder: compare quotes",
+  metaTitle: "Interior cost and scope planner, Mumbai",
   metaDescription:
     "Build a scope in quantities for your flat, then take it to three designers and get back quotes that can actually be compared against each other.",
   answer:
     "A quote you can judge has three things in it: quantities, specifications and exclusions. Twelve running feet of wardrobe in a named board, not bedroom wardrobes. This builds that list for your flat so the quotes you get back are comparable.",
+  introHeading: "How do I plan the scope and cost of my flat's interiors?",
   intro: [
-    "Most interior quotes arrive as a single number for the whole flat. That number cannot be compared against another single number, because you cannot see what either one contains, and the cheaper one automatically looks better whether it is or not.",
-    "The other calculators on this subject give you a price estimate in exchange for your phone number. This gives you a document instead. Take it to three designers and the quotes that come back can be laid side by side.",
-    "There are no prices on it, and that is deliberate rather than a gap. We have not published cost bands we can stand behind, and an invented range would anchor you on a number that is not real. Ask us what these quantities cost in Borivali right now and you will get a real answer for your flat.",
+    "A quote you can judge lists quantities, specifications and exclusions. This tool builds that list for your flat.",
+    "Take the same list to three designers and the quotes that come back can be laid side by side.",
+    "There are no prices on it. Ask us what these quantities cost in Borivali right now and you will get a real answer for your flat.",
   ],
   limits: [
-    "It produces a scope, not a quotation. Only a designer who has seen the flat can price it.",
-    "Quantities are your estimate until somebody measures. Treat them as a brief, not a contract.",
-    "It does not cover structural work, which needs society permission and often an architect.",
+    "It produces a scope, not a quotation. A designer who has seen the flat can price it.",
+    "Quantities are your estimate until somebody measures, so treat them as a brief.",
+    "It does not cover structural work. For that, ask us.",
   ],
   faqs: [
     {
@@ -294,18 +300,19 @@ const capitalGainsTool: Tool = {
   title: "Capital gains calculator for a property sale",
   metaTitle: "Capital gains calculator for property sale",
   metaDescription:
-    "Work out long term capital gains on a property sale, and compare 12.5 percent without indexation against 20 percent with it where you still have the choice.",
+    "Work out long term capital gains on a property sale, and compare 12.5 percent without indexation against 20 percent with it where you have the choice.",
   answer:
     "Property held more than 24 months is a long term capital asset. Gains are taxed at 12.5 percent without indexation. If you are a resident individual or HUF who bought before 23 July 2024, you may instead pay 20 percent with indexation, whichever is lower.",
+  introHeading: "How is capital gains tax calculated on a property sale?",
   intro: [
-    "The rules changed on 23 July 2024, and the change left a choice in place for people who already owned property. If you bought before that date you can take 12.5 percent flat or 20 percent with indexation, and which is cheaper depends entirely on how much inflation ran over your holding period.",
-    "Most calculators pick one method and show it. This shows both and names the cheaper one, because on a long held flat the gap between them is real money.",
+    "The rules changed on 23 July 2024. If you bought before that date you can take 12.5 percent without indexation, or 20 percent with indexation.",
+    "Which is cheaper depends on how much inflation ran over your holding period. This tool shows both and names the cheaper one.",
   ],
   limits: [
-    "This is tax and tax is not our trade. Confirm any figure with a chartered accountant before filing on it.",
-    "Short term gains are taxed at your slab rate, which depends on your total income, so they are reported as a gain rather than a tax figure.",
-    "The cost inflation index is not hardcoded. One wrong value would produce a confidently wrong tax number, so the index for both years is asked for instead.",
-    "Reliefs under sections 54 and 54EC are listed but not computed, because each carries conditions and time limits a calculator would misrepresent.",
+    "This tool covers long term gains on a property sale. Confirm any figure with a chartered accountant before filing.",
+    "Short term gains are taxed at your slab rate, so they are reported as a gain rather than a tax figure.",
+    "The cost inflation index for both years is asked for rather than assumed.",
+    "Reliefs under sections 54 and 54EC are listed but not computed, because each has its own conditions and time limits.",
   ],
   faqs: [
     {
@@ -343,20 +350,21 @@ const propertyTaxTool: Tool = {
   slug: "bmc-property-tax-calculator",
   component: "propertyTax",
   title: "BMC property tax calculator, Mumbai",
-  metaTitle: "BMC property tax calculator: are you exempt?",
+  metaTitle: "BMC property tax calculator, Mumbai",
   metaDescription:
     "Work out the capital value of a Mumbai flat and check whether the 500 sq ft carpet area exemption applies to you.",
   answer:
     "BMC property tax is charged on capital value, which is the ready reckoner rate times the carpet area times weights for construction type, age and use. Residential flats with a carpet area of 500 sq ft or less have been fully exempt from BMC property tax since 1 January 2022.",
+  introHeading: "Do I have to pay BMC property tax on my flat?",
   intro: [
-    "The exemption is the reason this page exists. A residential flat with a carpet area of 500 sq ft or less pays no BMC property tax at all, and in Borivali, Kandivali and Malad a great many flats sit under that line while their owners have never checked.",
-    "That check needs no tax rate and no arithmetic, which is why it comes first here and the calculation comes second.",
+    "A residential flat with a carpet area of 500 sq ft or less pays no BMC property tax. In Borivali, Kandivali and Malad many flats sit under that line.",
+    "So the exemption check comes first here and the capital value calculation comes second.",
   ],
   limits: [
-    "The tax rate applied to capital value varies by ward and category, and we have not confirmed a figure we would publish. Enter the rate from your own bill for a rupee figure, or leave it blank for capital value only.",
-    "It is an estimate. The bill issued by the BMC is the authority.",
-    "The size relief is for residential use. Commercial property does not qualify.",
-    "Some reports describe a concession between 500 and 700 sq ft. We could not verify it, so it is flagged but never applied to the figures.",
+    "The tax rate varies by ward and category. Enter the rate from your own bill for a rupee figure, or leave it blank for capital value only.",
+    "It is an estimate, and the bill issued by the BMC is the authority.",
+    "The size relief is for residential use only.",
+    "Some reports describe a concession between 500 and 700 sq ft. It is flagged but never applied to the figures.",
   ],
   faqs: [
     {
@@ -397,19 +405,20 @@ const rentalYieldTool: Tool = {
   title: "Rental yield calculator",
   metaTitle: "Rental yield calculator: gross and net",
   metaDescription:
-    "Work out the gross and net rental yield on a flat, after maintenance, property tax and vacancy, counting the stamp duty and brokerage you paid to buy it.",
+    "Work out the gross and net rental yield on a flat, after maintenance, property tax and vacancy, counting the stamp duty and brokerage you paid.",
   answer:
     "Gross rental yield is annual rent divided by the purchase price. Net yield divides income after society maintenance, property tax, repairs and vacancy by the price plus stamp duty, registration, brokerage and fit out. Net is the figure that matters, and on an Indian flat it is usually well below gross.",
+  introHeading: "How do I work out the rental yield on a flat?",
   intro: [
-    "Almost every yield calculator asks for a price and a rent, divides one by the other and stops. That is gross yield, and it is the most flattering number available. It assumes the flat is never empty, that owning it costs nothing, and that the price is the only money you put in.",
-    "None of those hold. Society maintenance on an older Mumbai building is not a rounding error, property tax and repairs are real, tenants leave, and stamp duty, registration, brokerage and the fit out needed to let the flat are capital that has to earn its return exactly as the price does.",
-    "So this shows gross and net together, and puts the gap between them on screen as its own figure. The second mode runs the question backwards: tell it the return you need, and it says what monthly rent would have to be true to reach it. That is the version worth taking to a viewing.",
+    "Gross yield is annual rent divided by the price. Net yield also counts society maintenance, property tax, repairs and vacancy.",
+    "It counts stamp duty, registration, brokerage and fit out as part of what you put in. This tool shows gross and net together, with the gap as its own figure.",
+    "The second mode runs the question backwards. Enter the return you need and it shows the monthly rent that would reach it.",
   ],
   limits: [
-    "It carries no benchmark and will never tell you a yield is good or bad. Yields vary by building, floor and pocket, and a figure quoted for a whole suburb tells you nothing about one flat.",
-    "Net income here is before income tax and before any loan. A geared return is a different calculation and needs assumptions about the loan this tool does not ask for.",
-    "It says nothing about resale. Payback is measured on rent alone, and rent is only half of what a property investment returns.",
-    "Every figure it produces is arithmetic on what you typed. It is a planning tool, not a valuation and not investment advice.",
+    "It carries no benchmark, because yields vary by building, floor and pocket.",
+    "Net income here is before income tax and before any loan.",
+    "Payback is measured on rent alone, so resale is not included.",
+    "It is a planning tool, not a valuation and not investment advice.",
   ],
   faqs: [
     {
@@ -456,3 +465,23 @@ export const TOOL_SLUGS = TOOLS.map((t) => t.slug);
 export function getTool(slug: string): Tool | undefined {
   return TOOLS.find((t) => t.slug === slug);
 }
+
+/** Each tool's own WhatsApp opener, picked up by the floating button through PageWhatsApp. */
+export const TOOL_WHATSAPP: Record<string, string> = {
+  "stamp-duty-calculator-mumbai":
+    "Hi Shree Giriraj, I used your stamp duty calculator. Please send the full cost sheet for a flat I am considering in ___.",
+  "carpet-area-calculator":
+    "Hi Shree Giriraj, can you confirm the real carpet area of a flat I am looking at in ___?",
+  "bmc-property-tax-calculator":
+    "Hi Shree Giriraj, can you check the property tax on my flat in ___?",
+  "rental-yield-calculator":
+    "Hi Shree Giriraj, what rent would a flat in ___ society fetch?",
+  "home-loan-emi-calculator":
+    "Hi Shree Giriraj, please send a cost sheet for a flat in my budget of ___.",
+  "capital-gains-calculator-property":
+    "Hi Shree Giriraj, I am planning to sell my flat in ___. What would it fetch?",
+  "hra-calculator-rent-receipts":
+    "Hi Shree Giriraj, I am looking for a flat on rent in ___, budget ___.",
+  "interior-scope-builder":
+    "Hi Shree Giriraj, I would like an interior estimate for my flat in ___.",
+};

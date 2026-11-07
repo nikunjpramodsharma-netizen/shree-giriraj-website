@@ -34,6 +34,7 @@ sources:
   - label: "DataForSEO, Google search volume for rental yield and property investment terms in India, measured 8 September 2026"
     url: https://dataforseo.com
 sourcesCheckedOn: "8 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - What is a good rental yield in Mumbai?
   - Is rental yield calculated on carpet or built up area?
@@ -104,7 +105,7 @@ Work in absolute rupees. The monthly rent as a number, the price as a number. Ar
 
 A property returns two things: the rent while you hold it, and whatever the resale market gives you when you sell. Yield measures the first and says nothing about the second.
 
-That matters because the two do not move together. A flat in an older building may let well and sell slowly. A newer one may command a lower yield and be far easier to exit. A high yield with no resale liquidity is a trap, and a modest yield in a building people queue for may be the better asset.
+That matters because the two do not move together. A flat in an older building may let well and sell slowly. A newer one may command a lower yield and be far easier to exit. A high yield with no resale liquidity is hard to cash out of, and a modest yield in a building people queue for may be the better asset.
 
 So do not select on yield alone. Use it to check that the income side of the investment is sound, then judge the building and the pocket separately.
 

@@ -28,7 +28,7 @@
   "services": {
     "eyebrow": "What we do",
     "heading": "One team for every kind of move",
-    "metaDescription": "Resale, rentals, new launches, investment advice, commercial space, MHADA paperwork and interiors across Borivali, Kandivali and Malad, from one office.",
+    "metaDescription": "Resale, rentals, new launches, investment advice, shops, MHADA paperwork and interiors in Borivali, Kandivali and Malad, from one office.",
     "resaleTitle": "Resale flats",
     "resaleBody": "Buy or sell resale flats in Borivali, Kandivali and Malad with fair pricing, verified carpet area and no hidden charges at registration.",
     "rentalsTitle": "Rentals",
@@ -43,7 +43,7 @@
     "mhadaBody": "Transfer of tenement, no objection certificates for sale, rent and mortgage, transfer to heirs and regularisation for MHADA flats anywhere in Mumbai.",
     "interiorsTitle": "Interior design & civil work",
     "interiorsBody": "Local interior designers and a civil work team in Borivali, Kandivali and Malad, fit outs, renovation and civil work to get your home move in ready.",
-    "metaTitle": "Property services: buy, rent, invest, MHADA"
+    "metaTitle": "Property services in Borivali and Kandivali"
   },
   "serviceCta": {
     "heading": "Ready to take the next step?",
@@ -208,7 +208,7 @@
     "statusUpcoming": "Upcoming",
     "statusSold": "Sold Out",
     "viewDetails": "View details →",
-    "metaTitle": "New projects in Borivali, Kandivali, Malad"
+    "metaTitle": "New projects in Kandivali and Borivali West"
   },
   "projectDetail": {
     "backLink": "← All projects",
@@ -240,8 +240,8 @@
     "backLink": "← Back to blog"
   },
   "metadata": {
-    "siteTitle": "Real Estate Agency in Borivali West | Shree Giriraj Real Estate",
+    "siteTitle": "Real Estate Agency in Borivali West | Shree Giriraj",
     "titleTemplate": "%s | Shree Giriraj",
-    "siteDescription": "Buy, sell or rent a flat in Borivali, Kandivali or Malad West. In real estate since 1996, MahaRERA registration A51800005726. WhatsApp us for flats that fit."
+    "siteDescription": "Buy, sell or rent a flat in Borivali, Kandivali or Malad West. In real estate since 1996. WhatsApp us and get flats that fit, usually the same day."
   }
 }

@@ -1,6 +1,6 @@
 ---
 title: "MHADA transfer procedure in case of death: who inherits the tenement and what the Board asks for"
-metaTitle: "MHADA transfer procedure in case of death"
+metaTitle: "MHADA transfer on death: heirs and papers"
 metaDescription: "When a MHADA allottee dies, the flat passes to a legal heir under section 24. Who can inherit, the file the Estate Manager wants, and the charges."
 slug: mhada-transfer-on-death
 category: MHADA
@@ -33,6 +33,7 @@ sources:
   - label: "DataForSEO, Google search volume for MHADA transfer terms in India, measured 9 September 2026"
     url: https://dataforseo.com
 sourcesCheckedOn: "9 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - Who can inherit a MHADA flat?
   - Is a heirship certificate needed for MHADA transfer?
@@ -117,7 +118,7 @@ Yes. The Mumbai Board's document list asks for a heirship certificate from the c
 The published schedule applies to transfer of tenancy rights generally and does not exempt heirs on its face. Confirm the charge for your scheme at the Estate Manager's office.
 
 **Can the heir sell the flat straight after the transfer?**
-Selling is a separate application with its own conditions: the Board's and society's permission, the buyer's income group, and the five year rule counted from allotment. Read [can we sell a MHADA flat](/blog/can-we-sell-mhada-flat) before pricing it.
+Selling is a separate application with its own conditions: the Board's and society's permission, the buyer's income group, and the five year rule counted from allotment. Read [can we sell a MHADA flat](/blog/can-we-sell-mhada-flat) before pricing it. A buyer should also read [how to buy a MHADA flat in resale](/blog/how-to-buy-mhada-flat-in-resale), and the Board's other permissions are listed in [MHADA NOC online](/blog/mhada-noc-online).
 
 **What if the family was already living in the flat?**
 Living there does not change the record. Until the transfer is granted, the Board's allottee is the person who has died, and the family should apply rather than wait.

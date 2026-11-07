@@ -37,6 +37,7 @@ sources:
   - label: "DataForSEO, Google search volume for commercial property investment terms in India, measured 8 September 2026"
     url: https://dataforseo.com
 sourcesCheckedOn: "16 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - Is commercial property a better investment than residential?
   - Is GST charged on commercial rent?
@@ -65,7 +66,7 @@ None of that makes commercial better. It makes the income side of it behave diff
 
 ---
 
-## Where the risk actually sits
+## What decides how a commercial unit performs
 
 **The tenant is a business, and businesses close.** A residential tenant who loses their job usually still needs somewhere to live. A shop that stops trading vacates. Vacancy in commercial tends to be less frequent but longer, because the next tenant needs the unit to suit their trade.
 

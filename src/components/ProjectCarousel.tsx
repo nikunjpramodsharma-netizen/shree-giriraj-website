@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@/i18n/navigation";
+import { publicPrice } from "@/lib/project-helpers";
 
 /**
  * Every project, one at a time, across the full width of the homepage. It
@@ -101,7 +102,7 @@ export function ProjectCarousel({
                   {s.configs.slice(0, 4).map((c, ci) => (
                     <div key={`${c.type}-${ci}`} className="rounded-lg border border-bronze/25 bg-white/5 p-3.5">
                       <div className="text-[0.62rem] uppercase tracking-[0.12em] text-bronze">{c.type}</div>
-                      {c.price && <div className="mt-1 font-display text-base text-white">{c.price}</div>}
+                      {c.price && <div className="mt-1 font-display text-base text-white">{publicPrice(c.price)}</div>}
                     </div>
                   ))}
                 </div>

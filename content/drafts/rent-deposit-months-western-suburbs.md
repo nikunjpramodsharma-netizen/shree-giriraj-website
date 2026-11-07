@@ -1,6 +1,6 @@
 ---
 title: "How many months of deposit is normal in the western suburbs, and when it is negotiable"
-metaTitle: "Rent deposit in Mumbai: how many months?"
+metaTitle: "Rent deposit in Borivali: 2 to 3 months"
 metaDescription: "In Borivali, Kandivali and Malad, two to three months' rent is the normal deposit in newer societies. When it is negotiable, and how to get it back."
 slug: rent-deposit-months-western-suburbs
 category: Renting
@@ -41,6 +41,7 @@ sources:
   - label: Business Standard, NoBroker study on security deposits held in six cities, July 2026
     url: https://www.business-standard.com/markets/news/rs-1-26-trillion-locked-in-as-security-deposit-with-property-owners-study-126071600400_1.html
 sourcesCheckedOn: "8 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - Is the deposit refundable in full?
   - Can a landlord ask for more than ten months?
@@ -136,4 +137,4 @@ Less than the headlines suggest. The Maharashtra Rent Control (Amendment) Bill, 
 
 Get the amount, the permitted deductions and the return date into the written agreement, and get the agreement registered. Photograph everything on day one. Pay by transfer. And if a deposit looks unusually low for the building, ask why, because there is normally a reason.
 
-Get the amount, the deductions and the return date into the written agreement, register it, and photograph the flat on day one. Do those and the deposit comes back the way it should. If you are looking at a flat in Borivali, Kandivali or Malad and would like us to read the agreement before you sign, send it over. That is part of what we do, and there is no charge for a look.
+Get the amount, the deductions and the return date into the written agreement, register it, and photograph the flat on day one. Do those and the deposit comes back the way it should. If you are looking at a flat in Borivali, Kandivali or Malad and would like us to read the agreement before you sign, send it over. That is part of what we do, and there is no charge for a look. Paying rent yourself? Our [HRA calculator and rent receipts tool](/tools/hra-calculator-rent-receipts) makes the receipts. Letting a flat in the belt? Our [rentals service](/services/rentals) finds the tenant. If it is a MHADA flat, read [can we rent out a MHADA flat](/blog/can-we-rent-mhada-flat) first.

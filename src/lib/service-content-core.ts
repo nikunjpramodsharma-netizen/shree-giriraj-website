@@ -262,25 +262,25 @@ writing.
 
 export const CORE_SERVICES: Record<string, RepoService> = {
   "resale-flats": {
-    title: "Resale flats in Borivali, Kandivali, Malad",
+    title: "Flats for sale: Borivali, Kandivali, Malad",
     heroHeading: "Resale flats in Borivali, Kandivali and Malad",
     heroSubheading:
       "Ready to move homes across the western suburbs, with the building and the file checked before you agree a price. Our main business since 1996.",
     seoDescription:
-      "Buy or sell a resale flat in Borivali, Kandivali or Malad. Title, society and carpet area checked before a price is agreed. MahaRERA registration A51800005726.",
+      "Resale flats for sale in Borivali, Kandivali and Malad. Title, society and carpet area checked before you agree a price. In real estate since 1996.",
     body: RESALE_BODY,
   },
   rentals: {
-    title: "Rentals in Borivali, Kandivali and Malad",
+    title: "Flats for rent: Borivali, Kandivali, Malad",
     heroHeading: "Flats for rent in Borivali, Kandivali and Malad",
     heroSubheading:
       "Verified owners, societies that will register you, the right deposit and a registered leave and licence agreement, for tenants and landlords across the western suburbs.",
     seoDescription:
-      "Rent a flat in Borivali, Kandivali or Malad with the owner verified first and the registered leave and licence agreement handled for you.",
+      "Flats for rent in Borivali, Kandivali and Malad. Owner verified first, and the registered leave and licence agreement handled for you.",
     body: RENTALS_BODY,
   },
   "new-project-bookings": {
-    title: "New project bookings: Borivali to Malad",
+    title: "New projects in Borivali and Kandivali West",
     heroHeading: "New project bookings, with the launch price sheet in hand",
     heroSubheading:
       "Early access to new launches from developers we deal with directly, the MahaRERA registration read with you, and a straight answer on which floor is worth the money.",
@@ -289,7 +289,7 @@ export const CORE_SERVICES: Record<string, RepoService> = {
     body: NEW_PROJECTS_BODY,
   },
   interiors: {
-    title: "Interior design and civil work, Borivali",
+    title: "Interior designer in Borivali, Kandivali",
     heroHeading: "Interiors and civil work, from people who know your building",
     heroSubheading:
       "Design and execution under one roof for flats in Borivali, Kandivali and Malad, with an itemised estimate before work starts and the society's permission handled for you.",

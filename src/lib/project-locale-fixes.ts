@@ -24,10 +24,30 @@ const FIXES: Record<string, Partial<Record<"summary" | "body", Partial<Record<"h
   },
 };
 
+/**
+ * English typos saved in the CMS, corrected here for the same reason as the
+ * locale fixes above. Only plain text fields are touched.
+ */
+const ENGLISH_TYPOS: [RegExp, string][] = [[/\bnet bookings\b/g, "new bookings"]];
+
+function fixEnglish(value: unknown): unknown {
+  if (!value || typeof value !== "object") return value;
+  const en = (value as Localized).en;
+  if (typeof en !== "string") return value;
+  const fixed = ENGLISH_TYPOS.reduce((t, [re, to]) => t.replace(re, to), en);
+  return fixed === en ? value : { ...(value as Localized), en: fixed };
+}
+
 export function repairProjectLocales<P extends { summary?: unknown; body?: unknown } | null | undefined>(
   slug: string,
   project: P,
 ): P {
+  if (!project) return project;
+  const summary = fixEnglish(project.summary);
+  const body = fixEnglish(project.body);
+  if (summary !== project.summary || body !== project.body) {
+    project = { ...project, summary, body } as P;
+  }
   const fix = FIXES[slug];
   if (!project || !fix) return project;
   const out = { ...project } as Record<string, unknown>;

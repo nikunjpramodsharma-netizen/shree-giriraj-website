@@ -11,7 +11,7 @@ import { Reveal } from "@/components/Reveal";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { site, waLink } from "@/lib/config";
 import { getLocalizedField, type Locale, type LocalizedValue } from "@/lib/i18n-content";
-import { getLowestPriceConfig } from "@/lib/project-helpers";
+import { getLowestPriceConfig, publicPrice } from "@/lib/project-helpers";
 import { pageUrls } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { ContactCTA } from "@/components/ContactCTA";
@@ -26,7 +26,8 @@ import { ServiceScenes } from "@/components/ServiceScenes";
 import { FactChips } from "@/components/motion/FactChips";
 import { StickyBar } from "@/components/motion/StickyBar";
 import { RelatedLinks } from "@/components/RelatedLinks";
-import { interlinksForService } from "@/lib/interlinks";
+import { interlinksForService, mhadaGuideCards } from "@/lib/interlinks";
+import EnglishLink from "next/link";
 import { InView } from "@/components/motion/InView";
 import { SERVICE_SCENES } from "@/lib/service-scenes";
 import { SERVICE_OTHER_SIDE } from "@/lib/post-offers";
@@ -213,6 +214,20 @@ export async function generateMetadata({
 }
 
 /**
+ * Service pages whose hero WhatsApp button must not carry the generic buyer
+ * message ("I am looking for ___ in ___. My budget is about ___"). A person
+ * with a MHADA transfer, a tenant, someone wanting interiors or a shop buyer
+ * is handed the message written for them in service-scenes.ts instead.
+ */
+const OWN_HERO_MESSAGE = new Set<string>([
+  "mhada-paperwork",
+  "rentals",
+  "interiors",
+  "commercial-plots",
+  "investment-advisory",
+]);
+
+/**
  * Prefill for the enquiry form, as translation keys so it works in every
  * locale. Interiors and shops have no matching option in the existing intent
  * list, so they are left at the default rather than prefilled with something
@@ -243,6 +258,9 @@ export default async function ServicePage({
 
   const repo = getRepoService(slug, locale);
   const sceneData = SERVICE_SCENES[slug];
+  // English only: the scene messages are English, like the rest of that data.
+  const heroMessage =
+    locale === "en" && sceneData && OWN_HERO_MESSAGE.has(slug) ? sceneData.message : null;
   // English only: these messages and boxes are not translated yet, and an
   // English message on a Hindi page reads as a mistake.
   const otherSide = locale === "en" ? SERVICE_OTHER_SIDE[slug] : undefined;
@@ -364,7 +382,7 @@ export default async function ServicePage({
                   {tHero("ctaBook")}
                 </a>
                 <a
-                  href={waLink(tHero("whatsappMessage"))}
+                  href={waLink(heroMessage ?? tHero("whatsappMessage"))}
                   target="_blank"
                   rel="noopener"
                   className="btn border-white/70 text-white hover:border-black hover:bg-white hover:text-black"
@@ -412,6 +430,39 @@ export default async function ServicePage({
       {/* KEEP GOING. The tools that do this service's arithmetic, the three
           suburbs, the sibling services and the long articles. */}
       <RelatedLinks links={interlinksForService(slug, locale)} locale={locale} tone="alt" />
+
+      {/* THE FULL MHADA GUIDES. Every guide on the site, minus the ones the
+          band above and the questions below already link. */}
+      {slug === "mhada-paperwork" && (() => {
+        const shown = [
+          ...interlinksForService(slug, locale).articles.slice(0, 3).map((c) => c.href),
+          ...getServiceFaqs(slug).map((f) => f.href ?? ""),
+        ].map((h) => h.replace("/blog/", ""));
+        const guides = mhadaGuideCards(shown);
+        if (guides.length === 0) return null;
+        return (
+          <section className="py-10 md:py-12">
+            <div className="wrap">
+              <h2 className="text-lg font-semibold text-brand-indigo md:text-xl">
+                {tr(locale, "Read the full guides")}
+              </h2>
+              <ul className="mt-4 grid gap-x-10 gap-y-2 md:grid-cols-2">
+                {guides.map((g) => (
+                  <li key={g.href}>
+                    <EnglishLink
+                      prefetch={false}
+                      href={g.href}
+                      className="font-medium text-brand-blue underline underline-offset-4"
+                    >
+                      {g.title}
+                    </EnglishLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* COMMON QUESTIONS. The questions people actually type for this
           service, answered from the same sourced figures the blog carries.
@@ -502,7 +553,7 @@ export default async function ServicePage({
                         )}
                         {lowest?.displayPrice && (
                           <p className="mt-3 font-display text-lg text-brand-indigo">
-                            {lowest.displayPrice}
+                            {tr(locale, publicPrice(lowest.displayPrice) ?? "")}
                           </p>
                         )}
                         <span className="mt-4 text-sm font-semibold text-brand-blue">

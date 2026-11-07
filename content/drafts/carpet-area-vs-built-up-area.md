@@ -33,6 +33,7 @@ sources:
   - label: RealEstateIndia, 2 BHK listings in Borivali West, on which area figure listings carry
     url: https://www.realestateindia.com/mumbai-property/2-bhk-flats-apartments-for-sale-in-borivali-west-ffid.htm
 sourcesCheckedOn: "8 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - What is a good loading percentage?
   - Is carpet area the same as usable area?
@@ -51,7 +52,7 @@ Carpet area is the net usable floor space inside a flat, including internal part
 
 ## Three numbers for the same flat
 
-Every flat has three areas, and a brochure will lead with the largest one.
+Every flat has three areas, and a brochure will lead with the largest one. Work out your own flat with our [carpet area calculator](/tools/carpet-area-calculator).
 
 ### Carpet area, as the law defines it
 

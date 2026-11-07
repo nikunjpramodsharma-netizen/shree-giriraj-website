@@ -1,6 +1,6 @@
 ---
 title: "How to buy a MHADA flat in resale: the checks that protect the buyer"
-metaTitle: "How to buy a MHADA flat in resale safely"
+metaTitle: "Buying a MHADA flat in resale: 6 checks"
 metaDescription: "Buying a MHADA flat in resale? The checks to complete before money moves: the allottee, five years, income group, permissions and transfer charges."
 slug: how-to-buy-mhada-flat-in-resale
 category: MHADA
@@ -37,6 +37,7 @@ sources:
   - label: "DataForSEO, Google search volume for MHADA resale terms in India, measured 9 September 2026"
     url: https://dataforseo.com
 sourcesCheckedOn: "9 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - Is it safe to buy a MHADA flat in resale?
   - Do I need to be in a particular income group to buy a MHADA flat?
@@ -53,11 +54,11 @@ Buying a MHADA flat in resale is buying an allotment with conditions attached. B
 
 ---
 
-## Why the buyer carries the risk
+## What a careful buyer checks first
 
 The Estate Management, Sale, Transfer and Exchange of Tenements Regulations, 1981 put the consequences of an unpermitted transfer on the person who bought. If the Board declares a transfer invalid, the transferee is treated as an unauthorised occupant and may be evicted, and the Board refunds the original allottee's payment to the allottee, without interest. The buyer's purchase price is not the Board's concern.
 
-So the buyer's checks are not formalities. They are the difference between owning the flat and occupying it on sufferance.
+So the buyer's checks are not formalities. They are what make the flat truly yours.
 
 ---
 
@@ -101,7 +102,7 @@ A MHADA flat is still a flat. Get the [encumbrance certificate](/blog/encumbranc
 
 Lenders do finance MHADA flats, and they will ask for the Board's no objection certificate for mortgage before sanction. That NOC is its own application to the Estate Manager on the Mumbai Board's Form 4, separate from the transfer, and the form is made by the person on the Board's record, so the Board's forms point to the transfer coming first. Build the time it takes into the timetable, because a sanction that is waiting on a Board NOC is a sanction the seller may not wait for.
 
-Individual lenders' policies on MHADA flats, and whether they insist on the transfer being completed before disbursement, differ. Ask the specific lender in writing before relying on a loan to fund the purchase. Our guide to a [home loan on a MHADA flat](/blog/home-loan-on-mhada-flat) has the Mumbai Board's Form 4 checklist and the 12 working day limit.
+Individual lenders' policies on MHADA flats, and whether they insist on the transfer being completed before disbursement, differ. Ask the specific lender in writing before relying on a loan to fund the purchase. The Board's other services and their time limits are listed in [MHADA NOC online](/blog/mhada-noc-online). Our guide to a [home loan on a MHADA flat](/blog/home-loan-on-mhada-flat) has the Mumbai Board's Form 4 checklist and the 12 working day limit.
 
 ---
 

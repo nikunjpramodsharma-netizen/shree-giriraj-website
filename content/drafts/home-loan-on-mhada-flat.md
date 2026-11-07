@@ -1,7 +1,7 @@
 ---
 title: "Home loan on a MHADA flat: the NOC, the papers and the subsidy"
-metaTitle: "Home loan on a MHADA flat: NOC and subsidy"
-metaDescription: "Yes, banks lend on MHADA flats with MHADA's NOC for the mortgage loan. Lottery winners use the IHLMS 2.0 app; owners file Form 4. Free help on WhatsApp."
+metaTitle: "Home loan on a MHADA flat: NOC and papers"
+metaDescription: "Yes, banks lend on MHADA flats with MHADA's mortgage NOC. Lottery winners use the IHLMS 2.0 app; owners file Form 4. Free help on WhatsApp."
 slug: home-loan-on-mhada-flat
 category: MHADA
 heroImage: /blog/mhada-home-loan.jpg
@@ -53,6 +53,7 @@ sources:
   - label: "MHADA citizen services portal (MITRA), notice that new registration and services moved to Aaple Sarkar from 1 April 2019"
     url: https://emitrapranali.mhada.gov.in/
 sourcesCheckedOn: "19 October 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - Does a bank need a MHADA NOC for a home loan?
   - How do I get a NOC from MHADA for a home loan?

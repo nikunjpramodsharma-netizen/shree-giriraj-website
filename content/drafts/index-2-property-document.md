@@ -1,7 +1,7 @@
 ---
 title: "Index 2 online: how to download it, and why your buyer will ask for it"
-metaTitle: "What is Index 2 of property? Get it online"
-metaDescription: "Index 2 is the one page summary of a registered property document. What it shows, why buyers ask for it, and how to get it online free from IGR Maharashtra."
+metaTitle: "Index 2 property document: download free"
+metaDescription: "Index 2 is the one page summary of a registered property document. What it shows, why buyers ask for it, and how to get it free on IGR Maharashtra."
 slug: index-2-property-document
 category: Paperwork
 heroImage: /blog/index-2.jpg
@@ -27,6 +27,7 @@ sources:
   - label: 1acre, verifying a Maharashtra registration through Index 2
     url: https://1acre.in/guides/maharashtra/index-ii-maharashtra
 sourcesCheckedOn: "8 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - How do I get a copy of Index 2?
   - Is Index 2 proof of ownership?
@@ -69,7 +70,7 @@ The free route is **e-Search** on the IGR Maharashtra portal. Choose your region
 
 **One important caveat.** The copy you download through the free e-Search service is for information only. **It is not a certified copy**, and where a certified copy is required, that means a request through the sub registrar office.
 
-That distinction catches people out at exactly the wrong moment, usually when a bank asks and a downloaded printout is refused.
+Knowing the difference early helps when a bank asks, because a downloaded printout is not accepted where a certified copy is required.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "IGR Maharashtra: what it is and how to actually use it"
-metaTitle: "IGR Maharashtra: eSearch, token booking, full form"
+metaTitle: "IGR Maharashtra: eSearch, token, full form"
 metaDescription: "IGR Maharashtra, the Inspector General of Registration: free eSearch of registered flats, ready reckoner value, token booking and official links."
 slug: igr-maharashtra-explained
 category: Paperwork
@@ -24,6 +24,7 @@ sources:
   - label: Landeed, searching Index 2 records on the IGR Maharashtra portal
     url: https://web.landeed.com/maharashtra/index-2-search-by-name
 sourcesCheckedOn: "8 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - Is IGR Maharashtra the same as the sub registrar office?
   - Can I register a property entirely online?
@@ -42,7 +43,7 @@ IGR Maharashtra is the Department of Registration and Stamps, the state body tha
 
 ## What the department actually does
 
-Two jobs, and people conflate them. It **collects stamp duty**, which is a tax on the transfer of property. And it **registers documents**, which is the act of putting your transaction on the public record. You pay the first to be allowed to do the second, and a sale is not legally complete until both have happened.
+Two jobs, and people mix them up. It **collects stamp duty**, which is a tax on the transfer of property. And it **registers documents**, which is the act of putting your transaction on the public record. You pay the first to be allowed to do the second, and a sale is not legally complete until both have happened.
 
 The sub registrar office is where registration physically takes place. IGR is the department that sub registrar offices belong to.
 
@@ -88,7 +89,7 @@ The first is e-Search, for the flat's registered history. Every registered docum
 
 The second is the annual statement of rates, for the reckoner value of the specific building. Stamp duty is paid on the higher of the agreed price and this figure, so it is checked before a price is agreed, not after, and checked again if a deal runs past 1 April, when the rates change.
 
-The third is the stamp duty calculator, so the buyer knows the whole outlay, duty plus registration, before committing to anything.
+The third is the [stamp duty calculator for Mumbai](/tools/stamp-duty-calculator-mumbai), so the buyer knows the whole outlay, duty plus registration, before committing to anything.
 
 Where people go wrong using the portal themselves is predictable. Searching by name and missing a document because the spelling on the deed differs from the spelling they typed. Picking the wrong sub registrar office or the wrong year and concluding there is nothing to find. And treating the free e-Search download as a certified copy, which it is not: a bank or a court will want the certified copy from the sub registrar office.
 

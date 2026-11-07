@@ -1,7 +1,7 @@
 ---
 title: "MHADA allotment letter and offer letter: what each is, the download and a lost copy"
-metaTitle: "MHADA allotment letter: download, lost copy"
-metaDescription: "The MHADA allotment letter and the lottery offer letter explained: downloading the offer letter in the IHLMS 2.0 app, and a certified copy if papers are lost."
+metaTitle: "MHADA allotment letter and offer letter"
+metaDescription: "MHADA allotment letter and offer letter explained: download the offer letter in the IHLMS 2.0 app, and get a certified copy of lost papers."
 slug: mhada-allotment-letter
 category: MHADA
 heroImage: /blog/mhada-allotment-letter.jpg
@@ -56,6 +56,7 @@ sources:
   - label: "MHADA, Notification on Right to Public Services, 13 July 2015, Mumbai Board table of services and time limits"
     url: https://www.mhada.gov.in/sites/default/files/Mitra_adhisuchna1.pdf
 sourcesCheckedOn: "19 October 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - What is a MHADA allotment letter?
   - How do I download my MHADA allotment letter?

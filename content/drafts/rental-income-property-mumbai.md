@@ -49,6 +49,7 @@ sources:
   - label: "DataForSEO, Google search volume for rental income property terms in India, measured 16 September 2026"
     url: https://dataforseo.com
 sourcesCheckedOn: "16 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - How much rent can I expect in Borivali, Kandivali or Malad?
   - Is a 1 BHK or a 2 BHK better for rental income?
@@ -97,7 +98,7 @@ Take the rent you will actually collect, which means allowing for the four to si
 
 That is net yield, and it is the figure the [rental yield calculator](/tools/rental-yield-calculator) produces. It is always lower than gross, and knowing it before you buy is the difference between an investment and a surprise.
 
-Rent is taxable as income from house property, with a standard deduction of thirty percent and a deduction for loan interest, under section 24 of the 1961 Act and now section 22 of the Income-tax Act 2025, which took effect on 1 April 2026. Ask your chartered accountant what that means for you, because it depends on your other income.
+Rent is taxable as income from house property, with a standard deduction of thirty percent and a deduction for loan interest, under section 24 of the 1961 Act and now section 22 of the Income-tax Act 2025, which took effect on 1 April 2026. Ask your chartered accountant what that means for you, because it depends on your other income. Your tenant may want rent receipts for HRA, and our [HRA calculator and rent receipts tool](/tools/hra-calculator-rent-receipts) makes them.
 
 ---
 

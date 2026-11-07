@@ -28,6 +28,7 @@ sources:
   - label: Deccan Herald, exemption for residential flats up to 500 square feet
     url: https://www.deccanherald.com/india/mumbai-no-property-tax-on-residential-properties-up-to-500-sq-ft-says-uddhav-thackeray-1066898.html
 sourcesCheckedOn: "8 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - Is my flat exempt from BMC property tax?
   - How do I find my property account number?
@@ -46,7 +47,7 @@ BMC property tax is charged on **capital value**, not rateable value. Capital va
 
 ## Start with the exemption, because most people skip it
 
-If your flat has a carpet area of 500 sq ft or less and it is residential, you pay nothing. That has been the position since 1 January 2022 and it still stands.
+Check your own figure with our [BMC property tax calculator](/tools/bmc-property-tax-calculator). If your flat has a carpet area of 500 sq ft or less and it is residential, you pay nothing. That has been the position since 1 January 2022 and it still stands.
 
 It is measured on **carpet area**, not the super built up figure in your agreement or the area on the listing. A flat sold as 700 sq ft super built up with 40 percent loading has a carpet area of 500 sq ft, and that flat is exempt while its paperwork says 700.
 

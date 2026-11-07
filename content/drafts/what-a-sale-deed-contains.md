@@ -1,6 +1,6 @@
 ---
 title: "What a sale deed actually contains, clause by clause"
-metaTitle: "Sale deed: what it contains, clause by clause"
+metaTitle: "Sale deed in Mumbai: clause by clause"
 metaDescription: "A sale deed transfers ownership of a property. The clauses that matter, how it differs from an agreement to sale, and what to check before you sign."
 slug: what-a-sale-deed-contains
 category: Paperwork
@@ -27,6 +27,7 @@ sources:
   - label: Mahindra Lifespaces, essential clauses in a flat sale deed
     url: https://www.mahindralifespaces.com/blog/flat-sale-deed-clauses-and-format/
 sourcesCheckedOn: "8 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - What is the difference between a sale deed and an agreement to sale?
   - Does a sale deed need to be registered?
@@ -79,7 +80,7 @@ Registration also produces your [Index 2](/blog/index-2-property-document), whic
 
 ---
 
-## Fixing a mistake
+## Correcting an error after signing
 
 Errors happen, most often in names, areas and boundaries. The route is a **rectification deed**, executed between the same parties, correcting the error and registered in the same way.
 
@@ -127,4 +128,4 @@ Title deed is the general name for whatever document proves ownership. A sale de
 
 ## Before you sign
 
-Read the property description and the title covenant yourself. Those two clauses are the ones that protect you, and understanding them is what makes the rest of the deed hold together. If you would like us to read a draft with you before you sign, for a flat in Borivali, Kandivali or Malad, send it across.
+Read the property description and the title covenant yourself. Those two clauses are the ones that protect you, and understanding them is what makes the rest of the deed hold together. If you would like us to read a draft with you before you sign, for a flat in Borivali, Kandivali or Malad, send it across. If you are selling, our [capital gains calculator](/tools/capital-gains-calculator-property) shows the tax on the sale.

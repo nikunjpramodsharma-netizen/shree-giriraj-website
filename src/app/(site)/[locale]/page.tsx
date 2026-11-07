@@ -321,10 +321,26 @@ export default async function HomePage({
   };
 
 
+  // Project cards no longer show masked prices like "₹2.** Cr" (they say
+  // "Price sheet on WhatsApp" since 7 Nov 2026), so the CMS question that
+  // quoted the mask is reworded here. The CMS write token is retired.
+  const MASK_QUESTION: Record<"en" | "hi" | "mr" | "gu", string> = {
+    en: "Why don't you show exact project prices online?",
+    hi: "आप प्रोजेक्ट की सटीक कीमतें ऑनलाइन क्यों नहीं दिखाते?",
+    mr: "तुम्ही प्रकल्पांच्या अचूक किमती ऑनलाइन का दाखवत नाही?",
+    gu: "તમે પ્રોજેક્ટની ચોક્કસ કિંમતો ઓનલાઇન કેમ નથી બતાવતા?",
+  };
+  const shownFaqs = (faqs ?? []).map((f) => {
+    const q = getLocalizedField(f.question, "en") ?? "";
+    return q.includes("₹2.**")
+      ? { ...f, question: { ...(f.question as object), ...MASK_QUESTION } as Faq["question"] }
+      : f;
+  });
+
   // Only the FAQs actually rendered on this page go into the markup. The
   // FAQSection below reads the same list, so the two cannot drift apart.
   const faqSchema = faqNode(
-    (faqs ?? []).map((f) => ({
+    shownFaqs.map((f) => ({
       question: getLocalizedField(f.question, locale) ?? "",
       answer: getLocalizedField(f.answer, locale) ?? "",
     })),
@@ -607,7 +623,7 @@ export default async function HomePage({
       {/* FAQ */}
       <Reveal>
         <FAQSection
-          faqs={faqs}
+          faqs={shownFaqs}
           locale={locale}
           eyebrow={tFaq("eyebrow")}
           heading={tFaq("heading")}

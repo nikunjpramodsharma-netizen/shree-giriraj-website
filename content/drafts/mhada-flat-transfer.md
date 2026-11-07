@@ -1,6 +1,6 @@
 ---
 title: "MHADA flat transfer: the process, the transfer fees and the documents"
-metaTitle: "MHADA transfer fees, process and documents"
+metaTitle: "MHADA transfer fees: 45 to 60 rupees a sq ft"
 metaDescription: "MHADA transfer fees are 45 to 60 rupees a sq ft, capped at 15,000 to 35,000. The 23 working day process, the documents, and free help on WhatsApp."
 slug: mhada-flat-transfer
 category: MHADA
@@ -52,6 +52,7 @@ sources:
   - label: "MHADA citizen services portal (MITRA), notice that new registration and services moved to Aaple Sarkar from 1 April 2019"
     url: https://emitrapranali.mhada.gov.in/
 sourcesCheckedOn: "19 October 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - How much are MHADA transfer fees?
   - What documents are required for a MHADA transfer?
@@ -110,7 +111,7 @@ In rupees, that works out like this:
 - A 420 sq ft MIG flat: 420 × 55 = **23,100 rupees**.
 - A 650 sq ft HIG flat: 650 × 60 = 39,000, so the charge is **35,000 rupees**.
 
-The schedule does not say whether the area is carpet or built up, and gives no separate rate for EWS flats, so we confirm with the Estate Manager's office which area and rate apply to your flat before you pay. The Mumbai Board's document list allows payment in cash or by demand draft or pay order of a nationalised bank. The receipt goes in with the application, and the Regulation 24 form also asks for a deposit to be paid with the charge.
+The schedule does not say whether the area is carpet or built up, and gives no separate rate for EWS flats, so we confirm with the Estate Manager's office which area and rate apply to your flat before you pay. The Mumbai Board's document list allows payment in cash or by demand draft or pay order of a nationalised bank. The receipt goes in with the application, and the Regulation 24 form also asks for a deposit to be paid with the charge. If the flat is being let rather than transferred, the Board's [NOC for rent](/blog/can-we-rent-mhada-flat) is a separate service. A society planning to rebuild should read our [MHADA redevelopment rules](/blog/mhada-redevelopment-rules).
 
 For a sale, the Regulations allow the Mumbai Board to make its permission conditional on a share, up to fifty percent, of the unearned increase, meaning the rise in the flat's value. The society's own transfer fee is separate and is set by its bye laws.
 

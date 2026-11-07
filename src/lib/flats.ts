@@ -101,7 +101,7 @@ export const FLAT_LISTINGS: FlatListing[] = [
     place: "Borivali West",
     metaTitle: "Flats for sale in Borivali West: 1, 2, 3 BHK",
     metaDescription:
-      "1, 2 and 3 BHK flats for sale in Borivali West, with asking rates by pocket. WhatsApp us your size and budget for matching flats, usually the same day.",
+      "1, 2 and 3 BHK flats for sale in Borivali West, with asking rates by pocket. WhatsApp your size and budget for flats that fit, usually the same day.",
     h1: "1, 2 and 3 BHK flats for sale in Borivali West",
     answer:
       "Borivali West asks around 30,000 to 31,300 rupees per square foot on average, but the pocket moves the price more than the flat size does: from about 13,000 on parts of Eksar Road to over 33,000 in Yogi Nagar. Decide the pocket first, then the size, and the right building usually follows.",
@@ -176,7 +176,7 @@ export const FLAT_LISTINGS: FlatListing[] = [
     place: "Borivali West",
     metaTitle: "Flats for rent in Borivali West: 1, 2, 3 BHK",
     metaDescription:
-      "1, 2 and 3 BHK flats for rent in Borivali West, with 2026 rents and deposits. WhatsApp us your size and budget for matching flats, usually the same day.",
+      "1, 2 and 3 BHK flats for rent in Borivali West, with 2026 rents and deposits. WhatsApp your size and budget for flats that fit, usually the same day.",
     h1: "1, 2 and 3 BHK flats for rent in Borivali West",
     answer:
       "A 1 BHK in Borivali asks about 22,000 to 40,000 rupees a month, a 2 BHK 35,000 to 65,000 and a 3 BHK 55,000 to 1 lakh, on NoBroker's 2026 figures. The deposit in newer societies runs two to three months. The spread inside each size comes down to the pocket, the building's age and the floor.",
@@ -241,9 +241,9 @@ export const FLAT_LISTINGS: FlatListing[] = [
     area: "kandivali",
     intent: "sale",
     place: "Kandivali West",
-    metaTitle: "Flats for sale in Kandivali West: 1, 2, 3 BHK",
+    metaTitle: "Flats for sale in Kandivali West, 1 to 3 BHK",
     metaDescription:
-      "1, 2 and 3 BHK flats for sale in Kandivali West, with 2026 asking rates by pocket. WhatsApp us your size and budget for matching flats, usually same day.",
+      "1, 2 and 3 BHK flats for sale in Kandivali West, with asking rates by pocket. WhatsApp your size and budget for flats that fit, usually the same day.",
     h1: "1, 2 and 3 BHK flats for sale in Kandivali West",
     answer:
       "Kandivali West asks around 25,000 to 27,000 rupees per square foot in mid 2026, with Mahavir Nagar at the top near 36,450 and the Charkop sectors around 23,350 to 26,150. It offers some of the widest choice in the western suburbs, from settled cooperative societies to new towers on Link Road.",
@@ -313,9 +313,9 @@ export const FLAT_LISTINGS: FlatListing[] = [
     area: "kandivali",
     intent: "rent",
     place: "Kandivali West",
-    metaTitle: "Flats for rent in Kandivali West: 1, 2, 3 BHK",
+    metaTitle: "Flats for rent in Kandivali West, 1 to 3 BHK",
     metaDescription:
-      "1, 2 and 3 BHK flats for rent in Kandivali West, with 2026 rents and deposits. WhatsApp us your size and budget for matching flats, usually the same day.",
+      "1, 2 and 3 BHK flats for rent in Kandivali West, with 2026 rents and deposits. WhatsApp your size and budget for flats that fit, usually the same day.",
     h1: "1, 2 and 3 BHK flats for rent in Kandivali West",
     answer:
       "A 1 BHK in Kandivali West asks about 18,000 to 35,000 rupees a month, a 2 BHK in Kandivali 35,000 to 65,000 and a 3 BHK 60,000 to 95,000, on NoBroker's 2026 figures. Kandivali gives more space for the rent than Borivali, with the metro on both sides of the tracks.",
@@ -382,7 +382,7 @@ export const FLAT_LISTINGS: FlatListing[] = [
     place: "Malad West",
     metaTitle: "Flats for sale in Malad West: 1, 2, 3 BHK",
     metaDescription:
-      "1, 2 and 3 BHK flats for sale in Malad West, with 2026 asking rates by pocket. WhatsApp us your size and budget for matching flats, usually the same day.",
+      "1, 2 and 3 BHK flats for sale in Malad West, with 2026 asking rates by pocket. WhatsApp your size and budget for flats that fit, usually the same day.",
     h1: "1, 2 and 3 BHK flats for sale in Malad West",
     answer:
       "Malad West averaged about 30,800 rupees per square foot in September 2026 on Square Yards' figures, with Evershine Nagar near 32,000. Broker Network's July 2026 guide puts new flats at 18,000 to 30,000 and resale at 14,000 to 24,000. The Mindspace office district keeps demand for rentals steady, which is why many buyers here are investors.",

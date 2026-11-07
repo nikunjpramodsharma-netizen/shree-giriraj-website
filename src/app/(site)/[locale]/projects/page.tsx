@@ -13,6 +13,10 @@ import { graph, breadcrumbNode, itemListNode } from "@/lib/schema";
 
 export const revalidate = 60;
 
+/** Under 150 characters; the page intro in messages is longer. English only. */
+const EN_META_DESCRIPTION =
+  "New projects in Kandivali and Borivali West, with price sheets and site visits arranged on WhatsApp. Early booking through our builder contacts.";
+
 export async function generateMetadata({
   params,
 }: {
@@ -22,7 +26,7 @@ export async function generateMetadata({
   return {
     ...pageUrls(params.locale, "/projects"),
     title: t("metaTitle"),
-    description: t("body"),
+    description: params.locale === "en" ? EN_META_DESCRIPTION : t("body"),
   };
 }
 

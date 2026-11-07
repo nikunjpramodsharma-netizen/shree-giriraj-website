@@ -31,6 +31,7 @@ sources:
   - label: Business Standard, Maharashtra ready reckoner revision from 1 April 2025
     url: https://www.business-standard.com/amp/finance/personal-finance/maharashtra-hikes-property-rates-what-3-9-rr-rate-increase-means-for-you-125040100372_1.html
 sourcesCheckedOn: "8 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - Where do I check the reckoner rate for a building?
   - What if I buy below the reckoner rate?
@@ -47,7 +48,7 @@ The ready reckoner rate is the government's own minimum valuation for property i
 
 ---
 
-## Why this catches people out
+## Why check the reckoner before you fix a price
 
 Buyers budget stamp duty as a percentage of the price they negotiated. If the reckoner rate for that building is higher than the price, the duty is higher than expected, and it lands in the week before registration when the budget is already committed.
 

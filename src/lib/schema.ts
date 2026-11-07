@@ -35,7 +35,7 @@ export function organizationNode(opts: { founder?: string } = {}): Json {
     url: SITE_URL,
     image: `${SITE_URL}/logo.png`,
     logo: `${SITE_URL}/logo.png`,
-    telephone: site.phonePrimary,
+    telephone: [site.phonePrimary, site.phoneSecondary],
     email: site.email,
     foundingDate: site.established,
     // Only emitted where the name is actually known. A Person node with a name
@@ -141,6 +141,24 @@ export function faqNode(qa: { question: string; answer: string }[]): Json | null
       name: x.question,
       acceptedAnswer: { "@type": "Answer", text: x.answer },
     })),
+  };
+}
+
+export function webApplicationNode(opts: {
+  locale: string;
+  name: string;
+  path: string;
+  category: "FinanceApplication" | "UtilitiesApplication";
+}): Json {
+  return {
+    "@type": "WebApplication",
+    name: opts.name,
+    url: absoluteUrl(opts.locale, opts.path),
+    applicationCategory: opts.category,
+    operatingSystem: "Any",
+    isAccessibleForFree: true,
+    offers: { "@type": "Offer", price: "0", priceCurrency: "INR" },
+    provider: { "@id": ORG_ID },
   };
 }
 

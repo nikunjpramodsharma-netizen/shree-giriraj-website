@@ -1,7 +1,7 @@
 ---
 title: "MHADA office in Bandra East: which desk handles your flat, and what to take"
-metaTitle: "MHADA office Bandra: timings and which desk"
-metaDescription: "Griha Nirman Bhavan, Kalanagar, Bandra East, open 9:45 am to 6:15 pm on working days. Which Estate Manager handles your area and what to take for one visit."
+metaTitle: "MHADA office Bandra East: address, timings"
+metaDescription: "Griha Nirman Bhavan, Kalanagar, Bandra East, open 9:45 am to 6:15 pm on working days. Which Estate Manager handles your area and what to carry."
 slug: mhada-office-bandra
 category: MHADA
 heroImage: /premium/u/tower-06.jpg
@@ -43,6 +43,7 @@ sources:
   - label: "DataForSEO, Google search volume for MHADA office and paperwork terms in India, measured 3 October 2026"
     url: https://dataforseo.com
 sourcesCheckedOn: "3 October 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - What are the MHADA office timings in Bandra?
   - What is the MHADA Bandra phone number?

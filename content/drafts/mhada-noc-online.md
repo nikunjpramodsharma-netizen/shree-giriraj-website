@@ -1,7 +1,7 @@
 ---
 title: "MHADA NOC online: which services you can apply for, and how long the Board has to decide"
-metaTitle: "MHADA NOC online: services and time limits"
-metaDescription: "MHADA's NOCs and transfers are applied for online through Aaple Sarkar. Which NOC you need, the time limit for each, and the home loan NOC for new allottees."
+metaTitle: "MHADA NOC online: apply on Aaple Sarkar"
+metaDescription: "MHADA NOCs and transfers are applied for online through Aaple Sarkar. Which NOC you need, the time limit for each, and the loan NOC for new allottees."
 slug: mhada-noc-online
 category: MHADA
 heroImage: /premium/u/handover-05.jpg
@@ -44,6 +44,7 @@ sources:
   - label: "DataForSEO, Google search volume for MHADA NOC terms in India, measured 3 October 2026"
     url: https://dataforseo.com
 sourcesCheckedOn: "3 October 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - Can I apply for a MHADA NOC online?
   - How long does a MHADA NOC take?
@@ -72,14 +73,14 @@ Each job has its own service, its own form and its own time limit:
 
 | What you want to do | What to apply for | Time limit |
 | --- | --- | --- |
-| Let the flat on leave and licence | NOC for rent | 8 days |
-| Take a loan against the flat | NOC for a mortgage | 12 working days |
-| Sell the flat or a commercial unit | Sale permission | 15 working days |
+| Let the flat on leave and licence | [NOC for rent](/blog/can-we-rent-mhada-flat) | 8 days |
+| Take a loan against the flat | [NOC for a mortgage](/blog/home-loan-on-mhada-flat) | 12 working days |
+| Sell the flat or a commercial unit | [Sale permission](/blog/can-we-sell-mhada-flat) | 15 working days |
 | Prove nothing is owed to the Board | No dues certificate | 19 working days |
 | Move the tenancy to a buyer or an heir | [Transfer of tenement](/blog/mhada-flat-transfer) | 23 working days |
-| Put an earlier, unpermitted transfer on record | Regularisation | 23 working days |
+| Put an earlier, unpermitted transfer on record | [Regularisation](/blog/mhada-flat-transfer) | 23 working days |
 
-The time limits are the ones MHADA notified under the Right to Public Services Act. The clock starts from a complete application, so a full file is what gets you the time limit in practice.
+The time limits are the ones MHADA notified under the Right to Public Services Act. The clock starts from a complete application, so a full file is what gets you the time limit in practice. Taking a bank loan? Our guide to a [home loan on a MHADA flat](/blog/home-loan-on-mhada-flat) walks through the mortgage NOC. Buying a flat in resale? Read [how to buy a MHADA flat in resale](/blog/how-to-buy-mhada-flat-in-resale). A society planning to rebuild needs the Board's NOC too, covered in our [MHADA redevelopment rules](/blog/mhada-redevelopment-rules).
 
 ---
 

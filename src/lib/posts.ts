@@ -53,6 +53,8 @@ export type PostMeta = {
   heroAlt?: string;
   sources: { label: string; url?: string }[];
   sourcesCheckedOn?: string;
+  /** Last edit to the copy. Separate from sourcesCheckedOn, which is only moved when the sources are re-read. */
+  updatedOn?: string;
   readNext: string[];
   relatedFaqs: string[];
 };
@@ -142,6 +144,7 @@ export function getPost(slug: string): Post | null {
     heroAlt: asString(data.heroAlt),
     sources: asSources(data.sources),
     sourcesCheckedOn: asString(data.sourcesCheckedOn),
+    updatedOn: asString(data.updatedOn),
     readNext: asStringList(data.readNext),
     relatedFaqs: asStringList(data.relatedFaqs),
     blocks,

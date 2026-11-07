@@ -51,6 +51,7 @@ export function MarkdownPost({
   const showToc = headings.length >= 3;
   const related = getRelated(post, 3);
   const checked = displayDate(post.sourcesCheckedOn);
+  const updated = displayDate(post.updatedOn);
   const offer = offerFor(post.slug);
   const terms = termsIn(
     [plainText(post.blocks), ...post.faqs.map((f) => `${f.question} ${f.answer}`)].join(" "),
@@ -85,7 +86,7 @@ export function MarkdownPost({
                 description: post.answer,
                 image: visual.image,
                 published: checked ?? new Date().toISOString(),
-                modified: checked ?? undefined,
+                modified: updated ?? checked ?? undefined,
                 authorName: AUTHOR.name,
                 authorRole: AUTHOR.role,
                 // The same list the reader sees under Sources. The keyword
@@ -150,7 +151,8 @@ export function MarkdownPost({
               </span>
             </span>
             <span>{post.readingMinutes} min read</span>
-            {checked && <span>Checked {formatDate(checked, locale)}</span>}
+            {updated && <span>Updated {formatDate(updated, locale)}</span>}
+            {checked && <span>Sources checked {formatDate(checked, locale)}</span>}
           </div>
         </div>
       </header>

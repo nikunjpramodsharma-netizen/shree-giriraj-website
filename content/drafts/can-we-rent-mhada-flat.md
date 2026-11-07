@@ -1,7 +1,7 @@
 ---
 title: "Can we rent out a MHADA flat? The NOC for rent, and what it takes to get one"
-metaTitle: "Can we rent a MHADA flat? Yes, with one NOC"
-metaDescription: "Yes, with the Mumbai Board's NOC for rent, which has an eight day time limit. The documents, how to apply on Aaple Sarkar, and help filing it across Mumbai."
+metaTitle: "Can we rent out a MHADA flat? The NOC rules"
+metaDescription: "Yes, a MHADA flat can be let out with the Mumbai Board's NOC for rent. The documents, how to apply on Aaple Sarkar, and help filing it across Mumbai."
 slug: can-we-rent-mhada-flat
 category: MHADA
 heroImage: /blog/mhada-rent.jpg
@@ -36,6 +36,7 @@ sources:
   - label: "DataForSEO, Google search volume for MHADA rent and NOC terms in India, measured 9 September 2026"
     url: https://dataforseo.com
 sourcesCheckedOn: "9 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - Is a MHADA NOC needed to rent out a flat?
   - How long does the MHADA NOC for rent take?
@@ -88,7 +89,7 @@ Whether the Board's NOC for rent carries a fixed validity period, and whether it
 
 ---
 
-## What happens if I rent a MHADA flat without NOC?
+## Why the NOC keeps your tenancy on a clear record
 
 The flat is then occupied by somebody who is not the allottee, without the Board's permission. The Regulations give the Board power over unauthorised occupation of tenements, and the allottee has put the allotment itself at risk for the sake of a few weeks' paperwork. Landlords sometimes hear from a broker that nobody checks. Some societies do, some neighbours do, and the Board does when a complaint lands.
 
@@ -117,4 +118,4 @@ Not in their own name. The Board issues the NOC to the allottee on its record. I
 
 ## Before you hand over the keys
 
-Get the NOC, register the agreement, then hand over the keys, and you let with a clear record. If you would like us to take the application through the Estate Manager's office and draft the licence to sit inside it, that is part of our [MHADA paperwork service](/services/mhada-paperwork). For what a deposit and a term look like in this belt, read [how many months of deposit is normal in the western suburbs](/blog/rent-deposit-months-western-suburbs).
+Get the NOC, register the agreement, then hand over the keys, and you let with a clear record. The full list of services is in our guide to [MHADA NOC online](/blog/mhada-noc-online). If you would like us to take the application through the Estate Manager's office and draft the licence to sit inside it, that is part of our [MHADA paperwork service](/services/mhada-paperwork). For what a deposit and a term look like in this belt, read [how many months of deposit is normal in the western suburbs](/blog/rent-deposit-months-western-suburbs).

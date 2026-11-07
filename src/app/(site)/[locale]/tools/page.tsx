@@ -84,7 +84,7 @@ export default function ToolsIndex({
             Tools
           </div>
           <h1 className="mt-3 max-w-[18ch] text-3xl text-white md:text-5xl">
-            Work out the numbers yourself
+            Free property calculators for Mumbai
           </h1>
           <p className="mt-5 max-w-[58ch] text-paper/80">
             No signup, no email, nothing behind a form. The numbers are yours. If one of them raises a
@@ -110,6 +110,7 @@ export default function ToolsIndex({
           ))}
         </ul>
 
+        {PLANNED.length > 0 && (
         <div className="mt-12 max-w-[68ch]">
           <h2 className="text-lg text-ink">Being built next</h2>
           <ul className="mt-3 flex flex-wrap gap-2">
@@ -123,6 +124,7 @@ export default function ToolsIndex({
             ))}
           </ul>
         </div>
+        )}
       </div>
 
       <ContactCTA locale={locale} formLocation="tools-index" />

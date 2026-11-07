@@ -24,3 +24,12 @@ describe("repairProjectLocales", () => {
     expect(repairProjectLocales("veena-celestia", input)).toBe(input);
   });
 });
+
+describe("English typo repair", () => {
+  it("turns net bookings into new bookings", () => {
+    const p = repairProjectLocales("veena-celestia", {
+      summary: { en: "RERA is in place and net bookings have started." },
+    });
+    expect((p.summary as Record<string, string>).en).toBe("RERA is in place and new bookings have started.");
+  });
+});

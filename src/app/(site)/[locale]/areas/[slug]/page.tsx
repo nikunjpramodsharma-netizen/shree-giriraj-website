@@ -118,7 +118,7 @@ export default async function AreaPage({
             Area guide
           </div>
           <h1 className="rise mt-3 max-w-[20ch] text-3xl text-white md:text-5xl">
-            {area.longName}
+            {area.h1 ?? area.longName}
           </h1>
           <p className="rise-2 mt-5 max-w-[58ch] text-paper/80">
             {area.metaDescription}

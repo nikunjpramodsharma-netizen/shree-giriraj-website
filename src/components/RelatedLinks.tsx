@@ -18,6 +18,7 @@ const KIND_ICON: Record<LinkKind, IconName> = {
   area: "building",
   tool: "rupee",
   article: "file",
+  project: "building",
 };
 
 export function RelatedLinks({
@@ -37,6 +38,7 @@ export function RelatedLinks({
   // a row of cards and two lists, most of a screen tall; every link is still
   // here, in about a third of the height.
   const rows: { label: string; kind: LinkKind; items: LinkCard[] }[] = [
+    { label: "New projects here", kind: "project" as const, items: links.projects ?? [] },
     { label: "Do the arithmetic", kind: "tool" as const, items: links.tools },
     { label: "Where we do it", kind: "area" as const, items: links.areas },
     { label: "The services that go with this", kind: "service" as const, items: links.services },

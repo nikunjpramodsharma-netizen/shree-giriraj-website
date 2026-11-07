@@ -1,7 +1,7 @@
 ---
-title: "Occupancy certificate (OC): why taking possession without one is a mistake"
-metaTitle: "Occupancy certificate (OC): why it matters"
-metaDescription: "An occupancy certificate confirms a building is complete and fit to live in. Why it matters for water, power and your loan, and what to ask before possession."
+title: "Occupancy certificate (OC): why to check it before you take the keys"
+metaTitle: "Occupancy certificate: check before keys"
+metaDescription: "An occupancy certificate confirms a building is complete and fit to live in. Why it matters for water, power and your loan, and what to ask first."
 slug: occupancy-certificate
 category: Paperwork
 heroImage: /blog/occupancy-certificate.jpg
@@ -29,6 +29,7 @@ sources:
   - label: Taxguru, promoter liabilities under section 11 of RERA
     url: https://taxguru.in/corporate-law/promoter-liabilities-section-11-rera-act.html
 sourcesCheckedOn: "8 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - Can I move in without an occupancy certificate?
   - What is the difference between OC and completion certificate?

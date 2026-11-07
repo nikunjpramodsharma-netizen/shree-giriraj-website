@@ -28,6 +28,7 @@ sources:
   - label: NoBroker, property tax name change in Mumbai
     url: https://www.nobroker.in/forum/how-to-change-name-in-property-tax-bill-online-in-mumbai/
 sourcesCheckedOn: "8 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - Does mutation prove ownership?
   - How soon after registration should I do it?
@@ -44,7 +45,7 @@ Mutation updates the local authority's records to show you as the person liable 
 
 ---
 
-## The distinction that trips people up
+## Mutation and ownership: the distinction to know
 
 Registration puts your transaction on the state's record. Mutation puts your name on the municipal one. **They are different records, held by different bodies, for different purposes**, and doing one does not do the other.
 

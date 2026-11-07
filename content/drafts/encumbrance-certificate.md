@@ -1,6 +1,6 @@
 ---
 title: "Encumbrance certificate: what it proves, and what it does not"
-metaTitle: "Encumbrance certificate: what it proves"
+metaTitle: "Encumbrance certificate in Maharashtra"
 metaDescription: "An encumbrance certificate lists the transactions registered against a property. What it proves, how far back to search and what to pull alongside it."
 slug: encumbrance-certificate
 category: Paperwork
@@ -29,6 +29,7 @@ sources:
   - label: Jurigram, property title search checklist
     url: https://jurigram.com/blog/property-law/property-title-search-verification-india
 sourcesCheckedOn: "8 September 2026"
+updatedOn: "7 November 2026"
 relatedFaqs:
   - How many years should an encumbrance certificate cover?
   - Does a clear certificate mean the title is clear?

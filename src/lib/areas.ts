@@ -96,6 +96,8 @@ export type AreaPage = {
   motion: AreaMotion;
   /** Full name for headings and title tags, where the panel name is short. */
   longName: string;
+  /** The page heading where it should name the West side; defaults to longName. */
+  h1?: string;
   metaTitle: string;
   metaDescription: string;
   /** The search result snippet, kept near 155 characters. The longer metaDescription is shown on the page. */
@@ -113,9 +115,10 @@ export type AreaPage = {
 const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
   "borivali-west": {
     longName: "Borivali",
-    metaTitle: "Borivali property guide: pockets and prices",
+    h1: "Borivali West",
+    metaTitle: "Borivali West: rates per sq ft, rent",
     seoDescription:
-      "Borivali West and East, pocket by pocket: Chikoowadi, Shimpoli, I.C. Colony, Yogi Nagar and Eksar, with mid 2026 asking rates and the metro lines.",
+      "Borivali West property rates per sq ft and asking rents by size, pocket by pocket: Chikoowadi, Shimpoli, I.C. Colony, Yogi Nagar.",
     metaDescription:
       "Borivali West and East, pocket by pocket: Chikoowadi, Shimpoli, I.C. Colony, Yogi Nagar, Eksar, Magathane and Kulupwadi, with mid 2026 asking rates, the metro lines, the national park and what a local agency in real estate since 1996 checks before you buy or rent.",
     hero: {
@@ -273,9 +276,10 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
 
   kandivali: {
     longName: "Kandivali",
-    metaTitle: "Kandivali property guide: pockets and prices",
+    h1: "Kandivali West",
+    metaTitle: "Kandivali West: rates per sq ft, rent",
     seoDescription:
-      "Kandivali West and East, pocket by pocket: Mahavir Nagar, Charkop, Dahanukarwadi and Thakur Village, with 2026 asking rates and the metro lines.",
+      "Kandivali West property rates per sq ft and asking rents by size, pocket by pocket: Mahavir Nagar, Charkop, Dahanukarwadi, Thakur Village.",
     metaDescription:
       "Kandivali West and East, pocket by pocket: Mahavir Nagar, Charkop's sectors, Dahanukarwadi, Thakur Village, Lokhandwala and Akurli Road, with 2026 asking rates, the two metro lines, and how to buy a new launch here well.",
     hero: {
@@ -427,9 +431,10 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
 
   malad: {
     longName: "Malad",
-    metaTitle: "Malad property guide: pockets and prices",
+    h1: "Malad West",
+    metaTitle: "Malad West: rates per sq ft, rent",
     seoDescription:
-      "Malad West and East, pocket by pocket: Mindspace, Evershine Nagar, Orlem and Marve Road, with 2026 asking rates, rents and the metro lines.",
+      "Malad West property rates per sq ft and asking rents by size, pocket by pocket: Mindspace, Evershine Nagar, Orlem, Marve Road.",
     metaDescription:
       "Malad West and East, pocket by pocket: Mindspace, Evershine Nagar, Orlem, Marve Road, Rani Sati Marg, Kurar and Dindoshi, with 2026 asking rates and rents, the metro, the coastal road plans, and who really rents here.",
     hero: {
