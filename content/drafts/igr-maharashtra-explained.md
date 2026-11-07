@@ -1,7 +1,7 @@
 ---
 title: "IGR Maharashtra: what it is and how to actually use it"
-metaTitle: "IGR Maharashtra: how to use it, step by step"
-metaDescription: "How to use IGR Maharashtra step by step: search registered documents, check a flat's ready reckoner value and get certified copies, with the official links."
+metaTitle: "IGR Maharashtra: eSearch, token booking, full form"
+metaDescription: "IGR Maharashtra, the Inspector General of Registration: free eSearch of registered flats, ready reckoner value, token booking and official links."
 slug: igr-maharashtra-explained
 category: Paperwork
 heroImage: /blog/igr-maharashtra.jpg
@@ -13,7 +13,8 @@ funnelStage: awareness
 wordTarget: 2400
 answer: >
   IGR Maharashtra is the Department of Registration and Stamps, the state body
-  that registers property documents and collects stamp duty. Its website is
+  that registers property documents and collects stamp duty. IGR stands for
+  Inspector General of Registration, the officer who heads it. Its website is
   where you value a property for stamp duty, search registered documents, book
   a registration appointment, register a rent agreement and download certified
   copies. Almost every property transaction in the state passes through it.
@@ -35,7 +36,7 @@ readNext:
 
 ## The short answer
 
-IGR Maharashtra is the Department of Registration and Stamps, the state body that registers property documents and collects stamp duty. Its website is where you value a property for stamp duty, search registered documents, book a registration appointment, register a rent agreement and download certified copies. **Almost every property transaction in the state passes through it.**
+IGR Maharashtra is the Department of Registration and Stamps, the state body that registers property documents and collects stamp duty. IGR stands for Inspector General of Registration, the officer who heads it. Its website is where you value a property for stamp duty, search registered documents, book a registration appointment, register a rent agreement and download certified copies. **Almost every property transaction in the state passes through it.**
 
 ---
 
@@ -103,6 +104,9 @@ Partly. The department runs e-Registration for certain document types, and a lea
 
 **What does e-ASR do?**
 It gives the government's own valuation for an area, which is one half of the stamp duty calculation.
+
+**What is the full form of IGR?**
+Inspector General of Registration. In Maharashtra the head of the department is the Inspector General of Registration and Controller of Stamps, which is why the department and its website are known as IGR.
 
 ---
 
