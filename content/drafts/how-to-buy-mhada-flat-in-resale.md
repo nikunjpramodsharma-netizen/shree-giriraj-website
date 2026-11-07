@@ -132,6 +132,8 @@ Yes. A MHADA flat is still a flat. The MHADA layer sits on top of the usual chec
 - Measure the carpet area rather than accepting the built up figure.
 - Register the agreement for sale.
 
+For the society's side, read about [society transfer steps and charges](/blog/society-noc-for-sale-of-flat-mumbai). If you did not win the lottery, see [MHADA lottery 2026](/blog/mhada-lottery-2026-mumbai) for how the draw ran.
+
 ---
 
 ## Can I get a home loan on a MHADA resale flat?

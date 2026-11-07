@@ -80,6 +80,8 @@ Each job has its own service, its own form and its own time limit:
 | Move the tenancy to a buyer or an heir | [Transfer of tenement](/blog/mhada-flat-transfer) | 23 working days |
 | Put an earlier, unpermitted transfer on record | [Regularisation](/blog/mhada-flat-transfer) | 23 working days |
 
+Our guide to [MHADA dues explained](/blog/mhada-dues-lease-rent-property-tax) covers the three kinds of bill and how to check each. For a flat that is being sold, see [society NOC for sale](/blog/society-noc-for-sale-of-flat-mumbai).
+
 The time limits are the ones MHADA notified under the Right to Public Services Act. The clock starts from a complete application, so a full file is what gets you the time limit in practice.
 
 - Taking a bank loan? Our guide to a [home loan on a MHADA flat](/blog/home-loan-on-mhada-flat) walks through the mortgage NOC.

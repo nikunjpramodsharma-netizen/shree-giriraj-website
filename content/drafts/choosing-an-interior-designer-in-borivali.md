@@ -139,6 +139,8 @@ A quote far below published packages deserves a question. A quote above them sho
 
 Send us a quote you already hold and we will tell you whether it sits inside the band and what it leaves out. The [interior scope builder](/tools/interior-scope-builder) helps you list your quantities first.
 
+Room by room figures are in our guide to [2 BHK interior cost in Mumbai](/blog/2-bhk-interior-cost-mumbai), and kitchens have their own page on [modular kitchen cost in Mumbai](/blog/modular-kitchen-cost-mumbai).
+
 ---
 
 ## What a Mumbai society will let you do

@@ -87,6 +87,8 @@ Most buyers budget stamp duty as a percentage of the price they agreed. If the r
 
 **The check is free and takes minutes.** Look the rate up on e-ASR, then enter it in our [stamp duty calculator](/tools/stamp-duty-calculator-mumbai). It applies the higher figure for you.
 
+The same value is the base for [stamp duty on a gift deed](/blog/gift-deed-stamp-duty-maharashtra).
+
 ---
 
 ## How to check the ready reckoner rate online

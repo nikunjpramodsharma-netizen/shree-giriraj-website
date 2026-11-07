@@ -162,6 +162,8 @@ Our guides show where it fits in each file:
 - [MHADA NOCs online](/blog/mhada-noc-online)
 - [Selling a MHADA flat](/blog/can-we-sell-mhada-flat)
 
+If you won a flat in the draw, see [what happens after the lottery win](/blog/mhada-lottery-2026-mumbai).
+
 ---
 
 ## MHADA allotment letter lost? How to get a certified copy

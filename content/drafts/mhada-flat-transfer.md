@@ -144,6 +144,8 @@ The documents required for a MHADA transfer are the nine items on the Mumbai Boa
 8. **Two attested passport size photographs.**
 9. **A self declaration** in the prescribed format covering unauthorised construction and whether a society has been registered.
 
+For the duty on that deed, see [gift deed stamp duty in Maharashtra](/blog/gift-deed-stamp-duty-maharashtra).
+
 A shop, other commercial unit or non residential plot adds a certified copy of the Gumasta licence, the Shops and Establishments certificate.
 
 The Regulation 24 application that comes with Form 1 asks for three more things:
@@ -173,6 +175,8 @@ The MHADA transfer procedure has five steps, from the society's NOC to the Mumba
 3. **Clear the Mumbai Board's dues and keep the receipts.** Both checklists ask for them. A no dues certificate is a separate service, with a limit of 19 working days, if you want one on paper. Our guide to [MHADA NOCs online](/blog/mhada-noc-online) lists it with the others.
 4. **Collect the form and file it within 15 days.** The Mumbai Board's forms say the completed file must reach the Estate Manager within 15 days of the form being issued. So gather the papers first. Pay the transfer charge and any deposit, and attach the receipt.
 5. **The Mumbai Board decides** under a notified limit of 23 office working days. Once approved, the flat is recorded in the new name.
+
+To see who bills a MHADA flat and for what, read [MHADA dues explained](/blog/mhada-dues-lease-rent-property-tax).
 
 The designated officer is the Estate Manager for your division, with divisions that include Borivali, Malad, Goregaon, Bandra, Kurla, Ghatkopar and Mulund. If the service is refused or not delivered in time, the Right to Public Services law gives you two appeals. Under MHADA's notification of 13 July 2015, the first goes to the Executive Engineer and the second to the Joint Chief Officer. Our guide to the [MHADA office in Bandra](/blog/mhada-office-bandra) lists which Estate Manager handles each area.
 

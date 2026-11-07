@@ -87,6 +87,8 @@ An unregistered deed does not transfer title, and the courts are consistent abou
 
 Registration also produces your [Index 2](/blog/index-2-property-document). That is the one page proof that the registration happened.
 
+After the deed, the society has its own steps. See [what the society asks for after the sale deed](/blog/society-noc-for-sale-of-flat-mumbai) and [what the share certificate does not prove](/blog/society-share-certificate-transfer-fee).
+
 ---
 
 ## How do you correct a mistake after signing?

@@ -78,6 +78,8 @@ Find your flat's Estate Manager before you travel. Your allotment letter and you
 
 If the allotment letter itself is missing, our guide to the [MHADA allotment letter](/blog/mhada-allotment-letter) shows how to get a certified copy.
 
+Results of the 2026 draw are covered in [MHADA lottery 2026](/blog/mhada-lottery-2026-mumbai).
+
 ---
 
 ## Which Estate Manager handles your area?

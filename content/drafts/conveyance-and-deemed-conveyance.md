@@ -133,6 +133,8 @@ So on any older building, the simple habit is to ask rather than assume.
 
 **Ask about conveyance first.** A society that owns its land can redevelop on its own terms. Talks about builders and terms work best once that is settled.
 
+Read about [corpus fund and rent during redevelopment](/blog/redevelopment-borivali-kandivali). On transfers, see [transfer charges and NOC in a society](/blog/society-noc-for-sale-of-flat-mumbai) and [the share certificate after conveyance](/blog/society-share-certificate-transfer-fee).
+
 ---
 
 ## Common questions

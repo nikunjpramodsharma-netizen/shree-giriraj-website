@@ -75,6 +75,8 @@ The **sub registrar office** is the local office where registration takes place.
 
 These are the names the services carry on the portal, checked on 7 November 2026. Government portals do rename things, but the service itself stays.
 
+For a tenancy, see [online leave and licence registration](/blog/leave-and-licence-agreement-mumbai), step by step.
+
 ---
 
 ## How to search a property on IGR Maharashtra (e-Search)

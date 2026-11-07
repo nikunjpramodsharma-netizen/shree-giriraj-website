@@ -273,6 +273,83 @@ export const POST_OFFERS: Record<string, PostOffer> = {
     button: "Get the yield worked out",
     intentKey: "intentInvest",
   },
+  "gift-deed-stamp-duty-maharashtra": {
+    heading: "Gifting a flat in the family?",
+    body: "We prepare the draft gift deed, work out the stamp duty and registration for your exact relationship, and book the registration, for flats in Borivali, Kandivali and Malad.",
+    whatsapp:
+      "Hi Shree Giriraj, I want to gift my flat in ___ to my ___. Can you tell me the stamp duty and the steps?",
+    button: "Ask about a gift deed",
+  },
+  "tenant-police-verification-mumbai": {
+    heading: "Letting your flat?",
+    body: "We find the tenant, register the leave and licence and file the police intimation, so a landlord in Borivali, Kandivali or Malad has one clean set of papers.",
+    whatsapp:
+      "Hi Shree Giriraj, I am letting my flat in ___. Can you help with the agreement and the police intimation?",
+    button: "Ask about letting it",
+    intentKey: "intentRent",
+  },
+  "leave-and-licence-agreement-mumbai": {
+    heading: "Letting a flat in Borivali, Kandivali or Malad?",
+    body: "We draft the leave and licence, run the online registration with both sides and file the police intimation, and send you the exact stamp duty first.",
+    whatsapp:
+      "Hi Shree Giriraj, I need a registered leave and licence for my flat in ___. Rent is ___ and deposit is ___.",
+    button: "Get the exact duty",
+    intentKey: "intentRent",
+  },
+  "society-noc-for-sale-of-flat-mumbai": {
+    heading: "Selling your flat?",
+    body: "We prepare the society notice, check the dues and line up the buyer's papers, so the transfer moves without delay, for flats in Borivali, Kandivali and Malad.",
+    whatsapp:
+      "Hi Shree Giriraj, I want to sell my flat in ___ society. Can you help with the society notice and NOC?",
+    button: "Ask about selling",
+    intentKey: "intentSell",
+  },
+  "society-share-certificate-transfer-fee": {
+    heading: "Society asking for a transfer fee?",
+    body: "We read the society's notice with you, check the papers on both sides before the token, and keep the transfer moving, for flats in Borivali, Kandivali and Malad.",
+    whatsapp:
+      "Hi Shree Giriraj, I am buying or selling a flat in ___ and the society has asked for a transfer fee of ___. Can you check it?",
+    button: "Get the notice checked",
+    intentKey: "intentSell",
+  },
+  "redevelopment-borivali-kandivali": {
+    heading: "Where will your family live during redevelopment?",
+    body: "We find owner verified rental flats near your society in Borivali, Kandivali and Malad, register the agreement, and can line up several families in the same weeks.",
+    whatsapp:
+      "Hi Shree Giriraj, our society in ___ is going for redevelopment. We need rental flats nearby for ___ families.",
+    button: "Find rental flats nearby",
+    intentKey: "intentRent",
+  },
+  "mhada-lottery-2026-mumbai": {
+    heading: "Won a MHADA lottery flat?",
+    body: "We read your Provisional Offer Letter with you, line up the documents for verification and the loan NOC, and follow the paperwork through, for MHADA flats anywhere in Mumbai.",
+    whatsapp:
+      "Hi Shree Giriraj, I won a flat in the MHADA Mumbai lottery in ___. Can you walk me through the next steps?",
+    button: "Ask about the next steps",
+    intentKey: "intentMhada",
+  },
+  "mhada-dues-lease-rent-property-tax": {
+    heading: "Need your MHADA dues checked?",
+    body: "We check what is due to the Board, the society and the BMC, gather the receipts and take the file to the Estate Manager, for MHADA flats anywhere in Mumbai.",
+    whatsapp:
+      "Hi Shree Giriraj, I want to check the dues on my MHADA flat in ___ before a ___ (sale, rent or transfer).",
+    button: "Ask for a dues check",
+    intentKey: "intentMhada",
+  },
+  "2-bhk-interior-cost-mumbai": {
+    heading: "Want an itemised estimate for your flat?",
+    body: "We give you an itemised estimate before work starts, with the society's permission handled and design and execution under one roof.",
+    whatsapp:
+      "Hi Shree Giriraj, I am planning interiors for my 2 BHK in ___. Can you share an itemised estimate?",
+    button: "Ask for an estimate",
+  },
+  "modular-kitchen-cost-mumbai": {
+    heading: "Planning a new kitchen?",
+    body: "We give you an itemised kitchen estimate before work starts and handle the society's permission, with design and building under one roof.",
+    whatsapp:
+      "Hi Shree Giriraj, I want a modular kitchen estimate for my flat in ___. The kitchen is about ___ ft by ___ ft.",
+    button: "Ask for a kitchen estimate",
+  },
 };
 
 /**

@@ -110,7 +110,7 @@ Asking rents are a starting point, not signed rents. The building, the floor and
 ## For owners
 
 - **A tenant you would choose yourself.** Stable income, a registered agreement, and a tenancy that looks set to last.
-- **The paperwork done properly.** A registered agreement, police intimation, the society's no objection letter where it asks for one, and a clear record of the deposit.
+- **The paperwork done properly.** A registered [leave and licence agreement](/blog/leave-and-licence-agreement-mumbai), [police intimation](/blog/tenant-police-verification-mumbai), the society's no objection letter where it asks for one, and a clear record of the deposit.
 - **Fewer empty months.** Most of our rentals are matched from people already talking to us, not from portal enquiries.
 - **Handover and return handled at both ends,** with a list of what is in the flat. So the deposit talk at the end is a short one.
 
@@ -182,9 +182,9 @@ This is the typical Mumbai market range from published cost guides, read on 7 No
 
 | Level | What it usually includes | Typical Mumbai range |
 | --- | --- | --- |
-| Basic | Modular kitchen, two wardrobes, a TV unit, laminate finishes | about ₹5.5 lakh to ₹7 lakh |
-| Mid | The basics plus false ceilings, beds, dining furniture, better hardware and painting | about ₹7 lakh to ₹12 lakh |
-| Premium | Premium shutters, marine plywood, profile lighting, custom furniture | ₹12 lakh and above |
+| Basic | A kitchen, two wardrobes, a TV unit, laminate finishes | about ₹5.5 lakh to ₹7 lakh |
+| Mid | The basics plus beds, dining, a living room false ceiling and better hardware | about ₹7 lakh to ₹12 lakh |
+| Premium | Premium shutters, marine plywood, profile lighting and wardrobe internals | ₹12 lakh and above |
 
 Where the range comes from:
 
@@ -193,7 +193,7 @@ Where the range comes from:
 - [Livspace, Mumbai interior cost guide, January 2026](https://www.livspace.com/in/magazine/calculate-interior-design-cost-in-mumbai): ₹7 lakh to ₹10 lakh for a 500 to 700 sq ft 2 BHK, before 18 percent GST.
 - [Asian Paints Beautiful Homes, Mumbai interior cost guide](https://www.beautifulhomes.asianpaints.com/blogs/interior-design-cost-per-square-foot-in-mumbai.html): ₹7 lakh to ₹13 lakh or more for 800 to 1,200 sq ft.
 
-Ask whether any quote includes GST at 18 percent. Our free [interior scope builder](/tools/interior-scope-builder) helps you list the rooms before we meet.
+Ask whether any quote includes GST at 18 percent. Our free [interior scope builder](/tools/interior-scope-builder) helps you list the rooms before we meet. For the room by room figures, read [what a 2 BHK interior costs in Mumbai](/blog/2-bhk-interior-cost-mumbai) and the [modular kitchen cost in Mumbai](/blog/modular-kitchen-cost-mumbai).
 
 ## How to start
 

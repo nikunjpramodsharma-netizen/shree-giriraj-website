@@ -46,8 +46,7 @@ relatedFaqs:
   - Is the deposit refundable in full?
   - When is the deposit returned?
 readNext:
-  - rent-agreement-mumbai
-  - leave-and-license-agreement-format
+  - leave-and-licence-agreement-mumbai
   - guides/renting-in-the-western-suburbs
 ---
 
@@ -146,6 +145,8 @@ Lost deposits are rarely about a bad landlord. They usually come down to a missi
 - Photographs from day one
 
 If one is missing, fix it before the money moves. If the landlord will not fix it, that tells you something about how the refund will go.
+
+You can [register the agreement online](/blog/leave-and-licence-agreement-mumbai), and a landlord can read how [filing the police form for your tenant](/blog/tenant-police-verification-mumbai) works. If your building is going for redevelopment, read about [renting while your building is rebuilt](/blog/redevelopment-borivali-kandivali).
 
 ---
 

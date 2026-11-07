@@ -86,6 +86,8 @@ Floor space index (FSI) is the amount of floor area you may build compared with 
 
 We do not quote them here, because any number printed today needs checking against the current text on the day it is used. Read the regulation and the latest resolution before you trust a figure on a builder's presentation.
 
+For a society outside a MHADA layout, read about [redevelopment in a society outside a MHADA layout](/blog/redevelopment-borivali-kandivali).
+
 ---
 
 ## Does a MHADA society need conveyance before redevelopment?

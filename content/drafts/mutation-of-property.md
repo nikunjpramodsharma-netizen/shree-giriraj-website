@@ -54,6 +54,8 @@ Mutation updates the local authority's records so the property tax is billed in 
 
 They are held by different bodies, for different jobs. Since 2019 the first usually triggers the second in Mumbai. It is still worth checking that it did.
 
+The society keeps its own record too. See [society share certificate and transfer fee](/blog/society-share-certificate-transfer-fee).
+
 ---
 
 ## How to change the name on the BMC property tax bill

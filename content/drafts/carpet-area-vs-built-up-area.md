@@ -128,6 +128,8 @@ Do this arithmetic before you get attached to a flat:
 2. Do the same for the flat you are comparing it with
 3. Compare those two numbers, not the headline rate
 
+The same area also sets your fit out bill. Our guide to [what the area means for your budget](/blog/2-bhk-interior-cost-mumbai) puts a 2 BHK interior into numbers.
+
 ---
 
 ## What loading is normal in Mumbai?

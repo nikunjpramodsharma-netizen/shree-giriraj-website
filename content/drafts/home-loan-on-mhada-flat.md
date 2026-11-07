@@ -100,6 +100,8 @@ Start the bank paperwork as soon as you have chosen a bank. MHADA's FAQ says the
 
 If you decide on a different bank, MHADA's FAQ allows a fresh NOC application once you cancel the NOC you submitted earlier. Our guide to [MHADA NOCs online](/blog/mhada-noc-online) covers the app alongside the Mumbai Board's other NOCs. Stuck in the app? [Send us a screenshot on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20won%20a%20MHADA%20flat%20and%20need%20help%20with%20the%20loan%20NOC%20in%20the%20IHLMS%202.0%20app.) and we will tell you the next step, free.
 
+Our [MHADA lottery 2026 next steps](/blog/mhada-lottery-2026-mumbai) guide puts the loan NOC in order with the other papers.
+
 ---
 
 ## Owners and resale buyers: the MHADA NOC for a mortgage loan (Form 4)

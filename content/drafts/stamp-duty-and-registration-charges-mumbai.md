@@ -92,6 +92,8 @@ A man and a woman buying together pay the "man" column. Rates checked on 16 Sept
 
 **These rates are for Mumbai**, which takes in Borivali, Kandivali and Malad. If you are buying elsewhere in Maharashtra, check the local rate with the Department of Registration and Stamps first.
 
+Letting a flat rather than buying one? Read about [stamp duty on a leave and licence](/blog/leave-and-licence-agreement-mumbai).
+
 ---
 
 ## What is the metro cess?
@@ -174,7 +176,7 @@ Yes. A woman buying a home in her sole name pays 5 percent against 6 percent. Th
 A 1 percent levy on top of the base stamp duty that helps fund Mumbai's metro rail. It is included in the 6 and 5 percent figures above.
 
 **Is stamp duty payable on a gift deed between family?**
-Maharashtra charges a flat **200 rupees**, not a percentage, for a gift of a home or farmland to a close relative with no payment involved. It does not cover commercial property. Sources differ on exactly which relatives qualify, siblings in particular, so confirm your relationship first.
+Maharashtra charges a flat **200 rupees**, not a percentage, for a home or farmland gifted to a spouse, child, grandchild or a deceased son's wife, with registration also at 200 rupees. A gift to a parent, brother or sister pays **3 percent**. In Mumbai the 1 percent metro cess is added on a gift deed. It does not cover commercial property. Our guide to [gift deed stamp duty in Maharashtra](/blog/gift-deed-stamp-duty-maharashtra) has worked figures.
 
 **Can stamp duty be included in my home loan?**
 Generally no. Lenders fund a share of the agreed price, and stamp duty and registration sit outside it. Plan to pay both in cash, on top of the down payment. Our [home loan calculator](/tools/home-loan-emi-calculator) shows the total cash you need, not just the EMI.

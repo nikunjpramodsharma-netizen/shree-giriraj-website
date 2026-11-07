@@ -180,6 +180,8 @@ We look at three things on the latest bill:
 
 The Bombay High Court has held that the charge cannot be enforced against a buyer who had no notice of it. A paid bill before registration means you never need that defence.
 
+Own a MHADA flat? Read about [paying tax on a MHADA flat](/blog/mhada-dues-lease-rent-property-tax), where the Board and the society bill separately.
+
 ---
 
 ## Common questions

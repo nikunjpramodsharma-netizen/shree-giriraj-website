@@ -70,12 +70,12 @@ const SERVICE_HOOKS: Record<string, string> = {
 const SERVICE_MAP: Record<string, { tools: string[]; articles: string[]; services: string[] }> = {
   "resale-flats": {
     tools: ["stamp-duty-calculator-mumbai", "carpet-area-calculator"],
-    articles: ["stamp-duty-and-registration-charges-mumbai", "what-a-sale-deed-contains", "how-to-buy-mhada-flat-in-resale"],
+    articles: ["stamp-duty-and-registration-charges-mumbai", "what-a-sale-deed-contains", "society-noc-for-sale-of-flat-mumbai", "society-share-certificate-transfer-fee", "how-to-buy-mhada-flat-in-resale"],
     services: ["new-project-bookings", "investment-advisory"],
   },
   rentals: {
     tools: ["rent-agreement-stamp-duty-calculator-mumbai", "hra-calculator-rent-receipts", "rental-yield-calculator"],
-    articles: ["rent-deposit-months-western-suburbs", "can-we-rent-mhada-flat"],
+    articles: ["rent-deposit-months-western-suburbs", "leave-and-licence-agreement-mumbai", "tenant-police-verification-mumbai", "can-we-rent-mhada-flat"],
     services: ["resale-flats", "interiors"],
   },
   "new-project-bookings": {
@@ -95,7 +95,7 @@ const SERVICE_MAP: Record<string, { tools: string[]; articles: string[]; service
   },
   interiors: {
     tools: ["interior-scope-builder", "carpet-area-calculator"],
-    articles: ["choosing-an-interior-designer-in-borivali", "carpet-area-vs-built-up-area"],
+    articles: ["choosing-an-interior-designer-in-borivali", "2-bhk-interior-cost-mumbai", "modular-kitchen-cost-mumbai", "carpet-area-vs-built-up-area"],
     services: ["resale-flats", "rentals"],
   },
   "mhada-paperwork": {
@@ -130,7 +130,7 @@ const TOOL_MAP: Record<string, { services: string[]; articles: string[] }> = {
   },
   "interior-scope-builder": {
     services: ["interiors"],
-    articles: ["choosing-an-interior-designer-in-borivali", "carpet-area-vs-built-up-area"],
+    articles: ["choosing-an-interior-designer-in-borivali", "2-bhk-interior-cost-mumbai", "carpet-area-vs-built-up-area"],
   },
   "capital-gains-calculator-property": {
     services: ["resale-flats", "investment-advisory"],
@@ -146,7 +146,7 @@ const TOOL_MAP: Record<string, { services: string[]; articles: string[] }> = {
   },
   "rent-agreement-stamp-duty-calculator-mumbai": {
     services: ["rentals"],
-    articles: ["rent-deposit-months-western-suburbs", "can-we-rent-mhada-flat"],
+    articles: ["leave-and-licence-agreement-mumbai", "rent-deposit-months-western-suburbs", "can-we-rent-mhada-flat"],
   },
 };
 
@@ -173,6 +173,11 @@ const ARTICLE_TOOL: Record<string, string> = {
   "how-to-invest-in-real-estate-india": "rental-yield-calculator",
   "fractional-ownership-real-estate-india": "rental-yield-calculator",
   "what-a-sale-deed-contains": "capital-gains-calculator-property",
+  "gift-deed-stamp-duty-maharashtra": "stamp-duty-calculator-mumbai",
+  "leave-and-licence-agreement-mumbai": "rent-agreement-stamp-duty-calculator-mumbai",
+  "tenant-police-verification-mumbai": "rent-agreement-stamp-duty-calculator-mumbai",
+  "2-bhk-interior-cost-mumbai": "interior-scope-builder",
+  "modular-kitchen-cost-mumbai": "interior-scope-builder",
 };
 
 /** The new projects in one suburb, as cards. Empty where there are none. */
@@ -201,6 +206,8 @@ export const MHADA_GUIDES = [
   "home-loan-on-mhada-flat",
   "mhada-office-bandra",
   "mhada-redevelopment-rules",
+  "mhada-lottery-2026-mumbai",
+  "mhada-dues-lease-rent-property-tax",
 ];
 
 export function mhadaGuideCards(alreadyLinked: string[] = []): LinkCard[] {

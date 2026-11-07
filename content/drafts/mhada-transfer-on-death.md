@@ -63,6 +63,8 @@ This list is narrower than the ordinary law of succession, so read it closely. A
 
 If the person living in the flat and paying for it is not on the list, take advice before you apply. A short conversation first saves a refused application later.
 
+For the society side, see [nomination and the share certificate](/blog/society-share-certificate-transfer-fee).
+
 ---
 
 ## What do the Regulations say?

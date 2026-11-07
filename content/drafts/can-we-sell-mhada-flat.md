@@ -63,6 +63,8 @@ Five things decide whether a sale goes through. Line them up before you list the
 | Same income group | The buyer must fit the scheme's group (EWS, LIG, MIG or HIG) | The buyer's income affidavit and proof |
 | Dues paid | The buyer clears all dues to the Board | The latest Board rent receipt |
 
+Our guide to [MHADA dues explained](/blog/mhada-dues-lease-rent-property-tax) shows what the Board, the society and the BMC bill for.
+
 You need both permissions, not either one. The five years are the minimum in the Regulations. Some schemes set a longer period in their own allotment terms, so the allotment letter is the first document we read.
 
 ---
@@ -134,6 +136,8 @@ The list says the application goes to the Estate Manager within fifteen days.
 
 Line up two items first. One is the income affidavit, because the buyer's income group has to fit the scheme. The other is the society NOC, because it can take time. Assemble the file before the agreement is signed.
 
+For what the society asks and charges, see [society NOC for sale of a flat](/blog/society-noc-for-sale-of-flat-mumbai). If you won your flat in the 2026 lottery, read [MHADA lottery 2026 next steps](/blog/mhada-lottery-2026-mumbai).
+
 ---
 
 ## Does this apply to shops in MHADA buildings?
@@ -162,6 +166,8 @@ Yes, with the Chief Officer's permission. The Regulations allow a tenement to mo
 - The allottee wishes to transfer to a family member.
 
 It is still an application, and the family member undertakes to abide by the Regulations.
+
+For the duty on a gift deed, see [stamp duty on a gift deed](/blog/gift-deed-stamp-duty-maharashtra).
 
 **Does the buyer need to be from the same income group?**
 Yes. For EWS, LIG and MIG schemes, the buyer must be in one of those groups. For HIG schemes, the buyer must be in the same group. The income affidavit and proof in the Board's document list establish this.

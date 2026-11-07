@@ -101,7 +101,7 @@ A refusal has to be justified, and a delay can be appealed.
 
 ## What does the application need?
 
-The portal's page lists no separate document requirements, because the particulars are collected in the application itself. The Estate Manager's office wants to see three things. You are the allottee. The flat is the right flat. The Board's dues are clear.
+The portal's page lists no separate document requirements, because the particulars are collected in the application itself. The Estate Manager's office wants to see two things. You are the allottee. The flat is the right flat. For what can be due on a MHADA flat and who bills it, see our guide to [MHADA dues](/blog/mhada-dues-lease-rent-property-tax).
 
 Keep these ready:
 
@@ -129,6 +129,8 @@ Two points are worth writing into a MHADA leave and licence:
 - **Keep the term inside the NOC.** A licence that runs past its NOC has no permission for the extra months.
 
 Ask the Estate Manager whether the NOC carries a fixed validity and whether a renewed licence needs a fresh one. MHADA runs a revalidation process for NOCs. The easy habit is to assume a renewal needs one.
+
+The agreement itself is covered in our guide to the [leave and licence agreement in Mumbai](/blog/leave-and-licence-agreement-mumbai), and the landlord's police form in [tenant police verification in Mumbai](/blog/tenant-police-verification-mumbai). If you won your flat in the 2026 lottery, see [MHADA lottery 2026 next steps](/blog/mhada-lottery-2026-mumbai).
 
 ---
 
