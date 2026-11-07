@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { ToolResultCTA } from "@/components/ToolResultCTA";
 import {
   calculateHra,
   buildReceipts,
@@ -153,6 +154,13 @@ export function HraRentReceipts() {
             instead.
           </div>
         )}
+
+        <ToolResultCTA
+          slug="hra-calculator-rent-receipts"
+          offer="Looking for a flat to rent in Borivali, Kandivali or Malad? Tell us your budget on WhatsApp."
+          message={`Hi Shree Giriraj, I used your HRA calculator. My rent is ${inr(monthlyRent)} a month and my HRA exemption comes to ${inr(hra.exempt)} a year. I am looking for a flat to rent in ___, budget ___.`}
+          inputsKey={`${monthlyBasic}|${monthlyHra}|${monthlyRent}|${isMetro}`}
+        />
       </div>
 
       {/* ------------------------------------------------------- receipts */}

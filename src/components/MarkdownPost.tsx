@@ -16,6 +16,7 @@ import { termsIn } from "@/lib/glossary";
 import { offerFor } from "@/lib/post-offers";
 import { PostOffer } from "@/components/PostOffer";
 import { PageWhatsApp } from "@/components/PageWhatsApp";
+import { MhadaTransferFeeWidget } from "@/components/MhadaTransferFeeWidget";
 
 /**
  * A blog post rendered from markdown in the repo.
@@ -180,6 +181,8 @@ export function MarkdownPost({
               </p>
             </div>
           )}
+
+          {post.widget === "mhada-transfer-fee" && <MhadaTransferFeeWidget slug={post.slug} />}
 
           {offer && <PostOffer offer={offer} compact />}
 

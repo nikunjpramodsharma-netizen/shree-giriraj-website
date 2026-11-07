@@ -12,6 +12,7 @@ import { InteriorsScope } from "@/components/InteriorsScope";
 import { CapitalGainsCalculator } from "@/components/CapitalGainsCalculator";
 import { RentalYieldCalculator } from "@/components/RentalYieldCalculator";
 import { PropertyTaxCalculator } from "@/components/PropertyTaxCalculator";
+import { RentAgreementCalculator } from "@/components/RentAgreementCalculator";
 import { graph, breadcrumbNode, faqNode, webApplicationNode } from "@/lib/schema";
 import Image from "next/image";
 import { TOOLS, getTool, TOOL_WHATSAPP } from "@/lib/tools";
@@ -19,6 +20,7 @@ import { PageWhatsApp } from "@/components/PageWhatsApp";
 import { pageUrls, absoluteUrl } from "@/lib/seo";
 import { TOOL_IMAGES } from "@/lib/tool-images";
 import { RelatedLinks } from "@/components/RelatedLinks";
+import { ToolExtras } from "@/components/ToolExtras";
 import { interlinksForTool } from "@/lib/interlinks";
 
 export const revalidate = 300;
@@ -130,6 +132,7 @@ export default function ToolPage({
         {tool.component === "capitalGains" && <CapitalGainsCalculator />}
         {tool.component === "propertyTax" && <PropertyTaxCalculator />}
         {tool.component === "rentalYield" && <RentalYieldCalculator />}
+        {tool.component === "rentAgreement" && <RentAgreementCalculator />}
       </div>
 
       <div className="wrap pb-16">
@@ -143,6 +146,8 @@ export default function ToolPage({
                 <p key={p}>{p}</p>
               ))}
             </div>
+
+            <ToolExtras slug={tool.slug} />
 
             <h2 className="mt-12 text-2xl text-ink md:text-3xl">
               Common questions

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { ToolResultCTA } from "@/components/ToolResultCTA";
 import {
   calculatePropertyTax,
   CONSTRUCTION_LABEL,
@@ -171,6 +172,25 @@ export function PropertyTaxCalculator() {
             </div>
           )}
         </dl>
+
+        <div className="mt-6">
+          <ToolResultCTA
+            slug="bmc-property-tax-calculator"
+            offer={
+              r.exemption === "exempt"
+                ? "Want us to confirm it from your bill? Free, on WhatsApp."
+                : "Thinking of selling or letting this flat? Ask what it would fetch this month."
+            }
+            message={
+              r.exemption === "exempt"
+                ? `Hi Shree Giriraj, I used your BMC property tax calculator. Carpet area ${carpetSqft} sq ft, ${user}, which looks exempt. Please confirm it from my bill.`
+                : `Hi Shree Giriraj, I used your BMC property tax calculator. Carpet area ${carpetSqft} sq ft, ${user}, capital value ${inr(r.capitalValue)}${
+                    r.hasTaxRate ? `, tax payable ${inr(r.taxPayable ?? 0)}` : ""
+                  }. I am thinking of selling or letting this flat. What would it fetch this month?`
+            }
+            inputsKey={`${carpetSqft}|${reckonerRatePerSqft}|${construction}|${age}|${user}|${taxRatePct}`}
+          />
+        </div>
 
         <div className="mt-6 rounded-xl border border-line p-5">
           <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-muted">

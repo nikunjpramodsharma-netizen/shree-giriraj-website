@@ -4,6 +4,7 @@ metaTitle: "MHADA transfer fees: 45 to 60 rupees a sq ft"
 metaDescription: "MHADA transfer fees are 45 to 60 rupees a sq ft, capped at 15,000 to 35,000. The 23 working day process, the documents, and free help on WhatsApp."
 slug: mhada-flat-transfer
 category: MHADA
+widget: mhada-transfer-fee
 heroImage: /blog/mhada-transfer.jpg
 heroAlt: "Two people holding hands with a new set of house keys"
 targetKeyword: mhada transfer fees

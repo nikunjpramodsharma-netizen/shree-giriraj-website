@@ -5,9 +5,10 @@ import { Link } from "@/i18n/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
-import { graph, breadcrumbNode, itemListNode } from "@/lib/schema";
+import { graph, breadcrumbNode, itemListNode, faqNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
 import { TOOLS } from "@/lib/tools";
+import { TOOL_AUDIENCE, TOOLS_HUB_FAQS } from "@/lib/tool-audience";
 
 export const revalidate = 300;
 
@@ -61,6 +62,7 @@ export default function ToolsIndex({
             locale,
             TOOLS.map((t) => ({ name: t.title, path: `/tools/${t.slug}` })),
           ),
+          faqNode(TOOLS_HUB_FAQS.map((f) => ({ question: f.q, answer: f.a }))),
         )}
       />
 
@@ -104,11 +106,26 @@ export default function ToolsIndex({
                 <h2 className="text-xl text-ink group-hover:text-brand-indigo md:text-2xl">
                   {t.title}
                 </h2>
+                {TOOL_AUDIENCE[t.slug] && (
+                  <p className="mt-2 text-sm font-semibold text-ink">{TOOL_AUDIENCE[t.slug]}</p>
+                )}
                 <p className="mt-2 text-sm text-ink/70">{t.answer}</p>
               </Link>
             </li>
           ))}
         </ul>
+
+        <div className="mt-12 max-w-[68ch]">
+          <h2 className="text-2xl text-ink md:text-3xl">Common questions</h2>
+          <dl className="mt-6 divide-y divide-line border-y border-line">
+            {TOOLS_HUB_FAQS.map((f) => (
+              <div key={f.q} className="py-5">
+                <dt className="font-semibold text-ink">{f.q}</dt>
+                <dd className="mt-2 text-ink/75">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
 
         {PLANNED.length > 0 && (
         <div className="mt-12 max-w-[68ch]">

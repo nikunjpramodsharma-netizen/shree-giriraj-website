@@ -18,6 +18,12 @@ describe("reading posts from markdown", () => {
   it("returns null for a slug that does not exist", () => {
     expect(getPost("no-such-post")).toBeNull();
   });
+
+  it("places the MHADA transfer fee widget on the transfer guide only", () => {
+    expect(getPost("mhada-flat-transfer")!.widget).toBe("mhada-transfer-fee");
+    const others = getAllPosts().filter((p) => p.widget && p.slug !== "mhada-flat-transfer");
+    expect(others.map((p) => p.slug)).toEqual([]);
+  });
 });
 
 describe("the answer is not printed twice", () => {

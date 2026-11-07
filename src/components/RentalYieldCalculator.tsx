@@ -1,6 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { ToolResultCTA } from "@/components/ToolResultCTA";
+import { readShareChoice, readShareNumber } from "@/lib/tool-share";
 import { computeYield, rentForTargetNetYield, type YieldInput } from "@/lib/yield";
 import { inr, inrShort } from "@/lib/emi";
 
@@ -37,6 +39,25 @@ export function RentalYieldCalculator() {
   const [vacancyWeeks, setVacancyWeeks] = useState(4);
   const [acquisitionCosts, setAcquisitionCosts] = useState(1_400_000);
   const [targetPct, setTargetPct] = useState(3);
+
+  // Restore a shared result from the query string, numbers and choices only.
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    const set = (key: string, min: number, max: number, fn: (n: number) => void) => {
+      const n = readShareNumber(sp, key, min, max);
+      if (n !== undefined) fn(n);
+    };
+    set("pr", 0, 10_000_000_000, setPrice);
+    set("rn", 0, 100_000_000, setMonthlyRent);
+    set("mt", 0, 10_000_000, setMonthlyMaintenance);
+    set("pt", 0, 100_000_000, setAnnualPropertyTax);
+    set("oc", 0, 100_000_000, setAnnualOtherCosts);
+    set("vw", 0, 52, setVacancyWeeks);
+    set("ac", 0, 10_000_000_000, setAcquisitionCosts);
+    set("tg", 0, 100, setTargetPct);
+    const m = readShareChoice(sp, "m", ["yield", "target"] as const);
+    if (m) setMode(m);
+  }, []);
 
   const input: YieldInput = {
     price,
@@ -275,6 +296,30 @@ export function RentalYieldCalculator() {
           </p>
         </div>
       )}
+
+      <div className="border-t border-line p-6">
+        <ToolResultCTA
+          slug="rental-yield-calculator"
+          offer="Tell us the society name and we will send the rent range from recent lettings, free."
+          message={
+            mode === "yield"
+              ? `Hi Shree Giriraj, I used your rental yield calculator. Price ${inrShort(price)}, rent ${inr(monthlyRent)} a month, gross yield ${fmtPct(r.grossYieldPct)}, net yield ${r.netAnnualIncome > 0 ? fmtPct(r.netYieldPct) : "a loss"}. The society is ___. Please send the rent range from recent lettings.`
+              : `Hi Shree Giriraj, I used your rental yield calculator. Price ${inrShort(price)}. To reach a net yield of ${fmtPct(targetPct)} the rent would need to be ${neededRent === null ? "out of reach" : inr(Math.round(neededRent)) + " a month"}. The society is ___. Please send the rent range from recent lettings.`
+          }
+          inputsKey={`${mode}|${price}|${monthlyRent}|${monthlyMaintenance}|${annualPropertyTax}|${annualOtherCosts}|${vacancyWeeks}|${acquisitionCosts}|${targetPct}`}
+          share={{
+            m: mode,
+            pr: price,
+            rn: monthlyRent,
+            mt: monthlyMaintenance,
+            pt: annualPropertyTax,
+            oc: annualOtherCosts,
+            vw: vacancyWeeks,
+            ac: acquisitionCosts,
+            tg: targetPct,
+          }}
+        />
+      </div>
     </div>
   );
 }

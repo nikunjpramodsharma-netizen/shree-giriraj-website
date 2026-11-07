@@ -200,3 +200,60 @@ export const CG_RELIEFS = [
     what: "Parking the gain in a designated account if you cannot reinvest before the filing due date.",
   },
 ];
+
+/* ------------------------------------------------- cost inflation index */
+
+/**
+ * The official table, read on 7 November 2026 from the Income Tax
+ * Department's "View All CII" page, which states: "As per Notification
+ * 70/2025, dated 01-07-2025, the following table should be used for the Cost
+ * Inflation Index", under section 48, Explanation (v). Every value below was
+ * copied from that page.
+ */
+export const CII_READ_ON = "2026-11-07";
+export const CII_NOTIFICATION = "Notification 70/2025 of 1 July 2025";
+export const CII_SOURCE_URL = "https://www.incometaxindia.gov.in/w/view-all-cii";
+
+export const CII_TABLE: Record<string, number> = {
+  "2001-02": 100,
+  "2002-03": 105,
+  "2003-04": 109,
+  "2004-05": 113,
+  "2005-06": 117,
+  "2006-07": 122,
+  "2007-08": 129,
+  "2008-09": 137,
+  "2009-10": 148,
+  "2010-11": 167,
+  "2011-12": 184,
+  "2012-13": 200,
+  "2013-14": 220,
+  "2014-15": 240,
+  "2015-16": 254,
+  "2016-17": 264,
+  "2017-18": 272,
+  "2018-19": 280,
+  "2019-20": 289,
+  "2020-21": 301,
+  "2021-22": 317,
+  "2022-23": 331,
+  "2023-24": 348,
+  "2024-25": 363,
+  "2025-26": 376,
+  "2026-27": 384,
+};
+
+/** The financial year (April to March) a date falls in, as "2015-16". */
+export function financialYearOf(iso: string): string | null {
+  const m = /^(\d{4})-(\d{2})-\d{2}$/.exec(iso);
+  if (!m) return null;
+  const y = Number(m[1]);
+  const start = Number(m[2]) >= 4 ? y : y - 1;
+  return `${start}-${String((start + 1) % 100).padStart(2, "0")}`;
+}
+
+/** The notified CII for the year a date falls in, or undefined outside the table. */
+export function ciiForDate(iso: string): number | undefined {
+  const fy = financialYearOf(iso);
+  return fy ? CII_TABLE[fy] : undefined;
+}

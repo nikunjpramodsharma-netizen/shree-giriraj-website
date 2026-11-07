@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { ToolResultCTA } from "@/components/ToolResultCTA";
 import {
   SCOPE,
   UNIT_LABEL,
@@ -150,6 +151,19 @@ export function InteriorsScope() {
             )}
           </div>
         )}
+
+        <div className="mt-8">
+          <ToolResultCTA
+            slug="interior-scope-builder"
+            offer="Send us your scope and we will send an itemised estimate before you commit."
+            message={`Hi Shree Giriraj, I built an interior scope with your tool: ${lines
+              .slice(0, 12)
+              .map((l) => `${l.item.label} ${l.qty} ${UNIT_LABEL[l.item.unit]}`)
+              .join(", ")}${lines.length > 12 ? ` and ${lines.length - 12} more items` : ""}. Please send an itemised estimate for my flat in ___.`}
+            inputsKey={JSON.stringify(sel)}
+            show={lines.length > 0}
+          />
+        </div>
 
         {/* Both lists are the actual value of the page, so they print too. */}
         <div className="mt-10 grid gap-6 lg:grid-cols-2">

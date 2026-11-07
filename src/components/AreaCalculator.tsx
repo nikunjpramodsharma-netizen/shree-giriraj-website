@@ -1,10 +1,15 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { ToolResultCTA } from "@/components/ToolResultCTA";
+import { readShareChoice, readShareNumber } from "@/lib/tool-share";
 import {
   analyse,
   compare,
-  builtUpFromCarpet,
+  allAreas,
+  pricePerCarpetFoot,
+  sqftToSqm,
+  type AreaBasis,
   loadingVerdict,
   LOADING_BENCHMARKS,
   AREA_SOURCES,
@@ -44,7 +49,8 @@ export function AreaCalculator() {
   const [mode, setMode] = useState<"one" | "compare">("one");
 
   // Single flat.
-  const [superArea, setSuperArea] = useState(1000);
+  const [basis, setBasis] = useState<AreaBasis>("super");
+  const [areaValue, setAreaValue] = useState(1000);
   const [loading, setLoading] = useState(40);
   const [price, setPrice] = useState(25_000_000);
   const [wallPct, setWallPct] = useState(12);
@@ -63,16 +69,40 @@ export function AreaCalculator() {
     loadingPct: 40,
   });
 
-  const one = useMemo(
-    () => analyse({ label: "This flat", price, superArea, loadingPct: loading }),
-    [price, superArea, loading],
+  // Restore a shared result from the query string, numbers and choices only.
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    const from = readShareChoice(sp, "from", ["carpet", "builtUp", "super"] as const);
+    const a = readShareNumber(sp, "a", 1, 100_000);
+    const l = readShareNumber(sp, "l", 0, 200);
+    const w = readShareNumber(sp, "w", 0, 100);
+    const p = readShareNumber(sp, "p", 0, 10_000_000_000);
+    if (from) setBasis(from);
+    if (a !== undefined) setAreaValue(a);
+    if (l !== undefined) setLoading(l);
+    if (w !== undefined) setWallPct(w);
+    if (p !== undefined) setPrice(p);
+  }, []);
+
+  const areas = useMemo(
+    () => allAreas(basis, areaValue, loading, wallPct),
+    [basis, areaValue, loading, wallPct],
   );
-  const builtUp = useMemo(
-    () => builtUpFromCarpet(one.carpet, wallPct),
-    [one.carpet, wallPct],
-  );
+  const superArea = areas.superArea;
+  const builtUp = areas.builtUp;
+  const one = {
+    carpet: areas.carpet,
+    ratePerSuperFoot: pricePerCarpetFoot(price, areas.superArea),
+    ratePerCarpetFoot: pricePerCarpetFoot(price, areas.carpet),
+  };
   const verdict = loadingVerdict(loading);
   const carpetShare = superArea > 0 ? (one.carpet / superArea) * 100 : 0;
+  const BASIS_LABEL: Record<AreaBasis, string> = {
+    carpet: "Carpet area",
+    builtUp: "Built up area",
+    super: "Super built up area",
+  };
+  const both = (n: number) => `${n} sq ft · ${sqftToSqm(n)} sq m`;
 
   const cmp = useMemo(() => compare(a, b), [a, b]);
   const winner = cmp.betterValue === "a" ? cmp.a : cmp.betterValue === "b" ? cmp.b : null;
@@ -94,14 +124,24 @@ export function AreaCalculator() {
       {mode === "one" ? (
         <>
           <div className="grid gap-6 border-b border-line p-6 sm:grid-cols-2">
+            <fieldset className="sm:col-span-2">
+              <legend className="text-sm font-semibold text-ink">Start from</legend>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {(["carpet", "builtUp", "super"] as AreaBasis[]).map((b) => (
+                  <ModeButton key={b} active={basis === b} onClick={() => setBasis(b)}>
+                    {BASIS_LABEL[b]}
+                  </ModeButton>
+                ))}
+              </div>
+            </fieldset>
             <Slider
-              label="Super built up area"
-              value={superArea}
-              onChange={setSuperArea}
+              label={BASIS_LABEL[basis]}
+              value={areaValue}
+              onChange={setAreaValue}
               min={200}
               max={5000}
               step={10}
-              display={`${superArea} sq ft`}
+              display={`${areaValue} sq ft`}
             />
             <Slider
               label="Loading"
@@ -130,6 +170,10 @@ export function AreaCalculator() {
               step={1}
               display={`${wallPct}%`}
             />
+            <p className="text-xs text-muted sm:col-span-2">
+              Built up is carpet plus the walls and balcony. The percentage over
+              carpet is a rule of thumb that you can change to match your flat.
+            </p>
           </div>
 
           <div className="grid gap-px bg-line sm:grid-cols-2">
@@ -188,15 +232,23 @@ export function AreaCalculator() {
             </div>
 
             <dl className="divide-y divide-line rounded-xl border border-line">
-              <Row label="Carpet area" value={`${one.carpet} sq ft`} />
-              <Row label="Built up, approximately" value={`${builtUp} sq ft`} />
-              <Row label="Super built up" value={`${superArea} sq ft`} />
+              <Row label="Carpet area" value={both(one.carpet)} />
+              <Row label="Built up, approximately" value={both(builtUp)} />
+              <Row label="Super built up" value={both(superArea)} />
               <Row
                 label="You are paying for"
                 value={`${superArea - one.carpet} sq ft you cannot use`}
                 strong
               />
             </dl>
+
+            <ToolResultCTA
+              slug="carpet-area-calculator"
+              offer="Send us any listing and we will confirm its real carpet area from the agreement or the RERA record, free."
+              message={`Hi Shree Giriraj, I used your carpet area calculator. Starting from ${BASIS_LABEL[basis].toLowerCase()} ${areaValue} sq ft at ${loading}% loading gives carpet ${one.carpet} sq ft, built up ${builtUp} sq ft, super built up ${superArea} sq ft. At ${inrShort(price)} that is ${inr(one.ratePerCarpetFoot)} per carpet sq ft. Please confirm the real carpet area of a flat I am considering.`}
+              inputsKey={`one|${basis}|${areaValue}|${loading}|${wallPct}|${price}`}
+              share={{ from: basis, a: areaValue, l: loading, w: wallPct, p: price }}
+            />
           </div>
         </>
       ) : (
@@ -251,6 +303,14 @@ export function AreaCalculator() {
                 the rate in the listing.
               </p>
             )}
+            <div className="mt-5">
+              <ToolResultCTA
+                slug="carpet-area-calculator"
+                offer="Send us any listing and we will confirm its real carpet area from the agreement or the RERA record, free."
+                message={`Hi Shree Giriraj, I used your carpet area calculator to compare two flats. ${cmp.a.label}: ${inr(cmp.a.ratePerCarpetFoot)} per carpet sq ft, carpet ${cmp.a.carpet} sq ft. ${cmp.b.label}: ${inr(cmp.b.ratePerCarpetFoot)} per carpet sq ft, carpet ${cmp.b.carpet} sq ft. Please confirm the real carpet area of the flats I am considering.`}
+                inputsKey={`cmp|${JSON.stringify([a, b])}`}
+              />
+            </div>
           </div>
         </>
       )}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { ToolResultCTA } from "@/components/ToolResultCTA";
 import {
   calculateCapitalGains,
   CG_RELIEFS,
@@ -9,6 +10,11 @@ import {
   LONG_TERM_MONTHS,
   LTCG_RATE_NEW,
   LTCG_RATE_INDEXED,
+  CII_NOTIFICATION,
+  CII_READ_ON,
+  CII_SOURCE_URL,
+  ciiForDate,
+  financialYearOf,
 } from "@/lib/capitalgains";
 import { inr } from "@/lib/emi";
 
@@ -40,6 +46,11 @@ export function CapitalGainsCalculator() {
   const [ciiPurchase, setCiiPurchase] = useState(0);
   const [ciiSale, setCiiSale] = useState(0);
 
+  // The official CII for each year is filled in from the dates. Typing a value
+  // overrides it, and clearing the box goes back to the official one.
+  const effCiiPurchase = ciiPurchase > 0 ? ciiPurchase : ciiForDate(purchaseDate) ?? 0;
+  const effCiiSale = ciiSale > 0 ? ciiSale : ciiForDate(saleDate) ?? 0;
+
   const r = useMemo(
     () =>
       calculateCapitalGains({
@@ -50,8 +61,8 @@ export function CapitalGainsCalculator() {
         transferExpenses,
         improvements,
         isResidentIndividualOrHuf: isResident,
-        ciiPurchase,
-        ciiSale,
+        ciiPurchase: effCiiPurchase,
+        ciiSale: effCiiSale,
       }),
     [
       purchasePrice,
@@ -61,8 +72,8 @@ export function CapitalGainsCalculator() {
       transferExpenses,
       improvements,
       isResident,
-      ciiPurchase,
-      ciiSale,
+      effCiiPurchase,
+      effCiiSale,
     ],
   );
 
@@ -146,9 +157,10 @@ export function CapitalGainsCalculator() {
             <b>You have a choice worth money, and it needs two numbers.</b> You
             bought before 23 July 2024, so you may use either{" "}
             {LTCG_RATE_NEW}% without indexation or {LTCG_RATE_INDEXED}% with it.
-            Enter the cost inflation index for both years below and the cheaper
-            one will be picked. We do not hardcode the index: one wrong value
-            would produce a confidently wrong tax figure.
+            The cost inflation index is filled in from the official table for
+            the years your dates fall in. Your dates are outside that table, so
+            enter the index for both years below and the cheaper one will be
+            picked.
           </Callout>
         )}
 
@@ -156,16 +168,17 @@ export function CapitalGainsCalculator() {
           <div className="grid gap-4 sm:grid-cols-2">
             <Num
               label="CII, year of purchase"
-              value={ciiPurchase}
+              value={effCiiPurchase}
               onChange={setCiiPurchase}
               step={1}
-              hint="From the Income Tax Department's published table"
+              hint={`Financial year ${financialYearOf(purchaseDate) ?? "unknown"}, from the official table. Type a value to change it.`}
             />
             <Num
               label="CII, year of sale"
-              value={ciiSale}
+              value={effCiiSale}
               onChange={setCiiSale}
               step={1}
+              hint={`Financial year ${financialYearOf(saleDate) ?? "unknown"}, from the official table. Type a value to change it.`}
             />
           </div>
         )}
@@ -190,6 +203,13 @@ export function CapitalGainsCalculator() {
             </div>
           </dl>
         )}
+
+        <ToolResultCTA
+          slug="capital-gains-calculator-property"
+          offer="Planning to sell? Get a free price check for your flat from a Borivali agency in real estate since 1996."
+          message={`Hi Shree Giriraj, I used your capital gains calculator. Bought for ${inr(purchasePrice)} on ${fmtDate(purchaseDate)}, sale price ${inr(salePrice)} on ${fmtDate(saleDate)}. ${r.isLongTerm ? "Long term" : "Short term"} gain ${inr(r.gain)}, ${r.taxPayable === null ? "taxed at my slab rate" : `tax ${inr(r.taxPayable)}`}. I am planning to sell. Please give me a price check for my flat in ___.`}
+          inputsKey={`${purchasePrice}|${purchaseDate}|${salePrice}|${saleDate}|${transferExpenses}|${improvements}|${isResident}|${ciiPurchase}|${ciiSale}`}
+        />
 
         <div className="rounded-xl border border-line p-5">
           <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-muted">
@@ -225,6 +245,16 @@ export function CapitalGainsCalculator() {
           Rules checked {fmtDate(CG_VERIFIED_ON)}
         </div>
         <ul className="mt-2 space-y-1 text-xs">
+          <li>
+            <a
+              href={CII_SOURCE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-indigo underline underline-offset-4"
+            >
+              Income Tax Department, cost inflation index, {CII_NOTIFICATION}, read {fmtDate(CII_READ_ON)}
+            </a>
+          </li>
           {CG_SOURCES.map((s) => (
             <li key={s.url}>
               <a

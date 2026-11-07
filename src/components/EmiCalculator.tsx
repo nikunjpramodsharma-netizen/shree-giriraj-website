@@ -2,7 +2,9 @@
 
 import { RollNumber } from "@/components/motion/RollNumber";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { ToolResultCTA } from "@/components/ToolResultCTA";
+import { readShareNumber } from "@/lib/tool-share";
 import {
   emi,
   schedule,
@@ -65,6 +67,24 @@ export function EmiCalculator() {
   const [tab, setTab] = useState<Tab>("cash");
 
   const months = years * 12;
+
+  // Restore a shared result from the query string, numbers only.
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    const set = (key: string, min: number, max: number, fn: (n: number) => void) => {
+      const n = readShareNumber(sp, key, min, max);
+      if (n !== undefined) fn(n);
+    };
+    set("pr", 1_000_000, 100_000_000, setPrice);
+    set("dp", 5, 100, setDownPct);
+    set("rt", 5, 15, setRate);
+    set("yr", 1, 30, setYears);
+    set("sd", 0, 20, setStampPct);
+    set("rg", 0, 10_000_000, setRegistration);
+    set("bk", 0, 20, setBrokeragePct);
+    set("in", 0, 1_000_000_000, setInteriors);
+    set("ot", 0, 1_000_000_000, setOther);
+  }, []);
 
   const cost = useMemo(
     () =>
@@ -163,6 +183,16 @@ export function EmiCalculator() {
           value={<RollNumber value={cost.cashNeeded} format={inr} />}
           note={`${inrShort(cost.beyondDownPayment)} of this is on top of your down payment, and a home loan will not cover it`}
           accent
+        />
+      </div>
+
+      <div className="border-b border-line p-6">
+        <ToolResultCTA
+          slug="home-loan-emi-calculator"
+          offer="Get a cost sheet for a real flat in your budget, free and with no obligation."
+          message={`Hi Shree Giriraj, I used your home loan calculator. Flat price ${inrShort(price)}, down payment ${downPct}%, loan ${inrShort(cost.loanAmount)} at ${rate.toFixed(2)}% for ${years} years. EMI ${inr(instalment)}, cash needed before the keys ${inr(cost.cashNeeded)}. Please send a cost sheet for a real flat in this budget.`}
+          inputsKey={`${price}|${downPct}|${rate}|${years}|${stampPct}|${registration}|${brokeragePct}|${interiors}|${other}`}
+          share={{ pr: price, dp: downPct, rt: rate, yr: years, sd: stampPct, rg: registration, bk: brokeragePct, in: interiors, ot: other }}
         />
       </div>
 

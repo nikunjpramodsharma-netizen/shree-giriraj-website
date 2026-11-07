@@ -31,7 +31,7 @@ export function WhatsAppRef() {
         const own = document.querySelector("[data-wa-message]")?.getAttribute("data-wa-message");
         if (own) href = withMessage(href, own);
       }
-      const next = withRef(href, refLine(window.location.pathname, getAttribution()));
+      const next = withRef(href, refLine(window.location.pathname, getAttribution(), a.getAttribute("data-wa-cta") || undefined));
       if (next !== a.getAttribute("href")) a.setAttribute("href", next);
     };
 

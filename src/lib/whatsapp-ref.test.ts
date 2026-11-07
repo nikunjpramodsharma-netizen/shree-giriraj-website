@@ -75,3 +75,23 @@ describe("withMessage", () => {
     expect(withMessage(href, "")).toBe(href);
   });
 });
+
+describe("refLine with a call to action mark", () => {
+  it("is unchanged without a mark", () => {
+    expect(refLine("/tools/stamp-duty-calculator-mumbai", {})).toBe(
+      "(Ref: Tool: Stamp duty calculator mumbai, website)",
+    );
+  });
+  it("names the result card between the page and the source", () => {
+    expect(refLine("/tools/stamp-duty-calculator-mumbai", { gclid: "x" }, "result")).toBe(
+      "(Ref: Tool: Stamp duty calculator mumbai, result, Google ad)",
+    );
+  });
+  it("lands on a result card link through withRef", () => {
+    const link = waLink("Hi Shree Giriraj, I used your stamp duty calculator.");
+    const text = new URL(
+      withRef(link, refLine("/tools/carpet-area-calculator", {}, "result")),
+    ).searchParams.get("text");
+    expect(text).toContain("(Ref: Tool: Carpet area calculator, result, website)");
+  });
+});

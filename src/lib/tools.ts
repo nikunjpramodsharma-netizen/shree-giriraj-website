@@ -15,6 +15,8 @@
  * that justified building it.
  */
 
+import { rentAgreementTool } from "@/lib/tool-rent-agreement";
+
 export type ToolFaq = { q: string; a: string };
 
 export type Tool = {
@@ -28,7 +30,8 @@ export type Tool = {
     | "interiors"
     | "capitalGains"
     | "propertyTax"
-    | "rentalYield";
+    | "rentalYield"
+    | "rentAgreement";
   title: string;
   metaTitle: string;
   metaDescription: string;
@@ -140,6 +143,18 @@ const stampDutyTool: Tool = {
       q: "What are the stamp duty rates in Maharashtra for 2026?",
       a: "In Mumbai, 6 percent for a male buyer and 5 percent for a woman holding in her sole name, both including the 1 percent metro cess, plus registration at 1 percent capped at 30,000 rupees. Rates elsewhere in the state differ by municipal area, and this calculator is Mumbai only. Check the year on the reckoner statement, because the values it applies to change every 1 April.",
     },
+    {
+      q: "Stamp duty for women in Maharashtra",
+      a: "For a residential property in Mumbai held in a woman's sole name, the duty is 5 percent including the metro cess, against 6 percent for a man. On ₹1 crore that is ₹1 lakh less. The concession comes from the Maharashtra government order of 31 March 2021. It applies only where women are the only purchasers, so a male co owner brings the rate back to 6 percent.",
+    },
+    {
+      q: "Agreement value or ready reckoner value?",
+      a: "Duty is charged on whichever is higher. If the ready reckoner value for your flat is above the price you agreed, the reckoner value is the one used. Enter it in the calculator and the result switches to it. You can look it up under e-ASR on the IGR portal.",
+    },
+    {
+      q: "Can stamp duty be reduced legally?",
+      a: "The rates are fixed by the state, so the reduction on offer is the women's concession: 5 percent instead of 6 for a residential flat in a woman's sole name. Registration is already capped at ₹30,000. Paying a lower price than the ready reckoner value does not lower the duty, because the higher value is used. If you are unsure which category applies to you, ask us before you sign.",
+    },
   ],
   readNext: [
     { label: "Property paperwork in Maharashtra", href: "/guides/property-paperwork-maharashtra" },
@@ -154,14 +169,14 @@ const areaTool: Tool = {
   title: "Carpet area and loading calculator",
   metaTitle: "Carpet area calculator: built up and super",
   metaDescription:
-    "Turn a super built up listing into the carpet area you can stand on, see the real rate per usable square foot, and compare two flats properly.",
+    "Start from carpet, built up or super built up and see the other two in sq ft and sq m, with the real rate per carpet foot.",
   answer:
     "Carpet area is the usable floor space inside a flat. Super built up adds your share of lobbies, lifts and amenities, and it is the figure prices are quoted against. Loading is the gap, taken on the carpet area, so carpet equals super built up divided by one plus the loading.",
   introHeading: "What is the difference between carpet area and super built up area?",
   intro: [
     "Every flat has three areas: carpet, built up and super built up. You pay on super built up and you live on carpet.",
     "In Mumbai the gap between them is commonly 40 to 50 percent. Two flats at the same rate can therefore give you very different homes.",
-    "This tool turns a listing into the carpet area you can stand on. It then compares two flats on the rate per carpet foot, which is the figure you can compare fairly.",
+    "This tool starts from whichever area you know, carpet, built up or super built up, and shows the other two. It then compares two flats on the rate per carpet foot, which is the figure you can compare fairly.",
   ],
   limits: [
     "It works from the loading figure you enter. If you do not know it, ask for the carpet area in writing: under RERA it has to be stated in the agreement for a registered project.",
@@ -311,7 +326,7 @@ const capitalGainsTool: Tool = {
   limits: [
     "This tool covers long term gains on a property sale. Confirm any figure with a chartered accountant before filing.",
     "Short term gains are taxed at your slab rate, so they are reported as a gain rather than a tax figure.",
-    "The cost inflation index for both years is asked for rather than assumed.",
+    "The cost inflation index is filled in from the official table for the years of your dates, and you can overwrite it.",
     "Reliefs under sections 54 and 54EC are listed but not computed, because each has its own conditions and time limits.",
   ],
   faqs: [
@@ -381,7 +396,7 @@ const propertyTaxTool: Tool = {
     },
     {
       q: "How do I calculate property tax in Mumbai?",
-      a: "The BMC charges on capital value: the ready reckoner rate for the building multiplied by the carpet area and by weights for the type of construction, the age of the building and the floor, with the tax rate applied to that value. A residential flat of up to 500 square feet carpet has paid nothing since 1 January 2022. The calculator applies the published weights and shows each step.",
+      a: "The BMC charges on capital value: the ready reckoner rate for the building multiplied by the carpet area and by weights for the type of construction and the age of the building, with the tax rate applied to that value. A residential flat of up to 500 square feet carpet has paid nothing since 1 January 2022. The calculator applies the published weights and shows each step.",
     },
   ],
   readNext: [
@@ -422,15 +437,15 @@ const rentalYieldTool: Tool = {
   ],
   faqs: [
     {
-      q: "What is a good rental yield?",
-      a: "We will not give you a number, and be careful with anyone who does without seeing the flat. What a yield should be depends on the building, the pocket, what you paid and what else you could have done with the money. Work out the figure for the specific property and judge it against your own alternatives.",
+      q: "What is a good rental yield in Mumbai?",
+      a: "We do not publish a benchmark for Mumbai or for Borivali, Kandivali and Malad, because yields vary by building, floor and pocket. What a yield should be depends on what you paid and what else you could do with the money. Work out the net figure for the specific flat and judge it against your own alternatives. Tell us the society name and we will send the rent range from recent lettings.",
     },
     {
       q: "What is the difference between gross and net rental yield?",
       a: "Gross yield is annual rent divided by the purchase price, with nothing taken off. Net yield takes society maintenance, property tax, repairs and expected vacancy off the rent, and adds stamp duty, registration, brokerage and fit out to the capital. Net is what the flat actually pays you.",
     },
     {
-      q: "How do I calculate rental yield?",
+      q: "How do I calculate rental yield on a flat?",
       a: "For gross yield, multiply the monthly rent by twelve and divide by the purchase price, then multiply by a hundred. For net yield, subtract a year of maintenance, property tax and repairs from the rent you expect to collect, then divide by the price plus all your buying costs.",
     },
     {
@@ -458,6 +473,7 @@ export const TOOLS: Tool[] = [
   capitalGainsTool,
   emiTool,
   rentalYieldTool,
+  rentAgreementTool,
 ];
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug);
@@ -484,4 +500,6 @@ export const TOOL_WHATSAPP: Record<string, string> = {
     "Hi Shree Giriraj, I am looking for a flat on rent in ___, budget ___.",
   "interior-scope-builder":
     "Hi Shree Giriraj, I would like an interior estimate for my flat in ___.",
+  "rent-agreement-stamp-duty-calculator-mumbai":
+    "Hi Shree Giriraj, I need a registered rent agreement for a flat in ___.",
 };

@@ -57,7 +57,17 @@ export type PostMeta = {
   updatedOn?: string;
   readNext: string[];
   relatedFaqs: string[];
+  /** An interactive widget placed right after the answer box, by key. */
+  widget?: PostWidget;
 };
+
+/** The widgets a post can place through its `widget` frontmatter field. */
+export const POST_WIDGETS = ["mhada-transfer-fee"] as const;
+export type PostWidget = (typeof POST_WIDGETS)[number];
+
+function asWidget(v: unknown): PostWidget | undefined {
+  return (POST_WIDGETS as readonly string[]).includes(v as string) ? (v as PostWidget) : undefined;
+}
 
 export type Post = PostMeta & {
   /** Body with the questions section lifted out. */
@@ -147,6 +157,7 @@ export function getPost(slug: string): Post | null {
     updatedOn: asString(data.updatedOn),
     readNext: asStringList(data.readNext),
     relatedFaqs: asStringList(data.relatedFaqs),
+    widget: asWidget(data.widget),
     blocks,
     faqs,
     readingMinutes: Math.max(1, Math.round(wordCount(all) / 200)),

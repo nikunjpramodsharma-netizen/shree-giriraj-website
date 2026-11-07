@@ -2,7 +2,9 @@
 
 import { RollNumber } from "@/components/motion/RollNumber";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { ToolResultCTA } from "@/components/ToolResultCTA";
+import { readShareChoice, readShareNumber } from "@/lib/tool-share";
 import {
   calculateStampDuty,
   womanBuyerSaving,
@@ -32,6 +34,12 @@ const CATEGORIES: { id: BuyerCategory; label: string; note: string }[] = [
   { id: "joint", label: "Joint", note: "Man and woman together" },
 ];
 
+const BUYER_WORDS: Record<BuyerCategory, string> = {
+  male: "man",
+  female: "woman, sole name",
+  joint: "man and woman jointly",
+};
+
 const fmtDate = (iso: string) =>
   new Date(iso).toLocaleDateString("en-IN", {
     day: "numeric",
@@ -43,6 +51,17 @@ export function StampDutyCalculator() {
   const [agreementValue, setAgreementValue] = useState(10_000_000);
   const [reckonerValue, setReckonerValue] = useState(0);
   const [category, setCategory] = useState<BuyerCategory>("male");
+
+  // Restore a shared result from the query string, numbers and choices only.
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    const v = readShareNumber(sp, "v", 500_000, 100_000_000);
+    const rv = readShareNumber(sp, "rv", 0, 1_000_000_000);
+    const who = readShareChoice(sp, "who", ["male", "female", "joint"] as const);
+    if (v !== undefined) setAgreementValue(v);
+    if (rv !== undefined) setReckonerValue(rv);
+    if (who) setCategory(who);
+  }, []);
 
   const r = useMemo(
     () => calculateStampDuty({ agreementValue, reckonerValue, category }),
@@ -212,6 +231,16 @@ export function StampDutyCalculator() {
             ownership and residential, and adding a male co owner removes it.
           </Callout>
         )}
+
+        <ToolResultCTA
+          slug="stamp-duty-calculator-mumbai"
+          offer="Get the full cost sheet for this flat on WhatsApp. Free, no obligation, we reply the same day."
+          message={`Hi Shree Giriraj, I used your stamp duty calculator. Value ${inrShort(agreementValue)}, buyer: ${BUYER_WORDS[category]}.${
+            r.reckonerGoverns ? ` Ready reckoner value ${inrShort(reckonerValue)} applies.` : ""
+          } Duty ${inr(r.dutyHigh)}, registration ${inr(r.registration)}. Please send the full cost sheet for this flat.`}
+          inputsKey={`${agreementValue}|${reckonerValue}|${category}`}
+          share={{ v: agreementValue, rv: reckonerValue || undefined, who: category }}
+        />
 
         <dl className="divide-y divide-line rounded-xl border border-line">
           <Row label="Value duty is charged on" value={r.chargeableValue} />

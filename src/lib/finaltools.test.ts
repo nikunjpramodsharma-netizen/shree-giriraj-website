@@ -251,3 +251,37 @@ describe("provenance on both tax tools", () => {
     expect(PT_SOURCES.some((s) => s.url.includes("igrmaharashtra"))).toBe(true);
   });
 });
+
+import { ciiForDate, financialYearOf, CII_TABLE } from "./capitalgains";
+import { allAreas } from "./area";
+
+describe("cost inflation index table", () => {
+  it("finds the financial year of a date", () => {
+    expect(financialYearOf("2015-06-01")).toBe("2015-16");
+    expect(financialYearOf("2026-03-31")).toBe("2025-26");
+    expect(financialYearOf("2026-04-01")).toBe("2026-27");
+    expect(financialYearOf("1999-12-31")).toBe("1999-00");
+  });
+  it("returns the notified values, and nothing outside the table", () => {
+    expect(ciiForDate("2015-06-01")).toBe(254);
+    expect(ciiForDate("2024-07-22")).toBe(363);
+    expect(ciiForDate("2026-06-01")).toBe(384);
+    expect(ciiForDate("2000-06-01")).toBeUndefined();
+    expect(Object.keys(CII_TABLE)).toHaveLength(26);
+  });
+});
+
+describe("allAreas, every direction", () => {
+  it("starts from super built up", () => {
+    expect(allAreas("super", 1400, 40, 12)).toEqual({ carpet: 1000, builtUp: 1120, superArea: 1400 });
+  });
+  it("starts from carpet", () => {
+    expect(allAreas("carpet", 1000, 40, 12)).toEqual({ carpet: 1000, builtUp: 1120, superArea: 1400 });
+  });
+  it("starts from built up", () => {
+    expect(allAreas("builtUp", 1120, 40, 12)).toEqual({ carpet: 1000, builtUp: 1120, superArea: 1400 });
+  });
+  it("returns zeros for no input", () => {
+    expect(allAreas("carpet", 0, 40, 12)).toEqual({ carpet: 0, builtUp: 0, superArea: 0 });
+  });
+});

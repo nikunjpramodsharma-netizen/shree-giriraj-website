@@ -47,6 +47,7 @@ const TOOL_HOOKS: Record<string, string> = {
   "capital-gains-calculator-property": "The gain on a sale after indexation, and what a reinvestment would save.",
   "bmc-property-tax-calculator": "The annual property tax on a flat or a shop in the western suburbs.",
   "rental-yield-calculator": "What a flat earns as rent against what it costs to buy and hold.",
+  "rent-agreement-stamp-duty-calculator-mumbai": "Stamp duty, registration and handling charge on a leave and licence agreement.",
 };
 
 const AREA_HOOKS: Record<string, string> = {
@@ -73,7 +74,7 @@ const SERVICE_MAP: Record<string, { tools: string[]; articles: string[]; service
     services: ["new-project-bookings", "investment-advisory"],
   },
   rentals: {
-    tools: ["hra-calculator-rent-receipts", "rental-yield-calculator"],
+    tools: ["rent-agreement-stamp-duty-calculator-mumbai", "hra-calculator-rent-receipts", "rental-yield-calculator"],
     articles: ["rent-deposit-months-western-suburbs", "can-we-rent-mhada-flat"],
     services: ["resale-flats", "interiors"],
   },
@@ -142,6 +143,10 @@ const TOOL_MAP: Record<string, { services: string[]; articles: string[] }> = {
   "rental-yield-calculator": {
     services: ["rentals", "investment-advisory"],
     articles: ["rental-yield-mumbai", "rental-income-property-mumbai"],
+  },
+  "rent-agreement-stamp-duty-calculator-mumbai": {
+    services: ["rentals"],
+    articles: ["rent-deposit-months-western-suburbs", "can-we-rent-mhada-flat"],
   },
 };
 
@@ -254,7 +259,7 @@ const LISTING_RECIPE: Record<ListingIntent, { services: string[]; tools: string[
   },
   rent: {
     services: ["rentals", "interiors"],
-    tools: ["hra-calculator-rent-receipts", "rental-yield-calculator"],
+    tools: ["rent-agreement-stamp-duty-calculator-mumbai", "hra-calculator-rent-receipts", "rental-yield-calculator"],
     articles: ["rent-deposit-months-western-suburbs", "rental-yield-mumbai"],
   },
 };

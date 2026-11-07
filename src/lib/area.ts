@@ -92,6 +92,29 @@ export function builtUpFromCarpet(carpet: number, wallPct: number): number {
   return c === 0 ? 0 : r0(c * (1 + Math.max(0, wallPct) / 100));
 }
 
+export type AreaBasis = "carpet" | "builtUp" | "super";
+
+/**
+ * All three areas from whichever one the reader knows.
+ *
+ * Carpet is the anchor. Built up is carpet plus the wall allowance, and super
+ * built up is carpet plus the loading, so each direction is one division or
+ * multiplication. Both percentages are the caller's inputs.
+ */
+export function allAreas(
+  basis: AreaBasis,
+  value: number,
+  loadingPct: number,
+  wallPct: number,
+): { carpet: number; builtUp: number; superArea: number } {
+  const v = safe(value);
+  const l = 1 + Math.max(0, loadingPct) / 100;
+  const w = 1 + Math.max(0, wallPct) / 100;
+  if (v === 0) return { carpet: 0, builtUp: 0, superArea: 0 };
+  const carpet = basis === "carpet" ? v : basis === "builtUp" ? v / w : v / l;
+  return { carpet: r0(carpet), builtUp: r0(carpet * w), superArea: r0(carpet * l) };
+}
+
 /** What you pay for each square foot you can actually stand on. */
 export function pricePerCarpetFoot(price: number, carpet: number): number {
   const c = safe(carpet);

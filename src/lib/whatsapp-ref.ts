@@ -58,8 +58,14 @@ export function sourceLabel(attr: Attribution): string {
   return "website";
 }
 
-export function refLine(pathname: string, attr: Attribution): string {
-  return `${REF_MARK} ${pageLabel(pathname)}, ${sourceLabel(attr)})`;
+/**
+ * `cta` marks a link as a special call to action, for example "result" for the
+ * card under a calculator's answer, so the lead sheet can tell a chat that
+ * followed a result from one that did not. Without it the line is unchanged.
+ */
+export function refLine(pathname: string, attr: Attribution, cta?: string): string {
+  const mark = cta ? `, ${cta.replace(/[^a-z0-9 ]/gi, "").trim()}` : "";
+  return `${REF_MARK} ${pageLabel(pathname)}${mark}, ${sourceLabel(attr)})`;
 }
 
 /**
