@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { captureAttribution, getAttribution } from "@/lib/attribution";
-import { refLine, withMessage, withRef } from "@/lib/whatsapp-ref";
+import { refLine, withMessage, withNumber, withRef } from "@/lib/whatsapp-ref";
 
 /**
  * Adds the "(Ref: page, source)" line to every WhatsApp link on the site at
@@ -30,6 +30,9 @@ export function WhatsAppRef() {
       if (a.hasAttribute("data-wa-generic")) {
         const own = document.querySelector("[data-wa-message]")?.getAttribute("data-wa-message");
         if (own) href = withMessage(href, own);
+        // A page with its own WhatsApp line (/invest) sends these there too.
+        const ownNumber = document.querySelector("[data-wa-number]")?.getAttribute("data-wa-number");
+        if (ownNumber) href = withNumber(href, ownNumber);
       }
       const next = withRef(href, refLine(window.location.pathname, getAttribution(), a.getAttribute("data-wa-cta") || undefined));
       if (next !== a.getAttribute("href")) a.setAttribute("href", next);

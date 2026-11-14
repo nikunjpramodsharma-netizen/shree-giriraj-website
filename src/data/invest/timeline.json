@@ -1,0 +1,10 @@
+{
+  "project": "[[PROJECT_1_NAME]]",
+  "exitWindow": "[[MONTH RANGE]]",
+  "stages": [
+    { "label": "Plinth", "date": "[[DATE]]" },
+    { "label": "[[N]]th slab", "date": "[[DATE]]" },
+    { "label": "Top slab", "date": "[[DATE]]" },
+    { "label": "Target OC", "date": "[[DATE]]" }
+  ]
+}

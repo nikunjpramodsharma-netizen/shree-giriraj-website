@@ -241,4 +241,4 @@ An agreement for sale is the contract signed before a sale is complete, while a 
 
 ## Where to start
 
-Tell us your budget and the suburb you prefer, on WhatsApp or by phone. We send two or three flats worth your time, with what to check in each. It is free, with no obligation, and usually the same day.
+Tell us your budget and the suburb you prefer, on WhatsApp or by phone. We send two or three flats worth your time, with what to check in each. It is free, with no obligation, and usually the same day. Buying in a new project? Our guide to [how to check a builder's RERA page](/guides/how-to-check-a-builder-rera-page) shows what to read before you book.

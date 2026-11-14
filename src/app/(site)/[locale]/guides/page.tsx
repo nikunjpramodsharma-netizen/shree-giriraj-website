@@ -8,6 +8,7 @@ import { ContactCTA } from "@/components/ContactCTA";
 import { graph, breadcrumbNode, itemListNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
 import { PILLARS } from "@/lib/pillars";
+import { getPublishedGuides } from "@/lib/guides";
 
 export const revalidate = 300;
 
@@ -15,13 +16,32 @@ const GUIDE_LOCALE = "en";
 
 /** About 60 words. The first thing on the page, written to be quoted whole. */
 const HUB_INTRO =
-  "These free guides explain each step of a Mumbai property deal in plain words. Start with property paperwork for the documents, from the first check to the tax bill in your name. Then pick buying, renting or MHADA for the guides that fit you. Each guide cites official sources, and our Borivali office can help with any step.";
+  "These free guides explain each step of a Mumbai property deal in plain words. Start with property paperwork for the documents, from the first check to the tax bill in your name. Then pick buying, new projects, renting or MHADA for the guides that fit you. Each guide cites official sources, and our Borivali office can help with any step.";
 
 type TopicLink = { title: string; href: string };
 type Topic = { title: string; blurb: string; links: TopicLink[] };
 
+/**
+ * The long form guides on new projects, in series order. Only the guides that
+ * exist are listed, so this shows three today and five once the last two
+ * arrive, with no edit here. See src/lib/guides.ts.
+ */
+function newProjectsTopic(): Topic | null {
+  const links = getPublishedGuides().map((g) => ({
+    title: g.label,
+    href: `/guides/${g.slug}`,
+  }));
+  if (links.length === 0) return null;
+  return {
+    title: "New projects and launches",
+    blurb:
+      "Booking a flat in a new project: launch bookings, the allotment letter, stamp duty and GST, and how to read a builder's RERA page.",
+    links,
+  };
+}
+
 /** Topic cards. Every link points at a page that is live today. */
-const TOPICS: Topic[] = [
+const STATIC_TOPICS: Topic[] = [
   {
     title: "Buying a flat",
     blurb:
@@ -60,6 +80,13 @@ const TOPICS: Topic[] = [
   },
 ];
 
+/** Buying a flat first, then new projects, then the rest. */
+function topics(): Topic[] {
+  const fresh = newProjectsTopic();
+  if (!fresh) return STATIC_TOPICS;
+  return [STATIC_TOPICS[0], fresh, ...STATIC_TOPICS.slice(1)];
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -69,7 +96,7 @@ export async function generateMetadata({
   return {
     title: "Mumbai property guides: buy, rent, MHADA",
     description:
-      "Free guides for Mumbai home buyers, owners and tenants: property paperwork, buying, renting and MHADA, with steps, figures and official sources.",
+      "Free guides for Mumbai home buyers, owners and tenants: property paperwork, buying, new projects, renting and MHADA, with steps and sources.",
     ...pageUrls(params.locale, "/guides", [GUIDE_LOCALE]),
   };
 }
@@ -86,6 +113,7 @@ export default function GuidesIndex({
     { name: "Home", path: "/" },
     { name: "Guides", path: "/guides" },
   ];
+  const TOPICS = topics();
 
   return (
     <article>
@@ -127,8 +155,8 @@ export default function GuidesIndex({
             Property guides for Mumbai buyers, owners and tenants
           </h1>
           <p className="mt-5 max-w-[58ch] text-paper/80">
-            Free to read, no form in the way. Paperwork, buying, renting and
-            MHADA, each with the steps and the official sources.
+            Free to read, no form in the way. Paperwork, buying, new projects,
+            renting and MHADA, each with the steps and the official sources.
           </p>
         </div>
       </header>

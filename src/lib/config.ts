@@ -8,6 +8,8 @@ export const site = {
   officeSince: "2005",
   rera: "A51800005726",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919324974133",
+  /** Separate WhatsApp line for the /invest page only. Owner, 14 Nov 2026. */
+  investWhatsapp: "917400193974",
   phonePrimary: process.env.NEXT_PUBLIC_PHONE_PRIMARY || "+919324974133",
   phoneSecondary: process.env.NEXT_PUBLIC_PHONE_SECONDARY || "+919223594133",
   email: process.env.NEXT_PUBLIC_EMAIL || "shreegiriraj1224@gmail.com",
@@ -67,7 +69,7 @@ export const site = {
   },
 };
 
-/** Build a wa.me link with a pre-filled message. */
-export function waLink(message: string) {
-  return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`;
+/** Build a wa.me link with a pre-filled message. `number` defaults to the main line. */
+export function waLink(message: string, number: string = site.whatsapp) {
+  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 }

@@ -104,6 +104,25 @@ export function withMessage(href: string, message: string): string {
   return rebuild(url, message);
 }
 
+/**
+ * The same WhatsApp link pointed at a different number, message kept. Used by
+ * pages with their own line (the /invest page) when a site wide button, which
+ * carries the main number, is tapped. Not a WhatsApp link, or no number:
+ * unchanged.
+ */
+export function withNumber(href: string, number: string): string {
+  if (!number || !/^\d{8,15}$/.test(number) || !WA_HOST.test(href)) return href;
+  let url: URL;
+  try {
+    url = new URL(href);
+  } catch {
+    return href;
+  }
+  const text = url.searchParams.get("text");
+  const base = `${url.origin}/${number}`;
+  return text === null ? base : `${base}?text=${encodeURIComponent(text)}`;
+}
+
 function rebuild(url: URL, text: string): string {
   // Rebuilt by hand rather than with searchParams.set, which writes spaces as
   // "+". WhatsApp reads %20 reliably and "+" not always.

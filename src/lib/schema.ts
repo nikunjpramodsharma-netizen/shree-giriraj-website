@@ -262,6 +262,8 @@ export function blogPostingNode(opts: {
   locale: string;
   title: string;
   slug: string;
+  /** Path of the article. Defaults to /blog/<slug>; guides pass /guides/<slug>. */
+  path?: string;
   description?: string;
   image?: string;
   published?: string;
@@ -280,8 +282,8 @@ export function blogPostingNode(opts: {
   return {
     "@type": "BlogPosting",
     headline: opts.title,
-    url: absoluteUrl(opts.locale, `/blog/${opts.slug}`),
-    mainEntityOfPage: absoluteUrl(opts.locale, `/blog/${opts.slug}`),
+    url: absoluteUrl(opts.locale, opts.path ?? `/blog/${opts.slug}`),
+    mainEntityOfPage: absoluteUrl(opts.locale, opts.path ?? `/blog/${opts.slug}`),
     ...(opts.description ? { description: opts.description } : {}),
     ...(image ? { image } : {}),
     ...(published ? { datePublished: published } : {}),

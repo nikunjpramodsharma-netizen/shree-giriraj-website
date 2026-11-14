@@ -15,6 +15,13 @@ import { pageUrls } from "@/lib/seo";
 import { formatDate } from "@/lib/blog";
 import { PILLARS, getPillar, type Spoke } from "@/lib/pillars";
 import { getAllPosts } from "@/lib/posts";
+import { MarkdownPost, type RelatedCard } from "@/components/MarkdownPost";
+import {
+  GUIDE_OFFERS,
+  getGuide,
+  getPublishedGuides,
+} from "@/lib/guides";
+import { postVisual } from "@/lib/blog";
 
 export const revalidate = 300;
 
@@ -35,7 +42,11 @@ export function generateStaticParams({
   params: { locale: string };
 }) {
   if (params.locale !== GUIDE_LOCALE) return [];
-  return PILLARS.map((p) => ({ slug: p.slug }));
+  return [
+    ...PILLARS.map((p) => ({ slug: p.slug })),
+    // Long form guides from content/guides, once their files exist.
+    ...getPublishedGuides().map((g) => ({ slug: g.slug })),
+  ];
 }
 
 export async function generateMetadata({
@@ -44,7 +55,25 @@ export async function generateMetadata({
   params: { locale: string; slug: string };
 }): Promise<Metadata> {
   const pillar = getPillar(params.slug);
-  if (!pillar || params.locale !== GUIDE_LOCALE) return {};
+  if (params.locale !== GUIDE_LOCALE) return {};
+  if (!pillar) {
+    const guide = getGuide(params.slug);
+    if (!guide) return {};
+    const urls = pageUrls(params.locale, `/guides/${guide.slug}`, [
+      GUIDE_LOCALE,
+    ]);
+    return {
+      title: guide.metaTitle ?? guide.title,
+      description: guide.metaDescription ?? guide.answer,
+      ...urls,
+      openGraph: {
+        ...urls.openGraph,
+        type: "article",
+        images: [postVisual(guide).image],
+      },
+      ...(guide.isReady ? {} : { robots: { index: false, follow: true } }),
+    };
+  }
   return {
     title: pillar.metaTitle,
     description: pillar.metaDescription,
@@ -92,8 +121,31 @@ export default async function GuidePage({
   params: { locale: string; slug: string };
 }) {
   const { locale, slug } = params;
+  if (locale !== GUIDE_LOCALE) notFound();
   const pillar = getPillar(slug);
-  if (!pillar || locale !== GUIDE_LOCALE) notFound();
+  if (!pillar) {
+    const guide = getGuide(slug);
+    if (!guide) notFound();
+    // The other guides in the series that exist, as the "Read next" row.
+    const siblings: RelatedCard[] = getPublishedGuides()
+      .filter((g) => g.slug !== guide.slug)
+      .map((g) => ({
+        href: `/guides/${g.slug}`,
+        title: g.label,
+        category: "Guide",
+        blurb: g.post.answer,
+        draft: !g.post.isReady,
+      }));
+    return (
+      <MarkdownPost
+        post={guide}
+        locale={locale}
+        section="guides"
+        offer={GUIDE_OFFERS[guide.slug]}
+        related={siblings}
+      />
+    );
+  }
 
   const live = await publishedSpokes();
   // A spoke with its own href is a service or tool page, which always exists.

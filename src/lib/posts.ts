@@ -126,7 +126,15 @@ export function getPostSlugs(): string[] {
 }
 
 export function getPost(slug: string): Post | null {
-  const file = join(DIR, `${slug}.md`);
+  return loadPostFile(join(DIR, `${slug}.md`), slug);
+}
+
+/**
+ * Parses one markdown article from any folder. The blog reads content/drafts;
+ * the long form guides read content/guides (see src/lib/guides.ts). Same
+ * frontmatter, same blocks, same readiness rule.
+ */
+export function loadPostFile(file: string, slug: string): Post | null {
   if (!existsSync(file)) return null;
 
   const { data, body } = parseFrontmatter(readFileSync(file, "utf8"));

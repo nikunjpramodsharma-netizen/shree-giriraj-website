@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import EnglishLink from "next/link";
 import { isEnglishOnlyPath } from "@/lib/seo";
+import { isUnpublishedGuidePath } from "@/lib/guides";
 import { parseInline, type Block, type Inline, type MarkerKind } from "@/lib/markdown";
 
 /**
@@ -166,6 +167,12 @@ export function Spans({ spans }: { spans: Inline[] }) {
         if (s.t === "em") return <em key={i}>{s.v}</em>;
         if (s.t === "link") {
           const internal = s.href.startsWith("/");
+          // A link to a guide in the series that has not been added yet is
+          // shown as plain text. It becomes a link by itself once the guide
+          // exists. See src/lib/guides.ts.
+          if (internal && isUnpublishedGuidePath(s.href)) {
+            return <span key={i}>{s.v}</span>;
+          }
           // An English only destination must not pick up the page's locale
           // prefix, or a Marathi reader lands on a 404. See ENGLISH_ONLY_PREFIXES.
           const LinkTag = internal && isEnglishOnlyPath(s.href) ? EnglishLink : Link;

@@ -1,0 +1,7 @@
+{
+  "updated": "[[MONTH YEAR]]",
+  "projects": [
+    { "name": "[[PROJECT_1_NAME]]", "location": "[[LOCATION]]", "publicRate": "[[PUBLIC_RATE_1]]", "ourRate": "[[OUR_RATE_1]]", "gap": "[[GAP_1]]" },
+    { "name": "[[PROJECT_2_NAME]]", "location": "[[LOCATION]]", "publicRate": "[[PUBLIC_RATE_2]]", "ourRate": "[[OUR_RATE_2]]", "gap": "[[GAP_2]]" }
+  ]
+}

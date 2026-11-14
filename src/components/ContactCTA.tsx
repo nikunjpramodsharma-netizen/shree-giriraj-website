@@ -48,6 +48,8 @@ type Props = {
     | "intentInvest"
     | "intentMhada";
   presetArea?: string;
+  /** A separate WhatsApp number for the button. Defaults to the main line. */
+  whatsappNumber?: string;
 };
 
 type State = "idle" | "sending" | "done" | "error" | "unconfigured";
@@ -59,6 +61,7 @@ export function ContactCTA({
   tone = "dark",
   presetIntentKey,
   presetArea,
+  whatsappNumber,
 }: Props) {
   const t = useTranslations("leadForm");
   const [open, setOpen] = useState(defaultOpen);
@@ -174,7 +177,7 @@ export function ContactCTA({
     >
       {/* --- Route one: WhatsApp, labelled as such --- */}
       <a
-        href={waLink(waMessage)}
+        href={waLink(waMessage, whatsappNumber)}
         target="_blank"
         rel="noopener"
         className="btn btn-wa w-full justify-center"

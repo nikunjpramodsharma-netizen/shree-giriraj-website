@@ -189,4 +189,4 @@ In a tall tower the floor band moves the price more than a small difference in c
 
 ## Before you book either
 
-Tell us which project or building you are looking at, and whether you are buying to live in or to hold. We will read the RERA page or the society's file with you. We will put stamp duty, registration and any GST in rupees, and help you see which of the two fits. It is free, with no obligation, and usually the same day. Start with our [new project bookings](/services/new-project-bookings) page.
+Tell us which project or building you are looking at, and whether you are buying to live in or to hold. We will read the RERA page or the society's file with you. We will put stamp duty, registration and any GST in rupees, and help you see which of the two fits. It is free, with no obligation, and usually the same day. Start with our [new project bookings](/services/new-project-bookings) page. For every charge on a new project in rupees, read our [stamp duty and GST guide](/guides/stamp-duty-gst-under-construction-maharashtra). To read a builder's filings yourself, see [how to check a builder's RERA page](/guides/how-to-check-a-builder-rera-page).

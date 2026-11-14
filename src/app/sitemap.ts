@@ -9,6 +9,7 @@ import { routing } from "@/i18n/routing";
 import { absoluteUrl, sitemapAlternates, SERVICE_SLUGS, RETIRED_SERVICE_SLUGS } from "@/lib/seo";
 import { LOCALES, type Locale } from "@/lib/i18n-content";
 import { PILLAR_SLUGS } from "@/lib/pillars";
+import { getPublishedGuides } from "@/lib/guides";
 import { AREA_SLUGS, getArea, areaIsComplete } from "@/lib/areas";
 import { FLAT_LISTINGS, listingPath } from "@/lib/flats";
 import { STORY_IS_WRITTEN } from "@/lib/about";
@@ -76,6 +77,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Priority above the posts they hub, because the hub is what should rank.
   for (const slug of PILLAR_SLUGS) {
     out.push(...entriesFor(`/guides/${slug}`, ["en"], undefined, 0.7));
+  }
+  // Long form guides from content/guides. Only the ones that exist, and only
+  // once they carry no review markers: a draft is served noindex.
+  for (const g of getPublishedGuides()) {
+    if (!g.post.isReady) continue;
+    out.push(
+      ...entriesFor(
+        `/guides/${g.slug}`,
+        ["en"],
+        displayDate(g.post.updatedOn) ?? undefined,
+        0.7,
+      ),
+    );
   }
   out.push(...entriesFor("/guides", ["en"], undefined, 0.6));
 

@@ -17,6 +17,16 @@ import { offerFor } from "@/lib/post-offers";
 import { PostOffer } from "@/components/PostOffer";
 import { PageWhatsApp } from "@/components/PageWhatsApp";
 import { MhadaTransferFeeWidget } from "@/components/MhadaTransferFeeWidget";
+import type { PostOffer as Offer } from "@/lib/post-offers";
+
+/** A card in the "Read next" row. Blog mode builds these from posts. */
+export type RelatedCard = {
+  href: string;
+  title: string;
+  category?: string;
+  blurb?: string;
+  draft?: boolean;
+};
 
 /**
  * A blog post rendered from markdown in the repo.
@@ -30,10 +40,24 @@ import { MhadaTransferFeeWidget } from "@/components/MhadaTransferFeeWidget";
 export function MarkdownPost({
   post,
   locale,
+  section = "blog",
+  offer: offerProp,
+  related: relatedProp,
 }: {
   post: Post;
   locale: string;
+  /**
+   * "guides" renders a long form guide from content/guides: breadcrumbs, the
+   * article path in structured data and the form location follow /guides.
+   */
+  section?: "blog" | "guides";
+  /** The offer for this article. Blog posts leave it out and use POST_OFFERS. */
+  offer?: Offer;
+  /** Replaces the blog "Read next" row, e.g. the other guides in a series. */
+  related?: RelatedCard[];
 }) {
+  const isGuide = section === "guides";
+  const basePath = isGuide ? "/guides" : "/blog";
   /**
    * A post's own image always wins. The category image is the fallback, and it
    * is only ever a fallback: a specific photograph beats a generic one, and
@@ -50,10 +74,18 @@ export function MarkdownPost({
     ? [...bodyHeadings, { t: "h2" as const, text: "Common questions", id: "common-questions" }]
     : bodyHeadings;
   const showToc = headings.length >= 3;
-  const related = getRelated(post, 3);
+  const related: RelatedCard[] =
+    relatedProp ??
+    getRelated(post, 3).map((r) => ({
+      href: `/blog/${r.slug}`,
+      title: r.title,
+      category: r.category,
+      blurb: r.answer,
+      draft: !r.isReady,
+    }));
   const checked = displayDate(post.sourcesCheckedOn);
   const updated = displayDate(post.updatedOn);
-  const offer = offerFor(post.slug);
+  const offer = offerProp ?? offerFor(post.slug);
   const terms = termsIn(
     [plainText(post.blocks), ...post.faqs.map((f) => `${f.question} ${f.answer}`)].join(" "),
     { notAbout: post.title },
@@ -61,8 +93,10 @@ export function MarkdownPost({
 
   const trail: Crumb[] = [
     { name: "Home", path: "/" },
-    { name: "Blog", path: "/blog" },
-    { name: post.title, path: `/blog/${post.slug}` },
+    isGuide
+      ? { name: "Guides", path: "/guides" }
+      : { name: "Blog", path: "/blog" },
+    { name: post.title, path: `${basePath}/${post.slug}` },
   ];
 
   return (
@@ -84,9 +118,13 @@ export function MarkdownPost({
                 locale,
                 title: post.title,
                 slug: post.slug,
+                path: `${basePath}/${post.slug}`,
                 description: post.answer,
                 image: visual.image,
-                published: checked ?? new Date().toISOString(),
+                published:
+                  checked ??
+                  (isGuide ? updated : null) ??
+                  new Date().toISOString(),
                 modified: updated ?? checked ?? undefined,
                 authorName: AUTHOR.name,
                 authorRole: AUTHOR.role,
@@ -314,9 +352,9 @@ export function MarkdownPost({
           <h2 className="text-2xl text-ink md:text-3xl">Read next</h2>
           <ul className="mt-6 grid gap-6 md:grid-cols-3">
             {related.map((r) => (
-              <li key={r.slug}>
+              <li key={r.href}>
                 <Link prefetch={false}
-                  href={`/blog/${r.slug}`}
+                  href={r.href}
                   className="group block h-full rounded-xl border border-line bg-paper p-5 transition-colors hover:bg-paper-alt"
                 >
                   {r.category && (
@@ -327,12 +365,12 @@ export function MarkdownPost({
                   <div className="mt-2 font-semibold text-ink group-hover:text-brand-indigo">
                     {r.title}
                   </div>
-                  {r.answer && (
+                  {r.blurb && (
                     <p className="mt-2 line-clamp-3 text-sm text-ink/70">
-                      {r.answer}
+                      {r.blurb}
                     </p>
                   )}
-                  {!r.isReady && (
+                  {r.draft && (
                     <span className="mt-3 inline-block rounded-full border border-line px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wider text-muted">
                       Draft
                     </span>
@@ -354,7 +392,7 @@ export function MarkdownPost({
 
       <ContactCTA
         locale={locale}
-        formLocation={`post-${post.slug}`}
+        formLocation={`${isGuide ? "guide" : "post"}-${post.slug}`}
         presetIntentKey={offer?.intentKey}
       />
     </article>

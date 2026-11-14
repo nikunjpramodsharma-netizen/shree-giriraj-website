@@ -1,0 +1,15 @@
+{
+  "project": "[[EXAMPLE_PROJECT_NAME_OR_MASKED]]",
+  "location": "[[LOCATION]]",
+  "launched": "[[MONTH YEAR]]",
+  "carpetArea": "[[CARPET_AREA]]",
+  "totalAtLaunch": "[[TOTAL_AT_LAUNCH]]",
+  "totalAtMilestone": "[[TOTAL_AT_MILESTONE]]",
+  "months": "[[N]]",
+  "points": [
+    { "milestone": "Launch", "date": "[[DATE]]", "rate": "[[RATE]]" },
+    { "milestone": "[[MILESTONE_2]]", "date": "[[DATE]]", "rate": "[[RATE]]" },
+    { "milestone": "[[MILESTONE_3]]", "date": "[[DATE]]", "rate": "[[RATE]]" },
+    { "milestone": "[[MILESTONE_4]]", "date": "[[DATE]]", "rate": "[[RATE]]" }
+  ]
+}
