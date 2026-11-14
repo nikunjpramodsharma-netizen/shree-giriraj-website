@@ -208,7 +208,7 @@ The [rental yield article](/blog/rental-yield-mumbai) shows the gross and net su
 
 ## Against buying a shop or office yourself
 
-A shop in Borivali West is yours. You choose the tenant and the rent, and you can borrow against it. It asks for a full price, your own management, and a small pool of buyers when you sell. An SM REIT unit asks for ten lakh, no management and a listed exit. In return you give up control and pay a fee. Our [commercial property article](/blog/commercial-property-investment-mumbai) covers the direct route.
+A shop in Borivali West is yours. You choose the tenant and the rent, and you can borrow against it. It asks for a full price, your own management, and a small pool of buyers when you sell. An SM REIT unit asks for ten lakh, no management and a listed exit. In return you give up control and pay a fee. Our [commercial property article](/blog/commercial-property-investment-mumbai) covers the direct route. The flat route on a small budget is in [a first flat to let, year one in rupees](/blog/first-investment-flat-small-budget-mumbai).
 
 ---
 

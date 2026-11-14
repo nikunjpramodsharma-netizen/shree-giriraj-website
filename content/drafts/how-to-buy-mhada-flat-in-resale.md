@@ -173,4 +173,4 @@ The Regulations allow the Board to cancel exactly that kind of transfer. The way
 
 Have the allotment letter, the latest Board receipt, the society's position and your own income declarations checked against the Regulations. Make the agreement depend on both permissions. Then a MHADA resale is a safe buy at a sensible price.
 
-If the flat is in Borivali, Kandivali or Malad, our [MHADA paperwork service](/services/mhada-paperwork) does the checking. The seller's side is in [can we sell a MHADA flat](/blog/can-we-sell-mhada-flat).
+If the flat is in Borivali, Kandivali or Malad, our [MHADA paperwork service](/services/mhada-paperwork) does the checking. The seller's side is in [can we sell a MHADA flat](/blog/can-we-sell-mhada-flat). Buying from abroad? See [can an NRI buy property in India](/blog/can-nri-buy-property-in-india).

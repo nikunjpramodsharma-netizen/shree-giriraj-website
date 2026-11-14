@@ -172,6 +172,48 @@ export const GLOSSARY: Term[] = [
     match: ["capital value"],
   },
   {
+    term: "NRE account",
+    plain:
+      "A rupee bank account in India opened with money sent from abroad, which can be sent back out freely.",
+    match: ["nre"],
+  },
+  {
+    term: "NRO account",
+    plain:
+      "A rupee bank account in India that holds an NRI's Indian income, such as rent, and is limited in how much can be sent abroad.",
+    match: ["nro"],
+  },
+  {
+    term: "FCNR(B) account",
+    plain:
+      "A foreign currency fixed deposit an NRI keeps with an Indian bank, which can also be used to pay for a flat.",
+    match: ["fcnr", "fcnr(b)"],
+  },
+  {
+    term: "OCI",
+    plain:
+      "Overseas Citizen of India: a lifelong card for people of Indian origin who hold another passport.",
+    match: ["oci", "overseas citizen of india"],
+  },
+  {
+    term: "Power of attorney",
+    plain:
+      "A signed document that lets someone you trust act for you, for example to register a flat on your behalf.",
+    match: ["power of attorney"],
+  },
+  {
+    term: "Apostille",
+    plain:
+      "A certificate that makes a document signed in one country accepted in another, in place of consulate legalisation.",
+    match: ["apostille"],
+  },
+  {
+    term: "Loan to value ratio",
+    plain:
+      "The share of a flat's price that a bank will lend, so the rest is your down payment.",
+    match: ["loan to value", "ltv"],
+  },
+  {
     term: "CTS number",
     plain:
       "The city survey number that identifies a specific piece of land in municipal records.",

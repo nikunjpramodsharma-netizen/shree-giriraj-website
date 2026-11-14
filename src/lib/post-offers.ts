@@ -350,6 +350,54 @@ export const POST_OFFERS: Record<string, PostOffer> = {
       "Hi Shree Giriraj, I want a modular kitchen estimate for my flat in ___. The kitchen is about ___ ft by ___ ft.",
     button: "Ask for a kitchen estimate",
   },
+  "can-nri-buy-property-in-india": {
+    heading: "Buying from abroad?",
+    body: "We find and check resale flats and new projects in Borivali, Kandivali and Malad, read the papers with you and work out stamp duty and registration in rupees. Send your country and budget for a shortlist.",
+    whatsapp:
+      "Hi Shree Giriraj, I live in ___ and I am looking for a flat in ___. My budget is about ___.",
+    button: "Send us your budget",
+    intentKey: "intentBuy",
+  },
+  "buy-flat-in-mumbai-from-abroad": {
+    heading: "Buying a Mumbai flat from abroad?",
+    body: "Tell us your city and your budget. We shortlist two or three flats in Borivali, Kandivali and Malad, read the papers before a price is agreed and handle the steps after: agreement, registration and the society transfer.",
+    whatsapp:
+      "Hi Shree Giriraj, I live in ___ and I want to buy a flat in ___. My budget is about ___.",
+    button: "Share your budget",
+    intentKey: "intentBuy",
+  },
+  "buy-first-flat-in-mumbai": {
+    heading: "Buying your first flat?",
+    body: "We shortlist two or three flats that fit your budget, check the building and the papers before you pay a token, and work out stamp duty and registration in rupees. Then we stay with you through registration and the society transfer.",
+    whatsapp:
+      "Hi Shree Giriraj, I am buying my first flat in ___. My budget is about ___.",
+    button: "Plan my first flat",
+    intentKey: "intentBuy",
+  },
+  "1-bhk-price-borivali-kandivali-malad": {
+    heading: "Looking for a 1 BHK to live in?",
+    body: "Send us your budget and the suburb you prefer. We share three 1 BHKs in Borivali, Kandivali or Malad that fit it, with the building checked and the stamp duty worked out in rupees, usually the same day.",
+    whatsapp:
+      "Hi Shree Giriraj, I am looking for a 1 BHK to live in, in ___. My budget is about ___.",
+    button: "Get three 1 BHKs that fit",
+    intentKey: "intentBuy",
+  },
+  "rent-or-buy-borivali-kandivali-malad": {
+    heading: "Weighing renting against buying?",
+    body: "Send us the suburb, your budget and how long you expect to stay. We work out renting against buying for a flat you are considering, using this week's asking rents, then find the flat itself in Borivali, Kandivali or Malad, to rent or to buy.",
+    whatsapp:
+      "Hi Shree Giriraj, I am deciding whether to rent or buy in ___. My budget is about ___ and I expect to stay about ___ years. Can you work the numbers with me?",
+    button: "Work out rent or buy",
+    intentKey: "intentBuy",
+  },
+  "first-investment-flat-small-budget-mumbai": {
+    heading: "Planning a first flat to let out?",
+    body: "Send us your own money and the suburb you like. We share three 1 BHKs in Kandivali or Malad that fit, tell you who rents in those buildings and at what, and work the year one sum before you pay a token. We also find the tenant and register the agreement.",
+    whatsapp:
+      "Hi Shree Giriraj, I want to buy a first flat to let out in ___. My own money is about ___ and I can top up about ___ a month. Can you shortlist 1 BHKs?",
+    button: "Get three 1 BHKs to let",
+    intentKey: "intentInvest",
+  },
 };
 
 /**

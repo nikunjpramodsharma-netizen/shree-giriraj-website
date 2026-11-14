@@ -136,7 +136,7 @@ The same area also sets your fit out bill. Our guide to [what the area means for
 
 Nationally, **25 to 35 percent is described as normal**, and anything above 40 percent as high.
 
-**Mumbai runs the highest loading in India, commonly 40 to 50 percent.** A figure that looks high by national standards can be entirely ordinary here. So judge a Mumbai flat against Mumbai, not against a national article.
+**Mumbai runs the highest loading in India, commonly 40 to 50 percent.** A figure that looks high by national standards can be entirely ordinary here. So judge a Mumbai flat against Mumbai, not against a national article. Our [first flat guide](/blog/buy-first-flat-in-mumbai) shows where this fits in the whole purchase. For prices by suburb, see the [1 BHK price guide](/blog/1-bhk-price-borivali-kandivali-malad).
 
 ---
 

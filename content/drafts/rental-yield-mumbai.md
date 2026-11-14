@@ -183,7 +183,7 @@ The floor and the lane matter too. Tenants pay a little more for light, water pr
 | How long tenants stay | Shorter, so more turnover | Years |
 | Resale pool | Narrower | Widest in this belt |
 
-Near the Malad offices, the 1 BHK's speed often wins. In Borivali and Thakur Village, the 2 BHK's stability usually does.
+Near the Malad offices, the 1 BHK's speed often wins. In Borivali and Thakur Village, the 2 BHK's stability usually does. For a 1 BHK on a loan, see [year one in rupees for a first flat to let](/blog/first-investment-flat-small-budget-mumbai). Buying to live in? See [rent or buy in Borivali, Kandivali and Malad](/blog/rent-or-buy-borivali-kandivali-malad).
 
 ---
 

@@ -164,7 +164,7 @@ Each has strong pockets, and the spread inside each is larger than the differenc
 They carry different risks. A ready flat earns rent at once and you see what you buy. An under construction flat ties up money with no income until handover and carries delivery risk. The MahaRERA registration and the developer's record matter more than the brochure.
 
 **How much should I invest in property in Mumbai?**
-That depends on your finances more than on property. Property is illiquid and the transaction costs are high, so it suits money you will not need back quickly. An adviser who sees your full position can help you size it.
+That depends on your finances more than on property. Property is illiquid and the transaction costs are high, so it suits money you will not need back quickly. An adviser who sees your full position can help you size it. For one flat, see [what a 1 BHK costs and the income you need](/blog/1-bhk-price-borivali-kandivali-malad) and [what a 1 BHK on a loan does in year one](/blog/first-investment-flat-small-budget-mumbai).
 
 **Does a MahaRERA number mean a project is safe?**
 It means the project is registered and its declared details, including the completion date, are on the public record. That is a fact you can check rather than a guarantee, and it is still worth checking on anything under construction.

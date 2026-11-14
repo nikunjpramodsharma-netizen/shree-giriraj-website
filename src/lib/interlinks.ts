@@ -70,7 +70,7 @@ const SERVICE_HOOKS: Record<string, string> = {
 const SERVICE_MAP: Record<string, { tools: string[]; articles: string[]; services: string[] }> = {
   "resale-flats": {
     tools: ["stamp-duty-calculator-mumbai", "carpet-area-calculator"],
-    articles: ["stamp-duty-and-registration-charges-mumbai", "what-a-sale-deed-contains", "society-noc-for-sale-of-flat-mumbai", "society-share-certificate-transfer-fee", "how-to-buy-mhada-flat-in-resale"],
+    articles: ["stamp-duty-and-registration-charges-mumbai", "what-a-sale-deed-contains", "buy-first-flat-in-mumbai", "1-bhk-price-borivali-kandivali-malad", "rent-or-buy-borivali-kandivali-malad", "can-nri-buy-property-in-india", "society-noc-for-sale-of-flat-mumbai", "society-share-certificate-transfer-fee", "how-to-buy-mhada-flat-in-resale"],
     services: ["new-project-bookings", "investment-advisory"],
   },
   rentals: {
@@ -80,12 +80,12 @@ const SERVICE_MAP: Record<string, { tools: string[]; articles: string[]; service
   },
   "new-project-bookings": {
     tools: ["home-loan-emi-calculator", "carpet-area-calculator"],
-    articles: ["under-construction-vs-ready-to-move-flat", "occupancy-certificate"],
+    articles: ["under-construction-vs-ready-to-move-flat", "buy-first-flat-in-mumbai", "can-nri-buy-property-in-india", "occupancy-certificate"],
     services: ["resale-flats", "investment-advisory"],
   },
   "investment-advisory": {
     tools: ["rental-yield-calculator", "capital-gains-calculator-property"],
-    articles: ["how-to-invest-in-real-estate-india", "best-area-to-invest-in-mumbai"],
+    articles: ["how-to-invest-in-real-estate-india", "first-investment-flat-small-budget-mumbai", "best-area-to-invest-in-mumbai"],
     services: ["commercial-plots", "new-project-bookings"],
   },
   "commercial-plots": {
@@ -178,6 +178,12 @@ const ARTICLE_TOOL: Record<string, string> = {
   "tenant-police-verification-mumbai": "rent-agreement-stamp-duty-calculator-mumbai",
   "2-bhk-interior-cost-mumbai": "interior-scope-builder",
   "modular-kitchen-cost-mumbai": "interior-scope-builder",
+  "buy-first-flat-in-mumbai": "home-loan-emi-calculator",
+  "1-bhk-price-borivali-kandivali-malad": "home-loan-emi-calculator",
+  "rent-or-buy-borivali-kandivali-malad": "home-loan-emi-calculator",
+  "first-investment-flat-small-budget-mumbai": "home-loan-emi-calculator",
+  "can-nri-buy-property-in-india": "stamp-duty-calculator-mumbai",
+  "buy-flat-in-mumbai-from-abroad": "stamp-duty-calculator-mumbai",
 };
 
 /** The new projects in one suburb, as cards. Empty where there are none. */

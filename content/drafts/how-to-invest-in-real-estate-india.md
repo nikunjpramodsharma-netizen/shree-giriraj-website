@@ -156,7 +156,7 @@ Our [side by side comparison](/blog/under-construction-vs-ready-to-move-flat) se
 
 ## If you are buying to let
 
-Section 55 of the Maharashtra Rent Control Act requires every leave and licence agreement to be written and registered. The landlord must do the registering. It protects you as much as the tenant. We do it with every tenancy.
+Section 55 of the Maharashtra Rent Control Act requires every leave and licence agreement to be written and registered. The landlord must do the registering. It protects you as much as the tenant. We do it with every tenancy. A first flat on a smaller budget is worked through in [year one in rupees](/blog/first-investment-flat-small-budget-mumbai).
 
 Two more reads: the [rent deposit article](/blog/rent-deposit-months-western-suburbs) explains what deposit to take, and our [rentals service](/services/rentals) finds the tenant.
 
@@ -171,10 +171,10 @@ It can be, and the western suburbs have rewarded patient owners for decades. It 
 For a flat, the down payment plus duty, registration and brokerage. On a 1.2 crore rupee flat, duty and registration alone are 6.3 to 7.5 lakh rupees. For a listed REIT, the price of one unit through a demat account. For an SM REIT, ten lakh rupees.
 
 **Should a first investor buy a 1 BHK or a 2 BHK?**
-A 1 BHK usually lets faster and shows a higher gross yield. A 2 BHK attracts families who stay longer and resells to a wider pool. Near Mindspace the 1 BHK often wins. In Thakur Village and Borivali the 2 BHK usually does.
+A 1 BHK usually lets faster and shows a higher gross yield. A 2 BHK attracts families who stay longer and resells to a wider pool. Near Mindspace the 1 BHK often wins. In Thakur Village and Borivali the 2 BHK usually does. Buying a flat to live in instead? Read [buying your first flat in Mumbai](/blog/buy-first-flat-in-mumbai).
 
 **Is it better to invest in Mumbai or a smaller city?**
-Smaller cities can show higher gross yields on paper. Mumbai shows deeper demand and an easier exit. We advise only on the three suburbs we know, so we would rather tell you exactly what a flat here earns.
+Smaller cities can show higher gross yields on paper. Mumbai shows deeper demand and an easier exit. We advise only on the three suburbs we know, so we would rather tell you exactly what a flat here earns. Investing from abroad? The RBI rules are in [can an NRI buy property in India](/blog/can-nri-buy-property-in-india).
 
 **Do I need a property agency to invest?**
 You need someone who has been inside the building. Portals show you every listing. A local agency adds the water timing, the society's attitude to tenants and the real achieved rent, none of which is on a listing.

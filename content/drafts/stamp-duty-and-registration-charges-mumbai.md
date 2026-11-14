@@ -130,6 +130,8 @@ In September 2024 the Supreme Court looked at an agreement for sale that handed 
 
 Duty paid late carries a penalty of 2 percent of the shortfall for every month it stays unpaid. We work the duty out before the agreement is drafted, so it is paid on time.
 
+Buying your first home? Read [buying your first flat step by step](/blog/buy-first-flat-in-mumbai). Living abroad? See [can an NRI buy property in India](/blog/can-nri-buy-property-in-india) and [buying a flat in Mumbai from abroad](/blog/buy-flat-in-mumbai-from-abroad).
+
 ---
 
 ## What if the deal falls through?

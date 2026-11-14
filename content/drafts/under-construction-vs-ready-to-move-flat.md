@@ -142,7 +142,7 @@ None of this removes delivery risk. It makes the risk measurable and gives you r
 
 In this belt, new launch activity is strongest in Kandivali. Our [new project bookings](/services/new-project-bookings) service covers it, and the [projects we are showing](/projects) list what is open now.
 
-**Not sure yet?** Tell us whether you want the flat to live in, to let, or to hold. That answer usually settles the choice.
+**Not sure yet?** Tell us whether you want the flat to live in, to let, or to hold. That answer usually settles the choice. If this is your first home, our [first flat guide](/blog/buy-first-flat-in-mumbai) takes you through it step by step.
 
 ---
 
