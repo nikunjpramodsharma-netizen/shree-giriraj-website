@@ -1,7 +1,7 @@
 {
-  "updated": "[[MONTH YEAR]]",
+  "updated": "November 2026",
   "projects": [
-    { "name": "[[PROJECT_1_NAME]]", "location": "[[LOCATION]]", "publicRate": "[[PUBLIC_RATE_1]]", "ourRate": "[[OUR_RATE_1]]", "gap": "[[GAP_1]]" },
-    { "name": "[[PROJECT_2_NAME]]", "location": "[[LOCATION]]", "publicRate": "[[PUBLIC_RATE_2]]", "ourRate": "[[OUR_RATE_2]]", "gap": "[[GAP_2]]" }
+    { "name": "[[PROJECT_1_NAME]]", "location": "[[LOCATION]]", "publicRate": 31000, "ourRate": 28000, "gap": 3000 },
+    { "name": "[[PROJECT_2_NAME]]", "location": "[[LOCATION]]", "publicRate": 31000, "ourRate": 29000, "gap": 2000 }
   ]
 }
