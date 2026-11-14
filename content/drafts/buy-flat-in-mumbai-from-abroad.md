@@ -5,7 +5,7 @@ metaDescription: "How an NRI buys a Mumbai flat from abroad: video viewing, NRE 
 slug: buy-flat-in-mumbai-from-abroad
 category: Buying
 heroImage: /blog/buy-flat-in-mumbai-from-abroad.jpg
-heroAlt: "A smiling young woman with henna on her hand waves during a video call on a tablet"
+heroAlt: "A smiling Indian man holds up his phone on a video call from home"
 targetKeyword: power of attorney for nri
 searchVolume: 140
 competition: LOW

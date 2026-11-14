@@ -5,7 +5,7 @@ metaDescription: "NRIs and OCIs may buy flats, shops and offices in India under 
 slug: can-nri-buy-property-in-india
 category: Buying
 heroImage: /blog/can-nri-buy-property-in-india.jpg
-heroAlt: "Aerial view of a dense Mumbai neighbourhood of low rise homes and housing societies, with towers on the skyline in evening light"
+heroAlt: "An Indian family living abroad looks at a phone together on the porch of their home"
 targetKeyword: can nri buy property in india
 searchVolume: 390
 competition: LOW
