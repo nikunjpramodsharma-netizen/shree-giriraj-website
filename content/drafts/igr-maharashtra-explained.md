@@ -48,6 +48,8 @@ relatedFaqs:
   - What does e-ASR do?
 readNext:
   - index-2-property-document
+  - 1-bhk-price-borivali-kandivali-malad
+  - buy-first-flat-in-mumbai
   - ready-reckoner-rate-mumbai
   - stamp-duty-and-registration-charges-mumbai
 ---

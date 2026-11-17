@@ -43,6 +43,7 @@ relatedFaqs:
 readNext:
   - what-a-sale-deed-contains
   - encumbrance-certificate
+  - 1-bhk-price-borivali-kandivali-malad
   - guides/property-paperwork-maharashtra
 ---
 

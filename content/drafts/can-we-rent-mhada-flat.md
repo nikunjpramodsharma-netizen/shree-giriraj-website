@@ -43,6 +43,7 @@ relatedFaqs:
 readNext:
   - rent-deposit-months-western-suburbs
   - can-we-sell-mhada-flat
+  - rent-or-buy-borivali-kandivali-malad
   - mhada-noc-online
 ---
 

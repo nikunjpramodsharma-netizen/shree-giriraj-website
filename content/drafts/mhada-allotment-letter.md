@@ -65,6 +65,7 @@ relatedFaqs:
 readNext:
   - mhada-flat-transfer
   - home-loan-on-mhada-flat
+  - buy-first-flat-in-mumbai
   - can-we-sell-mhada-flat
 ---
 

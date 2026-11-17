@@ -98,20 +98,20 @@ export const POST_OFFERS: Record<string, PostOffer> = {
     intentKey: "intentMhada",
   },
   "mhada-flat-transfer": {
-    heading: "Want the transfer done for you?",
-    body: "We build the file against the Board's own checklist, work out your charge and follow it until the flat is in the new name, anywhere in Mumbai. Buying or selling in Borivali, Kandivali or Malad? We handle the flat too.",
+    heading: "Selling or buying a MHADA flat? We do the deal and the transfer",
+    body: "In Borivali, Kandivali and Malad we find the buyer or the right flat, then build the transfer file against the Board's checklist and follow it until the flat is in the new name. Transfers after a gift or a death we handle for flats anywhere in Mumbai.",
     whatsapp:
-      "Hi Shree Giriraj, I need a MHADA transfer after a ___ (sale, gift or death) for my flat in ___.",
-    button: "Ask about your transfer",
-    intentKey: "intentMhada",
+      "Hi Shree Giriraj, I need a MHADA transfer for a flat in ___. The reason is ___ (selling, buying, gift or death).",
+    button: "Ask about your flat",
+    intentKey: "intentSell",
   },
   "mhada-noc-online": {
-    heading: "Need a MHADA NOC, or selling the flat?",
-    body: "We prepare the file, apply through the right route and follow it until the certificate is issued, anywhere in Mumbai. Selling in Borivali, Kandivali or Malad? We also find the buyer.",
+    heading: "Selling your MHADA flat? We find the buyer and get the NOC",
+    body: "In Borivali, Kandivali and Malad we tell you a fair price, bring a buyer who can complete and get the Board's NOC for sale in the same file. Need an NOC for rent or a loan instead? We handle those for flats anywhere in Mumbai.",
     whatsapp:
-      "Hi Shree Giriraj, I need a MHADA NOC for ___ (rent, loan or sale) for my flat in ___.",
-    button: "Ask about your NOC",
-    intentKey: "intentMhada",
+      "Hi Shree Giriraj, my MHADA flat is in ___. I need the NOC for ___ (sale, rent or loan). If selling, it is a ___ BHK.",
+    button: "Sell it or get the NOC",
+    intentKey: "intentSell",
   },
 
   // Paperwork. These readers are usually in the middle of a purchase or a

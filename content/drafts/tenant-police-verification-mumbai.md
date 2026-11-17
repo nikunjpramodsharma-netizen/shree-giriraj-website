@@ -70,6 +70,7 @@ relatedFaqs:
 readNext:
   - leave-and-licence-agreement-mumbai
   - rent-deposit-months-western-suburbs
+  - rent-or-buy-borivali-kandivali-malad
   - can-we-rent-mhada-flat
 ---
 

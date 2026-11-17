@@ -50,6 +50,7 @@ relatedFaqs:
 readNext:
   - mhada-office-bandra
   - can-we-rent-mhada-flat
+  - 1-bhk-price-borivali-kandivali-malad
   - can-we-sell-mhada-flat
 ---
 

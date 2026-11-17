@@ -62,6 +62,7 @@ relatedFaqs:
 readNext:
   - can-we-sell-mhada-flat
   - mhada-transfer-on-death
+  - 1-bhk-price-borivali-kandivali-malad
   - mhada-noc-online
 ---
 

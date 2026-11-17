@@ -42,6 +42,7 @@ relatedFaqs:
 readNext:
   - how-to-buy-mhada-flat-in-resale
   - mhada-flat-transfer
+  - 1-bhk-price-borivali-kandivali-malad
   - mhada-noc-online
 ---
 

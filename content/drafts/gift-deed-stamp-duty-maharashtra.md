@@ -59,6 +59,7 @@ relatedFaqs:
 readNext:
   - stamp-duty-and-registration-charges-mumbai
   - ready-reckoner-rate-mumbai
+  - 1-bhk-price-borivali-kandivali-malad
   - mhada-flat-transfer
   - conveyance-and-deemed-conveyance
 ---
