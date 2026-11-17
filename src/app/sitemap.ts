@@ -8,7 +8,7 @@ import {
 import { routing } from "@/i18n/routing";
 import { absoluteUrl, sitemapAlternates, SERVICE_SLUGS, RETIRED_SERVICE_SLUGS } from "@/lib/seo";
 import { LOCALES, type Locale } from "@/lib/i18n-content";
-import { PILLAR_SLUGS } from "@/lib/pillars";
+import { PILLARS } from "@/lib/pillars";
 import { getPublishedGuides } from "@/lib/guides";
 import { AREA_SLUGS, getArea, areaIsComplete } from "@/lib/areas";
 import { FLAT_LISTINGS, listingPath } from "@/lib/flats";
@@ -20,6 +20,27 @@ import { getAllPosts, displayDate } from "@/lib/posts";
 export const revalidate = 3600;
 
 type LocaleIndexRow = { slug: string; updatedAt: string; locales: Locale[] };
+
+/**
+ * The later of a markdown article's two honest dates: the last edit to the
+ * copy (updatedOn) and the last time its sources were re-read
+ * (sourcesCheckedOn). Either can be the newer one, and lastmod is only worth
+ * sending when it moves with real changes.
+ */
+function latestDate(...values: (string | undefined)[]): string | undefined {
+  let best: Date | undefined;
+  let bestRaw: string | undefined;
+  for (const v of values) {
+    const ok = displayDate(v);
+    if (!ok) continue;
+    const d = new Date(ok);
+    if (!best || d > best) {
+      best = d;
+      bestRaw = ok;
+    }
+  }
+  return bestRaw;
+}
 
 /**
  * One entry per locale that genuinely exists, each carrying the full hreflang
@@ -75,8 +96,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Guides are English only, so a single locale and no hreflang cluster.
   // Priority above the posts they hub, because the hub is what should rank.
-  for (const slug of PILLAR_SLUGS) {
-    out.push(...entriesFor(`/guides/${slug}`, ["en"], undefined, 0.7));
+  for (const p of PILLARS) {
+    out.push(...entriesFor(`/guides/${p.slug}`, ["en"], latestDate(p.sourcesCheckedOn), 0.7));
   }
   // Long form guides from content/guides. Only the ones that exist, and only
   // once they carry no review markers: a draft is served noindex.
@@ -86,7 +107,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       ...entriesFor(
         `/guides/${g.slug}`,
         ["en"],
-        displayDate(g.post.updatedOn) ?? undefined,
+        latestDate(g.post.updatedOn, g.post.sourcesCheckedOn),
         0.7,
       ),
     );
@@ -167,13 +188,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
    * is served noindex, and advertising a noindex URL in a sitemap is a
    * contradiction Google reports as an error.
    *
-   * lastModified is the date the sources were last checked, which is the only
-   * honest modification date the file carries.
+   * lastModified is the later of the last copy edit and the last source
+   * check, the two honest modification dates the file carries.
    */
   for (const p of getAllPosts()) {
     if (!p.isReady || fromSanity.has(p.slug)) continue;
-    const checked = displayDate(p.sourcesCheckedOn);
-    out.push(...entriesFor(`/blog/${p.slug}`, ["en"], checked ?? undefined, 0.5));
+    out.push(
+      ...entriesFor(`/blog/${p.slug}`, ["en"], latestDate(p.updatedOn, p.sourcesCheckedOn), 0.5),
+    );
   }
   for (const p of projects) {
     // Template projects are English only until translated (see the project route).

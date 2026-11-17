@@ -1,7 +1,7 @@
 ---
 title: "How to buy a MHADA flat in resale: the checks that protect the buyer"
-metaTitle: "Buying a MHADA flat in resale: 6 checks"
-metaDescription: "Buying a MHADA flat in resale? The checks to complete before money moves: the allottee, five years, income group, permissions and transfer charges."
+metaTitle: "How to buy a MHADA flat in resale: 6 checks"
+metaDescription: "How to buy a MHADA flat in resale safely: the six checks before a token, from the allottee and five years to income group, permissions and charges."
 slug: how-to-buy-mhada-flat-in-resale
 category: MHADA
 heroImage: /blog/mhada-resale.jpg
@@ -17,12 +17,13 @@ note: >
   and "how to buy mhada flat" (20) alongside, and the far larger "mhada flat
   in mumbai for sale" (210) as the intent it sits under. Low volume, kept on
   purpose: it is the buyer's side of the transfer rules and the page most
-  likely to save somebody from the one mistake the Regulations punish.
+  likely to keep a buyer on the right side of the one rule the Regulations enforce.
 answer: >
   Buying a MHADA flat in resale means buying an allotment with conditions.
-  Before money moves, check six things: the allottee, the five years, the
-  income group, both permissions, the charges and the dues. A sale without
-  the Board's permission can be cancelled.
+  Before any token, run six checks. The seller is the allottee, five years
+  have passed, and you fit the income group. Both permissions will come, and
+  you know the charges and the dues. A sale without the Board's permission
+  can be cancelled.
 sources:
   - label: "MHADA, Estate Management, Sale, Transfer and Exchange of Tenements Regulations, 1981, extract published on mhada.gov.in"
     url: https://www.mhada.gov.in/sites/default/files/tot.pdf
@@ -34,25 +35,27 @@ sources:
     url: https://maharera.maharashtra.gov.in
   - label: "DataForSEO, Google search volume for MHADA resale terms in India, measured 9 September 2026"
     url: https://dataforseo.com
-sourcesCheckedOn: "9 September 2026"
-updatedOn: "7 November 2026"
+sourcesCheckedOn: "16 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - Is it safe to buy a MHADA flat in resale?
   - Do I need to be in a particular income group to buy a MHADA flat?
   - Can I get a home loan on a MHADA resale flat?
 readNext:
   - can-we-sell-mhada-flat
+  - home-loan-on-mhada-flat
   - encumbrance-certificate
-  - services/mhada-paperwork
 ---
 
 ## The short answer
 
-Buying a MHADA flat in resale means buying an allotment with conditions. Before money moves, check six things: the allottee, the five years, the income group, both permissions, the charges and the dues. **A sale without the Board's permission can be cancelled.**
+Buying a MHADA flat in resale means buying an allotment with conditions. Before any token, run six checks. The seller is the allottee, five years have passed, and you fit the income group. Both permissions will come, and you know the charges and the dues. **A sale without the Board's permission can be cancelled.**
 
 ---
 
-## The six checks at a glance
+## What are the six checks before buying a MHADA resale flat?
+
+**Six checks, done before any token, make a MHADA resale purchase safe.** Each has one paper that proves it.
 
 | # | Check | What to ask for |
 | --- | --- | --- |
@@ -111,7 +114,7 @@ The Mumbai Board's published schedule for transfer of tenancy rights is:
 | MIG | 55 rupees per sq ft | 25,000 rupees |
 | HIG | 60 rupees per sq ft | 35,000 rupees |
 
-These are as published on mhada.gov.in, checked on 9 September 2026.
+These are as published on mhada.gov.in, in a document unchanged since July 2025 when we checked it again on 16 November 2026.
 
 The Board may also make its permission conditional on a share of the unearned increase. That share is up to fifty percent, at its discretion. The unearned increase is the rise in the flat's value since allotment.
 
@@ -142,11 +145,33 @@ Lenders do finance MHADA flats. They ask for the Board's no objection certificat
 
 That NOC is its own application to the Estate Manager, on the Mumbai Board's Form 4. The applicant is the person on the Board's record. So the Board's forms point to the transfer coming first.
 
-Build the time into your plan. A sanction that is waiting on a Board NOC is one the seller may not wait for.
-
-Lenders' policies on MHADA flats differ, including whether they want the transfer completed before disbursement. Ask your lender in writing before relying on the loan.
+Build the time into your plan, and agree the payment dates with the seller around it. Lenders' policies on MHADA flats differ, including whether they want the transfer completed before disbursement. So ask your lender in writing before relying on the loan, and the payment dates stay comfortable.
 
 The Board's other services and their time limits are in [MHADA NOC online](/blog/mhada-noc-online). Our guide to a [home loan on a MHADA flat](/blog/home-loan-on-mhada-flat) has the Mumbai Board's Form 4 checklist and the 12 working day limit.
+
+---
+
+## In what order does a MHADA resale purchase happen?
+
+**The permissions come before the money, and the transfer comes before the loan NOC.** A typical purchase runs in this order:
+
+1. **Read the papers.** Allotment letter, Board receipts, society share certificate and the encumbrance search.
+2. **Pay a token under a conditional agreement.** The agreement depends on both permissions.
+3. **The society gives its NOC.** The seller applies, or files an affidavit that no society exists.
+4. **The Board grants sale permission.** Form 5, with a notified limit of 15 working days.
+5. **Register the sale and pay stamp duty.** Our [stamp duty calculator](/tools/stamp-duty-calculator-mumbai) works out the amount.
+6. **The Board transfers the tenancy to you.** Form 1, with a notified limit of 23 working days.
+7. **Apply for the loan NOC, if you borrow.** Form 4, with a notified limit of 12 working days.
+
+These limits are from MHADA's Right to Public Services notification of 13 July 2015, counted from a complete file.
+
+---
+
+## Looking for a MHADA resale flat in Borivali, Kandivali or Malad?
+
+**We share MHADA and other resale flats in these three suburbs, with the six checks done before you see them.** Tell us the size, the budget and the pocket, and we send the flats that fit, usually the same day.
+
+Browse what is on offer in [Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali](/areas/kandivali/flats-for-sale) and [Malad](/areas/malad/flats-for-sale). Or [send your budget on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20am%20looking%20for%20a%20MHADA%20resale%20flat%20in%20___.%20It%20should%20be%20a%20___%20BHK%20and%20my%20budget%20is%20about%20___.), free and with no obligation. Our [resale flats service](/services/resale-flats) then handles the agreement and the registration, and the [MHADA paperwork service](/services/mhada-paperwork) handles the Board's file.
 
 ---
 
@@ -164,6 +189,15 @@ Generally yes, with the Board's no objection certificate for mortgage, which is 
 **Who pays the MHADA transfer charges?**
 Whoever the agreement says. The Board's schedule and any unearned increase are real costs. The agreement should name the paying party for each before the price is fixed.
 
+**Can anyone buy a MHADA flat in resale?**
+Not anyone: the buyer must fall in the scheme's income group under the 1981 Regulations. The Board's list also asks for an affidavit on other property. It confirms you, your spouse and unmarried children hold no other land or tenement in Mumbai.
+
+**Can I buy a MHADA flat without the lottery?**
+Yes, buying in resale from an existing allottee is the way to own a MHADA flat without winning the lottery. The purchase needs the Board's and the society's written permission, and the six checks on this page.
+
+**Do I pay stamp duty on a MHADA resale flat?**
+Yes, a MHADA resale is a sale like any other for stamp duty and registration under the Maharashtra Stamp Act. The Mumbai Board's transfer charge is a separate fee on top, paid to the Board.
+
 **What if the seller says nobody bothers with the permission?**
 The Regulations allow the Board to cancel exactly that kind of transfer. The way forward is to do it properly, with both permissions in hand, and we are glad to help you through it.
 
@@ -173,4 +207,4 @@ The Regulations allow the Board to cancel exactly that kind of transfer. The way
 
 Have the allotment letter, the latest Board receipt, the society's position and your own income declarations checked against the Regulations. Make the agreement depend on both permissions. Then a MHADA resale is a safe buy at a sensible price.
 
-If the flat is in Borivali, Kandivali or Malad, our [MHADA paperwork service](/services/mhada-paperwork) does the checking. The seller's side is in [can we sell a MHADA flat](/blog/can-we-sell-mhada-flat). Buying from abroad? See [can an NRI buy property in India](/blog/can-nri-buy-property-in-india).
+Our [MHADA paperwork service](/services/mhada-paperwork) does the checking for flats anywhere in Mumbai, and in Borivali, Kandivali and Malad we also find the flat. The seller's side is in [can we sell a MHADA flat](/blog/can-we-sell-mhada-flat). Buying from abroad? See [can an NRI buy property in India](/blog/can-nri-buy-property-in-india).

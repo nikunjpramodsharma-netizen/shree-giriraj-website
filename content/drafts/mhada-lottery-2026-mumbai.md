@@ -1,7 +1,7 @@
 ---
 title: "MHADA lottery 2026 Mumbai: the results, and what winners do next"
-metaTitle: "MHADA lottery 2026 Mumbai: next steps"
-metaDescription: "The Mumbai Board's 2026 lottery for 2,640 flats: where the results are and the winner's steps from offer letter to possession. Free help on WhatsApp."
+metaTitle: "MHADA lottery 2026 Mumbai: result and steps"
+metaDescription: "MHADA Mumbai lottery 2026 result: 2,640 flats drawn on 6 August 2026. Where the lists are, and the winner's steps from offer letter to possession."
 slug: mhada-lottery-2026-mumbai
 category: MHADA
 heroImage: /blog/mhada-lottery-2026-mumbai.jpg
@@ -32,9 +32,11 @@ note: >
   mhada-allotment-letter and home-loan-on-mhada-flat cover them. Refresh this
   page after every draw.
 answer: >
-  MHADA drew the Mumbai Board's 2026 lottery for 2,640 flats on 6 August 2026 and published the results as
-  four category lists on mhada.gov.in. Winners get a Conditional Provisional Offer Letter in the IHLMS 2.0 app
-  and verify originals. They then pay the first 10 percent within the 30 to 45 days their letter states.
+  MHADA drew the Mumbai Board's 2026 lottery for 2,640 flats on 6 August
+  2026. The results are four category lists on mhada.gov.in. Winners get a
+  Conditional Provisional Offer Letter in the IHLMS 2.0 app and verify their
+  originals. They then pay the first 10 percent within the 30 to 45 days
+  their letter states.
 sources:
   - label: "MHADA, Mumbai Board Housing March 2026 Lottery Results (four result lists: under construction, DCPR 33(5), DCPR 33(7), scattered tenements)"
     url: https://www.mhada.gov.in/en/node/21560
@@ -46,8 +48,8 @@ sources:
     url: https://www.mhada.gov.in/en/faq/lottery-application
   - label: "MHADA, Lottery notices page, Mumbai Board 2026"
     url: https://www.mhada.gov.in/en/lottery
-sourcesCheckedOn: "7 November 2026"
-updatedOn: "7 November 2026"
+sourcesCheckedOn: "16 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - Where can I see the MHADA lottery result 2026 for Mumbai?
   - What happens after I win a MHADA lottery flat?
@@ -60,7 +62,7 @@ readNext:
 
 ## The short answer
 
-MHADA drew the Mumbai Board's 2026 lottery for 2,640 flats on 6 August 2026 and published the results as four category lists on mhada.gov.in. Winners get a Conditional Provisional Offer Letter in the IHLMS 2.0 app and verify originals. They then pay the first 10 percent within the 30 to 45 days their letter states. **Only MHADA's own pages carry the official lists.**
+MHADA drew the Mumbai Board's 2026 lottery for 2,640 flats on 6 August 2026. The results are four category lists on mhada.gov.in. Winners get a Conditional Provisional Offer Letter in the IHLMS 2.0 app and verify their originals. They then pay the first 10 percent within the 30 to 45 days their letter states. **Only MHADA's own pages carry the official lists.**
 
 ---
 
@@ -80,7 +82,7 @@ The draw took place on Thursday, 6 August 2026, at Rang Sharda Auditorium in Ban
 | High Income Group (HIG) | 841 |
 | Total | 2,640 |
 
-MHADA's lottery helpline is 022 69468100.
+MHADA's lottery helpline is 022 6946 8100.
 
 ---
 
@@ -100,6 +102,8 @@ DCPR is Mumbai's Development Control and Promotion Regulations. The files carry 
 Winners are also told by SMS, by email and in the Application Menu of the IHLMS 2.0 app. If a winner gives up the flat or is found ineligible, waitlisted applicants are notified by SMS, email and official letter. Activation follows the waitlist priority number.
 
 For dates, lists and instructions, use mhada.gov.in and housing.mhada.gov.in. They are the official pages.
+
+As of 16 November 2026, MHADA's lottery page lists no Mumbai Board lottery after this one. Its latest entries are the Chhatrapati Sambhajinagar Board results of 3 November 2026 and the Nashik Board results of 22 September 2026.
 
 ---
 
@@ -177,7 +181,9 @@ Yes, with the Board's permission and after the holding period the rules set. Our
 
 ## Did not win this time?
 
-A MHADA flat can also be bought in resale. Our guide to [buying a MHADA flat in resale](/blog/how-to-buy-mhada-flat-in-resale) lists the checks before you pay a token. We share MHADA resale flats in Borivali, Kandivali and Malad on request.
+**A MHADA flat can also be bought in resale, from an allottee whose five years have passed.** Our guide to [buying a MHADA flat in resale](/blog/how-to-buy-mhada-flat-in-resale) lists the six checks before you pay a token. The buyer must fit the scheme's income group, just as in the lottery.
+
+In Borivali, Kandivali and Malad we share MHADA and other resale flats that fit your budget, with the papers read first. See what is on offer in [Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali](/areas/kandivali/flats-for-sale) and [Malad](/areas/malad/flats-for-sale). Or [tell us the size and budget on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20did%20not%20win%20the%20MHADA%20lottery.%20I%20am%20looking%20for%20a%20resale%20flat%20in%20___.%20My%20budget%20is%20about%20___.) and we usually send the flats that fit the same day, free and with no obligation.
 
 ---
 
@@ -205,7 +211,13 @@ Yes, with MHADA's no objection certificate. You apply in the IHLMS 2.0 app. See 
 Before the Final POL, the full EMD is refunded. After the POL, 10 percent of the EMD is deducted and the rest refunded. The application fee is not refunded.
 
 **Who do I call about the lottery?**
-MHADA's lottery helpline is 022 69468100, as listed on mhada.gov.in.
+MHADA's lottery helpline is 022 6946 8100, as listed on mhada.gov.in on 16 November 2026.
+
+**When is the next MHADA lottery in Mumbai?**
+As of 16 November 2026, MHADA's lottery page had announced no Mumbai Board lottery after the 2026 draw of 6 August. Watch mhada.gov.in and housing.mhada.gov.in, which publish the advertisement and the booklet when one opens.
+
+**Can I buy a MHADA flat if I did not win?**
+Yes, you can buy a MHADA flat in resale from an existing allottee once five years have passed from allotment. You must fit the scheme's income group, and the Board and the society must give written permission.
 
 ---
 

@@ -53,6 +53,8 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
       { value: 6, suffix: "%", label: "stamp duty, male buyer" },
       { value: 5, suffix: "%", label: "stamp duty, woman in sole name" },
       { value: 30000, prefix: "₹", label: "registration, maximum" },
+      // The seller's chip, 16 November 2026: the page serves both sides.
+      { text: "Free", label: "price opinion for sellers, usually same day" },
     ],
     numbers: [
       { value: 6, suffix: "%", label: "Stamp duty for a male buyer, including the metro cess", source: "Maharashtra Stamp Act, Article 25(b), plus the 1 percent metro cess" },
@@ -233,7 +235,7 @@ export const SERVICE_SCENES: Record<string, ServiceScene> = {
     numbers: [
       { text: "Itemised", label: "An estimate you can change line by line before you commit", source: "Shree Giriraj Real Estate" },
       { text: "Bye law 46", label: "Society permission in writing before work starts", source: "Model bye laws for cooperative housing societies" },
-      { text: "Section 342", label: "Structural changes need the BMC as well", source: "Mumbai Municipal Corporation Act 1888" },
+      { text: "BMC", label: "Structural changes need the BMC's permission as well", source: "Mumbai Municipal Corporation Act 1888" },
       { value: 18, suffix: "%", label: "GST on interior work, on top of the estimate", source: "CGST" },
     ],
     images: [

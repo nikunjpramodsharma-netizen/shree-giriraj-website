@@ -1,7 +1,7 @@
 ---
 title: "Can we rent out a MHADA flat? The NOC for rent takes 8 days"
-metaTitle: "Can we rent a MHADA flat? NOC in 8 days"
-metaDescription: "Yes, with the Mumbai Board's NOC for rent, notified at 8 days. The steps, the papers, how to apply on Aaple Sarkar, and help filing it across Mumbai."
+metaTitle: "Can we rent a MHADA flat? Yes, with an NOC"
+metaDescription: "Yes. The MHADA rules for renting out a flat: the NOC for rent in 8 days on Aaple Sarkar, the papers, and the registered licence your tenant signs."
 slug: can-we-rent-mhada-flat
 category: MHADA
 heroImage: /blog/mhada-rent.jpg
@@ -19,10 +19,10 @@ note: >
   Government of Maharashtra's Aaple Sarkar portal, where the NOC is a notified
   Right to Public Services item for the MHADA Mumbai Board.
 answer: >
-  Yes. A MHADA flat can be let out once the Mumbai Board issues a no
-  objection certificate (NOC) for rent. The Board's notified time limit is 8
-  days, and the Estate Manager decides. After the NOC, you register the leave
-  and licence agreement like any other. Apply on the Aaple Sarkar portal.
+  Yes. Renting out a MHADA flat is legal once the Mumbai Board issues a no
+  objection certificate (NOC) for rent. As of November 2026 the notified time
+  limit is 8 days, and the Estate Manager decides. Apply on the Aaple Sarkar
+  portal, then register the leave and licence agreement like any other.
 sources:
   - label: "Aaple Sarkar, Government of Maharashtra, No Objection Certificate for Rent, MHADA Mumbai Board, service 5030"
     url: https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=5030
@@ -34,8 +34,8 @@ sources:
     url: https://www.mhada.gov.in/sites/default/files/tot.pdf
   - label: "DataForSEO, Google search volume for MHADA rent and NOC terms in India, measured 9 September 2026"
     url: https://dataforseo.com
-sourcesCheckedOn: "9 September 2026"
-updatedOn: "7 November 2026"
+sourcesCheckedOn: "16 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - Is a MHADA NOC needed to rent out a flat?
   - How long does the MHADA NOC for rent take?
@@ -43,12 +43,12 @@ relatedFaqs:
 readNext:
   - rent-deposit-months-western-suburbs
   - can-we-sell-mhada-flat
-  - services/mhada-paperwork
+  - mhada-noc-online
 ---
 
 ## The short answer
 
-Yes. A MHADA flat can be let out once the Mumbai Board issues a no objection certificate (NOC) for rent. The Board's notified time limit is 8 days, and the Estate Manager decides. **After the NOC, you register the leave and licence agreement like any other. Apply on the Aaple Sarkar portal.**
+Yes. Renting out a MHADA flat is legal once the Mumbai Board issues a no objection certificate (NOC) for rent. As of November 2026 the notified time limit is 8 days, and the Estate Manager decides. **Apply on the Aaple Sarkar portal, then register the leave and licence agreement like any other.**
 
 ---
 
@@ -130,7 +130,33 @@ Two points are worth writing into a MHADA leave and licence:
 
 Ask the Estate Manager whether the NOC carries a fixed validity and whether a renewed licence needs a fresh one. MHADA runs a revalidation process for NOCs. The easy habit is to assume a renewal needs one.
 
-The agreement itself is covered in our guide to the [leave and licence agreement in Mumbai](/blog/leave-and-licence-agreement-mumbai), and the landlord's police form in [tenant police verification in Mumbai](/blog/tenant-police-verification-mumbai). If you won your flat in the 2026 lottery, see [MHADA lottery 2026 next steps](/blog/mhada-lottery-2026-mumbai).
+The agreement itself is covered in our guide to the [leave and licence agreement in Mumbai](/blog/leave-and-licence-agreement-mumbai). The landlord's police form is in [tenant police verification in Mumbai](/blog/tenant-police-verification-mumbai). If you won your flat in the 2026 lottery, see [MHADA lottery 2026 next steps](/blog/mhada-lottery-2026-mumbai).
+
+---
+
+## What are the MHADA rules for tenants?
+
+**A tenant in a MHADA flat is a licensee, with the same rules as any rented flat in Mumbai plus the Board's NOC.** The rules that matter to both sides fit in one table.
+
+| Rule | What it means in practice | Source |
+| --- | --- | --- |
+| NOC for rent first | The allottee applies; the Estate Manager decides within 8 days | Aaple Sarkar, service 5030 |
+| Registered agreement | The leave and licence must be in writing and registered by the licensor | Section 55, Maharashtra Rent Control Act, 1999 |
+| Licence, not a transfer | The tenant gets the right to live there, never an interest in the flat | Estate Management Regulations, 1981 |
+| Police verification | The landlord submits the tenant's details to the Mumbai Police | [Our guide](/blog/tenant-police-verification-mumbai) |
+| Term inside the NOC | The licence period should not run past what the NOC covers | Ask the Estate Manager |
+
+A deposit of two to three months is the usual ask in newer societies here, and some older buildings ask for more. Our guide to [rent deposit months in the western suburbs](/blog/rent-deposit-months-western-suburbs) has the detail. With these five in place, the tenant has a clear agreement and you keep a clean record with the Board.
+
+---
+
+## Letting the flat in Borivali, Kandivali or Malad?
+
+**We handle the NOC for rent for MHADA flats anywhere in Mumbai, and in Borivali, Kandivali and Malad we also find the tenant.** Our [rentals service](/services/rentals) checks the tenant, drafts and registers the leave and licence, and files the police form.
+
+Tell us the flat's size, building and the rent you have in mind. [Send it on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20want%20to%20rent%20out%20my%20MHADA%20flat%20in%20___.%20It%20is%20a%20___%20BHK.%20Can%20you%20help%20with%20the%20NOC%20and%20a%20tenant%3F) and we usually reply the same day, free and with no obligation.
+
+Weighing a sale instead of a tenancy? A MHADA flat can be sold after five years with two permissions. Our guide to [selling a MHADA flat](/blog/can-we-sell-mhada-flat) sets out the rules, and our [resale flats service](/services/resale-flats) finds the buyer in these three suburbs.
 
 ---
 
@@ -159,10 +185,22 @@ Yes. Section 55 of the Maharashtra Rent Control Act applies to a MHADA flat as i
 **Can an heir rent out the flat before the transfer is done?**
 Not in their own name. The Board issues the NOC to the allottee on its record. If the allottee has died, the transfer to the heir under the Regulations comes first.
 
+**Is it legal to rent a MHADA flat?**
+Yes, renting a MHADA flat is legal once the Mumbai Board has issued its NOC for rent. Letting it without the NOC makes the occupation unauthorised under the 1981 Regulations, so apply first and let second.
+
+**Can I apply for the MHADA NOC for rent online?**
+Yes, you can apply for the NOC for rent online on the Government of Maharashtra's Aaple Sarkar portal. It is service 5030 of the MHADA Mumbai Board. You can also file it at the Estate Manager's office for your colony.
+
+**Can I rent out a MHADA lottery flat?**
+Yes, a lottery flat can be let once you hold possession and the Board's NOC for rent. Read your allotment letter first, because its conditions apply to the flat and the Estate Manager checks them.
+
+**How much deposit can I ask a tenant for?**
+Two to three months of rent is the usual deposit in newer societies in Mumbai's western suburbs, and some older buildings ask for more. Write the amount and the refund terms into the registered leave and licence agreement.
+
 ---
 
 ## Before you hand over the keys
 
 Get the NOC, register the agreement, then hand over the keys, and you let with a clear record. The full list of MHADA services is in our guide to [MHADA NOC online](/blog/mhada-noc-online).
 
-Would you like us to take the application through the Estate Manager's office and draft the licence to sit inside it? That is part of our [MHADA paperwork service](/services/mhada-paperwork). For what a deposit and a term look like in this belt, read [how many months of deposit is normal in the western suburbs](/blog/rent-deposit-months-western-suburbs).
+Would you like us to take the application through the Estate Manager's office and draft the licence to sit inside it? That is part of our [MHADA paperwork service](/services/mhada-paperwork), for flats anywhere in Mumbai. [Message us on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20want%20to%20rent%20out%20my%20MHADA%20flat%20in%20___.%20Can%20you%20help%20with%20the%20NOC%20for%20rent%3F) and we will tell you what your file needs, free. For what a deposit and a term look like in this belt, read [how many months of deposit is normal in the western suburbs](/blog/rent-deposit-months-western-suburbs).

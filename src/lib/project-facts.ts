@@ -91,6 +91,14 @@ const WITH_CMS: Record<string, ProjectFacts> = {
         q: "What does a home at The Landmark cost?",
         a: "2 and 2.5 BHK homes start from about ₹2 Cr. 3 BHK homes start from about ₹3 Cr, and the largest 3 BHK from about ₹4 Cr. These are rough figures. Message us for the price sheet.",
       },
+      {
+        q: "Is this the older Landmark building in Borivali West?",
+        a: "No. The Landmark on this page is a new project of three 40 storey towers on S.V. Road. If you want a flat in an older building called Landmark in Borivali West, send us its name and lane. We tell you what is for sale or rent there.",
+      },
+      {
+        q: "How does The Landmark compare with a resale flat nearby?",
+        a: "A resale 2 BHK of about 700 sq ft in Borivali West asks about ₹2.15 crore at Square Yards' September 2026 average of 30,750 rupees per sq ft. The Landmark's 2 BHK starts from about ₹2 Cr. Our Borivali West flats for sale page has the figures pocket by pocket.",
+      },
     ],
   },
   "veena-celestia": {
@@ -128,6 +136,14 @@ const WITH_CMS: Record<string, ProjectFacts> = {
       {
         q: "Are bookings open?",
         a: "Yes. Bookings have started, which gives early buyers a choice of floor and configuration. Ask us for current availability.",
+      },
+      {
+        q: "How is the price worked out at Veena Celestia?",
+        a: "The price starts from the base rate of ₹41,000 per sq ft, so every 100 sq ft adds ₹41 lakh. The plus signs mean further charges sit on top. Ask us for the live price sheet, which gives the all inclusive figure for each flat.",
+      },
+      {
+        q: "Which other new projects are in Borivali West?",
+        a: "The Landmark on S.V. Road has 2, 2.5 and 3 BHK homes from about ₹2 Cr. Luxury Living in Punit Nagar is awaiting MahaRERA registration. Our projects page compares them side by side.",
       },
     ],
   },

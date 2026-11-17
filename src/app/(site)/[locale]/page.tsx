@@ -346,11 +346,38 @@ export default async function HomePage({
       "You need the seller's original title deed and the chain of past sale agreements. You also need the society's share certificate and its No Objection Certificate (NOC), and the latest property tax and maintenance receipts. Last, an encumbrance certificate shows the flat is free of loans or legal disputes. We verify all of this before you pay any token amount.",
     ],
   ];
-  const shownFaqs = (faqs ?? []).map((f) => {
+  // Two CMS answers rewritten in code, all four languages, on 16 November
+  // 2026. The stamp duty answer said "5-6%" (a dash, and vaguer than the
+  // 6 and 5 percent the resale page states), and the deposit answer said "a
+  // few months" where the site's rule is two to three months in newer
+  // societies. Keyed by the start of the English question.
+  const ANSWER_FIX: [string, Record<"en" | "hi" | "mr" | "gu", string>][] = [
+    [
+      "How much is stamp duty and registration",
+      {
+        en: "Stamp duty on a resale flat in Mumbai is 6 percent of the agreement value for a man, and 5 percent for a woman buying in her sole name. Registration is 1 percent, capped at ₹30,000. Both are charged on the agreement value or the ready reckoner value, whichever is higher. We work out the exact figure for your flat before you commit.",
+        hi: "मुंबई में रीसेल फ्लैट पर स्टाम्प ड्यूटी पुरुष खरीदार के लिए एग्रीमेंट वैल्यू का 6 प्रतिशत है, और अकेले अपने नाम पर खरीदने वाली महिला के लिए 5 प्रतिशत। रजिस्ट्रेशन 1 प्रतिशत है, अधिकतम ₹30,000। दोनों एग्रीमेंट वैल्यू या रेडी रेकनर मूल्य में से जो ज़्यादा हो, उस पर लगते हैं। तय करने से पहले हम आपके फ्लैट का सटीक आंकड़ा निकाल देते हैं।",
+        mr: "मुंबईत रीसेल फ्लॅटवर मुद्रांक शुल्क पुरुष खरेदीदारासाठी कराराच्या किमतीच्या 6 टक्के आहे, आणि स्वतःच्या एकट्या नावे घेणाऱ्या महिलेसाठी 5 टक्के. नोंदणी शुल्क 1 टक्का, कमाल ₹30,000. दोन्ही कराराची किंमत किंवा रेडी रेकनर मूल्य यांपैकी जे जास्त असेल त्यावर लागतात. ठरवण्याआधी आम्ही तुमच्या फ्लॅटसाठी अचूक आकडा काढून देतो.",
+        gu: "મુંબઈમાં રીસેલ ફ્લેટ પર સ્ટેમ્પ ડ્યુટી પુરુષ ખરીદનાર માટે કરાર કિંમતના 6 ટકા છે, અને પોતાના એકલા નામે ખરીદતી મહિલા માટે 5 ટકા. રજિસ્ટ્રેશન 1 ટકો, મહત્તમ ₹30,000. બંને કરાર કિંમત કે રેડી રેકનર મૂલ્યમાંથી જે વધુ હોય તેના પર લાગે છે. નક્કી કરતાં પહેલાં અમે તમારા ફ્લેટનો ચોક્કસ આંકડો કાઢી આપીએ છીએ.",
+      },
+    ],
+    [
+      "How much deposit do I need",
+      {
+        en: "Two to three months' rent is the norm in newer societies in Borivali, Kandivali and Malad, and more in some older buildings. No Maharashtra law caps the deposit, so it is a term you can negotiate. We tell you the going rate for the building before you commit.",
+        hi: "बोरिवली, कांदिवली और मलाड की नई सोसाइटियों में दो से तीन महीने का किराया डिपॉज़िट का चलन है, और कुछ पुरानी बिल्डिंगों में ज़्यादा। महाराष्ट्र का कोई कानून डिपॉज़िट की सीमा तय नहीं करता, इसलिए इस पर बात हो सकती है। तय करने से पहले हम आपको उस बिल्डिंग का चलता भाव बता देते हैं।",
+        mr: "बोरिवली, कांदिवली आणि मलाडमधील नव्या सोसायट्यांत दोन ते तीन महिन्यांचे भाडे डिपॉझिट म्हणून घेण्याचा प्रघात आहे, आणि काही जुन्या इमारतींत जास्त. महाराष्ट्रातील कोणताही कायदा डिपॉझिटवर मर्यादा घालत नाही, म्हणून त्यावर बोलणी होऊ शकते. ठरवण्याआधी आम्ही तुम्हाला त्या इमारतीचा चालू दर सांगतो.",
+        gu: "બોરીવલી, કાંદિવલી અને મલાડની નવી સોસાયટીઓમાં બે થી ત્રણ મહિનાનું ભાડું ડિપોઝિટ તરીકે લેવાનું ચલણ છે, અને કેટલીક જૂની બિલ્ડિંગોમાં વધુ. મહારાષ્ટ્રનો કોઈ કાયદો ડિપોઝિટની મર્યાદા નક્કી કરતો નથી, એટલે તેના પર વાટાઘાટ થઈ શકે છે. નક્કી કરતાં પહેલાં અમે તમને એ બિલ્ડિંગનો ચાલુ દર કહી દઈએ છીએ.",
+      },
+    ],
+  ];
+  const fixedFaqs = (faqs ?? []).map((f) => {
     const q = getLocalizedField(f.question, "en") ?? "";
     const a = getLocalizedField(f.answer, "en") ?? "";
     const split = EN_ANSWER_SPLIT.find(([start]) => a.startsWith(start));
     if (split) f = { ...f, answer: { ...(f.answer as object), en: split[1] } as Faq["answer"] };
+    const fix = ANSWER_FIX.find(([start]) => q.startsWith(start));
+    if (fix) f = { ...f, answer: { ...(f.answer as object), ...fix[1] } as Faq["answer"] };
     const fixQ = q.includes("₹2.**");
     const fixA = fixQ || /mask exact pricing/i.test(a);
     if (!fixQ && !fixA) return f;
@@ -360,6 +387,67 @@ export default async function HomePage({
       ...(fixA ? { answer: { ...(f.answer as object), ...MASK_ANSWER } as Faq["answer"] } : {}),
     };
   });
+  // Three questions added in code on 16 November 2026, in all four
+  // languages: selling, what a flat is worth, and where the office is. The
+  // owner wants more buying and selling enquiries, and the homepage had no
+  // answer for a seller at all. The office answer carries the exact NAP
+  // string from the Google Business Profile.
+  const HOME_EXTRA_FAQS: Faq[] = [
+    {
+      _id: "home-sell",
+      question: {
+        en: "Can you help me sell my flat in Borivali, Kandivali or Malad?",
+        hi: "क्या आप बोरिवली, कांदिवली या मलाड में मेरा फ्लैट बेचने में मदद करते हैं?",
+        mr: "बोरिवली, कांदिवली किंवा मलाडमध्ये माझा फ्लॅट विकायला तुम्ही मदत करता का?",
+        gu: "શું તમે બોરીવલી, કાંદિવલી કે મલાડમાં મારો ફ્લેટ વેચવામાં મદદ કરો છો?",
+      },
+      answer: {
+        en: "Yes. Buying and selling resale flats has been our main business since 1996. Send the building, floor and size on WhatsApp, and we reply with a fair listing price, usually the same day. We get the papers ready before the flat is shown, bring buyers we have already met, and stay with the sale through registration.",
+        hi: "हाँ। रीसेल फ्लैट खरीदना और बेचना 1996 से हमारा मुख्य काम है। WhatsApp पर बिल्डिंग, मंज़िल और साइज़ भेजिए, हम उचित लिस्टिंग कीमत के साथ जवाब देते हैं, आमतौर पर उसी दिन। फ्लैट दिखाने से पहले हम कागज़ तैयार करते हैं, ऐसे खरीदार लाते हैं जिनसे हम पहले मिल चुके हैं, और रजिस्ट्रेशन तक साथ रहते हैं।",
+        mr: "होय. रीसेल फ्लॅटची खरेदी आणि विक्री हा 1996 पासून आमचा मुख्य व्यवसाय आहे. WhatsApp वर इमारत, मजला आणि आकार पाठवा, आम्ही योग्य लिस्टिंग किंमत कळवतो, बहुधा त्याच दिवशी. फ्लॅट दाखवण्याआधी आम्ही कागदपत्रे तयार करतो, आधीच भेटलेले खरेदीदार आणतो, आणि नोंदणीपर्यंत सोबत राहतो.",
+        gu: "હા. રીસેલ ફ્લેટની ખરીદી અને વેચાણ 1996 થી અમારો મુખ્ય ધંધો છે. WhatsApp પર બિલ્ડિંગ, માળ અને સાઇઝ મોકલો, અમે વાજબી લિસ્ટિંગ કિંમત સાથે જવાબ આપીએ છીએ, સામાન્ય રીતે એ જ દિવસે. ફ્લેટ બતાવતાં પહેલાં અમે કાગળો તૈયાર કરીએ છીએ, પહેલેથી મળેલા ખરીદનારા લાવીએ છીએ, અને રજિસ્ટ્રેશન સુધી સાથે રહીએ છીએ.",
+      },
+    },
+    {
+      _id: "home-worth",
+      question: {
+        en: "What is my flat worth?",
+        hi: "मेरा फ्लैट कितने का है?",
+        mr: "माझ्या फ्लॅटची किंमत किती?",
+        gu: "મારા ફ્લેટની કિંમત કેટલી?",
+      },
+      answer: {
+        en: "Your flat is worth what a buyer in your pocket will pay this month. We give a free fair price opinion on WhatsApp, from current asking rates in your building and lane, the floor and the carpet area. The ready reckoner rate is the government's floor for stamp duty, not the market price.",
+        hi: "आपका फ्लैट उतने का है जितना आपके इलाके का खरीदार इस महीने देगा। हम WhatsApp पर मुफ़्त, उचित कीमत की राय देते हैं, आपकी बिल्डिंग और गली के माँगे जा रहे भाव, मंज़िल और कारपेट एरिया के आधार पर। रेडी रेकनर रेट स्टाम्प ड्यूटी के लिए सरकार का न्यूनतम मूल्य है, बाज़ार भाव नहीं।",
+        mr: "तुमच्या परिसरातील खरेदीदार या महिन्यात जेवढे देईल, तेवढीच तुमच्या फ्लॅटची किंमत. आम्ही WhatsApp वर किमतीबद्दल मोफत, योग्य मत देतो, तुमच्या इमारतीतील आणि गल्लीतील मागितले जाणारे दर, मजला आणि कार्पेट एरिया यांवरून. रेडी रेकनर दर हे मुद्रांक शुल्कासाठी सरकारचे किमान मूल्य आहे, बाजारभाव नाही.",
+        gu: "તમારા વિસ્તારનો ખરીદનાર આ મહિને જેટલું આપે, એટલી જ તમારા ફ્લેટની કિંમત. અમે WhatsApp પર કિંમત વિશે મફત, વાજબી અભિપ્રાય આપીએ છીએ, તમારી બિલ્ડિંગ અને ગલીના માંગવામાં આવતા દર, માળ અને કાર્પેટ એરિયા પરથી. રેડી રેકનર દર સ્ટેમ્પ ડ્યુટી માટે સરકારનું લઘુતમ મૂલ્ય છે, બજાર ભાવ નહીં.",
+      },
+    },
+    {
+      _id: "home-office",
+      question: {
+        en: "Where is your office in Borivali West?",
+        hi: "बोरिवली वेस्ट में आपका दफ़्तर कहाँ है?",
+        mr: "बोरिवली पश्चिममध्ये तुमचे कार्यालय कुठे आहे?",
+        gu: "બોરીવલી વેસ્ટમાં તમારી ઑફિસ ક્યાં છે?",
+      },
+      answer: {
+        en: `Shree Giriraj Real Estate is at ${site.address}, open ${site.hours.label}. The complex is also known locally as Garden Groove Shopping Centre. We are a MahaRERA registered agency, number ${site.rera}, and have worked from this office since ${site.officeSince}.`,
+        hi: `श्री गिरिराज रियल एस्टेट ${site.address} पर है, सुबह 9 से रात 9 बजे तक, हफ़्ते के सातों दिन खुला। इस कॉम्प्लेक्स को स्थानीय लोग गार्डन ग्रूव शॉपिंग सेंटर भी कहते हैं। हम MahaRERA पंजीकृत एजेंसी हैं, पंजीकरण संख्या ${site.rera}, और ${site.officeSince} से इसी दफ़्तर से काम कर रहे हैं।`,
+        mr: `श्री गिरिराज रिअल इस्टेट ${site.address} येथे आहे, सकाळी 9 ते रात्री 9, आठवड्याचे सातही दिवस उघडे. या संकुलाला स्थानिक लोक गार्डन ग्रूव्ह शॉपिंग सेंटर असेही म्हणतात. आम्ही MahaRERA नोंदणीकृत एजन्सी आहोत, नोंदणी क्रमांक ${site.rera}, आणि ${site.officeSince} पासून याच कार्यालयातून काम करतो.`,
+        gu: `શ્રી ગિરિરાજ રિયલ એસ્ટેટ ${site.address} પર છે, સવારે 9 થી રાત્રે 9, અઠવાડિયાના સાતેય દિવસ ખુલ્લી. આ કૉમ્પ્લેક્સને સ્થાનિક લોકો ગાર્ડન ગ્રૂવ શોપિંગ સેન્ટર પણ કહે છે. અમે MahaRERA નોંધાયેલ એજન્સી છીએ, નોંધણી નંબર ${site.rera}, અને ${site.officeSince} થી આ જ ઑફિસથી કામ કરીએ છીએ.`,
+      },
+    },
+  ];
+  // Buying first (the CMS order), then selling and value, then the rest,
+  // with the office last.
+  const shownFaqs: Faq[] = [
+    ...fixedFaqs.slice(0, 2),
+    HOME_EXTRA_FAQS[0],
+    HOME_EXTRA_FAQS[1],
+    ...fixedFaqs.slice(2),
+    HOME_EXTRA_FAQS[2],
+  ];
 
   // Only the FAQs actually rendered on this page go into the markup. The
   // FAQSection below reads the same list, so the two cannot drift apart.
@@ -486,6 +574,11 @@ export default async function HomePage({
               {t(
                 "Most people meet us over one flat and come back for the next three things. That is why all of it sits under one roof instead of being handed to a stranger at every step.",
               )}
+            </p>
+            <p className="mt-3 text-[1.04rem]">
+              <Link prefetch={false} href="/services/mhada-paperwork" className="font-semibold text-brand-indigo underline underline-offset-4">
+                {t("MHADA flat anywhere in Mumbai? We file its transfer and no objection certificates")}
+              </Link>
             </p>
           </Reveal>
         </div>
@@ -618,6 +711,32 @@ export default async function HomePage({
             // suburb's page carries. The owner asked for exactly these here.
             scenes={locale === "en" ? Object.fromEntries(AREAS.map((a) => [a.slug, a.motion.pocketScenes])) : undefined}
           />
+          {/* The buying and selling routes, straight from the suburbs. The
+              flats for sale pages are English only, so they bypass the
+              locale Link; the resale service is translated, so it keeps it. */}
+          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/15 pt-6 text-sm">
+            {[
+              { href: "/areas/borivali-west/flats-for-sale", label: t("Flats for sale in Borivali West") },
+              { href: "/areas/kandivali/flats-for-sale", label: t("Flats for sale in Kandivali West") },
+              { href: "/areas/malad/flats-for-sale", label: t("Flats for sale in Malad West") },
+            ].map((l) => (
+              <EnglishLink
+                key={l.href}
+                prefetch={false}
+                href={l.href}
+                className="font-semibold text-white underline decoration-bronze underline-offset-4"
+              >
+                {l.label}
+              </EnglishLink>
+            ))}
+            <Link
+              prefetch={false}
+              href="/services/resale-flats"
+              className="font-semibold text-bronze underline underline-offset-4"
+            >
+              {t("Selling your flat? Get a free price opinion")}
+            </Link>
+          </div>
         </div>
       </section>
 

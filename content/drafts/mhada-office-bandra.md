@@ -1,7 +1,7 @@
 ---
 title: "MHADA office in Bandra East: which desk handles your flat, and what to take"
-metaTitle: "MHADA office Bandra: address, hours, phone"
-metaDescription: "Griha Nirman Bhavan, Kalanagar, Bandra East, open 9:45 am to 6:15 pm. Phone 022 6640 5000. Which Estate Manager handles your area."
+metaTitle: "MHADA office Bandra: timings, address, phone"
+metaDescription: "MHADA office, Griha Nirman Bhavan, Kalanagar, Bandra East: open 9:45 am to 6:15 pm, phone 022 6640 5000, and the Estate Manager for your area."
 slug: mhada-office-bandra
 category: MHADA
 heroImage: /premium/u/tower-06.jpg
@@ -41,8 +41,8 @@ sources:
     url: https://emitrapranali.mhada.gov.in/
   - label: "DataForSEO, Google search volume for MHADA office and paperwork terms in India, measured 3 October 2026"
     url: https://dataforseo.com
-sourcesCheckedOn: "3 October 2026"
-updatedOn: "7 November 2026"
+sourcesCheckedOn: "16 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - What are the MHADA office timings in Bandra?
   - What is the MHADA Bandra phone number?
@@ -64,7 +64,8 @@ MHADA's head office is Griha Nirman Bhavan, Kalanagar, Bandra East, Mumbai 40005
 | Main phone | 022 6640 5000 |
 | Who you meet | The Mumbai Board's Estate Manager for your area |
 | Public meeting times | Set by each officer, for example 3 pm to 5 pm every working day for the Mumbai Board's Chairman |
-| Source | [MHADA contacts page](https://www.mhada.gov.in/en/contacts), read 3 October 2026 |
+| Lottery helpline | 022 6946 8100 |
+| Source | [MHADA contacts page](https://www.mhada.gov.in/en/contacts), read 16 November 2026 |
 
 Meeting times change when an officer is on tour. Check the contacts page on the day you go.
 
@@ -106,6 +107,10 @@ There are also separate Estate Managers for three other areas:
 
 Names and numbers change with postings. Check the [Mumbai Board contacts page](https://www.mhada.gov.in/en/contacts/mumbai-board) on the day you go.
 
+### Borivali, Kandivali and Malad flats
+
+**As of 16 November 2026, the Mumbai Board lists a Borivali Estate Manager on 022 6640 5109 and a Malad one on 022 6640 5147.** Both sit at Griha Nirman Bhavan, not in the suburb. The page lists no separate Kandivali division, so check the division printed on your latest Board rent receipt before you call.
+
 ---
 
 ## What should you take for the common jobs?
@@ -130,9 +135,9 @@ The Board's forms are published on its E-MITRA page. Download the one you need a
 - The latest rent receipt showing no arrears
 - The receipted transfer charges
 
-For a transfer on death, add the death certificate and a heirship certificate.
+For a transfer on death, add the death certificate and a heirship certificate. Our guides to the [MHADA flat transfer](/blog/mhada-flat-transfer) and [transfer on death](/blog/mhada-transfer-on-death) list every paper and the charges.
 
-**For an NOC for rent or for a mortgage,** the form itself lists what to attach. Read it the day before, and gather everything it names.
+**For an NOC for rent or for a mortgage,** the form itself lists what to attach. Our guides on [renting out a MHADA flat](/blog/can-we-rent-mhada-flat) and a [home loan on a MHADA flat](/blog/home-loan-on-mhada-flat) cover each. Read it the day before, and gather everything it names.
 
 Carry the originals and a set of self attested copies of everything. That one habit saves a second trip more often than anything else.
 
@@ -179,6 +184,15 @@ The Mumbai Board's Estate Manager for the area your flat is in, at Griha Nirman 
 **Can I apply without visiting the office?**
 Many notified services, including the NOC for rent, are applied for online through Aaple Sarkar. Keep your originals ready in case the Estate Manager's office asks to see them.
 
+**Who is the head of MHADA's Mumbai Board?**
+As of 16 November 2026, MHADA's contacts page lists Shri Milind Borikar (IAS) as Vice Chairman and Chief Officer of the Mumbai Board. MHADA as a whole is headed by its Vice President and Chief Executive Officer, Shri Sanjeev Jaiswal (IAS).
+
+**What is the MHADA lottery helpline number?**
+MHADA's lottery helpline is 022 6946 8100, as printed on its website on 16 November 2026. The head office number, 022 6640 5000, is for the Authority and its boards generally.
+
+**Which Estate Manager handles MHADA flats in Borivali or Malad?**
+The Mumbai Board lists a Borivali Estate Manager (022 6640 5109) and a Malad Estate Manager (022 6640 5147), both at Griha Nirman Bhavan, Bandra East. Your latest Board rent receipt names your flat's division.
+
 **Is MHADA's Bandra office the same as the lottery office?**
 New allotments from the lottery sit with the Mumbai Board's marketing Estate Managers, listed on the same contacts page. Owners of existing flats deal with the Estate Manager for their area.
 
@@ -188,4 +202,6 @@ New allotments from the lottery sit with the Mumbai Board's marketing Estate Man
 
 If you would rather not spend a working day in Kalanagar, our [MHADA paperwork service](/services/mhada-paperwork) prepares the complete file against the Board's own list. We take it to the right Estate Manager and follow it until it is decided, for MHADA flats anywhere in Mumbai.
 
-Tell us the flat and the job on WhatsApp, and we will tell you what the file needs, free, usually the same day.
+[Tell us the flat and the job on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20need%20help%20with%20MHADA%20paperwork%20for%20my%20flat%20in%20___.%20It%20is%20for%20a%20___%20%28transfer%2C%20NOC%20for%20rent%20or%20NOC%20for%20sale%29.) and we will tell you what the file needs, free, usually the same day.
+
+**Going to Bandra because you are selling the flat?** If it is in Borivali, Kandivali or Malad, our [resale flats service](/services/resale-flats) also finds the buyer, and we run the sale permission alongside. Our guide to [selling a MHADA flat](/blog/can-we-sell-mhada-flat) sets out the rules first.

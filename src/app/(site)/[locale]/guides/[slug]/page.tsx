@@ -11,7 +11,7 @@ import { ContactCTA } from "@/components/ContactCTA";
 import { PostOffer } from "@/components/PostOffer";
 import type { PostOffer as Offer } from "@/lib/post-offers";
 import { graph, breadcrumbNode, faqNode, itemListNode } from "@/lib/schema";
-import { pageUrls } from "@/lib/seo";
+import { pageUrls, absoluteUrl, SITE_URL } from "@/lib/seo";
 import { formatDate } from "@/lib/blog";
 import { PILLARS, getPillar, type Spoke } from "@/lib/pillars";
 import { getAllPosts } from "@/lib/posts";
@@ -22,6 +22,8 @@ import {
   getPublishedGuides,
 } from "@/lib/guides";
 import { postVisual } from "@/lib/blog";
+import { articleDates } from "@/lib/published-dates";
+import { AUTHOR } from "@/lib/author";
 
 export const revalidate = 300;
 
@@ -69,7 +71,11 @@ export async function generateMetadata({
       openGraph: {
         ...urls.openGraph,
         type: "article",
-        images: [postVisual(guide).image],
+        images: [{ url: postVisual(guide).image, alt: postVisual(guide).alt }],
+        publishedTime: articleDates(guide).published,
+        modifiedTime: articleDates(guide).modified,
+        authors: [AUTHOR.name],
+        section: "Guides",
       },
       ...(guide.isReady ? {} : { robots: { index: false, follow: true } }),
     };
@@ -182,6 +188,18 @@ export default async function GuidePage({
             : null,
           // Marked up because these questions are rendered further down.
           faqNode(pillar.faqs.map((f) => ({ question: f.q, answer: f.a }))),
+          // The hub itself, with the date shown under its title, so a search
+          // or AI result can see how fresh the reading path is.
+          {
+            "@type": "CollectionPage",
+            name: pillar.title,
+            description: pillar.metaDescription,
+            url: absoluteUrl(locale, `/guides/${pillar.slug}`),
+            dateModified: pillar.updatedOn,
+            inLanguage: locale,
+            isPartOf: { "@id": `${SITE_URL}/#website` },
+            publisher: { "@id": `${SITE_URL}/#organization` },
+          },
         )}
       />
 
@@ -212,6 +230,9 @@ export default async function GuidePage({
           </h1>
           <p className="mt-5 max-w-[58ch] text-paper/80">
             {pillar.metaDescription}
+          </p>
+          <p className="mt-4 text-sm text-paper/70">
+            Updated {formatDate(pillar.updatedOn, locale)}
           </p>
         </div>
       </header>

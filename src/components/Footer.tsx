@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import EnglishLink from "next/link";
 import { site, waLink } from "@/lib/config";
@@ -9,6 +9,7 @@ export function Footer() {
   const t = useTranslations("footer");
   const nav = useTranslations("nav");
   const year = new Date().getFullYear();
+  const locale = useLocale();
 
   return (
     <footer className="bg-brand-indigo py-14 text-paper/75">
@@ -35,12 +36,24 @@ export function Footer() {
                   404, on every page of those three languages. */}
               <li><EnglishLink prefetch={false} href="/about" className="hover:text-white">{nav("about")}</EnglishLink></li>
               <li><EnglishLink prefetch={false} href="/contact" className="hover:text-white">Contact us</EnglishLink></li>
+              {/* The English only sections, linked from every page so none of
+                  them sits more than one click from anywhere. English labels on
+                  purpose: the pages behind them are in English. */}
+              <li><EnglishLink prefetch={false} href="/areas" className="hover:text-white">Area guides</EnglishLink></li>
+              <li><EnglishLink prefetch={false} href="/tools" className="hover:text-white">Calculators</EnglishLink></li>
+              <li><EnglishLink prefetch={false} href="/guides" className="hover:text-white">Guides</EnglishLink></li>
             </ul>
           </div>
           <div>
             <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-bronze">
               {t("contactHeading")}
             </h4>
+            {/* The NAP exactly as on the Google Business Profile, on every
+                page. The same string feeds the business markup. */}
+            <address className="mb-4 text-sm not-italic">
+              {site.address}
+              {locale === "en" && <span className="mt-1 block text-paper/60">Open {site.hours.label}</span>}
+            </address>
             <ul className="space-y-2.5 text-sm">
               <li><a href={`tel:${site.phonePrimary}`} className="hover:text-white">{site.phonePrimary}</a></li>
               <li><a href={`tel:${site.phoneSecondary}`} className="hover:text-white">{site.phoneSecondary}</a></li>
@@ -66,6 +79,14 @@ export function Footer() {
         </div>
         <div className="flex flex-col gap-2.5 pt-6 text-xs text-paper/50 sm:flex-row sm:items-center sm:justify-between">
           <span>{t("copyright", { year, name: site.name })}</span>
+          {/* Plain links to the three translated home pages. The language
+              switcher in the header is a script driven menu, so until these
+              existed no crawlable link on the site led to /hi, /mr or /gu. */}
+          <nav aria-label="Languages" className="flex gap-3">
+            <a href="/hi" hrefLang="hi" lang="hi" className="hover:text-white">हिंदी</a>
+            <a href="/mr" hrefLang="mr" lang="mr" className="hover:text-white">मराठी</a>
+            <a href="/gu" hrefLang="gu" lang="gu" className="hover:text-white">ગુજરાતી</a>
+          </nav>
           <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
             {t("rera", { number: site.rera })}
           </span>

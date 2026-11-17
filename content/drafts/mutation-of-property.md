@@ -1,7 +1,7 @@
 ---
 title: "Mutation of property in Mumbai: the tax record, the property card, and what neither proves"
-metaTitle: "Mutation of property in Mumbai, explained"
-metaDescription: "Mutation puts the BMC property tax bill in your name. How it works since 2019, how to change the name online in six steps, and what it does not prove."
+metaTitle: "Mutation of property Mumbai: BMC name change"
+metaDescription: "Mutation of property puts the BMC tax bill in your name. Automatic since 2019, the 6 online steps if it was missed, after a sale or a death, and why."
 slug: mutation-of-property
 category: Paperwork
 heroImage: /blog/mutation.jpg
@@ -31,7 +31,7 @@ sources:
   - label: NoBroker, property tax name change in Mumbai
     url: https://www.nobroker.in/forum/how-to-change-name-in-property-tax-bill-online-in-mumbai/
 sourcesCheckedOn: "8 September 2026"
-updatedOn: "7 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - Does mutation prove ownership?
   - How soon after registration should I do it?
@@ -50,7 +50,7 @@ Mutation updates the local authority's records so the property tax is billed in 
 
 ## Mutation and registration: two different records
 
-**Registration** puts your purchase on the state's record, at the sub registrar office. **Mutation** puts your name on the municipal record, so the BMC bills you for property tax.
+**Registration** puts your purchase on the state's record, at the sub registrar office. **Mutation** puts your name on the municipal record, so the BMC bills you for [property tax](/blog/bmc-property-tax).
 
 They are held by different bodies, for different jobs. Since 2019 the first usually triggers the second in Mumbai. It is still worth checking that it did.
 
@@ -102,10 +102,14 @@ Like mutation, **the property card is a record, not a title document.** Ownershi
 
 ## What a correct tax record gives you
 
+**A tax record in your own name makes every later step simpler.** It gives you:
+
 - Property tax bills and receipts in your own name
 - An easier transfer of utility connections
 - Supporting evidence of possession, alongside your deed
 - A clean file when you sell, which a careful buyer's lawyer will look for
+
+**Selling soon?** Check that the bill is in your name before you list. Our [resale flats service](/services/resale-flats) lines up the tax record, the [society NOC for the sale](/blog/society-noc-for-sale-of-flat-mumbai) and the Index 2 chain, then finds the buyer.
 
 ---
 
@@ -133,6 +137,12 @@ Within the first month, while the papers are in front of you. It is a small job 
 **What happens if mutation is never done?**
 Your ownership is unaffected, but the municipal record stays out of date. Bills go to the previous owner and arrears can build up out of sight. A future buyer will also ask why the record does not match the deed.
 
+**How is mutation done after the owner dies?**
+On the MCGM portal, choose Transfer of Property and then Hereditary Transfer, which uses Schedule F. The portal lists the papers for your case, including proof of the death and of who inherits. For a MHADA flat, the Board has its own process: see [MHADA transfer on death](/blog/mhada-transfer-on-death).
+
+**What is the best proof of ownership of a flat?**
+The registered deed, read with the chain of deeds behind it, is the proof of ownership. The tax bill, the property card and the society's share certificate are supporting records.
+
 **What documents are needed for mutation in Mumbai?**
 Usually the registered sale deed, its Index 2, the latest paid property tax bill, the society's letter or share certificate, and identity proof. The MCGM portal lists the exact set for your transfer type, and each file is uploaded as a PDF.
 
@@ -141,5 +151,7 @@ Usually the registered sale deed, its Index 2, the latest paid property tax bill
 ## After you register
 
 Check the next tax bill for your name, and apply on the portal if it has not changed. It keeps every future step simple, from the tax bill to the next sale.
+
+Still looking for a flat? Browse flats for sale in [Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali West](/areas/kandivali/flats-for-sale) and [Malad West](/areas/malad/flats-for-sale).
 
 Just bought in Borivali, Kandivali or Malad? [Send us a WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20bought%20a%20flat%20in%20___%20and%20want%20the%20property%20tax%20bill%20in%20my%20name.) and we will check the record and help with the application.

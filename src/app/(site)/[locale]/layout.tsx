@@ -64,9 +64,12 @@ export async function generateMetadata({
       // service page's own photograph beats the generic card.
       images: [OG_IMAGE],
     },
+    // No images here on purpose. With none set, Next fills twitter:image from
+    // the page's final og:image, so an article shared on X shows its own
+    // photograph. Setting the default card here pinned every page, articles
+    // and services included, to the generic card (found 16 November 2026).
     twitter: {
       card: "summary_large_image",
-      images: [OG_IMAGE.url],
     },
   };
 }

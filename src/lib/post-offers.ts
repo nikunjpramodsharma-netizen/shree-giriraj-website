@@ -43,15 +43,15 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   },
   "can-we-sell-mhada-flat": {
     heading: "Planning to sell your MHADA flat?",
-    body: "We prepare the permission file for the Board and the society, for MHADA flats anywhere in Mumbai. In Borivali, Kandivali and Malad we also find the buyer.",
+    body: "We prepare the permission file for the Board and the society, for MHADA flats anywhere in Mumbai. In Borivali, Kandivali and Malad we also price the flat and find the buyer, usually replying the same day.",
     whatsapp:
-      "Hi Shree Giriraj, I want to sell my MHADA flat in ___. Can you help with the permissions and finding a buyer?",
+      "Hi Shree Giriraj, I want to sell my ___ BHK MHADA flat in ___. Can you help with the permissions and finding a buyer?",
     button: "Ask about selling it",
     intentKey: "intentSell",
   },
   "mhada-transfer-on-death": {
     heading: "Need the flat transferred into your name?",
-    body: "We put together the file the Estate Manager asks for, for flats anywhere in Mumbai. Then we follow it with the Board until the flat is in your name.",
+    body: "We put together the file the Estate Manager asks for, for flats anywhere in Mumbai, and follow it until the flat is in your name. If the family then sells or lets it in Borivali, Kandivali or Malad, we find the buyer or tenant too.",
     whatsapp:
       "Hi Shree Giriraj, I need help transferring a MHADA flat into my name after a death in the family. The flat is in ___.",
     button: "Ask about the transfer",
@@ -83,7 +83,7 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   },
   "mhada-allotment-letter": {
     heading: "Allotment letter or other papers missing?",
-    body: "We prepare the Form 9 application for certified copies from the Board's file. We also work out what your sale, loan or transfer needs, anywhere in Mumbai.",
+    body: "We prepare the Form 9 application for certified copies from the Board's file and work out what your sale, loan or transfer needs, anywhere in Mumbai. Selling in Borivali, Kandivali or Malad? We also find the buyer.",
     whatsapp:
       "Hi Shree Giriraj, my MHADA allotment letter is missing for my flat in ___.",
     button: "Ask about missing papers",
@@ -91,7 +91,7 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   },
   "home-loan-on-mhada-flat": {
     heading: "Need the MHADA NOC for your loan?",
-    body: "We prepare the Form 4 file and clear the dues paperwork. Then we follow the NOC until it reaches your lender, for MHADA flats anywhere in Mumbai.",
+    body: "We prepare the Form 4 file and follow the NOC until it reaches your lender, for MHADA flats anywhere in Mumbai. Buying in Borivali, Kandivali or Malad? We also share resale flats that fit your budget.",
     whatsapp:
       "Hi Shree Giriraj, I need a MHADA NOC for a home loan on my flat in ___ with ___ bank.",
     button: "Ask about your loan NOC",
@@ -99,17 +99,17 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   },
   "mhada-flat-transfer": {
     heading: "Want the transfer done for you?",
-    body: "We build the file against the Board's own checklist and work out the charge for your flat. Then we follow it until the flat is in the new name, anywhere in Mumbai.",
+    body: "We build the file against the Board's own checklist, work out your charge and follow it until the flat is in the new name, anywhere in Mumbai. Buying or selling in Borivali, Kandivali or Malad? We handle the flat too.",
     whatsapp:
       "Hi Shree Giriraj, I need a MHADA transfer after a ___ (sale, gift or death) for my flat in ___.",
     button: "Ask about your transfer",
     intentKey: "intentMhada",
   },
   "mhada-noc-online": {
-    heading: "Want the NOC handled for you?",
-    body: "We prepare the application and the file and apply through the right route. Then we follow it until the certificate is issued, for MHADA flats anywhere in Mumbai.",
+    heading: "Need a MHADA NOC, or selling the flat?",
+    body: "We prepare the file, apply through the right route and follow it until the certificate is issued, anywhere in Mumbai. Selling in Borivali, Kandivali or Malad? We also find the buyer.",
     whatsapp:
-      "Hi Shree Giriraj, I need a MHADA NOC for ___ for my flat in ___.",
+      "Hi Shree Giriraj, I need a MHADA NOC for ___ (rent, loan or sale) for my flat in ___.",
     button: "Ask about your NOC",
     intentKey: "intentMhada",
   },
@@ -119,9 +119,9 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   // them as part of the deal. Never a standalone document service.
   "igr-maharashtra-explained": {
     heading: "Buying or selling a flat?",
-    body: "We search the registered record on the flat before you pay a token, and walk you through stamp duty and registration in rupees.",
+    body: "Buying, we search the registered record on the flat before you pay a token. Selling, we find the buyer and line up the paperwork to registration.",
     whatsapp:
-      "Hi Shree Giriraj, I am planning to buy a flat in ___. Can you help with the checks and registration?",
+      "Hi Shree Giriraj, I am buying or selling a flat in ___. Can you check the IGR record and help with the deal?",
     button: "Ask about your flat",
     intentKey: "intentBuy",
   },
@@ -200,9 +200,9 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   // Buying and renting.
   "carpet-area-vs-built-up-area": {
     heading: "Comparing flats?",
-    body: "We check the carpet area on the flats you shortlist and work out the rate per usable square foot, so you compare like with like.",
+    body: "Tell us the size, your budget and the pocket. We send the flats that fit in Borivali, Kandivali or Malad, usually the same day, with the carpet area checked and the rate per usable square foot worked out.",
     whatsapp:
-      "Hi Shree Giriraj, I am looking for a flat in ___. My budget is about ___.",
+      "Hi Shree Giriraj, I am looking for a ___ BHK in ___. My budget is about ___. Please share the carpet area too.",
     button: "Get flats that fit",
     intentKey: "intentBuy",
   },
@@ -216,17 +216,17 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   },
   "under-construction-vs-ready-to-move-flat": {
     heading: "Deciding between new and ready?",
-    body: "We share new launches and ready flats in Borivali, Kandivali and Malad side by side, with the MahaRERA details and the paperwork checked.",
+    body: "Tell us the size, your budget and the pocket. We send new launches and ready flats in Borivali, Kandivali and Malad side by side, usually the same day, with the MahaRERA details and the paperwork checked.",
     whatsapp:
-      "Hi Shree Giriraj, I am deciding between a new launch and a ready flat in ___. My budget is about ___.",
+      "Hi Shree Giriraj, I am deciding between a new launch and a ready flat. I am looking for a ___ BHK in ___. My budget is about ___.",
     button: "Compare your options",
     intentKey: "intentNewProject",
   },
   "choosing-an-interior-designer-in-borivali": {
     heading: "Planning interiors for your flat?",
-    body: "We give you an itemised estimate before work starts and take care of the society's permission, with design and execution under one roof.",
+    body: "Send three photos and the area of your flat in Borivali, Kandivali or Malad. We reply with an itemised estimate, check any quote you already hold and handle the society's permission. No advance until the scope is agreed.",
     whatsapp:
-      "Hi Shree Giriraj, I am planning interiors for my flat in ___. Can you share an estimate?",
+      "Hi Shree Giriraj, I am planning interiors for my ___ BHK in ___. It is about ___ sq ft. Can you share an itemised estimate?",
     button: "Ask for an estimate",
   },
 
@@ -235,7 +235,7 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   // direct route the posts compare against.
   "commercial-property-investment-mumbai": {
     heading: "Looking at a shop or office?",
-    body: "We find shops and offices in Borivali, Kandivali and Malad and check the approved use, society rules and frontage before you commit.",
+    body: "Tell us the parade and your budget. We show you the shops and offices genuinely available in Borivali, Kandivali and Malad, tell you what similar units let for, and check the approved use, society rules and frontage before you commit.",
     whatsapp:
       "Hi Shree Giriraj, I am looking for a shop or office in ___. My budget is about ___.",
     button: "Find shops and offices",
@@ -243,31 +243,31 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   },
   "best-area-to-invest-in-mumbai": {
     heading: "Weighing up where to invest?",
-    body: "We compare pockets in Borivali, Kandivali and Malad on rent, tenants and resale, and work out the yield on the flats you shortlist.",
+    body: "Send your budget and the kind of tenant you want. We send the flats in Borivali, Kandivali or Malad that fit, usually the same day, with the achieved rent and the net yield on each.",
     whatsapp:
-      "Hi Shree Giriraj, I want to invest in a flat in ___. My budget is about ___.",
-    button: "Talk about investing",
+      "Hi Shree Giriraj, I want to invest in a flat in ___. My budget is about ___. Which pockets and flats fit?",
+    button: "Get flats that fit",
     intentKey: "intentInvest",
   },
   "how-to-invest-in-real-estate-india": {
     heading: "Thinking of buying to invest?",
-    body: "We help first investors choose the pocket and the flat, work out the real yield and check the title before you commit.",
+    body: "Tell us the budget and whether the money must pay monthly or grow. We send the flats in Borivali, Kandivali or Malad that fit, usually the same day, with the full cost and real yield, and check the title before you commit.",
     whatsapp:
-      "Hi Shree Giriraj, I want to invest in a flat in ___. My budget is about ___.",
-    button: "Talk about investing",
+      "Hi Shree Giriraj, I want to invest in a flat in ___. My budget is about ___ and I plan to hold for about ___ years.",
+    button: "Get flats that fit",
     intentKey: "intentInvest",
   },
   "fractional-ownership-real-estate-india": {
     heading: "Leaning towards a flat?",
-    body: "We help you find a flat in Borivali, Kandivali or Malad that lets well, with the rent and the yield worked out before you decide.",
+    body: "Tell us the amount and how long you can hold it. We set a real flat in Borivali, Kandivali or Malad beside the REIT you are weighing, with its achieved rent and outgoings, so you can choose on the numbers.",
     whatsapp:
-      "Hi Shree Giriraj, I want to invest in a flat in ___. My budget is about ___.",
+      "Hi Shree Giriraj, I am comparing a REIT with a flat. I can invest about ___ and hold for about ___ years.",
     button: "Talk about investing",
     intentKey: "intentInvest",
   },
   "rental-yield-mumbai": {
     heading: "Want the yield on a real flat?",
-    body: "Send us the flat you are looking at and we will work out its gross and net yield using local rents for that pocket.",
+    body: "Send us the building you are looking at. We work out its gross and net yield from the rent that building actually achieves, and send other flats in the pocket that let well.",
     whatsapp:
       "Hi Shree Giriraj, I am looking at a flat in ___ as an investment. Can you work out its rental yield?",
     button: "Get the yield worked out",
@@ -275,7 +275,7 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   },
   "gift-deed-stamp-duty-maharashtra": {
     heading: "Gifting a flat in the family?",
-    body: "We prepare the draft gift deed, work out the stamp duty and registration for your exact relationship, and book the registration, for flats in Borivali, Kandivali and Malad.",
+    body: "We work out the stamp duty and registration for your exact relationship and walk you through each step to registration, for flats in Borivali, Kandivali and Malad.",
     whatsapp:
       "Hi Shree Giriraj, I want to gift my flat in ___ to my ___. Can you tell me the stamp duty and the steps?",
     button: "Ask about a gift deed",
@@ -297,19 +297,19 @@ export const POST_OFFERS: Record<string, PostOffer> = {
     intentKey: "intentRent",
   },
   "society-noc-for-sale-of-flat-mumbai": {
-    heading: "Selling your flat?",
-    body: "We prepare the society notice, check the dues and line up the buyer's papers, so the transfer moves without delay, for flats in Borivali, Kandivali and Malad.",
+    heading: "Selling your flat? We find the buyer and line up the NOC",
+    body: "We advise on the asking price, bring you serious buyers and prepare the society notice and the NOC the buyer's bank asks for, through to registration, for flats in Borivali, Kandivali and Malad.",
     whatsapp:
-      "Hi Shree Giriraj, I want to sell my flat in ___ society. Can you help with the society notice and NOC?",
-    button: "Ask about selling",
+      "Hi Shree Giriraj, I want to sell my ___ BHK flat in ___ society, ___. Can you find a buyer and help with the society NOC?",
+    button: "Get a price view",
     intentKey: "intentSell",
   },
   "society-share-certificate-transfer-fee": {
-    heading: "Society asking for a transfer fee?",
-    body: "We read the society's notice with you, check the papers on both sides before the token, and keep the transfer moving, for flats in Borivali, Kandivali and Malad.",
+    heading: "Buying or selling a flat in a society?",
+    body: "We check the share certificate, the society's records and the dues before the token, and line up the transfer with the secretary. Selling? We also bring you buyers in Borivali, Kandivali and Malad.",
     whatsapp:
-      "Hi Shree Giriraj, I am buying or selling a flat in ___ and the society has asked for a transfer fee of ___. Can you check it?",
-    button: "Get the notice checked",
+      "Hi Shree Giriraj, I am ___ (buying or selling) a flat in ___ society. Can you check the share certificate and the transfer papers?",
+    button: "Ask about your flat",
     intentKey: "intentSell",
   },
   "redevelopment-borivali-kandivali": {
@@ -330,7 +330,7 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   },
   "mhada-dues-lease-rent-property-tax": {
     heading: "Need your MHADA dues checked?",
-    body: "We check what is due to the Board, the society and the BMC, gather the receipts and take the file to the Estate Manager, for MHADA flats anywhere in Mumbai.",
+    body: "We check what is due to the Board, the society and the BMC, gather the receipts and take the file to the Estate Manager, for MHADA flats anywhere in Mumbai. Selling in Borivali, Kandivali or Malad? We also find the buyer.",
     whatsapp:
       "Hi Shree Giriraj, I want to check the dues on my MHADA flat in ___ before a ___ (sale, rent or transfer).",
     button: "Ask for a dues check",
@@ -338,21 +338,21 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   },
   "2-bhk-interior-cost-mumbai": {
     heading: "Want an itemised estimate for your flat?",
-    body: "We give you an itemised estimate before work starts, with the society's permission handled and design and execution under one roof.",
+    body: "Send three photos and the carpet area of your 2 BHK in Borivali, Kandivali or Malad. We reply with an itemised estimate, room by room, with GST shown and the society's permission handled.",
     whatsapp:
-      "Hi Shree Giriraj, I am planning interiors for my 2 BHK in ___. Can you share an itemised estimate?",
+      "Hi Shree Giriraj, I am planning interiors for my 2 BHK in ___. It is about ___ sq ft. Can you share an itemised estimate?",
     button: "Ask for an estimate",
   },
   "modular-kitchen-cost-mumbai": {
     heading: "Planning a new kitchen?",
-    body: "We give you an itemised kitchen estimate before work starts and handle the society's permission, with design and building under one roof.",
+    body: "Send a photo and the kitchen's size. We reply with an itemised estimate by layout, board and finish, with GST shown, and handle the society's permission.",
     whatsapp:
       "Hi Shree Giriraj, I want a modular kitchen estimate for my flat in ___. The kitchen is about ___ ft by ___ ft.",
     button: "Ask for a kitchen estimate",
   },
   "can-nri-buy-property-in-india": {
     heading: "Buying from abroad?",
-    body: "We find and check resale flats and new projects in Borivali, Kandivali and Malad, read the papers with you and work out stamp duty and registration in rupees. Send your country and budget for a shortlist.",
+    body: "Send your country, the size and your budget. We send resale flats and new projects in Borivali, Kandivali and Malad that fit, usually the same day, show them on a video call and read the papers with you.",
     whatsapp:
       "Hi Shree Giriraj, I live in ___ and I am looking for a flat in ___. My budget is about ___.",
     button: "Send us your budget",
@@ -360,7 +360,7 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   },
   "buy-flat-in-mumbai-from-abroad": {
     heading: "Buying a Mumbai flat from abroad?",
-    body: "Tell us your city and your budget. We shortlist two or three flats in Borivali, Kandivali and Malad, read the papers before a price is agreed and handle the steps after: agreement, registration and the society transfer.",
+    body: "Tell us your city, the size and your budget. We shortlist two or three flats in Borivali, Kandivali and Malad, usually the same day, show them on a video call and read the papers before a price is agreed.",
     whatsapp:
       "Hi Shree Giriraj, I live in ___ and I want to buy a flat in ___. My budget is about ___.",
     button: "Share your budget",
@@ -368,9 +368,9 @@ export const POST_OFFERS: Record<string, PostOffer> = {
   },
   "buy-first-flat-in-mumbai": {
     heading: "Buying your first flat?",
-    body: "We shortlist two or three flats that fit your budget, check the building and the papers before you pay a token, and work out stamp duty and registration in rupees. Then we stay with you through registration and the society transfer.",
+    body: "Tell us the size, your budget and the pocket. We send two or three flats that fit, usually the same day, check the building and the papers before you pay a token, and stay with you through registration.",
     whatsapp:
-      "Hi Shree Giriraj, I am buying my first flat in ___. My budget is about ___.",
+      "Hi Shree Giriraj, I am buying my first flat. I am looking for a ___ BHK in ___. My budget is about ___.",
     button: "Plan my first flat",
     intentKey: "intentBuy",
   },
@@ -407,10 +407,10 @@ export const POST_OFFERS: Record<string, PostOffer> = {
  */
 export const SERVICE_OTHER_SIDE: Record<string, PostOffer> = {
   "resale-flats": {
-    heading: "Selling a flat instead?",
-    body: "We advise on the asking price for your pocket, prepare the papers buyers ask for and bring you serious buyers, through to registration.",
-    whatsapp: "Hi Shree Giriraj, I want to sell my ___ BHK flat in ___.",
-    button: "Ask about selling",
+    heading: "Selling your flat? Start with a free price opinion",
+    body: "Send the building, floor and size. We reply with a fair listing price for your pocket, usually the same day, then prepare the papers buyers ask for and bring you buyers we have already met, through to registration.",
+    whatsapp: "Hi Shree Giriraj, I want to sell my ___ BHK flat in ___ (building ___, floor ___). What is a fair listing price?",
+    button: "Get a free price opinion",
     intentKey: "intentSell",
   },
   rentals: {

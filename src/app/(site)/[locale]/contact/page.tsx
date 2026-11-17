@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
@@ -43,6 +44,32 @@ const CONTACT_FAQS: { q: string; a: string }[] = [
     q: "How do I reach you on WhatsApp?",
     a: `Message ${spoken(site.phonePrimary)} on WhatsApp with what you need, the area and your budget. We reply with options that fit, usually the same day. You can also call ${spoken(site.phonePrimary)} or ${spoken(site.phoneSecondary)}.`,
   },
+  {
+    q: "Can I get a price for my flat before I visit?",
+    a: "Yes. Send the building, floor and size on WhatsApp, and we reply with a free, fair listing price, usually the same day. If you then want to sell, we prepare the papers buyers ask for and bring buyers we have already met.",
+  },
+  {
+    q: "Which areas do you find flats in?",
+    a: "Borivali, Kandivali and Malad, on both the west and east sides, to buy, sell or rent. MHADA paperwork we handle anywhere in Mumbai, because every Mumbai Board file goes to the same office in Bandra East.",
+  },
+  {
+    q: "Is Shree Giriraj a registered real estate agency?",
+    a: `Yes. Shree Giriraj Real Estate holds MahaRERA registration ${site.rera}, which you can check free on the MahaRERA portal. The firm has worked in real estate since ${site.established} and from this office since ${site.officeSince}.`,
+  },
+  {
+    q: "Is there a cost to list my flat for sale or rent?",
+    a: "Nothing to start. The first conversation and the price opinion are free, and brokerage is agreed in writing before we begin. On a rental, there is nothing to pay until the tenancy completes.",
+  },
+];
+
+/** Where a visitor goes next, by what they came to do. */
+const CONTACT_ROUTES: { href: string; label: string }[] = [
+  { href: "/services/resale-flats", label: "Buy or sell a resale flat" },
+  { href: "/services/rentals", label: "Rent a flat or let yours" },
+  { href: "/services/new-project-bookings", label: "Book in a new project" },
+  { href: "/services/mhada-paperwork", label: "MHADA paperwork, anywhere in Mumbai" },
+  { href: "/services/interiors", label: "Interiors and civil work" },
+  { href: "/about", label: "About the firm and its founder" },
 ];
 
 const CONTACT_ANSWER = `Shree Giriraj Real Estate is at ${site.address}. We are open ${site.hours.label.replace(", all seven days", "")}, all seven days. WhatsApp or call ${spoken(site.phonePrimary)} for a free first conversation, usually the same day.`;
@@ -66,8 +93,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   if (params.locale !== CONTACT_LOCALE) return {};
   return {
-    title: "Contact us: Chikoowadi, Borivali West",
-    description: "Visit, call or WhatsApp us in Chikoowadi, Borivali West. Open 9 am to 9 pm, all week. The first conversation is free, usually the same day.",
+    title: "Contact our Borivali West real estate agency",
+    description: "Visit, call or WhatsApp our real estate agency in Chikoowadi, Borivali West. Open 9 am to 9 pm, all seven days. The first conversation is free.",
     ...pageUrls(params.locale, "/contact", [CONTACT_LOCALE]),
   };
 }
@@ -116,7 +143,7 @@ export default function ContactPage({
             Contact
           </div>
           <h1 className="mt-3 max-w-[20ch] text-3xl text-white md:text-5xl">
-            Talk to someone who works here
+            Contact our real estate agency in Borivali West
           </h1>
           <p className="mt-5 max-w-[58ch] text-paper/80">
             A family run agency. The person who answers is the person who
@@ -218,6 +245,19 @@ export default function ContactPage({
             </div>
 
             <ShopMap mapsUrl={site.social.google} />
+
+            <div className="mt-8">
+              <h2 className="text-lg font-semibold text-ink">What can we help with?</h2>
+              <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                {CONTACT_ROUTES.map((r) => (
+                  <li key={r.href}>
+                    <Link prefetch={false} href={r.href} className="font-medium text-brand-indigo underline underline-offset-4">
+                      {r.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <ContactCTA locale={locale} formLocation="contact-page" defaultOpen />

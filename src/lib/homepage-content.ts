@@ -77,8 +77,9 @@ export type AreaPanel = {
  * which are planning data for us and meaningless to a visitor ("140/mo,
  * searches, Borivali West" answered a question nobody on the page had). They
  * now show what a buyer actually wants at a glance: the resale asking rate
- * per square foot of carpet (Mumbai Property Exchange, median of listings
- * over the 18 months to July 2026) and the new launch asking band
+ * per square foot of carpet (Mumbai Property Exchange, resale offered
+ * median, week ending 15 November 2026, refreshed 16 November 2026 to match
+ * the carpet area article) and the new launch asking band
  * (Mumbai Property Exchange and PropertyPistol, September 2026). Asking, not
  * registered, and the labels say so. Every panel shows both sides of its
  * suburb; "Since 1996" was dropped from the Borivali row because the site
@@ -87,7 +88,7 @@ export type AreaPanel = {
  */
 /** Shown under the panel figures wherever they appear, so each number carries its source and date. */
 export const AREA_STATS_SOURCE =
-  "Mumbai Property Exchange and PropertyPistol listings, July and September 2026. Asking rates, not prices paid.";
+  "Mumbai Property Exchange resale medians, week ending 15 November 2026, and PropertyPistol new launch bands, September 2026. Asking rates, not prices paid.";
 
 export const AREA_PANELS: AreaPanel[] = [
   {
@@ -96,8 +97,8 @@ export const AREA_PANELS: AreaPanel[] = [
     image: "/premium/u/mumbai-aerial-cloudy.jpg",
     body: "Our home turf. Resale, rentals and investment advice across Borivali West and East, from Chikoowadi to the station belt. The pocket you choose matters more here than the building does.",
     stats: [
-      { value: "₹31,200", label: "Resale asking, per sq ft carpet, West" },
-      { value: "₹31,400", label: "Resale asking, per sq ft carpet, East" },
+      { value: "₹36,228", label: "Resale asking, per sq ft carpet, West" },
+      { value: "₹34,091", label: "Resale asking, per sq ft carpet, East" },
       { value: "₹25k to 35k", label: "New launch asking, per sq ft, both sides" },
     ],
     watch:
@@ -109,8 +110,8 @@ export const AREA_PANELS: AreaPanel[] = [
     image: "/premium/u/mumbai-aerial-day.jpg",
     body: "Premium new launches and family homes off M.G. Road and Link Road, including Jaswanti Jewel. The strongest new build activity of the three, which means the widest choice for a first buyer.",
     stats: [
-      { value: "₹25,400", label: "Resale asking, per sq ft carpet, West" },
-      { value: "₹26,400", label: "Resale asking, per sq ft carpet, East" },
+      { value: "₹29,201", label: "Resale asking, per sq ft carpet, West" },
+      { value: "₹32,150", label: "Resale asking, per sq ft carpet, East" },
       { value: "₹24k to 45k", label: "New launch asking, per sq ft, East" },
     ],
     watch:
@@ -122,8 +123,8 @@ export const AREA_PANELS: AreaPanel[] = [
     image: "/premium/p/p6.jpg",
     body: "Growing residential and commercial options near Mindspace and the Link Road corridor. More investor money here than in the other two, which moves the price differently.",
     stats: [
-      { value: "₹27,000", label: "Resale asking, per sq ft carpet, West" },
-      { value: "₹24,000", label: "Resale asking, per sq ft carpet, East" },
+      { value: "₹32,546", label: "Resale asking, per sq ft carpet, West" },
+      { value: "₹30,591", label: "Resale asking, per sq ft carpet, East" },
       { value: "₹24k to 33k", label: "New launch asking, per sq ft, West" },
     ],
     watch:

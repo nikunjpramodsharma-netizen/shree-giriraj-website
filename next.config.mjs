@@ -19,11 +19,19 @@ const nextConfig = {
   // hourly regeneration was not traced to them, so the first rebuild after a
   // deploy dropped every article from the sitemap (found 19 September 2026).
   // Name them explicitly for every route that reads them.
+  //
+  // The long form guides in content/guides had the same gap: the three live
+  // guides were missing from the live sitemap.xml on 16 November 2026 because
+  // the regenerated sitemap could not see the folder (getPublishedGuides found
+  // no files and returned nothing). Both folders are now named for every
+  // route that reads either of them, llms.txt included.
   experimental: {
     outputFileTracingIncludes: {
-      "/sitemap.xml": ["./content/drafts/**/*"],
-      blog: ["./content/drafts/**/*"],
-      guides: ["./content/drafts/**/*"],
+      "/sitemap.xml": ["./content/drafts/**/*", "./content/guides/**/*"],
+      "/llms.txt": ["./content/drafts/**/*", "./content/guides/**/*"],
+      "/llms-full.txt": ["./content/drafts/**/*", "./content/guides/**/*"],
+      blog: ["./content/drafts/**/*", "./content/guides/**/*"],
+      guides: ["./content/drafts/**/*", "./content/guides/**/*"],
     },
   },
   async redirects() {

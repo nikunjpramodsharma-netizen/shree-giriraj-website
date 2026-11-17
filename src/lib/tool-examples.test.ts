@@ -36,8 +36,8 @@ describe("hub copy", () => {
   it("has a line for every tool that exists today it knows about", () => {
     for (const k of Object.keys(TOOL_AUDIENCE)) expect(TOOLS.some((t) => t.slug === k)).toBe(true);
   });
-  it("has three questions and no dashes", () => {
-    expect(TOOLS_HUB_FAQS).toHaveLength(3);
+  it("has six or more questions and no dashes", () => {
+    expect(TOOLS_HUB_FAQS.length).toBeGreaterThanOrEqual(6);
     const all = JSON.stringify([TOOL_AUDIENCE, TOOLS_HUB_FAQS]);
     expect(all).not.toMatch(/[—–]/);
     expect(all).not.toMatch(/\bagent\b/i);

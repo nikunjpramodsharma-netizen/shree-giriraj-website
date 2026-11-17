@@ -10,13 +10,38 @@ import { RelatedLinks } from "@/components/RelatedLinks";
 import { InView } from "@/components/motion/InView";
 import { StickyBar } from "@/components/motion/StickyBar";
 import { FlatPriceEstimator } from "@/components/FlatPriceEstimator";
-import { graph, breadcrumbNode, faqNode } from "@/lib/schema";
+import { graph, breadcrumbNode, faqNode, localServiceNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
 import { site, waLink } from "@/lib/config";
 import { showPhone } from "@/lib/card";
 import { getArea } from "@/lib/areas";
-import { FLAT_LISTINGS, LISTING_SEGMENT, getListing, listingPath } from "@/lib/flats";
+import { FLAT_LISTINGS, LISTING_SEGMENT, BHK_SIZES, bhkBudget, getListing, listingPath } from "@/lib/flats";
 import { interlinksForListing } from "@/lib/interlinks";
+import { projectsInArea, registrationAwaited } from "@/lib/project-links";
+
+/**
+ * The buying reads a sale page hands on to: the 1 BHK sums, the first flat
+ * walk through, and the new projects guide where one exists for the suburb.
+ * All three are English only, like this page, so plain anchors are right.
+ */
+const BUYING_READS: { href: string; label: string; hook: string; areas?: string[] }[] = [
+  {
+    href: "/blog/1-bhk-price-borivali-kandivali-malad",
+    label: "1 BHK price in Borivali, Kandivali and Malad",
+    hook: "The down payment, the EMI and the income a bank looks for.",
+  },
+  {
+    href: "/blog/buy-first-flat-in-mumbai",
+    label: "Buying your first flat in Mumbai, step by step",
+    hook: "From the budget to the keys, in the order it happens.",
+  },
+  {
+    href: "/guides/new-projects-borivali-west",
+    label: "New projects in Borivali West",
+    hook: "How to read a launch in Borivali West before you book.",
+    areas: ["borivali-west"],
+  },
+];
 
 export const revalidate = 300;
 
@@ -116,6 +141,7 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
     { name: l.intent === "sale" ? "Flats for sale" : "Flats for rent", path },
   ];
   const other = FLAT_LISTINGS.find((x) => x.area === l.area && x.intent !== l.intent);
+  const newProjects = projectsInArea(l.area);
 
   return (
     <article>
@@ -123,6 +149,13 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
         data={graph(
           breadcrumbNode(locale, trail),
           faqNode(l.faqs.map((f) => ({ question: f.q, answer: f.a }))),
+          localServiceNode({
+            locale,
+            name: l.h1,
+            path,
+            place: l.place,
+            description: l.metaDescription,
+          }),
         )}
       />
 
@@ -186,6 +219,9 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
         <div className="max-w-[68ch] rounded-r-xl border-l-[3px] border-bronze bg-paper-alt px-6 py-5">
           <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">The short answer</div>
           <p className="mt-2.5 text-lg text-ink">{l.answer}</p>
+          <p className="mt-3 text-xs text-muted">
+            Updated on {l.updatedOn}: every figure read again against its source that day.
+          </p>
         </div>
 
         <section className="mt-12" aria-labelledby="how-it-works">
@@ -219,7 +255,7 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
 
         <section className="mt-12">
           <h2 className="text-2xl text-ink md:text-3xl">
-            {l.intent === "sale" ? `1, 2 and 3 BHK in ${l.place}` : `Rents by size in ${l.place}`}
+            {l.intent === "sale" ? `1, 2 and 3 BHK flat prices in ${l.place}` : `1, 2 and 3 BHK rents in ${l.place}`}
           </h2>
           <InView className="cascade mt-6 grid gap-4 md:grid-cols-3" threshold={0.15}>
             {l.sizes.map((s, i) => (
@@ -245,9 +281,60 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
         </section>
 
         {l.pockets && (
+          <section className="mt-12" aria-labelledby="bhk-by-pocket">
+            <h2 id="bhk-by-pocket" className="text-2xl text-ink md:text-3xl">
+              What each budget buys in {l.place}, pocket by pocket
+            </h2>
+            <p className="mt-3 max-w-[68ch] text-ink/80">
+              Each cell is the pocket&apos;s published asking rate times the size of the flat. Find your budget in a
+              row, and that is the pocket and size to ask us about.
+            </p>
+            <div className="mt-5 overflow-x-auto rounded-xl border border-line">
+              <table className="w-full min-w-[620px] border-collapse text-left text-sm">
+                <caption className="sr-only">1, 2 and 3 BHK asking prices by pocket in {l.place}</caption>
+                <thead className="bg-paper-alt text-xs uppercase tracking-wider text-muted">
+                  <tr>
+                    <th scope="col" className="px-4 py-3 font-semibold">Pocket and rate source</th>
+                    {BHK_SIZES.map((s) => (
+                      <th key={s.size} scope="col" className="px-4 py-3 font-semibold">
+                        {s.size}
+                        <span className="block font-normal normal-case tracking-normal">{s.label}</span>
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-line bg-white">
+                  {l.pockets.map((p) => (
+                    <tr key={p.label}>
+                      <th scope="row" className="px-4 py-3 font-medium text-brand-indigo">
+                        {p.label}
+                        <span className="block text-xs font-normal text-muted">{p.note}</span>
+                      </th>
+                      {BHK_SIZES.map((s) => (
+                        <td key={s.size} className="px-4 py-3 text-ink/85">
+                          {bhkBudget(p.low, p.high, s.low, s.high)}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-3 max-w-[68ch] text-xs text-muted">
+              Asking figures, not prices paid. 400 to 450 sq ft is the 1 BHK carpet size our resale service quotes; 700
+              and 950 sq ft are 2 and 3 BHK sizes in the new projects on this site. Square Yards and NoBroker quote
+              asking rates without stating the area basis. Rates per sq ft of carpet run higher: Mumbai Property
+              Exchange put the Borivali West resale median at 36,228 per sq ft of carpet in the week ending 15
+              November 2026. Ask us what any price is quoted on. Stamp duty adds 6 percent for most buyers, and
+              registration up to 30,000 rupees.
+            </p>
+          </section>
+        )}
+
+        {l.pockets && (
           <section className="mt-12 grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-start">
             <div className="max-w-[60ch]">
-              <h2 className="text-2xl text-ink md:text-3xl">Asking rates by pocket</h2>
+              <h2 className="text-2xl text-ink md:text-3xl">Property rates in {l.place} per sq ft</h2>
               <ul className="mt-5 divide-y divide-line rounded-2xl border border-line bg-white">
                 {l.pockets.map((p) => (
                   <li key={p.label} className="flex items-baseline justify-between gap-4 px-5 py-3">
@@ -291,6 +378,64 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
           </aside>
         </section>
 
+        {l.intent === "sale" && (
+          <section className="mt-14 max-w-[76ch]" aria-labelledby="new-or-resale">
+            <h2 id="new-or-resale" className="text-2xl text-ink md:text-3xl">
+              New projects in {l.place}, or a resale flat?
+            </h2>
+            {newProjects.length > 0 ? (
+              <>
+                <p className="mt-3 text-ink/80">
+                  A resale flat is ready to move into and priced against the building next door. A new project lets
+                  you pay in stages and choose the floor. These are the {l.place} launches on our list, compared side
+                  by side on the{" "}
+                  <a href={`/projects#${l.area === "kandivali" ? "kandivali-west" : "borivali-west"}`} className="font-semibold text-brand-indigo underline underline-offset-4">
+                    new projects page
+                  </a>
+                  .
+                </p>
+                <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {newProjects.map((p) => (
+                    <li key={p.slug}>
+                      <a
+                        href={`/projects/${p.slug}`}
+                        className="group block rounded-xl border border-line bg-white p-4 transition hover:border-bronze hover:shadow-md"
+                      >
+                        <span className="font-display text-lg text-brand-indigo">{p.name}</span>
+                        <span className="mt-1 block text-sm text-ink/70 group-hover:text-ink">
+                          {registrationAwaited(p.slug)
+                            ? "MahaRERA registration awaited. Register your interest for updates."
+                            : "Configurations, the from about price and the MahaRERA status."}
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <p className="mt-3 text-ink/80">
+                Our{" "}
+                <a href="/projects" className="font-semibold text-brand-indigo underline underline-offset-4">
+                  new projects page
+                </a>{" "}
+                lists launches in Kandivali West and Borivali West. For a launch in {l.place}, send us your budget on
+                WhatsApp and we share the projects that fit, each with its MahaRERA registration checked.
+              </p>
+            )}
+            <h3 className="mt-8 font-display text-xl text-brand-indigo">Read before you buy</h3>
+            <ul className="mt-3 space-y-3">
+              {BUYING_READS.filter((r) => !r.areas || r.areas.includes(l.area)).map((r) => (
+                <li key={r.href} className="text-ink/80">
+                  <a href={r.href} className="font-semibold text-brand-indigo underline underline-offset-4">
+                    {r.label}
+                  </a>
+                  : {r.hook}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
         <section className="mt-14">
           <h2 className="text-2xl text-ink md:text-3xl">Common questions</h2>
           <InView className="cascade mt-6 grid items-start gap-3 md:grid-cols-2" threshold={0.1}>
@@ -333,7 +478,17 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
             <a href={`/areas/${area.slug}`} className="font-semibold text-brand-indigo underline underline-offset-4">
               {area.longName} area guide
             </a>
-            .
+            {l.intent === "rent" ? (
+              <>
+                . Weighing renting against buying? Our{" "}
+                <a href="/blog/rent-or-buy-borivali-kandivali-malad" className="font-semibold text-brand-indigo underline underline-offset-4">
+                  rent or buy guide
+                </a>{" "}
+                works out the break even for each suburb.
+              </>
+            ) : (
+              "."
+            )}
           </p>
         )}
       </div>

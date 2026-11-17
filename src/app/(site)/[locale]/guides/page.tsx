@@ -16,7 +16,7 @@ const GUIDE_LOCALE = "en";
 
 /** About 60 words. The first thing on the page, written to be quoted whole. */
 const HUB_INTRO =
-  "These free guides explain each step of a Mumbai property deal in plain words. Start with property paperwork for the documents, from the first check to the tax bill in your name. Then pick buying, new projects, renting or MHADA for the guides that fit you. Each guide cites official sources, and our Borivali office can help with any step.";
+  "These free guides explain each step of a Mumbai property deal in plain words. Start with property paperwork for the documents, from the first check to the tax bill in your name. Then pick buying, new projects, selling, renting or MHADA for the guides that fit you. Each guide cites official sources, and our Borivali office can help with any step.";
 
 type TopicLink = { title: string; href: string };
 type Topic = { title: string; blurb: string; links: TopicLink[] };
@@ -35,7 +35,7 @@ function newProjectsTopic(): Topic | null {
   return {
     title: "New projects and launches",
     blurb:
-      "Booking a flat in a new project: launch bookings, the allotment letter, stamp duty and GST, and how to read a builder's RERA page.",
+      "New projects in Borivali West and Kandivali West, GST and stamp duty on a new flat, and how to read a builder's RERA page.",
     links,
   };
 }
@@ -45,13 +45,31 @@ const STATIC_TOPICS: Topic[] = [
   {
     title: "Buying a flat",
     blurb:
-      "From comparing flats to paying stamp duty, for buyers in Borivali, Kandivali and Malad.",
+      "From budget and loan to the keys, for buyers in Borivali, Kandivali and Malad. Tell us size, budget and pocket on WhatsApp and we send the flats that fit, usually the same day.",
     links: [
+      { title: "Buying your first flat in Mumbai, step by step", href: "/blog/buy-first-flat-in-mumbai" },
+      { title: "1 BHK price in Borivali, Kandivali and Malad", href: "/blog/1-bhk-price-borivali-kandivali-malad" },
+      { title: "Rent or buy: the break even in rupees", href: "/blog/rent-or-buy-borivali-kandivali-malad" },
       { title: "Carpet, built up and super built up area", href: "/blog/carpet-area-vs-built-up-area" },
       { title: "Under construction or ready to move", href: "/blog/under-construction-vs-ready-to-move-flat" },
       { title: "Stamp duty and registration charges in Mumbai", href: "/blog/stamp-duty-and-registration-charges-mumbai" },
+      { title: "Buying a Mumbai flat from abroad (NRI)", href: "/blog/buy-flat-in-mumbai-from-abroad" },
       { title: "Home loan EMI calculator", href: "/tools/home-loan-emi-calculator" },
-      { title: "Resale flats in Borivali, Kandivali and Malad", href: "/services/resale-flats" },
+      { title: "Flats for sale in Borivali West", href: "/areas/borivali-west/flats-for-sale" },
+      { title: "Flats for sale in Kandivali West", href: "/areas/kandivali/flats-for-sale" },
+      { title: "Flats for sale in Malad West", href: "/areas/malad/flats-for-sale" },
+    ],
+  },
+  {
+    title: "Selling a flat",
+    blurb:
+      "For owners selling in Borivali, Kandivali and Malad: the papers a buyer asks for, and a buyer found for you.",
+    links: [
+      { title: "Sell your flat with us", href: "/services/resale-flats" },
+      { title: "Society NOC for the sale of a flat", href: "/blog/society-noc-for-sale-of-flat-mumbai" },
+      { title: "Index 2: the record your buyer will ask for", href: "/blog/index-2-property-document" },
+      { title: "Share certificate transfer and fee", href: "/blog/society-share-certificate-transfer-fee" },
+      { title: "Can we sell a MHADA flat?", href: "/blog/can-we-sell-mhada-flat" },
     ],
   },
   {
@@ -80,7 +98,7 @@ const STATIC_TOPICS: Topic[] = [
   },
 ];
 
-/** Buying a flat first, then new projects, then the rest. */
+/** Buying, then new projects, then selling and the rest. */
 function topics(): Topic[] {
   const fresh = newProjectsTopic();
   if (!fresh) return STATIC_TOPICS;

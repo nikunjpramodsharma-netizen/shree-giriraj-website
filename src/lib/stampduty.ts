@@ -39,7 +39,7 @@
  * for joint ownership are wrong on the instrument.
  */
 
-export const RATES_VERIFIED_ON = "2026-09-16";
+export const RATES_VERIFIED_ON = "2026-11-16";
 
 export const RATE_SOURCES: { label: string; url: string }[] = [
   {

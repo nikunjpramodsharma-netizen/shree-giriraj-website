@@ -219,6 +219,63 @@ export const GLOSSARY: Term[] = [
       "The city survey number that identifies a specific piece of land in municipal records.",
     match: ["cts number"],
   },
+  // New project words, used by the long form guides on launches.
+  {
+    term: "Promoter",
+    plain:
+      "The developer that registers a project with MahaRERA and signs the agreement for sale with you.",
+    match: ["promoter"],
+  },
+  {
+    term: "Input tax credit",
+    plain:
+      "GST a business has already paid on its own purchases and may set off; a builder of new flats cannot claim it at the 5 and 1 percent rates.",
+    match: ["input tax credit"],
+  },
+  // Investing and interiors words, used by the investing and interiors posts.
+  {
+    term: "REIT",
+    plain:
+      "A real estate investment trust: a SEBI registered trust that owns rent earning buildings and whose units trade like shares.",
+    match: ["reit", "reits"],
+  },
+  {
+    term: "Net yield",
+    plain:
+      "A year's rent after running costs and empty months, as a percentage of everything you paid, including stamp duty.",
+    match: ["net yield"],
+  },
+  {
+    term: "Bill of quantities",
+    plain:
+      "The itemised list of every piece of work and named material in an interior quote, with its quantity and rate.",
+    match: ["bill of quantities"],
+  },
+  // Society, building and tenancy words from the paperwork and renting posts.
+  {
+    term: "Share certificate",
+    plain:
+      "The housing society's certificate that you are its member for your flat. It is not the title to the flat.",
+    match: ["share certificate"],
+  },
+  {
+    term: "Commencement certificate",
+    plain:
+      "The municipal permission to start building, issued before construction begins.",
+    match: ["commencement certificate"],
+  },
+  {
+    term: "Competent Authority",
+    plain:
+      "The officer who decides a landlord's application to take back a flat when a leave and licence ends. In Mumbai, the zonal Deputy Commissioner of Police.",
+    match: ["competent authority"],
+  },
+  {
+    term: "Corpus fund",
+    plain:
+      "A lump sum a developer pays the society in a redevelopment, usually kept as a deposit for the society's costs.",
+    match: ["corpus fund"],
+  },
 ];
 
 /**

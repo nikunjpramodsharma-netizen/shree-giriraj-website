@@ -35,7 +35,7 @@ export async function generateMetadata({
   return {
     title: "Free property calculators for Mumbai",
     description:
-      "Straightforward calculators for the numbers that decide a property purchase. No signup, no email, nothing gated.",
+      "Free Mumbai property calculators: stamp duty, rent agreement duty, carpet area, BMC property tax, EMI and rental yield. No signup, no email.",
     ...pageUrls(params.locale, "/tools", [TOOL_LOCALE]),
   };
 }
@@ -96,6 +96,19 @@ export default function ToolsIndex({
       </header>
 
       <div className="wrap py-12">
+        <div className="mb-10 max-w-[68ch] text-ink/85">
+          <p>
+            These free calculators cover the numbers around buying, selling and renting a flat in Mumbai. Buying? Start
+            with the <Link prefetch={false} href="/tools/stamp-duty-calculator-mumbai" className="text-brand-indigo underline underline-offset-4">stamp duty calculator</Link> and
+            the <Link prefetch={false} href="/tools/home-loan-emi-calculator" className="text-brand-indigo underline underline-offset-4">home loan EMI calculator</Link>.
+            Selling? Try the <Link prefetch={false} href="/tools/capital-gains-calculator-property" className="text-brand-indigo underline underline-offset-4">capital gains calculator</Link>.
+            Renting? Use the <Link prefetch={false} href="/tools/rent-agreement-stamp-duty-calculator-mumbai" className="text-brand-indigo underline underline-offset-4">rent agreement stamp duty calculator</Link>.
+          </p>
+          <p className="mt-3">
+            Tell us your size, budget and pocket on WhatsApp and we send the flats in Borivali, Kandivali and Malad that
+            fit, usually the same day.
+          </p>
+        </div>
         <ul className="grid gap-6 md:grid-cols-2">
           {TOOLS.map((t) => (
             <li key={t.slug}>

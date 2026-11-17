@@ -1,7 +1,7 @@
 ---
 title: "MHADA allotment letter and offer letter: what each is, the download and a lost copy"
-metaTitle: "MHADA allotment letter and offer letter"
-metaDescription: "MHADA allotment letter and offer letter explained: the format line by line, the IHLMS 2.0 download, and certified copies of lost papers."
+metaTitle: "MHADA allotment letter: download and format"
+metaDescription: "Download your MHADA allotment or offer letter in the IHLMS 2.0 app, read its format line by line, and get a certified copy on Form 9 if it is lost."
 slug: mhada-allotment-letter
 category: MHADA
 heroImage: /blog/mhada-allotment-letter.jpg
@@ -55,8 +55,8 @@ sources:
     url: https://www.mhada.gov.in/sites/default/files/tot.pdf
   - label: "MHADA, Notification on Right to Public Services, 13 July 2015, Mumbai Board table of services and time limits"
     url: https://www.mhada.gov.in/sites/default/files/Mitra_adhisuchna1.pdf
-sourcesCheckedOn: "19 October 2026"
-updatedOn: "7 November 2026"
+sourcesCheckedOn: "16 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - What is a MHADA allotment letter?
   - How do I download my MHADA allotment letter?
@@ -221,6 +221,16 @@ Our guide to [buying a MHADA flat in resale](/blog/how-to-buy-mhada-flat-in-resa
 
 **Can I sell a MHADA lottery flat?**
 Yes, with the written permission of the Mumbai Board and the society. Five years must have passed from allotment under the 1981 Regulations. The buyer's income group must fit, the Board's dues must be paid, and any premium the Board sets applies. The seller's sale permission form lists the allotment letter. Our guide on [whether you can sell a MHADA flat](/blog/can-we-sell-mhada-flat) has the full rules.
+
+---
+
+## Selling or buying a MHADA flat with this letter?
+
+**The allotment letter is the first paper a buyer's lawyer and bank ask for, so it decides how fast a MHADA sale moves.** If you are selling in Borivali, Kandivali or Malad, our [resale flats service](/services/resale-flats) finds the buyer. We assemble the letter, the receipts and the permissions into one file before the first viewing.
+
+If you are buying, ask the seller for this letter on the first visit and check the allotment date against the five year rule. Our guide to [buying a MHADA flat in resale](/blog/how-to-buy-mhada-flat-in-resale) lists the other checks. The flats we share in [Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali](/areas/kandivali/flats-for-sale) and [Malad](/areas/malad/flats-for-sale) come with these papers read.
+
+[Tell us whether you are buying or selling on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20am%20___%20%28buying%20or%20selling%29%20a%20MHADA%20flat%20in%20___.%20Can%20you%20check%20the%20allotment%20letter%20and%20papers%3F) and we usually reply the same day, free and with no obligation.
 
 ---
 

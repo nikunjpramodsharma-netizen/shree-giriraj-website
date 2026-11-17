@@ -19,7 +19,7 @@ import { RisingTower } from "@/components/motion/RisingTower";
 import { interlinksForArea } from "@/lib/interlinks";
 import { FLAT_LISTINGS, listingPath } from "@/lib/flats";
 import { ContactCTA } from "@/components/ContactCTA";
-import { graph, breadcrumbNode, faqNode } from "@/lib/schema";
+import { graph, breadcrumbNode, faqNode, placeNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
 import { site, waLink } from "@/lib/config";
 import { AREA_STATS_SOURCE } from "@/lib/homepage-content";
@@ -94,6 +94,12 @@ export default async function AreaPage({
         data={graph(
           breadcrumbNode(locale, trail),
           faqNode(area.faqs.map((f) => ({ question: f.q, answer: f.a }))),
+          placeNode({
+            locale,
+            name: area.place,
+            path: `/areas/${area.slug}`,
+            description: area.seoDescription ?? area.metaDescription,
+          }),
         )}
       />
 
@@ -152,6 +158,9 @@ export default async function AreaPage({
             The short answer
           </div>
           <p className="mt-2.5 text-lg text-ink">{area.answer}</p>
+          <p className="mt-3 text-xs text-muted">
+            Updated on {area.updatedOn}: every rate read again against its source that day.
+          </p>
         </div>
 
         <div className="max-w-[68ch] space-y-4 text-ink/90">
@@ -178,8 +187,12 @@ export default async function AreaPage({
           ))}
         </dl>
         <p className="mt-2 text-xs text-muted">
-          {AREA_STATS_SOURCE} The averages quoted elsewhere on this page come
-          from other portals, measured their own way, so they can differ.
+          {AREA_STATS_SOURCE} These three figures are resale listings on those
+          two portals. The Square Yards and NoBroker averages elsewhere on this
+          page cover all listings and do not state the area basis, so they differ;
+          each is named with its month. Carpet area figures run higher: Mumbai
+          Property Exchange put the Borivali West resale median at 36,228 per sq
+          ft of carpet in the week ending 15 November 2026.
         </p>
 
         <div className="mt-10 max-w-[68ch] rounded-xl border border-line bg-paper-alt p-5">
@@ -199,7 +212,7 @@ export default async function AreaPage({
               >
                 <div className="text-[0.56rem] font-bold uppercase tracking-[0.18em] text-bronze-deep">New homes</div>
                 <div className="mt-1.5 font-display text-lg text-brand-indigo">
-                  New projects in {area.h1 ?? area.longName}
+                  New projects in {area.place}
                 </div>
                 <div className="mt-1 text-sm text-ink/70 group-hover:text-ink">
                   Compared side by side: BHK, from about price, possession and MahaRERA status
@@ -302,6 +315,20 @@ export default async function AreaPage({
                       <GrowBars bars={area.motion.rents} footnote={area.motion.rentsNote} />
                     </div>
                   </div>
+                )}
+                {s.links && s.links.length > 0 && (
+                  <ul className="mt-6 grid max-w-[68ch] gap-2 sm:grid-cols-2">
+                    {s.links.map((lk) => (
+                      <li key={lk.href}>
+                        <a
+                          href={lk.href}
+                          className="block rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-brand-indigo transition hover:border-bronze hover:shadow-sm"
+                        >
+                          {lk.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 )}
                 {s.invite && <Invite invite={s.invite} />}
               </section>

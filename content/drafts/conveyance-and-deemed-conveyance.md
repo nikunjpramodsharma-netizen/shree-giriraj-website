@@ -1,7 +1,7 @@
 ---
 title: "Deemed conveyance in Maharashtra: how a Mumbai society gets its land, with or without the builder"
-metaTitle: "Deemed conveyance in Maharashtra, explained"
-metaDescription: "Conveyance moves the land from the builder to your society. How a Mumbai society gets deemed conveyance when the builder has not signed, step by step."
+metaTitle: "Deemed conveyance vs conveyance deed, Mumbai"
+metaDescription: "A society conveyance deed moves the land from the builder; deemed conveyance does it without the builder's signature. Form VII and the 6 month rule."
 slug: conveyance-and-deemed-conveyance
 category: Paperwork
 heroImage: /blog/conveyance.jpg
@@ -32,7 +32,7 @@ sources:
   - label: Kaanoon, the 2014 Moneylife Foundation seminar figure on conveyance in Mumbai
     url: https://www.kaanoon.com/269145/conveyance
 sourcesCheckedOn: "8 September 2026"
-updatedOn: "7 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - What happens if a society never gets conveyance?
   - Who is the competent authority for deemed conveyance?
@@ -58,6 +58,21 @@ You own your flat. The society, as a group, is meant to own the land beneath it.
 Most owners learn this when the society plans redevelopment. That is the moment they find the society does not yet own what it wants to rebuild.
 
 Buying in an older building in Borivali, Kandivali or Malad? [Send us the building name on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20can%20you%20check%20the%20conveyance%20status%20of%20a%20society%20in%20___%3F) and we will check its conveyance position for you, free.
+
+---
+
+## What is the difference between a conveyance deed and deemed conveyance?
+
+**Both transfer the land and building to the society. The difference is who signs.**
+
+| | Society conveyance deed | Deemed conveyance |
+|---|---|---|
+| Who signs for the land | The developer | Nobody from the developer's side: an officer orders it |
+| How it starts | The developer and the society agree and execute the deed | The society applies to the District Deputy Registrar |
+| When it is used | The normal route, within four months of the society's registration | When the developer has not conveyed |
+| What the society ends up with | Title to the land and building | The same title, registered on the officer's order |
+
+**Is a conveyance deed the same as a sale deed?** A sale deed is one kind of conveyance: it transfers a flat or a property to a buyer. A society conveyance deed transfers the land and building to the society as a whole.
 
 ---
 
@@ -139,6 +154,12 @@ Read about [corpus fund and rent during redevelopment](/blog/redevelopment-boriv
 
 ## Common questions
 
+**What is the difference between conveyance deed and deemed conveyance?**
+A conveyance deed is signed by the developer to transfer the land and building to the society. Deemed conveyance is the same transfer ordered by the District Deputy Registrar when the developer has not signed.
+
+**Can I sell my flat if the society has no conveyance?**
+Yes. You own your flat whether or not the society holds the land. A buyer's lawyer will ask about the conveyance position, so have the answer ready.
+
 **What happens if a society never gets conveyance?**
 It stays dependent on the developer for anything that needs the landowner's consent, and it cannot redevelop on its own terms. The members still own their flats throughout. The shared asset, the land, stays out of reach.
 
@@ -159,8 +180,10 @@ Form VII under the MOFA rules, with a court fee stamp of 2,000 rupees. Enclose t
 
 ---
 
-## If you are buying in an older building
+## If you are buying or selling in an older building
 
-Ask whether conveyance is done. A society that has completed it is showing you it is well run.
+**Buying?** Ask whether conveyance is done. A society that has completed it is showing you it is well run. Browse resale flats for sale in [Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali West](/areas/kandivali/flats-for-sale) and [Malad West](/areas/malad/flats-for-sale).
+
+**Selling?** You own your flat whether or not conveyance is done, so you can sell it. Having the society's conveyance position and [society NOC for the sale](/blog/society-noc-for-sale-of-flat-mumbai) ready answers a buyer's first questions. Our [resale flats service](/services/resale-flats) lines these up and finds the buyer.
 
 Looking at a flat in Borivali, Kandivali or Malad? [Send us the building's name](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20can%20you%20check%20the%20conveyance%20status%20of%20a%20society%20in%20___%3F) and we will check the society's position before you decide. It is free, and usually the same day.

@@ -1,7 +1,7 @@
 ---
-title: "Ready reckoner rates in Mumbai, and what they mean for your stamp duty"
-metaTitle: "Ready reckoner rate Mumbai 2026 to 2027"
-metaDescription: "Ready reckoner rates for Borivali, Kandivali and Malad, 2026 to 2027, per sq m and sq ft from the official e-ASR, and how they set your stamp duty."
+title: "Ready reckoner rate in Mumbai 2026: what it means, zone rates for Borivali, Kandivali and Malad, and your stamp duty"
+metaTitle: "Ready reckoner rate Mumbai 2026, by zone"
+metaDescription: "What the ready reckoner rate means, the 2026 to 2027 zone rates for Borivali, Kandivali and Malad from e-ASR, and how they set your stamp duty."
 slug: ready-reckoner-rate-mumbai
 category: Paperwork
 heroImage: /blog/ready-reckoner.jpg
@@ -12,28 +12,26 @@ competition: LOW
 funnelStage: consideration
 wordTarget: 1800
 answer: >
-  The ready reckoner rate is the government's own value for property in each
-  zone, published yearly as the Annual Statement of Rates. Stamp duty is
-  charged on the agreed price or the reckoner value, whichever is higher. For
-  2026 to 2027, most residential zones in Borivali, Kandivali and Malad run
-  from about 1.0 to 1.9 lakh rupees per sq m.
+  The ready reckoner rate is the government's value for property in each zone,
+  published yearly as the Annual Statement of Rates. Stamp duty is
+  charged on the agreed price or the reckoner value, whichever is higher.
+  2026 to 2027 rates are unchanged. Most zones in Borivali, Kandivali
+  and Malad run from about 1.0 to 1.9 lakh rupees per sq m.
 sources:
   - label: "Department of Registration and Stamps, e-ASR, Annual Statement of Rates 2026 to 2027, Mumbai Suburban, villages Borivali, Kandivali, Malad East, Malad South and Malad North (read 7 November 2026)"
     url: https://easr.igrmaharashtra.gov.in/eASRCommon.aspx?hDistName=Bombaymains
   - label: Department of Registration and Stamps, Government of Maharashtra
     url: https://igrmaharashtra.gov.in/
-  - label: "TaxGuru, tax implications where property is bought below stamp duty value"
-    url: https://taxguru.in/income-tax/tax-implications-buyers-property-purchased-stamp-duty-value.html
-  - label: "Chartered Club, tax on property transactions below circle rate"
-    url: https://www.charteredclub.com/tax-on-property-transaction-below-circle-rate-section-50c-sec-56/
+  - label: "Free Press Journal, Maharashtra keeps ready reckoner rates unchanged for 2026 to 2027, a complete freeze across rural, urban and influence zones, 31 March 2026 (read 16 November 2026)"
+    url: https://www.freepressjournal.in/mumbai/maharashtra-govt-keeps-ready-reckoner-rates-unchanged-for-fy27-state-nears-60500-crore-revenue-target
   - label: Mumbai Property Exchange, resale asking rates against ready reckoner rates, 2025 to 2026
     url: https://www.mumbaipropertyexchange.com/ready-reckoner-rates-mumbai
   - label: Bombay Chartered Accountants' Society, stamp duty ready reckoner and depreciation for building age
     url: https://bcajonline.org/journal/stamp-duty-ready-reckoner/
   - label: Business Standard, Maharashtra ready reckoner revision from 1 April 2025
     url: https://www.business-standard.com/amp/finance/personal-finance/maharashtra-hikes-property-rates-what-3-9-rr-rate-increase-means-for-you-125040100372_1.html
-sourcesCheckedOn: "8 September 2026"
-updatedOn: "7 November 2026"
+sourcesCheckedOn: "16 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - Where do I check the reckoner rate for a building?
   - What if I buy below the reckoner rate?
@@ -46,13 +44,23 @@ readNext:
 
 ## The short answer
 
-The ready reckoner rate is the government's own value for property in each zone, published yearly as the Annual Statement of Rates. **Stamp duty is charged on the agreed price or the reckoner value, whichever is higher.** For 2026 to 2027, most residential zones in Borivali, Kandivali and Malad run from about 1.0 to 1.9 lakh rupees per sq m.
+The ready reckoner rate is the government's value for property in each zone, published yearly as the Annual Statement of Rates. **Stamp duty is charged on the agreed price or the reckoner value, whichever is higher.** The 2026 to 2027 rates are unchanged. Most zones in Borivali, Kandivali and Malad run from about 1.0 to 1.9 lakh rupees per sq m.
+
+---
+
+## What is the ready reckoner rate?
+
+**The ready reckoner rate is the minimum value the Maharashtra government sets for property in each zone, used to charge stamp duty.** It is also called the circle rate, the RR rate or the Annual Statement of Rates (ASR).
+
+The Department of Registration and Stamps publishes it each year on its e-ASR site. It is a value for tax, not a price. What a flat actually sells for is usually higher.
 
 ---
 
 ## Ready reckoner rates in Borivali, Kandivali and Malad, 2026 to 2027
 
 These are the residential flat rates from the official e-ASR site, for the year 2026 to 2027. We read them on 7 November 2026.
+
+**Are the 2026 to 2027 rates new?** No. On 31 March 2026 the Free Press Journal reported a complete freeze: the state kept every rate at its 2025 to 2026 level. In the BMC area, the 2025 to 2026 revision had been an average rise of 3.39 percent.
 
 Each suburb is split into numbered zones. A zone is a block of streets or a main road, so check which zone your building falls in.
 
@@ -106,14 +114,9 @@ The rates change each year on 1 April. So check that the year on the page matche
 
 ## What if a flat sells below the reckoner rate?
 
-Where a flat changes hands **well below** the reckoner value, the income tax rules treat the gap as if money had changed hands.
+**Stamp duty is still charged on the reckoner value.** So budget the duty on that figure, whatever price you agree.
 
-- For the **buyer**, section 56(2)(x) can tax the gap between the reckoner value and the price paid as the buyer's income.
-- For the **seller**, section 50C can treat the reckoner value as the sale price when capital gains are worked out.
-
-**There is a tolerance.** Since Budget 2020, if the gap is **not more than 10 percent**, neither section applies.
-
-This is tax rather than property, so take the details to a chartered accountant. The useful point is simple: check the reckoner before you negotiate, and you will know the full tax picture of any price.
+A price well below the reckoner also has income tax effects for the buyer and the seller. Speak to your chartered accountant before you agree one.
 
 ---
 
@@ -133,9 +136,17 @@ So within one zone, the reckoner sits closest to the real price on the oldest bu
 
 We check the reckoner value for the specific building three times. First before a price is agreed, then when the agreement is drafted, and again if the deal crosses 1 April.
 
+**Want the market price instead?** See the asking rates for [Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali West](/areas/kandivali/flats-for-sale) and [Malad West](/areas/malad/flats-for-sale). Selling? Our [resale flats service](/services/resale-flats) prices the flat against recent asking rates in your pocket and finds the buyer.
+
 ---
 
 ## Common questions
+
+**What is the meaning of ready reckoner rate?**
+The ready reckoner rate is the government's minimum value for property in a zone, used to charge stamp duty. It is published each year as the Annual Statement of Rates and is also called the circle rate.
+
+**Has the ready reckoner rate changed for 2026 to 2027?**
+No. Maharashtra kept the 2026 to 2027 rates unchanged from 2025 to 2026, as the Free Press Journal reported on 31 March 2026. The next revision, if any, would take effect on 1 April 2027.
 
 **Where do I check the reckoner rate?**
 On the e-ASR site of the Department of Registration and Stamps, linked from the IGR Maharashtra portal. e-ASR stands for electronic Annual Statement of Rates. It is free and needs no account.
@@ -143,8 +154,11 @@ On the e-ASR site of the Department of Registration and Stamps, linked from the 
 **What is the ready reckoner rate in Borivali West?**
 For 2026 to 2027, the main residential zones in Borivali West range from 1,03,630 to 1,73,040 rupees per square metre. That is about 9,628 to 16,076 rupees per square foot. The rate depends on which zone the building is in.
 
+**What is the ready reckoner rate in Kandivali West and Malad West?**
+For 2026 to 2027, the main residential zones in Kandivali West run from 1,48,170 to 1,59,010 rupees per square metre. In Malad West they run from 1,47,580 to 1,93,910. The exact rate depends on the zone your building is in.
+
 **What if I buy below the reckoner rate?**
-Stamp duty is still charged on the reckoner value. If the gap is more than 10 percent, income tax rules also apply: section 56(2)(x) to the buyer and section 50C to the seller.
+Stamp duty is still charged on the reckoner value. A price well below it also has income tax effects, so speak to your chartered accountant.
 
 **How often does it change?**
 Every year. A new statement takes effect on 1 April, so a rate you checked last year may not be the rate you pay this year.

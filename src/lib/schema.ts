@@ -1,5 +1,6 @@
 import { site } from "@/lib/config";
 import { SITE_URL, absoluteUrl } from "@/lib/seo";
+import { FOUNDER } from "@/lib/about";
 
 /**
  * JSON-LD builders.
@@ -20,6 +21,57 @@ import { SITE_URL, absoluteUrl } from "@/lib/seo";
 
 const ORG_ID = `${SITE_URL}/#organization`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
+const FOUNDER_ID = `${SITE_URL}/about#founder`;
+
+/**
+ * Where the firm works, as answer engines should read it. Flat finding is
+ * Borivali, Kandivali and Malad; MHADA paperwork is filed with the one Mumbai
+ * Board and is taken on for a flat anywhere in Mumbai (owner, 3 October
+ * 2026), so the city itself is in the list too.
+ */
+const MUMBAI = {
+  "@type": "City",
+  name: "Mumbai",
+  containedInPlace: { "@type": "State", name: "Maharashtra" },
+};
+const CORE_PLACES = ["Borivali West", "Borivali East", "Kandivali", "Malad"].map((name) => ({
+  "@type": "Place",
+  name: `${name}, Mumbai`,
+  containedInPlace: { "@type": "City", name: "Mumbai" },
+}));
+
+/**
+ * The subjects the firm is a source on, for knowsAbout. Each one is a
+ * service it sells or a topic the articles on this site cover in depth.
+ */
+const KNOWS_ABOUT = [
+  "Resale flats in Borivali, Kandivali and Malad",
+  "Selling a flat in Mumbai",
+  "Flat rentals and leave and licence agreements in Mumbai",
+  "New project bookings and MahaRERA project checks",
+  "Property investment in the western suburbs of Mumbai",
+  "Commercial property and plots",
+  "Home interiors and civil work",
+  "MHADA flat transfer, NOCs and paperwork in Mumbai",
+  "Stamp duty and registration in Maharashtra",
+  "Society share certificates and NOCs for sale",
+];
+
+/**
+ * A compact reference to the business for nodes on pages that do not carry
+ * the full organization node (articles, tools). A bare @id only resolves when
+ * the same page defines it, so the name, URL and logo travel with it: that is
+ * what Google reads for an article's publisher.
+ */
+export function organizationRef(): Json {
+  return {
+    "@type": "RealEstateAgent",
+    "@id": ORG_ID,
+    name: site.name,
+    url: SITE_URL,
+    logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` },
+  };
+}
 
 type Json = Record<string, unknown>;
 
@@ -33,21 +85,35 @@ export function organizationNode(opts: { founder?: string } = {}): Json {
     "@id": ORG_ID,
     name: site.name,
     url: SITE_URL,
+    description:
+      "Real estate agency in Borivali West, Mumbai, in real estate since 1996 and at this office since 2005. Resale flats to buy and sell, rentals, new project bookings, investment advisory, commercial property and plots, and interiors in Borivali, Kandivali and Malad, plus MHADA paperwork anywhere in Mumbai.",
     image: `${SITE_URL}/logo.png`,
-    logo: `${SITE_URL}/logo.png`,
-    telephone: [site.phonePrimary, site.phoneSecondary],
+    logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` },
+    telephone: site.phonePrimary,
     email: site.email,
+    // Both numbers as contact points. The first is also the WhatsApp line,
+    // which is how most enquiries arrive.
+    contactPoint: [
+      { "@type": "ContactPoint", contactType: "sales", telephone: site.phonePrimary, areaServed: "IN" },
+      { "@type": "ContactPoint", contactType: "customer service", telephone: site.phoneSecondary, areaServed: "IN" },
+    ],
+    // In real estate since 1996. The Borivali West office dates from 2005,
+    // which the description says; this field never implies the shop is older.
     foundingDate: site.established,
-    // Only emitted where the name is actually known. A Person node with a name
-    // and nothing else is still worth having: it is the entity Google ties the
-    // business to, and it is confirmed.
-    ...(opts.founder
-      ? { founder: { "@type": "Person", name: opts.founder } }
-      : {}),
+    // Confirmed by the owner. Always emitted: the founder is the entity an
+    // answer engine ties the business to, on every page that carries it.
+    founder: {
+      "@type": "Person",
+      "@id": FOUNDER_ID,
+      name: opts.founder ?? FOUNDER.name,
+      jobTitle: FOUNDER.role,
+    },
+    // Concatenated, these read exactly as the master NAP in config.ts:
+    // Shop No 11, Clover Grove CHS, Chikoowadi, Borivali West, Mumbai 400092.
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Shop No 11, Clover Grove CHS, Chikoowadi",
-      addressLocality: "Borivali West",
+      streetAddress: "Shop No 11, Clover Grove CHS, Chikoowadi, Borivali West",
+      addressLocality: "Mumbai",
       addressRegion: "Maharashtra",
       postalCode: "400092",
       addressCountry: "IN",
@@ -60,10 +126,8 @@ export function organizationNode(opts: { founder?: string } = {}): Json {
       longitude: 72.8366379,
     },
     hasMap: "https://www.google.com/maps/place/?cid=5587711998336126142",
-    areaServed: site.areas.map((name) => ({
-      "@type": "Place",
-      name: `${name}, Mumbai`,
-    })),
+    areaServed: [...CORE_PLACES, MUMBAI],
+    knowsAbout: KNOWS_ABOUT,
     identifier: {
       "@type": "PropertyValue",
       // The firm's own MahaRERA registration, not a project one. Public
@@ -158,35 +222,134 @@ export function webApplicationNode(opts: {
     operatingSystem: "Any",
     isAccessibleForFree: true,
     offers: { "@type": "Offer", price: "0", priceCurrency: "INR" },
-    provider: { "@id": ORG_ID },
+    provider: organizationRef(),
   };
 }
+
+const place = (name: string) => ({
+  "@type": "Place",
+  name: `${name}, Mumbai`,
+  containedInPlace: { "@type": "City", name: "Mumbai" },
+});
+
+/**
+ * What each service is, in the words its page uses, and where it is offered.
+ * MHADA paperwork is filed with the one Mumbai Board whatever the suburb, so
+ * it is offered city wide (owner, 3 October 2026). Flat finding is Borivali
+ * West, Kandivali and Malad; investment advisory names Borivali West and
+ * East, Kandivali and Malad in its copy.
+ */
+const SERVICE_DEFAULTS: Record<string, { serviceType: string; areaServed: Json[] }> = {
+  "resale-flats": {
+    serviceType: "Buying and selling of resale flats",
+    areaServed: ["Borivali West", "Kandivali", "Malad"].map(place),
+  },
+  rentals: {
+    serviceType: "Flat rentals for tenants and owners, with leave and licence agreements",
+    areaServed: ["Borivali West", "Kandivali", "Malad"].map(place),
+  },
+  "new-project-bookings": {
+    serviceType: "New project flat bookings",
+    areaServed: ["Borivali West", "Kandivali", "Malad"].map(place),
+  },
+  "investment-advisory": {
+    serviceType: "Residential property investment advisory",
+    areaServed: CORE_PLACES,
+  },
+  "commercial-plots": {
+    serviceType: "Commercial property and plots, to buy or rent",
+    areaServed: ["Borivali West", "Kandivali", "Malad"].map(place),
+  },
+  interiors: {
+    serviceType: "Home interiors and civil work",
+    areaServed: ["Borivali West", "Kandivali", "Malad"].map(place),
+  },
+  "mhada-paperwork": {
+    serviceType: "MHADA flat transfer, NOC and paperwork",
+    areaServed: [MUMBAI],
+  },
+};
 
 export function serviceNode(opts: {
   locale: string;
   name: string;
   description?: string;
   slug: string;
+  /** Overrides the default for the slug in SERVICE_DEFAULTS. */
+  serviceType?: string;
+  /** Place names in Mumbai, or "Mumbai" for the whole city. Overrides the default. */
+  areaServed?: string[];
 }): Json {
+  const d = SERVICE_DEFAULTS[opts.slug];
+  const areaServed = opts.areaServed
+    ? opts.areaServed.map((n) => (n === "Mumbai" ? MUMBAI : place(n)))
+    : d?.areaServed ?? CORE_PLACES;
   return {
     "@type": "Service",
     name: opts.name,
     ...(opts.description ? { description: opts.description } : {}),
-    serviceType: opts.name,
-    provider: { "@id": ORG_ID },
-    // MHADA paperwork is filed with the one Mumbai Board whatever the
-    // suburb, so that service is offered city wide (owner, 3 October 2026).
-    areaServed:
-      opts.slug === "mhada-paperwork"
-        ? [{ "@type": "City", name: "Mumbai" }]
-        : site.areas.map((n) => ({ "@type": "Place", name: `${n}, Mumbai` })),
+    serviceType: opts.serviceType ?? d?.serviceType ?? opts.name,
+    provider: organizationRef(),
+    areaServed,
     url: absoluteUrl(opts.locale, `/services/${opts.slug}`),
   };
 }
 
+/**
+ * An area guide's subject: the suburb itself, inside Mumbai. Only the name,
+ * the page and the description the page shows; no coordinates, because none
+ * are published for a whole suburb and an invented pin is worse than none.
+ */
+export function placeNode(opts: {
+  locale: string;
+  name: string;
+  path: string;
+  description?: string;
+}): Json {
+  return {
+    "@type": "Place",
+    name: `${opts.name}, Mumbai`,
+    url: absoluteUrl(opts.locale, opts.path),
+    ...(opts.description ? { description: opts.description } : {}),
+    containedInPlace: MUMBAI,
+  };
+}
+
+/**
+ * The flat finding service as it applies to one suburb, for the flats for
+ * sale and flats for rent pages: what the agency does there, and who does it.
+ * Not a listing or an offer, because the pages publish asking rates, not
+ * flats with prices.
+ */
+export function localServiceNode(opts: {
+  locale: string;
+  name: string;
+  path: string;
+  place: string;
+  description?: string;
+}): Json {
+  return {
+    "@type": "Service",
+    name: opts.name,
+    serviceType: "Real estate agency",
+    ...(opts.description ? { description: opts.description } : {}),
+    url: absoluteUrl(opts.locale, opts.path),
+    provider: organizationRef(),
+    areaServed: {
+      "@type": "Place",
+      name: `${opts.place}, Mumbai`,
+      containedInPlace: { "@type": "City", name: "Mumbai" },
+    },
+  };
+}
+
+/**
+ * An item may carry its own locale, for a list entry served in English only
+ * (Jaswanti Jewel on the hi, mr and gu project lists).
+ */
 export function itemListNode(
   locale: string,
-  items: { name: string; path: string }[],
+  items: { name: string; path: string; locale?: string }[],
 ): Json {
   return {
     "@type": "ItemList",
@@ -194,7 +357,7 @@ export function itemListNode(
       "@type": "ListItem",
       position: i + 1,
       name: it.name,
-      url: absoluteUrl(locale, it.path),
+      url: absoluteUrl(it.locale ?? locale, it.path),
     })),
   };
 }
@@ -274,8 +437,11 @@ export function blogPostingNode(opts: {
   /** The sources listed visibly on the page, so the markup matches it. */
   citations?: string[];
 }): Json {
-  const published = isoDate(opts.published);
+  let published = isoDate(opts.published);
   const modified = isoDate(opts.modified) ?? published;
+  // A publish date after the modified date is contradictory and Google then
+  // trusts neither. The earlier one is never allowed to be the later.
+  if (published && modified && published > modified) published = modified;
   const image = opts.image
     ? opts.image.startsWith("http") ? opts.image : `${SITE_URL}${opts.image}`
     : undefined;
@@ -294,13 +460,15 @@ export function blogPostingNode(opts: {
     author: opts.authorName
       ? {
           "@type": "Person",
+          "@id": `${SITE_URL}/#author-${opts.authorName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
           name: opts.authorName,
           ...(opts.authorRole ? { jobTitle: opts.authorRole } : {}),
-          worksFor: { "@id": ORG_ID },
+          worksFor: organizationRef(),
         }
-      : { "@id": ORG_ID },
-    publisher: { "@id": ORG_ID },
+      : organizationRef(),
+    publisher: organizationRef(),
     inLanguage: opts.locale,
+    isPartOf: { "@id": WEBSITE_ID },
   };
 }
 

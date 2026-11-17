@@ -34,7 +34,7 @@ export const STORY_IS_WRITTEN = true;
  * the three suburbs, the MahaRERA number.
  */
 export const ABOUT_ANSWER =
-  "Shree Giriraj Real Estate is a family run agency in Chikoowadi, Borivali West, founded by Pramod Kishanlal Sharma. It has worked in real estate since 1996, and from this office since 2005. It helps people buy, sell, rent and invest in Borivali, Kandivali and Malad. MahaRERA registration A51800005726.";
+  "Shree Giriraj Real Estate is a family run real estate agency in Chikoowadi, Borivali West, founded by Pramod Kishanlal Sharma. It has worked in real estate since 1996, and from this office since 2005. It helps people buy, sell, rent and invest in Borivali, Kandivali and Malad. MahaRERA registration A51800005726.";
 
 export type StorySection = { heading: string; paragraphs: string[] };
 
@@ -123,7 +123,7 @@ export const ABOUT_FAQS: AboutFaq[] = [
   },
   {
     q: "How long has Shree Giriraj been in property?",
-    a: "The firm has worked in real estate since 1996 and has operated from its current Borivali West office since 2005. Those are two different dates, and the site keeps them apart. That is nearly thirty years in the trade, and twenty years at this address in Chikoowadi.",
+    a: "The firm has worked in real estate since 1996 and has operated from its current Borivali West office since 2005. Those are two different dates, and the site keeps them apart: the trade since 1996, this address in Chikoowadi since 2005.",
   },
   {
     q: "Is Shree Giriraj registered with MahaRERA?",
@@ -140,6 +140,14 @@ export const ABOUT_FAQS: AboutFaq[] = [
   {
     q: "Where is the office?",
     a: "Shop No 11, Clover Grove CHS, Chikoowadi, Borivali West, Mumbai 400092. The commercial complex is known locally as Garden Groove Shopping Centre. It is the same place, so either name will get you to the door.",
+  },
+  {
+    q: "Can Shree Giriraj help me sell my flat?",
+    a: "Yes. Buying and selling resale flats in Borivali, Kandivali and Malad has been the main business since 1996. Send the building, floor and size on WhatsApp, and the firm replies with a free, fair listing price, usually the same day. It then prepares the papers buyers ask for and stays with the sale through registration.",
+  },
+  {
+    q: "How do I contact Shree Giriraj Real Estate?",
+    a: "WhatsApp or call 93249 74133, or visit the office in Chikoowadi, Borivali West. It is open 9 am to 9 pm, all seven days. The first conversation is free, and usually happens the same day.",
   },
 ];
 
@@ -177,7 +185,7 @@ export const JOURNEY: JourneyEntry[] = [
   {
     when: "2005",
     title: "The office in Chikoowadi",
-    body: "The firm took the office it still occupies: Shop No 11, Clover Grove CHS, Chikoowadi, Borivali West. Twenty years at one address, and many of the same families served more than once.",
+    body: "The firm took the office it still occupies: Shop No 11, Clover Grove CHS, Chikoowadi, Borivali West. One address since 2005, and many of the same families served more than once.",
     chips: ["Clover Grove CHS", "Borivali West"],
     image: { src: "/premium/t/office-desk.jpg", alt: "A desk with files, a calculator and a pair of glasses" },
   },

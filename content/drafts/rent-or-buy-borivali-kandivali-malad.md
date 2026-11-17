@@ -63,7 +63,7 @@ sources:
   - label: "DataForSEO, Google search volume for rent vs buy terms in India, measured 14 November 2026"
     url: https://dataforseo.com
 sourcesCheckedOn: "14 November 2026"
-updatedOn: "14 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - Is it better to rent or buy in Mumbai?
   - How long must I stay for buying to win?
@@ -174,7 +174,7 @@ Renting tends to suit you when:
 - You want your income to grow before you take on an EMI.
 - You are still choosing the pocket and the society that suit you.
 
-Our [rentals service](/services/rentals) finds flats from verified owners. We also register the leave and licence agreement, the standard Mumbai rent agreement.
+Our [rentals service](/services/rentals) finds flats from verified owners. We also register the leave and licence agreement, the standard Mumbai rent agreement. See the asking rents by size for [Borivali West](/areas/borivali-west/flats-for-rent), [Kandivali West](/areas/kandivali/flats-for-rent) and [Malad West](/areas/malad/flats-for-rent).
 
 ---
 
@@ -188,6 +188,8 @@ Buying tends to suit you when:
 - The price to rent ratio is lower, as in Malad East's 30 years of rent above.
 
 SBI's regular home loans are linked to its external benchmark rate, so the EMI can move when that rate changes. Your home stays yours either way, with no rent rise or notice to vacate.
+
+Ready to look? The flats for sale pages show 1, 2 and 3 BHK asking rates by pocket in [Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali West](/areas/kandivali/flats-for-sale) and [Malad West](/areas/malad/flats-for-sale). Our [1 BHK price guide](/blog/1-bhk-price-borivali-kandivali-malad) shows the income a bank wants, and [buying your first flat](/blog/buy-first-flat-in-mumbai) gives every step.
 
 ---
 
@@ -248,6 +250,6 @@ If you may move within a few years, renting keeps you flexible. Selling a flat t
 
 ## Where to start
 
-Tell us your budget, the suburb and how long you expect to stay. We will work the rent and buy sum for a flat you are considering, using this week's asking rents. In Borivali, Kandivali and Malad we then find the flat itself, to rent or to buy. Our [resale flats service](/services/resale-flats) shows how buying with us works.
+Tell us the size, your budget, the pocket and how long you expect to stay. We will work the rent and buy sum for a flat you are considering, using this week's asking rents, usually the same day. In Borivali, Kandivali and Malad we then find the flat itself, to rent or to buy. Our [resale flats service](/services/resale-flats) shows how buying with us works.
 
 It is free, with no obligation, and we usually reply the same day. [Message us on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20am%20deciding%20whether%20to%20rent%20or%20buy%20in%20___.%20My%20budget%20is%20about%20___%20and%20I%20expect%20to%20stay%20about%20___%20years.%20Can%20you%20work%20the%20numbers%20with%20me%3F) and we will start with your numbers.

@@ -113,6 +113,8 @@ export async function generateMetadata({
     title: (params.locale === "en" && getProjectLink(params.slug)?.metaTitle) || project.name,
     description:
       (params.locale === "en" && getProjectLink(params.slug)?.metaDescription) ||
+      (params.locale !== "en" &&
+        getProjectLink(params.slug)?.localeMetaDescription?.[params.locale as "hi" | "mr" | "gu"]) ||
       getLocalizedField(project.summary, params.locale as Locale),
     // Falling back to `undefined` here used to wipe og:url as well as the
     // image. Spreading urls.openGraph keeps the URL and lets the layout's

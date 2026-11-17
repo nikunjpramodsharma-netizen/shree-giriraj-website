@@ -7,6 +7,8 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { graph, itemListNode, breadcrumbNode, faqNode } from "@/lib/schema";
 import { site } from "@/lib/config";
+import EnglishLink from "next/link";
+import { tr } from "@/lib/copy-i18n";
 
 export const revalidate = 60;
 
@@ -65,6 +67,14 @@ const HUB_FAQS: { q: string; a: string }[] = [
   {
     q: "Is Shree Giriraj registered with MahaRERA?",
     a: `Yes, registration ${site.rera}. You can check it free on the MahaRERA portal. We have worked in real estate since ${site.established}, and from our Chikoowadi office since ${site.officeSince}.`,
+  },
+  {
+    q: "Do you help people sell a flat, not just buy one?",
+    a: "Yes. Send the building, floor and size on WhatsApp, and we reply with a free, fair listing price, usually the same day. Then we prepare the papers buyers ask for, bring buyers we have already met and stay with the sale through registration.",
+  },
+  {
+    q: "Can I pay for advice on a property matter without buying or selling?",
+    a: "Yes. We talk it through first, free, and if it needs a session we connect you to the right person. The basic rate is 5,000 rupees for a one hour property consultation, waived when we are handling your deal. It is not legal representation, a bank valuation or tax advice.",
   },
 ];
 
@@ -154,6 +164,26 @@ export default async function ServicesIndexPage({
                 <h2 className="text-xl text-brand-indigo">{t(`${s.key}Title`)}</h2>
                 <p className="mt-2.5 text-[0.96rem] text-muted">{t(`${s.key}Body`)}</p>
               </Link>
+            ))}
+          </div>
+          {/* Where most visitors go next: the seller's route, the MHADA route
+              for a flat anywhere in Mumbai, and the flats for sale pages
+              (English only, so they bypass the locale Link). */}
+          <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-[0.98rem]">
+            <Link prefetch={false} href="/services/resale-flats" className="font-semibold text-brand-indigo underline underline-offset-4">
+              {tr(locale, "Selling your flat? Get a free price opinion")}
+            </Link>
+            <Link prefetch={false} href="/services/mhada-paperwork" className="font-semibold text-brand-indigo underline underline-offset-4">
+              {tr(locale, "MHADA flat anywhere in Mumbai? We file its transfer and no objection certificates")}
+            </Link>
+            {[
+              { href: "/areas/borivali-west/flats-for-sale", label: "Flats for sale in Borivali West" },
+              { href: "/areas/kandivali/flats-for-sale", label: "Flats for sale in Kandivali West" },
+              { href: "/areas/malad/flats-for-sale", label: "Flats for sale in Malad West" },
+            ].map((l) => (
+              <EnglishLink key={l.href} prefetch={false} href={l.href} className="text-brand-indigo underline underline-offset-4">
+                {tr(locale, l.label)}
+              </EnglishLink>
             ))}
           </div>
         </div>

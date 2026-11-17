@@ -14,6 +14,7 @@ import { displayDate, getRelated, type Post } from "@/lib/posts";
 import { plainText } from "@/lib/markdown";
 import { termsIn } from "@/lib/glossary";
 import { offerFor } from "@/lib/post-offers";
+import { articleDates } from "@/lib/published-dates";
 import { PostOffer } from "@/components/PostOffer";
 import { PageWhatsApp } from "@/components/PageWhatsApp";
 import { MhadaTransferFeeWidget } from "@/components/MhadaTransferFeeWidget";
@@ -85,6 +86,8 @@ export function MarkdownPost({
     }));
   const checked = displayDate(post.sourcesCheckedOn);
   const updated = displayDate(post.updatedOn);
+  // Frozen publish date and the visible "Updated" date. See published-dates.ts.
+  const dates = articleDates(post);
   const offer = offerProp ?? offerFor(post.slug);
   const terms = termsIn(
     [plainText(post.blocks), ...post.faqs.map((f) => `${f.question} ${f.answer}`)].join(" "),
@@ -121,11 +124,8 @@ export function MarkdownPost({
                 path: `${basePath}/${post.slug}`,
                 description: post.answer,
                 image: visual.image,
-                published:
-                  checked ??
-                  (isGuide ? updated : null) ??
-                  new Date().toISOString(),
-                modified: updated ?? checked ?? undefined,
+                published: dates.published,
+                modified: dates.modified,
                 authorName: AUTHOR.name,
                 authorRole: AUTHOR.role,
                 // The same list the reader sees under Sources. The keyword

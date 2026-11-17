@@ -49,7 +49,7 @@ const INVESTMENT_ADVISORY_BODY = `
 
 Shree Giriraj Real Estate is a MahaRERA registered agency, number A51800005726, at Shop No 11, Clover Grove CHS, Chikoowadi, Borivali West, Mumbai 400092. We have worked in real estate since 1996, and from this office since 2005.
 
-This service is for people buying here to hold rather than to live in. It covers Borivali West and East, Kandivali and Malad, and nothing else. Knowing each pocket closely is what makes the advice worth having. Thirty years of walking these buildings is what you are hiring.
+This service is for people buying here to hold rather than to live in. It covers Borivali West and East, Kandivali and Malad, and nothing else. Knowing each pocket closely is what makes the advice worth having. Walking these buildings since 1996 is what you are hiring.
 
 ## What you get
 
@@ -62,11 +62,11 @@ This service is for people buying here to hold rather than to live in. It covers
 
 ## Is real estate a good investment in Mumbai?
 
-It can be a very good one. The western suburbs have rewarded patient owners for decades. A flat here pays you twice: rent while you hold it, and the sale price when you sell. You can measure the rent before you buy, and we do. The sale price depends on the building and the pocket more than the city. That is exactly where local knowledge earns its keep.
+It can be a very good one. The western suburbs have rewarded patient owners for decades. A flat here pays you twice: rent while you hold it, and the sale price when you sell. You can measure the rent before you buy, and we do. The sale price depends on the building and the pocket more than the city. That is exactly where local knowledge earns its keep, and our guide to the [best areas to invest in Mumbai](/blog/best-area-to-invest-in-mumbai) compares the suburbs.
 
 ## What return should an investor expect?
 
-We work it out on the flat in front of you, not as one number for the suburb. The rent you can get, the running costs and the price you negotiate decide the answer. They differ from one building to the next. You leave with two figures for the flat. Gross yield is a year's rent as a share of the price. Net yield is what is left after costs. Our [rental yield calculator](/tools/rental-yield-calculator) lets you test any other flat the same way.
+We work it out on the flat in front of you, not as one number for the suburb. The rent you can get, the running costs and the price you negotiate decide the answer. They differ from one building to the next. You leave with two figures for the flat. Gross yield is a year's rent as a share of the price. Net yield is what is left after costs. Our [rental yield calculator](/tools/rental-yield-calculator) lets you test any other flat the same way. For reference, Square Yards put the gross rental yield at 2.97 percent in Borivali West in September 2026, and 3.81 percent in Kandivali West in October 2026. Our [rental yield guide](/blog/rental-yield-mumbai) shows the working.
 
 ## Why local knowledge decides the outcome here
 
@@ -74,7 +74,7 @@ Borivali splits between the station belt, older and better connected, and the Li
 
 ## How to start
 
-Tell us the budget, whether you are buying for rent or for resale, and how long you plan to hold. We tell you which suburb and pocket fit. We show you what is available this month, and what the numbers look like on anything you shortlist. No obligation, and usually the same day.
+Tell us the budget, whether you are buying for rent or for resale, and how long you plan to hold. We tell you which suburb and pocket fit. We show you what is available this month, and what the numbers look like on anything you shortlist. To browse first, see the flats for sale in [Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali West](/areas/kandivali/flats-for-sale) and [Malad West](/areas/malad/flats-for-sale). No obligation, and usually the same day.
 
 ---
 
@@ -101,7 +101,7 @@ We find shops, showrooms, offices and, when a genuine one comes up, plots. This 
 
 Most commercial enquiries we take are for a shop to rent in one of these three. Most arrive with a budget and a trade, but not a stretch of road. The stretch is the decision. Tell us the trade, and we name the two or three stretches that see its customers. We also tell you what is free on them this month.
 
-Offices work the same way. Being close to the station, to parking and to your clients matters more than the floor size. A first floor unit above the right row of shops is often the better office.
+Offices work the same way. Being close to the station, to parking and to your clients matters more than the floor size. A first floor unit above the right row of shops is often the better office. Every unit we let goes on a registered [leave and licence agreement](/blog/leave-and-licence-agreement-mumbai), and the [rent agreement calculator](/tools/rent-agreement-stamp-duty-calculator-mumbai) gives its stamp duty and registration.
 
 ## Can residential property be used as commercial in Mumbai?
 
@@ -109,11 +109,11 @@ Generally no. A flat is approved for living in, and a shop or general office wou
 
 ## Is it wise to invest in commercial property?
 
-Commercial units usually offer stronger rental terms than flats. Leases run longer, deposits are larger, and the tenant commonly pays the running costs. There are fewer buyers when you sell, so it suits money that can stay invested. Buying to let rather than to use? Our [investment advisory](/services/investment-advisory) covers the numbers. The [rental yield calculator](/tools/rental-yield-calculator) shows the net figure before a viewing.
+Commercial units usually offer stronger rental terms than flats. Leases run longer, deposits are larger, and the tenant commonly pays the running costs. Rent on a shop carries GST at 18 percent once the landlord's yearly turnover passes 20 lakh rupees. There are fewer buyers when you sell, so it suits money that can stay invested. Our [commercial property guide](/blog/commercial-property-investment-mumbai) compares a shop with a flat on lease, deposit, GST and loan. Buying to let rather than to use? Our [investment advisory](/services/investment-advisory) covers the numbers. The [rental yield calculator](/tools/rental-yield-calculator) shows the net figure before a viewing.
 
 ## How to start
 
-Tell us the business or the investment, the budget, and any stretch you already have in mind. We come back with the two or three that fit, what is free on them now, and a viewing. No obligation, usually the same day.
+Tell us the business or the investment, the budget, and any stretch you already have in mind. We come back with the two or three that fit, what is free on them now, and a viewing. Own a shop or office to let or sell? Tell us the unit and the road, and we bring tenants or buyers whose trade fits its approved use. No obligation, usually the same day.
 `.trim();
 
 const MHADA_PAPERWORK_BODY = `
@@ -123,7 +123,7 @@ Shree Giriraj Real Estate is a MahaRERA registered agency, number A51800005726, 
 
 MHADA is the Maharashtra Housing and Area Development Authority. A great many Mumbai flats were allotted through it, from Goregaon and Vikhroli to Kurla and Bandra. Each one needs permissions a privately built flat does not: before a sale, before a tenant, before a loan, and when the allottee dies.
 
-Done properly, none of it is difficult. We prepare the complete file against the Board's own document list. We submit it to the right desk and follow it until it is decided. Every Mumbai Board file goes to the same office in Bandra East. So we take on flats in every suburb, and in the island city too.
+We prepare the complete file against the Board's own document list, submit it to the right desk and follow it until it is decided. Every Mumbai Board file goes to the same office in Bandra East. So we take on flats in every suburb, and in the island city too.
 
 ## What you get
 
@@ -137,7 +137,7 @@ Done properly, none of it is difficult. We prepare the complete file against the
 
 ## Can a MHADA flat be transferred to another person?
 
-Yes. The Estate Management, Sale, Transfer and Exchange of Tenements Regulations, 1981 need the previous written permission of the Board and of the housing society. The society may permit a transfer once three things are true. Five years have passed since allotment. The buyer falls in the scheme's income group. And all dues are paid. With those in place the transfer is routine, and our file is built to meet each one the first time.
+Yes. The Estate Management, Sale, Transfer and Exchange of Tenements Regulations, 1981 need the previous written permission of the Board and of the housing society. The society may permit a transfer once three things are true. Five years have passed since allotment. The buyer falls in the scheme's income group. And all dues are paid. Our file is built to meet each one the first time, and the [transfer guide](/blog/mhada-flat-transfer) lists the documents.
 
 ## What are the MHADA transfer fees?
 
@@ -149,7 +149,7 @@ This is the Mumbai Board's schedule for transfer of tenancy rights, as published
 | Middle Income Group (MIG) | ₹55 | ₹25,000 |
 | High Income Group (HIG) | ₹60 | ₹35,000 |
 
-On a sale, the Board may also ask for a share of the profit, called the unearned increase. We confirm both for your scheme before you agree a price. So the numbers you plan on are the numbers you pay.
+On a sale, the Board may also ask for a share of the profit, called the unearned increase. We confirm both for your scheme before you agree a price.
 
 ## Can I rent out my MHADA flat?
 
@@ -157,7 +157,7 @@ Yes. The no objection certificate for rent is a notified service under the Mahar
 
 ## How to start
 
-Tell us which flat, wherever in Mumbai it is, and which scheme. Then tell us what you need: a sale, a tenant, a loan, a transfer to an heir, or a transfer that needs regularising. Bring the allotment letter and the latest receipt if you have them. We tell you what the file needs, what the official charges are, and how long the Board has to decide. Free to ask, and usually answered the same day.
+Tell us which flat, wherever in Mumbai it is, and which scheme. Then tell us what you need: a sale, a tenant, a loan, a transfer to an heir, or a transfer that needs regularising. Bring the allotment letter and the latest receipt if you have them. We tell you what the file needs, what the official charges are, and how long the Board has to decide. Selling a MHADA flat in Borivali, Kandivali or Malad? We can find the buyer too, through our [resale service](/services/resale-flats). Free to ask, and usually answered the same day.
 
 ---
 
@@ -169,29 +169,29 @@ export const REPO_SERVICES: Record<string, RepoService> = {
   // Sanity on 16 September 2026; see service-content-core.ts for why.
   ...CORE_SERVICES,
   "investment-advisory": {
-    title: "Property investment advice, Borivali",
+    title: "Property investment advice in Borivali",
     heroHeading: "Property investment advisory in the western suburbs",
     heroSubheading:
       "For investors buying in Borivali, Kandivali and Malad to hold. We read the pocket, do the sums on the actual flat, and say so when they do not work.",
     answer:
       "Shree Giriraj Real Estate advises people buying flats in Borivali, Kandivali and Malad to hold rather than live in. We compare pockets and buildings, and work out the rent the flat can earn as a share of its price. We do the sums on your actual flat, after costs, and say plainly when they do not work.",
     seoDescription:
-      "Property investment advice in Borivali, Kandivali and Malad: each pocket assessed, the rental yield worked out and the title checked before you buy.",
+      "Property investment advice in Borivali, Kandivali and Malad: pockets compared, the rental yield worked out on the actual flat, title checked first.",
     body: INVESTMENT_ADVISORY_BODY,
   },
   "commercial-plots": {
-    title: "Shops and offices in Borivali West",
+    title: "Shops and offices to rent or buy, Borivali",
     heroHeading: "Commercial property in Borivali, Kandivali and Malad",
     heroSubheading:
       "Shops, showrooms, offices and the occasional genuine plot, to buy or rent. For businesses that need premises here and investors buying a unit to let.",
     answer:
       "Can a flat in Mumbai be used as a shop or office? Generally no: a flat is approved for living in, and a business would change that use. Some professionals may use part of their own home for their practice, if the society allows. Shree Giriraj Real Estate finds shops and offices approved for business in Borivali, Kandivali and Malad.",
     seoDescription:
-      "Shops, offices and plots in Borivali, Kandivali and Malad, for rent or sale. Approved use, society rules and frontage checked before you commit.",
+      "Shops, offices and plots to rent or buy in Borivali, Kandivali and Malad. Approved use, society rules and frontage checked before you commit.",
     body: COMMERCIAL_PLOTS_BODY,
   },
   "mhada-paperwork": {
-    title: "MHADA NOC and transfer, all Mumbai",
+    title: "MHADA NOC, transfer and fees, all Mumbai",
     heroHeading: "MHADA paperwork, handled end to end",
     heroSubheading:
       "Transfers, no objection certificates for sale, rent and loans, transfer to heirs and regularisation, for MHADA flats anywhere in Mumbai.",

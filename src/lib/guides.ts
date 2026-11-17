@@ -36,7 +36,7 @@ export type GuideEntry = {
 export const GUIDE_SERIES: GuideEntry[] = [
   {
     slug: "new-projects-borivali-west",
-    label: "New projects in Borivali West and how a launch booking works",
+    label: "New projects in Borivali West and Kandivali West, and how a booking works",
   },
   {
     slug: "allotment-letter-under-construction-flat",
@@ -48,7 +48,7 @@ export const GUIDE_SERIES: GuideEntry[] = [
   },
   {
     slug: "stamp-duty-gst-under-construction-maharashtra",
-    label: "Stamp duty and GST on under construction property",
+    label: "GST and stamp duty on an under construction flat",
   },
   {
     slug: "how-to-check-a-builder-rera-page",
@@ -100,15 +100,15 @@ export function isUnpublishedGuidePath(href: string): boolean {
 export const GUIDE_OFFERS: Record<string, PostOffer> = {
   "new-projects-borivali-west": {
     heading: "Want the current sheet for a new project?",
-    body: "We send you the builder sheet for the unit you want. Then we check the MahaRERA record and the papers before you pay anything.",
+    body: "Tell us the size and your budget. We send the builder sheet for the units that fit, usually the same day, and check the MahaRERA record and the papers before you pay anything.",
     whatsapp:
-      "Hi Shree Giriraj, please send me the current sheet for new projects in Borivali West. I am looking for ___.",
+      "Hi Shree Giriraj, please send me the current sheet for new projects in ___. I am looking for a ___ BHK and my budget is about ___.",
     button: "Send me the sheet",
     intentKey: "intentNewProject",
   },
   "stamp-duty-gst-under-construction-maharashtra": {
     heading: "Want the all inclusive figure for a unit?",
-    body: "Tell us the project and the unit. We work out stamp duty, registration, GST and the builder's charges in rupees before you book.",
+    body: "Tell us the project and the unit. We work out GST, stamp duty, registration and the builder's charges in rupees before you book, usually the same day.",
     whatsapp:
       "Hi Shree Giriraj, please work out the all inclusive cost for ___.",
     button: "Get the full figure",
@@ -116,7 +116,7 @@ export const GUIDE_OFFERS: Record<string, PostOffer> = {
   },
   "how-to-check-a-builder-rera-page": {
     heading: "Want a second pair of eyes on a RERA page?",
-    body: "Send us a project name. We read its MahaRERA page with you and explain what each filing means.",
+    body: "Send us a project name. We read its MahaRERA page with you, explain what each filing means and send the current sheet, usually the same day.",
     whatsapp:
       "Hi Shree Giriraj, can you check the RERA page for ___ with me?",
     button: "Check a project with us",

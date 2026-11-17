@@ -1,7 +1,7 @@
 ---
 title: "MHADA redevelopment rules: what a society in a MHADA layout has to get right before a builder is chosen"
-metaTitle: "MHADA redevelopment rules for societies"
-metaDescription: "How a society in a MHADA layout redevelops under Regulation 33(5): the Board's NOC, conveyance and member consent, in the order that matters."
+metaTitle: "MHADA redevelopment rules: 33(5) explained"
+metaDescription: "MHADA redevelopment rules for a MHADA layout society: Regulation 33(5), the Board's NOC, the lease, 51 percent member consent and self redevelopment."
 slug: mhada-redevelopment-rules
 category: MHADA
 heroImage: /blog/mhada-redevelopment.jpg
@@ -34,10 +34,12 @@ sources:
     url: https://www.mhada.gov.in/sites/default/files/tot.pdf
   - label: "Municipal Corporation of Greater Mumbai, Development Control and Promotion Regulations 2034, Regulation 33(5)"
     url: https://portal.mcgm.gov.in/
+  - label: "IndiaLaw LLP, Redevelopment of Co-operative Housing Societies: what changes under the 2026 Government Resolution, 4 November 2026"
+    url: https://www.indialaw.in/blog/real-estate/maharashtra-housing-society-redevelopment-gr-2026/
   - label: "DataForSEO, Google search volume for MHADA redevelopment terms in India, measured 9 September 2026"
     url: https://dataforseo.com
-sourcesCheckedOn: "9 September 2026"
-updatedOn: "7 November 2026"
+sourcesCheckedOn: "16 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - What is Regulation 33(5)?
   - Does a MHADA society need conveyance before redevelopment?
@@ -45,7 +47,7 @@ relatedFaqs:
 readNext:
   - conveyance-and-deemed-conveyance
   - can-we-sell-mhada-flat
-  - services/mhada-paperwork
+  - mhada-noc-online
 ---
 
 ## The short answer
@@ -134,11 +136,18 @@ It suits a society that has chosen it on its merits, not because a builder's off
 
 ---
 
-## What about member consent?
+## How many members must agree to redevelopment?
 
-Redevelopment of a cooperative housing society in Maharashtra needs the members' consent, obtained in the manner the cooperative law and government directions prescribe. That means a general body meeting called for the purpose, with the required majority, minuted and recorded.
+**At least 51 percent of the total membership must approve the developer in writing.** That is the rule in the Co-operation Department's resolution of 30 September 2026, issued under section 79A of the Maharashtra Co-operative Societies Act, 1960. It replaced the earlier resolution of 4 July 2019.
 
-Confirm the required percentage and the meeting procedure against the current government direction before you call the meeting. A meeting called on the wrong footing has to be held again.
+As IndiaLaw LLP summarised it on 4 November 2026, the 2026 resolution sets these points:
+
+- **Quorum:** two thirds of the members at the special general body meeting, with members joining by video counted.
+- **Consent:** written approval of at least 51 percent of total members; an absent member's view is not counted.
+- **Tenders:** the draft tender is approved by the meeting and invited through Marathi and English newspapers.
+- **Records:** the flat allotment meeting is video recorded, and members may inspect recordings free.
+
+Read the resolution itself, or ask the society's advocate, before you call the meeting. Then the vote stands the first time.
 
 Whatever the number, the practical advice is the same. Members should decide to redevelop first, on their own terms. Then the society goes to the market. Consent given after the builder has been chosen is consent the members were not really asked for.
 
@@ -169,6 +178,15 @@ Yes. MHADA's Guidelines for Self Redevelopment, dated 26 June 2023, set out the 
 **Why do individual members' transfer papers matter?**
 The Board examines the society's file as a whole. A flat transferred without permission, or a transfer on death never completed, will be found. It is cheaper to regularise before the Board examines the file than during.
 
+**What is the 79A process in redevelopment?**
+The 79A process is the Maharashtra government's procedure for redeveloping a cooperative housing society. It is issued under section 79A of the Maharashtra Co-operative Societies Act, 1960. The current version is the Co-operation Department's resolution of 30 September 2026, covering the meeting, the tender and the developer's selection.
+
+**How many members must agree to redevelopment?**
+Under the Co-operation Department's resolution of 30 September 2026, at least 51 percent of the total membership must approve the developer in writing. The special general body meeting needs a quorum of two thirds of the members.
+
+**What are the MHADA rules for builders?**
+A builder redeveloping a MHADA layout works under Regulation 33(5) of the Development Control and Promotion Regulations, 2034, with the Board's no objection. The society appoints the builder only after members approve under the 79A process, so the society sets the terms first.
+
 **Is the highest offer the best offer?**
 Rarely. The offer that gets built is the one that matters, so check the developer's completion record on MHADA schemes.
 
@@ -178,4 +196,8 @@ Rarely. The offer that gets built is the one that matters, so check the develope
 
 Get the lease, the Board's account and every member's file in order. Read the regulation as it stands today. Then the society goes to the market from a position of strength.
 
-If the society is in Borivali, Kandivali or Malad, our [MHADA paperwork service](/services/mhada-paperwork) handles the members' transfers and the regularisation a clean society file needs. Our guide to [MHADA NOC online](/blog/mhada-noc-online) lists the Board's other services.
+Our [MHADA paperwork service](/services/mhada-paperwork) handles the members' transfers and the regularisation a clean society file needs, for MHADA societies anywhere in Mumbai. [Tell us the society and what is pending on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20our%20MHADA%20society%20in%20___%20is%20planning%20redevelopment.%20Some%20member%20transfers%20are%20pending.%20Can%20you%20help%3F) and we will tell you what the file needs, free. Our guide to [MHADA NOC online](/blog/mhada-noc-online) lists the Board's other services.
+
+## Buying or selling a flat in a MHADA layout before redevelopment?
+
+**A flat in a MHADA layout heading for redevelopment can still be bought or sold.** It needs the same Board and society permissions as any MHADA sale. In Borivali, Kandivali and Malad our [resale flats service](/services/resale-flats) handles both sides, and we read the society's redevelopment papers with you first. The rules for each side are in [selling a MHADA flat](/blog/can-we-sell-mhada-flat) and [buying a MHADA flat in resale](/blog/how-to-buy-mhada-flat-in-resale).

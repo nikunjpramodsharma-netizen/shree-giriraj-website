@@ -21,7 +21,7 @@ export const rentAgreementTool: Tool = {
   title: "Rent agreement stamp duty and registration calculator, Mumbai",
   metaTitle: "Rent agreement stamp duty calculator Mumbai",
   metaDescription:
-    "Work out stamp duty, registration fee and handling charge on a Mumbai leave and licence agreement, on the IGR formula for rent and deposit.",
+    "Leave and licence stamp duty, registration fee and handling charge for a Mumbai rent agreement, worked on the IGR formula for rent and deposit.",
   answer:
     "Stamp duty on a Mumbai leave and licence agreement is 0.25 percent of the rent for the whole term, plus any non refundable amount, plus 10 percent a year notional interest on the refundable deposit. The minimum is 100 rupees. Registration is 1,000 rupees in an urban area, plus a 300 rupee document handling charge.",
   introHeading: "How is stamp duty calculated on a rent agreement in Mumbai?",

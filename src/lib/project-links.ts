@@ -22,6 +22,12 @@ export type ProjectLink = {
   metaTitle?: string;
   /** Meta description, 150 characters at most. */
   metaDescription?: string;
+  /**
+   * Meta descriptions for the translated pages, where the CMS summary alone
+   * is too short to earn the click (technical crawl, 16 November 2026). Each
+   * restates the facts the English description already carries.
+   */
+  localeMetaDescription?: Partial<Record<"hi" | "mr" | "gu", string>>;
 };
 
 export const PROJECT_LINKS: ProjectLink[] = [
@@ -30,33 +36,41 @@ export const PROJECT_LINKS: ProjectLink[] = [
     slug: "blissful-living",
     name: "Blissful Living",
     area: "kandivali",
-    metaTitle: "Blissful Living, Kandivali West",
+    metaTitle: "Blissful Living Kandivali West, upcoming",
     metaDescription:
-      "Upcoming project on Ext. Mathuradas Road, Kandivali West. MahaRERA registration awaited. Register your interest for updates.",
+      "Upcoming project on Ext. Mathuradas Road, Kandivali West. MahaRERA registration awaited. Register your interest, or compare launches nearby.",
   },
   {
     slug: "the-landmark-borivali-west",
     name: "The Landmark, Borivali West",
     area: "borivali-west",
-    metaTitle: "The Landmark Borivali West: 2, 2.5, 3 BHK",
+    // Searchers type "landmark building borivali west" (77 impressions at
+    // position 5, no clicks, Aug to Nov 2026); some mean an older building of
+    // that name, so the snippet answers both.
+    metaTitle: "Landmark building, Borivali West: 2 to 3 BHK",
     metaDescription:
-      "Three 40 storey towers on S.V. Road, Borivali West: 2, 2.5 and 3 BHK homes from about ₹2 Cr. Ask for the price sheet on WhatsApp.",
+      "The Landmark, S.V. Road, Borivali West: three 40 storey towers, 2 to 3 BHK from about ₹2 Cr. Another Landmark building? We find resale flats there.",
   },
   {
     slug: "veena-celestia",
     name: "Veena Celestia",
     area: "borivali-west",
-    metaTitle: "Veena Celestia, Borivali West",
+    metaTitle: "Veena Celestia, Chandavarkar Lane, Borivali",
     metaDescription:
       "New launch on Chandavarkar Lane, Borivali West, with RERA received and bookings open. Base rate ₹41,000++ per sq ft. Price sheet on WhatsApp.",
+    localeMetaDescription: {
+      hi: "बोरिवली वेस्ट के चंदावरकर लेन पर नया लॉन्च, RERA मिल चुका है और बुकिंग शुरू है। बेस रेट ₹41,000++ प्रति वर्ग फुट। प्राइस शीट और RERA नंबर WhatsApp पर पाएं।",
+      mr: "बोरिवली वेस्टमध्ये चंदावरकर लेनवर नवीन लॉन्च, RERA मिळाले, बुकिंग सुरू. बेस रेट ₹41,000++ प्रति चौ. फूट. प्राइस शीट आणि RERA क्रमांक WhatsApp वर मिळवा.",
+      gu: "બોરીવલી વેસ્ટના ચંદાવરકર લેન પર નવો લોન્ચ, RERA મળી ગયું છે અને બુકિંગ શરૂ છે. બેઝ રેટ ₹41,000++ પ્રતિ ચો. ફૂટ. પ્રાઇસ શીટ અને RERA નંબર WhatsApp પર મેળવો.",
+    },
   },
   {
     slug: "luxury-living-punit-nagar",
     name: "Luxury Living (Punit Nagar)",
     area: "borivali-west",
-    metaTitle: "Luxury Living, Punit Nagar, Borivali",
+    metaTitle: "Luxury Living, Punit Nagar, Borivali West",
     metaDescription:
-      "Upcoming project in Punit Nagar, Borivali West. MahaRERA registration awaited. Register your interest for updates.",
+      "Upcoming project in Punit Nagar, Saibaba Nagar, Borivali West. MahaRERA registration awaited. Register your interest and compare the launches nearby.",
   },
 ];
 

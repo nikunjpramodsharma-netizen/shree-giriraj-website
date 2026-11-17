@@ -1,7 +1,7 @@
 ---
 title: "1 BHK price in Borivali, Kandivali and Malad in 2026: what it costs, the down payment and the income you need"
-metaTitle: "1 BHK price in Borivali, Kandivali, Malad"
-metaDescription: "What a 1 BHK asks in Borivali, Kandivali and Malad in 2026, the down payment, the EMI and the monthly income a bank usually wants."
+metaTitle: "1 BHK flat price: Borivali, Kandivali, Malad"
+metaDescription: "A 1 BHK flat in Borivali West, Kandivali or Malad West asks 1.09 to 1.43 crore in 2026. Down payment, EMI, income needed and flats for sale now."
 slug: 1-bhk-price-borivali-kandivali-malad
 category: Buying
 heroImage: /blog/1-bhk-price-borivali-kandivali-malad.jpg
@@ -26,9 +26,9 @@ note: >
   current benefit when read. Audited 14 November 2026: every Square Yards
   and NoBroker figure read again that day; Malad West 30,800 is cited to the
   Square Yards Kandivali East page (its own overview page now shows 28,250);
-  Charkop updated to Sectors 2 and 4 at 25,950 to 26,150 (October 2026), so
-  src/lib/areas.ts and best-area-to-invest-in-mumbai (23,350 to 26,150) are
-  now older than this page.
+  Charkop updated to Sectors 2 and 4 at 25,950 to 26,150 (October 2026);
+  src/lib/areas.ts and best-area-to-invest-in-mumbai were aligned on 16
+  November 2026.
 answer: >
   A 1 BHK of 400 to 450 square feet asks about 1.09 to 1.43 crore rupees in
   Borivali, Kandivali and Malad, on portal rates from September and October
@@ -62,7 +62,7 @@ sources:
   - label: "Department of Registration and Stamps, Maharashtra, Table of Fees: registration at one percent, maximum 30,000 rupees"
     url: https://igrmaharashtra.gov.in/pdf/documents/Registration%20fee%20table.pdf
 sourcesCheckedOn: "14 November 2026"
-updatedOn: "14 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - What does a 1 BHK cost in Borivali West?
   - What salary do I need to buy a 1 BHK in Mumbai?
@@ -91,7 +91,7 @@ We took each area's average asking rate per square foot from Square Yards and mu
 
 These are asking prices, not the prices flats are registered at. Portals do not always quote on the same area basis, so ask what a price is quoted on. Our [carpet area guide](/blog/carpet-area-vs-built-up-area) shows why.
 
-Have a budget in mind? [Send it to us on WhatsApp with the suburb you prefer](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20am%20looking%20for%20a%201%20BHK%20to%20live%20in%2C%20in%20___.%20My%20budget%20is%20about%20___.%20Can%20you%20share%20three%20that%20fit%3F). We will share three 1 BHKs that fit, with the building checked. It is free, with no obligation.
+**Looking for a 1 BHK flat now?** See the 1 BHK flats for sale in [Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali West](/areas/kandivali/flats-for-sale) and [Malad West](/areas/malad/flats-for-sale), with the asking rate in each pocket. Or [tell us your budget and pocket on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20am%20looking%20for%20a%201%20BHK%20to%20live%20in%2C%20in%20___.%20My%20budget%20is%20about%20___.%20Can%20you%20share%20three%20that%20fit%3F) and we send three 1 BHKs that fit, with the building checked, usually the same day. It is free, with no obligation.
 
 ---
 
@@ -108,6 +108,8 @@ Pockets inside an area differ more than the areas do. This table applies the sam
 NoBroker's 14,543 is an average across a wide range, from 10,666 to 23,846, and its page carries no date. Treat Jankalyan Nagar as a starting point for a conversation, not a quote. Our [pockets guide](/blog/best-area-to-invest-in-mumbai) lists the other pockets and where each rate came from.
 
 Charkop's sectors are MHADA colonies. A MHADA flat can be a lower priced route, with its own permissions. Our [MHADA resale guide](/blog/how-to-buy-mhada-flat-in-resale) explains them.
+
+Each suburb's guide lists more pockets with their rates: [Borivali West](/areas/borivali-west), [Kandivali](/areas/kandivali) and [Malad](/areas/malad).
 
 ---
 
@@ -194,6 +196,9 @@ On a 1.2 crore rupee flat you need 30 lakh as down payment under the RBI's 75 pe
 **Is there a 1 BHK under 80 lakh rupees here?**
 A 1 BHK under 80 lakh rupees is possible in the lowest priced pockets only, on portal asking rates. NoBroker's undated average for Jankalyan Nagar in Malad West is 14,543 rupees per square foot. That works out to roughly 58 to 65 lakh for 400 to 450 square feet. Tell us your budget and we shortlist what is actually for sale.
 
+**Where can I find 1 BHK flats for sale in Borivali West, Kandivali or Malad?**
+Our flats for sale pages for [Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali West](/areas/kandivali/flats-for-sale) and [Malad West](/areas/malad/flats-for-sale) show the 1 BHK asking rates by pocket. Send us your budget and pocket on WhatsApp and we share the 1 BHKs actually for sale that fit, usually the same day.
+
 **Is a ready 1 BHK cheaper than an under construction one?**
 A ready 1 BHK is not always cheaper, so compare the same project and floor. An under construction flat usually costs less per square foot and lets you pay in stages, but you wait for possession. Our guide on [under construction or ready to move](/blog/under-construction-vs-ready-to-move-flat) sets out the trade.
 
@@ -207,6 +212,6 @@ A 20 year loan is a common choice, and it is the tenure our tables use. A shorte
 
 ## Where to start
 
-Send us your budget and the suburb you prefer. We reply with three 1 BHKs that fit, the building checked and the stamp duty worked out in rupees. Shree Giriraj is a real estate agency, in real estate since 1996 and at our Borivali office since 2005.
+Send us your budget and the pocket you prefer. We reply with three 1 BHKs that fit, the building checked and the stamp duty worked out in rupees. Buying in a new project instead? See [new projects in Borivali West and Kandivali West](/guides/new-projects-borivali-west). Shree Giriraj is a real estate agency, in real estate since 1996 and at our Borivali office since 2005.
 
 It is free, with no obligation, and we usually reply the same day. [Message us on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20am%20looking%20for%20a%201%20BHK%20to%20live%20in%2C%20in%20___.%20My%20budget%20is%20about%20___.) and we will start with your budget.

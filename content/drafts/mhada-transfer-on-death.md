@@ -1,7 +1,7 @@
 ---
 title: "MHADA transfer procedure in case of death: who inherits the tenement and what the Board asks for"
-metaTitle: "MHADA transfer on death: heirs and papers"
-metaDescription: "When a MHADA allottee dies, the flat passes to a legal heir under section 24. Who can inherit, the file the Estate Manager wants, and the charges."
+metaTitle: "MHADA transfer after death: steps and papers"
+metaDescription: "The MHADA transfer procedure in case of death: who can inherit under section 24, the Estate Manager's file, the charges and the 23 day limit."
 slug: mhada-transfer-on-death
 category: MHADA
 heroImage: /blog/mhada-heir.jpg
@@ -31,16 +31,16 @@ sources:
     url: https://www.mhada.gov.in/en/e-mitra/transfer-of-tenements-%28tot%29
   - label: "DataForSEO, Google search volume for MHADA transfer terms in India, measured 9 September 2026"
     url: https://dataforseo.com
-sourcesCheckedOn: "9 September 2026"
-updatedOn: "7 November 2026"
+sourcesCheckedOn: "16 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - Who can inherit a MHADA flat?
   - Is a heirship certificate needed for MHADA transfer?
   - Are transfer charges payable on a transfer to an heir?
 readNext:
   - can-we-sell-mhada-flat
+  - mhada-flat-transfer
   - mutation-of-property
-  - services/mhada-paperwork
 ---
 
 ## The short answer
@@ -95,7 +95,7 @@ The Mumbai Board publishes the list. For a transfer on death, these nine items m
 
 The list says the application with documents goes to the Estate Manager within fifteen days.
 
-If more than one heir is eligible, the Board expects the others' consent in writing before it transfers to one of them. This is where these applications most often stall. A family conversation before the file goes in keeps things moving.
+If more than one heir is eligible, the Board expects the others' consent in writing before it transfers to one of them. The Board's Form 1 checklist asks for registered release deeds from the other heirs in that case. Gathering them before the file goes in keeps it moving.
 
 ---
 
@@ -109,9 +109,24 @@ The Board's document list sets the transfer charges for transfer of tenancy righ
 | Middle Income Group | 55 rupees per sq ft | 25,000 rupees |
 | High Income Group | 60 rupees per sq ft | 35,000 rupees |
 
-These were published on mhada.gov.in and checked on 9 September 2026. Our guide to the [MHADA flat transfer process](/blog/mhada-flat-transfer) has the Board's Form 1 checklist, including the papers for a transfer after a death.
+These are as published on mhada.gov.in, a document unchanged since July 2025 when we checked it again on 16 November 2026. Our guide to the [MHADA flat transfer process](/blog/mhada-flat-transfer) has the Board's Form 1 checklist, including the papers for a transfer after a death.
 
-The published list does not say whether the Board applies the full schedule, a reduced charge or no charge to an heir. Practice has varied. Confirm the figure for your scheme at the Estate Manager's office.
+The published list does not say whether the Board applies the full schedule, a reduced charge or no charge to an heir. So confirm the figure for your scheme at the Estate Manager's office, and you pay the right amount the first time.
+
+---
+
+## What is the MHADA transfer procedure in case of death?
+
+**The transfer after a death runs in six steps, and the Board has 23 office working days to decide once the file is complete.** That limit comes from MHADA's Right to Public Services notification of 13 July 2015.
+
+1. **Get the death certificate.** The Board's list asks for the original, so keep certified copies for the society and others.
+2. **Establish the heir.** A registered will, or a heirship certificate from the court where there is none.
+3. **Collect the other heirs' consent.** Registered release deeds where the flat goes to one heir.
+4. **Get the society's NOC.** Or an affidavit that no society has been formed.
+5. **Clear the dues and pay the transfer charge.** Keep the latest rent receipt and the charge receipt.
+6. **File Form 1 with the Estate Manager.** The completed file goes in within fifteen days of the form being issued.
+
+Once approved, the Board records the flat in the heir's name. Our guide to the [MHADA flat transfer](/blog/mhada-flat-transfer) has the full Form 1 checklist.
 
 ---
 
@@ -150,10 +165,25 @@ Selling is a separate application with its own conditions. It needs the Board's 
 **What if the family was already living in the flat?**
 Living there does not change the record. Until the transfer is granted, the Board's allottee is the person who has died. The family should apply rather than wait.
 
+**How long does a MHADA transfer after death take?**
+MHADA's notified time limit for a transfer of tenement is 23 office working days from a complete file. That limit is in its Right to Public Services notification of 13 July 2015. The court's heirship certificate runs on its own timeline, so start it first.
+
+**Can a registered will be used instead of a heirship certificate?**
+Yes, the Mumbai Board's Form 1 checklist accepts a registered will with the death certificate. Where there is no registered will, the court's heirship certificate takes its place. The Board's separate document list names the heirship certificate, so ask the Estate Manager which your file needs.
+
+**Does the society nominee get the MHADA flat?**
+No, a society nomination does not make the nominee the Board's allottee. It tells the society whom to deal with. The Board transfers the tenancy only to a legal heir on the section 24 list, through Form 1.
+
 ---
 
 ## Where to start
 
 Start with the death certificate and the heirship certificate. Then settle the society's position, and the rest of the file follows.
 
-If the flat is in Borivali, Kandivali or Malad, our [MHADA paperwork service](/services/mhada-paperwork) can help. We assemble the application against the Board's list. Then we take it through the Estate Manager's office. For the matching step on the municipal record, read [mutation of property](/blog/mutation-of-property).
+Our [MHADA paperwork service](/services/mhada-paperwork) handles this for flats anywhere in Mumbai. We assemble the application against the Board's list, then take it through the Estate Manager's office. [Tell us the flat and the heirs on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20need%20help%20transferring%20a%20MHADA%20flat%20into%20my%20name%20after%20a%20death%20in%20the%20family.%20The%20flat%20is%20in%20___.) and we will tell you what the file needs, free. For the matching step on the municipal record, read [mutation of property](/blog/mutation-of-property).
+
+## Planning to sell or rent the flat after the transfer?
+
+**If the family plans to sell or let the flat once it is in the heir's name, we do both in Borivali, Kandivali and Malad.** Our [resale flats service](/services/resale-flats) prices the flat and finds a buyer who fits the scheme's income group. Our [rentals service](/services/rentals) finds the tenant once the Board's NOC for rent is in hand.
+
+We line up the sale permission alongside the transfer, so the sale does not wait on paperwork. [Ask us on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20the%20MHADA%20flat%20we%20inherited%20in%20___%20is%20being%20transferred%20to%20us.%20We%20are%20thinking%20of%20___%20%28selling%20or%20renting%29%20it.%20Can%20you%20help%3F) and we usually reply the same day, free and with no obligation.

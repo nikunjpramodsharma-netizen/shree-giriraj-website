@@ -1,7 +1,7 @@
 ---
 title: "Leave and licence agreement in Mumbai: online registration, stamp duty and documents"
-metaTitle: "Leave and licence agreement Mumbai: online"
-metaDescription: "Stamp duty on a Mumbai leave and licence is 0.25 percent, plus 1,000 rupees registration. Worked examples, online steps and documents."
+metaTitle: "Leave and licence agreement Mumbai: cost"
+metaDescription: "Leave and licence agreement in Mumbai: 0.25% stamp duty, 1,000 rupees registration, 300 handling. Worked costs, the 10 online steps and documents."
 slug: leave-and-licence-agreement-mumbai
 category: Renting
 heroImage: /blog/leave-and-licence-agreement-mumbai.jpg
@@ -26,6 +26,15 @@ note: >
   Independently fact checked on 7 November 2026 against the Schedule,
   the calculator script, the user manual, section 55 (including the
   penalty in 55(3)) and Aaple Sarkar service 5030; all figures held.
+  16 November 2026: Article 36A re read in the master copy of the Schedule
+  (0.25 percent, three components, over 60 months goes to Article 36).
+  Added the licence versus lease section (Indian Easements Act section 52)
+  and the Competent Authority section from the Mumbai Police press note of
+  12 November 2026 and section 24 of the Rent Control Act, both read that
+  day. Search Console, 16 August to 14 November 2026: 73 impressions at
+  position 11, no clicks; the Mumbai SERP had an AI Overview citing the
+  IGR e-filing portal and agreement services, and People Also Ask on lease
+  versus licence and on the stamp duty sum, both now answered up top.
 answer: >
   A leave and licence agreement in Mumbai must be in writing and registered under section 55 of the Maharashtra Rent Control Act. Stamp duty is 0.25 percent of the rent for the term, any non refundable deposit, and 10 percent a year on the refundable deposit. Registration is 1,000 rupees, plus a 300 rupee handling charge.
 sources:
@@ -43,10 +52,16 @@ sources:
     url: https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=5030
   - label: "Mumbai Police, Tenant Information online form"
     url: https://www.mumbaipolice.gov.in/TenantForm?ps_id=0
+  - label: "Section 52, Indian Easements Act 1882, licence defined, read 16 November 2026"
+    url: https://indiankanoon.org/doc/120447987/
+  - label: "Section 24, Maharashtra Rent Control Act 1999, recovery of premises given on licence, read 16 November 2026"
+    url: https://indiankanoon.org/doc/75823253/
+  - label: "Mumbai Police, press note of DCP Zone 1 as Competent Authority under the Maharashtra Rent Control Act, 12 November 2026 (in Marathi)"
+    url: https://www.mumbaipolice.gov.in/files/PressRelease/4097.pdf
   - label: "DataForSEO, Google search volume for leave and licence terms, measured 7 November 2026"
     url: https://dataforseo.com
-sourcesCheckedOn: "7 November 2026"
-updatedOn: "7 November 2026"
+sourcesCheckedOn: "16 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - Is registration of a leave and licence agreement compulsory in Mumbai?
   - How much is stamp duty on a leave and licence agreement in Mumbai?
@@ -65,15 +80,23 @@ A leave and licence agreement in Mumbai must be in writing and registered under 
 
 ## What is a leave and licence agreement?
 
-It is the usual rent agreement in Maharashtra. The owner, called the licensor, lets someone use the flat for a fixed time. The person using it is the licensee. The licensee pays a monthly licence fee, which most people simply call rent.
+**It is the usual rent agreement in Maharashtra: permission to use a flat for a fixed term, in return for a monthly fee.** The owner, called the licensor, lets someone use the flat for a fixed time. The person using it is the licensee. The licensee pays a monthly licence fee, which most people simply call rent.
 
 Under section 55 of the Maharashtra Rent Control Act 1999, such an agreement must be in writing and registered. The landlord must get it registered.
 
 ---
 
+## How is a leave and licence different from a lease?
+
+**A licence gives only permission to use the flat; a lease transfers an interest in it.** Section 52 of the Indian Easements Act, 1882 defines a licence as a right to use another's property that is not an interest in it. That is why Mumbai owners prefer it: the flat stays fully theirs.
+
+The stamp duty differs too. A leave and licence for up to 60 months pays 0.25 percent under Article 36A. Over 60 months it pays the duty on a lease under Article 36 instead.
+
+---
+
 ## Is registration compulsory?
 
-Yes. Section 55 says a leave and licence made after the Act began must be registered under the Registration Act. If it is not, the tenant's version of the terms prevails, unless the landlord proves otherwise. The section also sets a penalty for a landlord who does not register. It is up to three months in jail, a fine up to 5,000 rupees, or both.
+**Yes, for every leave and licence in Maharashtra.** Section 55 says a leave and licence made after the Act began must be registered under the Registration Act. If it is not, the tenant's version of the terms prevails, unless the landlord proves otherwise. The section also sets a penalty for a landlord who does not register. It is up to three months in jail, a fine up to 5,000 rupees, or both.
 
 Registration protects both sides. The tenant can prove the deposit and the term. The landlord can enforce the lock in period and the rent.
 
@@ -81,7 +104,7 @@ Registration protects both sides. The tenant can prove the deposit and the term.
 
 ## How is stamp duty worked out?
 
-Article 36A(a) of the Maharashtra Stamp Act sets the duty. For a term up to 60 months, it is 0.25 percent of the total of three things:
+**Stamp duty is 0.25 percent of the rent for the term, any non refundable deposit, and 10 percent a year on the refundable deposit.** Article 36A(a) of the Maharashtra Stamp Act sets it for a term up to 60 months. It is 0.25 percent of the total of three things:
 
 1. The rent for the whole term.
 2. Any non refundable deposit or premium.
@@ -101,17 +124,19 @@ The last column adds the 1,000 rupee registration fee and the 300 rupee handling
 
 The third row has no yearly rent increase. If you agree an increase, the rent total rises, and so does the duty. Our [rent agreement stamp duty calculator](/tools/rent-agreement-stamp-duty-calculator-mumbai) does this sum for your own figures, with yearly increases.
 
+Letting a flat in Borivali, Kandivali or Malad? [Send us the rent and the deposit on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20need%20a%20registered%20leave%20and%20licence%20for%20my%20flat%20in%20___.%20Rent%20is%20___%20and%20deposit%20is%20___.) and we will send the exact duty, then run the registration with both sides.
+
 ---
 
 ## Who pays the stamp duty and fees?
 
-You decide between you. The online system asks who pays: the licensee, the licensor, or both equally. Write the choice into the agreement so it is clear.
+**Whoever you agree; it is not fixed by law.** The online system asks who pays: the licensee, the licensor, or both equally. Write the choice into the agreement so it is clear.
 
 ---
 
 ## How does online registration work?
 
-The Department of Registration and Stamps runs Leave and License 2.0 at leaveandlicense.igrmaharashtra.gov.in. You can do all of it from home. The department's page says the agreement is drafted, edited, signed, submitted and registered online, without a visit to the Sub Registrar's office.
+**Online, from home, on the department's Leave and License 2.0 portal at leaveandlicense.igrmaharashtra.gov.in.** The department's page says the agreement is drafted, edited, signed, submitted and registered online, without a visit to the Sub Registrar's office.
 
 The steps in the department's manual are:
 
@@ -132,7 +157,7 @@ Once the Sub Registrar accepts it, the status shows "Successfully Registered". Y
 
 ## Which documents and details do you need?
 
-The portal fetches names and addresses from Aadhaar. Keep these ready:
+**Aadhaar and PAN for both sides, Aadhaar for two witnesses, and the flat and money details.** The portal fetches names and addresses from Aadhaar. Keep these ready:
 
 - **Licensor and licensee:** Aadhaar, and PAN. PAN verification of both parties is compulsory.
 - **Two witnesses:** Aadhaar for each, with a mobile number.
@@ -147,7 +172,7 @@ The manual also lets you add a list of furniture and appliances, and a clause on
 
 ## How long should the term be?
 
-The portal accepts a term from 1 to 60 months. A term over 60 months pays lease duty under Article 36 instead, which our calculator does not cover.
+**Anything from 1 to 60 months; eleven months is the common choice.** The portal accepts a term from 1 to 60 months. A term over 60 months pays lease duty under Article 36 instead, which our calculator does not cover.
 
 You can also set a minimum lock in period, in months. Agree it early, because it decides when either side can leave.
 
@@ -155,7 +180,7 @@ You can also set a minimum lock in period, in months. Agree it early, because it
 
 ## Which clauses are worth agreeing?
 
-The portal's own fields point to the clauses that matter:
+**The deposit, the lock in, the rent increase and who pays maintenance.** The portal's own fields point to them:
 
 - **Deposit:** the refundable amount, and any amount that is not refunded. Our guide to [how many months of deposit is normal in the western suburbs](/blog/rent-deposit-months-western-suburbs) gives the local range.
 - **Lock in period:** how many months neither side can end the tenancy.
@@ -166,13 +191,31 @@ The portal's own fields point to the clauses that matter:
 
 ## Does a MHADA flat need anything first?
 
-Yes. A MHADA flat needs the Mumbai Board's NOC for rent before you sign. The Aaple Sarkar portal lists the notified time as 8 days. Our guide to [renting out a MHADA flat](/blog/can-we-rent-mhada-flat) covers the steps.
+**Yes, the Mumbai Board's NOC for rent, before you sign.** The Aaple Sarkar portal lists the notified time as 8 days. Our guide to [renting out a MHADA flat](/blog/can-we-rent-mhada-flat) covers the steps.
 
 ---
 
 ## Is the police told after registration?
 
-The online system collects tenant details "for police records" and creates a Police Information Report. The manual does not say the department sends it to the police. So file the Mumbai Police Tenant Information form as well. Our guide to [tenant police verification in Mumbai](/blog/tenant-police-verification-mumbai) has the steps.
+**Not automatically, so file the Mumbai Police form as well.** The online system collects tenant details "for police records" and creates a Police Information Report. The manual does not say the department sends it to the police. So file the Mumbai Police Tenant Information form as well. Our guide to [tenant police verification in Mumbai](/blog/tenant-police-verification-mumbai) has the steps.
+
+---
+
+## What if the licensee does not leave when the term ends?
+
+**The landlord applies to the Competent Authority under section 24 of the Maharashtra Rent Control Act.** In Mumbai that is now the zonal Deputy Commissioner of Police. A Mumbai Police press note of 12 November 2026 reports a Housing Department notification of 31 July 2026. It made all 15 zonal DCPs Competent Authority for their areas.
+
+In the case the note describes, a registered 36 month agreement had ended and the licensee stayed on. The landlord applied on 16 October 2026, and the DCP of Zone 1 ordered the flat handed back. The licensee was also ordered to pay damages at double the licence fee, as section 24(2) provides.
+
+Section 24 treats a written licence agreement as conclusive evidence of its terms. That is the strongest reason to register: the agreement itself becomes the landlord's proof.
+
+---
+
+## Letting, or thinking of selling instead?
+
+**We do both in Borivali, Kandivali and Malad.** Our [rentals service](/services/rentals) finds a verified tenant, registers the agreement and files the police form. If you would rather sell, our [resale flats service](/services/resale-flats) advises on the asking price and brings serious buyers.
+
+Looking for a flat to rent? See the [flats for rent in Borivali West](/areas/borivali-west/flats-for-rent), [Kandivali West](/areas/kandivali/flats-for-rent) and [Malad West](/areas/malad/flats-for-rent), with asking rents by size.
 
 ---
 
@@ -182,7 +225,13 @@ The online system collects tenant details "for police records" and creates a Pol
 Yes. Section 55 of the Maharashtra Rent Control Act requires it to be in writing and registered. The landlord must register it.
 
 **How much is stamp duty on a leave and licence agreement in Mumbai?**
-It is 0.25 percent of the rent for the term, any non refundable deposit, and 10 percent a year on the refundable deposit. The minimum is 100 rupees.
+It is 0.25 percent of the total rent for the term, plus any non refundable deposit. Add 10 percent a year on the refundable deposit to that total. The minimum is 100 rupees.
+
+**What is the difference between a leave and licence and a lease?**
+A licence is only permission to use the flat, under section 52 of the Indian Easements Act. A lease transfers an interest in it, and a term over 60 months pays lease duty.
+
+**Can a landlord evict a licensee after the agreement ends?**
+Yes. Under section 24 of the Maharashtra Rent Control Act, the landlord applies to the Competent Authority. In Mumbai that is now the zonal Deputy Commissioner of Police.
 
 **What is the registration fee?**
 It is 1,000 rupees for property in an urban area such as Mumbai. A document handling charge of 300 rupees is added, as the department's calculator shows.
@@ -200,7 +249,7 @@ The portal accepts 1 to 60 months. Over 60 months, lease duty under Article 36 a
 The portal shows the draft in English and in Marathi, so both parties can read it.
 
 **Does the registered agreement tell the police about my tenant?**
-The system builds a police information report, but the manual does not say it is sent. File the Mumbai Police tenant form too.
+Not on its own. The system builds a police information report, but the manual does not say it is sent, so file the Mumbai Police tenant form too.
 
 ---
 

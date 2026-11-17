@@ -13,6 +13,18 @@ import { graph, breadcrumbNode, itemListNode, faqNode } from "@/lib/schema";
 import { repairProjectLocales } from "@/lib/project-locale-fixes";
 import { COMPARISON } from "@/lib/project-facts";
 import { PROJECT_LINKS, registrationAwaited } from "@/lib/project-links";
+import { waLink } from "@/lib/config";
+import { JJ } from "@/lib/projects/jaswanti-jewel";
+
+/**
+ * Jaswanti Jewel is served from code in English only; its translated route is
+ * noindex with a canonical to English. The hi, mr and gu lists link straight
+ * to the English page so nobody lands on the copy (technical crawl, 16 Nov 2026).
+ */
+const ENGLISH_ONLY_PROJECTS = new Set([JJ.slug]);
+
+const MALAD_WA =
+  "Hi Shree Giriraj, I am looking at new projects in Malad West. My budget is about ___ for a ___ BHK. Can you send me the launches that fit?";
 
 export const revalidate = 60;
 
@@ -27,11 +39,19 @@ const INTRO_EN =
 const FAQS_EN = [
   {
     q: "Which new projects are there in Kandivali West?",
-    a: "Jaswanti Jewel, with 2, 3, 4 and 5 BHK homes from ₹2.92 Cr and possession from March 2027, and Blissful Living on Ext. Mathuradas Road, which is awaiting MahaRERA registration.",
+    a: "Kandivali West has Jaswanti Jewel off M. G. Road, registered on MahaRERA, with 2, 3, 4 and 5 BHK homes from ₹2.92 Cr as of October 2026 and possession from March 2027. Blissful Living on Ext. Mathuradas Road is awaiting MahaRERA registration.",
   },
   {
     q: "Which new projects are there in Borivali West?",
-    a: "The Landmark on S.V. Road, Veena Celestia on Chandavarkar Lane, and Luxury Living in Punit Nagar, which is awaiting MahaRERA registration.",
+    a: "Borivali West has The Landmark on S.V. Road, with 2, 2.5 and 3 BHK homes from about ₹2 Cr, and Veena Celestia on Chandavarkar Lane, which is RERA registered. Luxury Living in Punit Nagar is awaiting MahaRERA registration.",
+  },
+  {
+    q: "Are there new projects in Malad West?",
+    a: "Yes. Square Yards listed 10 newly launched and 17 under construction projects in Malad West when read on 16 November 2026. None is on this page yet. Send us your budget on WhatsApp and we share the Malad West launches that fit, each with its MahaRERA registration checked.",
+  },
+  {
+    q: "When is possession at Jaswanti Jewel?",
+    a: "Jaswanti Jewel's possession is from March 2027, the developer's handover target, with every amenity ready at handover. The MahaRERA possession date is December 2027, the planned completion in the project's June 2026 environmental compliance report.",
   },
   {
     q: "How do I check a project's MahaRERA registration?",
@@ -132,6 +152,7 @@ export default async function ProjectsPage({
             projects.map((p) => ({
               name: p.name,
               path: `/projects/${p.slug.current}`,
+              ...(ENGLISH_ONLY_PROJECTS.has(p.slug.current) ? { locale: "en" } : {}),
             })),
           ),
           ...(en ? [faqNode(FAQS_EN.map((f) => ({ question: f.q, answer: f.a })))] : []),
@@ -162,6 +183,14 @@ export default async function ProjectsPage({
 
       <section className="py-20">
         <div className="wrap">
+          {en && (
+            <p className="mb-10 max-w-[62ch] text-sm text-muted">
+              Jump to{" "}
+              <a href="#kandivali-west" className="font-semibold text-brand-indigo underline underline-offset-4">Kandivali West</a>,{" "}
+              <a href="#borivali-west" className="font-semibold text-brand-indigo underline underline-offset-4">Borivali West</a> or{" "}
+              <a href="#malad-west" className="font-semibold text-brand-indigo underline underline-offset-4">Malad West</a>.
+            </p>
+          )}
           {(!projects || projects.length === 0) && (
             <p className="text-muted">
               {t("emptyState")}
@@ -181,10 +210,15 @@ export default async function ProjectsPage({
                 </>
               )}
               <div className={`grid gap-8 md:grid-cols-2 lg:grid-cols-3 ${g.title ? "mt-6" : ""}`}>
-                {g.items.map((project) => (
-                  <Link prefetch={false}
+                {g.items.map((project) => {
+                  const toEnglish = !en && ENGLISH_ONLY_PROJECTS.has(project.slug.current);
+                  const Card = toEnglish ? "a" : Link;
+                  return (
+                  <Card
+                    {...(toEnglish ? {} : { prefetch: false })}
                     key={project._id}
                     href={`/projects/${project.slug.current}`}
+                    {...(toEnglish ? { hrefLang: "en" } : {})}
                     className="group flex flex-col overflow-hidden rounded-2xl border border-brand-indigo/10 bg-white transition hover:-translate-y-1 hover:shadow-xl"
                   >
                     {project.coverImage && (
@@ -219,11 +253,31 @@ export default async function ProjectsPage({
                         {t("viewDetails")}
                       </span>
                     </div>
-                  </Link>
-                ))}
+                  </Card>
+                  );
+                })}
               </div>
             </div>
           ))}
+
+          {en && (
+            <div id="malad-west" className="mt-14">
+              <h2 className="text-2xl text-brand-indigo md:text-3xl">New projects in Malad West</h2>
+              <p className="mt-2 max-w-[62ch] text-ink/80">
+                Square Yards listed 10 newly launched and 17 under construction projects in Malad West when we read it
+                on 16 November 2026. None is on this page yet. Tell us the size and the budget, and we send the Malad
+                West launches that fit, each with its MahaRERA registration checked, usually the same day.
+              </p>
+              <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-3">
+                <a href={waLink(MALAD_WA)} target="_blank" rel="noopener" className="btn btn-wa">
+                  Ask for Malad West launches
+                </a>
+                <a href="/areas/malad" className="text-sm font-semibold text-brand-indigo underline underline-offset-4">
+                  Malad West property rates and guide
+                </a>
+              </div>
+            </div>
+          )}
 
           {en && (
             <>
@@ -281,19 +335,50 @@ export default async function ProjectsPage({
                   </details>
                 ))}
               </div>
+              <h2 className="mt-16 text-2xl text-brand-indigo md:text-3xl">Before you book a new project</h2>
+              <ul className="mt-4 max-w-[68ch] space-y-3 text-ink/80">
+                <li>
+                  <a href="/guides/new-projects-borivali-west" className="font-semibold text-brand-indigo underline underline-offset-4">
+                    New projects in Borivali West
+                  </a>
+                  : how to read a launch before you book.
+                </li>
+                <li>
+                  <a href="/blog/under-construction-vs-ready-to-move-flat" className="font-semibold text-brand-indigo underline underline-offset-4">
+                    Under construction or ready to move
+                  </a>
+                  : what you trade by waiting for possession.
+                </li>
+                <li>
+                  <a href="/blog/buy-first-flat-in-mumbai" className="font-semibold text-brand-indigo underline underline-offset-4">
+                    Buying your first flat in Mumbai, step by step
+                  </a>
+                  : from the budget to the keys.
+                </li>
+                <li>
+                  Prefer a resale flat? See flats for sale in{" "}
+                  <a href="/areas/kandivali/flats-for-sale" className="font-semibold text-brand-indigo underline underline-offset-4">Kandivali West</a>,{" "}
+                  <a href="/areas/borivali-west/flats-for-sale" className="font-semibold text-brand-indigo underline underline-offset-4">Borivali West</a> and{" "}
+                  <a href="/areas/malad/flats-for-sale" className="font-semibold text-brand-indigo underline underline-offset-4">Malad West</a>, with 1, 2 and 3 BHK prices by pocket.
+                </li>
+              </ul>
               <p className="mt-8 text-sm text-muted">
                 Reading about the suburbs first? See the{" "}
-                <Link prefetch={false} href="/areas/kandivali" className="font-semibold text-brand-indigo underline underline-offset-4">
+                <a href="/areas/kandivali" className="font-semibold text-brand-indigo underline underline-offset-4">
                   Kandivali West guide
-                </Link>
+                </a>
                 , the{" "}
-                <Link prefetch={false} href="/areas/borivali-west" className="font-semibold text-brand-indigo underline underline-offset-4">
+                <a href="/areas/borivali-west" className="font-semibold text-brand-indigo underline underline-offset-4">
                   Borivali West guide
-                </Link>
+                </a>
+                , the{" "}
+                <a href="/areas/malad" className="font-semibold text-brand-indigo underline underline-offset-4">
+                  Malad West guide
+                </a>
                 , and the{" "}
-                <Link prefetch={false} href="/tools/stamp-duty-calculator-mumbai" className="font-semibold text-brand-indigo underline underline-offset-4">
+                <a href="/tools/stamp-duty-calculator-mumbai" className="font-semibold text-brand-indigo underline underline-offset-4">
                   stamp duty calculator
-                </Link>
+                </a>
                 .
               </p>
             </>

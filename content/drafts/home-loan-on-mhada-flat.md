@@ -1,7 +1,7 @@
 ---
 title: "Home loan on a MHADA flat: the NOC, the papers and the subsidy"
-metaTitle: "Home loan on a MHADA flat: NOC and papers"
-metaDescription: "Yes, banks lend on MHADA flats with MHADA's mortgage NOC. Lottery winners use the IHLMS 2.0 app; owners file Form 4. Free help on WhatsApp."
+metaTitle: "Home loan on a MHADA flat? Yes, with an NOC"
+metaDescription: "Yes. Banks lend on MHADA flats once MHADA issues its mortgage NOC: 12 working days on Form 4, or in the IHLMS 2.0 app for lottery winners. Every step."
 slug: home-loan-on-mhada-flat
 category: MHADA
 heroImage: /blog/mhada-home-loan.jpg
@@ -52,8 +52,8 @@ sources:
     url: https://pmaymis.gov.in/PMAYMIS2_2024/PMAY_SURVEY/EligiblityCheck.aspx
   - label: "MHADA citizen services portal (MITRA), notice that new registration and services moved to Aaple Sarkar from 1 April 2019"
     url: https://emitrapranali.mhada.gov.in/
-sourcesCheckedOn: "19 October 2026"
-updatedOn: "7 November 2026"
+sourcesCheckedOn: "16 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - Does a bank need a MHADA NOC for a home loan?
   - How do I get a NOC from MHADA for a home loan?
@@ -86,7 +86,7 @@ The table at the top shows the two routes to that NOC. The sections below take e
 
 ---
 
-## Lottery winners: the home loan NOC in the IHLMS 2.0 app
+## How do lottery winners get the home loan NOC?
 
 Lottery winners get the home loan NOC in MHADA IHLMS 2.0. MHADA says it uses this app for every step from the draw to possession. MHADA's lottery FAQ gives the steps:
 
@@ -104,9 +104,9 @@ Our [MHADA lottery 2026 next steps](/blog/mhada-lottery-2026-mumbai) guide puts 
 
 ---
 
-## Owners and resale buyers: the MHADA NOC for a mortgage loan (Form 4)
+## How do owners get the MHADA NOC for a mortgage loan?
 
-Owners and resale buyers apply to the Estate Manager on the Mumbai Board's Form 4. It is a notified service with a limit of 12 working days. The applicant is the person the Mumbai Board allotted the flat to, or in whose name it has been regularised. The form names the lender, meaning the bank or housing finance company.
+**Owners and resale buyers file Form 4, the MHADA NOC for a mortgage loan.** They apply to the Estate Manager for their division. It is a notified service with a limit of 12 working days. The applicant is the person the Mumbai Board allotted the flat to, or in whose name it has been regularised. The form names the lender, meaning the bank or housing finance company.
 
 Form 4's own checklist asks for four things:
 
@@ -140,7 +140,7 @@ Plan the MHADA flat transfer and the home loan as one timeline. Our guide to [MH
 
 ---
 
-## The MHADA home loan procedure, step by step
+## What is the MHADA home loan procedure, step by step?
 
 The MHADA home loan procedure takes five steps for an owner or resale buyer:
 
@@ -155,6 +155,14 @@ MHADA's citizen portal says new E-MITRA registrations and services moved to Aapl
 MHADA's notification of 13 July 2015 names two appellate officers for this service. An appellate officer hears appeals when a service is refused or delayed. The first is the Executive Engineer, then the Joint Chief Officer.
 
 We prepare this file against the Mumbai Board's own checklist. [Send us the flat and your bank on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20need%20a%20MHADA%20NOC%20for%20a%20home%20loan%20on%20my%20flat%20in%20___%20with%20___%20bank.) and we will tell you what is missing, free.
+
+---
+
+## Buying a MHADA flat in Borivali, Kandivali or Malad with a loan?
+
+**We share MHADA resale flats in these three suburbs with the papers already read.** Then we plan the transfer and the loan NOC as one timeline. Before you pay a token, we check the allotment letter, the five years and the seller's dues. That way the bank's legal check finds a complete file.
+
+Start with the flats on offer in [Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali](/areas/kandivali/flats-for-sale) and [Malad](/areas/malad/flats-for-sale). Then [send us your budget and the size you need on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20want%20to%20buy%20a%20MHADA%20resale%20flat%20in%20___%20with%20a%20home%20loan.%20My%20budget%20is%20about%20___.). We usually send the flats that fit the same day, free and with no obligation. Our [resale flats service](/services/resale-flats) handles the rest of the purchase.
 
 ---
 
@@ -183,7 +191,7 @@ Three more checks matter before you count on it:
 
 - **Your family owns no pucca house anywhere in India.**
 - **No earlier owner has claimed the subsidy on this flat**, because it is given only once for a property.
-- **You have not been allotted a house under a central, state or local government scheme in the last 20 years.** Paragraph 3.2 may cover a MHADA lottery allotment, so confirm your eligibility on the PMAY-U 2.0 portal before counting on the subsidy. A resale buyer is not caught by this rule through the flat they are buying. Any other scheme allotment in the last 20 years still counts.
+- **You have not been allotted a house under a central, state or local government scheme in the last 20 years.** Paragraph 3.2 may cover a MHADA lottery allotment. So confirm your eligibility on the PMAY-U 2.0 portal before counting on the subsidy. A resale buyer is not caught by this rule through the flat they are buying, though any other scheme allotment in that period still counts.
 
 ### How to register for PMAY on a MHADA flat
 
@@ -221,6 +229,9 @@ No separate one is needed, because a MHADA flat's EMI is worked out like any oth
 
 **Can I apply for a new loan NOC if I choose a different bank?**
 Yes. MHADA's lottery FAQ allows a new loan NOC application once you cancel the one you submitted earlier. For PMAY, the guidelines say that if you move a loan to another lender, the subsidy cannot be claimed again. A borrower who had not claimed it before moving the loan cannot claim it afterwards.
+
+**Can I take a mortgage loan on my MHADA property for renovation?**
+Yes, the Mumbai Board's Form 4 affidavit names renovating the flat as one of the reasons for a loan. The owner files Form 4 for the NOC, and the lender decides the amount and the rate. The same form covers paying off an earlier lender.
 
 **Is the PMAY subsidy available on a MHADA flat?**
 Possibly. PMAY-U 2.0 covers families earning up to ₹9 lakh with no pucca house anywhere in India. The loan can be up to ₹25 lakh, for a house up to ₹35 lakh. The subsidy is 4 percent on the first ₹8 lakh, up to ₹1.80 lakh for loans longer than five years. A MHADA allotment may fall under the 20 year exclusion, so confirm before counting on it.

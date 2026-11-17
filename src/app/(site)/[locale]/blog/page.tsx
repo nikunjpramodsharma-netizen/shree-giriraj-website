@@ -48,8 +48,10 @@ type Post = {
  */
 function excerpt(text: string | undefined, max = 24): string | undefined {
   if (!text) return undefined;
-  const clean = text.replace(/s+/g, " ").trim();
-  const sentences = clean.match(/[^.!?]+[.!?]+(?:s|$)/g) ?? [clean];
+  const clean = text.replace(/\s+/g, " ").trim();
+  // \s, not s: written as /s+/ this stripped every letter s from the cards
+  // ("Duty i  charged on ..."), live until 16 November 2026.
+  const sentences = clean.match(/[^.!?]+[.!?]+(?:\s|$)/g) ?? [clean];
   let out = "";
   for (const raw of sentences) {
     const next = (out + raw).trim();
@@ -63,9 +65,17 @@ function excerpt(text: string | undefined, max = 24): string | undefined {
 
 /** The three reading paths at the top of the index, by existing post slug. */
 const START_HERE: { topic: string; slug: string; lead: string }[] = [
-  { topic: "Buying", slug: "stamp-duty-and-registration-charges-mumbai", lead: "What buying costs before you start" },
-  { topic: "Renting", slug: "rent-deposit-months-western-suburbs", lead: "What deposit is normal" },
+  { topic: "Buying", slug: "buy-first-flat-in-mumbai", lead: "Your first flat, step by step" },
+  { topic: "Prices", slug: "1-bhk-price-borivali-kandivali-malad", lead: "What a 1 BHK costs here" },
+  { topic: "Selling", slug: "society-noc-for-sale-of-flat-mumbai", lead: "The society NOC for a sale" },
   { topic: "MHADA", slug: "mhada-flat-transfer", lead: "How a MHADA flat changes hands" },
+];
+
+/** The flats for sale pages, offered to every reader of the index. */
+const FOR_SALE: { place: string; href: string }[] = [
+  { place: "Borivali West", href: "/areas/borivali-west/flats-for-sale" },
+  { place: "Kandivali West", href: "/areas/kandivali/flats-for-sale" },
+  { place: "Malad West", href: "/areas/malad/flats-for-sale" },
 ];
 
 function formatDate(d: string, locale: string) {
@@ -168,7 +178,7 @@ export default async function BlogPage({
           {ready.length > 0 && (
             <div className="mb-14">
               <h2 className="text-2xl text-ink">Start here</h2>
-              <div className="mt-5 grid gap-5 md:grid-cols-3">
+              <div className="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
                 {START_HERE.map((c) => {
                   const post = ready.find((p) => p.slug === c.slug);
                   if (!post) return null;
@@ -187,6 +197,29 @@ export default async function BlogPage({
                   );
                 })}
               </div>
+            </div>
+          )}
+
+          {ready.length > 0 && (
+            <div className="mb-14 rounded-2xl border border-bronze/30 bg-paper-alt p-6 md:p-8">
+              <h2 className="text-xl text-ink md:text-2xl">Looking for a flat to buy?</h2>
+              <p className="mt-2 max-w-[60ch] text-sm text-ink/75">
+                Tell us the size, your budget and the pocket on WhatsApp and we send the flats that fit, usually the same day. Or see what is for sale now:
+              </p>
+              <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold">
+                {FOR_SALE.map((f) => (
+                  <li key={f.href}>
+                    <EnglishLink prefetch={false} href={f.href} className="text-brand-indigo underline underline-offset-4 hover:text-ink">
+                      Flats for sale in {f.place}
+                    </EnglishLink>
+                  </li>
+                ))}
+                <li>
+                  <EnglishLink prefetch={false} href="/guides/new-projects-borivali-west" className="text-brand-indigo underline underline-offset-4 hover:text-ink">
+                    New projects
+                  </EnglishLink>
+                </li>
+              </ul>
             </div>
           )}
 

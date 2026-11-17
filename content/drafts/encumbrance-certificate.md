@@ -1,7 +1,7 @@
 ---
-title: "Encumbrance certificate: what it proves, and what it does not"
-metaTitle: "Encumbrance certificate in Maharashtra"
-metaDescription: "An encumbrance certificate lists what is registered against a property. How to get one in Maharashtra in six steps, and how far back to search."
+title: "Encumbrance certificate in Maharashtra: how to get one, online and at the office, and what it proves"
+metaTitle: "Encumbrance certificate Maharashtra: 6 steps"
+metaDescription: "How to get an encumbrance certificate in Maharashtra: the free e-Search online since 2002, the sub registrar for older years, and the 30 year search."
 slug: encumbrance-certificate
 category: Paperwork
 heroImage: /blog/encumbrance.jpg
@@ -22,8 +22,10 @@ sources:
     url: https://igrmaharashtra.gov.in/Marathi/copy_and_search
   - label: "Department of Registration and Stamps, e-Search: documents registered on computer since 2002 (read 7 November 2026)"
     url: https://igrmaharashtra.gov.in/Marathi/esearch_about
-  - label: Department of Registration and Stamps, e-Search
+  - label: "Department of Registration and Stamps, home page: free search service and paid e-Search links (read 16 November 2026)"
     url: https://igrmaharashtra.gov.in/
+  - label: "Department of Registration and Stamps, free search service 1.9 (read 16 November 2026)"
+    url: https://freesearchigrservice.maharashtra.gov.in/
   - label: HomeFirst India, encumbrance certificate Maharashtra
     url: https://homefirstindia.com/blog/article/encumbrance-certificate-maharashtra-igr/
   - label: NoBroker, how to get an encumbrance certificate in Maharashtra
@@ -32,8 +34,8 @@ sources:
     url: https://www.landeed.com/post/mumbai-home-buying-checklist-title-checks-to-home-loans-more
   - label: Jurigram, property title search checklist
     url: https://jurigram.com/blog/property-law/property-title-search-verification-india
-sourcesCheckedOn: "8 September 2026"
-updatedOn: "7 November 2026"
+sourcesCheckedOn: "16 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - How many years should an encumbrance certificate cover?
   - Does a clear certificate mean the title is clear?
@@ -61,6 +63,17 @@ An **encumbrance** is any claim on a property that comes with it when it is sold
 The certificate is a search of the register for one property over a range of years. It comes back as a list of everything registered against the property in that time: sales, mortgages, gifts and court attachments.
 
 **The key word is registered.** The search shows what was registered, which is why it is read alongside the title papers.
+
+---
+
+## Can you get an encumbrance certificate online in Maharashtra?
+
+**Partly. Maharashtra has no one click encumbrance certificate download.** Instead, you search the registered record yourself.
+
+- **Online, free:** the [free search service](https://freesearchigrservice.maharashtra.gov.in/) on IGR Maharashtra shows documents registered on computer since 2002, each with its Index 2.
+- **At the office:** the sub registrar office searches older years on a written application, for a fee per year.
+
+Together, the two give you the same answer an encumbrance certificate gives in other states. Our guide to [IGR Maharashtra](/blog/igr-maharashtra-explained) has the direct links to every service.
 
 ---
 
@@ -113,6 +126,8 @@ We read the encumbrance search as one paper in a set:
 
 When the search and all of these line up, the flat is clean, and you can pay the token with confidence.
 
+**Selling a flat?** A buyer's lawyer will run this search on your flat. Our [resale flats service](/services/resale-flats) gets your papers in order before the first viewing, from the Index 2 chain to the [society NOC for the sale](/blog/society-noc-for-sale-of-flat-mumbai). The buyer's checks then pass quickly.
+
 ---
 
 ## Where it fits in a purchase
@@ -131,6 +146,12 @@ Doing step two before step four is what keeps a good deal on schedule.
 
 **How do I get an encumbrance certificate in Maharashtra?**
 Search the sub registrar's records for the property. Use the free e-Search online for documents since 2002. For older years, apply to the sub registrar office with the village, property number and years. Pay the search fee, then inspect the records or have a lawyer do it.
+
+**What is a non encumbrance certificate?**
+A non encumbrance certificate is the same search when it finds nothing registered against the property for the years searched. In Maharashtra you get it the same way: from the sub registrar's search, or as a lawyer's search report.
+
+**Can I download an encumbrance certificate online in Maharashtra?**
+Not as a single certificate. The free e-Search on IGR Maharashtra shows documents registered since 2002, and the sub registrar office searches older years on application.
 
 **How many years should it cover?**
 Thirty is the standard search in Maharashtra. Lenders commonly accept 13 or 30. Take 30.
@@ -153,4 +174,4 @@ No law makes it a condition of buying. In practice a lender asks for it before s
 
 Get the search done before money moves. It is one of the cheapest steps in the purchase, and it tells you the flat is yours to buy with nothing registered against it.
 
-[Send us the details on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20am%20looking%20at%20a%20resale%20flat%20in%20___%20and%20would%20like%20the%20paperwork%20checked%20before%20I%20pay%20a%20token.) for a flat in Borivali, Kandivali or Malad, and we will run the search with you.
+[Send us the details on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20am%20looking%20at%20a%20resale%20flat%20in%20___%20and%20would%20like%20the%20paperwork%20checked%20before%20I%20pay%20a%20token.) for a flat in Borivali, Kandivali or Malad, and we will run the search with you. Still looking? Browse flats for sale in [Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali West](/areas/kandivali/flats-for-sale) and [Malad West](/areas/malad/flats-for-sale).

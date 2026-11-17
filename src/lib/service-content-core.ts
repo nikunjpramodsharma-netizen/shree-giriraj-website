@@ -20,7 +20,7 @@ import type { RepoService } from "@/lib/service-content";
  * 2(k) on carpet area, section 55 of the Maharashtra Rent Control Act on
  * registering leave and licence, the Maharashtra Stamp Act and the 2021
  * women's concession order on duty, the Table of Fees on registration, the
- * model bye laws on society permission for interior work and section 342 of
+ * model bye laws on society permission for interior work and the BMC permission for structural work under
  * the Municipal Corporation Act on structural changes, and the MahaRERA
  * portal for project registration. The deposit norm of two to three months
  * in newer societies is the owner's own, confirmed 9 September 2026.
@@ -42,42 +42,49 @@ import type { RepoService } from "@/lib/service-content";
 const RESALE_BODY = `
 ## Resale flats in Borivali, Kandivali and Malad
 
-Shree Giriraj Real Estate is a MahaRERA registered agency, number A51800005726. Our office is at Shop No 11, Clover Grove CHS, Chikoowadi, Borivali West, Mumbai 400092. We have worked in real estate since 1996, and from this office since 2005. Resale flats have been the heart of it all along.
+Shree Giriraj Real Estate is a MahaRERA registered agency, number A51800005726. Our office is at Shop No 11, Clover Grove CHS, Chikoowadi, Borivali West, Mumbai 400092. We have worked in real estate since 1996, and from this office since 2005. Buying and selling resale flats has been the heart of it all along.
 
-A resale flat gives you three things a new launch cannot. The society already runs. You can see how the building is kept. And you get the keys on the day you register. In return, the paperwork needs a careful read, and we do that before you fall for a flat.
+Buying? We shortlist two or three flats and check the building and the papers before you agree a price. Selling? We give you a free, fair price opinion on WhatsApp, get the file ready and bring buyers we have already met.
 
-## What you get
+## What a buyer gets
 
 - **A shortlist that fits how you live.** Tell us the budget, the family and the commute. We show you two or three flats that fit, not thirty that match a filter.
-- **The building checked before you visit.** Water timing, the parking the society will really give you, where any redevelopment stands, and whether the society welcomes buyers like you.
-- **The papers read before a price is agreed.** We check the past sale deeds that prove ownership, the share certificate and the society dues. We also check the land transfer to the society and the occupancy certificate, and search for any loan or claim on the flat.
+- **The building checked before you visit.** Water timing, real parking and where any redevelopment stands.
+- **The papers read before a price is agreed.** The past sale deeds that prove ownership, the share certificate, the society dues and the occupancy certificate. We also search for any loan or claim on the flat.
 - **Carpet area measured** as RERA defines it in section 2(k): the usable floor inside the walls. So the rate per square foot you compare is a real one.
 - **Stamp duty and registration in rupees** before you commit. Duty is 6 percent for a man and 5 percent for a woman buying in her sole name. Registration is 1 percent, up to 30,000 rupees. Both are charged on the price or the government's ready reckoner value, whichever is higher.
-- **Every step after that.** Negotiation, agreement, registration and the society transfer. Then we collect the Index II, the registry's record that the flat is yours.
+- **Every step after that,** through registration, the society transfer and the Index II, the registry's record that the flat is yours.
 
 ## What does a resale flat cost here?
 
-These are asking rates from our area guides, mid 2026, with Malad from September 2026. Asking is not the final registered price.
+These are Square Yards' average asking rates, the same figures our area pages use. Borivali West is September 2026 and Kandivali West, for apartments, October 2026. Malad West spans two Square Yards pages read in November 2026. Asking is not the final registered price.
 
 | Suburb | Asking rate per sq ft | 1 BHK, 400 to 450 sq ft | 2 BHK, 650 sq ft |
 | --- | --- | --- | --- |
-| Borivali West | ₹30,000 to ₹31,300 | about ₹1.2 to ₹1.4 crore | about ₹2 crore |
-| Kandivali West | ₹25,000 to ₹27,000 | about ₹1 to ₹1.2 crore | about ₹1.6 to ₹1.75 crore |
-| Malad West | ₹29,000 to ₹30,800 | about ₹1.15 to ₹1.4 crore | about ₹1.9 to ₹2 crore |
+| Borivali West | ₹30,750 | about ₹1.23 to ₹1.38 crore | about ₹2 crore |
+| Kandivali West | ₹27,200 | about ₹1.09 to ₹1.22 crore | about ₹1.77 crore |
+| Malad West | ₹28,250 to ₹30,800 | about ₹1.13 to ₹1.39 crore | about ₹1.84 to ₹2 crore |
 
-The flat prices are simple arithmetic: the rate times the size shown. Stamp duty and registration add about 7 percent on top. Older buildings sit below these figures and new towers above. The [Borivali](/areas/borivali-west), [Kandivali](/areas/kandivali) and [Malad](/areas/malad) guides break the rates down pocket by pocket.
+The flat prices are the rate times the size shown. Stamp duty adds 6 percent for most buyers, and registration up to 30,000 rupees. Older buildings sit below these figures and new towers above. The [flats for sale in Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali West](/areas/kandivali/flats-for-sale) and [Malad West](/areas/malad/flats-for-sale) pages break the rates down by size.
 
-## Buying a resale flat here
+## What is my flat worth?
 
-Each suburb splits into pockets that trade differently at the same rate. In Borivali, the station belt and the Link Road side are two markets. In Kandivali, the floor you choose in a tower moves the price more than the carpet area does. In Malad, the Mindspace office district keeps rental demand steady. We have sold in most of the buildings you will look at, many of them more than once. That knowledge is what you are hiring.
+Your flat is worth what a buyer in your pocket will pay for it this month. We work that out free, from the asking rates in your building and lane, the floor, the age of the building and the carpet area. Pockets matter: in Borivali, the station belt and the Link Road side are two markets at the same rate.
 
-## Selling a resale flat here
+The [ready reckoner rate](/blog/ready-reckoner-rate-mumbai) published by IGR Maharashtra is a different number. It is the government's floor value for stamp duty, not the market price. A formal valuation report for a bank or a court is a separate document from a qualified valuer.
 
-A flat with its papers in order sells faster and closer to the asking price. So we get the file ready before we list: the society's no objection letter, dues cleared and every document in place. Then we bring buyers we have already checked. The offer you accept is one that completes on the date you planned.
+## How do I sell my flat in Borivali, Kandivali or Malad?
+
+1. **Send us the basics on WhatsApp:** the building, the floor, the size and when you want to move. We reply with a fair listing price, usually the same day.
+2. **We get the file ready before we list:** the share certificate, the past sale deeds with their [Index II](/blog/index-2-property-document), the [society's no objection letter](/blog/society-noc-for-sale-of-flat-mumbai) and the dues cleared.
+3. **We bring buyers we have already met and checked,** and show the flat at times that suit you.
+4. **We stay with the sale** through negotiation, the agreement, registration and the [share certificate transfer](/blog/society-share-certificate-transfer-fee).
+
+A flat with its papers in order sells faster and closer to the asking price, so the file comes first.
 
 ## How to start
 
-Tell us what you are buying or selling, and where, on WhatsApp or by phone. Buying? We send the two or three flats worth your time, and what to check in each. Selling? We tell you a fair listing price and what the file needs first. No obligation, and usually the same day.
+Tell us what you are buying or selling, and where, on WhatsApp or by phone. Buyers get the two or three flats worth their time. Sellers get a fair listing price and what the file needs first. No obligation, and usually the same day.
 `.trim();
 
 const RENTALS_BODY = `
@@ -91,21 +98,21 @@ Renting here is simple when three things are settled before the first visit. The
 
 - **Verified owners only.** We meet the owner and see the ownership papers before you see the flat. So your agreement is with the person entitled to let it.
 - **Societies that welcome you.** Some older societies have their own views on tenants. We ask before the first visit, so every building we show you will register you.
-- **The right deposit.** Two to three months' rent is the norm in newer societies here, more in some older buildings. We tell you the going rate before you negotiate.
+- **The right deposit.** Two to three months' rent is the norm in newer societies here, more in some older buildings. We tell you the going rate before you negotiate, and our [deposit guide](/blog/rent-deposit-months-western-suburbs) explains when it is negotiable.
 - **A registered rent agreement.** In Maharashtra it is called a leave and licence agreement. Section 55 of the Maharashtra Rent Control Act says it must be registered. We draft it, register it and hand you your copy.
 - **The practical details.** Water timing, parking, the society's rules on pets and guests, and the deposit return date written into the agreement.
 
 ## What does a flat rent for here?
 
-These are asking rents a month, from our area guides. Borivali and Kandivali are NoBroker figures for 2026. Malad is NoBroker, April 2026, and Broker Network, July 2026.
+These are asking rents a month, the same figures as our flats for rent pages. Borivali West is Square Yards' average for September 2026, and Kandivali West for October 2026. In Malad West, the 1 BHK is Square Yards' rent per sq ft read in November 2026, and the 2 and 3 BHK are Broker Network, July 2026.
 
-| Size | Borivali | Kandivali | Malad |
+| Size | Borivali West | Kandivali West | Malad West |
 | --- | --- | --- | --- |
-| 1 BHK | ₹22,000 to ₹40,000 | ₹18,000 to ₹35,000 (West) | ₹25,000 to ₹50,000 (East) |
-| 2 BHK | ₹35,000 to ₹65,000 | ₹35,000 to ₹65,000 | ₹45,000 to ₹82,000 (East) |
-| 3 BHK | ₹55,000 to ₹1 lakh | ₹60,000 to ₹95,000 | ₹60,000 to ₹1 lakh (West) |
+| 1 BHK | about ₹32,800 | about ₹35,200 | about ₹37,000 to ₹42,000 |
+| 2 BHK | about ₹49,600 | about ₹52,850 | ₹42,000 to ₹65,000 |
+| 3 BHK | about ₹73,850 | about ₹82,200 | ₹60,000 to ₹1 lakh |
 
-Asking rents are a starting point, not signed rents. The building, the floor and the furnishing decide where a flat sits in the range. The [Borivali](/areas/borivali-west), [Kandivali](/areas/kandivali) and [Malad](/areas/malad) guides have more on each suburb.
+Asking rents are a starting point, not signed rents. The building, the floor and the furnishing decide where a flat sits in the range. See the flats for rent in [Borivali West](/areas/borivali-west/flats-for-rent), [Kandivali West](/areas/kandivali/flats-for-rent) and [Malad West](/areas/malad/flats-for-rent) for rents by size.
 
 ## For owners
 
@@ -113,6 +120,7 @@ Asking rents are a starting point, not signed rents. The building, the floor and
 - **The paperwork done properly.** A registered [leave and licence agreement](/blog/leave-and-licence-agreement-mumbai), [police intimation](/blog/tenant-police-verification-mumbai), the society's no objection letter where it asks for one, and a clear record of the deposit.
 - **Fewer empty months.** Most of our rentals are matched from people already talking to us, not from portal enquiries.
 - **Handover and return handled at both ends,** with a list of what is in the flat. So the deposit talk at the end is a short one.
+- **Selling instead of letting?** Our [resale service](/services/resale-flats) starts with a free fair price opinion on WhatsApp.
 
 ## Why register the agreement?
 
@@ -139,7 +147,7 @@ Buying a new launch means buying a drawing and a promise. We check the drawing a
 - **The agreement for sale read before you sign,** including the possession date and what the developer owes you if it slips.
 - **Booking, agreement and registration** handled with you, and the occupancy certificate confirmed before you take the keys.
 
-## Projects we carry now
+## Which new projects do we carry in Borivali and Kandivali West?
 
 | Project | Area | Homes | Price | Possession |
 | --- | --- | --- | --- | --- |
@@ -151,9 +159,11 @@ Buying a new launch means buying a drawing and a promise. We check the drawing a
 
 Jaswanti Jewel's price is from the developer's October 2026 sheet, and its MahaRERA possession date is December 2027. The Landmark's figure is rounded down from its project page. Blissful Living and Luxury Living are awaiting MahaRERA registration, so register your interest and we send details once they are registered. Exact all inclusive sheets and floor wise availability come on WhatsApp.
 
+Looking in Malad West, or at a launch not in this table? Tell us the budget and we read its MahaRERA record with you before you book. Our guide to [new projects in Borivali West](/guides/new-projects-borivali-west) walks through a launch booking step by step, and [every project we carry](/projects) has its own page.
+
 ## What RERA gives a buyer here
 
-Since 1 May 2017, every project of this size in Maharashtra must be registered with MahaRERA before it is sold. The record is public, and it carries the promised completion date. The developer must keep 70 percent of buyers' money in a separate account for that project's construction. Carpet area has one legal meaning under section 2(k). And for five years after possession, structural defects are the developer's to fix. We use every one of these before you book.
+Since 1 May 2017, every project of this size in Maharashtra must be registered with MahaRERA before it is sold. The record is public, and it carries the promised completion date. The developer must keep 70 percent of buyers' money in a separate account for that project's construction. Carpet area has one legal meaning under section 2(k). And for five years after possession, structural defects are the developer's to fix. We use every one of these before you book, and our guide shows [how to check a builder's RERA page](/guides/how-to-check-a-builder-rera-page) yourself.
 
 ## How to start
 
@@ -173,7 +183,7 @@ A flat in a society is not a standalone house. There are rules on working hours,
 - **An itemised estimate** before any work starts. You see what each part costs and can change the scope before you commit.
 - **Design and building by one team,** so nothing is lost between the drawing and the site. Layout, kitchen, wardrobes, false ceiling, electrical, plumbing, painting and the civil work that goes with them.
 - **Society permission handled for you,** in writing, under the society's bye laws. Working hours, lift use and debris rules are agreed before the first worker arrives.
-- **The BMC side where it applies.** Structural work also needs the BMC, under section 342 of the Municipal Corporation Act. That means merging flats, moving a kitchen or bathroom, or touching a column. We tell you at the design stage.
+- **The BMC side where it applies.** Structural work also needs the BMC's permission, under the Mumbai Municipal Corporation Act. That means merging flats, moving a kitchen or bathroom, or touching a column. We tell you at the design stage.
 - **A finish date agreed,** and a handover walk through against the original scope.
 
 ## What does a 2 BHK interior cost in Mumbai?
@@ -202,47 +212,47 @@ Send 3 photos of your flat on WhatsApp for an itemised estimate. Add the area, o
 
 export const CORE_SERVICES: Record<string, RepoService> = {
   "resale-flats": {
-    title: "Flats for sale: Borivali, Kandivali, Malad",
-    heroHeading: "Resale flats in Borivali, Kandivali and Malad",
+    title: "Resale flats, Borivali to Malad: buy or sell",
+    heroHeading: "Buy or sell a resale flat in Borivali, Kandivali or Malad",
     heroSubheading:
-      "Ready to move flats, with the building and the papers checked before you agree a price. Our main business since 1996.",
+      "Buying: two or three flats that fit, with the building and the papers checked first. Selling: a free fair price opinion and buyers we have already met. Our main business since 1996.",
     answer:
-      "Shree Giriraj Real Estate helps you buy or sell a resale flat in Borivali, Kandivali and Malad. We shortlist two or three flats that fit your budget. We check the building and the papers before you agree a price. In mid 2026, a 650 sq ft 2 BHK in Borivali West asked about ₹2 crore.",
+      "Shree Giriraj Real Estate helps you buy or sell a resale flat in Borivali, Kandivali and Malad. Buyers get two or three flats that fit, with the papers checked first. Sellers get a free fair price opinion on WhatsApp. On Square Yards' September 2026 average, a 650 sq ft 2 BHK in Borivali West asks about ₹2 crore.",
     seoDescription:
-      "Resale flats for sale in Borivali, Kandivali and Malad. Title, society and carpet area checked before you agree a price. In real estate since 1996.",
+      "Buy or sell a resale flat in Borivali, Kandivali or Malad. Papers checked before you agree a price, and a free fair price opinion for sellers.",
     body: RESALE_BODY,
   },
   rentals: {
-    title: "Flats for rent: Borivali, Kandivali, Malad",
+    title: "Rent or let a flat: Borivali, Kandivali",
     heroHeading: "Flats for rent in Borivali, Kandivali and Malad",
     heroSubheading:
       "Verified owners, societies that welcome you and a registered rent agreement, for tenants and landlords across the western suburbs.",
     answer:
-      "Shree Giriraj Real Estate finds flats for rent in Borivali, Kandivali and Malad. We check the owner and the society before your first visit. In 2026 a 2 BHK in Borivali or Kandivali asked about ₹35,000 to ₹65,000 a month. Deposits run two to three months' rent in newer societies.",
+      "Shree Giriraj Real Estate finds flats for rent in Borivali, Kandivali and Malad. We check the owner and the society before your first visit. A 2 BHK averaged about ₹49,600 a month in Borivali West in September 2026, on Square Yards' figures. Deposits run two to three months' rent in newer societies.",
     seoDescription:
-      "Flats for rent in Borivali, Kandivali and Malad. Owner verified first, and the registered leave and licence agreement handled for you.",
+      "Rent a flat in Borivali, Kandivali or Malad from a verified owner, or let yours to a checked tenant, with the registered agreement handled.",
     body: RENTALS_BODY,
   },
   "new-project-bookings": {
-    title: "New projects in Borivali and Kandivali West",
+    title: "New launches in Borivali, Kandivali, Malad",
     heroHeading: "New projects in Borivali, Kandivali and Malad",
     heroSubheading:
       "Early access through developers we deal with directly, the MahaRERA record read with you, and a straight answer on which floor is worth it.",
     answer:
       "Shree Giriraj Real Estate books new launches in Borivali, Kandivali and Malad. We read the MahaRERA record with you before you pay anything. We carry Jaswanti Jewel in Kandivali West, from ₹2.92 crore all inclusive, and The Landmark on S.V. Road, Borivali West, from about ₹2 crore. Exact price sheets come on WhatsApp.",
     seoDescription:
-      "Book a new launch in Borivali, Kandivali or Malad with early access through builders we deal with directly, and the MahaRERA details read with you.",
+      "New launches in Borivali, Kandivali and Malad: early access through developers we deal with directly, and the MahaRERA record read with you first.",
     body: NEW_PROJECTS_BODY,
   },
   interiors: {
-    title: "Interior designer in Borivali, Kandivali",
+    title: "Interior designer in Borivali and Kandivali",
     heroHeading: "Interior designer in Borivali, Kandivali and Malad",
     heroSubheading:
       "Design, carpentry and civil work by one team, with an itemised estimate first and the society's permission handled for you.",
     answer:
       "Shree Giriraj Real Estate designs and fits out flats in Borivali, Kandivali and Malad. One team handles design, carpentry and civil work. Published Mumbai cost guides put a 2 BHK at about ₹5.5 lakh for basic work to ₹12 lakh and above for premium. You get an itemised estimate first, and pay no advance until the scope is agreed.",
     seoDescription:
-      "Interior designer in Borivali, Kandivali and Malad. Design and civil work by one team, an itemised estimate first, no advance until scope is agreed.",
+      "Interior designer in Borivali, Kandivali and Malad: design and civil work by one team, an itemised estimate first, no advance until scope is agreed.",
     body: INTERIORS_BODY,
   },
 };

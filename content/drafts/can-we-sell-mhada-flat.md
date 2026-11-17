@@ -1,7 +1,7 @@
 ---
 title: "Can we sell a MHADA flat? The five year rule, the permissions, and how to keep the sale valid"
-metaTitle: "Can we sell a MHADA flat? 5 year rule"
-metaDescription: "Yes, after five years, with written permission from the Board and the society. The papers, the transfer charges and how to keep the sale valid."
+metaTitle: "Can we sell a MHADA flat? Yes, after 5 years"
+metaDescription: "MHADA flat resale rules: sell after five years with Board and society permission, to a buyer in the same income group. The steps, fees and papers."
 slug: can-we-sell-mhada-flat
 category: MHADA
 heroImage: /blog/mhada-sell.jpg
@@ -33,16 +33,16 @@ sources:
     url: https://www.mhada.gov.in/en/e-mitra/transfer-of-tenements-%28tot%29
   - label: "DataForSEO, Google search volume for MHADA sale and transfer terms in India, measured 9 September 2026"
     url: https://dataforseo.com
-sourcesCheckedOn: "9 September 2026"
-updatedOn: "7 November 2026"
+sourcesCheckedOn: "16 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - Can I sell a MHADA flat after 5 years?
   - What are the MHADA transfer fees?
   - What happens if a MHADA flat is sold without permission?
 readNext:
   - how-to-buy-mhada-flat-in-resale
-  - mhada-transfer-on-death
-  - services/mhada-paperwork
+  - mhada-flat-transfer
+  - mhada-noc-online
 ---
 
 ## The short answer
@@ -65,7 +65,22 @@ Five things decide whether a sale goes through. Line them up before you list the
 
 Our guide to [MHADA dues explained](/blog/mhada-dues-lease-rent-property-tax) shows what the Board, the society and the BMC bill for.
 
-You need both permissions, not either one. The five years are the minimum in the Regulations. Some schemes set a longer period in their own allotment terms, so the allotment letter is the first document we read.
+You need both permissions, not either one. The Regulations count the five years from the date of allotment, and that is the minimum. Some schemes set a longer period in their own allotment terms, so the allotment letter is the first document we read.
+
+---
+
+## How do you sell a MHADA flat, step by step?
+
+**A MHADA sale runs in six steps, and the permissions come before the final agreement.** The time limits are the ones MHADA notified under the Right to Public Services Act, counted from a complete file.
+
+1. **Check the allotment letter.** Confirm the five years have passed and the flat is in the seller's name on the Board's record.
+2. **Clear the dues.** Pay the Board's ground rent and service charges, and keep the latest receipt.
+3. **Agree terms with a buyer in the right income group.** The buyer's income affidavit and proof should fit the scheme.
+4. **Get the society's NOC.** Or an affidavit that no society exists.
+5. **Apply for the Board's sale permission.** This is Form 5, with a notified limit of 15 working days.
+6. **Register the sale and transfer the tenancy.** The transfer of tenement is Form 1, with a notified limit of 23 working days.
+
+Our guide to [MHADA NOC online](/blog/mhada-noc-online) shows how to apply for each permission on the Aaple Sarkar portal.
 
 ---
 
@@ -172,12 +187,36 @@ For the duty on a gift deed, see [stamp duty on a gift deed](/blog/gift-deed-sta
 **Does the buyer need to be from the same income group?**
 Yes. For EWS, LIG and MIG schemes, the buyer must be in one of those groups. For HIG schemes, the buyer must be in the same group. The income affidavit and proof in the Board's document list establish this.
 
+**Can we sell a MHADA lottery flat?**
+Yes, a MHADA lottery flat can be sold under the same rules as any other MHADA tenement. Five years must pass from allotment, the Board and the society must give written permission, and the buyer must fit the scheme's income group.
+
+**Can I sell my MHADA flat before 5 years?**
+No, not by sale. Under the 1981 Regulations the society may consent only after five years from allotment. A transfer within the family is a separate route, with the Chief Officer's permission.
+
+**How long does MHADA sale permission take?**
+MHADA's notified time limit for sale permission is 15 working days from a complete application, under the Right to Public Services Act. The transfer of tenement into the buyer's name has its own limit of 23 working days.
+
+**Can a MHADA flat be sold on a power of attorney?**
+A power of attorney does not replace the Board's written permission. Under the 1981 Regulations, any transfer made without that permission can be declared invalid. So the permissions come first, whatever the buyer and seller sign between themselves.
+
+---
+
+## Selling your MHADA flat in Borivali, Kandivali or Malad?
+
+**We find the buyer and line up the paperwork in the same file.** In these three suburbs our [resale flats service](/services/resale-flats) prices the flat against recent asking rates in the building's pocket. We then share it with buyers we have already checked against the scheme's income group.
+
+At the same time, our [MHADA paperwork service](/services/mhada-paperwork) prepares the society NOC request, the sale permission and the transfer file. That way the buyer's bank sees a complete set when it asks.
+
+[Send us the building, the size and your allotment year on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20want%20to%20sell%20my%20MHADA%20flat%20in%20___.%20It%20is%20a%20___%20BHK%2C%20allotted%20in%20___.%20Can%20you%20help%20with%20a%20buyer%20and%20the%20permissions%3F). We usually reply the same day, free and with no obligation. The area guides for [Borivali West](/areas/borivali-west), [Kandivali](/areas/kandivali) and [Malad](/areas/malad) show what flats in each pocket ask today.
+
+Is your flat elsewhere in Mumbai? We still prepare and follow the Board's file for you, anywhere in the city.
+
 ---
 
 ## Before you list the flat
 
 Put the [allotment letter](/blog/mhada-allotment-letter), the latest rent receipt and the society's position in front of someone who knows the Regulations. Find out whether the unearned increase applies to your scheme. Then price the flat, knowing what the transfer costs.
 
-Done in that order, a MHADA sale is a straightforward one. If the flat is in Borivali, Kandivali or Malad, our [MHADA paperwork service](/services/mhada-paperwork) handles the whole file. The buyer's side is in [how to buy a MHADA flat in resale](/blog/how-to-buy-mhada-flat-in-resale).
+Done in that order, a MHADA sale is a straightforward one. Our [MHADA paperwork service](/services/mhada-paperwork) handles the whole file for flats anywhere in Mumbai. The buyer's side is in [how to buy a MHADA flat in resale](/blog/how-to-buy-mhada-flat-in-resale).
 
 A society planning to rebuild should read our [MHADA redevelopment rules](/blog/mhada-redevelopment-rules). If you would rather let the flat than sell it, see [can we rent out a MHADA flat](/blog/can-we-rent-mhada-flat). Selling at a profit? Our [capital gains calculator](/tools/capital-gains-calculator-property) shows the tax on the sale.

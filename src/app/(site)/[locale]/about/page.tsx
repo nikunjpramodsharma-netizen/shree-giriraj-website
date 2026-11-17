@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
@@ -10,6 +11,7 @@ import { CountUp } from "@/components/motion/CountUp";
 import { graph, breadcrumbNode, organizationNode, faqNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
 import { site } from "@/lib/config";
+import { AUTHOR, authorInitials } from "@/lib/author";
 import { TEAM, TEAM_IS_REAL } from "@/lib/homepage-content";
 import {
   STORY_IS_WRITTEN,
@@ -24,6 +26,17 @@ import {
 export const revalidate = 300;
 
 const ABOUT_LOCALE = "en";
+
+/** The seven services, as links. Notes restate the service pages. */
+const ABOUT_SERVICES: { href: string; label: string; note: string }[] = [
+  { href: "/services/resale-flats", label: "Buy or sell a resale flat", note: "the main business since 1996, with a free fair price opinion for sellers" },
+  { href: "/services/rentals", label: "Rentals", note: "verified owners, societies that welcome you and a registered leave and licence agreement" },
+  { href: "/services/new-project-bookings", label: "New project bookings", note: "launches in Borivali and Kandivali, with the MahaRERA record read with you" },
+  { href: "/services/investment-advisory", label: "Investment advisory", note: "the pocket, the building and the rent worked out on the actual flat" },
+  { href: "/services/commercial-plots", label: "Shops, offices and plots", note: "approved use, society rules and frontage checked first" },
+  { href: "/services/mhada-paperwork", label: "MHADA paperwork", note: "transfers and no objection certificates, anywhere in Mumbai" },
+  { href: "/services/interiors", label: "Interiors and civil work", note: "an itemised estimate first, and the society's permission handled" },
+];
 
 /**
  * /about.
@@ -53,8 +66,11 @@ export async function generateMetadata({
     // reads as the shop having stood in Borivali since 1996, which is the
     // exact implication the owner corrected: the trade dates from 1996, this
     // address from 2005. The tenure claim is the safe half of it.
-    title: `About us: Borivali estate agency since ${site.established}`,
-    description: `A family run estate agency working across ${site.areas.join(", ")}. Founded by ${FOUNDER.name}. MahaRERA registration ${site.rera}.`,
+    // 16 November 2026: the title leads with the local query the Google
+    // Business Profile competes on ("real estate agency in Borivali West");
+    // the description carries both dates, the founder and the registration.
+    title: "About us: Borivali West real estate agency",
+    description: `Family run real estate agency in Chikoowadi, Borivali West, in real estate since ${site.established}. Founded by ${FOUNDER.name}. MahaRERA ${site.rera}.`,
     ...pageUrls(params.locale, "/about", [ABOUT_LOCALE]),
     ...(STORY_IS_WRITTEN ? {} : { robots: { index: false, follow: true } }),
   };
@@ -140,7 +156,7 @@ export default function AboutPage({
             </span>
           </h1>
           <p className="mt-7 max-w-[54ch] text-lg text-paper/80">
-            A family run agency in Borivali West, working{" "}
+            A family run real estate agency in Borivali West, working{" "}
             {site.areas.join(", ")}. Three suburbs, known building by building.
           </p>
           <div className="about-legend mt-12">
@@ -301,6 +317,67 @@ export default function AboutPage({
       </section>
 
       <div className="wrap pb-12">
+
+        {/* THE AUTHOR. Every article is written by Nikunj Sharma, and the
+            article markup points here (/about#nikunj-sharma) as the author's
+            profile. Facts only from author.ts: name, role and the line the
+            owner confirmed on 16 September 2026. No invented biography. */}
+        <Reveal>
+          <section id="nikunj-sharma" className="mb-16 max-w-[68ch] scroll-mt-24">
+            <div className="eyebrow">Who writes the articles</div>
+            <div className="mt-4 flex items-start gap-5">
+              <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full bg-paper-alt">
+                {AUTHOR.photo ? (
+                  <Image src={AUTHOR.photo} alt={`${AUTHOR.name}, ${AUTHOR.role}, ${site.name}`} fill sizes="80px" className="object-cover" />
+                ) : (
+                  <span aria-hidden="true" className="flex h-full w-full items-center justify-center text-xl font-semibold text-bronze-deep">
+                    {authorInitials()}
+                  </span>
+                )}
+              </div>
+              <div>
+                <h2 className="text-2xl text-ink md:text-3xl">{AUTHOR.name}</h2>
+                <p className="mt-1 text-sm text-muted">
+                  {AUTHOR.role}, marketing and sales, {site.name}
+                </p>
+                <p className="mt-3 text-ink/80">{AUTHOR.bio}</p>
+                <p className="mt-3 text-ink/80">
+                  <Link prefetch={false} href="/blog" className="text-brand-indigo underline underline-offset-4">
+                    Read his articles
+                  </Link>{" "}
+                  on buying, selling, renting and MHADA paperwork.
+                </p>
+              </div>
+            </div>
+          </section>
+        </Reveal>
+
+        {/* WHAT THE FIRM DOES, linked. The story names the seven services in
+            prose; this is the same list as links, so a reader (and a crawler)
+            can go straight from the firm to the service. */}
+        <Reveal>
+          <section className="max-w-[68ch]">
+            <h2 className="text-2xl text-ink md:text-3xl">What Shree Giriraj does</h2>
+            <ul className="mt-6 divide-y divide-line border-y border-line">
+              {ABOUT_SERVICES.map((sv) => (
+                <li key={sv.href} className="py-3.5">
+                  <Link prefetch={false} href={sv.href} className="font-semibold text-brand-indigo underline underline-offset-4">
+                    {sv.label}
+                  </Link>
+                  <span className="text-ink/75">: {sv.note}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-5 text-ink/75">
+              New to the three suburbs? Read the{" "}
+              <Link prefetch={false} href="/areas/borivali-west" className="text-brand-indigo underline underline-offset-4">Borivali West</Link>,{" "}
+              <Link prefetch={false} href="/areas/kandivali" className="text-brand-indigo underline underline-offset-4">Kandivali</Link> and{" "}
+              <Link prefetch={false} href="/areas/malad" className="text-brand-indigo underline underline-offset-4">Malad</Link>{" "}
+              guides, or{" "}
+              <Link prefetch={false} href="/contact" className="text-brand-indigo underline underline-offset-4">visit the office in Chikoowadi</Link>.
+            </p>
+          </section>
+        </Reveal>
 
         {/* Gated the same way as the homepage: placeholder names never ship. */}
         {TEAM_IS_REAL && (

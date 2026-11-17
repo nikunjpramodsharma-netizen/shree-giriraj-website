@@ -1,7 +1,7 @@
 ---
 title: "Buying your first flat in Mumbai, step by step: budget, loan, checks, agreement and keys"
-metaTitle: "Buy your first flat in Mumbai, step by step"
-metaDescription: "Nine steps to your first flat in Mumbai: budget, loan, papers to check, token, agreement, stamp duty, registration and keys, with rupee examples."
+metaTitle: "First time home buyer in Mumbai: 9 steps"
+metaDescription: "First time buying a flat in Mumbai? Nine steps from budget and loan to keys, the cash you need on a 1.2 crore flat, and the papers to check first."
 slug: buy-first-flat-in-mumbai
 category: Buying
 heroImage: /blog/buy-first-flat-in-mumbai.jpg
@@ -51,8 +51,10 @@ sources:
     url: https://cdn.taxguru.in/wp-content/uploads/2021/04/Stamp-Duty-Concession-for-Womens-31-03-2021.pdf
   - label: "Department of Registration and Stamps, Maharashtra, Table of Fees: registration at one percent, maximum 30,000 rupees"
     url: https://igrmaharashtra.gov.in/pdf/documents/Registration%20fee%20table.pdf
+  - label: "Department of Registration and Stamps, Maharashtra, master copy of Schedule I dated 31 July 2026: the 1 percent reduction for women under Article 25(b), and no separate rate for a first time buyer (read 16 November 2026)"
+    url: https://igrmaharashtra.gov.in/pdf/documents/MASTER%20COPY%20OF%20SCHEDULE%20I%20%20II%20%20OF%20%20MSA%20%20PDF%20dt.31.07.2026.pdf
 sourcesCheckedOn: "14 November 2026"
-updatedOn: "14 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - How much money do I need to buy a flat in Mumbai?
   - Can I buy a flat on a 70,000 rupee salary?
@@ -80,6 +82,8 @@ Here is the whole road in one table.
 | 7. Stamp duty and registration | Pay duty and register at the Sub Registrar | A registered document |
 | 8. Payment and possession | Pay the balance and take the keys | Keys and a possession letter |
 | 9. After you move in | Move the society and tax records to your name | Share certificate and bills in your name |
+
+Want a head start on step 4? [Tell us the size, your budget and the pocket on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20am%20buying%20my%20first%20flat.%20I%20am%20looking%20for%20a%20___%20BHK%20in%20___.%20My%20budget%20is%20about%20___.) and we send the flats that fit, usually the same day. It is free, with no obligation.
 
 ---
 
@@ -132,13 +136,13 @@ For the rate, take a named example. State Bank of India publishes its home loan 
 
 Ready and resale flats let you see what you buy and get the keys at registration. An under construction flat often asks less per square foot and lets you pay in stages. In return, you wait for possession on a promised date.
 
-For a first flat we often suggest a resale or ready flat, because you see the building and the society on day one. Our [under construction or ready to move guide](/blog/under-construction-vs-ready-to-move-flat) sets out the trade.
+For a first flat we often suggest a resale or ready flat, because you see the building and the society on day one. Our [under construction or ready to move guide](/blog/under-construction-vs-ready-to-move-flat) sets out the trade. For a new launch, see [new projects in Borivali West and Kandivali West](/guides/new-projects-borivali-west) and the [GST and stamp duty on an under construction flat](/guides/stamp-duty-gst-under-construction-maharashtra).
 
 ---
 
 ## Step 4: What should I check when I visit a flat?
 
-Visit at the hour you would be at home.
+Start with two or three flats, not thirty. Our flats for sale pages show the asking rates by pocket in [Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali West](/areas/kandivali/flats-for-sale) and [Malad West](/areas/malad/flats-for-sale). Then visit at the hour you would be at home.
 
 - **Water.** Ask the timing and check the pressure on the floor you are buying.
 - **Parking.** Ask what the society will allot in writing.
@@ -231,6 +235,9 @@ The first step in buying a flat is to get a home loan sanction letter, which tel
 **Can I buy a flat on a 70,000 rupee salary?**
 A take home pay of 70,000 rupees can support a home loan of about 43 lakh rupees. That assumes a bank allows half of it for the EMI. That is an EMI of 35,000 at SBI's starting rate of 7.50 percent over 20 years. Other EMIs reduce it.
 
+**Is there a stamp duty benefit for a first time home buyer in Mumbai?**
+Maharashtra has no separate stamp duty rate for a first time buyer. A woman buying in her sole name pays 5 percent instead of 6. That concession comes from the state's order of 31 March 2021. On a 1.2 crore flat it saves 1.2 lakh rupees.
+
 **Do I need a lawyer to buy a flat?**
 Every flat's papers should be read by someone who knows them before you pay a token. We read the title, the society papers and the registered record first. For a complex title, a property lawyer's opinion is worth having.
 
@@ -241,4 +248,4 @@ An agreement for sale is the contract signed before a sale is complete, while a 
 
 ## Where to start
 
-Tell us your budget and the suburb you prefer, on WhatsApp or by phone. We send two or three flats worth your time, with what to check in each. It is free, with no obligation, and usually the same day. Buying in a new project? Our guide to [how to check a builder's RERA page](/guides/how-to-check-a-builder-rera-page) shows what to read before you book.
+Tell us the size, your budget and the pocket you prefer, on WhatsApp or by phone. We send two or three flats worth your time, with what to check in each. It is free, with no obligation, and usually the same day. Not sure yet whether to buy at all? Our [rent or buy guide](/blog/rent-or-buy-borivali-kandivali-malad) works the break even in rupees, and the [1 BHK price guide](/blog/1-bhk-price-borivali-kandivali-malad) shows the income a bank wants. Buying in a new project? Our guide to [how to check a builder's RERA page](/guides/how-to-check-a-builder-rera-page) shows what to read before you book.

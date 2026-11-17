@@ -69,6 +69,8 @@ export type ProseSection = {
   invite?: AreaInvite;
   /** A motion scene rendered after this section. */
   scene?: "map" | "pockets" | "landmarks" | "rents" | "redevelopment";
+  /** Onward links shown under the section (English only pages, plain anchors). */
+  links?: { href: string; label: string }[];
 };
 
 export type AreaSection = ProseSection | InputBlock;
@@ -100,8 +102,12 @@ export type AreaPage = {
   motion: AreaMotion;
   /** Full name for headings and title tags, where the panel name is short. */
   longName: string;
-  /** The page heading where it should name the West side; defaults to longName. */
+  /** The page heading, in the searcher's words; defaults to longName. */
   h1?: string;
+  /** The West side's name, for cards, schema and labels ("Borivali West"). */
+  place: string;
+  /** The day the figures were last read against their sources, shown on the page. */
+  updatedOn: string;
   metaTitle: string;
   metaDescription: string;
   /** The search result snippet, kept near 155 characters. The longer metaDescription is shown on the page. */
@@ -119,12 +125,14 @@ export type AreaPage = {
 const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
   "borivali-west": {
     longName: "Borivali",
-    h1: "Borivali West",
-    metaTitle: "Borivali West: rates per sq ft, rent",
+    h1: "Borivali West property rates and area guide",
+    place: "Borivali West",
+    updatedOn: "16 November 2026",
+    metaTitle: "Borivali West property rates per sq ft 2026",
     seoDescription:
-      "Borivali West property rates per sq ft and asking rents by size, pocket by pocket: Chikoowadi, Shimpoli, I.C. Colony, Yogi Nagar.",
+      "Borivali West property rates per sq ft, checked November 2026, pocket by pocket, with what a 1, 2 or 3 BHK costs, rents and what we check first.",
     metaDescription:
-      "Borivali West and East, pocket by pocket: Chikoowadi, Shimpoli, I.C. Colony, Yogi Nagar, Eksar, Magathane and Kulupwadi. With mid 2026 asking rates, the metro lines and the national park. Plus what a local agency in real estate since 1996 checks before you buy or rent.",
+      "Borivali West and East, pocket by pocket: Chikoowadi, Shimpoli, I.C. Colony, Yogi Nagar, Eksar, Magathane and Kulupwadi. With 2026 asking rates, the metro lines and the national park. Plus what a local agency in real estate since 1996 checks before you buy or rent.",
     hero: {
       src: "/areas/borivali-aerial.jpg",
       alt: "Mumbai's suburban rooftops and towers with trees between them, seen from above at sunset",
@@ -180,7 +188,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
     },
     figuresAsOf: "mid 2026",
     answer:
-      "Borivali West asks about 30,000 to 31,300 rupees per square foot on average in mid 2026. By pocket, Chikoowadi asks 25,000 to 26,000 and Yogi Nagar 27,000 to 33,800. Borivali East averages about 34,750. These are asking rates from NoBroker and Square Yards, not prices paid.",
+      "As of September 2026, Square Yards puts the Borivali West average asking rate at 30,750 rupees per sq ft. By pocket, NoBroker's May 2026 figures put Chikoowadi at 25,000 to 26,000 and Yogi Nagar at 27,000 to 33,800. Borivali East averaged about 35,200 in September 2026. These are asking rates, not prices paid.",
     intro: [
       "We have worked Borivali since 1996, and from our office in Chikoowadi since 2005.",
       "This guide covers the Borivali we walk every week, pocket by pocket. Every figure carries its date and source. For a specific building, ask us. No page can do that part.",
@@ -196,10 +204,11 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
         ],
       },
       {
-        heading: "Rates in Borivali West, pocket by pocket",
+        heading: "Property rates in Borivali West, pocket by pocket",
         scene: "pockets",
         body: [
-          "The same budget buys a very different flat two lanes apart.",
+          "Borivali West averaged 30,750 rupees per sq ft in September 2026 on Square Yards' figures. On NoBroker's May 2026 figures the pockets run from about 10,900 on the Gorai stretch to 33,800 in Yogi Nagar.",
+          "So the same budget buys a very different flat two lanes apart.",
         ],
         bullets: [
           "Yogi Nagar and Shimpoli ask the most in the West.",
@@ -207,12 +216,38 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
           "I.C. Colony swings with the age of the building.",
         ],
         after: [
-          "In the East, asking rates averaged about 34,750 rupees per square foot in June 2026. Older ready flats sat closer to 25,700. That is the number a family buying resale should plan on.",
+          "In the East, asking rates averaged about 35,200 rupees per square foot in September 2026, on Square Yards' figures. Older ready buildings on either side ask below the average, so we price the building, not the suburb.",
         ],
         invite: {
           hook: "Two of these pockets trade at the same rate and behave very differently for a family with a school run. Tell us your budget and we will tell you which two to see this month.",
           button: "Ask which pocket fits",
           message: "Hi Shree Giriraj, I am looking at Borivali. My budget is about ___ and I want to know which pocket fits us. Can you help?",
+        },
+      },
+      {
+        heading: "What a 1, 2 or 3 BHK costs in Borivali West",
+        body: [
+          "At the September 2026 average of 30,750 rupees per sq ft, here is what each size asks. The pocket moves the figure more than the size does.",
+        ],
+        bullets: [
+          "1 BHK, 400 to 450 sq ft: about ₹1.23 to ₹1.38 crore. NoBroker's May 2026 band starts at ₹74.6 lakh in Gorai 1 and 2.",
+          "2 BHK, about 700 sq ft: about ₹2.15 crore, or ₹1.75 to ₹1.82 crore in Chikoowadi.",
+          "3 BHK, about 950 sq ft: about ₹2.92 crore. NoBroker's band runs from ₹2.29 crore in Gorai and Eksar Road to ₹4.04 crore.",
+        ],
+        after: [
+          "These are asking figures, not prices paid. Stamp duty adds 6 percent for most buyers, and registration up to 30,000 rupees. The flats for sale page has the full table, pocket by pocket.",
+        ],
+        links: [
+          { href: "/areas/borivali-west/flats-for-sale", label: "Flats for sale in Borivali West, by pocket and size" },
+          { href: "/blog/1-bhk-price-borivali-kandivali-malad", label: "1 BHK price, down payment and EMI" },
+          { href: "/blog/buy-first-flat-in-mumbai", label: "Buying your first flat in Mumbai, step by step" },
+          { href: "/guides/new-projects-borivali-west", label: "New projects in Borivali West: what to check" },
+          { href: "/projects#borivali-west", label: "New projects in Borivali West, compared" },
+        ],
+        invite: {
+          hook: "Tell us the size, the budget and the pocket. We send the Borivali West flats that fit, usually the same day.",
+          button: "Get matching flats",
+          message: "Hi Shree Giriraj, I am looking to buy a ___ BHK in Borivali West. My budget is about ___. Can you send me what fits?",
         },
       },
       {
@@ -261,15 +296,23 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
     faqs: [
       {
         q: "What is the rate per sq ft in Borivali West?",
-        a: "Asking rates in Borivali West average about 30,000 to 31,300 rupees per square foot in mid 2026. By pocket, Yogi Nagar asks 27,000 to 33,800, Shimpoli 27,500 to 30,500 and Chikoowadi 25,000 to 26,000. These are asking rates from NoBroker and Square Yards, not prices paid.",
+        a: "Borivali West averaged 30,750 rupees per sq ft in September 2026, on Square Yards' figures. By pocket, NoBroker's May 2026 figures put Yogi Nagar at 27,000 to 33,800, Shimpoli at 27,500 to 30,500 and Chikoowadi at 25,000 to 26,000. These are asking rates, not prices paid.",
+      },
+      {
+        q: "How much does a 3 BHK flat cost in Borivali West?",
+        a: "A 3 BHK of about 950 sq ft in Borivali West asks about ₹2.92 crore at the September 2026 average of 30,750 rupees per sq ft. NoBroker's May 2026 bands run from ₹2.29 crore in Gorai and Eksar Road to ₹4.04 crore in luxury towers. Stamp duty and registration come on top.",
+      },
+      {
+        q: "How much does a 1 BHK flat cost in Borivali West?",
+        a: "A 1 BHK of 400 to 450 sq ft in Borivali West asks about ₹1.23 to ₹1.38 crore at the September 2026 average. NoBroker's May 2026 band starts at ₹74.6 lakh in Gorai 1 and 2. Chikoowadi, at 25,000 to 26,000 per sq ft, puts it at about ₹1.00 to ₹1.17 crore.",
       },
       {
         q: "Is Borivali West or East better to live in?",
         a: "They suit different people. The West is denser, with the shopping and the older societies, and Metro Line 2A serves it. The East is greener and quieter. It has the national park, the highway, most of the large new projects and Metro Line 7. Inside each side, the pocket matters more than the side.",
       },
       {
-        q: "What is a realistic budget for a 2 BHK in Borivali?",
-        a: "Asking rates in mid 2026 ran around 25,000 to 31,000 rupees per square foot in most West pockets, and 25,000 to 35,000 in the East. Older buildings sit below that and new towers above. The range inside one pocket is wide. So we quote the figure for the specific building, not a suburb average.",
+        q: "What is a realistic budget for a 2 BHK in Borivali West?",
+        a: "A 2 BHK of about 700 sq ft in Borivali West asks about ₹2.15 crore at the September 2026 average of 30,750 rupees per sq ft. In Chikoowadi it asks about ₹1.75 to ₹1.82 crore. Older buildings sit below that and new towers above, so we quote the figure for the specific building.",
       },
       {
         q: "How far is Borivali from Andheri and the airport?",
@@ -277,7 +320,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       },
       {
         q: "Is Borivali good for investment?",
-        a: "Borivali is an owner occupier suburb. Rents are steady and gross yields are modest, around 2.65 percent in the West on mid 2026 figures. Gross yield is the yearly rent as a share of the price. The investment case here is the building and the pocket. Redevelopment stage changes what a flat is worth, and we do that sum on the actual flat before you decide.",
+        a: "Borivali is an owner occupier suburb. Rents are steady and gross yields are modest, 2.97 percent in Borivali West on Square Yards' September 2026 figures. Gross yield is the yearly rent as a share of the price. The investment case here is the building and the pocket. Redevelopment stage changes what a flat is worth, and we do that sum on the actual flat before you decide.",
       },
       {
         q: "Which are the well known schools and hospitals in Borivali?",
@@ -286,6 +329,10 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       {
         q: "What should I check before buying in an older Borivali building?",
         a: "Check the water pressure on the upper floors and the parking the society will allot in writing. Check the society's no objection, carpet area as RERA defines it, and how far any redevelopment has really got. Send us the building's name and we will tell you what we know about it.",
+      },
+      {
+        q: "Can you help me sell my flat in Borivali West?",
+        a: "Yes. We price it against what similar flats in your pocket ask and register for. We prepare the papers a careful buyer will ask for, and show it only to buyers who can complete. Send us the building's name on WhatsApp and we will tell you what it would ask this month, free.",
       },
     ],
     sources: [
@@ -296,9 +343,9 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       { label: "Wikipedia, Sanjay Gandhi National Park: area, visitors, Kanheri caves", url: "https://en.wikipedia.org/wiki/Sanjay_Gandhi_National_Park" },
       { label: "Free Press Journal, 1 May 2026, on the park's morning walkers", url: "https://www.freepressjournal.in/mumbai/sgnps-10000-annual-morning-walk-fee-sparks-outrage-among-borivali-residents-regular-visitors" },
       { label: "Wikipedia, Our Lady of Immaculate Conception Church, Borivali", url: "https://en.wikipedia.org/wiki/Our_Lady_of_Immaculate_Conception_Church,_Borivali" },
-      { label: "NoBroker, property rates in Borivali West by pocket, 25 May 2026", url: "https://www.nobroker.in/blog/property-rates-in-borivali-west" },
-      { label: "Square Yards, Borivali East property rates, June 2026", url: "https://www.squareyards.com/property-rates/borivali-east-mumbai" },
-      { label: "Square Yards, Borivali West property rates, June 2026", url: "https://www.squareyards.com/property-rates/borivali-west-mumbai" },
+      { label: "NoBroker, property rates in Borivali West by pocket and 1, 2 and 3 BHK price bands, 25 May 2026 (still live 16 November 2026)", url: "https://www.nobroker.in/blog/property-rates-in-borivali-west" },
+      { label: "Square Yards, Kandivali East property rates page, listing Borivali East at 35,200 rupees per sq ft, September 2026 (read 16 November 2026)", url: "https://www.squareyards.com/property-rates/kandivali-east-mumbai" },
+      { label: "Square Yards, Borivali West property rates: average 30,750 rupees per sq ft, September 2026 (read 16 November 2026)", url: "https://www.squareyards.com/property-rates/borivali-west-mumbai" },
       { label: "Construction World, 9 April 2025, Arkade's Shreepal Nagar cluster redevelopment", url: "https://www.constructionworld.in/latest-construction-news/real-estate-news/arkade-secures-rs-8.65-bn-cluster-redevelopment-project-in-borivali/71720" },
       { label: "The Tribune, 17 June 2025, Madhumilan Society redevelopment", url: "https://www.tribuneindia.com/news/business/redevelopment-of-borivalis-madhumilan-society-in-limbo-senior-citizen-demands-gbr" },
       { label: "Free Press Journal, 3 October 2025, Bhagwati Hospital redevelopment", url: "https://www.freepressjournal.in/mumbai/mumbai-500-crore-bhagwati-hospital-in-borivali-to-open-by-december-after-delays" },
@@ -307,10 +354,12 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
 
   kandivali: {
     longName: "Kandivali",
-    h1: "Kandivali West",
-    metaTitle: "Kandivali West: rates per sq ft, rent",
+    h1: "Kandivali West property rates and area guide",
+    place: "Kandivali West",
+    updatedOn: "16 November 2026",
+    metaTitle: "Kandivali West property rates per sq ft 2026",
     seoDescription:
-      "Kandivali West property rates per sq ft and asking rents by size, pocket by pocket: Mahavir Nagar, Charkop, Dahanukarwadi, Thakur Village.",
+      "Kandivali West property rates per sq ft, October 2026, from Mahavir Nagar to Charkop, with 1, 2 and 3 BHK prices, rents and the new projects.",
     metaDescription:
       "Kandivali West and East, pocket by pocket: Mahavir Nagar, Charkop's sectors, Dahanukarwadi, Thakur Village, Lokhandwala and Akurli Road. With 2026 asking rates, the two metro lines, and how to buy a new launch here well.",
     hero: {
@@ -342,7 +391,7 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
         { label: "Thakur Village, East", value: 33050, note: "HomeBazaar, May 2026" },
         { label: "Samata Nagar, East", value: 29554, note: "HomeBazaar, May 2026" },
         { label: "Dahanukarwadi, West", value: 27750, note: "Square Yards, 2026" },
-        { label: "Charkop sectors, West", value: 24750, note: "23,350 to 26,150, Square Yards" },
+        { label: "Charkop Sectors 2 and 4, West", value: 26050, note: "25,950 to 26,150, Square Yards, October 2026" },
       ],
       pocketsNote: "Asking rates per square foot as reported, with the portal and month. Asking is not the registered price.",
       pocketScenes: [
@@ -361,11 +410,11 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
         { label: "2 BHK", value: 50000, note: "35,000 to 65,000" },
         { label: "3 BHK", value: 77500, note: "60,000 to 95,000" },
       ],
-      rentsNote: "Midpoints of asking rents, NoBroker 2026. Gross yields around 3.9 percent West and 3.2 percent East on Square Yards' figures.",
+      rentsNote: "Midpoints of asking rents, NoBroker 2026. Gross yield 3.81 percent in Kandivali West, Square Yards, October 2026.",
     },
     figuresAsOf: "mid 2026",
     answer:
-      "Kandivali West asks about 25,000 to 27,000 rupees per square foot in mid 2026. Mahavir Nagar is the highest at about 36,450, Dahanukarwadi is near 27,750, and the Charkop sectors run 23,350 to 26,150. Kandivali East averages about 31,000. These are asking rates, not prices paid.",
+      "As of October 2026, Square Yards puts Kandivali West's average asking rate at 26,800 rupees per sq ft, or 27,200 for apartments. Mahavir Nagar asks near 36,450 and Charkop Sectors 2 and 4 ask 25,950 to 26,150. Kandivali East averaged about 31,750 in September 2026. These are asking rates, not prices paid.",
     intro: [
       "Kandivali is where most of the new launch activity in our patch sits. It is also home to some of the most settled family pockets in the western suburbs.",
       "We have worked both sides of the tracks since 1996. This guide shows the place as we know it, with the figures dated.",
@@ -381,21 +430,47 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
         ],
       },
       {
-        heading: "Rates in Kandivali West, pocket by pocket",
+        heading: "Property rates in Kandivali West, pocket by pocket",
         scene: "pockets",
         body: [
+          "Kandivali West averaged 26,800 rupees per sq ft in October 2026 on Square Yards' figures, and 27,200 for apartments. Charkop Sector 2 asked 25,950 and Mahavir Nagar near 36,450.",
           "Mahavir Nagar is the West's best known address and its highest asking rate. The metro is 450 metres away. Its Khau Galli, a street of food stalls, is one people cross suburbs for.",
         ],
         bullets: [
-          "Charkop's MHADA sectors cost about a third less than Mahavir Nagar.",
+          "Charkop's MHADA sectors cost about 30 percent less than Mahavir Nagar.",
           "Thakur Village in the East is the planned suburb, with wide roads and its own schools.",
           "Lokhandwala is the East's premium gated address.",
           "Akurli Road is where the new towers are rising.",
         ],
         invite: {
-          hook: "Mahavir Nagar and Charkop are twenty minutes apart and a third apart in price. If you are choosing between a smaller flat in one and a larger one in the other, we have that conversation every week.",
+          hook: "Mahavir Nagar and Charkop are twenty minutes apart and about 30 percent apart in price. If you are choosing between a smaller flat in one and a larger one in the other, we have that conversation every week.",
           button: "Talk through the pockets",
           message: "Hi Shree Giriraj, I am looking at Kandivali with a budget of about ___. Which pockets should I be seeing?",
+        },
+      },
+      {
+        heading: "What a 1, 2 or 3 BHK costs in Kandivali West",
+        body: [
+          "At Square Yards' October 2026 apartment average of 27,200 rupees per sq ft, here is what each size asks. Charkop sits below these figures and Mahavir Nagar above.",
+        ],
+        bullets: [
+          "1 BHK, 400 to 450 sq ft: about ₹1.09 to ₹1.22 crore, or ₹1.04 to ₹1.18 crore in Charkop Sectors 2 and 4.",
+          "2 BHK, about 700 sq ft: about ₹1.90 crore, rising to about ₹2.55 crore in Mahavir Nagar.",
+          "3 BHK, about 950 sq ft: about ₹2.58 crore, rising to about ₹3.46 crore in Mahavir Nagar.",
+        ],
+        after: [
+          "These are asking figures, not prices paid. Stamp duty adds 6 percent for most buyers, and registration up to 30,000 rupees. For a launch, Jaswanti Jewel off M. G. Road starts from ₹2.92 crore as of October 2026.",
+        ],
+        links: [
+          { href: "/areas/kandivali/flats-for-sale", label: "Flats for sale in Kandivali West, by pocket and size" },
+          { href: "/projects#kandivali-west", label: "New projects in Kandivali West, compared" },
+          { href: "/blog/1-bhk-price-borivali-kandivali-malad", label: "1 BHK price, down payment and EMI" },
+          { href: "/blog/buy-first-flat-in-mumbai", label: "Buying your first flat in Mumbai, step by step" },
+        ],
+        invite: {
+          hook: "Tell us the size, the budget and the pocket. We send the Kandivali West flats that fit, usually the same day.",
+          button: "Get matching flats",
+          message: "Hi Shree Giriraj, I am looking to buy a ___ BHK in Kandivali West. My budget is about ___. Can you send me what fits?",
         },
       },
       {
@@ -434,7 +509,19 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
     faqs: [
       {
         q: "What is the rate per sq ft in Kandivali West?",
-        a: "Asking rates in Kandivali West average about 25,000 to 27,000 rupees per square foot in mid 2026. Mahavir Nagar is near 36,450, Dahanukarwadi about 27,750, and the Charkop sectors 23,350 to 26,150. The East averages about 31,000, with Lokhandwala above 43,000. Asking is not the registered price. The East's government registration rate was about 21,300.",
+        a: "Kandivali West averaged 26,800 rupees per sq ft in October 2026 on Square Yards' figures, and 27,200 for apartments. Mahavir Nagar is near 36,450, Dahanukarwadi about 27,750 and Charkop Sectors 2 and 4 are 25,950 to 26,150. The government's registration rate for the West was 18,450. Asking is not the registered price.",
+      },
+      {
+        q: "How much does a 1 BHK flat cost in Kandivali West?",
+        a: "A 1 BHK of 400 to 450 sq ft in Kandivali West asks about ₹1.09 to ₹1.22 crore. That is Square Yards' October 2026 apartment average of 27,200 rupees per sq ft. In Charkop Sectors 2 and 4 it asks about ₹1.04 to ₹1.18 crore. A Charkop MHADA flat needs the Board's permissions, which we handle.",
+      },
+      {
+        q: "How much does a 2 BHK flat cost in Kandivali West?",
+        a: "A 2 BHK of about 700 sq ft in Kandivali West asks about ₹1.90 crore at the October 2026 average of 27,200 rupees per sq ft. In Mahavir Nagar, near 36,450 per sq ft, it asks about ₹2.55 crore. It is an asking figure, not a price paid.",
+      },
+      {
+        q: "Which new projects are there in Kandivali West?",
+        a: "Jaswanti Jewel off M. G. Road is registered on MahaRERA, with 2 to 5 BHK homes from ₹2.92 crore as of October 2026 and possession from March 2027. Blissful Living on Ext. Mathuradas Road is awaiting MahaRERA registration. Our projects page compares them side by side.",
       },
       {
         q: "Is Kandivali West or East better?",
@@ -449,12 +536,12 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
         a: "Two. Metro Line 2A along New Link Road stops at Kandivali West and Dahanukarwadi. Metro Line 7 along the highway stops at Poisar and Akurli in the East. Both opened in April 2022 and connect to Line 1 for Andheri and the airport route.",
       },
       {
-        q: "Does the floor make much difference to price in a new tower?",
-        a: "Yes, often more than a small difference in carpet area does. Higher floors carry a floor rise and a different view and light. We show you what your specific floor looks out on, not the sample flat. We also read the RERA registration with you before you book.",
-      },
-      {
         q: "How do you help with a new launch in Kandivali?",
         a: "We check the drawing against the sanctioned plan and the promise against the MahaRERA registration, which carries the declared possession date. Then we take you to the floor band you are considering. In a tall tower the floor moves the price more than the carpet area does.",
+      },
+      {
+        q: "Can you help me sell my flat in Kandivali West?",
+        a: "Yes. We price it against what similar flats in your pocket ask and register for. We prepare the papers a careful buyer will ask for, and show it only to buyers who can complete. For a Charkop MHADA flat we line up the Board's permissions too. Send us the building's name for a free price view.",
       },
     ],
     sources: [
@@ -466,8 +553,8 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       { label: "Thakur Group, about the company and Thakur Village", url: "https://www.thakurgroupofcos.com/about/index.html" },
       { label: "Wikipedia, Yellow Line (Metro 2A) stations and dates", url: "https://en.wikipedia.org/wiki/Yellow_Line_(Mumbai_Metro)" },
       { label: "Wikipedia, Line 7 (Mumbai Metro) stations and dates", url: "https://en.wikipedia.org/wiki/Line_7_(Mumbai_Metro)" },
-      { label: "Square Yards, Kandivali West property rates, 2026", url: "https://www.squareyards.com/property-rates/kandivali-west-mumbai" },
-      { label: "Square Yards, Kandivali East property rates, September 2026", url: "https://www.squareyards.com/property-rates/kandivali-east-mumbai" },
+      { label: "Square Yards, Kandivali West property rates: average 26,800 rupees per sq ft (27,200 for apartments), Charkop sectors and registration rate, October 2026 (read 16 November 2026)", url: "https://www.squareyards.com/property-rates/kandivali-west-mumbai" },
+      { label: "Square Yards, Kandivali East property rates: average 31,750 rupees per sq ft, September 2026 (read 16 November 2026)", url: "https://www.squareyards.com/property-rates/kandivali-east-mumbai" },
       { label: "HomeBazaar, property rates in Kandivali by pocket, 28 May 2026", url: "https://www.homebazaar.com/knowledge/latest-property-rates-in-kandivali/" },
       { label: "NoBroker, Kandivali West locality report, rents", url: "https://www.nobroker.in/locality-iq/kandivali-west-mumbai-liqlt" },
       { label: "Business Standard, 13 February 2025, Mahindra Vista phase 2 launch", url: "https://www.business-standard.com/content/press-releases-ani/mahindra-lifespaces-announces-phase-2-launch-of-mahindra-vista-in-kandivali-east-125021300912_1.html" },
@@ -478,10 +565,12 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
 
   malad: {
     longName: "Malad",
-    h1: "Malad West",
-    metaTitle: "Malad West: rates per sq ft, rent",
+    h1: "Malad West property rates and area guide",
+    place: "Malad West",
+    updatedOn: "16 November 2026",
+    metaTitle: "Malad West property rates per sq ft 2026",
     seoDescription:
-      "Malad West property rates per sq ft and asking rents by size, pocket by pocket: Mindspace, Evershine Nagar, Orlem, Marve Road.",
+      "Malad West property rates per sq ft, checked November 2026, pocket by pocket from Evershine Nagar to Orlem, with 1, 2 and 3 BHK prices and rents.",
     metaDescription:
       "Malad West and East, pocket by pocket: Mindspace, Evershine Nagar, Orlem, Marve Road, Rani Sati Marg, Kurar and Dindoshi. With 2026 asking rates and rents, the metro, the coastal road plans, and who really rents here.",
     hero: {
@@ -509,14 +598,15 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       },
       pockets: [
         { label: "Evershine Nagar, West", value: 32000, note: "Dwello, 2026" },
-        { label: "Malad West average", value: 30800, note: "Square Yards, September 2026" },
+        { label: "Malad West average", value: 30800, note: "Square Yards, September 2026; 28,250 on its overview, November 2026" },
+        { label: "Malad West resale, carpet", value: 27000, note: "Mumbai Property Exchange and PropertyPistol, July and September 2026" },
         { label: "Malad East average", value: 30400, note: "Square Yards, 2026" },
         { label: "Dindoshi, East", value: 37500, note: "25,000 to 50,000, NoBroker" },
         { label: "Jankalyan Nagar, West", value: 14543, note: "10,666 to 23,846, NoBroker" },
       ],
       pocketsNote: "Asking rates per square foot as reported, with the portal and month. Asking is not the registered price.",
       pocketScenes: [
-        { kicker: "West · the office district", title: "Mindspace and the Link Road belt", text: "Paradigm Mindspace has stood here since 2004. It has 0.8 million square feet leased to JP Morgan, Tech Mahindra and Concentrix at 98.6 percent occupancy, with Inorbit and Infiniti beside it. Its workforce is Malad's largest source of tenants.", image: { src: "/premium/u/commercial-05.jpg", alt: "A minimalist showroom behind a full glass front" } },
+        { kicker: "West · the office district", title: "Mindspace and the Link Road belt", text: "Paradigm Mindspace has stood here since 2004. It has 0.8 million square feet leased to JP Morgan, Tech Mahindra and Concentrix, 100 percent committed at 30 September 2026, with Inorbit and Infiniti beside it. Its workforce is Malad's largest source of tenants.", image: { src: "/premium/u/commercial-05.jpg", alt: "A minimalist showroom behind a full glass front" } },
         { kicker: "West · the premium pocket", title: "Evershine Nagar", text: "Lodha Raj Infinia, Narang Vivenda and Arkade Eden stand near New Link Road and the Malad West metro. Asking rates run around 32,000 rupees per square foot.", image: { src: "/premium/apartments-palms.jpg", alt: "An elegant residential building with balconies and palm trees" } },
         { kicker: "West · the village heart", title: "Orlem and Marve Road", text: "Once Valnai, the village on the curving path. It has the largest parish in the archdiocese by a 2004 census, and St. Anne's since 1916. Hockey and football are big here, and 15,000 people come to the Christmas midnight mass.", image: { src: "/premium/highrise-clear.jpg", alt: "High rise towers on the skyline under a clear sky" } },
         { kicker: "East · at the park's edge", title: "Rani Sati Marg and Dindoshi", text: "The main road from the station to the highway, now a metro hotspot. Dindoshi has the Infinity IT Park, the civil court and one of BEST's largest bus depots.", image: { src: "/premium/u/commercial-06.jpg", alt: "A domed glass commercial building in landscaped grounds" } },
@@ -533,9 +623,9 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       ],
       rentsNote: "Midpoints of asking rents, NoBroker April 2026 and Broker Network July 2026. Yields reported at 3 to 4 percent gross.",
     },
-    figuresAsOf: "September 2026",
+    figuresAsOf: "September to November 2026",
     answer:
-      "Malad West asks about 29,000 to 30,800 rupees per square foot in 2026. Square Yards put the average at 30,800 in September 2026, with Evershine Nagar near 32,000 on Dwello's figures. Malad East averages about 30,400. These are asking rates, not prices paid.",
+      "Malad West asks 28,250 to 30,800 rupees per sq ft on Square Yards' figures: 30,800 in its September 2026 table and 28,250 on its overview page, read 16 November 2026. Resale flats alone ask about 27,000 per sq ft of carpet. Evershine Nagar is near 32,000. These are asking rates, not prices paid.",
     intro: [
       "Malad is the most investor driven of the three suburbs we work in. That is not a warning. It is a different market.",
       "You are more often buying alongside people who will never live in the flat. That shows in how quickly good stock moves and how the price is set.",
@@ -552,10 +642,11 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
         ],
       },
       {
-        heading: "Malad West rates, pocket by pocket",
+        heading: "Property rates in Malad West, pocket by pocket",
         scene: "pockets",
         body: [
-          "Mindspace is the reason Malad rents. It is an office district at 98.6 percent occupancy on Mindspace Business Parks REIT's own figures. Its workforce wants to live a short auto ride away.",
+          "Square Yards listed Malad West at 30,800 rupees per sq ft for September 2026, and its overview page showed 28,250 on 16 November 2026. Resale listings alone ask about 27,000 per sq ft of carpet, on Mumbai Property Exchange and PropertyPistol in July and September 2026. Each portal measures its own way, so we show all three, named.",
+          "Mindspace is the reason Malad rents. It is an office district that was 100 percent committed at 30 September 2026, on Mindspace Business Parks REIT's own figures. Its workforce wants to live a short auto ride away.",
         ],
         bullets: [
           "Evershine Nagar is the premium pocket beside it.",
@@ -566,6 +657,31 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
           hook: "Buying to let near Mindspace? The tenant is usually a specific kind of person, and the rent they pay is a specific number. Tell us the building and we will tell you who rents there and at what, before you commit.",
           button: "Ask who rents here",
           message: "Hi Shree Giriraj, I am looking at a flat to let out in Malad West, near ___. Who is the realistic tenant and what would it rent for?",
+        },
+      },
+      {
+        heading: "What a 1, 2 or 3 BHK costs in Malad West",
+        body: [
+          "At Square Yards' 28,250 to 30,800 rupees per sq ft, here is what each size asks. Resale buildings sit below these figures and Evershine Nagar above.",
+        ],
+        bullets: [
+          "1 BHK, 400 to 450 sq ft: about ₹1.13 to ₹1.39 crore.",
+          "2 BHK, about 700 sq ft: about ₹1.98 to ₹2.16 crore, or about ₹2.24 crore in Evershine Nagar.",
+          "3 BHK, about 950 sq ft: about ₹2.68 to ₹2.93 crore, or about ₹3.04 crore in Evershine Nagar.",
+        ],
+        after: [
+          "These are asking figures, not prices paid. Square Yards listed 10 newly launched and 17 under construction projects in Malad West on 16 November 2026. Send us your budget and we share the ones that fit, each with its MahaRERA registration checked.",
+        ],
+        links: [
+          { href: "/areas/malad/flats-for-sale", label: "Flats for sale in Malad West, by pocket and size" },
+          { href: "/blog/1-bhk-price-borivali-kandivali-malad", label: "1 BHK price, down payment and EMI" },
+          { href: "/blog/buy-first-flat-in-mumbai", label: "Buying your first flat in Mumbai, step by step" },
+          { href: "/projects", label: "New projects in Kandivali West and Borivali West" },
+        ],
+        invite: {
+          hook: "Tell us the size, the budget and whether it is to live in or to let. We send the Malad West flats that fit, usually the same day.",
+          button: "Get matching flats",
+          message: "Hi Shree Giriraj, I am looking to buy a ___ BHK in Malad West, to live in / to let. My budget is about ___. Can you send me what fits?",
         },
       },
       {
@@ -611,7 +727,15 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
     faqs: [
       {
         q: "What is the rate per sq ft in Malad West?",
-        a: "Malad West averaged about 30,800 rupees per square foot in September 2026 on Square Yards' figures. Evershine Nagar was near 32,000 on Dwello's figures. Malad East averaged about 30,400, and Dindoshi ranged from 25,000 to 50,000 on NoBroker's figures. These are asking rates, not prices paid.",
+        a: "Malad West asks 28,250 to 30,800 rupees per sq ft on Square Yards' figures, read 16 November 2026. Resale flats alone ask about 27,000 per sq ft of carpet, on Mumbai Property Exchange and PropertyPistol listings. Evershine Nagar is near 32,000 on Dwello's figures. These are asking rates, not prices paid.",
+      },
+      {
+        q: "How much does a 1 BHK flat cost in Malad West?",
+        a: "A 1 BHK of 400 to 450 sq ft in Malad West asks about ₹1.13 to ₹1.39 crore at Square Yards' 28,250 to 30,800 rupees per sq ft. Resale buildings ask less: Broker Network's July 2026 resale range of 14,000 to 24,000 per sq ft puts it at about ₹56 lakh to ₹1.08 crore.",
+      },
+      {
+        q: "Are there new projects in Malad West?",
+        a: "Yes. Square Yards listed 10 newly launched and 17 under construction projects in Malad West when read on 16 November 2026. Our projects page covers Kandivali West and Borivali West. For Malad West, send us your budget and we share the launches that fit, each with its MahaRERA registration checked.",
       },
       {
         q: "Is Malad a good rental investment?",
@@ -619,15 +743,11 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       },
       {
         q: "Is Malad more expensive than Borivali?",
-        a: "They overlap. Malad West asked around 29,000 to 30,800 rupees per square foot in 2026 and Borivali West around 30,000 to 31,300. Malad East averages about 30,400, in the same band. The pocket and the building's age matter far more than the suburb name.",
+        a: "They overlap. On Square Yards' figures, Malad West asks 28,250 to 30,800 rupees per sq ft and Borivali West averaged 30,750 in September 2026. Malad East averaged about 30,400, in the same band. The pocket and the building's age matter far more than the suburb name.",
       },
       {
         q: "What is Mindspace?",
         a: "Mindspace is an office district in Malad West on the Goregaon Malad Link Road. Paradigm Mindspace Malad is part of Mindspace Business Parks REIT. It has about 0.8 million square feet leased to firms including JP Morgan, Tech Mahindra and Concentrix, with Inorbit and Infiniti malls beside it. Its workforce is the largest single source of tenants in Malad.",
-      },
-      {
-        q: "Which are Malad's beaches, and can you swim?",
-        a: "Aksa and Marve are at the end of Marve Road, and Madh Island is beyond the ferry. Aksa is among Mumbai's cleanest, but swimming is prohibited because of strong currents. Marve has swift currents and sinking sand. They are for evenings and sunsets.",
       },
       {
         q: "How is Malad East different from Malad West?",
@@ -636,6 +756,10 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       {
         q: "What do you check before I buy a flat to let out in Malad?",
         a: "First we check who the realistic tenant is and what they pay. Then we work out the net figure after society charges, property tax and a month of vacancy at tenant changes. We also check what a tenant will ask about. That means water timing, parking, the society's rules on tenants, and the walk to the office or the metro.",
+      },
+      {
+        q: "Can you help me sell my flat in Malad West?",
+        a: "Yes. We price it against what similar flats in your pocket ask and register for, and prepare the papers a careful buyer will ask for. A flat with a tenant in it goes to investors who value the rent. Send us the building's name for a free price view.",
       },
     ],
     sources: [
@@ -648,8 +772,10 @@ const PAGES: Record<string, Omit<AreaPage, "slug" | "name">> = {
       { label: "Free Press Journal, 9 September 2026, Bombay High Court clears the Madh Versova bridge", url: "https://www.freepressjournal.in/mumbai/versova-madh-island-bridge-bombay-hc-clears-way-21-km-journey-to-shrink-to-15-km" },
       { label: "Free Press Journal, Coastal Road North: route, cost and timeline", url: "https://www.freepressjournal.in/mumbai/mumbai-coastal-road-north-project-bmc-fast-tracks-vdblr-land-acquisition-work-to-begin-outside-crz-zones" },
       { label: "Wikipedia, Line 2A (Mumbai Metro) and Malad West metro station", url: "https://en.wikipedia.org/wiki/Malad_West_metro_station" },
-      { label: "Square Yards, Malad West overview and rates, 9 September 2026", url: "https://www.squareyards.com/malad-west-in-mumbai-overview-924" },
+      { label: "Square Yards, Malad West overview: average sale price 28,250 rupees per sq ft, 10 new launches and 17 projects under development (read 16 November 2026)", url: "https://www.squareyards.com/malad-west-in-mumbai-overview-924" },
+      { label: "Square Yards, Kandivali East property rates page, listing Malad West at 30,800 and Malad East at 30,400 rupees per sq ft, September 2026", url: "https://www.squareyards.com/property-rates/kandivali-east-mumbai" },
       { label: "Square Yards, Malad East overview and rates, 2026", url: "https://www.squareyards.com/malad-east-in-mumbai-overview-892" },
+      { label: "Broker Network, Malad West rates and locality guide: new flats 18,000 to 30,000 and resale 14,000 to 24,000 rupees per sq ft, 2 and 3 BHK rents, July 2026 (read 16 November 2026)", url: "https://brokernetwork.in/malad-west-mumbai-property-rates-locality-guide-pros-cons-2026/" },
       { label: "NoBroker, Malad East locality report, April 2026", url: "https://www.nobroker.in/locality-iq/malad-east-malad-mumbai-liqlt" },
       { label: "Ruparel, is Malad West still a good location to buy in 2026, citing 99acres data", url: "https://ruparel.in/blog/is-malad-west-still-a-good-location-to-buy-a-flat-in-2026-or-has-it-peaked" },
       { label: "Dwello, Evershine Nagar overview and rents", url: "https://dwello.in/locations/evershine-nagar-malad-west-mumbai-overview" },

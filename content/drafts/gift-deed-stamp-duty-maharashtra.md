@@ -50,7 +50,7 @@ sources:
   - label: "DataForSEO, Google search volume for gift deed terms, measured 7 November 2026"
     url: https://dataforseo.com
 sourcesCheckedOn: "7 November 2026"
-updatedOn: "7 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - Is stamp duty only 200 rupees on a gift deed in Maharashtra?
   - How much is the registration fee on a gift deed?
@@ -165,6 +165,9 @@ A MHADA flat can also be gifted within the family. The Mumbai Board wants a regi
 **Is stamp duty only 200 rupees on a gift deed in Maharashtra?**
 For a home gifted to a husband, wife, son, daughter, grandson, granddaughter or the wife of a deceased son, yes. Article 34 sets 200 rupees. Other family members pay 3 percent, and anyone else pays the sale rate.
 
+**What is the stamp duty on a gift deed from husband to wife?**
+A home gifted between husband and wife pays 200 rupees stamp duty and 200 rupees registration in Maharashtra. A shop or office between spouses pays 3 percent.
+
 **How much is stamp duty on a gift deed to a brother or sister?**
 It is 3 percent of the flat's market value. On a flat worth 80 lakh, that is 2,40,000 rupees. In Mumbai the 1 percent metro cess is added. A parent or grandparent falls in the same band.
 
@@ -187,4 +190,6 @@ The Housing Manual says no transfer premium is needed for a transfer among famil
 
 ## Gifting a flat in the family?
 
-Shree Giriraj Real Estate has been in real estate since 1996, at the Borivali office since 2005. We prepare the draft deed, work out the stamp duty and registration for your exact relationship, and book the registration for you. That is part of our [resale flats service](/services/resale-flats), and there is no charge for a first look. [Message us on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20want%20to%20gift%20my%20flat%20in%20___%20to%20my%20___.%20Can%20you%20tell%20me%20the%20stamp%20duty%20and%20the%20steps%3F) with the flat and the relationship, and we will reply with the figures.
+Shree Giriraj Real Estate has been in real estate since 1996, at the Borivali office since 2005. We work out the stamp duty and registration for your exact relationship, and walk you through the steps to registration and the society transfer. There is no charge for a first look. [Message us on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20want%20to%20gift%20my%20flat%20in%20___%20to%20my%20___.%20Can%20you%20tell%20me%20the%20stamp%20duty%20and%20the%20steps%3F) with the flat and the relationship, and we will reply with the figures.
+
+**Selling or buying instead?** Our [resale flats service](/services/resale-flats) finds the buyer for a flat in Borivali, Kandivali or Malad and sees the sale through to registration. Buyers can browse flats for sale in [Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali West](/areas/kandivali/flats-for-sale) and [Malad West](/areas/malad/flats-for-sale).

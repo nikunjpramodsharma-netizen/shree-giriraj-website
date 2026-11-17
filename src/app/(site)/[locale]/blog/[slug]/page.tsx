@@ -13,6 +13,8 @@ import {
 import { PortableTextBody } from "@/components/PortableTextBody";
 import { MarkdownPost } from "@/components/MarkdownPost";
 import { getPost, getPostSlugs } from "@/lib/posts";
+import { articleDates } from "@/lib/published-dates";
+import { AUTHOR } from "@/lib/author";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
@@ -112,7 +114,11 @@ export async function generateMetadata({
       openGraph: {
         ...urls.openGraph,
         type: "article",
-        images: [postVisual(md).image],
+        images: [{ url: postVisual(md).image, alt: postVisual(md).alt }],
+        publishedTime: articleDates(md).published,
+        modifiedTime: articleDates(md).modified,
+        authors: [AUTHOR.name],
+        section: md.category,
       },
       // A draft still carrying review markers must not be indexed. Same rule
       // as the area pages: reviewable on the deployment, invisible to search.

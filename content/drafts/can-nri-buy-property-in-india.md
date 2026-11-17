@@ -1,7 +1,7 @@
 ---
 title: "Can an NRI buy property in India? What is allowed, and how it works for a Mumbai flat"
 metaTitle: "Can an NRI buy property in India? The rules"
-metaDescription: "NRIs and OCIs may buy flats, shops and offices in India under RBI rules, but not farmland. Who counts, how to pay, and buying in Mumbai."
+metaDescription: "Yes: NRIs and OCIs can buy flats, shops and offices in India with no RBI approval, but not farmland. How to pay, how many, and buying in Mumbai."
 slug: can-nri-buy-property-in-india
 category: Buying
 heroImage: /blog/can-nri-buy-property-in-india.jpg
@@ -40,7 +40,7 @@ sources:
   - label: "DataForSEO, Google search volume for NRI property terms in India and Mumbai, measured 14 November 2026"
     url: https://dataforseo.com
 sourcesCheckedOn: "14 November 2026"
-updatedOn: "14 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - Can an NRI buy a flat in Mumbai without visiting India?
   - Can an NRI buy agricultural land in India?
@@ -52,11 +52,11 @@ readNext:
   - services/resale-flats
 ---
 
-## The short answer
+## What rules decide whether an NRI can buy?
 
-Yes. A non resident Indian (NRI) or Overseas Citizen of India (OCI) may buy a flat, shop or office in India. That is the rule in the RBI's FEMA regulations of 2018. Agricultural land, farmhouses and plantation property are excluded. **Payment must come through banking channels or an NRE, NRO or FCNR(B) account.**
+**The RBI's FEMA regulations decide who may buy, and Maharashtra's stamp and registration rules decide how a Mumbai flat changes hands.** FEMA is the Foreign Exchange Management Act, the law that governs money moving in and out of India. The RBI is the Reserve Bank of India, which writes the detailed rules under it.
 
-FEMA is the Foreign Exchange Management Act, the law that governs money moving in and out of India. The RBI is the Reserve Bank of India, which writes the detailed rules under it.
+Buying in Borivali, Kandivali or Malad from abroad? [Send us your country, the size and your budget on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20live%20in%20___%20and%20I%20am%20looking%20for%20a%20___%20BHK%20in%20___.%20My%20budget%20is%20about%20___.) and we send the flats that fit, usually the same day. We show them on a video call at a time that suits you.
 
 ---
 
@@ -150,6 +150,8 @@ The RBI sets who may buy. Maharashtra's rules set how the flat changes hands. Th
 1. **A new project must be registered with MahaRERA.** MahaRERA is the state regulator for new projects. Its [public site](https://maharera.maharashtra.gov.in/) shows each project's record, and we read it with you. See [under construction or ready to move](/blog/under-construction-vs-ready-to-move-flat) for how the two routes differ.
 2. **A resale flat needs a clean paper trail.** That means the earlier sale deeds, the society's share certificate and the occupancy certificate. Our [sale deed guide](/blog/what-a-sale-deed-contains) and [occupancy certificate guide](/blog/occupancy-certificate) explain each.
 3. **A MHADA flat has its own permissions.** MHADA is the Maharashtra Housing and Area Development Authority. The RBI rules allow a residential purchase, and the Board's own permissions still apply. We handle MHADA paperwork for flats anywhere in Mumbai. Read [how to buy a MHADA flat in resale](/blog/how-to-buy-mhada-flat-in-resale).
+
+To see what is for sale now, start with [flats for sale in Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali West](/areas/kandivali/flats-for-sale) and [Malad West](/areas/malad/flats-for-sale). For new launches, see [new projects in Borivali West and Kandivali West](/guides/new-projects-borivali-west). GST and stamp duty are the same for an NRI as for a resident, as our [GST and stamp duty guide](/guides/stamp-duty-gst-under-construction-maharashtra) shows.
 
 Registration happens at the Sub Registrar's office. Index 2, the registry's record of the sale, is your proof afterwards. Our [Index 2 guide](/blog/index-2-property-document) shows how to read it, and [IGR Maharashtra explained](/blog/igr-maharashtra-explained) covers the department's online services.
 

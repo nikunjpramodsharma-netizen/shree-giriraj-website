@@ -1,93 +1,174 @@
 ---
-title: "How to check a builder's RERA page before you book"
-metaTitle: "How to check a builder's RERA page"
-metaDescription: "Every Maharashtra project has a public MahaRERA page. Here is where to find it, the eight things to read, and the signs to pause and ask."
+title: "How to check a builder's RERA page before you book a new flat in Maharashtra"
+metaTitle: "How to check a builder's MahaRERA page"
+metaDescription: "Check a builder's MahaRERA page in ten minutes: where to search, the eight parts to read and what to ask before you book a new flat in Mumbai."
 slug: how-to-check-a-builder-rera-page
 category: Buying
 heroImage: /premium/u/tower-08.jpg
-heroAlt: "A residential tower seen from below"
-targetKeyword: how to check builder rera page
+heroAlt: "A new residential tower in Mumbai seen from street level"
+targetKeyword: how to check rera registration of builder
+note: >
+  SERP for "how to check rera registration of builder" read on 16 November
+  2026 (Mumbai, mobile): the MahaRERA portal first, then short how to posts;
+  People Also Ask on checking status, the 70/30 rule and whether a RERA
+  project is safe. RERA sections 3, 4(2)(l)(D), 6, 11 and 13 read on
+  courtbook.in on 16 November 2026. The earlier FAQ on MahaRERA project
+  grading was removed: reports in 2026 conflict on whether grading is
+  running, and no official notice was found. The registration number format
+  is not stated beyond its letter, since formats can change.
 answer: >
-  Every project of more than eight flats in Maharashtra has to be registered with MahaRERA before the builder can advertise it or take a rupee. The registration number opens a public page of their own filings: who they are, what they may build, when they promised to finish and how far they have got.
-updatedOn: 14 November 2026
+  Every new project in Maharashtra larger than 500 square metres or eight
+  flats must be registered with MahaRERA before it is advertised or sold,
+  under section 3 of RERA. Search its name or number at
+  maharera.maharashtra.gov.in. The project page shows the promoter, the
+  approvals, the completion date, the flats booked and the quarterly
+  progress.
 sources:
-  - label: "MahaRERA, public register of registered projects"
-    url: https://maharera.maharashtra.gov.in/projects-search-result
+  - label: "MahaRERA, public search of registered projects"
+    url: https://www.maharera.maharashtra.gov.in/projects-search-result
+  - label: "Real Estate (Regulation and Development) Act 2016, section 3: registration before advertising or sale, and the exemption for 500 square metres or eight apartments"
+    url: https://courtbook.in/real-estate-regulation-and-development-act-2016/section-3
+  - label: "Real Estate (Regulation and Development) Act 2016, section 11: the promoter's web page, quarterly updates on bookings, approvals and status, and the registration number on every advertisement"
+    url: https://courtbook.in/real-estate-regulation-and-development-act-2016/section-11
+  - label: "Real Estate (Regulation and Development) Act 2016, section 6: extension of registration for force majeure, in aggregate up to one year"
+    url: https://courtbook.in/real-estate-regulation-and-development-act-2016/section-6
+  - label: "Real Estate (Regulation and Development) Act 2016, section 4(2)(l)(D): 70 percent of buyers' money in a separate project account"
+    url: https://courtbook.in/real-estate-regulation-and-development-act-2016/section-4
+  - label: "Real Estate (Regulation and Development) Act 2016, section 13: no more than 10 percent before a registered agreement for sale"
+    url: https://courtbook.in/real-estate-regulation-and-development-act-2016/section-13
+  - label: "Ministry of Housing and Urban Affairs, the Real Estate (Regulation and Development) Act 2016, including section 18 on delay"
+    url: https://mohua.gov.in/cms/rera-act.php
+sourcesCheckedOn: "16 November 2026"
+updatedOn: "16 November 2026"
 readNext:
   - under-construction-vs-ready-to-move-flat
   - occupancy-certificate
   - redevelopment-borivali-kandivali
 ---
 
-Every project of more than eight flats in Maharashtra has to be registered with MahaRERA before the builder can advertise it or take a rupee. Registration gives the project a number, and the number opens a public page with the builder's own filings: who the builder is, what they have permission to build, when they have promised to finish, how far they have got, and whether anyone has taken them to the regulator.
+## How do I check if a project is RERA registered?
 
-Most buyers never open it. Ten minutes on this page tells you more than the brochure, the sales office and the site visit together. Here is how to read it. If this is your first flat, our [first flat guide](/blog/buy-first-flat-in-mumbai) puts this check in order with the other steps.
+**Search the project's name, the promoter's name or the registration number on the MahaRERA website.** It takes about ten minutes, and it tells you more than a brochure. A promoter is the developer that registered the project.
 
-## Where to find it
+1. Go to [maharera.maharashtra.gov.in](https://www.maharera.maharashtra.gov.in/projects-search-result) and open the search for registered projects.
+2. Search by project name, promoter name or registration number. A project number begins with P.
+3. Open the project page and check that its name and address match the advertisement.
+4. Check that the number on the brochure is the same one. Section 11(2) of RERA requires it on every advertisement.
 
-Go to maharera.maharashtra.gov.in, choose the public search for registered projects, and search by the project name, the builder's name or the registration number. The number is a P followed by eleven digits, for example P51800000000, and the builder has to print it on every advertisement and every document. If a project you are being shown has no number, it is not registered, and the builder cannot legally book you into it. Wait until it is registered.
+If a project has no number, it cannot be booked yet. Section 3 of RERA bars advertising, booking or selling before registration. Projects of up to 500 square metres or eight flats are exempt. Until the number is issued, register your interest.
 
-The agency you are dealing with has a number too, starting with A. Ours is A51800005726. Check it the same way.
-
-## The eight things to read
-
-**1. The promoter.** The legal name of the company or LLP that holds the registration. It should match the name on the allotment letter and the agreement. A famous brand on the hoarding and a different unknown company on the RERA page is normal in redevelopment, but you should know which one you are contracting with.
-
-**2. The proposed completion date, and any extensions.** The builder declares a date at registration. The page also shows every extension they have applied for and been granted. One extension is common. Three tells you something about the builder.
-
-**3. The sanctioned plan and the CC.** The page lists the building permissions uploaded: the IOD and the Commencement Certificate from BMC. Open the CC and check how many floors it covers. A CC "up to plinth" or "up to the 7th floor" on a 22 storey tower means the upper floors are not yet permitted. Your flat should be on a floor the CC covers, or you should know when the next CC is expected.
-
-**4. The quarterly progress report.** Every three months the builder has to file how much of the building is done and how much money has come in and gone out. Look at the last two or three. A project where the filings have stopped, or where the percentage complete has not moved for two quarters, is a project where the work has stopped, whatever the sales office says.
-
-**5. Units booked and unsold.** The page shows how many flats are in the project and how many are sold. A launch that has sold a quarter of its units in the first months is healthy. One that shows three bookings a year in is either not selling or not being updated. Either way, ask.
-
-**6. Litigation.** The builder has to declare court cases and complaints against the project. Read them. A dispute with the society in a redevelopment, or a stay from a court, can stop the project for years. The page also shows complaints filed with MahaRERA itself and what the Authority ordered.
-
-**7. The project's bank account.** RERA requires 70% of the money collected from buyers to go into a separate account for that project, and the page names the bank. Your instalments should go to that account, and the builder's demand letters should give its details. Money asked for in another account is a flag.
-
-**8. The promoter's other projects.** The page links to every other project this builder has registered. Open two or three. Were they completed on time? Were the completion dates extended? Are there complaints? A builder's last two projects are the best forecast of this one.
-
-## Signs to pause and ask
-
-- No registration number, or a number that does not match the project name on the site.
-- A completion date more than four years away on a project already selling.
-- Two or more extensions already granted.
-- Quarterly reports not filed, or no movement in the percentage complete.
-- A CC that covers fewer floors than the flat you are being offered.
-- A court stay, or an unresolved dispute with the society in a redevelopment.
-- A demand for payment into an account that is not the project's RERA account.
-- A promoter whose last project was delivered two years late or is still unfinished.
-
-One of these is a question for the builder. Two or more is a good reason to look at another project.
-
-## What the RERA page does not tell you
-
-It does not tell you whether the title is clean, whether the society has actually vacated, or whether the bank that financed the project has given its no objection for sale. Those come from the title report, the society's papers and the bank's NOC, which the builder should give you on request. [The full list of what we ask a builder for before anyone pays](/guides/allotment-letter-under-construction-flat) is in our allotment letter guide.
-
-It also does not tell you what the flat is worth. That is the market, and a bit of judgment about the pocket, which is what we are for.
-
-## Read next
-
-- [Under construction or ready to move: how RERA changed the sums](/blog/under-construction-vs-ready-to-move-flat)
-- [Occupancy certificate: what it unlocks and how to check it](/blog/occupancy-certificate)
-- [Redevelopment in Borivali and Kandivali: what a society project involves](/blog/redevelopment-borivali-kandivali)
-
-## Common questions
-
-**The project says "RERA registration applied for". Can I book?**
-No. Until the number is issued the builder cannot take money. You can register your interest, and nothing more.
-
-**What is MahaRERA grading?**
-MahaRERA has started grading registered projects on their filings, finances and legal standing. Where a grade is shown it is one more signal; where it is not, the eight checks above do the same job by hand.
-
-**Can I complain to MahaRERA if the builder is late?**
-Yes. A buyer with a registered agreement can file a complaint online for delay, and the Authority can order interest or a refund. This is the main protection a registered agreement gives you, and why we do not arrange bookings that skip it.
-
-**Does a RERA number mean the project is safe?**
-No. It means the builder has filed what the law requires. The filings are what you read; the number alone proves nothing.
+If this is your first flat, our [first flat guide](/blog/buy-first-flat-in-mumbai) puts this check in order with the other steps.
 
 ---
 
-*Shree Giriraj Real Estate. MahaRERA registered agency A51800005726. Shop 11, Clover Grove CHS, Chikoowadi, Borivali West. In real estate since 1996.*
+## What does the MahaRERA project page show?
 
-[Send us a project name and we will check its RERA page with you](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20can%20you%20check%20the%20RERA%20page%20for%20___%20with%20me%3F)
+**The project page holds the promoter's own filings, and section 11 makes the promoter keep them up to date every quarter.** Here are the eight parts worth reading, in order.
+
+| Part of the page | What to read | What it tells you |
+| --- | --- | --- |
+| 1. Promoter | The legal name of the company or LLP | Who you sign the agreement with |
+| 2. Completion date and extensions | The declared date and any extension granted | When the flat is promised |
+| 3. Approvals | The commencement certificate and plans | How many floors are permitted so far |
+| 4. Quarterly progress | Work done and the project's status | Whether construction is moving |
+| 5. Flats booked | Booked against total | How the launch is selling |
+| 6. Cases and complaints | Matters declared and complaints filed | Anything still being decided |
+| 7. Project bank account | The separate account for buyers' money | Where your instalments go |
+| 8. Other projects | The promoter's earlier registrations | Their record of finishing |
+
+### 1. The promoter
+
+The promoter's legal name should match the allotment letter and the agreement. In a redevelopment, the brand on the hoarding and the registered company can differ. Knowing which one you contract with keeps the paperwork clear.
+
+### 2. The completion date and any extensions
+
+The promoter declares a completion date at registration. Section 6 lets MahaRERA extend the registration for force majeure, such as a flood or fire, in aggregate up to one year. The page shows each extension granted, so you see the full history.
+
+### 3. The approvals and the commencement certificate
+
+The commencement certificate, or CC, is the municipal permission to build. A CC can cover only part of the height at first. Check that it covers the floor you are offered, or ask when the next one is due.
+
+### 4. The quarterly progress
+
+Section 11(1) requires a quarterly update on the project's status. Read the last two or three. Steady progress quarter after quarter is the clearest sign of a project on track.
+
+### 5. Flats booked
+
+The same section requires a quarterly list of flats booked. Compare it with the total to see how the project is selling.
+
+### 6. Cases and complaints
+
+The page lists matters the promoter has declared and complaints filed with MahaRERA, with the orders made. In a redevelopment, look for anything between the promoter and the society.
+
+### 7. The project bank account
+
+Under section 4(2)(l)(D), 70 percent of the money buyers pay goes into a separate account for that project. Your demand letters should give that account's details.
+
+### 8. The promoter's other projects
+
+The page links to every project this promoter has registered. Open two or three finished ones and compare the declared and actual completion dates. That record is a good guide to this project.
+
+---
+
+## What should I ask the builder after reading the page?
+
+Reading the page gives you a short list of questions. Ask them in writing and keep the answers with your file.
+
+- Does the project name and number on the brochure match MahaRERA?
+- Is the completion date in the agreement the same as on the page?
+- Does the commencement certificate cover my floor, and when is the next one due?
+- Are the quarterly updates filed up to date?
+- Is there any case with the society or a court, and what stage is it at?
+- Which account do my instalments go to, and is it the project account?
+- When did the promoter's last two projects get their occupation certificate?
+
+Clear answers to all seven give you a project you can book with confidence. We ask these for you on every new project we show.
+
+---
+
+## What does the RERA page not tell you?
+
+**The page does not prove the title, the society's vacating or the lender's consent to sell.** Those come from the title report, the society's papers and the bank's no objection letter, which the builder can share on request.
+
+It also does not tell you what the flat is worth. Our guide to [new projects in Borivali West and Kandivali West](/guides/new-projects-borivali-west) compares rates by suburb. [Under construction or ready to move](/blog/under-construction-vs-ready-to-move-flat) sets out the trade. If a ready flat suits you better, see [flats for sale in Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali West](/areas/kandivali/flats-for-sale) and [Malad West](/areas/malad/flats-for-sale).
+
+---
+
+## How do I check an agency's MahaRERA registration?
+
+**An agency has its own MahaRERA number, beginning with A, which you can search the same way.** Ours is A51800005726. Check it before you share any papers.
+
+---
+
+## Common questions
+
+**How do I check RERA registration of a project in Maharashtra?**
+Search the project name, the promoter's name or the registration number at maharera.maharashtra.gov.in, under registered projects. The project page shows the promoter, approvals, completion date and quarterly progress. The number should match the one on the advertisement.
+
+**Can I book if a project says "RERA registration applied for"?**
+No, a project cannot be booked until its MahaRERA number is issued. Section 3 of RERA bars advertising, booking or selling before registration. You can register your interest and book once the number is on the website.
+
+**Do small projects need RERA registration?**
+Small projects are exempt from registration under section 3(2)(a) of RERA. That means up to 500 square metres of land, or up to eight flats across all phases. Anything larger must be registered with MahaRERA before it is advertised.
+
+**What is the 70 percent rule in RERA?**
+The 70 percent rule means a promoter keeps 70 percent of buyers' money in a separate account for that project. Section 4(2)(l)(D) sets it, and the money may be used only for that project's land and construction.
+
+**How long can a completion date be extended?**
+MahaRERA can extend a project's registration for force majeure, in aggregate up to one year, under section 6 of RERA. Force majeure means events such as a flood, fire or earthquake. The project page shows every extension granted.
+
+**What can I do if possession is late?**
+Under section 18 of RERA, a buyer can withdraw and get the money back with interest. Or the buyer can stay and receive interest for each month of delay. The date that counts is the one in your registered agreement for sale. A complaint can be filed with MahaRERA online.
+
+**What does a RERA number prove?**
+A RERA number proves the project is registered and its promoter has filed what the law requires. The filings are what you read for the full picture. Pair them with the title report and the society's papers before you book.
+
+---
+
+## Send us a project to check
+
+Send us a project name. We read its MahaRERA page with you, explain what each filing means and put the full cost in rupees, usually the same day. It is free, with no obligation.
+
+[Ask us to check a RERA page on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20can%20you%20check%20the%20RERA%20page%20for%20___%20with%20me%3F)
+
+*Shree Giriraj Real Estate is a MahaRERA registered agency, A51800005726, at Shop 11, Clover Grove CHS, Chikoowadi, Borivali West. In real estate since 1996, at our Borivali office since 2005.*

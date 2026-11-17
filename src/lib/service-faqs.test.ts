@@ -45,8 +45,8 @@ describe("service page questions", () => {
   it("quotes the same Borivali West resale rate as the carpet area article", () => {
     const post = getPost("carpet-area-vs-built-up-area")!;
     const table = JSON.stringify(post.blocks);
-    expect(table).toContain("31,200");
-    expect(SERVICE_FAQS["resale-flats"][0].a).toContain("31,200");
+    expect(table).toContain("36,228");
+    expect(SERVICE_FAQS["resale-flats"][0].a).toContain("36,228");
   });
 
   it("uses no dashes, per the site rule", () => {

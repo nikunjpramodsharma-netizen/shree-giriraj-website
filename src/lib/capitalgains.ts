@@ -33,15 +33,11 @@ export const CG_VERIFIED_ON = "2026-09-01";
 export const CG_SOURCES: { label: string; url: string }[] = [
   {
     label: "Income Tax Department, tax on long term capital gains",
-    url: "https://www.incometaxindia.gov.in/w/tax-on-long-term-capital-gains%E2%80%8B",
+    url: "https://www.incometaxindia.gov.in/w/tax-on-long-term-capital-gains",
   },
   {
     label: "Income Tax Department, capital gains",
     url: "https://www.incometaxindia.gov.in/w/capital-gain",
-  },
-  {
-    label: "ClearTax, long term capital gains rates and calculation",
-    url: "https://cleartax.in/s/long-term-capital-gains-ltcg-tax",
   },
 ];
 

@@ -1,7 +1,7 @@
 ---
 title: "MHADA lease rent, service charges and property tax: who bills what and how to clear dues"
-metaTitle: "MHADA lease rent, charges and property tax"
-metaDescription: "Who bills a MHADA flat: the Board, the society or the BMC. Ground rent, service charges, property tax and why dues come before any NOC."
+metaTitle: "MHADA lease rent payment and property tax"
+metaDescription: "Pay MHADA lease rent and service charges online at consumermb.mhada.gov.in, see what the BMC bills as property tax, and clear dues before a sale."
 slug: mhada-dues-lease-rent-property-tax
 category: MHADA
 heroImage: /blog/mhada-dues-lease-rent-property-tax.jpg
@@ -56,8 +56,10 @@ sources:
     url: https://ptaxportal.mcgm.gov.in/CitizenPortal/taxdocument/pdf/english/RulesForFixationOfCapitalValue/Rates%20of%20Taxation%20on%20Capital%20Value%20w.e.f.1.4.2015-English.pdf
   - label: "MCGM property tax portal: view bill, online payment, no dues and payment certificate"
     url: https://ptaxportal.mcgm.gov.in/CitizenPortal/
-sourcesCheckedOn: "7 November 2026"
-updatedOn: "7 November 2026"
+  - label: "MHADA Mumbai Board, consumer online billing portal, log in with consumer number and mobile OTP, checked 16 November 2026"
+    url: https://consumermb.mhada.gov.in/
+sourcesCheckedOn: "16 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - Who pays property tax on a MHADA flat?
   - What are MHADA service charges?
@@ -75,7 +77,7 @@ A MHADA flat can get three kinds of bill. The Board or the society bills ground 
 
 ---
 
-Selling, renting out or transferring a MHADA flat anywhere in Mumbai? We clear the paperwork file for you. Our [MHADA paperwork service](/services/mhada-paperwork) covers it, and a dues check is the first step.
+Selling, renting out or transferring a MHADA flat anywhere in Mumbai? We clear the paperwork file for you. Our [MHADA paperwork service](/services/mhada-paperwork) covers it, and a dues check is the first step. Selling in Borivali, Kandivali or Malad? We also find the buyer, as the last section explains.
 
 ---
 
@@ -125,9 +127,15 @@ For flats the Board lets on rent, the standard tenancy form has a different rule
 
 ---
 
-## How do you pay MHADA dues online?
+## How do you pay MHADA lease rent and dues online?
 
-MHADA's Mumbai Board has an online billing portal at consumermb.mhada.gov.in. The Board announced online payment of service charges for its tenants in a press release dated 29 June 2021.
+**Mumbai Board flats pay online at consumermb.mhada.gov.in, the Board's online billing portal.** As checked on 16 November 2026, it works in three steps:
+
+1. **Enter your consumer number**, printed on your Board bill or rent receipt.
+2. **Enter your mobile number** and confirm the one time password the portal sends.
+3. **View the bill and pay it**, then save the receipt.
+
+The Board announced online payment of service charges for its tenants in a press release dated 29 June 2021. The same portal page also links the online billing systems of the Konkan, Pune, Nashik, Nagpur, Amravati and Aurangabad boards.
 
 The portal is linked from the Citizen Corner on mhada.gov.in. Keep the receipt every time you pay. The Board's own transfer checklist asks for it, as the next section shows.
 
@@ -204,10 +212,20 @@ The notified limit is 19 working days, as our [MHADA NOCs guide](/blog/mhada-noc
 **Is property tax separate from MHADA service charges?**
 Yes. Property tax is the BMC's. Service charges are for common services and are billed by the Board or the society.
 
+**How do I pay MHADA lease rent online?**
+Mumbai Board allottees pay at consumermb.mhada.gov.in by entering their consumer number and confirming a one time password on their mobile. Once a society is registered and holds the lease, the society pays lease rent to the Board and bills members their share.
+
+**Do I need to clear dues before selling my MHADA flat?**
+Yes, the buyer must have paid all dues to the Board before the society can permit the sale under Regulation 25. In practice the seller clears them and hands over the latest receipt, which the Board's transfer checklist asks for.
+
 ---
 
 ## We will clear it for you
 
 Shree Giriraj Real Estate has worked in Mumbai property since 1996, from its Borivali West office since 2005, as a MahaRERA registered agency (A51800005726). Our [MHADA paperwork service](/services/mhada-paperwork) checks your dues, gathers the receipts and takes the file to the Estate Manager. We do this for MHADA flats anywhere in Mumbai.
+
+### Selling the flat in Borivali, Kandivali or Malad?
+
+**A dues check is the first step of a clean MHADA sale.** In these three suburbs we take it all the way to a buyer. Our [resale flats service](/services/resale-flats) prices the flat and finds a buyer who fits the scheme's income group. Our guide to [selling a MHADA flat](/blog/can-we-sell-mhada-flat) covers the rules.
 
 Tell us the flat and what you plan to do on [WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20want%20to%20check%20the%20dues%20on%20my%20MHADA%20flat%20in%20___%20before%20a%20___%20%28sale%2C%20rent%20or%20transfer%29.). We will tell you what to clear first, free and with no obligation.

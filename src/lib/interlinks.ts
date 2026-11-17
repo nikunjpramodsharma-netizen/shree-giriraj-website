@@ -3,7 +3,8 @@ import { FLAT_LISTINGS, listingPath, type ListingIntent } from "@/lib/flats";
 import { getAllPosts } from "@/lib/posts";
 import { getRepoService } from "@/lib/service-content";
 import { getTool } from "@/lib/tools";
-import { getProjectLink, projectsInArea } from "@/lib/project-links";
+import { getProjectLink, projectsInArea, registrationAwaited } from "@/lib/project-links";
+import { getGuide } from "@/lib/guides";
 
 /**
  * The web between the four kinds of page. A service points at the tools
@@ -57,8 +58,8 @@ const AREA_HOOKS: Record<string, string> = {
 };
 
 const SERVICE_HOOKS: Record<string, string> = {
-  "resale-flats": "Buying or selling a flat that already exists, with the paperwork checked before the token.",
-  rentals: "Flats and shops on leave and licence, with a deposit of two to three months, not more.",
+  "resale-flats": "Buying a ready flat with the papers checked first, or selling one with a free fair price opinion.",
+  rentals: "Flats on leave and licence from verified owners, with the registered agreement handled for you.",
   "new-project-bookings": "Booking in a launch with the RERA page read before the cheque is written.",
   "investment-advisory": "Which flat, in which pocket, for rent or for growth, with the arithmetic done first.",
   "commercial-plots": "Shops, offices and plots, where the tenant matters more than the view.",
@@ -70,7 +71,7 @@ const SERVICE_HOOKS: Record<string, string> = {
 const SERVICE_MAP: Record<string, { tools: string[]; articles: string[]; services: string[] }> = {
   "resale-flats": {
     tools: ["stamp-duty-calculator-mumbai", "carpet-area-calculator"],
-    articles: ["stamp-duty-and-registration-charges-mumbai", "what-a-sale-deed-contains", "buy-first-flat-in-mumbai", "1-bhk-price-borivali-kandivali-malad", "rent-or-buy-borivali-kandivali-malad", "can-nri-buy-property-in-india", "society-noc-for-sale-of-flat-mumbai", "society-share-certificate-transfer-fee", "how-to-buy-mhada-flat-in-resale"],
+    articles: ["society-noc-for-sale-of-flat-mumbai", "stamp-duty-and-registration-charges-mumbai", "buy-first-flat-in-mumbai", "what-a-sale-deed-contains", "1-bhk-price-borivali-kandivali-malad", "rent-or-buy-borivali-kandivali-malad", "can-nri-buy-property-in-india", "society-share-certificate-transfer-fee", "how-to-buy-mhada-flat-in-resale"],
     services: ["new-project-bookings", "investment-advisory"],
   },
   rentals: {
@@ -106,9 +107,10 @@ const SERVICE_MAP: Record<string, { tools: string[]; articles: string[]; service
 };
 
 const AREA_RECIPE = {
-  services: ["resale-flats", "rentals", "investment-advisory"],
-  tools: ["stamp-duty-calculator-mumbai", "rental-yield-calculator", "home-loan-emi-calculator"],
-  articles: ["best-area-to-invest-in-mumbai", "rental-yield-mumbai", "rent-deposit-months-western-suburbs"],
+  services: ["resale-flats", "new-project-bookings", "rentals", "investment-advisory"],
+  tools: ["stamp-duty-calculator-mumbai", "home-loan-emi-calculator", "rental-yield-calculator"],
+  // Buying reads first: the area guides are where buyers land (audit 16 Nov 2026).
+  articles: ["1-bhk-price-borivali-kandivali-malad", "buy-first-flat-in-mumbai", "best-area-to-invest-in-mumbai", "rent-or-buy-borivali-kandivali-malad", "rent-deposit-months-western-suburbs"],
 };
 
 const TOOL_MAP: Record<string, { services: string[]; articles: string[] }> = {
@@ -151,11 +153,11 @@ const TOOL_MAP: Record<string, { services: string[]; articles: string[] }> = {
 };
 
 const CATEGORY_MAP: Record<string, { services: string[]; tools: string[] }> = {
-  Investing: { services: ["investment-advisory", "commercial-plots"], tools: ["rental-yield-calculator", "capital-gains-calculator-property"] },
+  Investing: { services: ["investment-advisory", "resale-flats", "commercial-plots"], tools: ["rental-yield-calculator", "capital-gains-calculator-property"] },
   Paperwork: { services: ["resale-flats", "mhada-paperwork"], tools: ["stamp-duty-calculator-mumbai", "bmc-property-tax-calculator"] },
   MHADA: { services: ["mhada-paperwork", "resale-flats"], tools: ["stamp-duty-calculator-mumbai", "capital-gains-calculator-property"] },
   Buying: { services: ["resale-flats", "new-project-bookings"], tools: ["carpet-area-calculator", "home-loan-emi-calculator"] },
-  Interiors: { services: ["interiors"], tools: ["interior-scope-builder", "carpet-area-calculator"] },
+  Interiors: { services: ["interiors", "resale-flats"], tools: ["interior-scope-builder", "carpet-area-calculator"] },
   Renting: { services: ["rentals"], tools: ["hra-calculator-rent-receipts", "rental-yield-calculator"] },
 };
 
@@ -170,12 +172,21 @@ const ARTICLE_TOOL: Record<string, string> = {
   "choosing-an-interior-designer-in-borivali": "interior-scope-builder",
   "under-construction-vs-ready-to-move-flat": "home-loan-emi-calculator",
   "home-loan-on-mhada-flat": "home-loan-emi-calculator",
+  "can-we-rent-mhada-flat": "rent-agreement-stamp-duty-calculator-mumbai",
+  "how-to-buy-mhada-flat-in-resale": "home-loan-emi-calculator",
+  "mhada-dues-lease-rent-property-tax": "bmc-property-tax-calculator",
   "how-to-invest-in-real-estate-india": "rental-yield-calculator",
   "fractional-ownership-real-estate-india": "rental-yield-calculator",
-  "what-a-sale-deed-contains": "capital-gains-calculator-property",
+  "best-area-to-invest-in-mumbai": "rental-yield-calculator",
+  "commercial-property-investment-mumbai": "rental-yield-calculator",
+  "what-a-sale-deed-contains": "stamp-duty-calculator-mumbai",
   "gift-deed-stamp-duty-maharashtra": "stamp-duty-calculator-mumbai",
   "leave-and-licence-agreement-mumbai": "rent-agreement-stamp-duty-calculator-mumbai",
   "tenant-police-verification-mumbai": "rent-agreement-stamp-duty-calculator-mumbai",
+  "society-noc-for-sale-of-flat-mumbai": "stamp-duty-calculator-mumbai",
+  "society-share-certificate-transfer-fee": "stamp-duty-calculator-mumbai",
+  "occupancy-certificate": "home-loan-emi-calculator",
+  "redevelopment-borivali-kandivali": "rent-agreement-stamp-duty-calculator-mumbai",
   "2-bhk-interior-cost-mumbai": "interior-scope-builder",
   "modular-kitchen-cost-mumbai": "interior-scope-builder",
   "buy-first-flat-in-mumbai": "home-loan-emi-calculator",
@@ -192,7 +203,10 @@ function projectCards(area: string): LinkCard[] {
     kind: "project" as const,
     href: `/projects/${p.slug}`,
     title: p.name,
-    hook: "A new project here, with the price sheet and a site visit on WhatsApp.",
+    // Projects awaiting MahaRERA registration carry no price or booking copy.
+    hook: registrationAwaited(p.slug)
+      ? "Upcoming here, MahaRERA registration awaited. Register your interest for updates."
+      : "A new project here, with the price sheet and a site visit on WhatsApp.",
     englishOnly: true,
   }));
 }
@@ -267,12 +281,12 @@ const LISTING_RECIPE: Record<ListingIntent, { services: string[]; tools: string[
   sale: {
     services: ["resale-flats", "new-project-bookings", "investment-advisory"],
     tools: ["stamp-duty-calculator-mumbai", "carpet-area-calculator", "home-loan-emi-calculator"],
-    articles: ["stamp-duty-and-registration-charges-mumbai", "index-2-property-document", "carpet-area-vs-built-up-area"],
+    articles: ["1-bhk-price-borivali-kandivali-malad", "buy-first-flat-in-mumbai", "stamp-duty-and-registration-charges-mumbai", "carpet-area-vs-built-up-area"],
   },
   rent: {
     services: ["rentals", "interiors"],
     tools: ["rent-agreement-stamp-duty-calculator-mumbai", "hra-calculator-rent-receipts", "rental-yield-calculator"],
-    articles: ["rent-deposit-months-western-suburbs", "rental-yield-mumbai"],
+    articles: ["rent-deposit-months-western-suburbs", "rent-or-buy-borivali-kandivali-malad", "leave-and-licence-agreement-mumbai"],
   },
 };
 
@@ -342,6 +356,20 @@ export function interlinksForArea(slug: string, locale: string): Interlinks {
  * A project page points at its suburb's guide and flats for sale page, the two
  * calculators a buyer of a new flat needs, and the new project booking service.
  */
+/** Guides in the /guides series, as article cards. Only those whose file exists. */
+function guideCards(slugs: string[]): LinkCard[] {
+  return slugs
+    .map((s) => getGuide(s))
+    .filter((g): g is NonNullable<typeof g> => !!g)
+    .map((g) => ({
+      kind: "article" as const,
+      href: `/guides/${g.slug}`,
+      title: g.title,
+      hook: g.answer ?? "",
+      englishOnly: true,
+    }));
+}
+
 export function interlinksForProject(slug: string, locale: string): Interlinks {
   const area = getProjectLink(slug)?.area;
   const guide = area ? areaCards().filter((c) => c.href === `/areas/${area}`) : [];
@@ -349,7 +377,11 @@ export function interlinksForProject(slug: string, locale: string): Interlinks {
   return {
     tools: toolCards(["stamp-duty-calculator-mumbai", "home-loan-emi-calculator"]),
     areas: [...guide, ...forSale],
-    articles: [],
+    // The Borivali West launches get the new projects guide first (16 Nov 2026).
+    articles: [
+      ...(area === "borivali-west" ? guideCards(["new-projects-borivali-west"]) : []),
+      ...articleCards(["buy-first-flat-in-mumbai", "under-construction-vs-ready-to-move-flat", "stamp-duty-and-registration-charges-mumbai"]),
+    ],
     services: serviceCards(["new-project-bookings"], locale),
   };
 }
@@ -364,13 +396,42 @@ export function interlinksForTool(slug: string, locale: string): Interlinks {
   };
 }
 
+/**
+ * Buyer articles whose reader is choosing a flat: their suburb cards point
+ * at the flats for sale pages, which is the next step for that reader, not
+ * the area guides.
+ */
+const BUYER_ARTICLES = new Set([
+  "1-bhk-price-borivali-kandivali-malad",
+  "buy-first-flat-in-mumbai",
+  "buy-flat-in-mumbai-from-abroad",
+  "can-nri-buy-property-in-india",
+  "carpet-area-vs-built-up-area",
+  "rent-or-buy-borivali-kandivali-malad",
+  "under-construction-vs-ready-to-move-flat",
+]);
+
+/**
+ * Which flats pages an article's suburb cards point at. Readers of buying,
+ * paperwork, MHADA and investing posts are often about to buy or sell, so
+ * they see the flats for sale pages; renting readers see the flats for rent
+ * pages. Interiors readers keep the area guides.
+ */
+const SALE_CATEGORIES = new Set(["Buying", "Paperwork", "MHADA", "Investing"]);
+
+function listingIntentForArticle(post: { slug: string; category?: string }): LinkCard[] {
+  if (BUYER_ARTICLES.has(post.slug) || SALE_CATEGORIES.has(post.category ?? "")) return listingCards("sale");
+  if (post.category === "Renting") return listingCards("rent");
+  return areaCards();
+}
+
 export function interlinksForArticle(post: { slug: string; category?: string }, locale: string): Interlinks {
   const r = CATEGORY_MAP[post.category ?? ""] ?? { services: [], tools: [] };
   const own = ARTICLE_TOOL[post.slug];
   return {
     services: serviceCards(r.services, locale),
     tools: toolCards([...(own ? [own] : []), ...r.tools]).slice(0, 2),
-    areas: areaCards(),
+    areas: listingIntentForArticle(post),
     articles: [],
   };
 }

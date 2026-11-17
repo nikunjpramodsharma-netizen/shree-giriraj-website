@@ -134,17 +134,35 @@ export const OG_IMAGE = {
  * which was all of them. Carrying the image alongside the URL keeps the two
  * from being separable.
  */
+const OG_LOCALE: Record<string, string> = { en: "en_IN", hi: "hi_IN", mr: "mr_IN", gu: "gu_IN" };
+
 export function pageUrls(
   locale: string,
   path = "/",
   availableLocales: readonly string[] = routing.locales,
 ): {
   alternates: NonNullable<Metadata["alternates"]>;
-  openGraph: { url: string; images: (typeof OG_IMAGE)[] };
+  openGraph: {
+    type: "website";
+    siteName: string;
+    locale: string;
+    url: string;
+    images: (typeof OG_IMAGE)[];
+  };
 } {
+  // type, siteName and locale ride along for the same reason as the image:
+  // the layout sets them, and a page that sets openGraph at all replaced the
+  // layout's object, so until 16 November 2026 almost every page shipped with
+  // no og:type, og:site_name or og:locale. An article overrides type.
   return {
     alternates: buildAlternates(locale, path, availableLocales),
-    openGraph: { url: absoluteUrl(locale, path), images: [OG_IMAGE] },
+    openGraph: {
+      type: "website",
+      siteName: "Shree Giriraj Real Estate",
+      locale: OG_LOCALE[locale] ?? "en_IN",
+      url: absoluteUrl(locale, path),
+      images: [OG_IMAGE],
+    },
   };
 }
 

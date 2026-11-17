@@ -31,8 +31,8 @@ export const HRA_VERIFIED_ON = "2026-09-01";
 
 export const HRA_SOURCES: { label: string; url: string }[] = [
   {
-    label: "ClearTax, HRA exemption rules and calculation",
-    url: "https://cleartax.in/s/hra-house-rent-allowance",
+    label: "Groww, HRA exemption rules and documents",
+    url: "https://groww.in/p/tax/hra-house-rent-allowance",
   },
   {
     label: "Motilal Oswal, HRA exemption and calculation guide",

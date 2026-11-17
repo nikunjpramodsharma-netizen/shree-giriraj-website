@@ -68,6 +68,10 @@ const emiTool: Tool = {
   ],
   faqs: [
     {
+      q: "How is a home loan EMI calculated?",
+      a: "EMI equals the loan times the monthly rate times one plus the monthly rate to the power of the number of months, divided by that same power less one. The calculator does this for you: a 96 lakh rupee loan at 8.5 percent over 20 years is about 83,300 rupees a month.",
+    },
+    {
       q: "Can stamp duty be included in a home loan?",
       a: "Generally no. Lenders fund a share of the property's agreement value, and stamp duty and registration sit outside it. That is why they have to be budgeted as cash, and it is the most common reason a buyer is short at the last moment.",
     },
@@ -104,12 +108,12 @@ const emiTool: Tool = {
 const stampDutyTool: Tool = {
   slug: "stamp-duty-calculator-mumbai",
   component: "stampDuty",
-  title: "Stamp duty and registration calculator, Mumbai",
-  metaTitle: "Stamp duty calculator Maharashtra, Mumbai",
+  title: "Stamp duty calculator Mumbai: duty and registration",
+  metaTitle: "Stamp duty calculator Mumbai, Maharashtra",
   metaDescription:
-    "Work out stamp duty and registration on a Mumbai flat, on the ready reckoner value where that is higher, with the metro cess shown separately.",
+    "Free stamp duty calculator for a Mumbai flat: 6 percent for men, 5 for women, 1 percent registration, on the higher of price or ready reckoner.",
   answer:
-    "Stamp duty in Mumbai is 6 percent of the chargeable value for a male buyer and 5 percent for a female buyer in sole name, both including the 1 percent metro cess. Registration is 1 percent capped at 30,000 rupees. Duty is charged on the agreement value or the ready reckoner value, whichever is higher.",
+    "As of November 2026, stamp duty in Mumbai is 6 percent of the chargeable value for a male buyer and 5 percent for a woman in sole name, both including the 1 percent metro cess. Registration is 1 percent capped at 30,000 rupees. Duty is charged on the agreement value or the ready reckoner value, whichever is higher.",
   introHeading: "How is stamp duty calculated in Mumbai?",
   intro: [
     "Mumbai stamp duty has three parts: the base rate, the 1 percent metro cess, and the value the duty is charged on. A woman buying in her sole name pays a point less.",
@@ -166,12 +170,12 @@ const stampDutyTool: Tool = {
 const areaTool: Tool = {
   slug: "carpet-area-calculator",
   component: "area",
-  title: "Carpet area and loading calculator",
-  metaTitle: "Carpet area calculator: built up and super",
+  title: "Carpet area to built up and super built up area calculator",
+  metaTitle: "Carpet area to built up area calculator",
   metaDescription:
-    "Start from carpet, built up or super built up and see the other two in sq ft and sq m, with the real rate per carpet foot.",
+    "Convert carpet area to built up and super built up area in sq ft and sq m, see the loading, and learn how MOFA carpet converts to RERA carpet.",
   answer:
-    "Carpet area is the usable floor space inside a flat. Super built up adds your share of lobbies, lifts and amenities, and it is the figure prices are quoted against. Loading is the gap, taken on the carpet area, so carpet equals super built up divided by one plus the loading.",
+    "Super built up area is carpet area times one plus the loading, so 700 sq ft of carpet at 40 percent loading is 980 sq ft. To go back, divide by one plus the loading. Built up area is carpet plus walls and balcony, and prices are quoted on super built up.",
   introHeading: "What is the difference between carpet area and super built up area?",
   intro: [
     "Every flat has three areas: carpet, built up and super built up. You pay on super built up and you live on carpet.",
@@ -184,6 +188,18 @@ const areaTool: Tool = {
     "It shows how your loading compares with what is normal. What the loading buys you in amenities is your call, and we are happy to talk it through.",
   ],
   faqs: [
+    {
+      q: "How do I convert carpet area to built up area?",
+      a: "Add the walls and balcony to the carpet area. A 10 to 15 percent allowance is typical, so 700 sq ft of carpet is about 784 sq ft built up at 12 percent. Built up has no statutory definition, so enter the allowance your building uses. The calculator also converts the other way.",
+    },
+    {
+      q: "How do I convert MOFA carpet area to RERA carpet area?",
+      a: "Take the MOFA figure and subtract the balcony area where the agreement counted it, because RERA carpet area excludes exclusive balconies and MOFA era agreements included them. RERA carpet includes internal partition walls and excludes external walls. The MahaRERA project page states the RERA carpet area for a registered project.",
+    },
+    {
+      q: "What is the carpet area of a 1,000 sq ft super built up flat?",
+      a: "About 714 sq ft at 40 percent loading, found by dividing 1,000 by 1.40. At 30 percent loading it is about 769 sq ft, and at 50 percent about 667 sq ft. Enter your building's loading in the calculator, because it moves the answer by around 100 sq ft.",
+    },
     {
       q: "How do I calculate carpet area from super built up area?",
       a: "Divide the super built up area by one plus the loading. A 1,400 sq ft flat at 40 percent loading gives 1,000 sq ft of carpet. Taking 40 percent off the super built up figure instead would give 840, which is wrong by 160 sq ft.",
@@ -218,7 +234,7 @@ const hraTool: Tool = {
   title: "HRA exemption calculator and rent receipt generator",
   metaTitle: "HRA calculator and rent receipt generator",
   metaDescription:
-    "Work out your HRA exemption on the least of three rule, then print rent receipts for the financial year. Nothing is stored or sent anywhere.",
+    "Free HRA calculator for Mumbai tenants: see your exemption on the least of three rule, then print rent receipts for the year. Nothing is stored.",
   answer:
     "HRA exemption is the least of three figures: the HRA you actually receive, the rent you pay less 10 percent of basic pay, and 50 percent of basic pay in a metro such as Mumbai. It is available only under the old tax regime.",
   introHeading: "How is HRA exemption calculated?",
@@ -233,6 +249,14 @@ const hraTool: Tool = {
     "It is an estimate to help you plan and produce paperwork. For tax advice, ask your employer or chartered accountant.",
   ],
   faqs: [
+    {
+      q: "What do I enter in the HRA calculator?",
+      a: "Three monthly figures: your basic pay plus dearness allowance, the HRA you receive, and the rent you pay. Then choose metro or non metro. It shows the three limbs, the exemption and which limb set it. Then add your landlord's details and print the receipts.",
+    },
+    {
+      q: "Does the rent receipt generator store my landlord's details?",
+      a: "No. The receipts are made and printed in your browser. Nothing is saved or sent to us, and no account is needed.",
+    },
     {
       q: "How is HRA exemption calculated?",
       a: "As the least of three figures: the HRA actually received, the rent paid less 10 percent of basic pay plus DA, and 50 percent of that salary in a metro or 40 percent elsewhere. Whichever is smallest is your exemption.",
@@ -267,7 +291,7 @@ const interiorsTool: Tool = {
   title: "Interior scope builder",
   metaTitle: "Interior cost and scope planner, Mumbai",
   metaDescription:
-    "Build a scope in quantities for your flat, then take it to three designers and get back quotes that can actually be compared against each other.",
+    "Build a room by room interior scope for your Mumbai flat in quantities, then take it to three designers for quotes you can compare. Free, no signup.",
   answer:
     "A quote you can judge has three things in it: quantities, specifications and exclusions. Twelve running feet of wardrobe in a named board, not bedroom wardrobes. This builds that list for your flat so the quotes you get back are comparable.",
   introHeading: "How do I plan the scope and cost of my flat's interiors?",
@@ -282,6 +306,14 @@ const interiorsTool: Tool = {
     "It does not cover structural work. For that, ask us.",
   ],
   faqs: [
+    {
+      q: "How do I use the interior scope builder?",
+      a: "Pick the rooms and the items you want in each, then enter the quantities you expect: running feet, square feet or counts. The tool turns that into one list you can send to designers. Because every designer quotes against the same list, the quotes line up side by side.",
+    },
+    {
+      q: "Can I use the same scope for more than one designer?",
+      a: "Yes, and that is the point. Send the identical list to three designers and ask each to name the material and brand against every line. The differences that remain are real differences in price and specification.",
+    },
     {
       q: "Why does this not show me a price?",
       a: "Because we have not published cost bands we can stand behind, and a made up range is worse than none: you would anchor on it and then be surprised. The quantities are the part that protects you, and they are what a designer needs to quote properly.",
@@ -305,6 +337,8 @@ const interiorsTool: Tool = {
   ],
   readNext: [
     { label: "Carpet area and loading", href: "/tools/carpet-area-calculator" },
+    { label: "Interiors with Shree Giriraj", href: "/services/interiors" },
+    { label: "Flats for sale in Borivali West", href: "/areas/borivali-west/flats-for-sale" },
     { label: "Talk to us about interiors", href: "/contact" },
   ],
 };
@@ -330,6 +364,14 @@ const capitalGainsTool: Tool = {
     "Reliefs under sections 54 and 54EC are listed but not computed, because each has its own conditions and time limits.",
   ],
   faqs: [
+    {
+      q: "What do I need to enter in the capital gains calculator?",
+      a: "The sale price, the purchase price, the dates of purchase and sale, any improvement cost and the expenses of the sale such as brokerage. The cost inflation index fills in from the official table for your dates. Anything you are unsure of, leave as an estimate and confirm it with your chartered accountant.",
+    },
+    {
+      q: "Is there a property indexation calculator?",
+      a: "Yes. Where indexation still applies to your purchase, this calculator shows the indexed cost next to the figure without indexation, and names the cheaper option. Enter your purchase and sale dates and it picks up the index for those years.",
+    },
     {
       q: "How long must I hold a property for a long term gain?",
       a: "More than 24 months. At 24 months or less the gain is short term and is added to your income and taxed at your slab rate, which is usually a great deal more.",
@@ -358,6 +400,7 @@ const capitalGainsTool: Tool = {
   readNext: [
     { label: "Stamp duty and registration, Mumbai", href: "/tools/stamp-duty-calculator-mumbai" },
     { label: "Property paperwork in Maharashtra", href: "/guides/property-paperwork-maharashtra" },
+    { label: "Selling a flat in Borivali, Kandivali or Malad", href: "/services/resale-flats" },
   ],
 };
 
@@ -365,11 +408,11 @@ const propertyTaxTool: Tool = {
   slug: "bmc-property-tax-calculator",
   component: "propertyTax",
   title: "BMC property tax calculator, Mumbai",
-  metaTitle: "BMC property tax calculator, Mumbai",
+  metaTitle: "BMC property tax calculator Mumbai 2026",
   metaDescription:
-    "BMC property tax on MCGM's own formula: capital value, age and floor weights, 0.775 percent for a home, and the 500 sq ft exemption check.",
+    "Is your flat exempt? Homes up to 500 sq ft carpet pay no BMC property tax. Check it, then work out the tax on MCGM's own formula.",
   answer:
-    "BMC property tax on a home is 0.775 percent a year of its capital value. Capital value is the ready reckoner rate times 0.50 for a home, times the carpet area. Weights for building type, age and floor then adjust it. Homes of 500 sq ft carpet or less have been exempt since 1 January 2022.",
+    "As of November 2026, BMC property tax on a home is 0.775 percent a year of its capital value. Capital value is the ready reckoner rate times 0.50 for a home, times the carpet area. Weights for building type, age and floor then adjust it. Homes of 500 sq ft carpet or less have been exempt since 1 January 2022.",
   introHeading: "Do I have to pay BMC property tax on my flat?",
   intro: [
     "A home with a carpet area of 500 sq ft or less pays no BMC property tax. In Borivali, Kandivali and Malad many flats sit under that line.",
@@ -382,6 +425,10 @@ const propertyTaxTool: Tool = {
     "It is an estimate. The bill issued by the BMC is the authority.",
   ],
   faqs: [
+    {
+      q: "How much is the property tax in Mumbai?",
+      a: "It depends on the capital value of the flat, so there is no single figure. A home of 500 sq ft carpet or less pays nothing. Above that, the tax is 0.775 percent of capital value a year, so a flat with a capital value of 50 lakh rupees pays about 38,750 rupees a year.",
+    },
     {
       q: "Is my flat exempt from BMC property tax?",
       a: "Yes, if it is a home with a carpet area of 500 sq ft or less. That has been the rule since 1 January 2022. It is measured on carpet area, not super built up, so check the carpet figure in your agreement rather than the area in the listing.",

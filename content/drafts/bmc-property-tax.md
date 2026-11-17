@@ -1,7 +1,7 @@
 ---
-title: "BMC property tax: online payment, how it is calculated, and whether you are exempt"
-metaTitle: "BMC property tax: rate, formula, exemption"
-metaDescription: "BMC property tax on a home is 0.775% of capital value, per MCGM's rate table. The formula, a worked example, the 500 sq ft exemption and how to pay."
+title: "BMC property tax in Mumbai: how it is calculated, how to pay online, and whether you are exempt"
+metaTitle: "BMC property tax: how it is calculated, 2026"
+metaDescription: "BMC property tax on a Mumbai home is 0.775% of capital value a year. The formula, a Borivali worked example, the 500 sq ft exemption and how to pay."
 slug: bmc-property-tax
 category: Paperwork
 heroImage: /blog/bmc-property-tax.jpg
@@ -32,10 +32,16 @@ sources:
     url: https://homefirstindia.com/blog/article/bmc-mumbai-property-tax
   - label: Bombay High Court, Nagri Niwara Parishad v. Municipal Corporation of Greater Mumbai, 2024, on section 212 and notice to a transferee
     url: https://www.casemine.com/judgement/in/6734ff2ec1d5a07b0e7a5ad0
+  - label: "Free Press Journal, BMC says higher bills come from capital values revised on the 2025 ready reckoner, average rise 15.89 percent, no change in tax rates, 30 May 2025"
+    url: https://www.freepressjournal.in/mumbai/mumbai-news-bmc-explains-higher-bills-stem-from-updated-ready-reckoner-rates-denies-rise-in-property-tax
+  - label: "Free Press Journal, BMC General Body clears a proposal to raise the exemption to 700 sq ft, subject to state approval, 4 March 2026"
+    url: https://www.freepressjournal.in/mumbai/bmc-clears-proposal-to-raise-property-tax-exemption-limit-to-700-sq-ft
+  - label: "Free Press Journal, ready reckoner rates for 2026 to 2027 kept unchanged, 31 March 2026"
+    url: https://www.freepressjournal.in/mumbai/maharashtra-govt-keeps-ready-reckoner-rates-unchanged-for-fy27-state-nears-60500-crore-revenue-target
   - label: Deccan Herald, exemption for residential flats up to 500 square feet
     url: https://www.deccanherald.com/india/mumbai-no-property-tax-on-residential-properties-up-to-500-sq-ft-says-uddhav-thackeray-1066898.html
-sourcesCheckedOn: "8 September 2026"
-updatedOn: "7 November 2026"
+sourcesCheckedOn: "16 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - Is my flat exempt from BMC property tax?
   - How do I find my property account number?
@@ -63,6 +69,8 @@ If your flat is a home and its **carpet area is 500 sq ft or less**, you pay no 
 **Carpet area** is the usable floor inside your walls. It is not the "super built up" figure on a listing, which adds a share of lobbies and stairs.
 
 So a flat sold as 700 sq ft super built up, with 40 percent loading, has a carpet area of 500 sq ft. That flat is exempt, even though its listing says 700.
+
+**Will the limit rise to 700 sq ft?** The BMC General Body passed a motion to raise it to 700 sq ft, the Free Press Journal reported on 4 March 2026. The motion needs the state government's approval. On 16 November 2026 we found no notification bringing it into force, so 500 sq ft is the line that applies today.
 
 Many flats in Borivali, Kandivali and Malad sit under the line. Check yours with the [BMC property tax calculator](/tools/bmc-property-tax-calculator) and the [carpet area calculator](/tools/carpet-area-calculator).
 
@@ -136,7 +144,7 @@ MCGM's own online tax calculator also asks whether the water connection is meter
 
 ---
 
-## Worked example: a 650 sq ft flat in Borivali West
+## Worked example: property tax on a 650 sq ft flat in Borivali West
 
 Take a 650 sq ft carpet flat on the 3rd floor of an 18 year old RCC building with a lift. Use the 2026 to 2027 [ready reckoner rate](/blog/ready-reckoner-rate-mumbai) for Borivali West zone 83/361: 1,03,630 rupees per square metre.
 
@@ -150,7 +158,7 @@ Take a 650 sq ft carpet flat on the 3rd floor of an 18 year old RCC building wit
 
 The [BMC property tax calculator](/tools/bmc-property-tax-calculator) runs these same steps, with these figures as its starting values. Change them to match your flat.
 
-**One thing to know about the base value.** Section 154 of the Mumbai Municipal Corporation Act fixes capital value for five years at a time. So your bill may use an older reckoner rate than this year's, and the real figure can be lower. The example shows the method, not your bill.
+**Why this example is close to a real bill.** Section 154 of the Mumbai Municipal Corporation Act revises capital value every five years. The BMC revised it on the 2025 to 2026 ready reckoner. On 30 May 2025 it told the Free Press Journal that bills rose by an average of 15.89 percent as a result, with no change in the tax rates. The state then kept the reckoner rates for 2026 to 2027 unchanged, as reported on 31 March 2026. So the rate used here is the one your current bill is built on. Your bill also reflects your exact zone, age and floor, so treat the example as the method.
 
 ---
 
@@ -168,9 +176,9 @@ You can also pay in person at ward offices and BMC help centres.
 
 ---
 
-## Why property tax matters when you buy
+## Why property tax matters when you buy or sell
 
-Unpaid property tax stays with the flat, not the person. So a buyer checks it before paying a token.
+**Unpaid property tax stays with the flat, not the person.** So a buyer checks it before paying a token, and a seller who shows a paid bill early keeps the sale moving.
 
 We look at three things on the latest bill:
 
@@ -179,6 +187,8 @@ We look at three things on the latest bill:
 3. **The carpet area on the assessment.** If it shows more area than the flat has, the owner may be missing the 500 sq ft exemption. The ward office can correct it, sale or no sale.
 
 The Bombay High Court has held that the charge cannot be enforced against a buyer who had no notice of it. A paid bill before registration means you never need that defence.
+
+**Selling your flat?** Our [resale flats service](/services/resale-flats) checks the tax record and dues as part of the sale, along with the [society NOC for the sale](/blog/society-noc-for-sale-of-flat-mumbai). **Buying?** See flats for sale in [Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali West](/areas/kandivali/flats-for-sale) and [Malad West](/areas/malad/flats-for-sale).
 
 Own a MHADA flat? Read about [paying tax on a MHADA flat](/blog/mhada-dues-lease-rent-property-tax), where the Board and the society bill separately.
 
@@ -194,6 +204,12 @@ Yes, if it is a home with a carpet area of 500 sq ft or less. That has been the 
 
 **How is BMC property tax calculated?**
 Take the ready reckoner rate and multiply by 0.50 for a home. Then multiply by the weights for building type, age and floor, and by the carpet area in square metres. That gives the capital value. The tax is 0.775 percent of it.
+
+**How much is property tax in Borivali West?**
+On our worked example, a 650 sq ft carpet flat in an 18 year old building in zone 83/361 pays about 20,600 rupees a year. A flat of 500 sq ft carpet or less pays nothing. Zone, age and floor change the figure, so run your own flat through the [calculator](/tools/bmc-property-tax-calculator).
+
+**Has BMC property tax gone up in 2026?**
+The tax rates have not changed since 1 April 2015. Bills rose from 2025 to 2026 because capital values were revised on the newer ready reckoner, by an average of 15.89 percent according to the BMC. The ready reckoner itself was kept unchanged for 2026 to 2027.
 
 **How do I find my property account number?**
 It is printed near the top of any earlier property tax bill or receipt. If you have none, search the MCGM portal by ward, building name and address instead.

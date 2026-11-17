@@ -1,7 +1,7 @@
 ---
 title: "Buying a flat in Mumbai from abroad: power of attorney, payment and registration step by step"
-metaTitle: "Buy a Mumbai flat from abroad: POA, steps"
-metaDescription: "How an NRI buys a Mumbai flat from abroad: video viewing, NRE or NRO payment, power of attorney, stamping in Maharashtra and registration."
+metaTitle: "NRI power of attorney to buy a Mumbai flat"
+metaDescription: "Buying a Mumbai flat from abroad: where to sign the power of attorney, the 500 rupee stamp duty, NRE or NRO payment and registration, in 8 steps."
 slug: buy-flat-in-mumbai-from-abroad
 category: Buying
 heroImage: /blog/buy-flat-in-mumbai-from-abroad.jpg
@@ -45,7 +45,7 @@ sources:
   - label: "DataForSEO, Google search volume for NRI power of attorney and property terms, measured 14 November 2026"
     url: https://dataforseo.com
 sourcesCheckedOn: "14 November 2026"
-updatedOn: "14 November 2026"
+updatedOn: "16 November 2026"
 relatedFaqs:
   - Is a power of attorney signed in the US valid in India?
   - How much is stamp duty on a power of attorney in Maharashtra?
@@ -57,11 +57,9 @@ readNext:
   - services/resale-flats
 ---
 
-## The short answer
+## What is a power of attorney?
 
-An NRI can buy a Mumbai flat without travelling, by signing a power of attorney abroad. Section 33 of the Registration Act recognises one signed before a notary, judge, magistrate or Indian consul. Article 48 of the Maharashtra Stamp Act sets its duty, usually 500 rupees, **payable within three months of it reaching Maharashtra.**
-
-A power of attorney, or POA, is a signed paper that lets someone you trust act for you. That person is your attorney. NRI means non resident Indian. Who may buy is answered in our guide [can an NRI buy property in India](/blog/can-nri-buy-property-in-india).
+**A power of attorney, or POA, is a signed paper that lets someone you trust act for you.** That person is your attorney. NRI means non resident Indian. Who may buy is answered in our guide [can an NRI buy property in India](/blog/can-nri-buy-property-in-india).
 
 ---
 
@@ -90,7 +88,7 @@ On a live video call. We can show you a shortlisted flat on a WhatsApp video cal
 
 Ask us to show what a brochure leaves out: the taps, the water pressure, the view from each window, the staircase and the lift. On request, we can also send a recorded walk through and photographs of each paper. Your family can then read them at leisure.
 
-Family in Mumbai can join the call or visit for you. Send them this page.
+Family in Mumbai can join the call or visit for you. Send them this page. [Ask for a video viewing on WhatsApp](https://wa.me/919324974133?text=Hi%20Shree%20Giriraj%2C%20I%20live%20in%20___.%20I%20want%20a%20video%20viewing%20of%20a%20___%20BHK%20in%20___.%20My%20budget%20is%20about%20___.) with the size, budget and pocket, and we send the flats that fit, usually the same day.
 
 ---
 
@@ -103,7 +101,7 @@ Choose a flat whose papers can be read before you pay. Four checks matter most.
 3. **An occupancy certificate,** the local body's permission to live in the building. Read [our guide](/blog/occupancy-certificate).
 4. **No loan or claim on the flat.** An [encumbrance certificate](/blog/encumbrance-certificate) shows registered claims.
 
-We read the papers before a price is agreed, as part of our [resale flats service](/services/resale-flats). For new launches, see [new project bookings](/services/new-project-bookings).
+We read the papers before a price is agreed, as part of our [resale flats service](/services/resale-flats). To see what is on offer, start with [flats for sale in Borivali West](/areas/borivali-west/flats-for-sale), [Kandivali West](/areas/kandivali/flats-for-sale) and [Malad West](/areas/malad/flats-for-sale). For new launches, see [new projects in Borivali West and Kandivali West](/guides/new-projects-borivali-west) and our [new project bookings](/services/new-project-bookings) service.
 
 ---
 
@@ -231,6 +229,9 @@ A power of attorney signed abroad must be stamped in Maharashtra within three mo
 
 **How much is stamp duty on a power of attorney in Maharashtra?**
 Stamp duty on a power of attorney in Maharashtra is 500 rupees under Article 48. That covers a POA to register documents, for one transaction, or for general use. A POA to sell property, given for money, pays the same duty as a sale deed on the market value.
+
+**How do I get a power of attorney attested at an Indian consulate?**
+An Indian consul or vice consul can attest a power of attorney for use in India, and section 33(1)(c) of the Registration Act recognises it. In a Hague Convention country, an apostille from that country's own authority is the usual route instead. Check the Indian mission's website for your country, as steps and fees differ.
 
 **Can the attorney sign the agreement and register the flat?**
 An attorney can sign the agreement for sale and present it for registration, if the POA names both powers. Your lawyer should list those powers in the POA itself.
