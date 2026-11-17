@@ -60,6 +60,10 @@ const RENTER = (heading: string, body: string): ToolNextStep => ({
 });
 
 export const TOOL_NEXT_STEP: Record<string, ToolNextStep> = {
+  "property-valuation-calculator-mumbai": SELLER(
+    "Ready to sell? We find the buyer and line up the papers",
+    "Tell us the society, size and floor. We reply with recent registered sales near your building and a fair listing price, then bring buyers we have already checked. Buying your next flat too? We shortlist that in the same chat. Free, with no obligation.",
+  ),
   "stamp-duty-calculator-mumbai": BUYER(
     "Know the cash? Now see the flats that fit it",
     "Tell us your size, budget and pocket on WhatsApp and we send the flats that fit, usually the same day, with the duty and registration worked out for each. Free, with no obligation.",

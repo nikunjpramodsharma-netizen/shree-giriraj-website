@@ -5,6 +5,7 @@ import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { ContactCTA } from "@/components/ContactCTA";
+import { ShortlistForm } from "@/components/ShortlistForm";
 import { graph, breadcrumbNode, organizationNode, faqNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
 import { site } from "@/lib/config";
@@ -261,6 +262,9 @@ export default function ContactPage({
           </div>
 
           <ContactCTA locale={locale} formLocation="contact-page" defaultOpen />
+        </div>
+        <div className="mt-12 max-w-4xl">
+          <ShortlistForm location="contact-page" />
         </div>
       </div>
 

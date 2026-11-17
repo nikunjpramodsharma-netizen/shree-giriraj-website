@@ -5,6 +5,7 @@
  */
 
 export const TOOL_AUDIENCE: Record<string, string> = {
+  "property-valuation-calculator-mumbai": "For owners in Borivali, Kandivali and Malad who want to know what their flat would ask before they list it.",
   "stamp-duty-calculator-mumbai": "For anyone buying a flat in Mumbai who wants the cash needed for duty and registration.",
   "carpet-area-calculator": "For buyers comparing listings who want the area they can actually use.",
   "bmc-property-tax-calculator": "For owners and buyers in Mumbai checking whether the 500 sq ft exemption applies.",

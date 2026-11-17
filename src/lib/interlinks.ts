@@ -40,6 +40,7 @@ export type Interlinks = {
 };
 
 const TOOL_HOOKS: Record<string, string> = {
+  "property-valuation-calculator-mumbai": "What your flat asks in its pocket today, and the registered sales to price it by.",
   "home-loan-emi-calculator": "The EMI, and the full cost of the flat once duty, registration and interest are added.",
   "stamp-duty-calculator-mumbai": "Duty and registration on the agreement value or the ready reckoner, whichever is higher.",
   "carpet-area-calculator": "What the loading does to the price per square foot you are actually paying.",
@@ -70,7 +71,7 @@ const SERVICE_HOOKS: Record<string, string> = {
 /** Per page recipes. Slugs only; titles come from the registries. */
 const SERVICE_MAP: Record<string, { tools: string[]; articles: string[]; services: string[] }> = {
   "resale-flats": {
-    tools: ["stamp-duty-calculator-mumbai", "carpet-area-calculator"],
+    tools: ["property-valuation-calculator-mumbai", "stamp-duty-calculator-mumbai", "carpet-area-calculator"],
     articles: ["society-noc-for-sale-of-flat-mumbai", "stamp-duty-and-registration-charges-mumbai", "buy-first-flat-in-mumbai", "what-a-sale-deed-contains", "1-bhk-price-borivali-kandivali-malad", "rent-or-buy-borivali-kandivali-malad", "can-nri-buy-property-in-india", "society-share-certificate-transfer-fee", "how-to-buy-mhada-flat-in-resale"],
     services: ["new-project-bookings", "investment-advisory"],
   },
@@ -100,7 +101,7 @@ const SERVICE_MAP: Record<string, { tools: string[]; articles: string[]; service
     services: ["resale-flats", "rentals"],
   },
   "mhada-paperwork": {
-    tools: ["stamp-duty-calculator-mumbai", "capital-gains-calculator-property"],
+    tools: ["property-valuation-calculator-mumbai", "stamp-duty-calculator-mumbai", "capital-gains-calculator-property"],
     articles: ["mhada-flat-transfer", "home-loan-on-mhada-flat", "mhada-allotment-letter", "how-to-buy-mhada-flat-in-resale"],
     services: ["resale-flats", "rentals"],
   },
@@ -108,12 +109,16 @@ const SERVICE_MAP: Record<string, { tools: string[]; articles: string[]; service
 
 const AREA_RECIPE = {
   services: ["resale-flats", "new-project-bookings", "rentals", "investment-advisory"],
-  tools: ["stamp-duty-calculator-mumbai", "home-loan-emi-calculator", "rental-yield-calculator"],
+  tools: ["stamp-duty-calculator-mumbai", "home-loan-emi-calculator", "property-valuation-calculator-mumbai", "rental-yield-calculator"],
   // Buying reads first: the area guides are where buyers land (audit 16 Nov 2026).
   articles: ["1-bhk-price-borivali-kandivali-malad", "buy-first-flat-in-mumbai", "best-area-to-invest-in-mumbai", "rent-or-buy-borivali-kandivali-malad", "rent-deposit-months-western-suburbs"],
 };
 
 const TOOL_MAP: Record<string, { services: string[]; articles: string[] }> = {
+  "property-valuation-calculator-mumbai": {
+    services: ["resale-flats", "mhada-paperwork"],
+    articles: ["society-noc-for-sale-of-flat-mumbai", "index-2-property-document", "ready-reckoner-rate-mumbai", "can-we-sell-mhada-flat"],
+  },
   "home-loan-emi-calculator": {
     services: ["new-project-bookings", "resale-flats"],
     articles: ["under-construction-vs-ready-to-move-flat", "home-loan-on-mhada-flat", "stamp-duty-and-registration-charges-mumbai"],
@@ -154,8 +159,8 @@ const TOOL_MAP: Record<string, { services: string[]; articles: string[] }> = {
 
 const CATEGORY_MAP: Record<string, { services: string[]; tools: string[] }> = {
   Investing: { services: ["investment-advisory", "resale-flats", "commercial-plots"], tools: ["rental-yield-calculator", "capital-gains-calculator-property"] },
-  Paperwork: { services: ["resale-flats", "mhada-paperwork"], tools: ["stamp-duty-calculator-mumbai", "bmc-property-tax-calculator"] },
-  MHADA: { services: ["mhada-paperwork", "resale-flats"], tools: ["stamp-duty-calculator-mumbai", "capital-gains-calculator-property"] },
+  Paperwork: { services: ["resale-flats", "mhada-paperwork"], tools: ["property-valuation-calculator-mumbai", "stamp-duty-calculator-mumbai", "bmc-property-tax-calculator"] },
+  MHADA: { services: ["mhada-paperwork", "resale-flats"], tools: ["property-valuation-calculator-mumbai", "stamp-duty-calculator-mumbai", "capital-gains-calculator-property"] },
   Buying: { services: ["resale-flats", "new-project-bookings"], tools: ["carpet-area-calculator", "home-loan-emi-calculator"] },
   Interiors: { services: ["interiors", "resale-flats"], tools: ["interior-scope-builder", "carpet-area-calculator"] },
   Renting: { services: ["rentals"], tools: ["hra-calculator-rent-receipts", "rental-yield-calculator"] },
@@ -183,7 +188,10 @@ const ARTICLE_TOOL: Record<string, string> = {
   "gift-deed-stamp-duty-maharashtra": "stamp-duty-calculator-mumbai",
   "leave-and-licence-agreement-mumbai": "rent-agreement-stamp-duty-calculator-mumbai",
   "tenant-police-verification-mumbai": "rent-agreement-stamp-duty-calculator-mumbai",
-  "society-noc-for-sale-of-flat-mumbai": "stamp-duty-calculator-mumbai",
+  "society-noc-for-sale-of-flat-mumbai": "property-valuation-calculator-mumbai",
+  "can-we-sell-mhada-flat": "property-valuation-calculator-mumbai",
+  "index-2-property-document": "property-valuation-calculator-mumbai",
+  "igr-maharashtra-explained": "property-valuation-calculator-mumbai",
   "society-share-certificate-transfer-fee": "stamp-duty-calculator-mumbai",
   "occupancy-certificate": "home-loan-emi-calculator",
   "redevelopment-borivali-kandivali": "rent-agreement-stamp-duty-calculator-mumbai",

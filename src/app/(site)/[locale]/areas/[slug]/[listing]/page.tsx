@@ -10,6 +10,8 @@ import { RelatedLinks } from "@/components/RelatedLinks";
 import { InView } from "@/components/motion/InView";
 import { StickyBar } from "@/components/motion/StickyBar";
 import { FlatPriceEstimator } from "@/components/FlatPriceEstimator";
+import { ShortlistForm } from "@/components/ShortlistForm";
+import { SHORTLIST_SUBURB_FOR_AREA } from "@/lib/shortlist";
 import { graph, breadcrumbNode, faqNode, localServiceNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
 import { site, waLink } from "@/lib/config";
@@ -245,11 +247,12 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
               </li>
             ))}
           </InView>
-          <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3">
-            <a href={waLink(l.waMessage)} target="_blank" rel="noopener" className="btn btn-wa">
-              Send your requirement on WhatsApp
-            </a>
-            <span className="text-sm text-muted">Free, no obligation. Usually answered the same day.</span>
+          <div className="mt-8 max-w-4xl">
+            <ShortlistForm
+              intent={l.intent === "sale" ? "buy" : "rent"}
+              suburb={SHORTLIST_SUBURB_FOR_AREA[l.area]}
+              location={`listing-${l.area}-${l.intent}`}
+            />
           </div>
         </section>
 

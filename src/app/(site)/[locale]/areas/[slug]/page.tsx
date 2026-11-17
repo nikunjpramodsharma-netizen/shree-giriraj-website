@@ -19,6 +19,8 @@ import { RisingTower } from "@/components/motion/RisingTower";
 import { interlinksForArea } from "@/lib/interlinks";
 import { FLAT_LISTINGS, listingPath } from "@/lib/flats";
 import { ContactCTA } from "@/components/ContactCTA";
+import { ShortlistForm } from "@/components/ShortlistForm";
+import { SHORTLIST_SUBURB_FOR_AREA } from "@/lib/shortlist";
 import { graph, breadcrumbNode, faqNode, placeNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
 import { site, waLink } from "@/lib/config";
@@ -382,6 +384,10 @@ export default async function AreaPage({
           We work across {site.areas.join(", ")}, and occasionally in{" "}
           {site.extendedAreas.join(" and ")}.
         </p>
+      </div>
+
+      <div className="wrap max-w-5xl pb-14">
+        <ShortlistForm intent="buy" suburb={SHORTLIST_SUBURB_FOR_AREA[area.slug]} location={`area-${area.slug}`} />
       </div>
 
       <RelatedLinks

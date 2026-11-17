@@ -31,7 +31,8 @@ export type Tool = {
     | "capitalGains"
     | "propertyTax"
     | "rentalYield"
-    | "rentAgreement";
+    | "rentAgreement"
+    | "flatValuation";
   title: string;
   metaTitle: string;
   metaDescription: string;
@@ -516,7 +517,74 @@ const rentalYieldTool: Tool = {
   ],
 };
 
+/**
+ * The seller's tool, built for batch 2 of the buying and selling leads work
+ * (17 November 2026). "property valuation" runs about 170 searches a month in
+ * Mumbai and "property valuation mumbai" about 90, with low competition and no
+ * strong calculator in the results. It uses the pocket rates the flats for sale
+ * pages already publish; see src/lib/valuation.ts.
+ */
+const valuationTool: Tool = {
+  slug: "property-valuation-calculator-mumbai",
+  component: "flatValuation",
+  title: "What is my flat worth? Property valuation calculator",
+  metaTitle: "Property valuation calculator, Mumbai flats",
+  metaDescription:
+    "What is your flat worth? See the asking range in Borivali, Kandivali or Malad from dated pocket rates, then get registered sales near your building.",
+  answer:
+    "A flat's asking price in Borivali, Kandivali or Malad is roughly its area times the going rate per square foot for its pocket. As of November 2026, Borivali West resale flats asked a median of 36,228 rupees per sq ft of carpet (Mumbai Property Exchange). Enter your pocket and area to see the range; registered prices usually come in lower.",
+  introHeading: "How do I calculate the value of my flat in Mumbai?",
+  intro: [
+    "Multiply the carpet area on your agreement by the going rate per square foot for your pocket. That gives the asking range: the price similar flats are listed at today.",
+    "The rate changes a lot inside one suburb. In Kandivali West, Square Yards listed Mahavir Nagar at 36,450 rupees per sq ft (September 2026) and Charkop Sectors 2 and 4 at about 26,050 (October 2026). The pocket matters more than the suburb.",
+    "The registered price, the figure on Index II after a sale, is usually below asking. So the tool ends with an offer: tell us the society and we send recent registered sales near your building, the number worth listing at.",
+  ],
+  limits: [
+    "It shows an asking range from published portal rates, not a valuation report. A bank or a court needs a registered valuer.",
+    "Portals do not always say whether a rate is on carpet or built up area, so each row names its source and month.",
+    "It covers Borivali West, Kandivali West and Malad West. For the East side or another pocket, send us the building name.",
+    "Age, floor and a lift move a flat within the range. We price those from registered sales rather than a formula.",
+  ],
+  faqs: [
+    {
+      q: "How do I calculate the value of my flat?",
+      a: "Multiply the carpet area by the current rate per square foot for your pocket, then place it within the range by the building's age, floor and condition. As of November 2026, Borivali West resale flats asked a median of 36,228 rupees per sq ft of carpet (Mumbai Property Exchange, week ending 15 November). For the price to list at, compare recent registered sales in the same building or lane.",
+    },
+    {
+      q: "What are the current property rates in Borivali, Kandivali and Malad?",
+      a: "Square Yards put the Borivali West average at 30,750 rupees per sq ft in September 2026, Kandivali West apartments at 27,200 in October 2026, and Malad West between 28,250 and 30,800. Mumbai Property Exchange's resale median for Borivali West was 36,228 per sq ft of carpet in the week ending 15 November 2026. Pocket rates vary widely, so the calculator works pocket by pocket.",
+    },
+    {
+      q: "How do I find the government valuation of my property in Maharashtra?",
+      a: "The government valuation is the ready reckoner rate, published by IGR Maharashtra as the Annual Statement of Rates and searchable under e-ASR on its website. It sets the minimum value for stamp duty, not the market price. In most of Borivali, Kandivali and Malad the market asking rate is well above it.",
+    },
+    {
+      q: "Is the asking price what my flat will sell for?",
+      a: "Usually not exactly. Asking is what similar flats are listed at. The registered price on Index II after a sale is usually lower, and it moves with the building's age, the floor and how the society is run. We send recent registered sales near your building, which is the figure to list at.",
+    },
+    {
+      q: "Is this the same as a bank valuation?",
+      a: "No. A bank or court valuation comes from a registered valuer who inspects the flat and signs a report. This tool gives the market asking range, which is what buyers compare before they decide to visit. If your buyer's lender needs a valuation, the bank appoints its own valuer.",
+    },
+    {
+      q: "Do flats in older buildings sell for less?",
+      a: "Generally yes, within the same pocket. NoBroker's May 2026 report put I.C. Colony in Borivali West at 19,000 to 31,500 rupees per sq ft, with building age behind most of that spread. A building with a redevelopment proposal is priced differently again, so mention it if yours has one.",
+    },
+    {
+      q: "Why do you ask for the society name?",
+      a: "Two buildings on the same lane can ask very different rates because of age, upkeep, parking and whether the papers are in order. Registered sales from your own building or the next one are the closest comparison there is, and the society name is how we find them.",
+    },
+  ],
+  readNext: [
+    { label: "Sell your flat with us", href: "/services/resale-flats" },
+    { label: "Society NOC for the sale of a flat", href: "/blog/society-noc-for-sale-of-flat-mumbai" },
+    { label: "Ready reckoner rate in Mumbai", href: "/blog/ready-reckoner-rate-mumbai" },
+    { label: "Index II, the registered sale record", href: "/blog/index-2-property-document" },
+  ],
+};
+
 export const TOOLS: Tool[] = [
+  valuationTool,
   stampDutyTool,
   areaTool,
   hraTool,
@@ -536,6 +604,8 @@ export function getTool(slug: string): Tool | undefined {
 
 /** Each tool's own WhatsApp opener, picked up by the floating button through PageWhatsApp. */
 export const TOOL_WHATSAPP: Record<string, string> = {
+  "property-valuation-calculator-mumbai":
+    "Hi Shree Giriraj, I am thinking of selling my flat in ___ (society ___, size ___). Please send recent registered sales near my building.",
   "stamp-duty-calculator-mumbai":
     "Hi Shree Giriraj, I used your stamp duty calculator. Please send the full cost sheet for a flat I am considering in ___.",
   "carpet-area-calculator":

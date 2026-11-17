@@ -13,6 +13,7 @@ import { CapitalGainsCalculator } from "@/components/CapitalGainsCalculator";
 import { RentalYieldCalculator } from "@/components/RentalYieldCalculator";
 import { PropertyTaxCalculator } from "@/components/PropertyTaxCalculator";
 import { RentAgreementCalculator } from "@/components/RentAgreementCalculator";
+import { FlatValuationCalculator } from "@/components/FlatValuationCalculator";
 import { graph, breadcrumbNode, faqNode, webApplicationNode } from "@/lib/schema";
 import Image from "next/image";
 import { TOOLS, getTool, TOOL_WHATSAPP } from "@/lib/tools";
@@ -133,6 +134,7 @@ export default function ToolPage({
         {tool.component === "propertyTax" && <PropertyTaxCalculator />}
         {tool.component === "rentalYield" && <RentalYieldCalculator />}
         {tool.component === "rentAgreement" && <RentAgreementCalculator />}
+        {tool.component === "flatValuation" && <FlatValuationCalculator />}
       </div>
 
       <div className="wrap pb-16">

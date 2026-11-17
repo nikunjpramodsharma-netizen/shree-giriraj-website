@@ -4,6 +4,7 @@
  * nowhere else.
  */
 export const TOOL_IMAGES: Record<string, { src: string; alt: string }> = {
+  "property-valuation-calculator-mumbai": { src: "/premium/skyline-trees.jpg", alt: "Mumbai towers rising behind a line of trees in soft morning light" },
   "home-loan-emi-calculator": { src: "/premium/t/emi.jpg", alt: "A calculator and a set of house keys on home buying papers" },
   "stamp-duty-calculator-mumbai": { src: "/premium/t/stamp-duty.jpg", alt: "A hand pressing a rubber stamp onto a document" },
   "carpet-area-calculator": { src: "/premium/t/carpet-area.jpg", alt: "A floor plan on a desk with a measuring tape and a pen" },
