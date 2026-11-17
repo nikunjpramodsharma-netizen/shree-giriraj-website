@@ -577,6 +577,7 @@ const valuationTool: Tool = {
   ],
   readNext: [
     { label: "Sell your flat with us", href: "/services/resale-flats" },
+    { label: "Selling your flat in Mumbai, step by step", href: "/blog/sell-flat-in-mumbai" },
     { label: "Society NOC for the sale of a flat", href: "/blog/society-noc-for-sale-of-flat-mumbai" },
     { label: "Ready reckoner rate in Mumbai", href: "/blog/ready-reckoner-rate-mumbai" },
     { label: "Index II, the registered sale record", href: "/blog/index-2-property-document" },

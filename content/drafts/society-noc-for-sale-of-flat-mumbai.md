@@ -55,6 +55,7 @@ relatedFaqs:
   - What is the maximum transfer premium a society can charge in Mumbai?
   - Who pays the society transfer charges, the buyer or the seller?
 readNext:
+  - sell-flat-in-mumbai
   - society-share-certificate-transfer-fee
   - what-a-sale-deed-contains
   - index-2-property-document

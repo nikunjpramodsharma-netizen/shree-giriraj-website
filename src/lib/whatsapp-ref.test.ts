@@ -7,6 +7,7 @@ describe("pageLabel", () => {
     expect(pageLabel("/")).toBe("Homepage");
     expect(pageLabel("/areas/borivali-west/flats-for-sale")).toBe("Borivali West sale page");
     expect(pageLabel("/areas/malad/flats-for-rent")).toBe("Malad rent page");
+    expect(pageLabel("/areas/kandivali/3-bhk-flats-for-sale")).toBe("Kandivali 3 BHK sale page");
     expect(pageLabel("/areas/kandivali")).toBe("Kandivali area page");
     expect(pageLabel("/services/resale-flats")).toBe("Resale flats service");
     expect(pageLabel("/projects/jaswanti-jewel")).toBe("Jaswanti Jewel project");

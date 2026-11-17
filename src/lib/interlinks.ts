@@ -72,7 +72,7 @@ const SERVICE_HOOKS: Record<string, string> = {
 const SERVICE_MAP: Record<string, { tools: string[]; articles: string[]; services: string[] }> = {
   "resale-flats": {
     tools: ["property-valuation-calculator-mumbai", "stamp-duty-calculator-mumbai", "carpet-area-calculator"],
-    articles: ["society-noc-for-sale-of-flat-mumbai", "stamp-duty-and-registration-charges-mumbai", "buy-first-flat-in-mumbai", "what-a-sale-deed-contains", "1-bhk-price-borivali-kandivali-malad", "rent-or-buy-borivali-kandivali-malad", "can-nri-buy-property-in-india", "society-share-certificate-transfer-fee", "how-to-buy-mhada-flat-in-resale"],
+    articles: ["sell-flat-in-mumbai", "society-noc-for-sale-of-flat-mumbai", "stamp-duty-and-registration-charges-mumbai", "buy-first-flat-in-mumbai", "what-a-sale-deed-contains", "1-bhk-price-borivali-kandivali-malad", "rent-or-buy-borivali-kandivali-malad", "can-nri-buy-property-in-india", "society-share-certificate-transfer-fee", "how-to-buy-mhada-flat-in-resale"],
     services: ["new-project-bookings", "investment-advisory"],
   },
   rentals: {
@@ -117,7 +117,7 @@ const AREA_RECIPE = {
 const TOOL_MAP: Record<string, { services: string[]; articles: string[] }> = {
   "property-valuation-calculator-mumbai": {
     services: ["resale-flats", "mhada-paperwork"],
-    articles: ["society-noc-for-sale-of-flat-mumbai", "index-2-property-document", "ready-reckoner-rate-mumbai", "can-we-sell-mhada-flat"],
+    articles: ["sell-flat-in-mumbai", "society-noc-for-sale-of-flat-mumbai", "index-2-property-document", "can-we-sell-mhada-flat"],
   },
   "home-loan-emi-calculator": {
     services: ["new-project-bookings", "resale-flats"],
@@ -189,6 +189,7 @@ const ARTICLE_TOOL: Record<string, string> = {
   "leave-and-licence-agreement-mumbai": "rent-agreement-stamp-duty-calculator-mumbai",
   "tenant-police-verification-mumbai": "rent-agreement-stamp-duty-calculator-mumbai",
   "society-noc-for-sale-of-flat-mumbai": "property-valuation-calculator-mumbai",
+  "sell-flat-in-mumbai": "property-valuation-calculator-mumbai",
   "can-we-sell-mhada-flat": "property-valuation-calculator-mumbai",
   "index-2-property-document": "property-valuation-calculator-mumbai",
   "igr-maharashtra-explained": "property-valuation-calculator-mumbai",

@@ -37,6 +37,8 @@ export function pageLabel(pathname: string): string {
   if (seg.length === 0) return "Homepage";
   const [a, b, c] = seg;
   if (a === "areas" && b && c) {
+    const bhk = /^(\d)-bhk-flats-for-(sale|rent)$/.exec(c);
+    if (bhk) return `${titleWords(b)} ${bhk[1]} BHK ${bhk[2]} page`;
     const intent = c === "flats-for-rent" ? "rent" : c === "flats-for-sale" ? "sale" : words(c);
     return `${titleWords(b)} ${intent} page`;
   }

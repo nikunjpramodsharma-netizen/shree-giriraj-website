@@ -23,6 +23,7 @@ const BUY_LINKS = [
 
 const SELL_LINKS = [
   { label: "Sell your flat with us", href: "/services/resale-flats" },
+  { label: "Selling your flat in Mumbai, step by step", href: "/blog/sell-flat-in-mumbai" },
   { label: "Flats for sale in Borivali West", href: "/areas/borivali-west/flats-for-sale" },
 ];
 

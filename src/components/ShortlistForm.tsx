@@ -22,11 +22,14 @@ import {
 export function ShortlistForm({
   intent: initialIntent = "buy",
   suburb: initialSuburb,
+  bhk: initialBhk,
   location,
 }: {
   intent?: ShortlistIntent;
   /** Preselects the suburb on an area page. Must be one of SHORTLIST_SUBURBS. */
   suburb?: string;
+  /** Preselects the size on a BHK page. Must be one of SHORTLIST_BHK. */
+  bhk?: string;
   /** Where the form sits, for analytics, for example "listing-borivali-west-sale". */
   location: string;
 }) {
@@ -34,7 +37,9 @@ export function ShortlistForm({
   const [suburb, setSuburb] = useState(
     initialSuburb && (SHORTLIST_SUBURBS as readonly string[]).includes(initialSuburb) ? initialSuburb : SHORTLIST_SUBURBS[0],
   );
-  const [bhk, setBhk] = useState<string>("2 BHK");
+  const [bhk, setBhk] = useState<string>(
+    initialBhk && (SHORTLIST_BHK as readonly string[]).includes(initialBhk) ? initialBhk : "2 BHK",
+  );
   const [budget, setBudget] = useState("");
   const [timing, setTiming] = useState<string>(SHORTLIST_TIMING[0]);
 

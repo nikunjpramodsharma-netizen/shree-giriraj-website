@@ -12,6 +12,7 @@ import { PILLARS } from "@/lib/pillars";
 import { getPublishedGuides } from "@/lib/guides";
 import { AREA_SLUGS, getArea, areaIsComplete } from "@/lib/areas";
 import { FLAT_LISTINGS, listingPath } from "@/lib/flats";
+import { BHK_PAGES } from "@/lib/bhk-pages";
 import { STORY_IS_WRITTEN } from "@/lib/about";
 import { getRepoService, repoServiceLocales } from "@/lib/service-content";
 import { TOOL_SLUGS } from "@/lib/tools";
@@ -138,6 +139,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Flats for sale and for rent by suburb, 1, 2 and 3 BHK. See flats.ts.
   for (const l of FLAT_LISTINGS) {
     out.push(...entriesFor(listingPath(l), ["en"], undefined, 0.8));
+  }
+  // One size in one suburb, for example /areas/kandivali/3-bhk-flats-for-sale. See bhk-pages.ts.
+  for (const p of BHK_PAGES) {
+    out.push(...entriesFor(p.path, ["en"], undefined, 0.7));
   }
   out.push(...entriesFor("/contact", ["en"], undefined, 0.7));
   if (STORY_IS_WRITTEN) {

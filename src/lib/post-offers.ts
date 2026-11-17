@@ -296,6 +296,14 @@ export const POST_OFFERS: Record<string, PostOffer> = {
     button: "Get the exact duty",
     intentKey: "intentRent",
   },
+  "sell-flat-in-mumbai": {
+    heading: "Selling your flat? Start with the registered sales near it",
+    body: "Send us the society, size and floor. We reply with recent registered sales near your building and a fair listing price, then bring buyers who can complete and prepare the papers their bank asks for. Borivali, Kandivali and Malad.",
+    whatsapp:
+      "Hi Shree Giriraj, I want to sell my ___ BHK flat in ___ society, ___. It is on the ___ floor. Please send recent registered sales near my building.",
+    button: "Get a fair listing price",
+    intentKey: "intentSell",
+  },
   "society-noc-for-sale-of-flat-mumbai": {
     heading: "Selling your flat? We find the buyer and line up the NOC",
     body: "We advise on the asking price, bring you serious buyers and prepare the society notice and the NOC the buyer's bank asks for, through to registration, for flats in Borivali, Kandivali and Malad.",

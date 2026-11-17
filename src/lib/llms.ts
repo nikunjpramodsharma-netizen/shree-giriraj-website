@@ -7,6 +7,7 @@ import { AUTHOR } from "@/lib/author";
 import { REPO_SERVICES } from "@/lib/service-content";
 import { AREAS, areaIsComplete } from "@/lib/areas";
 import { FLAT_LISTINGS, listingPath } from "@/lib/flats";
+import { BHK_PAGES } from "@/lib/bhk-pages";
 import { TOOLS } from "@/lib/tools";
 import { PILLARS } from "@/lib/pillars";
 import { getPublishedGuides } from "@/lib/guides";
@@ -108,6 +109,9 @@ export function buildLlmsTxt(): string {
   }
   for (const l of FLAT_LISTINGS) {
     out.push(`- [${oneLine(l.h1)}](${url(listingPath(l))}): ${oneLine(l.metaDescription)}`);
+  }
+  for (const p of BHK_PAGES) {
+    out.push(`- [${oneLine(p.h1)}](${url(p.path)}): ${oneLine(p.metaDescription)}`);
   }
   out.push("");
 

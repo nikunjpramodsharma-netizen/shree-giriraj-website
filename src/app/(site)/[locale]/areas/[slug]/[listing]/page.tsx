@@ -12,6 +12,8 @@ import { StickyBar } from "@/components/motion/StickyBar";
 import { FlatPriceEstimator } from "@/components/FlatPriceEstimator";
 import { ShortlistForm } from "@/components/ShortlistForm";
 import { SHORTLIST_SUBURB_FOR_AREA } from "@/lib/shortlist";
+import { BHK_PAGES, getBhkPage, bhkPagePath } from "@/lib/bhk-pages";
+import { BhkFlatsPage } from "@/components/BhkFlatsPage";
 import { graph, breadcrumbNode, faqNode, localServiceNode } from "@/lib/schema";
 import { pageUrls } from "@/lib/seo";
 import { site, waLink } from "@/lib/config";
@@ -106,10 +108,15 @@ function howSteps(intent: "sale" | "rent") {
  */
 export function generateStaticParams({ params }: { params: { locale?: string; slug?: string } }) {
   if (params?.locale && params.locale !== LOCALE) return [];
-  return FLAT_LISTINGS.filter((l) => !params?.slug || l.area === params.slug).map((l) => ({
+  const listings = FLAT_LISTINGS.filter((l) => !params?.slug || l.area === params.slug).map((l) => ({
     ...(params?.slug ? {} : { slug: l.area }),
     listing: LISTING_SEGMENT[l.intent],
   }));
+  const bhk = BHK_PAGES.filter((p) => !params?.slug || p.area === params.slug).map((p) => ({
+    ...(params?.slug ? {} : { slug: p.area }),
+    listing: p.segment,
+  }));
+  return [...listings, ...bhk];
 }
 
 export async function generateMetadata({
@@ -117,6 +124,10 @@ export async function generateMetadata({
 }: {
   params: { locale: string; slug: string; listing: string };
 }): Promise<Metadata> {
+  const b = getBhkPage(params.slug, params.listing);
+  if (b && params.locale === LOCALE) {
+    return { title: b.metaTitle, description: b.metaDescription, ...pageUrls(params.locale, b.path, [LOCALE]) };
+  }
   const l = getListing(params.slug, params.listing);
   if (!l || params.locale !== LOCALE) return {};
   return {
@@ -131,6 +142,12 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
   // Pages rendered on demand must set the locale themselves, or next-intl
   // falls back to reading request headers, which a static render forbids.
   setRequestLocale(locale);
+  const bhkPage = getBhkPage(params.slug, params.listing);
+  if (bhkPage) {
+    const a = getArea(params.slug);
+    if (!a || locale !== LOCALE) notFound();
+    return <BhkFlatsPage page={bhkPage} areaName={a.longName} locale={locale} />;
+  }
   const l = getListing(params.slug, params.listing);
   const area = getArea(params.slug);
   if (!l || !area || locale !== LOCALE) notFound();
@@ -263,7 +280,15 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
           <InView className="cascade mt-6 grid gap-4 md:grid-cols-3" threshold={0.15}>
             {l.sizes.map((s, i) => (
               <div key={s.size} style={{ ["--i" as string]: i }} className="flex flex-col rounded-2xl border border-line bg-white p-6">
-                <div className="font-display text-2xl font-semibold text-brand-indigo">{s.size}</div>
+                <div className="font-display text-2xl font-semibold text-brand-indigo">
+                  {l.intent === "sale" && getBhkPage(l.area, `${s.size[0]}-bhk-flats-for-sale`) ? (
+                    <a href={bhkPagePath(l.area, s.size)} className="underline decoration-bronze/40 underline-offset-4">
+                      {s.size}
+                    </a>
+                  ) : (
+                    s.size
+                  )}
+                </div>
                 {s.figure ? (
                   <div className="mt-2 text-lg text-ink">
                     ₹{s.figure}
@@ -277,6 +302,11 @@ export default function FlatsPage({ params }: { params: { locale: string; slug: 
                   <span className="font-semibold text-brand-indigo">What we check: </span>
                   {s.check}
                 </div>
+                {l.intent === "sale" && getBhkPage(l.area, `${s.size[0]}-bhk-flats-for-sale`) && (
+                  <a href={bhkPagePath(l.area, s.size)} className="mt-4 text-sm font-semibold text-brand-indigo underline underline-offset-4">
+                    {s.size} prices pocket by pocket
+                  </a>
+                )}
               </div>
             ))}
           </InView>

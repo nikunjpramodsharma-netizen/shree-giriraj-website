@@ -50,6 +50,7 @@ relatedFaqs:
   - Does a sale deed need to be registered?
   - What if there is an error in the sale deed?
 readNext:
+  - sell-flat-in-mumbai
   - index-2-property-document
   - society-share-certificate-transfer-fee
   - stamp-duty-and-registration-charges-mumbai
