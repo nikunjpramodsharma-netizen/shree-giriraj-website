@@ -47,6 +47,10 @@ export function HeroRotator({
   const [phase, setPhase] = useState<Phase>("deciding");
   const [active, setActive] = useState(0);
   const [animate, setAnimate] = useState(false);
+  // The stills after the first are only mounted once the page has loaded, so
+  // on a phone they do not compete with the first still, the LCP image, for
+  // bandwidth. Rotation waits for the same moment, so no frame is ever blank.
+  const [rest, setRest] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -83,8 +87,16 @@ export function HeroRotator({
     setPhase(wantsOpener ? "opener" : "stills");
     setActive(0);
 
-    if (!wantsOpener && !reduce) startRotation(0);
-    return stopRotation;
+    const onLoaded = () => {
+      setRest(true);
+      if (!wantsOpener && !reduce) startRotation(0);
+    };
+    if (document.readyState === "complete") onLoaded();
+    else window.addEventListener("load", onLoaded, { once: true });
+    return () => {
+      window.removeEventListener("load", onLoaded);
+      stopRotation();
+    };
   }, [opener, startRotation, stopRotation]);
 
   // 2. Once the opener is actually mounted, play it and arrange the handover.
@@ -93,6 +105,7 @@ export function HeroRotator({
     const video = videoRef.current;
 
     const handOver = () => {
+      setRest(true);
       setPhase("stills");
       setActive(0);
       startRotation(0);
@@ -158,6 +171,7 @@ export function HeroRotator({
       )}
 
       {slides.map((slide, n) => {
+        if (n > 0 && !rest) return null;
         const on = !showingOpener && n === active;
         // The first still is the LCP element whenever the opener is not
         // carrying first paint.

@@ -217,6 +217,7 @@ export function BhkFlatsPage({ page: p, areaName, locale }: { page: BhkPage; are
           <LinkList
             heading="Before you buy, or sell"
             links={[
+              { href: "/blog/property-rates-borivali-kandivali-malad", label: "Property rates this month, pocket by pocket" },
               { href: "/blog/1-bhk-price-borivali-kandivali-malad", label: "1 BHK price, down payment and EMI" },
               { href: "/blog/buy-first-flat-in-mumbai", label: "Buying your first flat in Mumbai" },
               { href: "/tools/property-valuation-calculator-mumbai", label: "What is my flat worth?" },

@@ -72,7 +72,7 @@ const SERVICE_HOOKS: Record<string, string> = {
 const SERVICE_MAP: Record<string, { tools: string[]; articles: string[]; services: string[] }> = {
   "resale-flats": {
     tools: ["property-valuation-calculator-mumbai", "stamp-duty-calculator-mumbai", "carpet-area-calculator"],
-    articles: ["sell-flat-in-mumbai", "society-noc-for-sale-of-flat-mumbai", "stamp-duty-and-registration-charges-mumbai", "buy-first-flat-in-mumbai", "what-a-sale-deed-contains", "1-bhk-price-borivali-kandivali-malad", "rent-or-buy-borivali-kandivali-malad", "can-nri-buy-property-in-india", "society-share-certificate-transfer-fee", "how-to-buy-mhada-flat-in-resale"],
+    articles: ["sell-flat-in-mumbai", "property-rates-borivali-kandivali-malad", "society-noc-for-sale-of-flat-mumbai", "stamp-duty-and-registration-charges-mumbai", "buy-first-flat-in-mumbai", "what-a-sale-deed-contains", "1-bhk-price-borivali-kandivali-malad", "rent-or-buy-borivali-kandivali-malad", "can-nri-buy-property-in-india", "society-share-certificate-transfer-fee", "how-to-buy-mhada-flat-in-resale"],
     services: ["new-project-bookings", "investment-advisory"],
   },
   rentals: {
@@ -87,7 +87,7 @@ const SERVICE_MAP: Record<string, { tools: string[]; articles: string[]; service
   },
   "investment-advisory": {
     tools: ["rental-yield-calculator", "capital-gains-calculator-property"],
-    articles: ["how-to-invest-in-real-estate-india", "first-investment-flat-small-budget-mumbai", "best-area-to-invest-in-mumbai"],
+    articles: ["property-rates-borivali-kandivali-malad", "how-to-invest-in-real-estate-india", "first-investment-flat-small-budget-mumbai", "best-area-to-invest-in-mumbai"],
     services: ["commercial-plots", "new-project-bookings"],
   },
   "commercial-plots": {
@@ -111,13 +111,13 @@ const AREA_RECIPE = {
   services: ["resale-flats", "new-project-bookings", "rentals", "investment-advisory"],
   tools: ["stamp-duty-calculator-mumbai", "home-loan-emi-calculator", "property-valuation-calculator-mumbai", "rental-yield-calculator"],
   // Buying reads first: the area guides are where buyers land (audit 16 Nov 2026).
-  articles: ["1-bhk-price-borivali-kandivali-malad", "buy-first-flat-in-mumbai", "best-area-to-invest-in-mumbai", "rent-or-buy-borivali-kandivali-malad", "rent-deposit-months-western-suburbs"],
+  articles: ["property-rates-borivali-kandivali-malad", "1-bhk-price-borivali-kandivali-malad", "buy-first-flat-in-mumbai", "best-area-to-invest-in-mumbai", "rent-or-buy-borivali-kandivali-malad", "rent-deposit-months-western-suburbs"],
 };
 
 const TOOL_MAP: Record<string, { services: string[]; articles: string[] }> = {
   "property-valuation-calculator-mumbai": {
     services: ["resale-flats", "mhada-paperwork"],
-    articles: ["sell-flat-in-mumbai", "society-noc-for-sale-of-flat-mumbai", "index-2-property-document", "can-we-sell-mhada-flat"],
+    articles: ["sell-flat-in-mumbai", "property-rates-borivali-kandivali-malad", "society-noc-for-sale-of-flat-mumbai", "index-2-property-document"],
   },
   "home-loan-emi-calculator": {
     services: ["new-project-bookings", "resale-flats"],

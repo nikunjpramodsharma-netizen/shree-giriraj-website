@@ -296,6 +296,14 @@ export const POST_OFFERS: Record<string, PostOffer> = {
     button: "Get the exact duty",
     intentKey: "intentRent",
   },
+  "property-rates-borivali-kandivali-malad": {
+    heading: "Turn these rates into a real price",
+    body: "Buying? Send your size, budget and pocket and we send the flats that fit, usually the same day. Selling? Tell us the society and we reply with recent registered sales near your building. Borivali, Kandivali and Malad.",
+    whatsapp:
+      "Hi Shree Giriraj, I read your price report. I want to ___ (buy or sell) a ___ BHK in ___. My budget or society is ___.",
+    button: "Get a real price",
+    intentKey: "intentBuy",
+  },
   "sell-flat-in-mumbai": {
     heading: "Selling your flat? Start with the registered sales near it",
     body: "Send us the society, size and floor. We reply with recent registered sales near your building and a fair listing price, then bring buyers who can complete and prepare the papers their bank asks for. Borivali, Kandivali and Malad.",

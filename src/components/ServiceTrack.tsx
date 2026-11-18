@@ -49,7 +49,8 @@ export function ServiceTrack({ panels, locale = "en" }: { panels: ServicePanel[]
               alt=""
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
-              priority={i === 0}
+              // No priority: this section sits below the full screen hero, and
+              // a preload here competed with the hero image (18 Nov 2026).
               className={`object-cover transition-all duration-500 ${
                 isOpen
                   ? "scale-[1.04] brightness-[.72] grayscale-0"

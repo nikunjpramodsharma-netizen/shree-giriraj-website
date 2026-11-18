@@ -56,6 +56,7 @@ export const PUBLISHED_ON: Record<string, string> = {
   "rent-deposit-months-western-suburbs": "2026-09-08",
   "rent-or-buy-borivali-kandivali-malad": "2026-11-14",
   "rental-yield-mumbai": "2026-09-08",
+  "property-rates-borivali-kandivali-malad": "2026-11-18",
   "sell-flat-in-mumbai": "2026-11-17",
   "society-noc-for-sale-of-flat-mumbai": "2026-11-07",
   "society-share-certificate-transfer-fee": "2026-11-07",

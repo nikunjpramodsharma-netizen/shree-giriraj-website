@@ -8,8 +8,10 @@ import { GTM_ID, clickLocation, pageInfo, track } from "@/lib/analytics";
 /**
  * Google Tag Manager, and the events the site raises for it.
  *
- * The container loads after the page is interactive, so it never delays the
- * first paint. Three things happen here that GTM cannot see on its own in a
+ * The container loads once the page has finished loading (lazyOnload, since
+ * 18 November 2026), so its 300 KB of script never competes with the hero
+ * image or the first paint. Events pushed before then wait in dataLayer and
+ * are sent when it arrives. Three things happen here that GTM cannot see on its own in a
  * Next.js app:
  *
  *  1. Page views on client side navigation. Moving between pages does not
@@ -64,7 +66,7 @@ export function Gtm() {
       <Script id="gtm-datalayer" strategy="afterInteractive">
         {`window.dataLayer = window.dataLayer || []; window.dataLayer.push(${JSON.stringify(info)});`}
       </Script>
-      <Script id="gtm" strategy="afterInteractive">
+      <Script id="gtm" strategy="lazyOnload">
         {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`}
       </Script>
       <noscript>

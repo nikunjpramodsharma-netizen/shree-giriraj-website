@@ -30,6 +30,11 @@ import { projectsInArea, registrationAwaited } from "@/lib/project-links";
  */
 const BUYING_READS: { href: string; label: string; hook: string; areas?: string[] }[] = [
   {
+    href: "/blog/property-rates-borivali-kandivali-malad",
+    label: "Property rates in Borivali, Kandivali and Malad, this month",
+    hook: "Resale and new project rates per sq ft, pocket by pocket, with rents and yields.",
+  },
+  {
     href: "/blog/1-bhk-price-borivali-kandivali-malad",
     label: "1 BHK price in Borivali, Kandivali and Malad",
     hook: "The down payment, the EMI and the income a bank looks for.",
