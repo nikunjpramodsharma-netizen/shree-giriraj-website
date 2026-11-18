@@ -374,7 +374,7 @@ export default async function ServicePage({
               )}
               {sceneData && (
                 <FactChips
-                  facts={sceneData.facts.map((f) => ({ ...f, label: tr(locale, f.label), ...(f.text ? { text: tr(locale, f.text) } : {}) }))}
+                  facts={localizeDeep(locale, sceneData.facts)}
                 />
               )}
               <div className="rise-3 mt-8 flex flex-wrap gap-3.5">
