@@ -19,7 +19,7 @@ import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { graph, serviceNode, breadcrumbNode, faqNode, organizationNode } from "@/lib/schema";
 import { getServiceFaqs } from "@/lib/service-faqs";
 import { getRepoService, repoServiceBlocks, repoServiceLocales } from "@/lib/service-content";
-import { tr } from "@/lib/copy-i18n";
+import { tr, localizeDeep } from "@/lib/copy-i18n";
 import { MarkdownBody } from "@/components/MarkdownBody";
 import { HeroVideo } from "@/components/HeroVideo";
 import { ServiceScenes } from "@/components/ServiceScenes";
@@ -420,9 +420,11 @@ export default async function ServicePage({
 
       {/* BODY. Staged as scenes: lead, cards, numbers, alternating
           photograph scenes, a worked example, the closing band. Every word
-          of the markdown is still rendered; see ServiceScenes. */}
+          of the markdown is still rendered; see ServiceScenes. The numbers
+          strip and worked example are authored in English, and localizeDeep
+          swaps in each string that has a translation. */}
       {repo && sceneData ? (
-        <ServiceScenes blocks={repoServiceBlocks(repo)} scene={sceneData} locale={locale} />
+        <ServiceScenes blocks={repoServiceBlocks(repo)} scene={localizeDeep(locale, sceneData)} locale={locale} />
       ) : (
         <section className="pb-16">
           <Reveal>
