@@ -126,7 +126,7 @@ export const AGENCY_PAGES: AgencyPage[] = [
       "Real estate agency for Kandivali West since 1996, from Mahavir Nagar to Charkop. Buy, sell or rent a flat, with a same day shortlist on WhatsApp.",
     h1: "Real estate agency in Kandivali West",
     answer:
-      "Kandivali West is the next suburb south of our Chikoowadi office, and Metro Line 2A links the two. Shree Giriraj Real Estate is a family run, MahaRERA registered real estate agency, in real estate since 1996, and Kandivali West has been part of our patch for all of it. We help you buy a resale flat or a new launch, sell your flat, rent or let a home, and handle the MHADA permissions that Charkop flats need.",
+      "Kandivali West is the next suburb south of our Chikoowadi office, and Metro Line 2A links the two. Shree Giriraj Real Estate is a family run, MahaRERA registered real estate agency, in real estate since 1996, and Kandivali West is part of our everyday patch. We help you buy a resale flat or a new launch, sell your flat, rent or let a home, and handle the MHADA permissions that Charkop flats need.",
     pocketsIntro:
       "Kandivali West runs from family societies near the metro to the planned MHADA sectors of Charkop. We know each of them by building, not just by name.",
     pockets: [
@@ -194,7 +194,7 @@ export const AGENCY_PAGES: AgencyPage[] = [
       "Real estate agency for Malad West since 1996, from Evershine Nagar to Orlem. Buy, let or rent a flat, with a same day shortlist on WhatsApp.",
     h1: "Real estate agency in Malad West",
     answer:
-      "Malad West is two suburbs south of our Chikoowadi office, and we have sold and let flats here since 1996. Shree Giriraj Real Estate is a family run, MahaRERA registered real estate agency. Malad West is the most investor driven of the three suburbs we work in, so we help you buy to live in or to let, find tenants for your flat, rent a home near your office, and sell with the rent in mind.",
+      "Malad West is two suburbs south of our Chikoowadi office, and part of our everyday patch. Shree Giriraj Real Estate is a family run, MahaRERA registered real estate agency, in real estate since 1996. Malad West is the most investor driven of the three suburbs we work in, so we help you buy to live in or to let, find tenants for your flat, rent a home near your office, and sell with the rent in mind.",
     pocketsIntro:
       "Malad West splits into an office district, a premium pocket and an old village, and each rents and sells differently.",
     pockets: [
