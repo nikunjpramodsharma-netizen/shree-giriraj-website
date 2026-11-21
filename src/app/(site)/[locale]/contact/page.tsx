@@ -70,6 +70,9 @@ const CONTACT_ROUTES: { href: string; label: string }[] = [
   { href: "/services/new-project-bookings", label: "Book in a new project" },
   { href: "/services/mhada-paperwork", label: "MHADA paperwork, anywhere in Mumbai" },
   { href: "/services/interiors", label: "Interiors and civil work" },
+  { href: "/areas/borivali-west/real-estate-agency", label: "Real estate agency in Borivali West" },
+  { href: "/areas/kandivali/real-estate-agency", label: "Real estate agency in Kandivali West" },
+  { href: "/areas/malad/real-estate-agency", label: "Real estate agency in Malad West" },
   { href: "/about", label: "About the firm and its founder" },
 ];
 

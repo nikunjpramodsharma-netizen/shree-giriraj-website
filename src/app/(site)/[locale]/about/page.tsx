@@ -375,6 +375,10 @@ export default function AboutPage({
               <Link prefetch={false} href="/areas/malad" className="text-brand-indigo underline underline-offset-4">Malad</Link>{" "}
               guides, or{" "}
               <Link prefetch={false} href="/contact" className="text-brand-indigo underline underline-offset-4">visit the office in Chikoowadi</Link>.
+              Looking for a real estate agency near you? See us in{" "}
+              <Link prefetch={false} href="/areas/borivali-west/real-estate-agency" className="text-brand-indigo underline underline-offset-4">Borivali West</Link>,{" "}
+              <Link prefetch={false} href="/areas/kandivali/real-estate-agency" className="text-brand-indigo underline underline-offset-4">Kandivali West</Link> and{" "}
+              <Link prefetch={false} href="/areas/malad/real-estate-agency" className="text-brand-indigo underline underline-offset-4">Malad West</Link>.
             </p>
           </section>
         </Reveal>

@@ -13,6 +13,7 @@ import { getPublishedGuides } from "@/lib/guides";
 import { AREA_SLUGS, getArea, areaIsComplete } from "@/lib/areas";
 import { FLAT_LISTINGS, listingPath } from "@/lib/flats";
 import { BHK_PAGES } from "@/lib/bhk-pages";
+import { AGENCY_PAGES, agencyPagePath, AGENCY_LASTMOD } from "@/lib/agency-pages";
 import { STORY_IS_WRITTEN } from "@/lib/about";
 import { getRepoService, repoServiceLocales } from "@/lib/service-content";
 import { TOOL_SLUGS } from "@/lib/tools";
@@ -143,6 +144,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // One size in one suburb, for example /areas/kandivali/3-bhk-flats-for-sale. See bhk-pages.ts.
   for (const p of BHK_PAGES) {
     out.push(...entriesFor(p.path, ["en"], undefined, 0.7));
+  }
+  // "Real estate agency in <suburb>", the commercial local landing pages. See agency-pages.ts.
+  for (const p of AGENCY_PAGES) {
+    out.push(...entriesFor(agencyPagePath(p.slug), ["en"], AGENCY_LASTMOD, 0.8));
   }
   out.push(...entriesFor("/contact", ["en"], undefined, 0.7));
   if (STORY_IS_WRITTEN) {

@@ -719,6 +719,9 @@ export default async function HomePage({
               { href: "/areas/borivali-west/flats-for-sale", label: t("Flats for sale in Borivali West") },
               { href: "/areas/kandivali/flats-for-sale", label: t("Flats for sale in Kandivali West") },
               { href: "/areas/malad/flats-for-sale", label: t("Flats for sale in Malad West") },
+              { href: "/areas/borivali-west/real-estate-agency", label: t("Real estate agency in Borivali West") },
+              { href: "/areas/kandivali/real-estate-agency", label: t("Real estate agency in Kandivali West") },
+              { href: "/areas/malad/real-estate-agency", label: t("Real estate agency in Malad West") },
             ].map((l) => (
               <EnglishLink
                 key={l.href}

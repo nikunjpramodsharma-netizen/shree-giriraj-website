@@ -18,6 +18,7 @@ import { LitMap } from "@/components/motion/LitMap";
 import { RisingTower } from "@/components/motion/RisingTower";
 import { interlinksForArea } from "@/lib/interlinks";
 import { FLAT_LISTINGS, listingPath } from "@/lib/flats";
+import { agencyPagePath, getAgencyPage } from "@/lib/agency-pages";
 import { ContactCTA } from "@/components/ContactCTA";
 import { ShortlistForm } from "@/components/ShortlistForm";
 import { SHORTLIST_SUBURB_FOR_AREA } from "@/lib/shortlist";
@@ -164,6 +165,19 @@ export default async function AreaPage({
             Updated on {area.updatedOn}: every rate read again against its source that day.
           </p>
         </div>
+
+        {getAgencyPage(area.slug) && (
+          <p className="mb-6 max-w-[68ch] text-ink/85">
+            Looking for a real estate agency in {area.place}? See{" "}
+            <a
+              href={agencyPagePath(area.slug)}
+              className="font-semibold text-brand-indigo underline underline-offset-4"
+            >
+              Real estate agency in {area.place}
+            </a>
+            , with our pockets, services and a same day shortlist.
+          </p>
+        )}
 
         <div className="max-w-[68ch] space-y-4 text-ink/90">
           {area.intro.map((p) => (
